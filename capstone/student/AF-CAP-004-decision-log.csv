@@ -1,0 +1,7 @@
+decision_id,date,decision_or_assumption,category,basis,evidence_ids,owner,status,reversal_condition,next_action
+DEC-001,,Capstone recommendation remains undecided,Governance,Insufficient integrated evidence,,Student,OPEN,Completion of required workstreams,Build evidence register
+DEC-002,,Pilot size of 12 units is a planning scenario not an approved quantity,Scope,Session 4 source notes,E003,Sarah Chen,ACTIVE,Leadership selects a different bounded quantity,Run sensitivity at alternative quantities
+DEC-003,,EUR 186 per unit is not total pilot cost,Cost,Explicit exclusions in source notes,E002,Elena Rossi,ACTIVE,Approved complete quotation replaces estimate,Build full cost model
+DEC-004,,Customer interest is not validated demand,Market,No purchase order or signed pilot agreement,E001,Rachel Stein,ACTIVE,Documented commitments or validated research,Confirm current customer evidence
+DEC-005,,Current controller-board reuse is an unverified hypothesis,Engineering,Connector clearance not checked,E004,Daniel Arbel,OPEN,Physical or dimensional validation,Perform clearance test
+DEC-006,,Generated CAD is a prototype artifact only,Engineering,No fit strength or certification evidence,E005,Yael Cohen,ACTIVE,Successful documented validation changes claim strength,Print fit coupon and inspect
