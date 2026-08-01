@@ -18,15 +18,21 @@ Historical notification records must never be used as the active-state flag. Rec
 - `S006`: SUP-A stock incident opens; notify once.
 - `S007`: SUP-A price incident opens independently; stock incident remains active.
 - `S008`: SUP-B lead-time incident closes; no commercial alert is required unless recovery notices are part of the chosen contract.
-- `S009`: SUP-A stock incident closes; price incident remains active.
+- `S009`: SUP-A stock incident closes. The SUP-A price incident also closes because EUR 11.20 is unchanged from the immediately preceding valid SUP-A price at `S007`, so the rolling-reference change is 0%.
 - `S010`: SUP-B parse incident opens. Do not interpret blank commercial fields as changes.
 - `S011`: parse incident closes after a valid observation; SUP-B stock and lead-time incidents open independently.
-- `S012`: SUP-A price incident closes because the current price is below the 10% threshold relative to the applicable prior valid reference.
+- `S012`: no SUP-A price incident is active or opened. EUR 10.40 is compared with the immediately preceding valid SUP-A price of EUR 11.20, producing a decrease rather than a threshold-crossing increase.
 - `S013`: SUP-A stock incident opens again and must generate a new alert because the earlier stock incident recovered at `S009`.
 
 ## Price-reference requirement
 
-The student must state exactly which valid observation is used as the comparison reference. A defensible implementation stores the last valid observed price and evaluates the percentage change before replacing that reference. It must not compare against an error row or a missing value.
+For this exercise, use a **rolling last-valid reference**. For each valid supplier observation:
+
+1. compare the current price with that supplier's immediately preceding valid observed price;
+2. evaluate incident opening or recovery from that comparison;
+3. only then replace the stored last-valid price with the current price.
+
+Do not pin the comparison to the pre-incident baseline. Do not compare against an error row or a missing value. A different baseline policy could be valid in another system, but it is not the contract used by this dataset or answer key.
 
 ## Stale-data logic
 
@@ -62,6 +68,7 @@ Reduce credit when a design:
 - suppresses future incidents after recovery;
 - treats blanks as zero;
 - calculates price change from an invalid row;
+- mixes rolling and fixed-baseline price policies without declaring the change;
 - performs purchases or other irreversible actions;
 - lacks a manual test, pause, or stop procedure;
 - logs only successful runs.
