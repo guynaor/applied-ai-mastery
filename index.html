@@ -3,56 +3,56 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Applied AI Mastery — a project-based course built around AquaForge Technologies.">
+  <meta name="description" content="Applied AI Mastery — an interactive, project-based AI course built around AquaForge Technologies.">
+  <meta name="theme-color" content="#123b4a">
   <link rel="stylesheet" href="site/assets/css/course.css">
-  <title>Applied AI Mastery</title>
+  <title>Applied AI Mastery — Beta</title>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to course content</a>
   <div class="site-shell">
     <header class="site-header">
-      <div class="brand"><span class="brand-mark">AI</span><span>Applied AI Mastery</span></div>
-      <nav class="header-links" aria-label="Project links">
-        <a href="README.md">About</a>
-        <a href="ROADMAP.md">Roadmap</a>
-        <a href="company/README.md">AquaForge</a>
-        <a href="https://github.com/guynaor/applied-ai-mastery">GitHub</a>
+      <a class="brand" href="#top" aria-label="Applied AI Mastery home"><span class="brand-mark">AI</span><span>Applied AI Mastery</span></a>
+      <nav class="header-links" aria-label="Primary navigation">
+        <a href="#missions">Missions</a><a href="#capstone">Capstone</a><a href="#company">AquaForge</a><a href="README.md">About</a>
       </nav>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="eyebrow">Learning AI by solving realistic engineering problems</div>
-        <h1>Applied AI Mastery</h1>
-        <p>A practical course in prompting, research, data, communication, logistics, automation, and parametric design—organized as missions inside the fictional company AquaForge Technologies.</p>
-        <div class="actions">
-          <a class="button primary" href="#missions">Explore the missions</a>
-          <a class="button" href="CONTRIBUTING.md">Development workflow</a>
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <div class="eyebrow">Polished beta · static and portable</div>
+          <h1>Learn applied AI by helping run an engineering company.</h1>
+          <p>Seven guided missions and one integrated capstone teach prompting, research, spreadsheets, communication, planning, automation, and parametric CAD through realistic AquaForge work.</p>
+          <div class="actions"><a class="button primary" href="#missions">Start the course</a><a class="button" href="capstone/student/AF-CAP-001-mission-brief.md">Open capstone brief</a></div>
         </div>
+        <aside class="hero-panel" aria-label="Course summary"><strong>Beta 0.9</strong><span>8 missions</span><span>Student files + instructor guides</span><span>No build step required</span></aside>
       </section>
 
-      <div class="status">
-        <strong>Active development:</strong> the repository foundation and AquaForge source-of-truth material are being built through focused feature branches and pull requests. Student downloads will appear as they are reviewed and merged.
-      </div>
+      <section class="mode-panel" aria-label="Course viewing mode">
+        <div><strong>Choose your view</strong><p>Student mode hides answer keys from the interface. This is convenience, not security; instructor files remain in the public repository.</p></div>
+        <div class="segmented" role="group" aria-label="View mode"><button type="button" data-mode="student" aria-pressed="true">Student</button><button type="button" data-mode="instructor" aria-pressed="false">Instructor</button></div>
+      </section>
 
       <section class="section" id="missions">
-        <div class="eyebrow">Course progression</div>
-        <h2>Eight roles, one evolving company</h2>
-        <p>Each mission introduces a new professional role and a concrete AquaForge problem. The final capstone combines the full workflow.</p>
-        <div class="grid" data-session-grid></div>
+        <div class="section-heading"><div><div class="eyebrow">Course progression</div><h2>Seven missions, then the capstone</h2></div><div class="progress-wrap"><span data-progress-label>0 of 8 complete</span><progress data-progress max="8" value="0"></progress></div></div>
+        <div class="mission-list" data-session-grid></div>
       </section>
 
-      <section class="section">
-        <div class="eyebrow">Design principle</div>
-        <h2>Durable problem-solving, not temporary interface tricks</h2>
-        <div class="grid">
-          <article class="card"><h3>Evidence</h3><p>Separate source facts, model inference, assumptions, and unsupported claims.</p></article>
-          <article class="card"><h3>Iteration</h3><p>Diagnose a result, revise one variable, and preserve the improved pattern.</p></article>
-          <article class="card"><h3>Verification</h3><p>Test spreadsheets, automation, research, and physical designs before trusting them.</p></article>
-        </div>
+      <section class="section split" id="capstone">
+        <div><div class="eyebrow">Final mission</div><h2>AquaNode Mini engineering-validation decision</h2><p>Reconcile evidence from every session into one bounded recommendation: proceed, revise, or stop for now. The capstone tests traceability, judgment, verification, and coherent updates across deliverables.</p><a class="button primary" href="capstone/student/AF-CAP-001-mission-brief.md">Open capstone mission</a></div>
+        <div class="check-card"><h3>Capstone submission</h3><ul><li>Recommendation and research memo</li><li>Evidence and decision registers</li><li>Workbook and six-slide deck</li><li>Operations and agent plans</li><li>OpenSCAD source and validation log</li><li>Reflection on human judgment</li></ul></div>
       </section>
+
+      <section class="section" id="company">
+        <div class="eyebrow">Shared simulation</div><h2>AquaForge source of truth</h2>
+        <div class="grid compact"><a class="card link-card" href="company/README.md"><h3>Company overview</h3><p>Mission, structure, products, and document conventions.</p></a><a class="card link-card" href="company/people/employee-directory.csv"><h3>Employee directory</h3><p>Canonical personnel, roles, reporting lines, and communication styles.</p></a><a class="card link-card" href="ROADMAP.md"><h3>Project roadmap</h3><p>Release status and planned improvements after beta.</p></a></div>
+      </section>
+
+      <section class="section deployment"><div><div class="eyebrow">Deployment</div><h2>Works on Vercel, Firebase, Netlify, or GitHub Pages</h2><p>The beta is plain HTML, CSS, JavaScript, Markdown, CSV, and OpenSCAD. There is no framework, server, database, or build process. Deploy the repository root as a static site.</p></div><a class="button" href="DEPLOYMENT.md">Deployment guide</a></section>
     </main>
 
-    <footer>Applied AI Mastery · <span data-year></span> · Developed openly with a feature-branch workflow.</footer>
+    <footer><span>Applied AI Mastery · Beta 0.9 · <span data-year></span></span><a href="https://github.com/guynaor/applied-ai-mastery">GitHub repository</a></footer>
   </div>
   <script src="site/assets/js/course.js"></script>
 </body>
