@@ -19,6 +19,15 @@ The cleaned sheet must contain these exact headers in row 1:
 - `Location`
 - `Alert Sent`
 
+## Alert-state meaning
+
+`Alert Sent` represents the **active low-stock episode**, not permanent audit history:
+
+- blank: no active low-stock alert has been sent;
+- `YES`: an alert has been sent for the current uninterrupted low-stock episode.
+
+Permanent history belongs in the execution log or a separate append-only alert-history sheet. It must not prevent a recovered item from generating a new alert during a later low-stock episode.
+
 ## Required behaviour
 
 For each nonblank data row:
@@ -35,8 +44,12 @@ For each nonblank data row:
    - location.
 5. When `DRY_RUN` is `true`, log the email but do not send it and do not write `YES` to `Alert Sent`.
 6. When `DRY_RUN` is `false`, write `YES` only after the email sends successfully.
-7. Never resend an alert while `Alert Sent` equals `YES`.
-8. Clear low-stock highlighting when a valid row is no longer low stock, but do not automatically erase alert history.
+7. Never resend an alert while the item remains continuously low stock and `Alert Sent` equals `YES`.
+8. When a valid row recovers above its reorder level:
+   - clear the low-stock highlighting;
+   - reset `Alert Sent` to blank so the row is re-armed for a future low-stock episode;
+   - record the recovery transition in the execution log or append-only alert-history sheet.
+9. Do not erase append-only alert history when re-arming the active state.
 
 ## Implementation requirements
 
@@ -46,6 +59,7 @@ For each nonblank data row:
 - Explain permissions and how to create a daily time-driven trigger.
 - Provide a manual test procedure before enabling the trigger.
 - Do not send real messages during classroom testing.
+- Keep active state separate from permanent history.
 
 ## Required test cases
 
@@ -54,7 +68,9 @@ Include at least:
 1. Valid low-stock row with blank `Alert Sent`.
 2. Valid low-stock row already marked `YES`.
 3. Valid row above reorder level.
-4. Blank quantity.
-5. Nonnumeric quantity.
-6. Blank reorder level.
-7. Dry-run and live-mode behaviour.
+4. Previously alerted row that recovers above reorder level and is re-armed.
+5. Re-armed row that later becomes low stock again and generates a new alert.
+6. Blank quantity.
+7. Nonnumeric quantity.
+8. Blank reorder level.
+9. Dry-run and live-mode behaviour.
