@@ -1,0 +1,8 @@
+product_id,product_name,family,status,primary_use,core_interfaces,canonical_revision,owner
+AF-P100,AquaNode Edge,Sensor Hub,Released,Collect and relay environmental sensor data,"RS485; Modbus RTU; Ethernet; Wi-Fi",3.2,Hana Kim
+AF-P110,HydroSense Pro,Water Quality,Released,Monitor pH temperature conductivity and dissolved oxygen,"RS485; 4-20 mA; local display",2.4,Hana Kim
+AF-P120,PAR-400,Light Measurement,Released,Measure photosynthetically active radiation,"RS485; Modbus RTU",1.8,Sarah Chen
+AF-P130,DosePilot 4,Dosing Control,Pilot,Control four low-voltage dosing channels,"RS485; dry-contact inputs; 24 VDC",0.9,Hana Kim
+AF-P140,ClimateLink Gateway,Greenhouse Gateway,Released,Aggregate greenhouse climate sensors and send cloud data,"RS485; Ethernet; LTE option",2.1,Hana Kim
+AF-P150,ForgeMount System,Workshop Fixtures,Released,Modular printable and machined equipment mounts,"Mechanical interface; M6 and M8 fasteners",1.4,Yael Cohen
+AF-P160,AquaNode Mini,Sensor Hub,Concept,Compact next-generation sensor hub for small installations,"Target: RS485; Wi-Fi; USB-C power",0.2,Hana Kim
