@@ -72,7 +72,11 @@ Specify a bounded agent that monitors one pilot dependency, such as supplier ava
 
 ### 7. Parametric CAD deliverable
 
-Extend or validate the Session 7 wall-bracket model. Provide:
+Extend or validate the Session 7 wall-bracket model. Use `materials/session-07-parametric-cad/student/AF-CAD-703-starter.scad` as the supplied starting point and save the capstone model as:
+
+`capstone/submission/AF-CAP-CAD-001-wall-bracket.scad`
+
+Provide:
 
 - design contract;
 - named parameters;
@@ -95,7 +99,7 @@ Submit:
 - six-slide deck;
 - operations plan and calendar export;
 - agent specification and test log;
-- OpenSCAD source and validation log;
+- `capstone/submission/AF-CAP-CAD-001-wall-bracket.scad` and validation log;
 - final decision log;
 - one-page reflection on where AI helped, where it failed, and what required human judgment.
 
