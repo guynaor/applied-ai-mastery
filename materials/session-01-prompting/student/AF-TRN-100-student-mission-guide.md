@@ -8,7 +8,7 @@
 
 AquaForge has received an incomplete failure memo about the HydroSense HX-200 coolant-pump assembly. Management does not yet have enough evidence to identify the root cause.
 
-Your job is not to guess the answer. Your job is to use AI carefully, compare how different systems reason from the same evidence, and produce a stronger reusable prompt.
+Your job is not to guess the answer. Your job is to use AI carefully, compare how different systems reason from the same evidence, and improve one structured prompt through a controlled revision.
 
 By the end of the mission, you should be able to show which parts of an AI response came from the memo, which parts were assumptions, and what additional evidence would be needed before making an engineering decision.
 
@@ -18,7 +18,7 @@ By the end of the mission, you should be able to show which parts of an AI respo
 2. [Model-comparison worksheet](AF-TRN-102-model-comparison-worksheet.md)
 3. [RISEN prompt template](AF-TRN-103-risen-prompt-template.md)
 
-You will also need access to at least two AI systems. Use the same source memo and the same first prompt in both systems.
+You will also need access to at least two AI systems. Use the same source memo and the same initial RISEN prompt in both systems.
 
 ## Part 1 — Read before prompting
 
@@ -31,19 +31,34 @@ Open the source memo and identify:
 
 Write at least three missing pieces of information in your worksheet before asking an AI system anything.
 
-## Part 2 — Run the same basic prompt twice
+## Part 2 — Build your initial RISEN prompt
 
-Give the complete source memo to two AI systems and ask each one to:
+Use the RISEN template:
 
-- summarize the known facts;
-- list plausible failure hypotheses;
-- recommend two structural or mechanical modifications;
-- recommend measurements or tests;
-- clearly label assumptions and uncertainty.
+- **Role:** Who should the AI act as?
+- **Instructions:** What exact work must it perform?
+- **Steps:** In what order should it reason and respond?
+- **End goal:** What decision or deliverable should the response support?
+- **Narrowing:** What must it avoid, label, or treat as uncertain?
 
-Use exactly the same prompt in both systems. Save the complete responses or paste the important sections into your working document.
+Your initial prompt must require:
 
-## Part 3 — Compare the responses with evidence
+1. a fact table;
+2. clearly labelled hypotheses;
+3. two genuine structural or mechanical modifications;
+4. a separate measurement and validation plan;
+5. explicit uncertainty;
+6. no claim of a confirmed root cause.
+
+Record this initial RISEN prompt in the model-comparison worksheet.
+
+## Part 3 — Run the same prompt in two systems
+
+Give the complete source memo and your initial RISEN prompt to two AI systems.
+
+Use exactly the same source text and prompt in both systems. Save the complete responses or paste the important sections into your working document.
+
+## Part 4 — Compare the responses with evidence
 
 Complete the model-comparison worksheet. Do not write only “Model A was better.” For each judgment, quote or closely reference a specific part of the response.
 
@@ -56,42 +71,27 @@ Check whether each model:
 - recommended useful tests;
 - explained what evidence could disprove its preferred hypothesis.
 
-## Part 4 — Build a RISEN prompt
+## Part 5 — Make one controlled revision
 
-Use the RISEN template:
+Identify one important weakness in the initial prompt or in the responses it produced.
 
-- **Role:** Who should the AI act as?
-- **Instructions:** What exact work must it perform?
-- **Steps:** In what order should it reason and respond?
-- **End goal:** What decision or deliverable should the response support?
-- **Narrowing:** What must it avoid, label, or treat as uncertain?
+Change one meaningful prompt element only. Do not discard the prompt and start over. Run the revised prompt once in one of the AI systems, then record:
 
-Your improved prompt must require:
-
-1. a fact table;
-2. clearly labelled hypotheses;
-3. two genuine structural or mechanical modifications;
-4. a separate measurement and validation plan;
-5. explicit uncertainty;
-6. no claim of a confirmed root cause.
-
-## Part 5 — Test and revise once
-
-Run the improved RISEN prompt in one of the AI systems.
-
-Then identify one remaining weakness. Change one meaningful part of the prompt and run it again. Record:
-
-- what you changed;
+- the single element you changed;
 - why you changed it;
 - what improved;
+- what did not improve;
 - what still requires human engineering judgment.
+
+This revised version becomes your final RISEN prompt.
 
 ## What to submit
 
 Submit:
 
 - the completed model-comparison worksheet;
-- your final RISEN prompt;
+- your initial and final RISEN prompts;
+- the single controlled change clearly identified;
 - one short paragraph explaining which AI response was more useful and why;
 - one short paragraph describing an important claim that still cannot be made from the evidence;
 - the three most valuable additional measurements or observations you would request next.
@@ -100,8 +100,9 @@ Submit:
 
 Before marking the mission complete, confirm that:
 
-- you used the same initial prompt in both systems;
+- you used the same initial RISEN prompt in both systems;
 - every comparison judgment has a concrete example;
+- you changed only one meaningful prompt element during revision;
 - you separated design modifications from instrumentation;
 - you did not present a hypothesis as a confirmed cause;
 - your final prompt can be reused on another incomplete technical report.
