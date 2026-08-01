@@ -21,7 +21,7 @@
 - No supplier quotations have been approved.
 - A 10% material contingency would add approximately EUR 223 to a 12-unit pilot.
 
-## Customer-success note — Daniel Cohen
+## Customer-success note — Rachel Stein
 
 - Three customers have asked whether AquaForge offers a smaller monitoring unit.
 - None has issued a purchase order or signed a pilot agreement.
