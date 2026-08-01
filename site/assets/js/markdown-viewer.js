@@ -22,14 +22,24 @@ const routeLink=(href,base)=>{
  return resolved;
 };
 const inline=(text,base)=>{
- let value=escapeHtml(text);
- value=value.replace(/`([^`]+)`/g,'<code>$1</code>');
+ const codeSpans=[];
+ let value=escapeHtml(text).replace(/`([^`]+)`/g,(_,code)=>{
+  const token=`\u0000CODE${codeSpans.length}\u0000`;
+  codeSpans.push(`<code>${code}</code>`);
+  return token;
+ });
+ value=value.replace(/\[([^\]]+)\]\(([^)]+)\)/g,(_,label,href)=>`<a href="${escapeHtml(routeLink(href,base))}">${label}</a>`);
  value=value.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
  value=value.replace(/__([^_]+)__/g,'<strong>$1</strong>');
  value=value.replace(/\*([^*]+)\*/g,'<em>$1</em>');
  value=value.replace(/_([^_]+)_/g,'<em>$1</em>');
- value=value.replace(/\[([^\]]+)\]\(([^)]+)\)/g,(_,label,href)=>`<a href="${escapeHtml(routeLink(href,base))}">${label}</a>`);
- return value;
+ return value.replace(/\u0000CODE(\d+)\u0000/g,(_,index)=>codeSpans[Number(index)]);
+};
+const tableCells=line=>{
+ let cells=line.split('|');
+ if(cells.length&&cells[0].trim()==='')cells=cells.slice(1);
+ if(cells.length&&cells[cells.length-1].trim()==='')cells=cells.slice(0,-1);
+ return cells.map(value=>value.trim());
 };
 
 function renderMarkdown(markdown,path){
@@ -65,8 +75,8 @@ function renderMarkdown(markdown,path){
    flushParagraph();const wanted=unordered?'ul':'ol';if(listType!==wanted){closeList();output.push(`<${wanted}>`);listType=wanted;}output.push(`<li>${inline((unordered||ordered)[1],base)}</li>`);continue;
   }
   if(line.includes('|')&&i+1<lines.length&&/^\s*\|?\s*:?-{3,}/.test(lines[i+1])){
-   flushParagraph();closeList();const headers=line.split('|').map(v=>v.trim()).filter(Boolean);i++;
-   const rows=[];while(i+1<lines.length&&lines[i+1].includes('|')&&lines[i+1].trim()){i++;rows.push(lines[i].split('|').map(v=>v.trim()).filter(Boolean));}
+   flushParagraph();closeList();const headers=tableCells(line);i++;
+   const rows=[];while(i+1<lines.length&&lines[i+1].includes('|')&&lines[i+1].trim()){i++;rows.push(tableCells(lines[i]));}
    output.push(`<div class="table-wrap"><table><thead><tr>${headers.map(v=>`<th>${inline(v,base)}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map(v=>`<td>${inline(v,base)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`);continue;
   }
   paragraph.push(line.trim());
