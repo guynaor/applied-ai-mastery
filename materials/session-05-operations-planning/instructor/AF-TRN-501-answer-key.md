@@ -9,12 +9,13 @@ This exercise has no single correct itinerary. A strong solution preserves every
 A defensible plan should:
 
 - Use Larnaca Centre as the trip base.
+- Read every travel estimate together with its stated `travel_origin_zone`; estimates are not interchangeable between different origins.
 - Group the Oroklini customer visit with the nearby field lunch rather than crossing the city repeatedly.
-- Group the Aradippou supplier meeting with the optional parts retailer only if the supplier meeting finishes on time.
+- Group the Aradippou supplier meeting with the optional parts retailer only if the supplier meeting finishes on time and the retailer's 18:00 closing time is verified.
 - Keep the West Larnaca pilot-host assessment on its own high-focus block.
 - Place documentation and debrief activities near the hotel or meeting-room base.
 - Finish the final operational activity by 13:15 on 2026-09-24.
-- Preserve a 60-minute recovery block on each full day.
+- Preserve one protected 60-minute recovery block on each full workday: 2026-09-22 and 2026-09-23.
 
 ## One strong itinerary pattern
 
@@ -31,8 +32,8 @@ A defensible plan should:
 - Customer diagnostic visit in the Oroklini zone.
 - Seated lunch nearby and immediate field-note capture.
 - Supplier meeting in Aradippou with sufficient travel and setup buffer.
-- Optional retailer stop only if the supplier meeting does not overrun.
-- Retain at least one recovery block or move it to the evening documentation window.
+- Optional retailer stop only when the supplier meeting ends at 16:30, the eight-minute transfer remains realistic, and the 18:00 access-window close has been verified. Otherwise omit it.
+- Retain the protected recovery block unless an actual disruption requires using it.
 
 ### 2026-09-23 — West cluster and synthesis
 
@@ -44,7 +45,8 @@ A defensible plan should:
 ### 2026-09-24 — Closeout and departure
 
 - Final document review and action-owner confirmation.
-- Fuel stop.
+- Travel from Larnaca Centre to the airport-area fuel stop using the stated estimate.
+- Fuel stop, then the additional five-minute transfer to vehicle return.
 - Vehicle return and airport check-in by 14:30.
 
 ## Budget check
@@ -74,7 +76,7 @@ Total with every listed optional cost: EUR 1,125. This remains below the EUR 1,2
 
 - Access contacts and parking instructions
 - Opening hours and reservation status
-- Current route durations
+- Current route durations for the exact origin-destination pairs used in the itinerary
 - Equipment and sample checklist
 - Weather-sensitive visit viability
 
@@ -97,6 +99,7 @@ Reduce credit when a plan:
 
 - Moves or overlaps a hard constraint without explanation.
 - Schedules back-to-back events with no travel or setup time.
+- Uses a travel estimate without checking that its documented origin matches the preceding activity.
 - Treats fictional travel times, opening hours, or costs as verified facts.
 - Uses the recovery blocks as ordinary planned activities.
 - Schedules more than two high-focus technical activities in one day.
