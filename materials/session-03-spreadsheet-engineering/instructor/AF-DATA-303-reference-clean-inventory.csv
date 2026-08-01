@@ -3,7 +3,7 @@ SKU,Item Name,Category,Qty On Hand,Unit,Reorder Level,Supplier,Last Counted,Loca
 001025,RS485 transceiver module,Electronics,8,pcs,12,BlueCurrent Components,2026-07-28,E-A2,,Normalize date unit and supplier
 001026,pH probe assembly,Sensors,5,pcs,6,MedWave Sensors,2026-07-27,S-B1,,Normalize date only
 001027,PAR sensor head,Sensors,11,pcs,5,Photon Field Ltd.,2026-07-27,S-B2,,Normalize unit
-001028,24 V DIN power supply,Electrical,4,pcs,4,VoltEdge Systems,2026-07-26,E-C1,YES,Preserve alert history
+001028,24 V DIN power supply,Electrical,4,pcs,4,VoltEdge Systems,2026-07-26,E-C1,YES,Preserve active alert state
 001029,M12 cable gland,Mechanical,75,pcs,40,FastenRight,2026-07-25,M-D1,,No material issue
 001030,Silicone gasket 70 mm,Mechanical,,pcs,25,SealWorks Europe,2026-07-25,M-D2,,Confirm whether word thirty means 30
 001031,Polycarbonate enclosure,Mechanical,9,pcs,,FormShell Plastics,2026-07-24,M-E1,,Reorder level requires confirmation
@@ -18,7 +18,8 @@ SKU,Item Name,Category,Qty On Hand,Unit,Reorder Level,Supplier,Last Counted,Loca
 001040,HydroSense HX-200 seal kit,Service Parts,0,pcs,2,SealWorks Europe,2026-07-20,S-K1,,Valid zero quantity
 001041,HydroSense HX-200 bearing set,Service Parts,,pcs,2,MotionCore Bearings,2026-07-20,S-K2,,Negative source value requires confirmation
 001042,Thread-locking compound,Chemicals,450,ml,250,FastenRight,2026-07-19,C-F3,,Normalize date
-001043,M8 stainless bolt,Mechanical,,pcs,100,FastenRight,,,Duplicate records require reconciliation
+001043,M8 stainless bolt,Mechanical,240,pcs,100,FastenRight,2026-07-19,M-D3,,Duplicate observation 1; retain pending reconciliation
+001043,M8 stainless bolt,Mechanical,60,pcs,100,FastenRight,2026-07-18,Workshop bin 12,,Duplicate observation 2; supplier normalized but record retained pending reconciliation
 001044,OLED display 2.42 inch,Electronics,6,pcs,6,Photon Field Ltd.,2026-07-18,E-A4,,Normalize supplier
 001045,ESP32 controller board,Electronics,,pcs,10,BlueCurrent Components,2026-07-18,E-A5,,Quantity requires confirmation
 001046,Desiccant pack,Consumables,100,pcs,30,PackSafe,2026-07-17,C-L1,,No material issue
@@ -26,5 +27,5 @@ SKU,Item Name,Category,Qty On Hand,Unit,Reorder Level,Supplier,Last Counted,Loca
 001048,Foam insert AquaNode,Packaging,19,pcs,20,PackSafe,2026-07-17,P-M2,,Low stock
 001049,Label roll 50x25,Packaging,3,rolls,2,PrintMark,2026-07-16,P-M3,,No material issue
 001050,Thermal paste,Consumables,0.5,kg,0.25,LabSource,2026-07-16,C-L2,,Fraction valid for kg
-, Cable tie 200 mm,Consumables,500,pcs,150,CablePro,2026-07-16,C-L3,,Confirm whether source SKU 01051 should be 001051
+,Cable tie 200 mm,Consumables,500,pcs,150,CablePro,2026-07-16,C-L3,,Confirm whether source SKU 01051 should be 001051
 001052,Flow sensor 1 inch,Sensors,4,pcs,3,MedWave Sensors,,S-B3,,Last-counted date requires confirmation
