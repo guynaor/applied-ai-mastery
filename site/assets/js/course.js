@@ -11,7 +11,8 @@ const sessions=[
 
 const state={mode:localStorage.getItem('aam-mode')||'student',completed:new Set(JSON.parse(localStorage.getItem('aam-completed')||'[]'))};
 const grid=document.querySelector('[data-session-grid]');
-const linkList=(root,items)=>items.map(([label,path])=>`<a href="${root}${path}">${label}</a>`).join('');
+const resourceHref=path=>path.toLowerCase().endsWith('.md')?`document.html?src=${encodeURIComponent(path)}`:path;
+const linkList=(root,items)=>items.map(([label,path])=>`<a href="${resourceHref(root+path)}">${label}</a>`).join('');
 function render(){
  if(!grid)return;
  grid.innerHTML=sessions.map(s=>`<article class="mission"><div class="mission-number">${s.n}</div><div><span class="badge">Mission ${s.n}</span><h3>${s.title}</h3><div class="role">${s.role}</div><p class="mission-summary">${s.summary}</p><div class="file-groups"><section class="file-group"><h4>Student materials</h4>${linkList(s.root,s.student)}</section><section class="file-group instructor-only" ${state.mode==='student'?'hidden':''}><h4>Instructor materials</h4>${linkList(s.root,s.instructor)}</section></div></div><div class="mission-controls"><label class="complete-toggle"><input type="checkbox" data-complete="${s.n}" ${state.completed.has(s.n)?'checked':''}> Complete</label></div></article>`).join('');
