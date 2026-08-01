@@ -1,6 +1,6 @@
 # AF-RD-203 — Research Memorandum Template
 
-**To:** Maya Levin, Engineering Manager  
+**To:** Sarah Chen, Engineering Manager  
 **From:** [Student name]  
 **Date:** [Date]  
 **Subject:** Frame architecture recommendation for the AquaNode vibration-test stand
