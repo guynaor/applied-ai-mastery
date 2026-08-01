@@ -1,59 +1,54 @@
 # Applied AI Mastery
 
-A practical, project-based course that teaches technical non-coders how to use AI for structured prompting, deep research, spreadsheet engineering, presentations, travel planning, background automation, and parametric CAD.
+A practical, project-based course that teaches technical non-coders how to use AI for structured prompting, deep research, spreadsheet engineering, presentations, operations planning, bounded automation, and parametric CAD.
 
-The course is organized around the fictional engineering company **AquaForge Technologies**. Students progress through realistic missions rather than isolated exercises.
+The course is organized around the fictional engineering company **AquaForge Technologies**. Students progress through realistic missions and finish with an integrated AquaNode Mini engineering-validation capstone.
 
 ## Project status
 
-This repository is under active development. The current focus is establishing the project structure, course website, AquaForge company foundation, and supporting teaching materials.
+**Polished beta candidate (v0.9).**
 
-## Working model
+The repository includes:
 
-All substantive changes are developed on feature branches and merged through pull requests.
+- a responsive interactive course portal;
+- seven complete mission packages;
+- student source files and worksheets;
+- instructor answer keys and rubrics;
+- CSV files compatible with Google Sheets and Excel;
+- a parametric OpenSCAD exercise;
+- an integrated capstone;
+- static-hosting configuration for Vercel and Firebase.
 
-Typical branch names:
+The remaining beta work is classroom testing, link verification, instructor walkthrough feedback, and optional PDF/DOCX/XLSX distributions.
 
-- `feature/course-platform`
-- `feature/aquaforge-foundation`
-- `feature/session-03-datasets`
-- `feature/instructor-materials`
-- `fix/navigation-mobile`
-- `docs/teaching-guide`
+## Run locally
 
-## Planned structure
+Open `index.html` directly, or serve the repository root with any static HTTP server.
 
-```text
-applied-ai-mastery/
-├── index.html
-├── README.md
-├── ROADMAP.md
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── site/
-├── company/
-├── course/
-├── student-materials/
-├── instructor-materials/
-├── datasets/
-├── spreadsheets/
-├── documents/
-├── pdfs/
-├── cad/
-├── solutions/
-└── capstone/
-```
+No dependencies or build step are required.
+
+## Deploy
+
+See [DEPLOYMENT.md](DEPLOYMENT.md). The repository can be deployed unchanged on Vercel, Firebase Hosting, Netlify, or GitHub Pages.
 
 ## Course progression
 
 1. Advanced Prompting & Model Selection
 2. Deep Research & Information Synthesis
-3. Non-Coder Spreadsheet Engineering
+3. Spreadsheet Engineering
 4. Presentations & Visual Artifacts
-5. Travel Architecture & Spatial Planning
-6. Unattended Desktop Agents & Scheduled Tasks
+5. Constraint-Based Operations Planning
+6. Bounded Agent Workflows
 7. Physical Design & Parametric CAD
 8. Capstone: AquaNode Mini
+
+## Instructor-content warning
+
+The portal's Student mode hides instructor links for convenience, not security. Instructor materials remain visible in the public repository. Use separate student and instructor deployments when answer-key confidentiality matters.
+
+## Working model
+
+All substantive changes are developed on feature branches and merged through reviewed pull requests.
 
 ## Design principle
 
