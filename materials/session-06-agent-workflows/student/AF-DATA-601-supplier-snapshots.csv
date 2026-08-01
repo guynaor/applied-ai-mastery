@@ -1,0 +1,14 @@
+snapshot_id,observed_at,supplier_id,availability,lead_time_days,unit_price_eur,parse_status,source_note
+S001,2026-09-01T08:00:00+03:00,SUP-A,IN_STOCK,14,10.00,OK,Baseline
+S002,2026-09-01T08:00:00+03:00,SUP-B,IN_STOCK,18,9.50,OK,Baseline
+S003,2026-09-02T08:00:00+03:00,SUP-A,LIMITED,18,10.00,OK,No alert threshold crossed
+S004,2026-09-02T08:00:00+03:00,SUP-B,IN_STOCK,24,9.50,OK,Lead-time incident opens
+S005,2026-09-03T08:00:00+03:00,SUP-B,IN_STOCK,24,9.50,OK,Duplicate active condition
+S006,2026-09-03T08:00:00+03:00,SUP-A,OUT_OF_STOCK,18,10.00,OK,Stock incident opens
+S007,2026-09-04T08:00:00+03:00,SUP-A,OUT_OF_STOCK,18,11.20,OK,Price incident also opens
+S008,2026-09-04T08:00:00+03:00,SUP-B,IN_STOCK,20,9.50,OK,Lead-time incident recovers
+S009,2026-09-05T08:00:00+03:00,SUP-A,IN_STOCK,16,11.20,OK,Stock incident recovers; price remains active
+S010,2026-09-05T08:00:00+03:00,SUP-B,,,,ERROR,Technical parse incident opens
+S011,2026-09-06T08:00:00+03:00,SUP-B,OUT_OF_STOCK,23,9.50,OK,Parse incident recovers; stock and lead incidents open
+S012,2026-09-07T08:00:00+03:00,SUP-A,IN_STOCK,16,10.40,OK,Price incident recovers
+S013,2026-09-08T08:00:00+03:00,SUP-A,OUT_OF_STOCK,16,10.40,OK,New stock incident after recovery

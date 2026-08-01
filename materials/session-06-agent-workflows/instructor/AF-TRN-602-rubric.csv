@@ -1,0 +1,7 @@
+criterion,weight_percent,strong,acceptable,revise
+Agent specification,20,"Trigger, inputs, thresholds, state, outputs, failures, and stop behaviour are explicit","Core loop is defined but some edge behaviour is implicit","Vague monitoring request with major implementation decisions missing"
+State and incident model,20,"Separates observations, history, current state, and active incidents; recovery re-arms correctly","Mostly separates state but one transition is unclear","Uses alert history as active state or suppresses future incidents"
+Decision correctness,20,"All supplied transitions are identified without inferring from invalid data","Most transitions are correct with minor errors","Duplicates, recoveries, or parse failures are handled incorrectly"
+Testing and observability,15,"Replay, stale-clock test, retries, delivery failure, logs, pause, and stop are demonstrated","Basic replay and logs exist but failure coverage is limited","No convincing evidence that the recurring workflow works or fails visibly"
+Safety and permissions,15,"Irreversible actions remain human-controlled and permissions are minimal","Workflow is low risk but boundaries are incomplete","Agent can purchase, bypass access controls, or act beyond scope"
+Communication quality,10,"Notifications are evidence-linked, concise, and uncertainty-aware","Messages are usable but omit one important evidence field","Alerts overclaim certainty or provide no traceable evidence"
