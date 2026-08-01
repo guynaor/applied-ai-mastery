@@ -1,0 +1,8 @@
+criterion,weight_percent,excellent,adequate,revise
+Design contract,20,"Interfaces, references, dimensions, tolerances, and boundaries are explicit","Main requirements are captured with minor gaps","Model begins without a measurable contract"
+Parametric structure,20,"Named parameters drive all related geometry predictably","Most dimensions are parameterized but some dependencies are hard-coded","Changes require rewriting or break unrelated features"
+Geometry correctness,20,"Default and changed configurations render as valid connected geometry","Default model works with limited changed-parameter evidence","Missing solids, collisions, or disconnected geometry remain"
+Interface validation,15,"Fit, hole spacing, cable opening, edge distance, and wall thickness are checked","Most critical interfaces are checked","A plausible render substitutes for measurements"
+Manufacturing readiness,10,"Print orientation, spans, material, supports, and fit coupon are addressed","Basic orientation and print assumptions are documented","Printability is not evaluated"
+Testing evidence,10,"Default, two changed sets, and one extreme plausible set are documented","Some parameter testing is shown","Only the default render is tested"
+Claim discipline,5,"Limitations are explicit and no certification or load claim is invented","Claims are mostly bounded","Prototype is described as proven or certified"
