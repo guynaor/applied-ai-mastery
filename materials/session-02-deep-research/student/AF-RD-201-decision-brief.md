@@ -1,7 +1,7 @@
 # AF-RD-201 — Research Decision Brief
 
 **Department:** Research & Development  
-**Requested by:** Maya Levin, Engineering Manager  
+**Requested by:** Sarah Chen, Engineering Manager  
 **Decision date:** 2026-08-15  
 **Subject:** Frame architecture for the AquaNode vibration-test stand
 
