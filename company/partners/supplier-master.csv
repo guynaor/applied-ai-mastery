@@ -1,0 +1,9 @@
+supplier_id,supplier_name,country,category,primary_currency,lead_time_days,quality_status,account_owner
+AF-S001,BlueCurrent Sensors,Germany,Water-quality probes,EUR,28,Approved,Elena Rossi
+AF-S002,Cyprus Motion & Control,Cyprus,Pumps and control hardware,EUR,14,Approved,Elena Rossi
+AF-S003,Negev Circuit Works,Israel,PCB assembly,ILS,21,Approved,Elena Rossi
+AF-S004,Nordic Enclosures,Finland,IP-rated enclosures,EUR,35,Conditional,Elena Rossi
+AF-S005,Shenzhen OptiSense,China,Optical and PAR components,USD,42,Under Review,Elena Rossi
+AF-S006,Galilee Fasteners,Israel,Fasteners and mechanical hardware,ILS,7,Approved,Elena Rossi
+AF-S007,ProtoFab Europe,Netherlands,Prototype machining and sheet metal,EUR,18,Approved,Yael Cohen
+AF-S008,CloudHarbor Systems,Ireland,Cloud infrastructure services,EUR,0,Approved,Priya Nair
