@@ -6,6 +6,7 @@ C04,HARD,2026-09-22,15:00,16:30,Aradippou Zone,Cable-gland supplier meeting and 
 C05,HARD,2026-09-23,10:00,12:00,West Larnaca Zone,AquaNode Mini pilot-host assessment,Rachel Stein,If site unavailable conduct document review and reschedule physical visit outside this trip,0,YES
 C06,HARD,2026-09-24,14:30,15:15,Larnaca Airport,Vehicle return and airport check-in,Sarah Chen,No activity may finish later than 13:15,0,YES
 C07,PREFERENCE,ALL,,,ALL,Maximum planned driving per day excluding airport transfer,Team,Prefer 90 minutes or less,0,NO
-C08,PREFERENCE,ALL,,,ALL,One 60-minute flexible block on each full day,Team,May be used only after instructor-approved disruption,0,NO
-C09,PREFERENCE,ALL,,,ALL,Working lunch no more than once during trip,Team,Use seated meal on other days,0,NO
-C10,HARD,ALL,,,ALL,Total operating budget excluding flights and salaries,Leo Martin,Escalate rather than silently exceed,1200,NO
+C08,HARD,2026-09-22,,,ALL,One protected 60-minute flexible recovery block,Team,May be consumed only after an actual disruption and must otherwise remain unscheduled,0,NO
+C09,HARD,2026-09-23,,,ALL,One protected 60-minute flexible recovery block,Team,May be consumed only after an actual disruption and must otherwise remain unscheduled,0,NO
+C10,PREFERENCE,ALL,,,ALL,Working lunch no more than once during trip,Team,Use seated meal on other days,0,NO
+C11,HARD,ALL,,,ALL,Total operating budget excluding flights and salaries,Leo Martin,Escalate rather than silently exceed,1200,NO
