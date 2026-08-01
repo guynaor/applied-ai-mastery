@@ -1,0 +1,11 @@
+deliverable_id,deliverable,required_format,primary_skill,completion_evidence,status,review_owner,notes
+D01,Executive recommendation memo,PDF or Google Doc,Decision synthesis,Recommendation linked to evidence and reversal conditions,NOT_STARTED,Maya Levin,
+D02,RISEN prompt and model comparison,Document,Prompt engineering,Same evidence run through at least two models with observed differences,NOT_STARTED,Sarah Chen,
+D03,Research memorandum,PDF or Google Doc,Research,Checked citations counterargument and next validation step,NOT_STARTED,Daniel Arbel,
+D04,Capstone workbook,Google Sheets or XLSX,Data engineering,Data contract formulas risk register and sensitivity test,NOT_STARTED,Victor Petrov,
+D05,Six-slide leadership deck,Slides or PDF,Technical communication,One takeaway per slide and evidence-bound claims,NOT_STARTED,Maya Levin,
+D06,Three-day validation plan,Sheet plus calendar CSV,Operations planning,Constraints buffers owners contingencies and verification tasks,NOT_STARTED,Nikos Andreou,
+D07,Monitoring-agent specification,Document plus event log,Automation,State model replay tests failure handling and stop procedure,NOT_STARTED,Priya Nair,
+D08,Parametric CAD package,SCAD plus validation log,CAD,Default changed and extreme configurations with fit-test plan,NOT_STARTED,Yael Cohen,
+D09,Final decision log,CSV or Sheet,Traceability,Every material assumption and decision has an owner and basis,NOT_STARTED,Sarah Chen,
+D10,Reflection,One-page document,Professional judgment,Specific examples of AI value failure and human verification,NOT_STARTED,Sarah Chen,
