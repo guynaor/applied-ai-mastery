@@ -1,0 +1,12 @@
+test_id,configuration,parameter_changes,check,expected_result,observed_result,pass_fail,evidence_reference,follow_up
+T01,Default,None,Model renders,No OpenSCAD errors,,,,
+T02,Default,None,Internal width,121.6 mm,,,,
+T03,Default,None,Hole spacing X,90 mm centre to centre,,,,
+T04,Default,None,Hole spacing Z,55 mm centre to centre,,,,
+T05,Default,None,Cable opening,At least 24 x 18 mm,,,,
+T06,Wide enclosure,enclosure_width=140,Geometry remains valid and centred,No collisions or missing solids,,,,
+T07,Deep enclosure,enclosure_depth=55; shelf_depth adjusted deliberately,Shelf supports enclosure depth and cable opening remains valid,,,,
+T08,Extreme plausible,side_clearance=1.5; side_lip_height=25,Geometry remains printable and interfaces remain explicit,,,,
+T09,Fit coupon,Use selected enclosure width and clearance,Measured slot matches intended fit,Document printer material and measurement,,,,
+T10,Print orientation,Back plate on bed,No unsupported span exceeds rule without documented support,Orientation evidence attached,,,,
+T11,Documentation,None,Claims remain bounded,No structural certification or field-readiness claim,,,,
