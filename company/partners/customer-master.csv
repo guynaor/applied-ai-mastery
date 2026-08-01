@@ -1,0 +1,9 @@
+customer_id,customer_name,country,sector,account_tier,primary_products,account_owner
+AF-C001,SeaSpring Aquaculture,Cyprus,Aquaculture,Strategic,"AquaNode Edge; HydroSense Pro",Rachel Stein
+AF-C002,GreenArc Farms,Israel,Greenhouse agriculture,Strategic,"ClimateLink Gateway; PAR-400",Adam Brooks
+AF-C003,North Shore Research Lab,United Kingdom,Environmental research,Standard,"HydroSense Pro; PAR-400",Rachel Stein
+AF-C004,TerraLoop Systems,Italy,Smart agriculture integrator,Strategic,"AquaNode Edge; ClimateLink Gateway",Adam Brooks
+AF-C005,MakerDock Cooperative,Netherlands,Technical workshops,Standard,"ForgeMount System",Adam Brooks
+AF-C006,BlueDelta Hatchery,Greece,Aquaculture,Standard,"HydroSense Pro; DosePilot 4",Rachel Stein
+AF-C007,Desert Bloom R&D,Israel,Agricultural research,Standard,"PAR-400; ClimateLink Gateway",Rachel Stein
+AF-C008,Coastal Polytechnic,Cyprus,Education and research,Community,"AquaNode Edge; ForgeMount System",Nikos Andreou
