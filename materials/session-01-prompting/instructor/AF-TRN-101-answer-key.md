@@ -28,17 +28,25 @@ The following may be discussed as hypotheses, not conclusions:
 
 The model should not rank these confidently without additional evidence.
 
-## Useful structural modifications to investigate
+## Useful structural or mechanical modifications to investigate
+
+The student must propose **two actual structural or mechanical design modifications**. Instrumentation, inspection, and measurement plans do not satisfy this requirement.
 
 Acceptable proposals may include:
 
-- Improving shaft support or bearing arrangement after validating the vibration source.
-- Adding or redesigning alignment features to reduce assembly variability.
-- Revising the seal housing or mounting stiffness after modal or deflection analysis.
-- Introducing a thermally compliant feature or cooling arrangement if temperature data supports it.
-- Adding vibration and temperature instrumentation before redesign.
+- Improving shaft support or revising the bearing arrangement after validating the vibration source.
+- Adding or redesigning alignment and locating features to reduce assembly variability.
+- Increasing or redistributing seal-housing or mounting stiffness after modal or deflection analysis.
+- Introducing a thermally compliant mount or controlled-expansion feature if hot-alignment data supports it.
+- Revising the seal cooling path or thermal isolation arrangement if temperature measurements support it.
+- Changing the coupling, support geometry, or damping arrangement if testing identifies a relevant resonance or transmitted vibration path.
 
-A proposal earns stronger credit when it is linked to a specific hypothesis and paired with a validation test.
+A proposal earns stronger credit when it:
+
+1. Changes the physical design or mechanical arrangement.
+2. Is linked to a specific hypothesis.
+3. States the evidence required before implementation.
+4. Includes a validation test for the proposed change.
 
 ## Red flags
 
@@ -49,25 +57,28 @@ Reduce credit when an output:
 - Claims cavitation, bearing failure, or misalignment as confirmed.
 - Recommends a material without evidence about coolant chemistry or temperature.
 - Claims a modification is safe or will solve the problem.
+- Counts added sensors, inspections, or measurements as one of the two required design modifications.
 - Ignores the missing-data list.
 - Uses external facts while claiming to rely strictly on the memo.
 
 ## Recommended next measurements
 
-A strong response should prioritize several of these:
+Instrumentation and evidence-gathering belong in this section rather than in the two required modification answers. A strong response should prioritize several of these:
 
 1. Vibration spectrum and phase measurements during normal and high-temperature operation.
-2. Shaft runout and alignment measurements cold and hot.
-3. Bearing condition and clearance inspection.
-4. Coolant temperature, suction pressure, and cavitation-margin history.
-5. Seal-face failure examination and photographs.
-6. Seal material certification and installation records.
-7. Structural or modal analysis of the pump, shaft support, and seal housing.
+2. Permanently or temporarily installed vibration and temperature instrumentation at appropriate pump, bearing, and seal locations.
+3. Shaft runout and alignment measurements cold and hot.
+4. Bearing condition and clearance inspection.
+5. Coolant temperature, suction pressure, and cavitation-margin history.
+6. Seal-face failure examination and photographs.
+7. Seal material certification and installation records.
+8. Structural or modal analysis of the pump, shaft support, and seal housing.
 
 ## Debrief questions
 
 - Which model sounded most certain, and was that certainty justified?
 - Which model made missing evidence easiest to see?
 - Did any model change the meaning of “reported” into a confirmed measurement?
+- Did the response provide two genuine design modifications, or substitute monitoring for one of them?
 - Which prompt constraint had the largest effect?
 - What one revision made the response more defensible?
