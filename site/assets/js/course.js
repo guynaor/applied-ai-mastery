@@ -1,26 +1,25 @@
-const sessions = [
-  [1, "Junior AI Assistant", "Advanced Prompting & Model Selection"],
-  [2, "AI Research Analyst", "Deep Research & Information Synthesis"],
-  [3, "Data Operations Specialist", "Non-Coder Spreadsheet Engineering"],
-  [4, "Technical Communicator", "Presentations & Visual Artifacts"],
-  [5, "Operations Planner", "Travel Architecture & Spatial Planning"],
-  [6, "Automation Engineer", "Unattended Desktop Agents & Scheduled Tasks"],
-  [7, "AI Systems Engineer", "Physical Design & Parametric CAD"],
-  [8, "Lead Applied AI Engineer", "Capstone: AquaNode Mini"]
+const sessions=[
+{n:1,role:'Junior AI Assistant',title:'Advanced Prompting & Model Selection',summary:'Compare AI outputs, diagnose weak assumptions, and build a reusable RISEN prompt.',root:'materials/session-01-prompting/',student:[['Mission overview','README.md'],['Source memo','student/AF-TRN-101-source-memo.md'],['Model comparison worksheet','student/AF-TRN-102-model-comparison-worksheet.md'],['RISEN prompt template','student/AF-TRN-103-risen-prompt-template.md']],instructor:[['Answer key','instructor/AF-TRN-101-answer-key.md'],['Assessment rubric','instructor/AF-TRN-102-assessment-rubric.csv']]},
+{n:2,role:'AI Research Analyst',title:'Deep Research & Information Synthesis',summary:'Build an evidence matrix, compare unequal sources, and write a bounded decision memo.',root:'materials/session-02-deep-research/',student:[['Mission overview','README.md'],['Decision brief','student/AF-RD-201-decision-brief.md'],['Evidence matrix','student/AF-RD-202-evidence-matrix.csv'],['Research memo template','student/AF-RD-203-research-memo-template.md'],['Source pack','sources/AF-SRC-201-extrusion-manufacturer-note.md']],instructor:[['Answer key','instructor/AF-TRN-201-answer-key.md'],['Assessment rubric','instructor/AF-TRN-202-rubric.csv']]},
+{n:3,role:'Data Operations Specialist',title:'Spreadsheet Engineering',summary:'Clean messy inventory data without destroying evidence, then specify a safe alert workflow.',root:'materials/session-03-spreadsheet-engineering/',student:[['Mission overview','README.md'],['Assignment brief','student/AF-OPS-301-assignment-brief.md'],['Messy inventory','student/AF-DATA-301-inventory-messy.csv'],['Data contract','student/AF-DATA-302-data-contract-template.csv'],['Automation specification','student/AF-OPS-302-automation-specification.md']],instructor:[['Answer key','instructor/AF-TRN-301-answer-key.md'],['Reference clean inventory','instructor/AF-DATA-303-reference-clean-inventory.csv'],['Assessment rubric','instructor/AF-TRN-302-rubric.csv']]},
+{n:4,role:'Technical Communicator',title:'Presentations & Visual Artifacts',summary:'Turn incomplete cross-functional evidence into a clear six-slide leadership decision.',root:'materials/session-04-technical-communication/',student:[['Mission overview','README.md'],['Presentation brief','student/AF-COM-401-presentation-brief.md'],['Source notes','student/AF-COM-402-source-notes.md'],['Storyboard template','student/AF-COM-403-storyboard-template.csv'],['Critique checklist','student/AF-COM-404-critique-checklist.md']],instructor:[['Answer key','instructor/AF-TRN-401-answer-key.md'],['Assessment rubric','instructor/AF-TRN-402-rubric.csv']]},
+{n:5,role:'Operations Planner',title:'Constraint-Based Operations Planning',summary:'Create a feasible field itinerary with hard constraints, buffers, contingencies, and calendar output.',root:'materials/session-05-operations-planning/',student:[['Mission overview','README.md'],['Mission brief','student/AF-OPS-501-mission-brief.md'],['Constraint register','student/AF-OPS-502-constraints.csv'],['Location candidates','student/AF-OPS-503-location-candidates.csv'],['Itinerary template','student/AF-OPS-504-itinerary-template.csv'],['Calendar import template','student/AF-OPS-505-calendar-import-template.csv']],instructor:[['Answer key','instructor/AF-TRN-501-answer-key.md'],['Assessment rubric','instructor/AF-TRN-502-rubric.csv']]},
+{n:6,role:'Automation Engineer',title:'Bounded Agent Workflows',summary:'Design a stateful monitoring agent with duplicate suppression, recovery, observability, and human control.',root:'materials/session-06-agent-workflows/',student:[['Mission overview','README.md'],['Mission brief','student/AF-AUTO-601-mission-brief.md'],['Agent specification','student/AF-AUTO-602-agent-specification-template.md'],['Supplier snapshots','student/AF-DATA-601-supplier-snapshots.csv'],['Test log','student/AF-AUTO-603-test-log-template.csv']],instructor:[['Answer key','instructor/AF-TRN-601-answer-key.md'],['Assessment rubric','instructor/AF-TRN-602-rubric.csv']]},
+{n:7,role:'AI Systems Engineer',title:'Parametric CAD',summary:'Translate measurable interfaces into a parametric OpenSCAD bracket and a validation plan.',root:'materials/session-07-parametric-cad/',student:[['Mission overview','README.md'],['Design brief','student/AF-CAD-701-design-brief.md'],['Design contract','student/AF-CAD-702-design-contract.csv'],['OpenSCAD starter','student/AF-CAD-703-starter.scad'],['Validation log','student/AF-CAD-704-validation-log.csv']],instructor:[['Answer key','instructor/AF-TRN-701-answer-key.md'],['Assessment rubric','instructor/AF-TRN-702-rubric.csv']]},
+{n:8,role:'Lead Applied AI Engineer',title:'Capstone: AquaNode Mini',summary:'Integrate all seven disciplines into one evidence-bound engineering-validation recommendation.',root:'capstone/',student:[['Capstone overview','README.md'],['Mission brief','student/AF-CAP-001-mission-brief.md'],['Evidence register','student/AF-CAP-002-evidence-register.csv'],['Deliverable register','student/AF-CAP-003-deliverable-register.csv'],['Decision log','student/AF-CAP-004-decision-log.csv']],instructor:[['Instructor guide','instructor/AF-CAP-101-instructor-guide.md'],['Assessment rubric','instructor/AF-CAP-102-rubric.csv']]}
 ];
 
-const container = document.querySelector("[data-session-grid]");
-
-if (container) {
-  container.innerHTML = sessions.map(([number, role, title]) => `
-    <article class="card">
-      <span class="badge">Mission ${number}</span>
-      <h3>${title}</h3>
-      <p><strong>${role}</strong></p>
-      <p>Course material and mission files will be linked here as each feature branch is merged.</p>
-    </article>
-  `).join("");
+const state={mode:localStorage.getItem('aam-mode')||'student',completed:new Set(JSON.parse(localStorage.getItem('aam-completed')||'[]'))};
+const grid=document.querySelector('[data-session-grid]');
+const linkList=(root,items)=>items.map(([label,path])=>`<a href="${root}${path}">${label}</a>`).join('');
+function render(){
+ if(!grid)return;
+ grid.innerHTML=sessions.map(s=>`<article class="mission"><div class="mission-number">${s.n}</div><div><span class="badge">Mission ${s.n}</span><h3>${s.title}</h3><div class="role">${s.role}</div><p class="mission-summary">${s.summary}</p><div class="file-groups"><section class="file-group"><h4>Student materials</h4>${linkList(s.root,s.student)}</section><section class="file-group instructor-only" ${state.mode==='student'?'hidden':''}><h4>Instructor materials</h4>${linkList(s.root,s.instructor)}</section></div></div><div class="mission-controls"><label class="complete-toggle"><input type="checkbox" data-complete="${s.n}" ${state.completed.has(s.n)?'checked':''}> Complete</label></div></article>`).join('');
+ document.querySelectorAll('[data-complete]').forEach(box=>box.addEventListener('change',()=>{const n=Number(box.dataset.complete);box.checked?state.completed.add(n):state.completed.delete(n);localStorage.setItem('aam-completed',JSON.stringify([...state.completed]));updateProgress();}));
+ updateProgress();
 }
-
-const year = document.querySelector("[data-year]");
-if (year) year.textContent = new Date().getFullYear();
+function updateProgress(){const count=state.completed.size;const p=document.querySelector('[data-progress]');const label=document.querySelector('[data-progress-label]');if(p)p.value=count;if(label)label.textContent=`${count} of 8 complete`;}
+function setMode(mode){state.mode=mode;localStorage.setItem('aam-mode',mode);document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===mode)));document.querySelectorAll('.instructor-only').forEach(el=>el.hidden=mode==='student');}
+document.querySelectorAll('[data-mode]').forEach(button=>button.addEventListener('click',()=>setMode(button.dataset.mode)));
+render();setMode(state.mode);
+const year=document.querySelector('[data-year]');if(year)year.textContent=new Date().getFullYear();
