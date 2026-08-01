@@ -1,0 +1,19 @@
+employee_id,full_name,preferred_name,title,department,location,reports_to,communication_style,course_role
+AF-E001,Maya Levin,Maya,Chief Executive Officer,Executive,Haifa,,Concise; decision-focused; dislikes unsupported claims,Executive sponsor
+AF-E002,Daniel Arbel,Daniel,Chief Technology Officer,Product & Engineering,Haifa,AF-E001,Technical; systems-oriented; asks about assumptions,Technical sponsor
+AF-E003,Sarah Chen,Sarah,Engineering Manager,Product & Engineering,Haifa,AF-E002,Structured; precise; expects traceability,Primary student manager
+AF-E004,Omar Haddad,Omar,Senior Embedded Engineer,Product & Engineering,Haifa,AF-E003,Detailed; practical; includes logs and measurements,Sensor and firmware specialist
+AF-E005,Yael Cohen,Yael,Mechanical Design Engineer,Product & Engineering,Haifa,AF-E003,Visual; concise; focused on fit and manufacturability,CAD mentor
+AF-E006,Nikos Andreou,Nikos,Field Systems Engineer,Customer Success & Field Service,Larnaca,AF-E010,Practical; direct; uses field observations,Travel and field-work contact
+AF-E007,Lina Mansour,Lina,Quality Assurance Lead,Manufacturing & Quality,Haifa,AF-E001,Skeptical; evidence-driven; notices inconsistencies,Verification and audit voice
+AF-E008,Tom Becker,Tom,Manufacturing Manager,Manufacturing & Quality,Haifa,AF-E001,Operational; deadline-focused; prefers checklists,Production stakeholder
+AF-E009,Elena Rossi,Elena,Procurement Manager,Procurement & Logistics,Larnaca,AF-E001,Cost-conscious; compares terms and risk,Supplier and purchasing stakeholder
+AF-E010,Rachel Stein,Rachel,Customer Success Director,Customer Success & Field Service,Haifa,AF-E001,Empathetic; practical; prioritizes customer impact,Support stakeholder
+AF-E011,Adam Brooks,Adam,Sales Director,Sales & Marketing,Larnaca,AF-E001,Enthusiastic; optimistic; may overstate certainty,Presentation stakeholder
+AF-E012,Noa Weiss,Noa,Technical Writer,Sales & Marketing,Haifa,AF-E011,Clear; audience-aware; consistent terminology,Documentation mentor
+AF-E013,Victor Petrov,Victor,Data & Operations Analyst,Finance & Operations,Haifa,AF-E001,Analytical; terse; expects clean schemas,Spreadsheet mentor
+AF-E014,Priya Nair,Priya,Automation Engineer,Product & Engineering,Haifa,AF-E002,Methodical; safety-conscious; logs everything,Agent-workflow mentor
+AF-E015,Leo Martin,Leo,Finance Manager,Finance & Operations,Larnaca,AF-E001,Conservative; asks for comparable costs and currency clarity,Budget reviewer
+AF-E016,Amira Saleh,Amira,People Operations Coordinator,Finance & Operations,Haifa,AF-E001,Friendly; organized; policy-focused,Onboarding contact
+AF-E017,Eli Navon,Eli,Junior Product Engineer,Product & Engineering,Haifa,AF-E003,Curious; informal; sometimes omits context,Peer character
+AF-E018,Hana Kim,Hana,Product Manager,Product & Engineering,Haifa,AF-E002,Customer-oriented; prioritizes trade-offs,Capstone product owner
