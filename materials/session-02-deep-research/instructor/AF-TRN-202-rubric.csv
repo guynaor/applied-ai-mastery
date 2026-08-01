@@ -1,0 +1,7 @@
+Criterion,Weight,Strong,Acceptable,Revise
+Decision framing,15,"Recommendation addresses the stated decision, constraints, and operating envelope.","Recommendation addresses the main decision but misses one important constraint.","Submission summarizes a topic without supporting the business decision."
+Source independence,20,"Correctly identifies repeated claims and distinguishes independent evidence from commercial repetition.","Notices some source dependence but applies it inconsistently.","Counts repeated or commercially dependent claims as independent confirmation."
+Evidence comparability,20,"Explicitly handles geometry, load, support, joint, and measurement differences.","Recognizes major comparison limits but misses some conditions.","Directly compares incompatible figures or creates false precision."
+Cost and risk analysis,15,"Normalizes inclusions and exclusions and identifies material decision risks.","Provides useful cost and risk discussion with minor omissions.","Compares headline prices without accounting for scope differences."
+Uncertainty and validation,20,"States decisive unknowns and proposes a focused validation step that reduces decision risk.","Acknowledges uncertainty and suggests generally useful further work.","Hides uncertainty or asks vaguely for more research."
+Clarity and traceability,10,"Claims are concise, source-linked, and clearly separated from inference.","Memo is understandable but some claims are difficult to trace.","Claims, assumptions, and recommendations are mixed together."
