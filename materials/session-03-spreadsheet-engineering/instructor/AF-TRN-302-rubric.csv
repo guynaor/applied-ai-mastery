@@ -1,0 +1,9 @@
+Criterion,Weight,Strong Performance,Acceptable Performance,Needs Revision
+Data contract,15,"Defines types units formats allowed values and missing-data rules for every column","Most columns are defined with minor omissions","Schema is vague or created after cleaning"
+Issue diagnosis,15,"Finds deterministic errors ambiguous cases duplicates and automation risks","Finds most visible problems but misses some ambiguity","Treats formatting cleanup as complete diagnosis"
+Evidence-preserving cleanup,20,"Normalizes supported values and flags unsupported repairs without invention","Mostly preserves evidence with one or two weak assumptions","Deletes duplicates fills blanks or changes identifiers without support"
+Dynamic analysis,15,"Low-stock and category summaries update automatically and handle invalid rows","Summaries work for normal rows with limited edge handling","Static totals or formulas mis-handle blanks and text"
+Automation design,20,"Dry run duplicate suppression validation logging and post-success status update are implemented","Core alert works but one safeguard is incomplete","Script can send duplicates guess invalid data or mark unsent alerts"
+Testing,10,"At least five documented tests include invalid data equality duplicate alerts and mode changes","Basic tests are shown but edge coverage is limited","No reproducible expected-versus-actual evidence"
+Explanation and handoff,5,"Workflow formulas permissions setup trigger and stop procedure are clear in plain language","Instructions are usable but incomplete","Result depends on the original author to operate it"
+TOTAL,100,,,

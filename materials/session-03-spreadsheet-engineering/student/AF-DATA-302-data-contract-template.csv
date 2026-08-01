@@ -1,0 +1,11 @@
+Column,Meaning,Data Type,Canonical Format or Unit,Allowed Values,Missing-Data Rule,Validation Notes
+SKU,,,,,,
+Item Name,,,,,,
+Category,,,,,,
+Qty On Hand,,,,,,
+Unit,,,,,,
+Reorder Level,,,,,,
+Supplier,,,,,,
+Last Counted,,,,,,
+Location,,,,,,
+Alert Sent,,,,,,
