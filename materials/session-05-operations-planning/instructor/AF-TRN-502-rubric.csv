@@ -1,0 +1,8 @@
+criterion,weight,excellent,adequate,revise
+Hard constraints,25,All fixed commitments and departure limits are preserved with explicit contingencies,Most constraints are preserved with minor ambiguity,One or more hard constraints are moved ignored or overlapped
+Geographic clustering,20,Activities are grouped logically with minimal unnecessary travel,Clustering is mostly sensible with one avoidable crossing,The schedule assigns times before considering geography
+Buffers and workload,20,Travel setup meals notes and daily recovery blocks are realistic,Most buffers exist but one day is too dense,Back-to-back scheduling or excessive technical workload makes the plan fragile
+Verification discipline,15,Every live fact is flagged and checks are staged by timing,Most live facts are identified but checks are incomplete,Exercise estimates are presented as verified facts
+Contingencies,10,Arrival delay and site loss produce practical bounded alternatives,Contingencies exist but create secondary conflicts,No workable fallback is provided
+Budget and export quality,10,Budget is transparent and the calendar export is complete and readable,Budget and export are usable with minor errors,Costs are hidden exceeded without escalation or export fields are unusable
+TOTAL,100,,,,

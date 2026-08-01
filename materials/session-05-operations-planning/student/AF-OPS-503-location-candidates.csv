@@ -1,0 +1,13 @@
+location_id,activity,zone,priority,estimated_duration_min,travel_origin_zone,estimated_travel_min,estimated_cost_eur,access_window,notes,live_verification_required
+L01,Hotel check-in and team base,Larnaca Centre,REQUIRED,45,Larnaca Airport,15,540,After 14:00,Three rooms for three nights; fictional rate,YES
+L02,Customer installation diagnostic,Oroklini Zone,REQUIRED,150,Larnaca Centre,25,0,09:00-13:00,Technical visit with equipment setup,YES
+L03,Cable-gland supplier meeting,Aradippou Zone,REQUIRED,90,Oroklini Zone,20,0,13:00-17:00,Bring sample checklist and calipers,YES
+L04,Pilot-host assessment,West Larnaca Zone,REQUIRED,120,Larnaca Centre,25,0,09:00-14:00,Site access requires host confirmation,YES
+L05,Internal debrief room,Larnaca Centre,REQUIRED,60,Larnaca Centre,10,60,08:00-18:00,Meeting-room estimate only,YES
+L06,Workshop-parts retailer,Aradippou Zone,OPTIONAL_HIGH,45,Aradippou supplier site,8,80,09:00-18:00,Useful after supplier meeting if substitutions are needed; closing time must be verified,YES
+L07,Field lunch near customer,Oroklini Zone,OPTIONAL_HIGH,60,Oroklini customer site,8,75,12:00-15:00,Seated meal after diagnostic visit,YES
+L08,Coastal installation observation,East Larnaca Zone,OPTIONAL_MEDIUM,75,Larnaca Centre,25,0,09:00-16:00,Non-customer reference visit; weather sensitive,YES
+L09,Team dinner,Larnaca Centre,OPTIONAL_MEDIUM,90,Larnaca Centre,10,120,18:30-21:30,Use for informal reflection not formal decisions,YES
+L10,Documentation block,Larnaca Centre,OPTIONAL_HIGH,90,Larnaca Centre,0,0,Any,Convert field notes into traceable findings,NO
+L11,Flexible recovery block,Larnaca Centre,REQUIRED,60,Current activity zone,0,0,Any,Must remain unscheduled until disruption occurs,NO
+L12,Airport fuel stop,Larnaca Airport,REQUIRED,20,Larnaca Centre,15,70,Before vehicle return,Fuel estimate depends on use; five additional minutes are allowed from fuel stop to vehicle return,YES

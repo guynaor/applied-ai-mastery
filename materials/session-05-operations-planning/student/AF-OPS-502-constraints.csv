@@ -1,0 +1,12 @@
+constraint_id,type,date,start_time,end_time,zone,description,owner,contingency,budget_eur,verification_required
+C01,HARD,2026-09-21,10:30,11:15,Larnaca Airport,Team arrival and vehicle collection,Sarah Chen,If arrival is delayed more than 90 minutes move internal lunch to takeaway and cancel optional afternoon activity,180,YES
+C02,HARD,2026-09-21,16:00,17:00,Larnaca Centre,Remote engineering check-in with Haifa team,Sarah Chen,May be joined from hotel meeting room only,0,YES
+C03,HARD,2026-09-22,09:30,12:00,Oroklini Zone,Customer RS485 diagnostic visit,Nikos Andreou,Customer may move start by up to 30 minutes with same duration,0,YES
+C04,HARD,2026-09-22,15:00,16:30,Aradippou Zone,Cable-gland supplier meeting and sample inspection,Elena Rossi,If supplier cancels replace with remote call and retain local sample-review block,0,YES
+C05,HARD,2026-09-23,10:00,12:00,West Larnaca Zone,AquaNode Mini pilot-host assessment,Rachel Stein,If site unavailable conduct document review and reschedule physical visit outside this trip,0,YES
+C06,HARD,2026-09-24,14:30,15:15,Larnaca Airport,Vehicle return and airport check-in,Sarah Chen,No activity may finish later than 13:15,0,YES
+C07,PREFERENCE,ALL,,,ALL,Maximum planned driving per day excluding airport transfer,Team,Prefer 90 minutes or less,0,NO
+C08,HARD,2026-09-22,,,ALL,One protected 60-minute flexible recovery block,Team,May be consumed only after an actual disruption and must otherwise remain unscheduled,0,NO
+C09,HARD,2026-09-23,,,ALL,One protected 60-minute flexible recovery block,Team,May be consumed only after an actual disruption and must otherwise remain unscheduled,0,NO
+C10,PREFERENCE,ALL,,,ALL,Working lunch no more than once during trip,Team,Use seated meal on other days,0,NO
+C11,HARD,ALL,,,ALL,Total operating budget excluding flights and salaries,Leo Martin,Escalate rather than silently exceed,1200,NO
