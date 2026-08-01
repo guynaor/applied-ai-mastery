@@ -1,0 +1,7 @@
+Criterion,Weight,Strong,Acceptable,Revise
+RISEN prompt structure,20,"All five components are explicit, relevant, and internally consistent.","Most components are present but one is vague or redundant.","The request is mostly conversational or lacks essential context."
+Controlled comparison,20,"The same source and prompt are used in every model and differences are evidenced.","Inputs are mostly consistent but evidence is limited.","Models are compared using different prompts or subjective preference."
+Evidence discipline,25,"Facts, inferences, and unsupported claims are clearly separated.","Most distinctions are correct but a few claims are not classified well.","Confident language is accepted as verified evidence."
+Prompt revision,15,"One specific weakness is diagnosed and one controlled change is tested.","A revision is attempted but several variables change at once.","The prompt is restarted without diagnosing the first result."
+Technical judgment,10,"Missing measurements and sensible next validation steps are prioritized.","Some useful missing evidence is identified.","The response accepts a definitive diagnosis from incomplete data."
+Communication,10,"Judgments are concise and supported by exact examples.","The worksheet is understandable but examples are incomplete.","Conclusions are unsupported or difficult to follow."
