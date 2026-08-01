@@ -1,0 +1,12 @@
+criterion,weight_percent,excellent,adequate,revise
+Decision framing and recommendation,15,Decision is precise evidence-bound and includes reversal conditions,Decision is understandable but some criteria or conditions are implicit,Recommendation is broad predetermined or stronger than evidence
+Evidence and research discipline,15,Important claims are traceable citations checked and counterevidence addressed,Most claims are sourced but verification or opposing evidence is uneven,Claims rely on AI confidence repeated sources or unchecked citations
+Prompt and model judgment,8,Structured prompts are purposeful and model differences are diagnosed with evidence,Prompts are usable and comparison identifies basic differences,Models are ranked by preference or outputs are accepted without diagnosis
+Data model and calculations,15,Data contract formulas sensitivity and missing-data handling are robust,Workbook works for normal cases with limited edge-case evidence,Calculations are hard-coded inconsistent or silently fill gaps
+Technical communication,10,Deck is decision-oriented concise visually purposeful and uncertainty-aware,Deck is clear but contains minor repetition or weak visual purpose,Deck is decorative text-heavy or overstates evidence
+Operations planning,10,Constraints buffers contingencies owners and verification tasks form an executable plan,Plan is mostly feasible but some transitions or contingencies are weak,Plan ignores hard constraints or compresses reality
+Agent design and safety,10,State incidents recovery observability and human control are fully specified,Core monitoring loop works but failure handling or state separation is partial,Automation suppresses recurrence acts irreversibly or fails silently
+Parametric CAD and validation,10,Interfaces parameters test cases fit plan and limitations are traceable,Model is parametric and basically validated but edge testing is limited,Rendered geometry is treated as proof or parameters break dependencies
+Cross-deliverable consistency,5,Assumptions numbers statuses and owners agree across all artifacts,Minor inconsistencies do not change the recommendation,Artifacts contradict one another materially
+Reflection and controlled-change response,2,Student identifies specific AI failures and updates connected artifacts coherently,Reflection is useful but revision evidence is incomplete,Reflection is generic or change is handled in only one artifact
+TOTAL,100,,,,
