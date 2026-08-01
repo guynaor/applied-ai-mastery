@@ -10,7 +10,7 @@ A strong deck may state that:
 
 - A smaller unit could test installation and enclosure assumptions for a limited sensor configuration.
 - Workshop capacity may support 12 units if decisions are released by 2026-09-05, but this is not a committed production date.
-- Preliminary component cost is EUR 186 per unit, excluding several material categories and all engineering, certification, packaging, and field-support costs.
+- Preliminary component cost is EUR 186 per unit, excluding engineering time, certification, packaging, and field-support costs.
 - Three customers have expressed interest, but demand is not validated.
 - QA has identified minimum pilot checks and requires a formal exit review.
 
@@ -31,12 +31,13 @@ Reduce credit if the deck says or implies that:
 - Customer demand has been validated.
 - The unit meets environmental, ingress, safety, or regulatory requirements.
 - The preliminary component estimate represents total pilot cost.
+- Any cost exclusion not named in the supplied source notes is presented as established fact.
 
 ## Strong six-slide pattern
 
 1. **Decision:** approve a bounded learning pilot, not a product launch.
 2. **Purpose:** test enclosure layout, connector access, thermal behaviour, installation time, and assembly assumptions.
-3. **Evidence:** current technical rationale, workshop capacity estimate, preliminary material estimate, and limited customer interest.
+3. **Evidence:** current technical rationale, workshop capacity estimate, preliminary component estimate, and limited customer interest.
 4. **Unknowns:** enclosure geometry, clearance, assembly time, suppliers, commercial requirements, and host-site approval.
 5. **Controls:** 12-unit cap, QA checklist, issue log, contingency, build trial, and exit review.
 6. **Request:** approve conditional planning and a defined checkpoint before purchasing or external product claims.
@@ -47,7 +48,7 @@ Useful visuals include:
 
 - A pilot-learning loop or stage-gate diagram.
 - A table separating known facts, estimates, and unknowns.
-- A cost-inclusion diagram showing what EUR 186 includes and excludes.
+- A cost-inclusion diagram showing what EUR 186 includes and the specifically named exclusions.
 - A risk-control matrix.
 - A timeline labelled as provisional and conditional.
 
