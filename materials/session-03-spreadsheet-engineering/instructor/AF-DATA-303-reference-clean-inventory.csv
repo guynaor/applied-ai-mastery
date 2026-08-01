@@ -1,0 +1,30 @@
+SKU,Item Name,Category,Qty On Hand,Unit,Reorder Level,Supplier,Last Counted,Location,Alert Sent,Instructor Note
+001024,AquaNode sensor hub PCB,Electronics,18,pcs,10,BlueCurrent Components,2026-07-28,E-A1,,Deterministic normalization
+001025,RS485 transceiver module,Electronics,8,pcs,12,BlueCurrent Components,2026-07-28,E-A2,,Normalize date unit and supplier
+001026,pH probe assembly,Sensors,5,pcs,6,MedWave Sensors,2026-07-27,S-B1,,Normalize date only
+001027,PAR sensor head,Sensors,11,pcs,5,Photon Field Ltd.,2026-07-27,S-B2,,Normalize unit
+001028,24 V DIN power supply,Electrical,4,pcs,4,VoltEdge Systems,2026-07-26,E-C1,YES,Preserve alert history
+001029,M12 cable gland,Mechanical,75,pcs,40,FastenRight,2026-07-25,M-D1,,No material issue
+001030,Silicone gasket 70 mm,Mechanical,,pcs,25,SealWorks Europe,2026-07-25,M-D2,,Confirm whether word thirty means 30
+001031,Polycarbonate enclosure,Mechanical,9,pcs,,FormShell Plastics,2026-07-24,M-E1,,Reorder level requires confirmation
+001032,Stainless mounting plate,Mechanical,14,pcs,8,MetalCraft Fabrication,2026-07-24,M-E2,,No material issue
+001033,USB-RS485 adapter,Electronics,3,pcs,5,BlueCurrent Components,2026-07-23,E-A3,,Normalize supplier
+001034,Calibration buffer pH 7,Chemicals,6,bottles,3,LabSource,2026-07-23,C-F1,,No material issue
+001035,Calibration buffer pH 4,Chemicals,2,bottles,3,LabSource,2026-07-23,C-F2,,Normalize unit
+001036,CAT6 shielded cable,Electrical,125,m,50,CablePro,2026-07-22,E-G1,,No material issue
+001037,Heat-shrink tubing kit,Electrical,1,kit,2,CablePro,2026-07-22,E-G2,,Normalize supplier
+001038,Workshop mounting bracket,Finished Goods,7,pcs,5,Internal,2026-07-21,F-H1,,No material issue
+001039,AquaNode Mini prototype,Prototype,2,pcs,1,Internal,2026-07-21,P-J1,,No material issue
+001040,HydroSense HX-200 seal kit,Service Parts,0,pcs,2,SealWorks Europe,2026-07-20,S-K1,,Valid zero quantity
+001041,HydroSense HX-200 bearing set,Service Parts,,pcs,2,MotionCore Bearings,2026-07-20,S-K2,,Negative source value requires confirmation
+001042,Thread-locking compound,Chemicals,450,ml,250,FastenRight,2026-07-19,C-F3,,Normalize date
+001043,M8 stainless bolt,Mechanical,,pcs,100,FastenRight,,,Duplicate records require reconciliation
+001044,OLED display 2.42 inch,Electronics,6,pcs,6,Photon Field Ltd.,2026-07-18,E-A4,,Normalize supplier
+001045,ESP32 controller board,Electronics,,pcs,10,BlueCurrent Components,2026-07-18,E-A5,,Quantity requires confirmation
+001046,Desiccant pack,Consumables,100,pcs,30,PackSafe,2026-07-17,C-L1,,No material issue
+001047,Shipping carton medium,Packaging,42,pcs,20,PackSafe,2026-07-17,P-M1,,No material issue
+001048,Foam insert AquaNode,Packaging,19,pcs,20,PackSafe,2026-07-17,P-M2,,Low stock
+001049,Label roll 50x25,Packaging,3,rolls,2,PrintMark,2026-07-16,P-M3,,No material issue
+001050,Thermal paste,Consumables,0.5,kg,0.25,LabSource,2026-07-16,C-L2,,Fraction valid for kg
+, Cable tie 200 mm,Consumables,500,pcs,150,CablePro,2026-07-16,C-L3,,Confirm whether source SKU 01051 should be 001051
+001052,Flow sensor 1 inch,Sensors,4,pcs,3,MedWave Sensors,,S-B3,,Last-counted date requires confirmation
