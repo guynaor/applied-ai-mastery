@@ -25,11 +25,10 @@ const resourceHref=path=>path.toLowerCase().endsWith('.md')?`document.html?src=$
 const linkList=(root,items)=>items.map(([label,path],index)=>`<a${index===0?' class="start-link"':''} href="${resourceHref(root+path)}">${label}</a>`).join('');
 const missionXp={bronze:30,silver:50,gold:80};
 
-function saveState(){
- localStorage.setItem('aam-personal-completed',JSON.stringify([...state.completed]));
- localStorage.setItem('aam-personal-missions',JSON.stringify(state.missions));
- localStorage.setItem('aam-personal-journals',JSON.stringify([...state.journals]));
-}
+const saveCompleted=()=>localStorage.setItem('aam-personal-completed',JSON.stringify([...state.completed]));
+const saveMissions=()=>localStorage.setItem('aam-personal-missions',JSON.stringify(state.missions));
+const saveJournals=()=>localStorage.setItem('aam-personal-journals',JSON.stringify([...state.journals]));
+
 function totalXp(){
  let xp=state.completed.size*20+state.journals.size*20;
  Object.values(state.missions).forEach(level=>{xp+=missionXp[level]||0;});
@@ -43,9 +42,9 @@ function render(){
     const missionLevel=state.missions[lesson.n]||'';
     return `<article class="mission"><div class="mission-number">${lesson.n}</div><div><span class="badge">20–30 minutes</span><h3>${lesson.title}</h3><div class="role">${lesson.skill}</div><p class="mission-summary">${lesson.outcome}</p><div class="file-groups"><section class="file-group"><h4>Student activity</h4>${studentContent}</section><section class="file-group instructor-only" ${state.mode==='student'?'hidden':''}><h4>Instructor support</h4>${instructorContent}</section></div></div><div class="mission-controls"><label class="complete-toggle"><input type="checkbox" data-personal-complete="${lesson.n}" ${state.completed.has(lesson.n)?'checked':''}> Lesson complete</label><label>Mission <select data-mission-level="${lesson.n}"><option value="" ${!missionLevel?'selected':''}>Not completed</option><option value="bronze" ${missionLevel==='bronze'?'selected':''}>Bronze</option><option value="silver" ${missionLevel==='silver'?'selected':''}>Silver</option><option value="gold" ${missionLevel==='gold'?'selected':''}>Gold</option></select></label><label class="complete-toggle"><input type="checkbox" data-journal-complete="${lesson.n}" ${state.journals.has(lesson.n)?'checked':''}> Journal entry</label></div></article>`;
   }).join('');
-  document.querySelectorAll('[data-personal-complete]').forEach(box=>box.addEventListener('change',()=>{const n=Number(box.dataset.personalComplete);box.checked?state.completed.add(n):state.completed.delete(n);saveState();updateProgress();}));
-  document.querySelectorAll('[data-mission-level]').forEach(select=>select.addEventListener('change',()=>{const n=Number(select.dataset.missionLevel);if(select.value)state.missions[n]=select.value;else delete state.missions[n];saveState();updateProgress();}));
-  document.querySelectorAll('[data-journal-complete]').forEach(box=>box.addEventListener('change',()=>{const n=Number(box.dataset.journalComplete);box.checked?state.journals.add(n):state.journals.delete(n);saveState();updateProgress();}));
+  document.querySelectorAll('[data-personal-complete]').forEach(box=>box.addEventListener('change',()=>{const n=Number(box.dataset.personalComplete);box.checked?state.completed.add(n):state.completed.delete(n);saveCompleted();updateProgress();}));
+  document.querySelectorAll('[data-mission-level]').forEach(select=>select.addEventListener('change',()=>{const n=Number(select.dataset.missionLevel);if(select.value)state.missions[n]=select.value;else delete state.missions[n];saveMissions();updateProgress();}));
+  document.querySelectorAll('[data-journal-complete]').forEach(box=>box.addEventListener('change',()=>{const n=Number(box.dataset.journalComplete);box.checked?state.journals.add(n):state.journals.delete(n);saveJournals();updateProgress();}));
   updateProgress();
 }
 function updateProgress(){
@@ -59,5 +58,12 @@ function updateProgress(){
 }
 function setMode(mode){state.mode=mode;localStorage.setItem('aam-personal-mode',mode);document.querySelectorAll('[data-mode]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.mode===mode)));document.querySelectorAll('.instructor-only').forEach(section=>section.hidden=mode==='student');}
 document.querySelectorAll('[data-mode]').forEach(button=>button.addEventListener('click',()=>setMode(button.dataset.mode)));
+window.addEventListener('storage',event=>{
+ if(event.key==='aam-personal-completed')state.completed=new Set(readJson('aam-personal-completed',[]));
+ else if(event.key==='aam-personal-missions')state.missions=readJson('aam-personal-missions',{});
+ else if(event.key==='aam-personal-journals')state.journals=new Set(readJson('aam-personal-journals',[]));
+ else return;
+ render();setMode(state.mode);
+});
 render();setMode(state.mode);
 const year=document.querySelector('[data-year]');if(year)year.textContent=new Date().getFullYear();
