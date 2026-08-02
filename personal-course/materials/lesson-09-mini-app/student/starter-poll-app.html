@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mini Poll</title>
+  <style>
+    body{font-family:system-ui,sans-serif;max-width:680px;margin:40px auto;padding:0 18px;background:#f5f7fb;color:#1f2937}
+    main{background:white;padding:24px;border-radius:18px;box-shadow:0 12px 35px rgba(0,0,0,.08)}
+    label{display:block;font-weight:700;margin-top:14px}input{width:100%;padding:10px;margin-top:5px;box-sizing:border-box}
+    .option{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:end;margin-top:12px;padding:12px;background:#f3f4f6;border-radius:10px}
+    .option label{margin-top:0}
+    button{padding:9px 13px;border:0;border-radius:9px;cursor:pointer;font-weight:700}.vote{background:#2563eb;color:white}.secondary{background:#e5e7eb}.count{min-width:28px;padding-bottom:9px;text-align:center;font-weight:800}
+    #message{min-height:1.5em;color:#b45309;font-weight:700}.actions{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+  </style>
+</head>
+<body>
+<main>
+  <h1>Mini Poll</h1>
+  <p>This poll stores votes only in this browser.</p>
+  <label for="question">Question</label>
+  <input id="question" value="What should we do on Saturday?">
+  <div id="options"></div>
+  <p id="message" role="status" aria-live="polite"></p>
+  <div class="actions"><button id="reset" class="secondary">Reset votes</button><button id="save" class="secondary">Save labels</button></div>
+</main>
+<script>
+const defaults=["Go to the beach","Have a picnic","Movie night"];
+const stored=JSON.parse(localStorage.getItem('mini-poll')||'null')||{question:'What should we do on Saturday?',labels:defaults,votes:[0,0,0]};
+const question=document.querySelector('#question');
+const options=document.querySelector('#options');
+const message=document.querySelector('#message');
+question.value=stored.question;
+const escapeAttribute=value=>String(value).replace(/[&"<>]/g,char=>({'&':'&amp;','"':'&quot;','<':'&lt;','>':'&gt;'}[char]));
+function captureDraft(){
+  const inputs=[...document.querySelectorAll('[data-label]')];
+  if(inputs.length===stored.labels.length)stored.labels=inputs.map(input=>input.value);
+  stored.question=question.value;
+}
+function render(){
+  options.innerHTML=stored.labels.map((label,i)=>{
+    const optionNumber=i+1;
+    return `<div class="option"><label for="option-${i}">Option ${optionNumber}<input id="option-${i}" data-label="${i}" value="${escapeAttribute(label)}"></label><button class="vote" data-vote="${i}" aria-label="Vote for option ${optionNumber}: ${escapeAttribute(label)}">Vote</button><span class="count" aria-label="${stored.votes[i]} votes for option ${optionNumber}">${stored.votes[i]}</span></div>`;
+  }).join('');
+  document.querySelectorAll('[data-vote]').forEach(button=>button.onclick=()=>{
+    captureDraft();
+    const index=Number(button.dataset.vote);
+    stored.votes[index]++;
+    persist();
+    render();
+    message.textContent=`Vote recorded for ${stored.labels[index]} in this browser.`;
+  });
+}
+function persist(){localStorage.setItem('mini-poll',JSON.stringify(stored));}
+document.querySelector('#save').onclick=()=>{
+  captureDraft();
+  const labels=stored.labels.map(label=>label.trim());
+  const cleanQuestion=stored.question.trim();
+  if(!cleanQuestion||labels.some(label=>!label)){message.textContent='Question and option labels cannot be empty.';return;}
+  stored.question=cleanQuestion;stored.labels=labels;question.value=stored.question;persist();render();message.textContent='Question and labels saved.';
+};
+document.querySelector('#reset').onclick=()=>{captureDraft();stored.votes=stored.votes.map(()=>0);persist();render();message.textContent='Votes reset.';};
+render();
+</script>
+</body>
+</html>
