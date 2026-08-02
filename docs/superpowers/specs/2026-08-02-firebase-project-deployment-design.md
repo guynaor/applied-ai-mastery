@@ -43,6 +43,10 @@ choose an alternative project ID without user approval.
 
 ## Repository Configuration
 
+Perform the work on the dedicated branch
+`chore/firebase-ai-mastery-deployment`. Do not commit deployment changes
+directly to `main`.
+
 Add `.firebaserc` with a `default` project alias pointing to `ai-mastery`. Keep
 the existing no-build Hosting configuration in `firebase.json` and deploy only
 the Hosting resource.
@@ -52,12 +56,13 @@ currently selected project, which is unrelated to this application.
 
 ## Deployment Flow
 
-1. Confirm the authenticated Firebase account.
-2. Create the `ai-mastery` Firebase project.
-3. Add the repository-local Firebase project alias.
-4. Validate the effective Firebase configuration.
-5. Deploy with Hosting-only scope.
-6. Verify the deployed website and response headers.
+1. Confirm work is on `chore/firebase-ai-mastery-deployment`.
+2. Confirm the authenticated Firebase account.
+3. Create the `ai-mastery` Firebase project.
+4. Add the repository-local Firebase project alias.
+5. Validate the effective Firebase configuration.
+6. Deploy with Hosting-only scope.
+7. Verify the deployed website and response headers.
 
 Project creation and deployment failures must leave existing Firebase projects
 and Hosting sites unchanged. A failed exact-name creation is reported without
@@ -74,4 +79,3 @@ Verification covers:
 - deployed responses include the configured security headers;
 - repository configuration targets `ai-mastery`;
 - no backend Firebase resources are configured by this change.
-
