@@ -1,20 +1,14 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#123b4a">
   <link rel="stylesheet" href="site/assets/css/course.css">
-  <style>
-    html[dir="rtl"] .markdown-body,html[dir="rtl"] .document-status{text-align:right}
-    html[dir="rtl"] .markdown-body pre,html[dir="rtl"] .markdown-body code{direction:ltr;text-align:left}
-    html[dir="rtl"] .markdown-body table{direction:rtl}
-    html[dir="rtl"] .site-header,html[dir="rtl"] footer{direction:rtl}
-  </style>
   <title>Course document · Applied AI Mastery</title>
 </head>
 <body class="document-page">
-  <a class="skip-link" href="#document" data-doc-skip>Skip to document</a>
+  <a class="skip-link" href="#document">Skip to document</a>
   <div class="site-shell document-shell">
     <header class="site-header">
       <a class="brand" href="index.html"><span class="brand-mark">AI</span><span>Applied AI Mastery</span></a>
@@ -24,21 +18,9 @@
       <div class="document-status" data-document-status>Loading document…</div>
       <article class="markdown-body" data-markdown hidden></article>
     </main>
-    <footer><span>Applied AI Mastery · <span data-year></span></span><a href="index.html" data-selector>Course selector</a></footer>
+    <footer><span>Applied AI Mastery · <span data-year></span></span><a href="index.html">Course selector</a></footer>
   </div>
-  <script>
-    (()=>{
-      const src=new URLSearchParams(location.search).get('src')||'';
-      if(src.startsWith('personal-course/he/')){
-        document.documentElement.lang='he';document.documentElement.dir='rtl';
-        document.querySelector('[data-doc-skip]').textContent='דלגו למסמך';
-        document.querySelector('[data-document-status]').textContent='המסמך נטען…';
-        document.querySelector('[data-back-link]').textContent='חזרה לשיעורים האישיים';
-        document.querySelector('[data-source-link]').textContent='פתיחת קובץ המקור';
-        document.querySelector('[data-selector]').textContent='בחירת קורס';
-      }
-    })();
-  </script>
+  <script src="site/assets/js/hebrew-document-context.js"></script>
   <script src="site/assets/js/markdown-viewer.js"></script>
 </body>
 </html>
