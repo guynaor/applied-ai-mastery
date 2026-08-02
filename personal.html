@@ -1,57 +1,58 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Applied AI Mastery for Everyday Life — short, practical lessons for young adults.">
+  <meta name="description" content="Applied AI Mastery for Everyday Life — short, practical bilingual lessons for young adults.">
   <meta name="theme-color" content="#5b3f85">
   <link rel="stylesheet" href="site/assets/css/course.css">
   <title>Applied AI Mastery — Everyday Life</title>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to course content</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to course content</a>
   <div class="site-shell personal-track">
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Choose a course"><span class="brand-mark">AI</span><span>Applied AI Mastery</span></a>
-      <nav class="header-links" aria-label="Primary navigation"><a href="index.html">Courses</a><a href="#lessons">Lessons</a><a href="document.html?src=personal-course%2Fstudent%2Fai-learning-journal.md">Learning Journal</a><a href="#capstone">Life Project</a><a href="document.html?src=personal-course%2FREADME.md">Syllabus</a></nav>
+      <nav class="header-links" aria-label="Primary navigation"><a href="index.html" data-i18n="courses">Courses</a><a href="#lessons" data-i18n="lessons">Lessons</a><a data-journal-link href="document.html?src=personal-course%2Fstudent%2Fai-learning-journal.md" data-i18n="journal">Learning Journal</a><a href="#capstone" data-i18n="project">Life Project</a><a data-syllabus-link href="document.html?src=personal-course%2FREADME.md" data-i18n="syllabus">Syllabus</a></nav>
+      <div class="segmented language-toggle" role="group" aria-label="Language"><button type="button" data-language="en" aria-pressed="true">English</button><button type="button" data-language="he" aria-pressed="false">עברית</button></div>
     </header>
 
     <main id="main">
       <section class="hero" id="top">
         <div class="hero-copy">
-          <div class="eyebrow">Personal track · Short lessons for real life</div>
-          <h1>Use AI to make everyday life clearer, easier, and more creative.</h1>
-          <p>Twelve focused 20–30 minute lessons apply durable AI skills to decisions, CVs, travel, shopping, money research, parties, small apps, CAD, and visual storytelling. Every lesson includes a Real Life Mission and an entry in your continuing AI Learning Journal.</p>
-          <div class="actions"><a class="button primary" href="#lessons">Explore the lessons</a><a class="button" href="document.html?src=personal-course%2Fstudent%2Fai-learning-journal.md">Open my learning journal</a></div>
+          <div class="eyebrow" data-i18n="eyebrow">Personal track · Short lessons for real life</div>
+          <h1 data-i18n="heroTitle">Use AI to make everyday life clearer, easier, and more creative.</h1>
+          <p data-i18n="heroText">Twelve focused 20–30 minute lessons apply durable AI skills to decisions, CVs, travel, shopping, money research, parties, small apps, CAD, and visual storytelling. Every lesson includes a Real Life Mission and an entry in your continuing AI Learning Journal.</p>
+          <div class="actions"><a class="button primary" href="#lessons" data-i18n="explore">Explore the lessons</a><a class="button" data-journal-link href="document.html?src=personal-course%2Fstudent%2Fai-learning-journal.md" data-i18n="openJournal">Open my learning journal</a></div>
         </div>
         <aside class="version-pill">MVP Beta</aside>
       </section>
 
       <section class="mode-panel" aria-label="Course viewing mode">
-        <div><strong>Choose your view</strong><p>Student mode shows lesson activities, Real Life Missions, and the journal. Instructor mode also shows teach-from-the-page scripts and a lightweight mission-review guide.</p></div>
-        <div class="segmented" role="group" aria-label="View mode"><button type="button" data-mode="student" aria-pressed="true">Student</button><button type="button" data-mode="instructor" aria-pressed="false">Instructor</button></div>
+        <div><strong data-i18n="chooseView">Choose your view</strong><p data-i18n="viewText">Student mode shows lesson activities, Real Life Missions, and the journal. Instructor mode also shows teach-from-the-page scripts and a lightweight mission-review guide.</p></div>
+        <div class="segmented" role="group" aria-label="View mode"><button type="button" data-mode="student" aria-pressed="true" data-i18n="student">Student</button><button type="button" data-mode="instructor" aria-pressed="false" data-i18n="instructor">Instructor</button></div>
       </section>
 
       <section class="section" aria-labelledby="practice-heading">
-        <div class="section-heading"><div><div class="eyebrow">Practice between lessons</div><h2 id="practice-heading">Build an AI Life Portfolio</h2></div><div><strong data-personal-xp>0 XP · 0 missions · 0 journal entries</strong></div></div>
+        <div class="section-heading"><div><div class="eyebrow" data-i18n="practice">Practice between lessons</div><h2 id="practice-heading" data-i18n="portfolio">Build an AI Life Portfolio</h2></div><div><strong data-personal-xp>0 XP · 0 missions · 0 journal entries</strong></div></div>
         <div class="split">
-          <div><p>Choose Bronze, Silver, or optional Gold for each Real Life Mission. Save your evidence outside this site and submit it to your instructor through the agreed channel. Browser progress and XP are motivational only and remain on this device.</p><div class="actions"><a class="button primary" href="document.html?src=personal-course%2Fstudent%2Fai-learning-journal.md">AI Learning Journal</a><a class="button instructor-only" href="document.html?src=personal-course%2Finstructor%2Freal-life-mission-review-guide.md">Instructor review guide</a></div></div>
-          <div class="check-card"><h3>XP guide</h3><ul><li>Lesson complete: 20 XP</li><li>Bronze mission: 30 XP</li><li>Silver mission: 50 XP</li><li>Gold mission: 80 XP</li><li>Journal entry: 20 XP</li></ul><p>XP is stored only in this browser. Instructor feedback is based on the evidence submitted outside the site.</p></div>
+          <div><p data-i18n="practiceText">Choose Bronze, Silver, or optional Gold for each Real Life Mission. Save your evidence outside this site and submit it to your instructor through the agreed channel. Browser progress and XP are motivational only and remain on this device.</p><div class="actions"><a class="button primary" data-journal-link href="document.html?src=personal-course%2Fstudent%2Fai-learning-journal.md" data-i18n="journal">AI Learning Journal</a><a class="button instructor-only" data-review-link href="document.html?src=personal-course%2Finstructor%2Freal-life-mission-review-guide.md" data-i18n="reviewGuide">Instructor review guide</a></div></div>
+          <div class="check-card"><h3 data-i18n="xpGuide">XP guide</h3><ul><li data-i18n="xpLesson">Lesson complete: 20 XP</li><li>Bronze mission: 30 XP</li><li>Silver mission: 50 XP</li><li>Gold mission: 80 XP</li><li data-i18n="xpJournal">Journal entry: 20 XP</li></ul><p data-i18n="xpText">XP is stored only in this browser. Instructor feedback is based on the evidence submitted outside the site.</p></div>
         </div>
       </section>
 
       <section class="section" id="lessons">
-        <div class="section-heading"><div><div class="eyebrow">Short-course progression</div><h2>Twelve practical lessons</h2></div><div class="progress-wrap"><span data-personal-progress-label>0 of 12 lessons complete</span><progress data-personal-progress max="12" value="0"></progress></div></div>
+        <div class="section-heading"><div><div class="eyebrow" data-i18n="progression">Short-course progression</div><h2 data-i18n="twelveLessons">Twelve practical lessons</h2></div><div class="progress-wrap"><span data-personal-progress-label>0 of 12 lessons complete</span><progress data-personal-progress max="12" value="0"></progress></div></div>
         <div class="mission-list" data-personal-lesson-grid></div>
       </section>
 
       <section class="section split" id="capstone">
-        <div><div class="eyebrow">Final personal project</div><h2>Solve one genuine need from your own life</h2><p>Choose a trip, event, application, major purchase, room improvement, or coordination problem. Combine research, decision-making, creation, verification, and reflection into one useful outcome.</p><a class="button primary" href="document.html?src=personal-course%2FREADME.md">See capstone requirements</a></div>
-        <div class="check-card"><h3>Personal project evidence</h3><ul><li>Clear goal and constraints</li><li>Compared options or outputs</li><li>Evidence and assumptions</li><li>One useful created artifact</li><li>Verification checklist</li><li>Reflection on human judgment</li></ul></div>
+        <div><div class="eyebrow" data-i18n="finalProject">Final personal project</div><h2 data-i18n="solveNeed">Solve one genuine need from your own life</h2><p data-i18n="capstoneText">Choose a trip, event, application, major purchase, room improvement, or coordination problem. Combine research, decision-making, creation, verification, and reflection into one useful outcome.</p><a class="button primary" data-syllabus-link href="document.html?src=personal-course%2FREADME.md" data-i18n="requirements">See capstone requirements</a></div>
+        <div class="check-card"><h3 data-i18n="evidence">Personal project evidence</h3><ul><li data-i18n="clearGoal">Clear goal and constraints</li><li data-i18n="compared">Compared options or outputs</li><li data-i18n="sources">Evidence and assumptions</li><li data-i18n="artifact">One useful created artifact</li><li data-i18n="verification">Verification checklist</li><li data-i18n="reflection">Reflection on human judgment</li></ul></div>
       </section>
     </main>
 
-    <footer><span>Applied AI Mastery · Everyday Life · <span data-year></span></span><a href="https://github.com/guynaor/applied-ai-mastery">GitHub repository</a></footer>
+    <footer><span>Applied AI Mastery · Everyday Life · <span data-year></span></span><a href="https://github.com/guynaor/applied-ai-mastery">GitHub</a></footer>
   </div>
   <script src="site/assets/js/personal-course.js"></script>
 </body>
