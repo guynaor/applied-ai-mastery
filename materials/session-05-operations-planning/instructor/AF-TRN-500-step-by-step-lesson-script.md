@@ -14,6 +14,7 @@
 - **Contingency:** A predefined alternate action triggered by a specific disruption.
 - **Travel origin:** The location from which a travel-time estimate begins.
 - **Fragile dependency:** A part of the plan whose failure affects several later activities.
+- **Staged verification checklist:** A handoff list that assigns uncertain facts to the time when they must be checked: before booking, 48 hours before, or on the same day.
 
 ## Preparation
 
@@ -129,6 +130,16 @@ Check every row for:
 
 Explain that calendar export serializes a validated plan; it does not prove feasibility.
 
+## Build the staged verification checklist — before debrief
+
+Require a separate checklist with three headings:
+
+1. **Before booking** — facts that determine whether money or commitments should be made, such as availability, quoted scope, cancellation terms, and critical opening windows.
+2. **48 hours before** — facts likely to change close to the visit, such as meeting confirmation, site access, retailer stock, transport assumptions, and weather-sensitive activities.
+3. **Same day** — operational checks such as live opening status, traffic, contact availability, current site access, and contingency triggers.
+
+Each checklist row must state the fact to verify, owner, source or contact, deadline, and the action taken if verification fails. Review the checklist against every item previously marked “requires live verification.”
+
 ## Debrief — final 10 minutes
 
 Ask:
@@ -137,6 +148,7 @@ Ask:
 2. “What early warning would trigger a contingency?”
 3. “What is the difference between a buffer and a fallback?”
 4. “Which preference was sacrificed first, and why?”
+5. “Which fact must be verified before booking rather than on the same day?”
 
 ## Minimum acceptable submission
 
@@ -145,7 +157,8 @@ Ask:
 - realistic buffers and scoped costs;
 - tested two-hour arrival-delay contingency;
 - tested unavailable-site contingency;
-- consistent calendar rows.
+- consistent calendar rows;
+- staged verification checklist grouped into before booking, 48 hours before, and same day.
 
 ## Intervention guide
 
@@ -154,7 +167,8 @@ Ask:
 - **Student removes recovery time:** Reclassify and explain consequences.
 - **Student overpacks the day:** Require drop priority and buffers.
 - **Student changes only the disrupted row:** Trace downstream dependencies.
+- **Student lists verification vaguely:** Require a deadline, owner, source, and failure action for each check.
 
 ## Exit check
 
-The student must explain feasibility before optimization and distinguish hard constraints, buffers, and contingencies using examples from the itinerary.
+The student must explain feasibility before optimization and distinguish hard constraints, buffers, contingencies, and staged verification using examples from the itinerary.
