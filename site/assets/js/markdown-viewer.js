@@ -3,8 +3,15 @@ const source=params.get('src')||'';
 const status=document.querySelector('[data-document-status]');
 const article=document.querySelector('[data-markdown]');
 const sourceLink=document.querySelector('[data-source-link]');
+const backLink=document.querySelector('[data-back-link]');
 const year=document.querySelector('[data-year]');
 if(year)year.textContent=new Date().getFullYear();
+
+const personalSource=source.startsWith('personal-course/');
+if(backLink){
+ backLink.href=personalSource?'personal.html#lessons':'professional.html#missions';
+ backLink.textContent=personalSource?'Back to personal lessons':'Back to professional missions';
+}
 
 const validSource=source&&source.toLowerCase().endsWith('.md')&&!source.startsWith('/')&&!source.includes('..')&&!source.includes('://');
 const escapeHtml=value=>value.replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
