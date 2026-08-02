@@ -51,6 +51,9 @@ Add `.firebaserc` with a `default` project alias pointing to `applied-ai-mastery
 the existing no-build Hosting configuration in `firebase.json` and deploy only
 the Hosting resource.
 
+Add `.firebase/` to the root `.gitignore` so Firebase CLI deployment caches do
+not dirty the working tree or enter version control.
+
 The local project mapping prevents accidental deployment to the Firebase CLI's
 currently selected project, which is unrelated to this application.
 

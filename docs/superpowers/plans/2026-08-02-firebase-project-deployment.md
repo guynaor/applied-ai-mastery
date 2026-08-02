@@ -14,6 +14,7 @@
 
 **Files:**
 - Create: `.firebaserc`
+- Create: `.gitignore`
 - Verify: `firebase.json`
 
 - [ ] **Step 1: Confirm branch isolation and a clean starting state**
@@ -28,7 +29,7 @@ git status --short
 Expected: the branch is `chore/firebase-ai-mastery-deployment`, with no
 uncommitted files.
 
-- [ ] **Step 2: Create the Firebase project mapping**
+- [ ] **Step 2: Create the Firebase project mapping and cache exclusion**
 
 Create `.firebaserc` with exactly:
 
@@ -40,28 +41,35 @@ Create `.firebaserc` with exactly:
 }
 ```
 
+Create `.gitignore` with exactly:
+
+```gitignore
+.firebase/
+```
+
 - [ ] **Step 3: Validate both Firebase configuration files**
 
 Run:
 
 ```bash
 node -e "const fs=require('node:fs'); const rc=JSON.parse(fs.readFileSync('.firebaserc','utf8')); const fb=require('./firebase.json'); if(rc.projects.default!=='applied-ai-mastery') throw new Error('wrong project'); if(!fb.hosting || Object.keys(fb).some(k=>k!=='hosting')) throw new Error('configuration is not Hosting-only'); console.log('Firebase configuration valid')"
+git check-ignore -q .firebase/hosting..cache
 git diff --check
 ```
 
-Expected: `Firebase configuration valid`, followed by no `git diff --check`
-output and exit status 0.
+Expected: `Firebase configuration valid`; the Firebase deployment cache is
+ignored; `git diff --check` produces no output and exits with status 0.
 
 - [ ] **Step 4: Commit the local project mapping**
 
 Run:
 
 ```bash
-git add .firebaserc
+git add .firebaserc .gitignore
 git commit -m "chore: target applied-ai-mastery Firebase project"
 ```
 
-Expected: one new file committed on
+Expected: the project mapping and cache exclusion are committed on
 `chore/firebase-ai-mastery-deployment`.
 
 ### Task 2: Create the Independent Firebase Project
