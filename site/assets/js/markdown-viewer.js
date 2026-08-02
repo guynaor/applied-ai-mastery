@@ -8,10 +8,13 @@ const year=document.querySelector('[data-year]');
 if(year)year.textContent=new Date().getFullYear();
 
 const personalSource=source.startsWith('personal-course/');
+const hebrewSource=source.startsWith('personal-course/he/');
+if(hebrewSource){document.documentElement.lang='he';document.documentElement.dir='rtl';article.dir='rtl';}
 if(backLink){
  backLink.href=personalSource?'personal.html#lessons':'professional.html#missions';
- backLink.textContent=personalSource?'Back to personal lessons':'Back to professional missions';
+ backLink.textContent=hebrewSource?'חזרה לשיעורים האישיים':personalSource?'Back to personal lessons':'Back to professional missions';
 }
+if(hebrewSource&&sourceLink)sourceLink.textContent='פתיחת קובץ המקור';
 
 const validSource=source&&source.toLowerCase().endsWith('.md')&&!source.startsWith('/')&&!source.includes('..')&&!source.includes('://');
 const escapeHtml=value=>value.replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
@@ -64,11 +67,7 @@ function renderMarkdown(markdown,path){
  for(let i=0;i<lines.length;i++){
   const line=lines[i];
   const fence=line.match(/^```\s*([^\s]*)/);
-  if(fence){
-   flushParagraph();closeList();
-   if(inCode){flushCode();inCode=false;}else{inCode=true;codeLanguage=fence[1]||'';}
-   continue;
-  }
+  if(fence){flushParagraph();closeList();if(inCode){flushCode();inCode=false;}else{inCode=true;codeLanguage=fence[1]||'';}continue;}
   if(inCode){code.push(line);continue;}
   if(!line.trim()){flushParagraph();closeList();continue;}
   const heading=line.match(/^(#{1,6})\s+(.+)$/);
@@ -78,12 +77,9 @@ function renderMarkdown(markdown,path){
   if(quote){flushParagraph();closeList();output.push(`<blockquote><p>${inline(quote[1],base)}</p></blockquote>`);continue;}
   const unordered=line.match(/^\s*[-*+]\s+(.+)$/);
   const ordered=line.match(/^\s*\d+[.)]\s+(.+)$/);
-  if(unordered||ordered){
-   flushParagraph();const wanted=unordered?'ul':'ol';if(listType!==wanted){closeList();output.push(`<${wanted}>`);listType=wanted;}output.push(`<li>${inline((unordered||ordered)[1],base)}</li>`);continue;
-  }
+  if(unordered||ordered){flushParagraph();const wanted=unordered?'ul':'ol';if(listType!==wanted){closeList();output.push(`<${wanted}>`);listType=wanted;}output.push(`<li>${inline((unordered||ordered)[1],base)}</li>`);continue;}
   if(line.includes('|')&&i+1<lines.length&&/^\s*\|?\s*:?-{3,}/.test(lines[i+1])){
-   flushParagraph();closeList();const headers=tableCells(line);i++;
-   const rows=[];while(i+1<lines.length&&lines[i+1].includes('|')&&lines[i+1].trim()){i++;rows.push(tableCells(lines[i]));}
+   flushParagraph();closeList();const headers=tableCells(line);i++;const rows=[];while(i+1<lines.length&&lines[i+1].includes('|')&&lines[i+1].trim()){i++;rows.push(tableCells(lines[i]));}
    output.push(`<div class="table-wrap"><table><thead><tr>${headers.map(v=>`<th>${inline(v,base)}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map(v=>`<td>${inline(v,base)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`);continue;
   }
   paragraph.push(line.trim());
@@ -93,19 +89,16 @@ function renderMarkdown(markdown,path){
 }
 
 async function load(){
- if(!validSource){status.textContent='This document link is invalid.';return;}
+ if(!validSource){status.textContent=hebrewSource?'קישור המסמך אינו תקין.':'This document link is invalid.';return;}
  sourceLink.href=source;
  try{
   const response=await fetch(source,{cache:'no-cache'});
   if(!response.ok)throw new Error(`HTTP ${response.status}`);
   const markdown=await response.text();
   article.innerHTML=renderMarkdown(markdown,source);
-  article.hidden=false;
-  status.hidden=true;
+  article.hidden=false;status.hidden=true;
   const firstHeading=article.querySelector('h1,h2');
   if(firstHeading)document.title=`${firstHeading.textContent} · Applied AI Mastery`;
- }catch(error){
-  status.innerHTML=`<strong>Document unavailable.</strong><p>The course could not load <code>${escapeHtml(source)}</code>.</p>`;
- }
+ }catch(error){status.innerHTML=hebrewSource?`<strong>המסמך אינו זמין.</strong><p>לא ניתן לטעון את <code>${escapeHtml(source)}</code>.</p>`:`<strong>Document unavailable.</strong><p>The course could not load <code>${escapeHtml(source)}</code>.</p>`;}
 }
 load();
