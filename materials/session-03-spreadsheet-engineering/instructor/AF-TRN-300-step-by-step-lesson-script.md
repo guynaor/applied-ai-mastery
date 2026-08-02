@@ -15,6 +15,7 @@
 - **Idempotent process:** Re-running the same process does not create additional unintended changes.
 - **Active incident:** A currently unresolved alert condition.
 - **Re-arming:** Allowing a new alert after recovery and a later recurrence.
+- **Dry-run mode:** A safe test mode that evaluates and logs what would happen without sending email or changing delivery-state fields.
 
 ## Preparation
 
@@ -113,30 +114,35 @@ Required stores:
 
 Required behavior:
 
-1. first low observation opens an incident and alerts;
+1. first low observation opens an incident and prepares one alert;
 2. repeated low observations do not spam;
-3. recovery closes the active incident;
-4. later low stock opens a new incident and alerts again;
+3. recovery closes the active incident and clears any low-stock highlighting;
+4. later low stock opens a new incident and can alert again;
 5. parse failures are recorded and do not overwrite last valid state;
-6. purchasing remains human-approved.
+6. purchasing remains human-approved;
+7. dry-run mode sends no email and does not write `YES` to `Alert Sent` or equivalent delivery-state fields;
+8. live mode writes `YES` only after the email provider confirms successful delivery;
+9. if delivery fails, the failure is logged and the row remains eligible for a later retry rather than being falsely marked as sent.
 
-## Create edge-case tests — 128 to 142 minutes
+## Create edge-case and mode tests — 128 to 145 minutes
 
 Require expected-versus-actual rows for at least:
 
-- first low-stock event;
+- first low-stock event in dry-run mode: no email and no `YES` write;
+- first low-stock event in live mode with successful delivery: one email and `YES` written only after success;
+- live-mode delivery failure: no `YES` write and a visible failure record;
 - repeated low reading;
-- recovery;
-- second low episode;
+- recovery, including cleared highlighting;
+- second low episode after recovery;
 - malformed quantity;
 - missing threshold;
 - disputed duplicate record.
 
-Do not accept “works” as a test result. Require observed output and pass/fail.
+Do not accept “works” as a test result. Require observed output and pass/fail. Any classroom demonstration should begin in dry-run mode.
 
-## Debrief — final 8 minutes
+## Debrief — final 5 minutes
 
-Ask why a single `Alert Sent` column is insufficient. Expected answer: it cannot represent incident lifecycle, recovery, new episodes, or history reliably.
+Ask why a single `Alert Sent` column is insufficient. Expected answer: it cannot represent incident lifecycle, recovery, new episodes, failed deliveries, or history reliably.
 
 ## Minimum acceptable submission
 
@@ -145,7 +151,8 @@ Ask why a single `Alert Sent` column is insufficient. Expected answer: it cannot
 - data contract and issue log;
 - dynamic summary by category and status;
 - stateful alert specification;
-- expected-versus-actual edge-case test table.
+- explicit dry-run and live-mode safeguards;
+- expected-versus-actual edge-case table covering successful delivery, failed delivery, and recovery highlighting.
 
 ## Intervention guide
 
@@ -154,7 +161,9 @@ Ask why a single `Alert Sent` column is insufficient. Expected answer: it cannot
 - **Student manually types summary totals:** Replace them with formulas or pivots.
 - **Student alerts on every run:** Introduce active incident state.
 - **Student never re-alerts:** Add recovery closure and re-arming.
+- **Student sends during testing:** Stop the run, enable dry-run, and verify that no delivery-state field changes.
+- **Student marks before delivery succeeds:** Move the state write to the confirmed-success path.
 
 ## Exit check
 
-The student must explain normalization versus reconciliation, provenance, and why recovery is required for a stateful alert.
+The student must explain normalization versus reconciliation, provenance, why recovery is required, and the behavioral difference between dry-run and live mode.
