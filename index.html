@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,50 +9,51 @@
   <title>Applied AI Mastery — Choose Your Course</title>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to course selection</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to course selection</a>
   <div class="site-shell">
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Applied AI Mastery home"><span class="brand-mark">AI</span><span>Applied AI Mastery</span></a>
-      <nav class="header-links" aria-label="Primary navigation"><a href="#courses">Courses</a><a href="document.html?src=README.md">About</a><a href="https://github.com/guynaor/applied-ai-mastery">GitHub</a></nav>
+      <a class="brand" href="index.html" aria-label="Applied AI Mastery home" data-i18n-aria-label="brand"><span class="brand-mark">AI</span><span>Applied AI Mastery</span></a>
+      <nav class="header-links" aria-label="Primary navigation" data-i18n-aria-label="nav"><a href="#courses" data-i18n="courses">Courses</a></nav>
+      <div class="segmented language-toggle" role="group" aria-label="Language" data-i18n-aria-label="language"><button type="button" data-language="en" aria-pressed="true">English</button><button type="button" data-language="he" aria-pressed="false">עברית</button></div>
     </header>
 
     <main id="main">
       <section class="hero" id="top">
         <div class="hero-copy">
-          <div class="eyebrow">Two practical paths to AI fluency</div>
-          <h1>Choose where you want AI to make you more capable.</h1>
-          <p>Both courses teach the same durable habits: define the real problem, provide useful context, compare evidence, verify outputs, preserve uncertainty, and keep important decisions under human control.</p>
-          <div class="actions"><a class="button primary" href="#courses">Choose a course</a></div>
+          <div class="eyebrow" data-i18n="heroEyebrow">Two practical paths to AI fluency</div>
+          <h1 data-i18n="heroTitle">Choose where you want AI to make you more capable.</h1>
+          <p data-i18n="heroText">Both courses teach the same durable habits: define the real problem, provide useful context, compare evidence, verify outputs, preserve uncertainty, and keep important decisions under human control.</p>
+          <div class="actions"><a class="button primary" href="#courses" data-i18n="chooseCourse">Choose a course</a></div>
         </div>
-        <aside class="version-pill">Beta</aside>
+        <aside class="version-pill" data-i18n="version">Beta</aside>
       </section>
 
       <section class="section" id="courses">
-        <div class="eyebrow">Course catalogue</div><h2>Two tracks, different life stages</h2>
+        <div class="eyebrow" data-i18n="catalogEyebrow">Course catalogue</div><h2 data-i18n="catalogTitle">Two tracks, different life stages</h2>
         <div class="grid course-choice-grid">
           <a class="card link-card course-choice" href="professional.html">
-            <span class="badge">Professional track</span>
-            <h3>Applied AI for Work & Engineering</h3>
-            <p>For students, graduates, makers, and professionals who want to solve realistic workplace and technical problems through the AquaForge simulation.</p>
-            <strong>7 missions + integrated capstone</strong>
+            <span class="badge" data-i18n="professionalBadge">Professional track</span>
+            <h3 data-i18n="professionalTitle">Applied AI for Work &amp; Engineering</h3>
+            <p data-i18n="professionalText">For students, graduates, makers, and professionals who want to solve realistic workplace and technical problems through the AquaForge simulation.</p>
+            <strong data-i18n="professionalMeta">7 missions + integrated capstone</strong>
           </a>
           <a class="card link-card course-choice personal-choice" href="personal.html">
-            <span class="badge">Personal track</span>
-            <h3>Applied AI for Everyday Life</h3>
-            <p>For young adults before or after university who want to use AI for decisions, planning, creativity, money research, career preparation, and personal projects.</p>
-            <strong>12 focused lessons · 20–30 minutes each</strong>
+            <span class="badge" data-i18n="personalBadge">Personal track</span>
+            <h3 data-i18n="personalTitle">Applied AI for Everyday Life</h3>
+            <p data-i18n="personalText">For young adults before or after university who want to use AI for decisions, planning, creativity, money research, career preparation, and personal projects.</p>
+            <strong data-i18n="personalMeta">12 focused lessons · 20–30 minutes each</strong>
           </a>
         </div>
       </section>
 
       <section class="section split">
-        <div><div class="eyebrow">Shared philosophy</div><h2>AI is the tool. Better judgment is the outcome.</h2><p>The goal is not memorizing one product. Students learn to break down unfamiliar problems, ask better questions, compare outputs, verify facts, recognize uncertainty, and turn ideas into useful artifacts.</p></div>
-        <div class="check-card"><h3>Skills shared by both courses</h3><ul><li>Prompt design and iteration</li><li>Research and source checking</li><li>Decision frameworks</li><li>Data and document creation</li><li>Creative generation</li><li>Automation with safe boundaries</li><li>Reflection on human judgment</li></ul></div>
+        <div><div class="eyebrow" data-i18n="philosophyEyebrow">Shared philosophy</div><h2 data-i18n="philosophyTitle">AI is the tool. Better judgment is the outcome.</h2><p data-i18n="philosophyText">The goal is not memorizing one product. Students learn to break down unfamiliar problems, ask better questions, compare outputs, verify facts, recognize uncertainty, and turn ideas into useful artifacts.</p></div>
+        <div class="check-card"><h3 data-i18n="skillsTitle">Skills shared by both courses</h3><ul><li data-i18n="skillPrompt">Prompt design and iteration</li><li data-i18n="skillResearch">Research and source checking</li><li data-i18n="skillDecision">Decision frameworks</li><li data-i18n="skillData">Data and document creation</li><li data-i18n="skillCreative">Creative generation</li><li data-i18n="skillAutomation">Automation with safe boundaries</li><li data-i18n="skillReflection">Reflection on human judgment</li></ul></div>
       </section>
     </main>
 
-    <footer><span>Applied AI Mastery · <span data-year></span></span><a href="https://github.com/guynaor/applied-ai-mastery">GitHub repository</a></footer>
+    <footer><span><span data-i18n="footerBrand">Applied AI Mastery ·</span> <span data-year></span></span></footer>
   </div>
-  <script>const year=document.querySelector('[data-year]');if(year)year.textContent=new Date().getFullYear();</script>
+  <script src="site/assets/js/index-i18n.js"></script>
 </body>
 </html>
