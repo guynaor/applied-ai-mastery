@@ -8,14 +8,16 @@ AquaForge engineering has received an incomplete failure report for the HydroSen
 
 By completing this material, the student should be able to:
 
-1. Build a prompt using the RISEN framework.
-2. Separate facts supplied by a source from model assumptions.
-3. Compare AI outputs using consistent criteria.
-4. Revise a prompt after identifying a specific failure.
-5. Save a reusable prompt pattern for future technical work.
+1. Distinguish an LLM, AI application, artifact, skill, and agent.
+2. Build a prompt using the RISEN framework.
+3. Separate facts supplied by a source from model assumptions.
+4. Compare AI outputs using consistent criteria.
+5. Revise a prompt after identifying a specific failure.
+6. Save a reusable prompt pattern for future technical work.
 
 ## Files
 
+- `../shared/AF-REF-001-ai-geography.md` — compact map of AI products, coding agents, skills, artifacts, and permissions.
 - `student/AF-TRN-101-source-memo.md` — deliberately incomplete technical source.
 - `student/AF-TRN-102-model-comparison-worksheet.md` — student activity and evidence table.
 - `student/AF-TRN-103-risen-prompt-template.md` — reusable prompting scaffold.

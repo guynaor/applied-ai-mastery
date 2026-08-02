@@ -14,11 +14,25 @@ By the end of the mission, you should be able to show which parts of an AI respo
 
 ## Files you will use
 
-1. [Source memo](AF-TRN-101-source-memo.md)
-2. [Model-comparison worksheet](AF-TRN-102-model-comparison-worksheet.md)
-3. [RISEN prompt template](AF-TRN-103-risen-prompt-template.md)
+1. [AI Geography — A 10-Minute Map](../../shared/AF-REF-001-ai-geography.md)
+2. [Source memo](AF-TRN-101-source-memo.md)
+3. [Model-comparison worksheet](AF-TRN-102-model-comparison-worksheet.md)
+4. [RISEN prompt template](AF-TRN-103-risen-prompt-template.md)
 
 You will also need access to at least two AI systems. Use the same source memo and the same initial RISEN prompt in both systems.
+
+## Start here — Map the AI landscape
+
+Read [AI Geography — A 10-Minute Map](../../shared/AF-REF-001-ai-geography.md).
+
+Before opening an AI system, be ready to explain:
+
+- why a model and an AI application are not the same thing;
+- how an artifact differs from a reusable skill;
+- what changes when an AI system can act through tools as an agent;
+- why current product strengths should be tested on the real task rather than treated as a permanent ranking.
+
+For this mission, choose two currently available systems that can accept the same source and prompt. The controlled comparison begins only after the task and evidence are held constant.
 
 ## Part 1 — Read before prompting
 

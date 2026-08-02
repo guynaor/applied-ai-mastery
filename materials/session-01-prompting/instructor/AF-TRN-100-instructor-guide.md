@@ -6,7 +6,7 @@
 
 ## Before the lesson
 
-Prepare two currently available AI systems. Confirm both accept the complete source memo. Open the student mission guide, source memo, comparison worksheet, RISEN template, answer key, and rubric. Do not pre-solve the engineering problem for the student; the central lesson is recognizing that the evidence is insufficient for a confirmed root cause.
+Prepare two currently available AI systems. Confirm both accept the complete source memo. Open the AI Geography reference, student mission guide, source memo, comparison worksheet, RISEN template, answer key, and rubric. Do not pre-solve the engineering problem for the student; the central lesson is recognizing that the evidence is insufficient for a confirmed root cause.
 
 Have a blank document ready for saving both model outputs. Decide in advance how the student will identify the systems: Model A and Model B is preferable to turning the exercise into a brand debate.
 
@@ -14,19 +14,22 @@ Have a blank document ready for saving both model outputs. Decide in advance how
 
 By the end, the student should be able to:
 
-1. distinguish source facts, reasonable hypotheses, assumptions, and unsupported claims;
-2. explain why the same prompt can produce materially different responses;
-3. use RISEN to constrain a technical task;
-4. identify instrumentation as validation rather than a structural modification;
-5. revise exactly one prompt element and judge the effect.
+1. distinguish models, applications, artifacts, skills, and agents;
+2. distinguish source facts, reasonable hypotheses, assumptions, and unsupported claims;
+3. explain why the same prompt can produce materially different responses;
+4. use RISEN to constrain a technical task;
+5. identify instrumentation as validation rather than a structural modification;
+6. revise exactly one prompt element and judge the effect.
 
 ## Lesson plan
 
-### 0–10 min — Frame the mission
+### 0–10 min — Map the AI landscape and frame the mission
 
-Say: “Today the goal is not to diagnose the pump. The goal is to determine what AI can and cannot responsibly conclude from incomplete evidence.”
+Use the shared AI Geography reference to distinguish model, application, tool, artifact, skill, and agent. Locate the major chat applications, coding agents, Google Antigravity, and OpenClaw on that map. Emphasize that product fit changes and that greater ability to act requires tighter permissions and review.
 
-Ask the student to predict two ways an AI system might sound convincing while being wrong. Record the answers and return to them during the debrief.
+Check understanding with: “What is the difference between asking a chat for advice and allowing an agent to change files or send a message?”
+
+Transition: “Today the goal is not to diagnose the pump or prove one brand is best. The goal is to determine what two systems can and cannot responsibly conclude from the same incomplete evidence.”
 
 ### 10–22 min — Evidence-first reading
 

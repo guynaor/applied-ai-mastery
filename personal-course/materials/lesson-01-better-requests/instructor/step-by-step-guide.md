@@ -1,10 +1,15 @@
 # Instructor Script — Lesson 1: Ask Better, Get Better
 
-**Duration:** 25 minutes  
-**Outcome:** The student improves one real request by adding only the information that materially changes the answer.
+**Duration:** 30 minutes
+**Outcome:** The student recognizes the main AI layers and improves one real request by adding only the information that materially changes the answer.
 
 ## Definitions
 
+- **Large language model (LLM):** the underlying engine that generates content from learned patterns.
+- **AI application:** a user-facing product that combines one or more models with features such as files, search, or tools.
+- **Artifact:** a substantial output that can be saved, edited, shared, or reused.
+- **Skill:** reusable instructions, context, resources, and sometimes scripts that encode a repeatable workflow.
+- **Agent:** a model that works toward a goal by planning, acting through tools, observing results, and adjusting under human oversight.
 - **Goal:** the outcome the student needs.
 - **Context:** background that changes what a useful answer looks like.
 - **Constraint:** a limit or requirement the answer must respect.
@@ -14,24 +19,24 @@
 
 ## Before the lesson
 
-1. Open the student activity and prompt worksheet.
+1. Open the shared AI Geography reference, student activity, and prompt worksheet.
 2. Prepare one vague example, such as `Help me plan my week`.
 3. Confirm the student has access to one AI system.
 4. Remind the student not to paste passwords, ID numbers, private messages, or confidential records.
 
-## 0–3 minutes — Hook
+## 0–8 minutes — Map the AI landscape
 
-Say:
+Use the shared reference to move through model, application, tools, artifact, skill, and agent. Locate the named products as current examples, not permanent winners. Emphasize that an agent can take actions, so permissions and human checkpoints matter.
 
-> “AI often gives a weak answer because it received an underspecified job, not because it is incapable.”
+## 8–10 minutes — Check and transition
 
-Run the vague example. Ask: “What did the AI have to guess?”
+Ask: “Is a saved meal plan an artifact or a skill?” and “What changes when a system can send the message instead of merely drafting it?”
 
-Expected ideas: priorities, available time, deadlines, preferred format, and what success means.
+Say: “We will begin with the smallest unit: one clear request in an ordinary chat.”
 
-## 3–7 minutes — Teach the five-part pattern
+## 10–13 minutes — Hook and five-part pattern
 
-Write:
+Run `Help me plan my week`. Ask what the AI had to guess, then teach:
 
 1. Goal
 2. Context
@@ -39,11 +44,11 @@ Write:
 4. Output
 5. Check
 
-Explain each in one sentence. Emphasize that longer is not automatically better.
+Explain each in one sentence. Emphasize that longer is not automatically better. Expected missing details include priorities, available time, deadlines, preferred format, and what success means.
 
 Ask the student to identify which parts are missing from the vague example.
 
-## 7–12 minutes — Student builds Prompt A and Prompt B
+## 13–19 minutes — Student builds Prompt A and Prompt B
 
 The student selects one real, low-risk request and writes the vague version.
 
@@ -56,13 +61,13 @@ Then guide them through the diagnosis table. Do not supply their answers. Ask:
 
 Gate: Prompt B must include at least one meaningful constraint and one verification instruction.
 
-## 12–17 minutes — Run and compare
+## 19–24 minutes — Run and compare
 
 Have the student run Prompt A and Prompt B in the same system.
 
 Ask them to score both. Do not accept “B is better” without a reason. Require one concrete difference, such as fewer assumptions, a usable table, or better respect for budget.
 
-## 17–21 minutes — Controlled revision
+## 24–27 minutes — Controlled revision
 
 The student changes exactly one element to create Prompt C.
 
@@ -72,13 +77,11 @@ Say:
 
 Reject multiple simultaneous changes. Ask the student to predict the effect before running it.
 
-## 21–24 minutes — Digital-life habit
+## 27–30 minutes — Save and exit check
 
 Have the student save the reusable structure in a notes app with a clear label. Check that private details were removed.
 
 Explain that a reusable prompt should preserve structure, not personal secrets.
-
-## 24–25 minutes — Exit check
 
 Ask:
 

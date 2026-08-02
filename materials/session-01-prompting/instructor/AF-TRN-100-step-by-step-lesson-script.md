@@ -6,6 +6,11 @@
 
 ## Essential definitions
 
+- **Large language model (LLM):** The underlying engine that generates content from learned patterns; it is not the same as the application used to access it.
+- **AI application:** A user-facing product that can combine one or more models with files, search, memory, tools, or other features.
+- **Artifact:** A substantial output that can be saved, edited, shared, or reused.
+- **Skill:** Reusable instructions, context, resources, and sometimes scripts that encode a repeatable workflow.
+- **Agent:** A model working toward a goal by planning, acting through tools, observing results, and adjusting under human permissions and oversight.
 - **Fact:** A statement directly supported by the supplied source memo.
 - **Assumption:** A statement introduced because information is missing; it may be reasonable but is not established.
 - **Hypothesis:** A testable possible explanation for an observed problem.
@@ -16,32 +21,37 @@
 
 ## Before the student arrives
 
-1. Open the student mission guide, source memo, comparison worksheet, RISEN template, answer key, and rubric.
+1. Open the AI Geography reference, student mission guide, source memo, comparison worksheet, RISEN template, answer key, and rubric.
 2. Confirm access to two AI systems.
 3. Prepare a blank shared document for saving both full responses.
 4. Read the source memo and note the three most important missing measurements.
 5. Do not prepare a “correct root cause.” The exercise is about bounded reasoning, not solving the pump failure.
 
-## Opening script — 0 to 8 minutes
+## AI geography orientation — 0 to 8 minutes
+
+Open the shared AI Geography reference. Draw or point through the six layers: model, application, tools, artifact, skill, and agent.
+
+Use one sentence per layer. Then locate ChatGPT, Claude, Gemini, and Perplexity as applications; Codex, Claude Code, and Google Antigravity as agentic coding surfaces; and OpenClaw as a gateway connecting messaging channels to agents.
 
 Say:
 
-> “Today you are not trying to prove that one AI is smartest. You are learning how to give two systems the same evidence, inspect how they reason, and prevent a polished answer from sounding more certain than the evidence allows.”
+> “These names are examples, not a permanent ranking. First identify the kind of system and the access it has; then test the real task.”
+
+End with the permission boundary: an answer can be wrong, while an agent with tools can also take a wrong action. Human review increases with the consequence of the action.
+
+## Terminology check and mission transition — 8 to 10 minutes
 
 Ask:
 
-1. “What is the danger of a technically plausible answer?”
-2. “What is the difference between a hypothesis and a conclusion?”
+1. “Is a saved failure-analysis report an artifact or a skill?”
+2. “What makes a coding agent different from a plain chat response?”
+3. “Why are we comparing outputs rather than declaring one brand best?”
 
-Expected ideas:
+Then say:
 
-- Plausible does not mean supported.
-- A hypothesis is provisional and should be testable.
-- A conclusion requires enough evidence to rule alternatives in or out.
+> “Now we will hold the evidence and prompt constant so we can inspect what changes between systems.”
 
-Correct gently if the student says the AI can determine the cause from the memo. State that the memo is intentionally incomplete.
-
-## Source inspection — 8 to 22 minutes
+## Source inspection — 10 to 22 minutes
 
 1. Have the student read the memo silently.
 2. Ask them to mark each sentence as one of:
