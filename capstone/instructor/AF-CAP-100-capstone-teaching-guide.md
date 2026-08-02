@@ -1,6 +1,6 @@
 # Instructor Guide — Capstone: AquaNode Mini
 
-**Recommended duration:** 3–5 hours across one or two sessions  
+**Recommended duration:** 4–7 days, typically 8–14 total working hours  
 **Student role:** Lead Applied AI Engineer  
 **Primary outcome:** The student integrates research, data, communication, operations, automation, and CAD into one evidence-bound recommendation that remains internally consistent after review or change.
 
@@ -8,7 +8,7 @@
 
 Confirm the student has access to all capstone files and the relevant materials from Missions 1–7. Open the mission brief, evidence register, deliverable register, decision log, controlled-change exercise, scoring rubric, and instructor reference guide.
 
-Decide whether the capstone will be completed in one intensive block or two sessions. For two sessions, end the first after the preliminary recommendation and evidence review; begin the second with the controlled change.
+Schedule the work across four to seven days. A practical pattern is one kickoff session, two or more production blocks, one cross-deliverable review, and one final defense. Do not compress all required workstreams into a single short session.
 
 Do not guide the student toward “proceed.” A well-supported revise or stop decision can be stronger than an optimistic launch recommendation.
 
@@ -26,13 +26,13 @@ The student should demonstrate that they can:
 
 ## Suggested teaching structure
 
-### Phase 1 — Mission briefing, 15 minutes
+### Phase 1 — Mission briefing, 30–45 minutes
 
 Review the required decision: proceed to a bounded engineering-validation pilot, revise the concept first, or stop for now. Ask the student to explain what each option means operationally.
 
 Set the rule: every consequential claim must point to evidence, an explicit assumption, or an unresolved gap.
 
-### Phase 2 — Evidence and uncertainty map, 35–50 minutes
+### Phase 2 — Evidence and uncertainty map, 60–90 minutes
 
 The student reviews the evidence register and adds missing links, confidence, limitations, and decision relevance. Ask them to identify:
 
@@ -44,7 +44,7 @@ The student reviews the evidence register and adds missing links, confidence, li
 
 Checkpoint: the student should not begin the presentation or final recommendation before identifying the highest-impact uncertainties.
 
-### Phase 3 — Preliminary recommendation, 30–45 minutes
+### Phase 3 — Preliminary recommendation and work plan, 45–60 minutes
 
 Have the student write a provisional recommendation with conditions, not a polished final answer. Challenge it with questions:
 
@@ -53,27 +53,29 @@ Have the student write a provisional recommendation with conditions, not a polis
 - What decision is reversible?
 - What must happen before money, manufacturing, or external commitments?
 
-### Phase 4 — Build the deliverables, 90–150 minutes
+Then require a dependency-aware work plan using the deliverable register.
 
-The student completes the research memo, workbook, presentation, operations plan, agent specification, CAD source, validation log, and reflection. Encourage work in dependency order rather than file order.
+### Phase 4 — Produce all required deliverables, 5–9 hours across multiple work blocks
+
+The student completes the research memo, workbook, presentation with speaker notes, operations plan, agent specification, CAD source, validation log, evidence and decision records, and reflection. Encourage work in dependency order rather than file order.
 
 Use the deliverable register actively. For each artifact, require owner, status, evidence dependencies, assumptions, validation, and downstream effects.
 
-Instructor role: conduct short design reviews rather than solving tasks. Ask for evidence, consistency, and validation criteria.
+Instructor role: conduct short design reviews rather than solving tasks. Ask for evidence, consistency, and validation criteria. Plan at least two production checkpoints rather than waiting until the end.
 
-### Phase 5 — Cross-deliverable consistency review, 25–35 minutes
+### Phase 5 — Cross-deliverable consistency review, 60–90 minutes
 
-The student checks that names, dates, dimensions, costs, statuses, recommendation language, and assumptions agree across artifacts. Select three important claims and trace each through all affected documents.
+The student checks that names, dates, dimensions, costs, statuses, recommendation language, and assumptions agree across artifacts. Select at least five important claims and trace each through all affected documents.
 
 A polished package with contradictions should not pass this phase.
 
-### Phase 6 — Controlled change, 25–40 minutes
+### Phase 6 — Controlled change, 45–75 minutes
 
 Introduce the supplied change or another approved change. Before editing, require an impact analysis identifying affected claims, files, calculations, and decisions.
 
 The student updates only what the change logically affects, records the revision in the decision log, and verifies that no stale claim remains.
 
-### Phase 7 — Final review and defense, 20–30 minutes
+### Phase 7 — Final review and defense, 45–60 minutes
 
 The student gives a ten-minute decision briefing, followed by questions. Use realistic stakeholder perspectives: engineering, procurement, operations, customer success, and leadership.
 
