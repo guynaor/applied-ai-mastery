@@ -1,7 +1,7 @@
 const personalLessons=[
-{n:1,title:'Ask Better, Get Better',outcome:'Turn a vague everyday request into a useful, testable result and save a reusable prompt pattern.',skill:'Context, constraints, examples, iteration, and privacy awareness'},
-{n:2,title:'Summarize Without Losing What Matters',outcome:'Convert a long message, article, lecture, or document into notes, actions, follow-ups, and calendar items.',skill:'Structured summarization and missing-information checks'},
-{n:3,title:'Make Better Decisions',outcome:'Compare meaningful options using explicit criteria, evidence, and review dates.',skill:'Decision matrices, assumptions, sensitivity, and decision records'},
+{n:1,title:'Ask Better, Get Better',outcome:'Turn a vague everyday request into a useful, testable result and save a reusable prompt pattern.',skill:'Context, constraints, examples, iteration, and privacy awareness',root:'personal-course/materials/lesson-01-better-requests/',student:[['Start this lesson','student/activity.md'],['Prompt workbook','student/prompt-workbook.md']],instructor:[['Step-by-step lesson script','instructor/step-by-step-guide.md']]},
+{n:2,title:'Summarize Without Losing What Matters',outcome:'Convert a long message, article, lecture, or document into notes, actions, follow-ups, and calendar items.',skill:'Structured summarization and missing-information checks',root:'personal-course/materials/lesson-02-summaries/',student:[['Start this lesson','student/activity.md'],['Verification workbook','student/verification-workbook.md']],instructor:[['Step-by-step lesson script','instructor/step-by-step-guide.md']]},
+{n:3,title:'Make Better Decisions',outcome:'Compare meaningful options using explicit criteria, evidence, and review dates.',skill:'Decision matrices, assumptions, sensitivity, and decision records',root:'personal-course/materials/lesson-03-decisions/',student:[['Start this lesson','student/activity.md'],['Decision workbook','student/decision-workbook.md']],instructor:[['Step-by-step lesson script','instructor/step-by-step-guide.md']]},
 {n:4,title:'Buy Smarter Online',outcome:'Compare products, total cost, seller quality, return terms, and misleading claims.',skill:'Research, source quality, total-cost comparison, and record keeping'},
 {n:5,title:'Create Personal Deal Alerts',outcome:'Specify a monitor for price or availability changes that can be paused, stopped, and reviewed.',skill:'Triggers, thresholds, duplicate suppression, stop rules, and reminders'},
 {n:6,title:'Plan a Realistic Trip',outcome:'Build a feasible itinerary with budget, travel time, buffers, fallbacks, bookings, and timed rechecks.',skill:'Constraint-based planning, calendars, shared notes, and staged verification'},
@@ -15,10 +15,17 @@ const personalLessons=[
 
 const state={mode:localStorage.getItem('aam-personal-mode')||'student',completed:new Set(JSON.parse(localStorage.getItem('aam-personal-completed')||'[]'))};
 const grid=document.querySelector('[data-personal-lesson-grid]');
+const resourceHref=path=>path.toLowerCase().endsWith('.md')?`document.html?src=${encodeURIComponent(path)}`:path;
+const linkList=(root,items)=>items.map(([label,path],index)=>`<a${index===0?' class="start-link"':''} href="${resourceHref(root+path)}">${label}</a>`).join('');
 
 function render(){
   if(!grid)return;
-  grid.innerHTML=personalLessons.map(lesson=>`<article class="mission"><div class="mission-number">${lesson.n}</div><div><span class="badge">20–30 minutes</span><h3>${lesson.title}</h3><div class="role">${lesson.skill}</div><p class="mission-summary">${lesson.outcome}</p><div class="file-groups"><section class="file-group"><h4>Student activity</h4><span class="planned-resource">Lesson package planned</span></section><section class="file-group instructor-only" ${state.mode==='student'?'hidden':''}><h4>Instructor support</h4><span class="planned-resource">Step-by-step teaching script planned</span></section></div></div><div class="mission-controls"><label class="complete-toggle"><input type="checkbox" data-personal-complete="${lesson.n}" ${state.completed.has(lesson.n)?'checked':''}> Complete</label></div></article>`).join('');
+  grid.innerHTML=personalLessons.map(lesson=>{
+    const ready=Array.isArray(lesson.student);
+    const studentContent=ready?linkList(lesson.root,lesson.student):'<span class="planned-resource">Lesson package planned</span>';
+    const instructorContent=ready?linkList(lesson.root,lesson.instructor):'<span class="planned-resource">Step-by-step teaching script planned</span>';
+    return `<article class="mission"><div class="mission-number">${lesson.n}</div><div><span class="badge">20–30 minutes</span><h3>${lesson.title}</h3><div class="role">${lesson.skill}</div><p class="mission-summary">${lesson.outcome}</p><div class="file-groups"><section class="file-group"><h4>Student activity</h4>${studentContent}</section><section class="file-group instructor-only" ${state.mode==='student'?'hidden':''}><h4>Instructor support</h4>${instructorContent}</section></div></div><div class="mission-controls"><label class="complete-toggle"><input type="checkbox" data-personal-complete="${lesson.n}" ${state.completed.has(lesson.n)?'checked':''}> Complete</label></div></article>`;
+  }).join('');
   document.querySelectorAll('[data-personal-complete]').forEach(box=>box.addEventListener('change',()=>{const n=Number(box.dataset.personalComplete);box.checked?state.completed.add(n):state.completed.delete(n);localStorage.setItem('aam-personal-completed',JSON.stringify([...state.completed]));updateProgress();}));
   updateProgress();
 }
