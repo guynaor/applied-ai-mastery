@@ -16,7 +16,8 @@ The student should be able to:
 2. separate evidence, interpretation, and recommendation;
 3. structure a six-slide narrative with one purpose per slide;
 4. avoid unsupported cost, schedule, and performance claims;
-5. use visuals to clarify rather than decorate.
+5. use visuals to clarify rather than decorate;
+6. revise a slide after a documented critique.
 
 ## Lesson plan
 
@@ -34,15 +35,21 @@ Before opening slide software, require six slide headlines that form a complete 
 
 Checkpoint: every headline should state a message, not merely a topic such as “Costs” or “Testing.”
 
-### 45–65 min — Complete the storyboard
+### 45–62 min — Complete the storyboard
 
 For each slide, specify purpose, evidence, visual, speaker point, and uncertainty note. Ask the student to justify every number and to identify what the visual makes easier to understand.
 
-### 65–85 min — Create or critique the deck
+### 62–84 min — Build the six-slide deck and speaker notes
 
-The student builds a rough deck or critiques an existing draft. Emphasize readable hierarchy, limited text, consistent terminology, labelled assumptions, and source notes. Do not reward decorative polish that exceeds evidentiary quality.
+The student converts the completed storyboard into a six-slide deck and writes speaker notes for every slide. Emphasize readable hierarchy, limited text, consistent terminology, labelled assumptions, and source notes. Do not reward decorative polish that exceeds evidentiary quality.
 
-### 85–98 min — Rehearse the decision conversation
+There is no pre-existing draft in the package. The student must create the first draft from the storyboard.
+
+### 84–96 min — Critique and revise
+
+Require the student to complete the supplied critique checklist against the first draft. They must identify at least one material weakness, revise one slide, and preserve evidence traceability while making the change.
+
+### 96–102 min — Rehearse the decision conversation
 
 Have the student present in six minutes. Interrupt with realistic leadership questions:
 
@@ -53,7 +60,7 @@ Have the student present in six minutes. Interrupt with realistic leadership que
 
 Require concise, honest answers.
 
-### 98–105 min — Debrief
+### 102–105 min — Debrief
 
 Ask which slide would change first if one source were corrected and why. This checks whether the student understands dependency and traceability.
 
@@ -71,6 +78,9 @@ Ask which slide would change first if one source were corrected and why. This ch
 **Difficulty:** Hiding uncertainty in speaker notes.  
 **Intervention:** Put decision-critical uncertainty visibly on the slide.
 
+**Difficulty:** Treating the storyboard as optional once the deck exists.  
+**Intervention:** Use it as the traceability record connecting evidence, message, visual, and speaker notes.
+
 ## Discussion prompts
 
 - When should a presentation show disagreement rather than resolve it?
@@ -80,7 +90,16 @@ Ask which slide would change first if one source were corrected and why. This ch
 
 ## Minimum acceptable evidence of learning
 
-The student produces a coherent six-slide storyboard or deck with message headlines, traceable claims, visible uncertainty, a bounded recommendation, and a specific next decision.
+The student submits the complete required set:
+
+- a completed six-slide storyboard;
+- a six-slide deck;
+- speaker notes for every slide;
+- a completed critique checklist;
+- one clearly identified revised slide;
+- traceable claims, visible uncertainty, a bounded recommendation, and a specific next decision.
+
+A storyboard alone or a deck alone is incomplete.
 
 ## Extension
 
@@ -88,4 +107,4 @@ Ask the student to produce two versions of one slide: one for engineering review
 
 ## Fallback plan
 
-If slide software is unavailable, use the storyboard as the final artifact and conduct the presentation from six paper or text cards.
+If slide software is unavailable, the student must still complete the storyboard, speaker notes, critique checklist, and revised slide as six paper or text-based slide mockups. The full deliverable logic remains required.
