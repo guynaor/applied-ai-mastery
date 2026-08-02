@@ -1,16 +1,16 @@
 const personalLessons=[
-{n:1,title:'Ask Better, Get Better',outcome:'Turn a vague everyday request into a useful, testable result.',skill:'Context, constraints, examples, and controlled iteration'},
-{n:2,title:'Summarize Without Losing What Matters',outcome:'Convert a long message, article, or document into decisions and actions.',skill:'Structured summarization and missing-information checks'},
-{n:3,title:'Build an Honest CV',outcome:'Create a tailored CV and short application message without exaggeration.',skill:'Evidence-based writing and audience adaptation'},
-{n:4,title:'Make a Difficult Decision',outcome:'Compare meaningful options using explicit criteria and sensitivity checks.',skill:'Decision matrices, assumptions, and trade-offs'},
-{n:5,title:'Buy Smarter Online',outcome:'Compare products, real costs, seller quality, and misleading claims.',skill:'Research, source quality, and total-cost comparison'},
-{n:6,title:'Create a Deal Alert',outcome:'Specify a monitor for a price or availability change without notification spam.',skill:'Triggers, thresholds, duplicate suppression, and stop rules'},
-{n:7,title:'Plan a Realistic Trip',outcome:'Build a feasible itinerary with budget, travel time, buffers, and fallbacks.',skill:'Constraint-based planning and staged verification'},
-{n:8,title:'Plan a Party With Friends',outcome:'Coordinate preferences, tasks, budget, invitations, and a poster.',skill:'Collaborative planning and creative generation'},
-{n:9,title:'Research an Investment Without Pretending to Predict',outcome:'Create a balanced research brief that exposes risk and uncertainty.',skill:'Evidence synthesis, opposing views, and uncertainty'},
-{n:10,title:'Build a Small Poll App',outcome:'Create a shareable app for choosing a date, destination, menu, or activity.',skill:'Requirements, rapid prototyping, and testing'},
-{n:11,title:'Design a Simple Piece of Furniture',outcome:'Turn room dimensions and needs into a parametric CAD concept.',skill:'Design contracts, parameters, and validation boundaries'},
-{n:12,title:'Tell the Story',outcome:'Create an image or video summary of a trip or event for responsible sharing.',skill:'Storyboarding, generation prompts, consent, and authenticity'}
+{n:1,title:'Ask Better, Get Better',outcome:'Turn a vague everyday request into a useful, testable result and save a reusable prompt pattern.',skill:'Context, constraints, examples, iteration, and privacy awareness'},
+{n:2,title:'Summarize Without Losing What Matters',outcome:'Convert a long message, article, lecture, or document into notes, actions, follow-ups, and calendar items.',skill:'Structured summarization and missing-information checks'},
+{n:3,title:'Make Better Decisions',outcome:'Compare meaningful options using explicit criteria, evidence, and review dates.',skill:'Decision matrices, assumptions, sensitivity, and decision records'},
+{n:4,title:'Buy Smarter Online',outcome:'Compare products, total cost, seller quality, return terms, and misleading claims.',skill:'Research, source quality, total-cost comparison, and record keeping'},
+{n:5,title:'Create Personal Deal Alerts',outcome:'Specify a monitor for price or availability changes that can be paused, stopped, and reviewed.',skill:'Triggers, thresholds, duplicate suppression, stop rules, and reminders'},
+{n:6,title:'Plan a Realistic Trip',outcome:'Build a feasible itinerary with budget, travel time, buffers, fallbacks, bookings, and timed rechecks.',skill:'Constraint-based planning, calendars, shared notes, and staged verification'},
+{n:7,title:'Plan an Event With Friends',outcome:'Coordinate preferences, tasks, budget, invitations, reminders, and a poster.',skill:'Collaborative planning, polls, ownership, deadlines, and creative generation'},
+{n:8,title:'Research Investing Responsibly',outcome:'Create a balanced research brief that exposes risk and uncertainty without pretending to predict returns.',skill:'Evidence synthesis, opposing views, privacy, and uncertainty'},
+{n:9,title:'Build Your First Mini App',outcome:'Create a shareable poll, expense splitter, checklist, or habit tool for a recurring real-life need.',skill:'Requirements, rapid prototyping, testing, and maintainable workflows'},
+{n:10,title:'Design Something for Your Room',outcome:'Turn room dimensions and needs into a parametric CAD concept with organized source files and checks.',skill:'Design contracts, parameters, versioning, and validation boundaries'},
+{n:11,title:'Tell Stories with Images and Video',outcome:'Create a responsible visual summary while organizing source media, permissions, captions, and exports.',skill:'Storyboarding, generation prompts, consent, authenticity, and media organization'},
+{n:12,title:'Build Your Personal Brand',outcome:'Turn genuine course projects and experience into a truthful CV, LinkedIn profile, portfolio, and application package.',skill:'Evidence-based writing, project selection, audience adaptation, and application tracking'}
 ];
 
 const state={mode:localStorage.getItem('aam-personal-mode')||'student',completed:new Set(JSON.parse(localStorage.getItem('aam-personal-completed')||'[]'))};
