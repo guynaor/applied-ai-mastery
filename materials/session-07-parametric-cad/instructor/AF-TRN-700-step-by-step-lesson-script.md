@@ -106,13 +106,16 @@ When an error occurs, follow this debugging sequence:
 
 Do not replace the student’s entire model with a finished solution.
 
-## Parameter-sweep validation — 92 to 112 minutes
+## Parameter-sweep validation — 92 to 116 minutes
 
-Require at least three parameter sets:
+Require four distinct configurations:
 
-- nominal/default;
-- lower valid boundary;
-- upper valid boundary or a meaningfully different device size.
+1. **Nominal/default** configuration.
+2. **Changed set A** with one or more meaningful parameter changes inside the valid range.
+3. **Changed set B** with a different combination of meaningful parameter changes inside the valid range.
+4. **Extreme-but-plausible** configuration near a valid boundary or representing the largest/smallest realistic supported device.
+
+The two changed sets must not be duplicates of the extreme case. Record the exact parameter values used for every configuration.
 
 For each case inspect:
 
@@ -124,9 +127,9 @@ For each case inspect:
 - inaccessible fasteners;
 - print orientation concerns.
 
-Record expected and observed results in the validation log.
+Record expected and observed results in the validation log. A configuration that fails may still be valuable evidence, but the failure must be explained and either corrected or bounded by a parameter rule.
 
-## Manufacturing and physical reality review — 112 to 132 minutes
+## Manufacturing and physical reality review — 116 to 136 minutes
 
 Ask:
 
@@ -142,7 +145,7 @@ State explicitly:
 
 Require a physical validation plan covering fit, fastener access, load, and inspection.
 
-## Final cleanup — 132 to 148 minutes
+## Final cleanup — 136 to 152 minutes
 
 The student:
 
@@ -153,13 +156,13 @@ The student:
 - confirms the file renders from a clean open;
 - saves the required source file.
 
-## Debrief — final 10 minutes
+## Debrief — final 8 minutes
 
 Ask:
 
 1. “Which parameter is most safety-critical?”
 2. “Which dimension is still only an assumption?”
-3. “What did the parameter sweep reveal?”
+3. “What did the four-configuration sweep reveal?”
 4. “What cannot be known until a part is manufactured?”
 
 ## Minimum acceptable submission
@@ -167,8 +170,8 @@ Ask:
 - completed design contract;
 - parameterized OpenSCAD source;
 - no unexplained duplicated interface dimensions;
-- successful nominal and boundary renders;
-- validation log;
+- validation evidence for four distinct configurations: default, two changed sets, and one extreme-but-plausible set;
+- validation log with exact parameter values and observed results;
 - explicit physical-test plan and unresolved assumptions.
 
 ## Intervention guide
@@ -178,7 +181,8 @@ Ask:
 - **Student changes many features before rendering:** Return to incremental builds.
 - **Student cannot debug:** Isolate the smallest failing module.
 - **Student optimizes appearance before interfaces:** Return to the design contract.
+- **Student supplies only three configurations:** Add a second independent changed parameter set before assessment.
 
 ## Exit check
 
-The student must explain parameter, constraint, derived dimension, clearance, and the difference between render and physical validation.
+The student must explain parameter, constraint, derived dimension, clearance, the difference between render and physical validation, and why four distinct configurations are required.
