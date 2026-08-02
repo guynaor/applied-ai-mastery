@@ -90,7 +90,7 @@ Instructor rule: do not spend lesson time choosing decorative colors or animatio
 
 ## Rehearse — 95 to 108 minutes
 
-Have the student present in six minutes. Interrupt with realistic questions:
+Have the student present within the required five-minute limit. Stop at exactly five minutes if necessary and identify where the speaking plan overran. Then ask realistic questions:
 
 - “What source supports that?”
 - “What is excluded from this figure?”
@@ -128,7 +128,8 @@ Ask:
 - speaker notes for all slides;
 - completed critique checklist;
 - one revised slide and revision explanation;
-- traceable claims and visible uncertainty.
+- traceable claims and visible uncertainty;
+- a rehearsal completed within five minutes.
 
 ## Intervention guide
 
@@ -137,6 +138,7 @@ Ask:
 - **Student invents cost exclusions:** Require exact source scope.
 - **Student hides caveats in notes:** Move decision-critical caveats onto the slide.
 - **Student focuses on aesthetics:** Pause styling and review evidence hierarchy.
+- **Student overruns five minutes:** Remove repetition, shorten transitions, and preserve the decision-critical evidence.
 
 ## Exit check
 
