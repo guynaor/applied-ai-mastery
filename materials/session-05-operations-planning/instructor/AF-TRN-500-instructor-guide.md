@@ -45,9 +45,14 @@ Checkpoint questions:
 - Is the cost scope complete?
 - What happens if the previous activity overruns?
 
-### 72–90 min — Stress-test the plan
+### 72–90 min — Stress-test the required contingencies
 
-Introduce two disruptions, such as a delayed meeting and an unavailable retailer. The student must preserve hard constraints and explain what moves, what is dropped, and why.
+Run the two mandatory scenarios from the mission brief:
+
+1. **Arrival delayed by two hours.** The student must update the first-day plan while preserving every hard constraint, explain what moves or is dropped, and identify which stakeholders or bookings require notification.
+2. **A planned site becomes unavailable.** The student must select a valid replacement or remove the activity, recalculate travel and timing, preserve recovery blocks, and explain the decision rule used.
+
+Only after both required scenarios pass may you add optional disruptions such as a delayed meeting, unavailable retailer, weather issue, or cost increase.
 
 ### 90–102 min — Build calendar output
 
@@ -55,7 +60,7 @@ Check titles, dates, start/end times, locations, notes, and time-zone assumption
 
 ### 102–110 min — Debrief
 
-Ask the student to identify the most fragile part of the itinerary and the earliest warning sign that would trigger the contingency.
+Ask the student to identify the most fragile part of the itinerary and the earliest warning sign that would trigger each required contingency.
 
 ## Likely difficulties and interventions
 
@@ -71,6 +76,9 @@ Ask the student to identify the most fragile part of the itinerary and the earli
 **Difficulty:** Overpacking the schedule.  
 **Intervention:** Require a buffer and a stated drop priority.
 
+**Difficulty:** Writing generic contingencies without recalculating the itinerary.  
+**Intervention:** Require updated rows, times, travel, and decision rationale for both mandatory scenarios.
+
 ## Discussion prompts
 
 - What is the difference between an efficient schedule and a robust schedule?
@@ -80,7 +88,12 @@ Ask the student to identify the most fragile part of the itinerary and the earli
 
 ## Minimum acceptable evidence of learning
 
-The itinerary satisfies all hard constraints, identifies travel origins, contains realistic buffers and costs, includes at least two contingencies, and produces consistent calendar rows.
+The itinerary satisfies all hard constraints, identifies travel origins, contains realistic buffers and costs, produces consistent calendar rows, and includes validated fallback plans for both:
+
+- a two-hour arrival delay;
+- an unavailable planned site.
+
+Each fallback must show the resulting schedule changes and preserve all hard constraints. Additional contingencies are optional extensions, not substitutes.
 
 ## Extension
 
@@ -88,4 +101,4 @@ Ask the student to create a second itinerary optimized for a different objective
 
 ## Fallback plan
 
-If mapping or calendar tools are unavailable, use the supplied travel estimates and produce a fully auditable spreadsheet itinerary plus a written contingency plan.
+If mapping or calendar tools are unavailable, use the supplied travel estimates and produce a fully auditable spreadsheet itinerary plus written and recalculated versions of both required contingency plans.
