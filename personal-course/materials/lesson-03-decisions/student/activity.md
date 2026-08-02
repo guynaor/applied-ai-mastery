@@ -17,7 +17,7 @@ A good decision record separates:
 
 ## Choose a decision
 
-Pick a real, reversible or low-risk decision with 2–4 options. Examples:
+Pick a real, reversible or low-risk decision with **2–3 options**. Examples:
 
 - choose a course, laptop, phone plan, gym, or apartment viewing;
 - decide between travel dates;
