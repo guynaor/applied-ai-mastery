@@ -47,9 +47,9 @@ Perform the work on the dedicated branch
 `chore/firebase-ai-mastery-deployment`. Do not commit deployment changes
 directly to `main`.
 
-Add `.firebaserc` with a `default` project alias pointing to `applied-ai-mastery`. Keep
-the existing no-build Hosting configuration in `firebase.json` and deploy only
-the Hosting resource.
+Add `.firebaserc` with a `default` project alias pointing to
+`applied-ai-mastery`. Keep the existing no-build Hosting configuration in
+`firebase.json` and deploy only the Hosting resource.
 
 Add `.firebase/` to the root `.gitignore` so Firebase CLI deployment caches do
 not dirty the working tree or enter version control.
@@ -82,3 +82,35 @@ Verification covers:
 - deployed responses include the configured security headers;
 - repository configuration targets `applied-ai-mastery`;
 - no backend Firebase resources are configured by this change.
+
+## Index Localization Follow-up
+
+The deployed course selector must offer the same English and Hebrew language
+choice as the personal course page. English remains the static HTML fallback.
+A dedicated `site/assets/js/index-i18n.js` module owns the index translations,
+document direction, accessible labels, metadata, persistence, and current-year
+display.
+
+The index language control uses the existing segmented English/Hebrew pattern
+and the existing `aam-personal-language` local-storage preference. Reusing that
+preference keeps the course selector and personal course synchronized without
+changing the established personal-course behavior. Selecting Hebrew sets the
+document language to `he`, direction to `rtl`, and the body RTL state; selecting
+English restores `en` and `ltr`.
+
+All index content must be localized, including:
+
+- the document title and description;
+- skip link and accessible navigation labels;
+- hero, course catalogue, both course cards, shared philosophy, and skills;
+- course version label and footer text.
+
+The index header contains only the Courses link and language control alongside
+the brand. Remove the About and GitHub links from the header, and remove the
+GitHub repository link from the footer. No About or GitHub link may remain in
+`index.html`.
+
+Browser verification covers English and Hebrew text, LTR and RTL direction,
+language persistence after reload, navigation-link removal, course links,
+desktop layout, and a mobile viewport. The updated static files are deployed to
+the existing `applied-ai-mastery` Hosting site and verified at the live URL.
