@@ -129,4 +129,3 @@ Primary references:
 - Run the repository's build and link checks.
 - Inspect the generated first-session pages at desktop and mobile widths,
   including Hebrew RTL layout.
-
