@@ -1,7 +1,19 @@
 # Lesson 1 — Ask Better, Get Better
 
-**Time:** 20–30 minutes  
-**Goal:** Turn a vague everyday request into a clear, reusable prompt and improve it through one controlled revision.
+**Time:** 30 minutes
+**Goal:** Recognize the main AI layers, then turn a vague everyday request into a clear, reusable prompt and improve it through one controlled revision.
+
+## Start here — AI geography (10 minutes)
+
+Read [AI Geography — A 10-Minute Map](../../../../materials/shared/AF-REF-001-ai-geography.md).
+
+Check that you can answer:
+
+1. What is the difference between an LLM and an AI application?
+2. Is a reusable set of workflow instructions a prompt, an artifact, or a skill?
+3. Why does an agent need more permission review than a text-only answer?
+
+The rest of this lesson uses an ordinary chat request. Later lessons will create artifacts and introduce workflows with more ability to act.
 
 ## The core idea
 
