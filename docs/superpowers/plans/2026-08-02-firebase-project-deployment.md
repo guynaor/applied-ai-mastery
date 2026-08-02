@@ -2,9 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Create an independent `ai-mastery` Firebase project and deploy the existing no-build static website to its default Hosting site.
+**Goal:** Create an independent `applied-ai-mastery` Firebase project and deploy the existing no-build static website to its default Hosting site.
 
-**Architecture:** The repository remains a static site published from its root by the existing `firebase.json`. A repository-local `.firebaserc` binds Firebase CLI commands to the new project, while all deployment commands retain an explicit `--project ai-mastery` guard. No backend service or billing configuration is added.
+**Architecture:** The repository remains a static site published from its root by the existing `firebase.json`. A repository-local `.firebaserc` binds Firebase CLI commands to the new project, while all deployment commands retain an explicit `--project applied-ai-mastery` guard. No backend service or billing configuration is added.
 
 **Tech Stack:** Static HTML/CSS/JavaScript, Firebase CLI 15.13.0, Firebase Hosting, curl
 
@@ -35,7 +35,7 @@ Create `.firebaserc` with exactly:
 ```json
 {
   "projects": {
-    "default": "ai-mastery"
+    "default": "applied-ai-mastery"
   }
 }
 ```
@@ -45,7 +45,7 @@ Create `.firebaserc` with exactly:
 Run:
 
 ```bash
-node -e "const fs=require('node:fs'); const rc=JSON.parse(fs.readFileSync('.firebaserc','utf8')); const fb=require('./firebase.json'); if(rc.projects.default!=='ai-mastery') throw new Error('wrong project'); if(!fb.hosting || Object.keys(fb).some(k=>k!=='hosting')) throw new Error('configuration is not Hosting-only'); console.log('Firebase configuration valid')"
+node -e "const fs=require('node:fs'); const rc=JSON.parse(fs.readFileSync('.firebaserc','utf8')); const fb=require('./firebase.json'); if(rc.projects.default!=='applied-ai-mastery') throw new Error('wrong project'); if(!fb.hosting || Object.keys(fb).some(k=>k!=='hosting')) throw new Error('configuration is not Hosting-only'); console.log('Firebase configuration valid')"
 git diff --check
 ```
 
@@ -58,7 +58,7 @@ Run:
 
 ```bash
 git add .firebaserc
-git commit -m "chore: target ai-mastery Firebase project"
+git commit -m "chore: target applied-ai-mastery Firebase project"
 ```
 
 Expected: one new file committed on
@@ -84,10 +84,10 @@ Expected: `Logged in as guy.naor@gmail.com`.
 Run:
 
 ```bash
-npx firebase-tools projects:create ai-mastery --display-name "AI Mastery"
+npx firebase-tools projects:create applied-ai-mastery --display-name "AI Mastery"
 ```
 
-Expected: Firebase reports that project `ai-mastery` was created and added to
+Expected: Firebase reports that project `applied-ai-mastery` was created and added to
 the authenticated account. If Firebase reports that the ID is unavailable or
 already exists, stop and report the conflict; do not choose a fallback ID.
 
@@ -99,17 +99,17 @@ Run:
 npx firebase-tools projects:list
 ```
 
-Expected: a row with display name `AI Mastery` and project ID `ai-mastery`.
+Expected: a row with display name `AI Mastery` and project ID `applied-ai-mastery`.
 
 - [ ] **Step 4: Confirm the default Hosting site**
 
 Run:
 
 ```bash
-npx firebase-tools hosting:sites:list --project ai-mastery
+npx firebase-tools hosting:sites:list --project applied-ai-mastery
 ```
 
-Expected: the default Hosting site has site ID `ai-mastery`. If Hosting has not
+Expected: the default Hosting site has site ID `applied-ai-mastery`. If Hosting has not
 provisioned the default site yet, continue to the first Hosting deployment,
 which provisions it for the project.
 
@@ -134,11 +134,11 @@ Expected: `Hosting-only deploy scope confirmed`.
 Run:
 
 ```bash
-npx firebase-tools deploy --only hosting --project ai-mastery
+npx firebase-tools deploy --only hosting --project applied-ai-mastery
 ```
 
 Expected: Firebase reports `Deploy complete!` and a Hosting URL of
-`https://ai-mastery.web.app` without deploying Functions, Firestore,
+`https://applied-ai-mastery.web.app` without deploying Functions, Firestore,
 Authentication, or other backend resources.
 
 ### Task 4: Verify the Live Static Website
@@ -157,14 +157,14 @@ Authentication, or other backend resources.
 Run:
 
 ```bash
-curl -fsSI https://ai-mastery.web.app/
-curl -fsSI https://ai-mastery.web.app/index.html
-curl -fsSI https://ai-mastery.web.app/personal.html
-curl -fsSI https://ai-mastery.web.app/professional.html
-curl -fsSI https://ai-mastery.web.app/site/assets/css/course.css
-curl -fsSI https://ai-mastery.web.app/site/assets/js/course.js
-curl -fsSI https://ai-mastery.web.app/materials/session-01-prompting/README.md
-curl -fsSI https://ai-mastery.web.app/company/products/product-catalog.csv
+curl -fsSI https://applied-ai-mastery.web.app/
+curl -fsSI https://applied-ai-mastery.web.app/index.html
+curl -fsSI https://applied-ai-mastery.web.app/personal.html
+curl -fsSI https://applied-ai-mastery.web.app/professional.html
+curl -fsSI https://applied-ai-mastery.web.app/site/assets/css/course.css
+curl -fsSI https://applied-ai-mastery.web.app/site/assets/js/course.js
+curl -fsSI https://applied-ai-mastery.web.app/materials/session-01-prompting/README.md
+curl -fsSI https://applied-ai-mastery.web.app/company/products/product-catalog.csv
 ```
 
 Expected: every request returns HTTP 200.
@@ -174,7 +174,7 @@ Expected: every request returns HTTP 200.
 Run:
 
 ```bash
-curl -fsSI https://ai-mastery.web.app/
+curl -fsSI https://applied-ai-mastery.web.app/
 ```
 
 Expected headers include:
@@ -189,9 +189,9 @@ referrer-policy: strict-origin-when-cross-origin
 Run:
 
 ```bash
-npx firebase-tools hosting:sites:list --project ai-mastery
+npx firebase-tools hosting:sites:list --project applied-ai-mastery
 git status --short --branch
 ```
 
-Expected: Firebase lists the `ai-mastery` Hosting site, and Git reports branch
+Expected: Firebase lists the `applied-ai-mastery` Hosting site, and Git reports branch
 `chore/firebase-ai-mastery-deployment` with a clean working tree.

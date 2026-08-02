@@ -3,7 +3,7 @@
 ## Goal
 
 Deploy Applied AI Mastery as a static website in a new, independent Firebase
-project. The preferred globally unique Firebase project ID is `ai-mastery`.
+project. The preferred globally unique Firebase project ID is `applied-ai-mastery`.
 
 The new project isolates future backend resources, including Cloud Functions,
 Firestore, IAM, quotas, and billing, from existing GalLearn applications. This
@@ -30,9 +30,9 @@ control, so instructor answer keys remain publicly accessible.
 Create a Firebase project with:
 
 - display name: `AI Mastery`;
-- preferred project ID: `ai-mastery`;
-- default Hosting site: `ai-mastery`;
-- initial public URL: `https://ai-mastery.web.app`.
+- preferred project ID: `applied-ai-mastery`;
+- default Hosting site: `applied-ai-mastery`;
+- initial public URL: `https://applied-ai-mastery.web.app`.
 
 Do not enable Functions, Firestore, Authentication, Analytics, or billing as
 part of this deployment. Those services will be designed separately when the
@@ -47,7 +47,7 @@ Perform the work on the dedicated branch
 `chore/firebase-ai-mastery-deployment`. Do not commit deployment changes
 directly to `main`.
 
-Add `.firebaserc` with a `default` project alias pointing to `ai-mastery`. Keep
+Add `.firebaserc` with a `default` project alias pointing to `applied-ai-mastery`. Keep
 the existing no-build Hosting configuration in `firebase.json` and deploy only
 the Hosting resource.
 
@@ -58,7 +58,7 @@ currently selected project, which is unrelated to this application.
 
 1. Confirm work is on `chore/firebase-ai-mastery-deployment`.
 2. Confirm the authenticated Firebase account.
-3. Create the `ai-mastery` Firebase project.
+3. Create the `applied-ai-mastery` Firebase project.
 4. Add the repository-local Firebase project alias.
 5. Validate the effective Firebase configuration.
 6. Deploy with Hosting-only scope.
@@ -77,5 +77,5 @@ Verification covers:
 - `index.html`, `personal.html`, and `professional.html` are reachable;
 - representative CSS, JavaScript, Markdown, and CSV assets are reachable;
 - deployed responses include the configured security headers;
-- repository configuration targets `ai-mastery`;
+- repository configuration targets `applied-ai-mastery`;
 - no backend Firebase resources are configured by this change.
