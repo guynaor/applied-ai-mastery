@@ -373,6 +373,7 @@ Expected: the HTML and localization module are committed on
 **Files:**
 - Verify: `index.html`
 - Verify: `site/assets/js/index-i18n.js`
+- Modify: `site/assets/css/course.css`
 
 - [ ] **Step 1: Serve the repository locally**
 
@@ -412,14 +413,27 @@ Expected:
 - `localStorage['aam-personal-language']` is `he`;
 - there are no console errors or overlapping content.
 
-- [ ] **Step 4: Verify the mobile layout**
+- [ ] **Step 4: Prevent RTL overflow from the off-screen skip link**
+
+If the browser checks report horizontal overflow in RTL, replace the legacy
+`left:-9999px` skip-link hiding rule with:
+
+```css
+.skip-link{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip-link:focus{inset-block-start:8px;inset-inline-start:8px;width:auto;height:auto;margin:0;overflow:visible;clip:auto;z-index:20;padding:10px;background:#fff}
+```
+
+Expected: the skip link remains keyboard-focusable, and RTL no longer expands
+the document scroll width.
+
+- [ ] **Step 5: Verify the mobile layout**
 
 At a 390 by 844 viewport, verify both English and Hebrew.
 
 Expected: the brand, Courses link, language control, hero, course cards, and
 footer fit without horizontal scrolling, clipping, or incoherent overlap.
 
-- [ ] **Step 5: Stop the local server**
+- [ ] **Step 6: Stop the local server**
 
 Stop the `python3 -m http.server 4173` process and confirm no verification
 server remains running.
