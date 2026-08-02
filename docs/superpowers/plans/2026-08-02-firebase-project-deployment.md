@@ -45,7 +45,7 @@ Create `.firebaserc` with exactly:
 Run:
 
 ```bash
-node -e "const rc=require('./.firebaserc'); const fb=require('./firebase.json'); if(rc.projects.default!=='ai-mastery') throw new Error('wrong project'); if(!fb.hosting || Object.keys(fb).some(k=>k!=='hosting')) throw new Error('configuration is not Hosting-only'); console.log('Firebase configuration valid')"
+node -e "const fs=require('node:fs'); const rc=JSON.parse(fs.readFileSync('.firebaserc','utf8')); const fb=require('./firebase.json'); if(rc.projects.default!=='ai-mastery') throw new Error('wrong project'); if(!fb.hosting || Object.keys(fb).some(k=>k!=='hosting')) throw new Error('configuration is not Hosting-only'); console.log('Firebase configuration valid')"
 git diff --check
 ```
 
@@ -195,4 +195,3 @@ git status --short --branch
 
 Expected: Firebase lists the `ai-mastery` Hosting site, and Git reports branch
 `chore/firebase-ai-mastery-deployment` with a clean working tree.
-
