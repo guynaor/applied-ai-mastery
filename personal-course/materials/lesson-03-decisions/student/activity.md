@@ -9,20 +9,20 @@ AI is useful for organizing a decision, finding missing questions, and testing h
 
 A good decision record separates:
 
-- **facts:** supported information;
-- **preferences:** what matters to you;
-- **assumptions:** unverified beliefs used temporarily;
-- **unknowns:** information still needed;
+- **facts:** supported information
+- **preferences:** what matters to you
+- **assumptions:** unverified beliefs used temporarily
+- **unknowns:** information still needed
 - **trade-offs:** what improves and worsens with each option.
 
 ## Choose a decision
 
 Pick a real, reversible or low-risk decision with **2–3 options**. Examples:
 
-- choose a course, laptop, phone plan, gym, or apartment viewing;
-- decide between travel dates;
-- choose how to spend a free weekend;
-- select a study method;
+- choose a course, laptop, phone plan, gym, or apartment viewing
+- decide between travel dates
+- choose how to spend a free weekend
+- select a study method
 - compare transport options.
 
 Do not use this exercise as the sole basis for medical, legal, high-risk financial, or safety decisions.
@@ -50,9 +50,9 @@ Give each criterion an importance weight from 1–5.
 Use:
 
 > I am comparing **[options]** using these criteria: **[criteria]**. Before recommending anything, identify:
-> 1. missing criteria;
-> 2. hidden assumptions;
-> 3. information I should verify;
+> 1. missing criteria
+> 2. hidden assumptions
+> 3. information I should verify
 > 4. ways my framing could bias the result.
 > Do not invent facts about the options.
 
@@ -78,11 +78,11 @@ Change one important weight or uncertain score. Ask:
 
 Write:
 
-- current choice;
-- top two reasons;
-- strongest downside;
-- information still missing;
-- what would cause reconsideration;
+- current choice
+- top two reasons
+- strongest downside
+- information still missing
+- what would cause reconsideration
 - review date.
 
 Add the review date to your calendar if the decision can be revisited.
@@ -91,11 +91,11 @@ Add the review date to your calendar if the decision can be revisited.
 
 You are done when you have:
 
-- a clear decision and options;
-- criteria chosen before scoring;
-- weights with reasons;
-- fact/assumption labels;
-- one sensitivity test;
+- a clear decision and options
+- criteria chosen before scoring
+- weights with reasons
+- fact/assumption labels
+- one sensitivity test
 - a decision record and review date.
 
 Reusable rule: **Use AI to reveal the structure of a decision, not to outsource your values.**

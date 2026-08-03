@@ -7,10 +7,10 @@
 
 Use 5–10 photos or screenshots from:
 
-- a trip;
-- a birthday or event;
-- a hobby project;
-- a room redesign;
+- a trip
+- a birthday or event
+- a hobby project
+- a room redesign
 - a course project.
 
 Do not upload images of other people to an AI tool unless you have permission and understand how the tool handles uploaded content.
@@ -23,9 +23,9 @@ Complete:
 
 Choose one format:
 
-- 6-image carousel;
-- 20–30 second vertical video;
-- single poster plus caption;
+- 6-image carousel
+- 20–30 second vertical video
+- single poster plus caption
 - before/after sequence.
 
 ## Step 2 — Organize source media
@@ -47,10 +47,10 @@ Keep originals unchanged. Rename selected items in story order, such as `01-arri
 
 Write 4–6 beats:
 
-1. opening or context;
-2. discovery or activity;
-3. turning point or highlight;
-4. human detail;
+1. opening or context
+2. discovery or activity
+3. turning point or highlight
+4. human detail
 5. ending or takeaway.
 
 Every beat must be supported by a real source image, truthful caption, or clearly labelled generated illustration.
@@ -59,10 +59,10 @@ Every beat must be supported by a real source image, truthful caption, or clearl
 
 Create only one generated addition, such as:
 
-- title card;
-- background texture;
-- map-style illustration;
-- decorative transition;
+- title card
+- background texture
+- map-style illustration
+- decorative transition
 - stylized object that does not pretend to be a real event photo.
 
 Prompt structure:
@@ -73,9 +73,9 @@ Prompt structure:
 
 For every frame write:
 
-- what is visible;
-- why it matters in the story;
-- any date/location needed;
+- what is visible
+- why it matters in the story
+- any date/location needed
 - whether it is original, edited, or generated.
 
 Avoid claiming that generated scenes actually happened.
@@ -84,23 +84,23 @@ Avoid claiming that generated scenes actually happened.
 
 Use any familiar editor. Before sharing, check:
 
-- chronological or narrative order is clear;
-- faces and names have permission;
-- private locations, tickets, QR codes, and personal details are removed;
-- generated material is not misleading;
-- music and images are licensed or personally owned;
-- spelling, dates, and locations are correct;
+- chronological or narrative order is clear
+- faces and names have permission
+- private locations, tickets, QR codes, and personal details are removed
+- generated material is not misleading
+- music and images are licensed or personally owned
+- spelling, dates, and locations are correct
 - export format matches the intended platform.
 
 ## Completion check
 
 You are done when you have:
 
-- a defined audience and format;
-- organized source files;
-- a 4–6 beat storyboard;
-- one responsible generation prompt;
-- captions with provenance;
+- a defined audience and format
+- organized source files
+- a 4–6 beat storyboard
+- one responsible generation prompt
+- captions with provenance
 - a final privacy, consent, and authenticity check.
 
 Reusable rule: **Use generation to support the story—not to manufacture memories.**

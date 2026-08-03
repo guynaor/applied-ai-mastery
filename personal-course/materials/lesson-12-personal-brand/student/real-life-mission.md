@@ -8,12 +8,12 @@ Use genuine work from this course and your real experience to prepare an applica
 
 Select at least three course artifacts. For each, record:
 
-- problem or goal;
-- your personal contribution;
-- AI’s role;
-- verification or testing performed;
-- result;
-- limitation;
+- problem or goal
+- your personal contribution
+- AI’s role
+- verification or testing performed
+- result
+- limitation
 - evidence link or file.
 
 Write one truthful CV or portfolio entry from this evidence.
@@ -22,11 +22,11 @@ Write one truthful CV or portfolio entry from this evidence.
 
 Choose a role, internship, program, volunteering opportunity, or project collaboration. Map its requirements to evidence, then prepare:
 
-- tailored CV section;
-- short profile or LinkedIn About section;
-- portfolio index with 3–5 projects;
-- short cover note or introduction;
-- interview examples;
+- tailored CV section
+- short profile or LinkedIn About section
+- portfolio index with 3–5 projects
+- short cover note or introduction
+- interview examples
 - application tracker and follow-up date.
 
 Check every claim against evidence. Remove inflated verbs, invented metrics, and skills you cannot explain.
@@ -37,12 +37,12 @@ Ask a trusted person to review the package for clarity, credibility, and relevan
 
 ## Evidence to submit
 
-- opportunity description;
-- requirement-to-evidence map;
-- evidence bank;
-- tailored materials;
-- claim-verification checklist;
-- feedback and revision note;
+- opportunity description
+- requirement-to-evidence map
+- evidence bank
+- tailored materials
+- claim-verification checklist
+- feedback and revision note
 - final AI Learning Journal reflection.
 
 ## Reflection

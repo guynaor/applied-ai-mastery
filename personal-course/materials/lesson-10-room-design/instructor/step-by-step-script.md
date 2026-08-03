@@ -55,10 +55,10 @@ Do not allow unexplained numbers.
 
 Open the starter model. Point out:
 
-1. editable parameters;
-2. assertions that reject impossible values;
-3. the shell module;
-4. the divider loop;
+1. editable parameters
+2. assertions that reject impossible values
+3. the shell module
+4. the divider loop
 5. the final union.
 
 Ask the student to predict the effect of one change before editing it. Make exactly one controlled change and render.
@@ -67,9 +67,9 @@ Ask the student to predict the effect of one change before editing it. Make exac
 
 Require four distinct configurations:
 
-1. default;
-2. changed A;
-3. changed B;
+1. default
+2. changed A
+3. changed B
 4. extreme but plausible.
 
 For each, record expected and actual behavior. Ask:
@@ -95,11 +95,11 @@ Ask the student to define parameter, clearance, and interface without reading. T
 
 ## Minimum acceptable work
 
-- clear need statement;
-- measured interfaces with units and status;
-- completed design contract;
-- one controlled model change;
-- four configuration tests;
+- clear need statement
+- measured interfaces with units and status
+- completed design contract
+- one controlled model change
+- four configuration tests
 - explicit physical validation plan.
 
 ## Common interventions

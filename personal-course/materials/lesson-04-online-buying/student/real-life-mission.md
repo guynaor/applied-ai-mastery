@@ -18,11 +18,11 @@ Where practical, compare the research with a real owner’s experience or test t
 
 ## Evidence to submit
 
-- needs-first specification;
-- comparison table and source links with dates;
-- total-cost calculation;
-- one claim you verified and one you could not;
-- purchase, wait, or reject decision with reason;
+- needs-first specification
+- comparison table and source links with dates
+- total-cost calculation
+- one claim you verified and one you could not
+- purchase, wait, or reject decision with reason
 - completed journal entry.
 
 ## Reflection

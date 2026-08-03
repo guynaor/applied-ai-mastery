@@ -7,10 +7,10 @@
 
 AI can help organize options and create materials, but it should not silently decide for the group. A good event plan separates:
 
-- **hard constraints:** budget ceiling, date window, accessibility, dietary or transport needs;
-- **preferences:** theme, venue style, food, music, and activities;
-- **owners:** one person responsible for each task;
-- **deadlines:** when a choice or task must be completed;
+- **hard constraints:** budget ceiling, date window, accessibility, dietary or transport needs
+- **preferences:** theme, venue style, food, music, and activities
+- **owners:** one person responsible for each task
+- **deadlines:** when a choice or task must be completed
 - **verification:** facts that must be checked with a venue, supplier, or participant.
 
 ## Step 1 — Choose a small real event
@@ -29,7 +29,7 @@ List at least three hard constraints and three preferences.
 
 Examples:
 
-- hard: must finish by 23:00, wheelchair access, vegetarian option, maximum €25 per person;
+- hard: must finish by 23:00, wheelchair access, vegetarian option, maximum €25 per person
 - preferred: outdoors, casual dress, live music, near public transport.
 
 ## Step 3 — Ask AI to create a short decision poll
@@ -44,9 +44,9 @@ Review every question. Remove anything that is intrusive, vague, or irrelevant.
 
 Use real responses or invent a small fictional result for practice. Ask AI to summarize:
 
-1. the strongest agreement;
-2. unresolved conflicts;
-3. decisions that can now be made;
+1. the strongest agreement
+2. unresolved conflicts
+3. decisions that can now be made
 4. decisions that still need a human choice.
 
 Record the final decisions yourself.
@@ -55,12 +55,12 @@ Record the final decisions yourself.
 
 Create a table with:
 
-- task;
-- owner;
-- deadline;
-- status;
-- dependency;
-- reminder date;
+- task
+- owner
+- deadline
+- status
+- dependency
+- reminder date
 - proof of completion.
 
 Every task must have one owner. “Everyone” is not an owner.
@@ -71,20 +71,20 @@ Ask AI for a concise invitation and a poster prompt. Include only confirmed fact
 
 The invitation should include:
 
-- event name;
-- date and time;
-- location or “location to be confirmed”;
-- RSVP deadline;
-- what guests should bring or know;
+- event name
+- date and time
+- location or “location to be confirmed”
+- RSVP deadline
+- what guests should bring or know
 - accessibility or dietary contact method without publishing private information.
 
 ## Step 7 — Stress-test the plan
 
 Choose one disruption:
 
-- the preferred venue is unavailable;
-- two people cannot attend the chosen date;
-- the food cost rises by 20%;
+- the preferred venue is unavailable
+- two people cannot attend the chosen date
+- the food cost rises by 20%
 - rain makes the outdoor plan impossible.
 
 Update the action board and invitation only where necessary.
@@ -93,11 +93,11 @@ Update the action board and invitation only where necessary.
 
 You are done when you have:
 
-- constraints and preferences;
-- a five-question-or-shorter poll;
-- a decision summary;
-- an action board with owners and deadlines;
-- a shareable invitation;
+- constraints and preferences
+- a five-question-or-shorter poll
+- a decision summary
+- an action board with owners and deadlines
+- a shareable invitation
 - one tested fallback.
 
 Reusable rule: **AI can organize a group decision, but people must own the choices and commitments.**

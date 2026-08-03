@@ -18,12 +18,12 @@ Ask a trusted person to review your criteria before you decide. Record what chan
 
 ## Evidence to submit
 
-- decision statement and options;
-- completed matrix;
-- source and assumption notes;
-- AI framing challenge;
-- sensitivity test;
-- decision record, reconsideration trigger, and review date;
+- decision statement and options
+- completed matrix
+- source and assumption notes
+- AI framing challenge
+- sensitivity test
+- decision record, reconsideration trigger, and review date
 - completed journal entry.
 
 ## Reflection

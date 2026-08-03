@@ -11,12 +11,12 @@ Use a real or realistic one- to three-day trip. Keep the lesson focused on one d
 
 Record:
 
-- travel dates and time zone;
-- arrival and departure points;
-- fixed bookings or commitments;
-- maximum budget;
-- accessibility, food, health, or rest requirements;
-- must-do activity;
+- travel dates and time zone
+- arrival and departure points
+- fixed bookings or commitments
+- maximum budget
+- accessibility, food, health, or rest requirements
+- must-do activity
 - people involved and decision owner.
 
 Separate **hard constraints** from preferences.
@@ -25,12 +25,12 @@ Separate **hard constraints** from preferences.
 
 For each activity record:
 
-- location;
-- opening window;
-- expected duration;
-- cost and exclusions;
-- booking requirement;
-- travel origin and estimated travel time;
+- location
+- opening window
+- expected duration
+- cost and exclusions
+- booking requirement
+- travel origin and estimated travel time
 - source and date checked.
 
 Do not place an activity into the itinerary until its travel origin is known.
@@ -47,7 +47,7 @@ Check the output against your own constraints.
 
 Test at least two disruptions:
 
-1. arrival is delayed by 90 minutes;
+1. arrival is delayed by 90 minutes
 2. one planned activity is unavailable.
 
 Preserve all hard constraints. Identify what moves, what is dropped, and who must be informed.
@@ -56,13 +56,13 @@ Preserve all hard constraints. Identify what moves, what is dropped, and who mus
 
 Produce:
 
-- calendar-ready events with time zone and locations;
-- one shared trip note;
-- booking and confirmation list;
-- packing or preparation tasks with owners;
+- calendar-ready events with time zone and locations
+- one shared trip note
+- booking and confirmation list
+- packing or preparation tasks with owners
 - verification checklist grouped into:
-  - before booking;
-  - 48 hours before;
+  - before booking
+  - 48 hours before
   - same day.
 
 Do not put passport numbers, payment details, or sensitive identity documents into a general AI prompt.

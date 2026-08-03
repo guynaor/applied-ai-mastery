@@ -46,10 +46,10 @@ Final bullet(s):
 
 Check:
 
-- [ ] states current stage accurately;
-- [ ] names demonstrated interests or skills;
-- [ ] avoids unsupported adjectives;
-- [ ] states the opportunity sought;
+- [ ] states current stage accurately
+- [ ] names demonstrated interests or skills
+- [ ] avoids unsupported adjectives
+- [ ] states the opportunity sought
 - [ ] fits in 3–4 lines.
 
 ## 6. Portfolio index

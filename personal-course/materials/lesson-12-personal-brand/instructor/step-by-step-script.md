@@ -67,9 +67,9 @@ Build one project entry from problem, action, tool, artifact, verification, and 
 
 Require active but accurate verbs. Distinguish:
 
-- **built** from **planned**;
-- **tested** from **considered**;
-- **used** from **familiar with**;
+- **built** from **planned**
+- **tested** from **considered**
+- **used** from **familiar with**
 - **measured** from **estimated**.
 
 ## 22–25 minutes — Create profile and portfolio index
@@ -78,11 +78,11 @@ Draft a 3–4 line profile. Then choose 2–4 portfolio projects.
 
 For each project require:
 
-- a clear problem;
-- the student’s contribution;
-- visible artifact;
-- tools;
-- verification;
+- a clear problem
+- the student’s contribution
+- visible artifact
+- tools
+- verification
 - limitation.
 
 ## 25–28 minutes — Application tracking
@@ -101,11 +101,11 @@ Ask:
 
 ## Minimum acceptable work
 
-- evidence bank with at least three entries;
-- target-role requirement map;
-- one evidence-checked project entry;
-- truthful short profile;
-- 2–4 project portfolio index;
+- evidence bank with at least three entries
+- target-role requirement map
+- one evidence-checked project entry
+- truthful short profile
+- 2–4 project portfolio index
 - application tracker with follow-up date.
 
 ## Common interventions

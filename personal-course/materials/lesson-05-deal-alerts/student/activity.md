@@ -7,9 +7,9 @@
 
 Examples:
 
-- notify me when a specific product falls below a target price;
-- notify me when my size is back in stock;
-- notify me when a ticket or booking becomes available;
+- notify me when a specific product falls below a target price
+- notify me when my size is back in stock
+- notify me when a ticket or booking becomes available
 - remind me to recheck a purchase before a sale ends.
 
 Use one exact item or clearly defined search. Do not monitor vague categories such as “cheap laptops.”
@@ -18,11 +18,11 @@ Use one exact item or clearly defined search. Do not monitor vague categories su
 
 Record:
 
-- exact product, event, or booking;
-- acceptable sellers or sources;
-- target price or availability condition;
-- maximum delivery or fee amount;
-- how often checking is useful;
+- exact product, event, or booking
+- acceptable sellers or sources
+- target price or availability condition
+- maximum delivery or fee amount
+- how often checking is useful
 - when the monitor should expire.
 
 ## Step 2 — Define the notification rule
@@ -33,31 +33,31 @@ A good alert says:
 
 Define:
 
-- first-trigger behavior;
-- duplicate suppression;
-- recovery, such as price rising above the threshold or stock disappearing;
-- re-arming after recovery;
+- first-trigger behavior
+- duplicate suppression
+- recovery, such as price rising above the threshold or stock disappearing
+- re-arming after recovery
 - stale or failed-check behavior.
 
 ## Step 3 — Add safety controls
 
 The monitor must include:
 
-- a manual test or check-now option;
-- pause and resume;
-- permanent stop or expiry date;
-- no automatic purchase;
-- no storage of payment credentials;
-- a maximum notification frequency;
+- a manual test or check-now option
+- pause and resume
+- permanent stop or expiry date
+- no automatic purchase
+- no storage of payment credentials
+- a maximum notification frequency
 - visible failed checks rather than silent success.
 
 ## Step 4 — Test four cases
 
 Write expected behavior for:
 
-1. condition is false;
-2. condition becomes true for the first time;
-3. condition remains true on the next check;
+1. condition is false
+2. condition becomes true for the first time
+3. condition remains true on the next check
 4. condition recovers and later becomes true again.
 
 Add one failed-source or stale-data case.
@@ -66,8 +66,8 @@ Add one failed-source or stale-data case.
 
 Some needs are better handled by a calendar reminder than a recurring monitor. Choose:
 
-- recurring monitor;
-- one-time reminder;
+- recurring monitor
+- one-time reminder
 - manual check saved in a task list.
 
 Explain why.

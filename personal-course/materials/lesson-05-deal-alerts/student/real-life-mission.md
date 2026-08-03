@@ -12,12 +12,12 @@ Specify the exact item, acceptable variants, trigger, source, check frequency, n
 
 Create sample observations that demonstrate:
 
-- no alert above the threshold;
-- one alert when the condition becomes true;
-- duplicate suppression;
-- recovery;
-- re-arming for a later event;
-- failed or stale checks;
+- no alert above the threshold
+- one alert when the condition becomes true
+- duplicate suppression
+- recovery
+- re-arming for a later event
+- failed or stale checks
 - pause, resume, and stop behavior.
 
 ## Gold — Run it manually for a week
@@ -26,10 +26,10 @@ Perform the checks yourself or use an existing alert service. Record false posit
 
 ## Evidence to submit
 
-- completed alert specification;
-- sample event log or week-long observation log;
-- evidence that no purchase happens automatically;
-- one revision after testing;
+- completed alert specification
+- sample event log or week-long observation log
+- evidence that no purchase happens automatically
+- one revision after testing
 - completed journal entry.
 
 ## Reflection

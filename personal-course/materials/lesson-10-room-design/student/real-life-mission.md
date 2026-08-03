@@ -12,9 +12,9 @@ Create a design contract containing the need, interface measurements, constraint
 
 Render and inspect:
 
-1. default dimensions;
-2. changed set A;
-3. changed set B;
+1. default dimensions
+2. changed set A
+3. changed set B
 4. an extreme but plausible set.
 
 Record pass/fail checks for geometry, clearances, wall thickness, usability, and printability or manufacturability. Keep measured, specified, assumed, and derived values distinct.
@@ -25,11 +25,11 @@ Create a cardboard mock-up, low-risk print, or scale test. Compare physical resu
 
 ## Evidence to submit
 
-- photographs or sketch with private details removed;
-- design contract;
-- source CAD file;
-- four validation screenshots and log;
-- prototype observations if attempted;
+- photographs or sketch with private details removed
+- design contract
+- source CAD file
+- four validation screenshots and log
+- prototype observations if attempted
 - completed journal entry.
 
 ## Reflection

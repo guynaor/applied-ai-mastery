@@ -22,18 +22,18 @@ Avoid questions such as “Will this stock go up?”
 
 Write:
 
-- the asset or category;
-- the purpose of the research;
-- the date of the information;
+- the asset or category
+- the purpose of the research
+- the date of the information
 - what decision this research will **not** make for you.
 
 ## Step 3 — Gather at least three source types
 
 Use a mix such as:
 
-- official fund or company material;
-- regulator or exchange information;
-- audited filings or reports;
+- official fund or company material
+- regulator or exchange information
+- audited filings or reports
 - independent analysis or reputable financial journalism.
 
 Do not count several pages repeating the same original claim as independent evidence.
@@ -56,11 +56,11 @@ Check those claims against the original sources.
 
 Include at least:
 
-- market or price risk;
-- concentration risk;
-- fees and taxes not yet evaluated;
-- liquidity or lock-up issues where relevant;
-- currency risk where relevant;
+- market or price risk
+- concentration risk
+- fees and taxes not yet evaluated
+- liquidity or lock-up issues where relevant
+- currency risk where relevant
 - what you still do not understand.
 
 ## Step 7 — Set a review trigger

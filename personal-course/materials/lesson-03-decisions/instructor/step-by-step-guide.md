@@ -69,9 +69,9 @@ Require at least one hidden assumption or missing-information item to be recorde
 
 The student scores each option. For each important score, require one of:
 
-- source;
-- direct observation;
-- calculation;
+- source
+- direct observation
+- calculation
 - explicit `assumption` label.
 
 Explain weighted scoring briefly. Do not allow the total to be treated as a command.

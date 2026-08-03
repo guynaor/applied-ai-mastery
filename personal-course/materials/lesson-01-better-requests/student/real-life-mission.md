@@ -21,10 +21,10 @@ Help another person improve one of their prompts. Record what you changed and wh
 
 ## Evidence to submit
 
-- original and improved prompt;
-- short output comparison;
-- verification evidence;
-- one reusable prompt pattern with private details removed;
+- original and improved prompt
+- short output comparison
+- verification evidence
+- one reusable prompt pattern with private details removed
 - completed journal entry.
 
 ## Reflection

@@ -12,12 +12,12 @@ Write a neutral research question. Gather at least one primary source and one cr
 
 Create a short brief containing:
 
-- what the investment is;
-- reasons someone might consider it;
-- reasons someone might avoid it;
-- key risks and uncertainties;
-- important metrics or events to monitor;
-- claims that remain unverified;
+- what the investment is
+- reasons someone might consider it
+- reasons someone might avoid it
+- key risks and uncertainties
+- important metrics or events to monitor
+- claims that remain unverified
 - conditions that would justify revisiting the research.
 
 Do not ask AI for a target price, guaranteed return, or prediction.
@@ -28,11 +28,11 @@ Ask another person or AI to challenge your strongest conclusion using evidence. 
 
 ## Evidence to submit
 
-- research question;
-- dated source list;
-- balanced brief;
-- one weak or stale claim you rejected;
-- revision after challenge;
+- research question
+- dated source list
+- balanced brief
+- one weak or stale claim you rejected
+- revision after challenge
 - completed journal entry.
 
 ## Reflection
