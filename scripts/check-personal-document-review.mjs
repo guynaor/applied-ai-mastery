@@ -15,6 +15,9 @@ assert.match(viewer,/personal-course\/he\/learning-journal\.md/);
 assert.match(viewer,/navigator\.clipboard\.writeText/);
 assert.match(viewer,/Copy journal template/);
 assert.match(viewer,/העתקת תבנית היומן/);
+assert.match(viewer,/class="table-wrap" tabindex="0" role="region"/);
+assert.match(viewer,/aria-label="\$\{tableLabel\}"/);
 assert.match(css,/\.document-copy-button/);
+assert.match(css,/\.table-wrap:focus-visible/);
 
 console.log('Personal document context and journal-copy contract passed');

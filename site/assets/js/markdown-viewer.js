@@ -26,6 +26,7 @@ const journalCopy={
  en:{idle:'Copy journal template',copied:'Journal template copied',failed:'Copy failed'},
  he:{idle:'העתקת תבנית היומן',copied:'תבנית היומן הועתקה',failed:'ההעתקה נכשלה'},
 };
+const tableLabel=hebrewSource?'טבלה ניתנת לגלילה':'Scrollable table';
 document.documentElement.lang=hebrewSource?'he':'en';
 document.documentElement.dir=hebrewSource?'rtl':'ltr';
 document.body.classList.toggle('rtl',hebrewSource);
@@ -106,7 +107,7 @@ function renderMarkdown(markdown,path){
   if(unordered||ordered){flushParagraph();const wanted=unordered?'ul':'ol';if(listType!==wanted){closeList();output.push(`<${wanted}>`);listType=wanted;}output.push(`<li>${inline((unordered||ordered)[1],base)}</li>`);continue;}
   if(line.includes('|')&&i+1<lines.length&&/^\s*\|?\s*:?-{3,}/.test(lines[i+1])){
    flushParagraph();closeList();const headers=tableCells(line);i++;const rows=[];while(i+1<lines.length&&lines[i+1].includes('|')&&lines[i+1].trim()){i++;rows.push(tableCells(lines[i]));}
-   output.push(`<div class="table-wrap"><table><thead><tr>${headers.map(v=>`<th>${inline(v,base)}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map(v=>`<td>${inline(v,base)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`);continue;
+   output.push(`<div class="table-wrap" tabindex="0" role="region" aria-label="${tableLabel}"><table><thead><tr>${headers.map(v=>`<th>${inline(v,base)}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map(v=>`<td>${inline(v,base)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`);continue;
   }
   paragraph.push(line.trim());
  }
