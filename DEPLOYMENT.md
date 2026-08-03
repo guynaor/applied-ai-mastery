@@ -99,7 +99,8 @@ A successful deployment prints the Hosting URL. Open that exact URL rather than 
 - Switch Student and Instructor modes.
 - Open translated Markdown and canonical English artifacts.
 - Confirm personal shared documents return to the personal course.
-- Open both learning journals and test the copy-template command.
+- In both courses, switch between English and Hebrew and open each language's learning-journal link.
+- Confirm all four Google Docs templates are view-only and instruct students to choose **File → Make a copy** before writing.
 - Mark progress, refresh, and confirm it persists.
 - Check capstone, company, CSV, and OpenSCAD links.
 - Check the browser console for missing files or JavaScript errors.
