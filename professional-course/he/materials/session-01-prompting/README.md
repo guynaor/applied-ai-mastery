@@ -17,7 +17,7 @@
 
 ## קבצים
 
-- [מפת עולם ה-AI בעשר דקות](../../ai-geography.md) — מפה תמציתית של מוצרי AI, סוכני קוד, מיומנויות, תוצרים והרשאות.
+- [AF-REF-001 — מפת עולם ה-AI בעשר דקות](../../ai-geography.md) — מפה תמציתית של מוצרי AI, סוכני קוד, מיומנויות, תוצרים והרשאות.
 - [AF-TRN-101 — מזכר מקור (חומר עבודה באנגלית)](../../../../materials/session-01-prompting/student/AF-TRN-101-source-memo.md) — מקור טכני שאינו שלם בכוונה.
 - [AF-TRN-102 — גיליון השוואת מודלים (חומר עבודה באנגלית)](../../../../materials/session-01-prompting/student/AF-TRN-102-model-comparison-worksheet.md) — פעילות לתלמיד וטבלת ראיות.
 - [AF-TRN-103 — תבנית פרומפט RISEN (חומר עבודה באנגלית)](../../../../materials/session-01-prompting/student/AF-TRN-103-risen-prompt-template.md) — מסגרת פרומפטים לשימוש חוזר.
