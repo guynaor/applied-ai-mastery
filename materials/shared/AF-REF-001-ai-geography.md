@@ -36,6 +36,13 @@ These are current examples, not permanent rankings. Capabilities and plans chang
 3. Is a saved presentation an artifact or a skill?
 4. Why should a source-linked research answer still be verified?
 
+## Check your answers
+
+1. ChatGPT is primarily an application, but the name is also used informally for the models available through it. Check which model and features are active when the distinction matters.
+2. An agent can work toward a goal over several steps and use permitted tools to inspect or change external systems. A plain text-only chat only returns text.
+3. A saved presentation is an artifact. A skill is a reusable workflow for producing or handling a class of outputs.
+4. Links make verification possible, but a source can be weak, outdated, misread, or unable to support the exact claim. Open the source and check the claim in context.
+
 ## Current primary references
 
 - [OpenAI: What is ChatGPT?](https://help.openai.com/en/articles/12677804-what-is-chatgpt-faq)

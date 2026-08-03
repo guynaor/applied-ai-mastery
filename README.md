@@ -17,7 +17,7 @@ The repository includes:
 - CSV files compatible with Google Sheets and Excel;
 - a parametric OpenSCAD exercise;
 - an integrated capstone;
-- static-hosting configuration for Vercel and Firebase.
+- Firebase Hosting configuration.
 
 The remaining beta work is classroom testing, link verification, instructor walkthrough feedback, and optional PDF/DOCX/XLSX distributions.
 
@@ -29,7 +29,7 @@ No dependencies or build step are required.
 
 ## Deploy
 
-See [DEPLOYMENT.md](DEPLOYMENT.md). The repository can be deployed unchanged on Vercel, Firebase Hosting, Netlify, or GitHub Pages.
+See [DEPLOYMENT.md](DEPLOYMENT.md). Production is deployed only through Firebase Hosting.
 
 ## Course progression
 

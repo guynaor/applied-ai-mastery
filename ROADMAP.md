@@ -6,7 +6,7 @@
 - [x] Adopt feature-branch and pull-request workflow
 - [ ] Add repository documentation and planned directory structure
 - [ ] Add current enriched course site
-- [ ] Establish Vercel deployment from `main`
+- [ ] Maintain Firebase Hosting deployment from `main`
 
 ## v0.2 — AquaForge company foundation
 

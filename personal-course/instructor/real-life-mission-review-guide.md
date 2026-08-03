@@ -4,13 +4,14 @@ The Real Life Missions reinforce transfer: students use the lesson skill on a ge
 
 ## Submission method for the MVP
 
-Agree one external channel before the course begins, such as:
+Agree on one external channel before the course begins, such as:
 
-- a shared Google Drive folder;
-- email;
-- a private GitHub repository;
-- a shared document;
-- an existing learning platform.
+- a shared Google Drive folder
+- Google Classroom
+- email
+- a private GitHub repository
+- a shared document
+- an existing learning platform
 
 Ask students to use consistent names:
 
@@ -43,12 +44,12 @@ Use three short lines:
 
 Request a focused revision when:
 
-- the submission contains only an AI output with no evidence of student judgment;
-- factual claims are presented without checking;
-- the student cannot explain their prompt or decision;
-- personal data, private images, or other people’s information was shared unnecessarily;
-- a result is described as working without a meaningful test;
-- an investment exercise becomes personalized financial advice or a return prediction.
+- the submission contains only an AI output with no evidence of student judgment
+- factual claims are presented without checking
+- the student cannot explain their prompt or decision
+- personal data, private images, or other people’s information was shared unnecessarily
+- a result is described as working without a meaningful test
+- an investment exercise becomes personalized financial advice or a return prediction
 
 Do not require a full restart. Ask for the smallest revision that demonstrates the missing skill.
 
@@ -64,11 +65,11 @@ Bronze is sufficient for course completion. Silver is the normal target. Gold sh
 
 The portal may display local XP as motivation:
 
-- lesson complete: 20 XP;
-- Bronze mission: 30 XP;
-- Silver mission: 50 XP;
-- Gold mission: 80 XP;
-- journal entry: 20 XP.
+- lesson complete: 20 XP
+- Bronze mission: 30 XP
+- Silver mission: 50 XP
+- Gold mission: 80 XP
+- journal entry: 20 XP
 
 XP is self-recorded in the learner’s browser and is not a grade or verified record. Instructor assessment remains based on submitted evidence.
 
@@ -76,11 +77,11 @@ XP is self-recorded in the learner’s browser and is not a grade or verified re
 
 Ask each student to select 3–5 strong artifacts and explain:
 
-- the problem;
-- their role;
-- how AI helped;
-- how they verified or tested the work;
-- what they changed after feedback;
-- what remains limited.
+- the problem
+- their role
+- how AI helped
+- how they verified or tested the work
+- what they changed after feedback
+- what remains limited
 
 This becomes the evidence base for Lesson 12 rather than a collection of unsupported claims.
