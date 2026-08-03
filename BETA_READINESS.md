@@ -9,7 +9,6 @@
 - [x] Reviewed student materials, answer keys, and rubrics
 - [x] Persistent local progress tracking
 - [x] AquaForge source-of-truth links
-- [x] Vercel configuration
 - [x] Firebase Hosting configuration
 - [x] Deployment and instructor-content guidance
 - [x] No runtime dependencies or build step
