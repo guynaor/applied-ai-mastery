@@ -1,28 +1,40 @@
 const params=new URLSearchParams(location.search);
 const source=params.get('src')||'';
+const requestedContext=params.get('context');
+const inferredContext=source.startsWith('personal-course/')?'personal':'professional';
+const documentContext=['personal','professional'].includes(requestedContext)?requestedContext:inferredContext;
 const status=document.querySelector('[data-document-status]');
 const article=document.querySelector('[data-markdown]');
 const sourceLink=document.querySelector('[data-source-link]');
 const backLink=document.querySelector('[data-back-link]');
+const copyJournalButton=document.querySelector('[data-copy-journal-template]');
 const year=document.querySelector('[data-year]');
 if(year)year.textContent=new Date().getFullYear();
 
-const personalSource=source.startsWith('personal-course/');
+const personalContext=documentContext==='personal';
 const personalHebrewSource=source.startsWith('personal-course/he/');
 const professionalHebrewSource=source.startsWith('professional-course/he/');
 const hebrewSource=personalHebrewSource||professionalHebrewSource;
+const personalHebrewPreference=localStorage.getItem('aam-personal-language')==='he';
 const professionalHebrewPreference=localStorage.getItem('aam-professional-language')==='he';
-const professionalArtifactSource=!personalSource&&!professionalHebrewSource;
-const hebrewNavigation=personalHebrewSource||professionalHebrewSource||(professionalArtifactSource&&professionalHebrewPreference);
+const hebrewNavigation=hebrewSource||(personalContext?personalHebrewPreference:professionalHebrewPreference);
+const journalSources=new Set([
+ 'personal-course/student/ai-learning-journal.md',
+ 'personal-course/he/learning-journal.md',
+]);
+const journalCopy={
+ en:{idle:'Copy journal template',copied:'Journal template copied',failed:'Copy failed'},
+ he:{idle:'העתקת תבנית היומן',copied:'תבנית היומן הועתקה',failed:'ההעתקה נכשלה'},
+};
 document.documentElement.lang=hebrewSource?'he':'en';
 document.documentElement.dir=hebrewSource?'rtl':'ltr';
 document.body.classList.toggle('rtl',hebrewSource);
 article.dir=hebrewSource?'rtl':'ltr';
 if(status&&hebrewNavigation)status.textContent='המסמך נטען...';
 if(backLink){
- if(personalSource){
-  backLink.href=personalHebrewSource?'personal.html?lang=he#lessons':'personal.html#lessons';
-  backLink.textContent=personalHebrewSource?'חזרה לשיעורים האישיים':'Back to personal lessons';
+ if(personalContext){
+  backLink.href=hebrewNavigation?'personal.html?lang=he#lessons':'personal.html#lessons';
+  backLink.textContent=hebrewNavigation?'חזרה לשיעורים האישיים':'Back to personal lessons';
  }else{
   backLink.href=hebrewNavigation?'professional.html?lang=he#missions':'professional.html?lang=en#missions';
   backLink.textContent=hebrewNavigation?'חזרה למסלול המקצועי':'Back to professional missions';
@@ -42,7 +54,7 @@ const resolveRelative=(href,base)=>{
 };
 const routeLink=(href,base)=>{
  const resolved=resolveRelative(href,base);
- if(resolved&&resolved.toLowerCase().endsWith('.md'))return `document.html?src=${encodeURIComponent(resolved)}`;
+ if(resolved&&resolved.toLowerCase().endsWith('.md'))return `document.html?src=${encodeURIComponent(resolved)}&context=${encodeURIComponent(documentContext)}`;
  return resolved;
 };
 const inline=(text,base)=>{
@@ -111,6 +123,21 @@ async function load(){
   const markdown=await response.text();
   article.innerHTML=renderMarkdown(markdown,source);
   article.hidden=false;status.hidden=true;
+  if(copyJournalButton&&journalSources.has(source)){
+   const language=personalHebrewSource?'he':'en';
+   const labels=journalCopy[language];
+   copyJournalButton.textContent=labels.idle;
+   copyJournalButton.hidden=false;
+   copyJournalButton.onclick=async()=>{
+    try{
+     await navigator.clipboard.writeText(article.innerText.trim());
+     copyJournalButton.textContent=labels.copied;
+    }catch{
+     copyJournalButton.textContent=labels.failed;
+    }
+    window.setTimeout(()=>{copyJournalButton.textContent=labels.idle;},1800);
+   };
+  }
   const firstHeading=article.querySelector('h1,h2');
   if(firstHeading)document.title=`${firstHeading.textContent} · Applied AI Mastery`;
  }catch(error){status.innerHTML=hebrewNavigation?`<strong>המסמך אינו זמין.</strong><p>לא ניתן לטעון את <code>${escapeHtml(source)}</code>.</p>`:`<strong>Document unavailable.</strong><p>The course could not load <code>${escapeHtml(source)}</code>.</p>`;}
