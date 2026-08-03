@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,48 +9,49 @@
   <title>Applied AI Mastery — Professional</title>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to course content</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to course content</a>
   <div class="site-shell">
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Choose a course"><span class="brand-mark">AI</span><span>Applied AI Mastery</span></a>
-      <nav class="header-links" aria-label="Primary navigation">
-        <a href="index.html">Courses</a><a href="#missions">Missions</a><a href="#capstone">Capstone</a><a href="#company">AquaForge</a><a href="document.html?src=README.md">About</a>
+      <a class="brand" href="index.html" aria-label="Choose a course" data-i18n-aria-label="brand"><span class="brand-mark">AI</span><span>Applied AI Mastery</span></a>
+      <nav class="header-links" aria-label="Primary navigation" data-i18n-aria-label="nav">
+        <a href="index.html" data-i18n="courses">Courses</a><a href="#missions" data-i18n="missions">Missions</a><a href="#capstone" data-i18n="capstone">Capstone</a><a href="#company" data-i18n="company">AquaForge</a><a data-professional-overview-link href="document.html?src=README.md" data-i18n="about">About</a>
       </nav>
+      <div class="segmented language-toggle" role="group" aria-label="Language" data-i18n-aria-label="language"><button type="button" data-language="en" aria-pressed="true">English</button><button type="button" data-language="he" aria-pressed="false">עברית</button></div>
     </header>
 
     <main id="main">
       <section class="hero" id="top">
         <div class="hero-copy">
-          <div class="eyebrow">Professional track · Practical, project-based AI learning</div>
-          <h1>Learn applied AI by helping run an engineering company.</h1>
-          <p>Seven guided missions and one integrated capstone teach prompting, research, spreadsheets, communication, planning, automation, and parametric CAD through realistic AquaForge work.</p>
-          <div class="actions"><a class="button primary" href="#missions">Start the course</a><a class="button" href="document.html?src=capstone%2Fstudent%2FAF-CAP-001-mission-brief.md">Open capstone brief</a></div>
+          <div class="eyebrow" data-i18n="heroEyebrow">Professional track · Practical, project-based AI learning</div>
+          <h1 data-i18n="heroTitle">Learn applied AI by helping run an engineering company.</h1>
+          <p data-i18n="heroText">Seven guided missions and one integrated capstone teach prompting, research, spreadsheets, communication, planning, automation, and parametric CAD through realistic AquaForge work.</p>
+          <div class="actions"><a class="button primary" href="#missions" data-i18n="startCourse">Start the course</a><a class="button" data-professional-capstone-link href="document.html?src=capstone%2Fstudent%2FAF-CAP-001-mission-brief.md" data-i18n="openCapstoneBrief">Open capstone brief</a></div>
         </div>
-        <aside class="version-pill" aria-label="Course version">Beta 0.9</aside>
+        <aside class="version-pill" aria-label="Course version" data-i18n="version" data-i18n-aria-label="versionLabel">Beta 0.9</aside>
       </section>
 
-      <section class="mode-panel" aria-label="Course viewing mode">
-        <div><strong>Choose your view</strong><p>Student mode keeps the course focused on assignments. Instructor mode also shows teaching scripts, answer keys, and assessment rubrics.</p></div>
-        <div class="segmented" role="group" aria-label="View mode"><button type="button" data-mode="student" aria-pressed="true">Student</button><button type="button" data-mode="instructor" aria-pressed="false">Instructor</button></div>
+      <section class="mode-panel" aria-label="Course viewing mode" data-i18n-aria-label="modePanel">
+        <div><strong data-i18n="chooseView">Choose your view</strong><p data-i18n="viewText">Student mode keeps the course focused on assignments. Instructor mode also shows teaching scripts, answer keys, and assessment rubrics.</p></div>
+        <div class="segmented" role="group" aria-label="View mode" data-i18n-aria-label="viewMode"><button type="button" data-mode="student" aria-pressed="true" data-i18n="student">Student</button><button type="button" data-mode="instructor" aria-pressed="false" data-i18n="instructor">Instructor</button></div>
       </section>
 
       <section class="section" id="missions">
-        <div class="section-heading"><div><div class="eyebrow">Course progression</div><h2>Seven missions, then the capstone</h2></div><div class="progress-wrap"><span data-progress-label>0 of 8 complete</span><progress data-progress max="8" value="0"></progress></div></div>
+        <div class="section-heading"><div><div class="eyebrow" data-i18n="progression">Course progression</div><h2 data-i18n="progressionTitle">Seven missions, then the capstone</h2></div><div class="progress-wrap"><span data-progress-label>0 of 8 complete</span><progress data-progress max="8" value="0"></progress></div></div>
         <div class="mission-list" data-session-grid></div>
       </section>
 
       <section class="section split" id="capstone">
-        <div><div class="eyebrow">Final mission</div><h2>AquaNode Mini engineering-validation decision</h2><p>Reconcile evidence from every session into one bounded recommendation: proceed, revise, or stop for now. The capstone tests traceability, judgment, verification, and coherent updates across deliverables.</p><a class="button primary" href="document.html?src=capstone%2Fstudent%2FAF-CAP-001-mission-brief.md">Open capstone mission</a></div>
-        <div class="check-card"><h3>Capstone submission</h3><ul><li>Recommendation and research memo</li><li>Evidence and decision registers</li><li>Workbook and six-slide deck</li><li>Operations and agent plans</li><li>OpenSCAD source and validation log</li><li>Reflection on human judgment</li></ul></div>
+        <div><div class="eyebrow" data-i18n="finalMission">Final mission</div><h2 data-i18n="capstoneTitle">AquaNode Mini engineering-validation decision</h2><p data-i18n="capstoneText">Reconcile evidence from every session into one bounded recommendation: proceed, revise, or stop for now. The capstone tests traceability, judgment, verification, and coherent updates across deliverables.</p><a class="button primary" data-professional-capstone-link href="document.html?src=capstone%2Fstudent%2FAF-CAP-001-mission-brief.md" data-i18n="openCapstoneMission">Open capstone mission</a></div>
+        <div class="check-card"><h3 data-i18n="capstoneSubmission">Capstone submission</h3><ul><li data-i18n="submissionMemo">Recommendation and research memo</li><li data-i18n="submissionRegisters">Evidence and decision registers</li><li data-i18n="submissionDeck">Workbook and six-slide deck</li><li data-i18n="submissionPlans">Operations and agent plans</li><li data-i18n="submissionCad">OpenSCAD source and validation log</li><li data-i18n="submissionReflection">Reflection on human judgment</li></ul></div>
       </section>
 
       <section class="section" id="company">
-        <div class="eyebrow">Shared simulation</div><h2>AquaForge source of truth</h2>
-        <div class="grid compact"><a class="card link-card" href="document.html?src=company%2FREADME.md"><h3>Company overview</h3><p>Mission, structure, products, and document conventions.</p></a><a class="card link-card" href="company/people/employee-directory.csv"><h3>Employee directory</h3><p>Canonical personnel, roles, reporting lines, and communication styles.</p></a><a class="card link-card" href="document.html?src=ROADMAP.md"><h3>Course roadmap</h3><p>Current scope and planned improvements.</p></a></div>
+        <div class="eyebrow" data-i18n="sharedSimulation">Shared simulation</div><h2 data-i18n="companyTitle">AquaForge source of truth</h2>
+        <div class="grid compact"><a class="card link-card" href="document.html?src=company%2FREADME.md"><h3 data-i18n="companyOverview">Company overview</h3><p data-i18n="companyOverviewText">Mission, structure, products, and document conventions.</p></a><a class="card link-card" href="company/people/employee-directory.csv"><h3 data-i18n="employeeDirectory">Employee directory</h3><p data-i18n="employeeDirectoryText">Canonical personnel, roles, reporting lines, and communication styles.</p></a><a class="card link-card" href="document.html?src=ROADMAP.md"><h3 data-i18n="roadmap">Course roadmap</h3><p data-i18n="roadmapText">Current scope and planned improvements.</p></a></div>
       </section>
     </main>
 
-    <footer><span>Applied AI Mastery · Professional · <span data-year></span></span><a href="https://github.com/guynaor/applied-ai-mastery">GitHub repository</a></footer>
+    <footer><span><span data-i18n="footerBrand">Applied AI Mastery · Professional ·</span> <span data-year></span></span><a href="https://github.com/guynaor/applied-ai-mastery" data-i18n="repository">GitHub repository</a></footer>
   </div>
   <script src="site/assets/js/course.js"></script>
 </body>

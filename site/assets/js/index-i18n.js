@@ -37,6 +37,8 @@
     document.title=text.metaTitle;
     const description=document.querySelector('meta[name="description"]');
     if(description)description.content=text.metaDescription;
+    const professionalLink=document.querySelector('[data-professional-link]');
+    if(professionalLink)professionalLink.href=`professional.html?lang=${lang}`;
     const year=document.querySelector('[data-year]');
     if(year)year.textContent=new Date().getFullYear();
     if(persist)localStorage.setItem(storageKey,lang);

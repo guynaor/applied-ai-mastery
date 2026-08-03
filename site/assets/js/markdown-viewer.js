@@ -8,13 +8,27 @@ const year=document.querySelector('[data-year]');
 if(year)year.textContent=new Date().getFullYear();
 
 const personalSource=source.startsWith('personal-course/');
-const hebrewSource=source.startsWith('personal-course/he/');
-if(hebrewSource){document.documentElement.lang='he';document.documentElement.dir='rtl';article.dir='rtl';}
+const personalHebrewSource=source.startsWith('personal-course/he/');
+const professionalHebrewSource=source.startsWith('professional-course/he/');
+const hebrewSource=personalHebrewSource||professionalHebrewSource;
+const professionalHebrewPreference=localStorage.getItem('aam-professional-language')==='he';
+const professionalArtifactSource=!personalSource&&!professionalHebrewSource;
+const hebrewNavigation=personalHebrewSource||professionalHebrewSource||(professionalArtifactSource&&professionalHebrewPreference);
+document.documentElement.lang=hebrewSource?'he':'en';
+document.documentElement.dir=hebrewSource?'rtl':'ltr';
+document.body.classList.toggle('rtl',hebrewSource);
+article.dir=hebrewSource?'rtl':'ltr';
+if(status&&hebrewNavigation)status.textContent='המסמך נטען...';
 if(backLink){
- backLink.href=personalSource?'personal.html#lessons':'professional.html#missions';
- backLink.textContent=hebrewSource?'חזרה לשיעורים האישיים':personalSource?'Back to personal lessons':'Back to professional missions';
+ if(personalSource){
+  backLink.href=personalHebrewSource?'personal.html?lang=he#lessons':'personal.html#lessons';
+  backLink.textContent=personalHebrewSource?'חזרה לשיעורים האישיים':'Back to personal lessons';
+ }else{
+  backLink.href=hebrewNavigation?'professional.html?lang=he#missions':'professional.html?lang=en#missions';
+  backLink.textContent=hebrewNavigation?'חזרה למסלול המקצועי':'Back to professional missions';
+ }
 }
-if(hebrewSource&&sourceLink)sourceLink.textContent='פתיחת קובץ המקור';
+if(hebrewNavigation&&sourceLink)sourceLink.textContent='פתיחת קובץ המקור';
 
 const validSource=source&&source.toLowerCase().endsWith('.md')&&!source.startsWith('/')&&!source.includes('..')&&!source.includes('://');
 const escapeHtml=value=>value.replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
@@ -89,7 +103,7 @@ function renderMarkdown(markdown,path){
 }
 
 async function load(){
- if(!validSource){status.textContent=hebrewSource?'קישור המסמך אינו תקין.':'This document link is invalid.';return;}
+ if(!validSource){status.textContent=hebrewNavigation?'קישור המסמך אינו תקין.':'This document link is invalid.';return;}
  sourceLink.href=source;
  try{
   const response=await fetch(source,{cache:'no-cache'});
@@ -99,6 +113,6 @@ async function load(){
   article.hidden=false;status.hidden=true;
   const firstHeading=article.querySelector('h1,h2');
   if(firstHeading)document.title=`${firstHeading.textContent} · Applied AI Mastery`;
- }catch(error){status.innerHTML=hebrewSource?`<strong>המסמך אינו זמין.</strong><p>לא ניתן לטעון את <code>${escapeHtml(source)}</code>.</p>`:`<strong>Document unavailable.</strong><p>The course could not load <code>${escapeHtml(source)}</code>.</p>`;}
+ }catch(error){status.innerHTML=hebrewNavigation?`<strong>המסמך אינו זמין.</strong><p>לא ניתן לטעון את <code>${escapeHtml(source)}</code>.</p>`:`<strong>Document unavailable.</strong><p>The course could not load <code>${escapeHtml(source)}</code>.</p>`;}
 }
 load();

@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "canonicalLanguage": "en",
+  "locale": "he",
+  "entries": [
+    {"source": "materials/session-01-prompting/README.md", "target": "professional-course/he/materials/session-01-prompting/README.md", "kind": "overview", "status": "reviewed"},
+    {"source": "materials/session-01-prompting/student/AF-TRN-100-student-mission-guide.md", "target": "professional-course/he/materials/session-01-prompting/student/AF-TRN-100-student-mission-guide.md", "kind": "student", "status": "reviewed"},
+    {"source": "materials/session-01-prompting/instructor/AF-TRN-100-instructor-guide.md", "target": "professional-course/he/materials/session-01-prompting/instructor/AF-TRN-100-instructor-guide.md", "kind": "instructor", "status": "reviewed"},
+    {"source": "materials/session-01-prompting/instructor/AF-TRN-100-step-by-step-lesson-script.md", "target": "professional-course/he/materials/session-01-prompting/instructor/AF-TRN-100-step-by-step-lesson-script.md", "kind": "instructor", "status": "reviewed"},
+    {"source": "materials/session-01-prompting/instructor/AF-TRN-101-answer-key.md", "target": "professional-course/he/materials/session-01-prompting/instructor/AF-TRN-101-answer-key.md", "kind": "answer-key", "status": "reviewed"},
+
+    {"source": "materials/session-02-deep-research/README.md", "target": "professional-course/he/materials/session-02-deep-research/README.md", "kind": "overview", "status": "reviewed"},
+    {"source": "materials/session-02-deep-research/student/AF-RD-201-decision-brief.md", "target": "professional-course/he/materials/session-02-deep-research/student/AF-RD-201-decision-brief.md", "kind": "student", "status": "reviewed"},
+    {"source": "materials/session-02-deep-research/instructor/AF-TRN-200-instructor-guide.md", "target": "professional-course/he/materials/session-02-deep-research/instructor/AF-TRN-200-instructor-guide.md", "kind": "instructor", "status": "reviewed"},
+    {"source": "materials/session-02-deep-research/instructor/AF-TRN-200-step-by-step-lesson-script.md", "target": "professional-course/he/materials/session-02-deep-research/instructor/AF-TRN-200-step-by-step-lesson-script.md", "kind": "instructor", "status": "reviewed"},
+    {"source": "materials/session-02-deep-research/instructor/AF-TRN-201-answer-key.md", "target": "professional-course/he/materials/session-02-deep-research/instructor/AF-TRN-201-answer-key.md", "kind": "answer-key", "status": "reviewed"},
+
+    {"source": "materials/session-03-spreadsheet-engineering/README.md", "target": "professional-course/he/materials/session-03-spreadsheet-engineering/README.md", "kind": "overview", "status": "reviewed"},
+    {"source": "materials/session-03-spreadsheet-engineering/student/AF-OPS-301-assignment-brief.md", "target": "professional-course/he/materials/session-03-spreadsheet-engineering/student/AF-OPS-301-assignment-brief.md", "kind": "student", "status": "reviewed"},
+    {"source": "materials/session-03-spreadsheet-engineering/instructor/AF-TRN-300-instructor-guide.md", "target": "professional-course/he/materials/session-03-spreadsheet-engineering/instructor/AF-TRN-300-instructor-guide.md", "kind": "instructor", "status": "reviewed"},
+    {"source": "materials/session-03-spreadsheet-engineering/instructor/AF-TRN-300-step-by-step-lesson-script.md", "target": "professional-course/he/materials/session-03-spreadsheet-engineering/instructor/AF-TRN-300-step-by-step-lesson-script.md", "kind": "instructor", "status": "reviewed"},
+    {"source": "materials/session-03-spreadsheet-engineering/instructor/AF-TRN-301-answer-key.md", "target": "professional-course/he/materials/session-03-spreadsheet-engineering/instructor/AF-TRN-301-answer-key.md", "kind": "answer-key", "status": "reviewed"},
+
+    {"source": "materials/session-04-technical-communication/README.md", "target": "professional-course/he/materials/session-04-technical-communication/README.md", "kind": "overview", "status": "reviewed"},
+    {"source": "materials/session-04-technical-communication/student/AF-COM-401-presentation-brief.md", "target": "professional-course/he/materials/session-04-technical-communication/student/AF-COM-401-presentation-brief.md", "kind": "student", "status": "reviewed"},
+    {"source": "materials/session-04-technical-communication/instructor/AF-TRN-400-instructor-guide.md", "target": "professional-course/he/materials/session-04-technical-communication/instructor/AF-TRN-400-instructor-guide.md", "kind": "instructor", "status": "reviewed"},
+    {"source": "materials/session-04-technical-communication/instructor/AF-TRN-400-step-by-step-lesson-script.md", "target": "professional-course/he/materials/session-04-technical-communication/instructor/AF-TRN-400-step-by-step-lesson-script.md", "kind": "instructor", "status": "reviewed"},
+    {"source": "materials/session-04-technical-communication/instructor/AF-TRN-401-answer-key.md", "target": "professional-course/he/materials/session-04-technical-communication/instructor/AF-TRN-401-answer-key.md", "kind": "answer-key", "status": "reviewed"},
+
+    {"source": "materials/session-05-operations-planning/README.md", "target": "professional-course/he/materials/session-05-operations-planning/README.md", "kind": "overview", "status": "reviewed"},
+    {"source": "materials/session-05-operations-planning/student/AF-OPS-501-mission-brief.md", "target": "professional-course/he/materials/session-05-operations-planning/student/AF-OPS-501-mission-brief.md", "kind": "student", "status": "reviewed"},
+    {"source": "materials/session-05-operations-planning/instructor/AF-TRN-500-instructor-guide.md", "target": "professional-course/he/materials/session-05-operations-planning/instructor/AF-TRN-500-instructor-guide.md", "kind": "instructor", "status": "reviewed"},
+    {"source": "materials/session-05-operations-planning/instructor/AF-TRN-500-step-by-step-lesson-script.md", "target": "professional-course/he/materials/session-05-operations-planning/instructor/AF-TRN-500-step-by-step-lesson-script.md", "kind": "instructor", "status": "reviewed"},
+    {"source": "materials/session-05-operations-planning/instructor/AF-TRN-501-answer-key.md", "target": "professional-course/he/materials/session-05-operations-planning/instructor/AF-TRN-501-answer-key.md", "kind": "answer-key", "status": "reviewed"},
+
+    {"source": "materials/session-06-agent-workflows/README.md", "target": "professional-course/he/materials/session-06-agent-workflows/README.md", "kind": "overview", "status": "reviewed"},
+    {"source": "materials/session-06-agent-workflows/student/AF-AUTO-601-mission-brief.md", "target": "professional-course/he/materials/session-06-agent-workflows/student/AF-AUTO-601-mission-brief.md", "kind": "student", "status": "reviewed"},
+    {"source": "materials/session-06-agent-workflows/instructor/AF-TRN-600-instructor-guide.md", "target": "professional-course/he/materials/session-06-agent-workflows/instructor/AF-TRN-600-instructor-guide.md", "kind": "instructor", "status": "reviewed"},
+    {"source": "materials/session-06-agent-workflows/instructor/AF-TRN-600-step-by-step-lesson-script.md", "target": "professional-course/he/materials/session-06-agent-workflows/instructor/AF-TRN-600-step-by-step-lesson-script.md", "kind": "instructor", "status": "reviewed"},
+    {"source": "materials/session-06-agent-workflows/instructor/AF-TRN-601-answer-key.md", "target": "professional-course/he/materials/session-06-agent-workflows/instructor/AF-TRN-601-answer-key.md", "kind": "answer-key", "status": "reviewed"},
+
+    {"source": "materials/session-07-parametric-cad/README.md", "target": "professional-course/he/materials/session-07-parametric-cad/README.md", "kind": "overview", "status": "reviewed"},
+    {"source": "materials/session-07-parametric-cad/student/AF-CAD-701-design-brief.md", "target": "professional-course/he/materials/session-07-parametric-cad/student/AF-CAD-701-design-brief.md", "kind": "student", "status": "reviewed"},
+    {"source": "materials/session-07-parametric-cad/instructor/AF-TRN-700-instructor-guide.md", "target": "professional-course/he/materials/session-07-parametric-cad/instructor/AF-TRN-700-instructor-guide.md", "kind": "instructor", "status": "reviewed"},
+    {"source": "materials/session-07-parametric-cad/instructor/AF-TRN-700-step-by-step-lesson-script.md", "target": "professional-course/he/materials/session-07-parametric-cad/instructor/AF-TRN-700-step-by-step-lesson-script.md", "kind": "instructor", "status": "reviewed"},
+    {"source": "materials/session-07-parametric-cad/instructor/AF-TRN-701-answer-key.md", "target": "professional-course/he/materials/session-07-parametric-cad/instructor/AF-TRN-701-answer-key.md", "kind": "answer-key", "status": "reviewed"},
+
+    {"source": "capstone/README.md", "target": "professional-course/he/capstone/README.md", "kind": "overview", "status": "reviewed"},
+    {"source": "capstone/student/AF-CAP-001-mission-brief.md", "target": "professional-course/he/capstone/student/AF-CAP-001-mission-brief.md", "kind": "student", "status": "reviewed"},
+    {"source": "capstone/instructor/AF-CAP-099-step-by-step-facilitation-script.md", "target": "professional-course/he/capstone/instructor/AF-CAP-099-step-by-step-facilitation-script.md", "kind": "instructor", "status": "reviewed"},
+    {"source": "capstone/instructor/AF-CAP-100-capstone-teaching-guide.md", "target": "professional-course/he/capstone/instructor/AF-CAP-100-capstone-teaching-guide.md", "kind": "instructor", "status": "reviewed"},
+    {"source": "capstone/instructor/AF-CAP-101-instructor-guide.md", "target": "professional-course/he/capstone/instructor/AF-CAP-101-instructor-guide.md", "kind": "instructor", "status": "reviewed"}
+  ]
+}
