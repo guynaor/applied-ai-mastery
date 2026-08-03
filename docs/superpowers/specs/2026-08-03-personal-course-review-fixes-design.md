@@ -1,6 +1,6 @@
 # Personal Course Review Fixes Design
 
-**Date:** 2026-08-03  
+**Date:** 2026-08-03
 **Branch:** `fix/personal-course-review-feedback`
 
 ## Goal
