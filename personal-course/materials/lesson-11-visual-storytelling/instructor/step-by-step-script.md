@@ -42,9 +42,9 @@ Create or describe the folder structure. Explain why originals remain unchanged.
 
 Have the student review each selected image for:
 
-- permission;
-- private information;
-- location or identity exposure;
+- permission
+- private information
+- location or identity exposure
 - whether it actually supports the story.
 
 ## 10–15 minutes — Build the story spine
@@ -69,9 +69,9 @@ Bad example: a realistic image showing the group at a location they never visite
 
 For each frame, require:
 
-- truthful caption;
-- original/edited/generated status;
-- correct date or location where relevant;
+- truthful caption
+- original/edited/generated status
+- correct date or location where relevant
 - permission and privacy status.
 
 Ask the student to identify the frame most likely to mislead a viewer and improve its label or caption.
@@ -82,11 +82,11 @@ Run the checklist for consent, private details, licensing, spelling, export form
 
 ## Minimum acceptable work
 
-- defined audience and format;
-- organized source-media plan;
-- 4–6 beat storyboard;
-- one responsible generation prompt;
-- provenance-aware captions;
+- defined audience and format
+- organized source-media plan
+- 4–6 beat storyboard
+- one responsible generation prompt
+- provenance-aware captions
 - completed consent, privacy, and authenticity check.
 
 ## Common interventions

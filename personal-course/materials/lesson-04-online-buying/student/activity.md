@@ -17,25 +17,25 @@ Use no more than **three candidate products**.
 
 Write:
 
-- intended use;
-- maximum budget;
-- three must-have requirements;
-- two nice-to-have features;
-- deal-breakers;
+- intended use
+- maximum budget
+- three must-have requirements
+- two nice-to-have features
+- deal-breakers
 - how long you expect to keep the product.
 
 ## Step 2 — Build a comparison record
 
 For each candidate, record:
 
-- exact model;
-- seller;
-- listed price;
-- delivery cost;
-- taxes or import charges if relevant;
-- required accessories;
-- warranty;
-- return window and return cost;
+- exact model
+- seller
+- listed price
+- delivery cost
+- taxes or import charges if relevant
+- required accessories
+- warranty
+- return window and return cost
 - evidence source and date checked.
 
 Calculate **total expected purchase cost**, not only the advertised price.
@@ -52,10 +52,10 @@ Add only relevant questions to your worksheet.
 
 For every important claim, label the source:
 
-- manufacturer specification;
-- retailer listing;
-- independent review;
-- owner review;
+- manufacturer specification
+- retailer listing
+- independent review
+- owner review
 - assumption or unknown.
 
 Do not treat repeated retailer text as independent evidence.
@@ -64,27 +64,27 @@ Do not treat repeated retailer text as independent evidence.
 
 Choose one:
 
-- buy now;
-- wait for verification or a price threshold;
+- buy now
+- wait for verification or a price threshold
 - reject all current options.
 
 Record:
 
-- top reason;
-- strongest downside;
-- one fact to verify before paying;
-- return deadline to save after purchase;
+- top reason
+- strongest downside
+- one fact to verify before paying
+- return deadline to save after purchase
 - receipt, warranty, and serial-number storage plan.
 
 ## Completion check
 
 You are done when you have:
 
-- a need statement created before product comparison;
-- no more than three candidates;
-- total-cost comparison;
-- source labels and verification dates;
-- seller, warranty, and return checks;
+- a need statement created before product comparison
+- no more than three candidates
+- total-cost comparison
+- source labels and verification dates
+- seller, warranty, and return checks
 - a bounded recommendation.
 
 Reusable rule: **Compare the complete ownership decision, not the biggest number on the product page.**

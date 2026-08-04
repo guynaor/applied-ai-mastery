@@ -7,9 +7,9 @@
 
 Pick one:
 
-- a poll for choosing a date, destination, menu, or activity;
-- an expense splitter;
-- a packing checklist;
+- a poll for choosing a date, destination, menu, or activity
+- an expense splitter
+- a packing checklist
 - a simple habit tracker.
 
 For the main lesson, the supplied starter is a **group poll**. Keep the first version deliberately small.
@@ -22,11 +22,11 @@ Complete this sentence:
 
 Define:
 
-- required inputs;
-- output or result;
-- what data is stored;
-- what happens after refresh;
-- privacy boundary;
+- required inputs
+- output or result
+- what data is stored
+- what happens after refresh
+- privacy boundary
 - one thing the app will not do.
 
 ## Step 2 — Inspect the starter app
@@ -35,21 +35,21 @@ Open `starter-poll-app.html` in a browser. Test the default behavior before edit
 
 Identify:
 
-- the question field;
-- option fields;
-- vote buttons;
-- result counts;
-- reset control;
+- the question field
+- option fields
+- vote buttons
+- result counts
+- reset control
 - browser storage.
 
 ## Step 3 — Ask AI for one controlled change
 
 Choose only one feature:
 
-- allow four options instead of three;
-- add a closing date;
-- add an “other” option;
-- display percentages;
+- allow four options instead of three
+- add a closing date
+- add an “other” option
+- display percentages
 - add a copyable summary.
 
 Prompt pattern:
@@ -62,10 +62,10 @@ Paste the starter code only after removing any personal data.
 
 Run at least these tests:
 
-1. vote once for each option;
-2. refresh the page;
-3. reset the poll;
-4. try an empty or invalid field;
+1. vote once for each option
+2. refresh the page
+3. reset the poll
+4. try an empty or invalid field
 5. test the new feature.
 
 Record expected and actual results.
@@ -80,11 +80,11 @@ Do not claim the app supports multi-user sharing unless it actually does.
 
 Save:
 
-- the requirements;
-- the prompt used;
-- the original file;
-- the modified file;
-- the test log;
+- the requirements
+- the prompt used
+- the original file
+- the modified file
+- the test log
 - one screenshot.
 
 These can become portfolio evidence in Lesson 12.

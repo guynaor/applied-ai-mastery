@@ -19,10 +19,10 @@ The rest of this lesson uses an ordinary chat request. Later lessons will create
 
 AI cannot reliably guess what matters to you. A useful request usually includes:
 
-- **Goal:** what you need;
-- **Context:** what the AI should know;
-- **Constraints:** limits such as time, budget, tone, diet, location, or format;
-- **Output:** what the answer should look like;
+- **Goal:** what you need
+- **Context:** what the AI should know
+- **Constraints:** limits such as time, budget, tone, diet, location, or format
+- **Output:** what the answer should look like
 - **Check:** how the answer should expose uncertainty or missing information.
 
 A good prompt does not need to be long. It needs to remove the ambiguity that would change the answer.
@@ -31,10 +31,10 @@ A good prompt does not need to be long. It needs to remove the ambiguity that wo
 
 Choose one real request from your life. Examples:
 
-- plan three quick dinners from ingredients you already have;
-- create a study plan for an exam;
-- draft a polite message to a landlord;
-- suggest a weekend activity for a group with different budgets;
+- plan three quick dinners from ingredients you already have
+- create a study plan for an exam
+- draft a polite message to a landlord
+- suggest a weekend activity for a group with different budgets
 - organize a messy to-do list.
 
 Do not include passwords, account numbers, identity documents, medical records, or private information about another person.
@@ -91,9 +91,9 @@ Change exactly one element of Prompt B: context, constraint, output format, or v
 
 Record:
 
-- what you changed;
-- why you changed it;
-- whether the result improved;
+- what you changed
+- why you changed it
+- whether the result improved
 - what still required your judgment.
 
 ## Digital-life habit
@@ -104,10 +104,10 @@ Save your final prompt in a note titled `Reusable AI Prompts`. Add a short label
 
 You are done when you have:
 
-- Prompt A, Prompt B, and Prompt C;
-- a comparison table;
-- one controlled change;
-- one reusable prompt saved without sensitive data;
+- Prompt A, Prompt B, and Prompt C
+- a comparison table
+- one controlled change
+- one reusable prompt saved without sensitive data
 - a one-sentence rule you want to remember.
 
 Suggested rule: **Give AI the information that changes the answer, not every detail you know.**

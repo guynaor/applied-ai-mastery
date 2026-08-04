@@ -66,10 +66,10 @@ The student creates tasks, calendar items, and follow-up questions only from sup
 
 Check:
 
-- tasks have clear verbs;
-- owners and deadlines are not invented;
-- reminders include enough context;
-- the note title is searchable;
+- tasks have clear verbs
+- owners and deadlines are not invented
+- reminders include enough context
+- the note title is searchable
 - follow-ups include who or what can resolve them.
 
 ## 22–24 minutes — Compare formats

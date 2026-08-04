@@ -12,10 +12,10 @@ Create a purpose-specific summary, then compare every important claim against th
 
 Produce:
 
-- a short summary;
-- key facts and open questions;
-- tasks with owners and dates where supported;
-- calendar items;
+- a short summary
+- key facts and open questions
+- tasks with owners and dates where supported
+- calendar items
 - a follow-up message or question list.
 
 Do not invent deadlines or commitments.
@@ -26,11 +26,11 @@ Create two versions for different audiences or purposes, such as a one-minute ov
 
 ## Evidence to submit
 
-- source title or safe excerpt/link;
-- prompt used;
-- first summary and corrected summary;
-- verification notes;
-- extracted actions or calendar items;
+- source title or safe excerpt/link
+- prompt used
+- first summary and corrected summary
+- verification notes
+- extracted actions or calendar items
 - completed journal entry.
 
 ## Reflection

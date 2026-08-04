@@ -12,11 +12,11 @@ Write the requirement before editing. Ask AI to change exactly one feature, then
 
 Ask two people to try the app without coaching. Record:
 
-- what they attempted;
-- what confused them;
-- expected versus actual behavior;
-- one accessibility check;
-- one regression test;
+- what they attempted
+- what confused them
+- expected versus actual behavior
+- one accessibility check
+- one regression test
 - three possible improvements.
 
 Implement and retest one improvement. Be explicit about local-only storage and lack of synchronization.
@@ -27,12 +27,12 @@ Publish or share the app as a static file, with no secrets or personal data. Add
 
 ## Evidence to submit
 
-- original and revised files or links;
-- written requirement;
-- AI prompt and change summary;
-- test table;
-- user feedback with identities removed;
-- known limitations;
+- original and revised files or links
+- written requirement
+- AI prompt and change summary
+- test table
+- user feedback with identities removed
+- known limitations
 - completed journal entry.
 
 ## Reflection

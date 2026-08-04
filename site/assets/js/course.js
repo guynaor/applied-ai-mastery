@@ -165,8 +165,8 @@ const sessions=[
 const ui={
   en:{
     metaTitle:'Applied AI Mastery — Professional',metaDescription:'Applied AI Mastery Professional — an interactive, project-based AI course built around AquaForge Technologies.',
-    skip:'Skip to course content',brand:'Choose a course',nav:'Primary navigation',language:'Language',courses:'Courses',missions:'Missions',capstone:'Capstone',company:'AquaForge',about:'About',
-    heroEyebrow:'Professional track · Practical, project-based AI learning',heroTitle:'Learn applied AI by helping run an engineering company.',heroText:'Seven guided missions and one integrated capstone teach prompting, research, spreadsheets, communication, planning, automation, and parametric CAD through realistic AquaForge work.',startCourse:'Start the course',openCapstoneBrief:'Open capstone brief',version:'Beta 0.9',versionLabel:'Course version',
+    skip:'Skip to course content',brand:'Choose a course',nav:'Primary navigation',language:'Language',courses:'Courses',missions:'Missions',journal:'Learning Journal',capstone:'Capstone',company:'AquaForge',about:'About',
+    heroEyebrow:'Professional track · Practical, project-based AI learning',heroTitle:'Learn applied AI by helping run an engineering company.',heroText:'Seven guided missions and one integrated capstone teach prompting, research, spreadsheets, communication, planning, automation, and parametric CAD through realistic AquaForge work.',startCourse:'Start the course',openJournal:'Open learning journal',journalInstruction:'Open the template, then choose File -> Make a copy before writing.',openCapstoneBrief:'Open capstone brief',version:'Beta 0.9',versionLabel:'Course version',
     modePanel:'Course viewing mode',chooseView:'Choose your view',viewText:'Student mode keeps the course focused on assignments. Instructor mode also shows teaching scripts, answer keys, and assessment rubrics.',viewMode:'View mode',student:'Student',instructor:'Instructor',
     progression:'Course progression',progressionTitle:'Seven missions, then the capstone',finalMission:'Final mission',capstoneTitle:'AquaNode Mini engineering-validation decision',capstoneText:'Reconcile evidence from every session into one bounded recommendation: proceed, revise, or stop for now. The capstone tests traceability, judgment, verification, and coherent updates across deliverables.',openCapstoneMission:'Open capstone mission',
     capstoneSubmission:'Capstone submission',submissionMemo:'Recommendation and research memo',submissionRegisters:'Evidence and decision registers',submissionDeck:'Workbook and six-slide deck',submissionPlans:'Operations and agent plans',submissionCad:'OpenSCAD source and validation log',submissionReflection:'Reflection on human judgment',
@@ -175,8 +175,8 @@ const ui={
   },
   he:{
     metaTitle:'Applied AI Mastery — המסלול המקצועי',metaDescription:'המסלול המקצועי של Applied AI Mastery — קורס AI יישומי מבוסס פרויקטים בסביבת AquaForge Technologies.',
-    skip:'דילוג לתוכן הקורס',brand:'בחירת קורס',nav:'ניווט ראשי',language:'שפה',courses:'קורסים',missions:'משימות',capstone:'פרויקט מסכם',company:'AquaForge',about:'על המסלול',
-    heroEyebrow:'המסלול המקצועי · לימודי AI מעשיים מבוססי פרויקטים',heroTitle:'לומדים AI יישומי דרך ניהול משימות בחברה הנדסית.',heroText:'שבע משימות מודרכות ופרויקט מסכם אחד מלמדים פרומפטים, מחקר, גיליונות נתונים, תקשורת, תכנון, אוטומציה ותיב"ם פרמטרי דרך עבודה מציאותית ב-AquaForge.',startCourse:'התחלת הקורס',openCapstoneBrief:'פתיחת תקציר הפרויקט המסכם',version:'בטא 0.9',versionLabel:'גרסת הקורס',
+    skip:'דילוג לתוכן הקורס',brand:'בחירת קורס',nav:'ניווט ראשי',language:'שפה',courses:'קורסים',missions:'משימות',journal:'יומן למידה',capstone:'פרויקט מסכם',company:'AquaForge',about:'על המסלול',
+    heroEyebrow:'המסלול המקצועי · לימודי AI מעשיים מבוססי פרויקטים',heroTitle:'לומדים AI יישומי דרך ניהול משימות בחברה הנדסית.',heroText:'שבע משימות מודרכות ופרויקט מסכם אחד מלמדים פרומפטים, מחקר, גיליונות נתונים, תקשורת, תכנון, אוטומציה ותיב"ם פרמטרי דרך עבודה מציאותית ב-AquaForge.',startCourse:'התחלת הקורס',openJournal:'פתיחת יומן הלמידה',journalInstruction:'פתחו את התבנית, ואז בחרו File -> Make a copy לפני הכתיבה.',openCapstoneBrief:'פתיחת תקציר הפרויקט המסכם',version:'בטא 0.9',versionLabel:'גרסת הקורס',
     modePanel:'מצב תצוגת הקורס',chooseView:'בחירת תצוגה',viewText:'מצב תלמיד מציג את המשימות וחומרי העבודה. מצב מנחה מציג גם מערכי שיעור, מפתחות תשובות ומחווני הערכה.',viewMode:'מצב תצוגה',student:'תלמיד',instructor:'מנחה',
     progression:'התקדמות בקורס',progressionTitle:'שבע משימות ולאחריהן הפרויקט המסכם',finalMission:'המשימה האחרונה',capstoneTitle:'החלטת אימות הנדסית עבור AquaNode Mini',capstoneText:'מאחדים ראיות מכל המפגשים להמלצה תחומה אחת: להתקדם, לבצע שינויים או לעצור לעת עתה. הפרויקט בוחן עקיבות, שיקול דעת, אימות ועדכון עקבי בין תוצרים.',openCapstoneMission:'פתיחת משימת הסיום',
     capstoneSubmission:'הגשת הפרויקט המסכם',submissionMemo:'המלצה ומזכר מחקר',submissionRegisters:'מרשמי ראיות והחלטות',submissionDeck:'חוברת עבודה ומצגת בת שישה שקפים',submissionPlans:'תוכניות תפעול וסוכן',submissionCad:'קוד OpenSCAD ויומן אימות',submissionReflection:'רפלקציה על שיקול דעת אנושי',
@@ -198,6 +198,7 @@ const initialLanguage=['en','he'].includes(queryLanguage)?queryLanguage:['en','h
 const state={language:initialLanguage,mode:['student','instructor'].includes(savedMode)?savedMode:'student',completed:readCompleted()};
 const grid=document.querySelector('[data-session-grid]');
 const resourceHref=path=>path.toLowerCase().endsWith('.md')?`document.html?src=${encodeURIComponent(path)}`:path;
+const journalUrls={en:'https://docs.google.com/document/d/102K0ED3qFCT2V0Kkz9XHTvLouQCkNvY1Xr7f8GpsPk0/edit',he:'https://docs.google.com/document/d/1g6RS11QayPUVbyAf-JIXzCKPIvEctz9l0S9_YY7idxk/edit'};
 const resourcePath=item=>item.localized?item.path[state.language]:item.path;
 const linkList=items=>items.map((item,index)=>`<a${index===0?' class="start-link"':''} href="${resourceHref(resourcePath(item))}">${item.label[state.language]}</a>`).join('');
 
@@ -244,6 +245,7 @@ function setLanguage(language,{persist=true,updateUrl=false}={}){
   if(description)description.content=copy.metaDescription;
   const capstonePath=state.language==='he'?'professional-course/he/capstone/student/AF-CAP-001-mission-brief.md':'capstone/student/AF-CAP-001-mission-brief.md';
   document.querySelectorAll('[data-professional-capstone-link]').forEach(link=>{link.href=resourceHref(capstonePath);});
+  document.querySelectorAll('[data-professional-journal-link]').forEach(link=>{link.href=journalUrls[state.language];});
   const overviewPath=state.language==='he'?'professional-course/he/README.md':'README.md';
   document.querySelectorAll('[data-professional-overview-link]').forEach(link=>{link.href=resourceHref(overviewPath);});
   if(persist)localStorage.setItem('aam-professional-language',state.language);

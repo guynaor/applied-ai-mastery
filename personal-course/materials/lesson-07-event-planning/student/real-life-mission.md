@@ -12,13 +12,13 @@ Create a short poll with only the decisions that genuinely need group input. Sum
 
 Prepare:
 
-- confirmed plan and unresolved decisions;
-- invitation or announcement;
-- budget or contribution plan;
-- task board;
-- reminder schedule;
-- shopping or packing list;
-- poster or visual prompt;
+- confirmed plan and unresolved decisions
+- invitation or announcement
+- budget or contribution plan
+- task board
+- reminder schedule
+- shopping or packing list
+- poster or visual prompt
 - cancellation or low-attendance fallback.
 
 ## Gold — Run the event
@@ -27,11 +27,11 @@ Use the plan with real participants. Afterward, collect brief feedback and recor
 
 ## Evidence to submit
 
-- poll and anonymized response summary;
-- task board;
-- invitation and visual;
-- reminders and fallback;
-- outcome or peer feedback if used;
+- poll and anonymized response summary
+- task board
+- invitation and visual
+- reminders and fallback
+- outcome or peer feedback if used
 - completed journal entry.
 
 ## Reflection

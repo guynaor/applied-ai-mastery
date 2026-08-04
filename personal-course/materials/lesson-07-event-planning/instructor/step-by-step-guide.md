@@ -42,9 +42,9 @@ The student asks AI for no more than five questions. Review each question togeth
 
 Reject questions that:
 
-- do not affect a decision;
-- collect unnecessary personal information;
-- combine two decisions into one question;
+- do not affect a decision
+- collect unnecessary personal information
+- combine two decisions into one question
 - offer choices that violate a hard constraint.
 
 Checkpoint: the poll must produce information that can change the plan.
@@ -53,9 +53,9 @@ Checkpoint: the poll must produce information that can change the plan.
 
 Use real or fictional responses. Ask the student to distinguish:
 
-- clear agreement;
-- disagreement;
-- missing response;
+- clear agreement
+- disagreement
+- missing response
 - a decision that still requires human judgment.
 
 Say:
@@ -84,11 +84,11 @@ The student explains the difference between a preference and a constraint, ident
 
 ## Minimum acceptable output
 
-- event brief;
-- short decision poll;
-- response summary without invented consensus;
-- action board with owners, deadlines, and reminders;
-- truthful invitation;
+- event brief
+- short decision poll
+- response summary without invented consensus
+- action board with owners, deadlines, and reminders
+- truthful invitation
 - tested fallback.
 
 ## Interventions

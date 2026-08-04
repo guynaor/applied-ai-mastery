@@ -7,11 +7,11 @@
 
 Examples:
 
-- shelf or monitor riser;
-- bedside organizer;
-- plant stand;
-- cable tray;
-- drawer divider;
+- shelf or monitor riser
+- bedside organizer
+- plant stand
+- cable tray
+- drawer divider
 - small stool or side table concept.
 
 Choose something simple enough to describe with boxes, holes, and repeated dimensions. Do not use this short lesson to design safety-critical furniture, climbing equipment, or anything that could injure someone if it fails.
@@ -26,17 +26,17 @@ Write one sentence:
 
 Record only dimensions that affect fit:
 
-- available width, depth, and height;
-- object dimensions;
-- wall, desk, drawer, or floor contact points;
-- cable or hand clearances;
+- available width, depth, and height
+- object dimensions
+- wall, desk, drawer, or floor contact points
+- cable or hand clearances
 - fastener or material limits, if known.
 
 Label every value as:
 
-- **measured**;
-- **manufacturer specification**;
-- **assumed**;
+- **measured**
+- **manufacturer specification**
+- **assumed**
 - **derived**.
 
 Do not paste a photo of your room into an AI system unless you are comfortable with the privacy implications.
@@ -45,11 +45,11 @@ Do not paste a photo of your room into an AI system unless you are comfortable w
 
 Use the design workbook. Give each important dimension:
 
-- a parameter name;
-- unit;
-- default value;
-- safe or useful range;
-- source;
+- a parameter name
+- unit
+- default value
+- safe or useful range
+- source
 - what geometry depends on it.
 
 ## Step 4 — Ask AI for a simple parametric plan
@@ -70,18 +70,18 @@ Before rendering, predict what should change and what should remain unchanged.
 
 Render and record:
 
-1. default configuration;
-2. changed configuration A;
-3. changed configuration B;
+1. default configuration
+2. changed configuration A
+3. changed configuration B
 4. extreme-but-plausible configuration.
 
 Check:
 
-- geometry remains connected;
-- dimensions stay positive;
-- wall thickness is not obviously too small;
-- objects and clearances still fit;
-- no feature moves unexpectedly;
+- geometry remains connected
+- dimensions stay positive
+- wall thickness is not obviously too small
+- objects and clearances still fit
+- no feature moves unexpectedly
 - the design can plausibly be made with the intended method.
 
 ## Step 7 — Record the boundary
@@ -92,11 +92,11 @@ Write what the digital model does **not** prove. Typical answers include strengt
 
 You are done when you have:
 
-- a real need and measured interfaces;
-- a completed design contract;
-- assumptions clearly labelled;
-- one controlled parameter change;
-- four recorded configurations;
+- a real need and measured interfaces
+- a completed design contract
+- assumptions clearly labelled
+- one controlled parameter change
+- four recorded configurations
 - a physical validation plan.
 
 Reusable rule: **A clean render proves geometry was generated—not that the object is safe, strong, or suitable.**

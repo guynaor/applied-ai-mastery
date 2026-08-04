@@ -43,10 +43,10 @@ The student runs the supplied prompt using only provided information. Require ci
 
 Stop the student if the output includes:
 
-- a price target;
-- a confident forecast;
-- personalized allocation advice;
-- unsupported claims about safety;
+- a price target
+- a confident forecast
+- personalized allocation advice
+- unsupported claims about safety
 - omitted fees or risks.
 
 ## 15–20 minutes — Challenge weak claims
@@ -69,11 +69,11 @@ Ask:
 
 ## Minimum acceptable output
 
-- non-predictive question;
-- source register with dependence noted;
-- balanced brief with citations;
-- three weak claims reviewed;
-- risks and unknowns;
+- non-predictive question
+- source register with dependence noted
+- balanced brief with citations
+- three weak claims reviewed
+- risks and unknowns
 - review trigger.
 
 ## Interventions

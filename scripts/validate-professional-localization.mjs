@@ -113,13 +113,13 @@ for(const entry of manifest.entries){
   }
 }
 
-for(const localeOnly of [`${localeRoot}/README.md`,`${localeRoot}/ai-geography.md`]){
+for(const localeOnly of [`${localeRoot}/README.md`,`${localeRoot}/ai-geography.md`,`${localeRoot}/student/ai-learning-journal.md`]){
   assert.ok(existsSync(absolute(localeOnly)),`missing locale-only document ${localeOnly}`);
 }
 
 const localeFiles=listFiles(localeRoot);
 const markdownFiles=localeFiles.filter(file=>file.endsWith('.md'));
-assert.equal(markdownFiles.length,42,'Hebrew tree must contain 40 mapped documents and 2 locale-only documents');
+assert.equal(markdownFiles.length,43,'Hebrew tree must contain 40 mapped documents and 3 locale-only documents');
 for(const file of markdownFiles){
   for(const link of localLinks(read(file))){
     const resolved=path.resolve(path.dirname(absolute(file)),decodeURIComponent(link));
@@ -135,4 +135,4 @@ for(const file of localeFiles){
 if(numericReview.length){
   console.warn(`Numeric parity requires human review: ${numericReview.join(', ')}`);
 }
-console.log('Professional Hebrew localization valid: 40 mapped documents, 42 Hebrew Markdown files');
+console.log('Professional Hebrew localization valid: 40 mapped documents, 43 Hebrew Markdown files');

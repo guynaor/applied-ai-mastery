@@ -14,11 +14,11 @@ Create one support image, title card, background, transition concept, or caption
 
 Complete checks for:
 
-- consent;
-- privacy and location exposure;
-- copyright or licence;
-- factual captions;
-- accessibility, including readable text and useful alt text or subtitles;
+- consent
+- privacy and location exposure
+- copyright or licence
+- factual captions
+- accessibility, including readable text and useful alt text or subtitles
 - export quality and format.
 
 ## Gold — Share and revise
@@ -27,11 +27,11 @@ Show the draft to one intended viewer. Ask what was clear, confusing, too long, 
 
 ## Evidence to submit
 
-- storyboard;
-- prompt for the generated support asset;
-- source and permission notes;
-- final export or private link;
-- before/after revision note;
+- storyboard
+- prompt for the generated support asset
+- source and permission notes
+- final export or private link
+- before/after revision note
 - completed journal entry.
 
 ## Reflection

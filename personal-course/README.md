@@ -26,12 +26,12 @@ Each lesson must be independently useful while also building toward a personal c
 
 Digital life management is woven through the course rather than isolated in one lesson. Students repeatedly practice how to:
 
-- turn messages, notes, and documents into actions;
-- organize files, links, decisions, and follow-up dates;
-- create reusable checklists and templates;
-- manage calendars, reminders, and recurring tasks;
-- decide what should be automated and what still needs human review;
-- protect private, financial, identity, health, and account information;
+- turn messages, notes, and documents into actions
+- organize files, links, decisions, and follow-up dates
+- create reusable checklists and templates
+- manage calendars, reminders, and recurring tasks
+- decide what should be automated and what still needs human review
+- protect private, financial, identity, health, and account information
 - preserve useful project evidence for a later portfolio and CV.
 
 ## Revised syllabus
@@ -56,45 +56,45 @@ Digital life management is woven through the course rather than isolated in one 
 
 The final lesson uses the work created throughout the course as evidence of skills. Students can select and present artifacts such as:
 
-- a decision matrix;
-- a product comparison;
-- a travel plan;
-- an event plan and invitation;
-- a research brief;
-- a mini app;
-- a CAD design;
-- an image or video story;
+- a decision matrix
+- a product comparison
+- a travel plan
+- an event plan and invitation
+- a research brief
+- a mini app
+- a CAD design
+- an image or video story
 - examples of safe automation and digital organization.
 
 The lesson should help students turn genuine work into:
 
-- a truthful CV;
-- a stronger LinkedIn profile;
-- a small GitHub or portfolio collection;
-- tailored application messages;
+- a truthful CV
+- a stronger LinkedIn profile
+- a small GitHub or portfolio collection
+- tailored application messages
 - interview examples using concrete projects and decisions.
 
 ## Suggested personal capstone
 
 The student chooses one real project, such as:
 
-- planning a trip with friends;
-- organizing a graduation party;
-- preparing for a job-application cycle;
-- researching and purchasing an expensive product;
-- designing a small room or furniture improvement;
-- building a simple poll or coordination app;
+- planning a trip with friends
+- organizing a graduation party
+- preparing for a job-application cycle
+- researching and purchasing an expensive product
+- designing a small room or furniture improvement
+- building a simple poll or coordination app
 - creating a personal digital organization workflow.
 
 The capstone should include:
 
-- a clear goal and constraints;
-- a prompt or workflow plan;
-- at least two compared options or outputs;
-- evidence and assumptions;
-- one created artifact;
-- an organized set of files, tasks, reminders, or follow-up dates;
-- a verification checklist;
+- a clear goal and constraints
+- a prompt or workflow plan
+- at least two compared options or outputs
+- evidence and assumptions
+- one created artifact
+- an organized set of files, tasks, reminders, or follow-up dates
+- a verification checklist
 - a short reflection on what AI helped with and what still required human judgment.
 
 ## Safety and judgment boundaries

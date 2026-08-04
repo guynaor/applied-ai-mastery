@@ -55,11 +55,11 @@ Run the five required tests. Record expected and actual behavior.
 
 If a test fails, use this sequence:
 
-1. reproduce the failure;
-2. identify the smallest failing behavior;
-3. copy the exact error or observation;
-4. ask AI for a targeted diagnosis;
-5. change one thing;
+1. reproduce the failure
+2. identify the smallest failing behavior
+3. copy the exact error or observation
+4. ask AI for a targeted diagnosis
+5. change one thing
 6. rerun all tests.
 
 ## 24–27 minutes — Sharing boundary
@@ -74,11 +74,11 @@ Require organized source files, prompt, test log, limitation note, and screensho
 
 ## Minimum acceptable output
 
-- bounded requirements and non-goal;
-- functioning starter app;
-- one controlled feature change;
-- expected-versus-actual test log;
-- honest storage/sharing explanation;
+- bounded requirements and non-goal
+- functioning starter app
+- one controlled feature change
+- expected-versus-actual test log
+- honest storage/sharing explanation
 - organized project evidence.
 
 ## Interventions

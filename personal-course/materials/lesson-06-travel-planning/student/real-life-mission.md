@@ -12,7 +12,7 @@ Record hard constraints, preferences, budget, opening windows, travel origins, t
 
 Test both:
 
-1. arrival is delayed by 90 minutes;
+1. arrival is delayed by 90 minutes
 2. one planned activity becomes unavailable.
 
 Update the itinerary, then create calendar entries, a shared-note structure, booking owners, and staged recheck dates.
@@ -23,11 +23,11 @@ Follow part of the itinerary or ask another person to audit it for hidden travel
 
 ## Evidence to submit
 
-- constraint register;
-- timed itinerary and budget;
-- source links and verification dates;
-- results of both disruption tests;
-- fallback plan and recheck schedule;
+- constraint register
+- timed itinerary and budget
+- source links and verification dates
+- results of both disruption tests
+- fallback plan and recheck schedule
 - completed journal entry.
 
 ## Reflection
