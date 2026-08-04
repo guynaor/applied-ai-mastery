@@ -198,7 +198,7 @@ const initialLanguage=['en','he'].includes(queryLanguage)?queryLanguage:['en','h
 const state={language:initialLanguage,mode:['student','instructor'].includes(savedMode)?savedMode:'student',completed:readCompleted()};
 const grid=document.querySelector('[data-session-grid]');
 const resourceHref=path=>path.toLowerCase().endsWith('.md')?`document.html?src=${encodeURIComponent(path)}`:path;
-const journalUrls={en:'https://docs.google.com/document/d/1jCA_128e9MWrn-ULXzFEcGf2HQ9CCKsiLUuJ0hfdYzQ/edit',he:'https://docs.google.com/document/d/1iPmulu1pq0U3N6QYcTdWFOfEd9w_AikfnQNn2B8IFSk/edit'};
+const journalUrls={en:'https://docs.google.com/document/d/102K0ED3qFCT2V0Kkz9XHTvLouQCkNvY1Xr7f8GpsPk0/edit',he:'https://docs.google.com/document/d/1g6RS11QayPUVbyAf-JIXzCKPIvEctz9l0S9_YY7idxk/edit'};
 const resourcePath=item=>item.localized?item.path[state.language]:item.path;
 const linkList=items=>items.map((item,index)=>`<a${index===0?' class="start-link"':''} href="${resourceHref(resourcePath(item))}">${item.label[state.language]}</a>`).join('');
 

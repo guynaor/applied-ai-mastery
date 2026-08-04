@@ -22,7 +22,7 @@ const readJson=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key)|
 const state={language:localStorage.getItem('aam-personal-language')||'en',mode:localStorage.getItem('aam-personal-mode')||'student',completed:new Set(readJson('aam-personal-completed',[])),missions:readJson('aam-personal-missions',{}),journals:new Set(readJson('aam-personal-journals',[]))};
 const grid=document.querySelector('[data-personal-lesson-grid]');
 const resourceHref=path=>path.toLowerCase().endsWith('.md')?`document.html?src=${encodeURIComponent(path)}`:path;
-const journalUrls={en:'https://docs.google.com/document/d/1UceZDI2bb8yrXONp5cMjf8-oFOKuIZpD2rlymuq-8aM/edit',he:'https://docs.google.com/document/d/1opR4a6uGRh8jaKJU4AK9PKIaB3lHDK57AJiLuPqFRdk/edit'};
+const journalUrls={en:'https://docs.google.com/document/d/1IHBKI8awtoKUCrxSvxyLP9rD0VwqvV4AJ3OqdZhXTuc/edit',he:'https://docs.google.com/document/d/1dhFjUdFiVm1FGhYmxcpLGz3DG4MyfG_whxJkmjbBDXA/edit'};
 const missionXp={bronze:30,silver:50,gold:80};
 const saveCompleted=()=>localStorage.setItem('aam-personal-completed',JSON.stringify([...state.completed]));
 const saveMissions=()=>localStorage.setItem('aam-personal-missions',JSON.stringify(state.missions));

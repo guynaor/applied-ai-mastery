@@ -8,10 +8,10 @@ const professionalHtml=read('professional.html');
 const professionalJs=read('site/assets/js/course.js');
 
 const urls={
-  personalEn:'https://docs.google.com/document/d/1UceZDI2bb8yrXONp5cMjf8-oFOKuIZpD2rlymuq-8aM/edit',
-  personalHe:'https://docs.google.com/document/d/1opR4a6uGRh8jaKJU4AK9PKIaB3lHDK57AJiLuPqFRdk/edit',
-  professionalEn:'https://docs.google.com/document/d/1jCA_128e9MWrn-ULXzFEcGf2HQ9CCKsiLUuJ0hfdYzQ/edit',
-  professionalHe:'https://docs.google.com/document/d/1iPmulu1pq0U3N6QYcTdWFOfEd9w_AikfnQNn2B8IFSk/edit',
+  personalEn:'https://docs.google.com/document/d/1IHBKI8awtoKUCrxSvxyLP9rD0VwqvV4AJ3OqdZhXTuc/edit',
+  personalHe:'https://docs.google.com/document/d/1dhFjUdFiVm1FGhYmxcpLGz3DG4MyfG_whxJkmjbBDXA/edit',
+  professionalEn:'https://docs.google.com/document/d/102K0ED3qFCT2V0Kkz9XHTvLouQCkNvY1Xr7f8GpsPk0/edit',
+  professionalHe:'https://docs.google.com/document/d/1g6RS11QayPUVbyAf-JIXzCKPIvEctz9l0S9_YY7idxk/edit',
 };
 
 assert.match(personalHtml,new RegExp(urls.personalEn));
