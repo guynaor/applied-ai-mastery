@@ -1,82 +1,626 @@
+<!-- journal-tab: {"id":"journal-home","title":"My AI Learning Journal"} -->
 # My AI Learning Journal
 
-Use this journal throughout all 12 lessons. Keep your entries together so your best prompts, mistakes, checks, and projects become a record of how you work with AI.
+Use this workbook throughout all 12 lessons. Each lesson has its own tab, so your strongest prompts, decisions, checks, and projects stay easy to find.
 
 ## Before you write
 
-- Make your own copy of this template before adding entries
-- Remove private or sensitive information from prompts and evidence
-- Record what actually happened, not what you think an instructor wants to hear
-- Keep important decisions under human judgment and approval
-- Submit only the entries or extracts agreed with your instructor
+1. Choose **File -> Make a copy** and work only in your own copy
+2. Remove private or sensitive information from prompts and evidence
+3. Record what actually happened, including weak or failed AI output
+4. Keep important decisions under human judgment and approval
+5. Share only the tabs or extracts agreed with your instructor
 
-## Entry template
+## A simple weekly rhythm
 
-Create one dated entry after every lesson and Real Life Mission.
+- Complete the lesson workbook tab
+- Save one prompt, workflow, or artifact worth reusing
+- Perform the listed verification before relying on the result
+- Record the evidence you saved
+- Add a short reflection and one change for next time
 
-### Lesson and date
+## Verification and evidence
 
-- Lesson:
-- Date:
-- Real-life task:
+Use sources, calculations, comparisons, tests, or trusted people to verify important results. Save links, file names, redacted screenshots, and corrected outputs as evidence.
 
-### This week's biggest AI win
+## Reflection and human judgment
 
-What became easier, clearer, faster, or more creative?
+Where did your own context, values, consent, or approval matter more than the AI output?
 
-### Prompt worth saving
+## What I will change next time
 
-Copy the exact prompt. Remove private or sensitive information first.
+Write one practical habit you want to improve before the next lesson.
 
-### What made the prompt work?
+<!-- journal-tab: {"id":"entry-template","title":"Entry Template"} -->
+# Entry Template
 
-Record the useful context, constraints, examples, requested format, or verification instruction.
+Duplicate this structure when you need an extra entry outside a lesson workbook.
 
-### This week's most useful AI mistake
+## Lesson and purpose
 
-What was wrong, unsupported, misleading, incomplete, or badly framed?
+| Field | Your notes |
+| --- | --- |
+| Lesson and date | |
+| Real-life task | |
+| Intended result | |
+| Important constraints | |
 
-### How I checked it
+## Useful result and reusable prompt
 
-Record the source, calculation, comparison, test, or person you used for verification.
+**What became easier, clearer, faster, or more creative?**
 
-### Something I learned about myself
+**Exact prompt or workflow worth saving:**
 
-What preference, assumption, habit, strength, or blind spot did the exercise reveal?
+**Context, constraints, examples, or requested format that made it work:**
 
-### What I would do differently next time
+## Failure or uncertainty
 
-Name one concrete change.
+What was wrong, unsupported, incomplete, misleading, or badly framed?
 
-### One future use or automation idea
+## Verification and evidence
 
-What repeated task could benefit from this skill? What must remain under human control?
+How did you verify the result? List the source, calculation, comparison, test, or person and the evidence you saved.
 
-### Evidence saved
+## Reflection and human judgment
 
-List file names, links, redacted screenshots, prompts, or outputs included in your submission.
+What did you decide yourself? What preference, assumption, strength, or blind spot did the work reveal?
 
-## Prompt library
+## What I will change next time
 
-Keep a separate section containing only prompts you would genuinely reuse. For each prompt, add:
+Name one concrete change and one future use that must remain under human control.
 
-- purpose
-- exact prompt
-- when not to use it
-- what must be verified
-- private information that must be removed
-- date last improved
+<!-- journal-tab: {"id":"prompt-library","title":"Prompt Library"} -->
+# Prompt Library
 
-## End-of-course reflection
+Keep only prompts and workflows you would genuinely reuse. Remove private or sensitive information first.
 
-After Lesson 12, review the full journal and answer:
+## Reusable prompt record
+
+| Field | Your notes |
+| --- | --- |
+| Name and purpose | |
+| Exact prompt or workflow | |
+| Useful context | |
+| Constraints and output format | |
+| When not to use it | |
+| Date last improved | |
+
+## Verification and evidence
+
+What must be verified every time? Save one example of a checked result as evidence.
+
+## Reflection and human judgment
+
+Which parts require consent, personal judgment, or approval rather than automation?
+
+## What I will change next time
+
+Record the next revision you want to test and why.
+
+<!-- journal-tab: {"id":"course-reflection","title":"End-of-Course Reflection"} -->
+# End-of-Course Reflection
+
+Review your lesson tabs before answering. Use specific examples rather than general impressions.
+
+## Growth and strongest work
 
 1. Which three AI abilities improved most?
-2. Which mistake pattern appeared repeatedly?
-3. Which verification method became a habit?
-4. Which artifact best demonstrates your ability?
-5. Where did human judgment matter most?
-6. What will you continue using after the course?
-7. What personal information should never be placed into an AI system?
+2. Which artifact best demonstrates your ability?
+3. Which prompt or workflow will you keep using?
 
-Your journal is private by default. Share only the parts required for feedback or assessment.
+## Mistakes and responsibility
+
+1. Which mistake pattern appeared repeatedly?
+2. Where did human judgment matter most?
+3. What personal information should never be placed into an AI system?
+
+## Verification and evidence
+
+Which verification method became a habit? Link or name the strongest saved evidence from the course.
+
+## Reflection and human judgment
+
+How has your view of useful, responsible AI work changed?
+
+## What I will change next time
+
+Choose one next project, one skill to deepen, and one responsible-use boundary to keep.
+
+<!-- journal-tab: {"id":"lesson-01","title":"Lesson 1: Better Requests"} -->
+# Lesson 1: Better Requests
+
+Turn one vague real-life request into a clear, testable prompt.
+
+## My request and context
+
+| Field | Your notes |
+| --- | --- |
+| Original request | |
+| Who the result is for | |
+| Relevant context | |
+| Constraints | |
+| Required output format | |
+
+## Prompt iterations
+
+| Version | What changed | What improved or failed |
+| --- | --- | --- |
+| 1 | | |
+| 2 | | |
+| Final | | |
+
+## Final prompt worth saving
+
+Paste the exact prompt after removing private information.
+
+## Verification and evidence
+
+What did you check in the final answer? Save the final prompt and one checked result as evidence.
+
+## Reflection and human judgment
+
+Which missing context required your judgment rather than the model's guess?
+
+## What I will change next time
+
+What will you add earlier in your next request?
+
+<!-- journal-tab: {"id":"lesson-02","title":"Lesson 2: Summary Verification"} -->
+# Lesson 2: Summary Verification Workbook
+
+Summarize a source without losing the information needed for its purpose.
+
+## My source and purpose
+
+| Field | Your notes |
+| --- | --- |
+| Source | |
+| Intended reader | |
+| Decision or action supported | |
+
+## Structured summary
+
+**Key points:**
+
+**Decisions or conclusions:**
+
+**Actions, owners, and deadlines:**
+
+**Unresolved questions:**
+
+**Claims or dates to verify:**
+
+## Missing-information check
+
+What important detail is absent from the source? What must not be invented?
+
+## Verification and evidence
+
+Compare every important claim with the source. Save the source, prompt, corrected summary, and verification notes as evidence.
+
+## Reflection and human judgment
+
+What did you choose to include or omit because of the summary's purpose?
+
+## What I will change next time
+
+How will you make the requested summary structure clearer?
+
+<!-- journal-tab: {"id":"lesson-03","title":"Lesson 3: Decision Workbook"} -->
+# Lesson 3: Decision Workbook
+
+Compare meaningful options with explicit criteria, evidence, and assumptions.
+
+## Decision and constraints
+
+| Field | Your notes |
+| --- | --- |
+| Decision | |
+| Must-have constraints | |
+| Nice-to-have preferences | |
+| Review date | |
+
+## Options and criteria
+
+| Option | Criterion and weight | Evidence | Score | Confidence |
+| --- | --- | --- | --- | --- |
+| | | | | |
+| | | | | |
+| | | | | |
+
+## Assumptions and sensitivity
+
+Which assumption could change the result? What happens if the most important weight changes?
+
+## Decision record
+
+**Current choice:**
+
+**Reason:**
+
+**What would make me reconsider:**
+
+## Verification and evidence
+
+Verify important facts and calculations. Save the matrix, source links, and decision record as evidence.
+
+## Reflection and human judgment
+
+Which preference or tradeoff could not be decided by AI alone?
+
+## What I will change next time
+
+Which criterion or evidence source needs improvement?
+
+<!-- journal-tab: {"id":"lesson-04","title":"Lesson 4: Smart Online Buying"} -->
+# Lesson 4: Smart Online Buying
+
+Compare products using total cost, seller quality, return terms, and trustworthy evidence.
+
+## Need and constraints
+
+| Field | Your notes |
+| --- | --- |
+| What I need | |
+| Budget | |
+| Must-have features | |
+| Delivery deadline | |
+
+## Product comparison
+
+| Product and seller | Item price | Shipping and taxes | Warranty and returns | Evidence quality |
+| --- | --- | --- | --- | --- |
+| | | | | |
+| | | | | |
+| | | | | |
+
+## Misleading or uncertain claims
+
+Which marketing claims need independent confirmation?
+
+## Current decision
+
+What would you buy, wait for, or reject, and why?
+
+## Verification and evidence
+
+Verify current prices, seller identity, return rules, and compatibility. Save dated links or screenshots as evidence.
+
+## Reflection and human judgment
+
+Which risk or preference mattered more than the lowest price?
+
+## What I will change next time
+
+What will you check before asking AI to compare products?
+
+<!-- journal-tab: {"id":"lesson-05","title":"Lesson 5: Personal Alert Specification"} -->
+# Lesson 5: Personal Alert Specification
+
+Specify a useful alert that can be reviewed, paused, and stopped.
+
+## Alert goal
+
+| Field | Your notes |
+| --- | --- |
+| Item or event monitored | |
+| Source or sources | |
+| Trigger | |
+| Threshold | |
+| Notification channel | |
+
+## Control rules
+
+**Duplicate-suppression rule:**
+
+**Pause and stop rule:**
+
+**Failure or unavailable-source behavior:**
+
+**Human approval required before:**
+
+## Test cases
+
+| Scenario | Expected behavior | Actual result |
+| --- | --- | --- |
+| Trigger met | | |
+| Duplicate result | | |
+| Source unavailable | | |
+
+## Verification and evidence
+
+Verify the source, threshold, and stop control. Save the specification and test results as evidence.
+
+## Reflection and human judgment
+
+Which action must never happen automatically?
+
+## What I will change next time
+
+Which rule needs to be more precise?
+
+<!-- journal-tab: {"id":"lesson-06","title":"Lesson 6: Trip Planning"} -->
+# Lesson 6: Trip Planning Workbook
+
+Build a feasible trip with constraints, travel time, buffers, fallbacks, and timed rechecks.
+
+## Trip contract
+
+| Field | Your notes |
+| --- | --- |
+| Travelers and dates | |
+| Budget | |
+| Fixed bookings | |
+| Mobility or dietary needs | |
+| Priorities | |
+
+## Itinerary
+
+| Date and time | Activity | Travel time | Cost | Buffer | Booking status |
+| --- | --- | --- | --- | --- | --- |
+| | | | | | |
+| | | | | | |
+
+## Fallback plan
+
+What changes if weather, transport, price, or availability changes?
+
+## Timed rechecks
+
+| Information to recheck | When | Source | Owner |
+| --- | --- | --- | --- |
+| | | | |
+
+## Verification and evidence
+
+Verify travel times, opening hours, prices, and bookings close to departure. Save confirmations and dated evidence.
+
+## Reflection and human judgment
+
+Which comfort, accessibility, or risk tradeoff required a personal decision?
+
+## What I will change next time
+
+Where does the plan need more buffer or a better fallback?
+
+<!-- journal-tab: {"id":"lesson-07","title":"Lesson 7: Event Planning"} -->
+# Lesson 7: Event Planning Workbook
+
+Coordinate preferences, ownership, deadlines, budget, invitations, and reminders.
+
+## Event goal and preferences
+
+| Field | Your notes |
+| --- | --- |
+| Event and purpose | |
+| Date options | |
+| Budget | |
+| Accessibility or dietary needs | |
+| Poll result | |
+
+## Ownership plan
+
+| Task | Owner | Deadline | Status | Dependency |
+| --- | --- | --- | --- | --- |
+| | | | | |
+| | | | | |
+
+## Communication
+
+**Invitation draft:**
+
+**Reminder schedule:**
+
+**Fallback if attendance or weather changes:**
+
+## Verification and evidence
+
+Verify the final date, costs, consent for shared details, and task ownership. Save the poll, plan, and approved invitation as evidence.
+
+## Reflection and human judgment
+
+Which preference conflict required a human conversation?
+
+## What I will change next time
+
+Which responsibility or deadline will you clarify earlier?
+
+<!-- journal-tab: {"id":"lesson-08","title":"Lesson 8: Responsible Investment Research"} -->
+# Lesson 8: Responsible Investment Research
+
+Create a balanced research brief without pretending to predict returns or provide personal advice.
+
+## Research question and boundary
+
+| Field | Your notes |
+| --- | --- |
+| Research question | |
+| Time horizon | |
+| Information date | |
+| What this research cannot decide | |
+
+## Evidence for and against
+
+| Claim | Supporting source | Opposing source | Uncertainty |
+| --- | --- | --- | --- |
+| | | | |
+| | | | |
+
+## Risk and uncertainty
+
+Which risks, missing facts, or incentives could change the conclusion?
+
+## Balanced conclusion
+
+Summarize what the evidence supports, disputes, and cannot establish.
+
+## Verification and evidence
+
+Verify dates, source identity, quoted figures, and conflicts of interest. Save the source list and balanced brief as evidence.
+
+## Reflection and human judgment
+
+Which financial decision belongs with the individual and a qualified professional rather than AI?
+
+## What I will change next time
+
+Which opposing source or uncertainty will you seek earlier?
+
+<!-- journal-tab: {"id":"lesson-09","title":"Lesson 9: Mini App Build Log"} -->
+# Lesson 9: Mini App Build Log
+
+Build and test a small tool for one recurring real-life need.
+
+## User need and requirements
+
+| Field | Your notes |
+| --- | --- |
+| User and problem | |
+| Required behavior | |
+| Inputs and outputs | |
+| Privacy boundary | |
+| Out of scope | |
+
+## Build log
+
+| Change | Expected result | Test | Actual result |
+| --- | --- | --- | --- |
+| | | | |
+| | | | |
+
+## Defects and fixes
+
+What failed? What caused it? What changed?
+
+## Maintenance note
+
+What would a future editor need to know?
+
+## Verification and evidence
+
+Test the main path, an empty input, an invalid input, and one mobile-sized view. Save the code, test log, and screenshots as evidence.
+
+## Reflection and human judgment
+
+Which requirement or tradeoff did you choose rather than delegate to AI?
+
+## What I will change next time
+
+Which test or requirement will you define before building?
+
+<!-- journal-tab: {"id":"lesson-10","title":"Lesson 10: Room and CAD Design"} -->
+# Lesson 10: Room and CAD Design
+
+Turn measurements and needs into a parametric concept with explicit validation boundaries.
+
+## Design contract
+
+| Field | Your notes |
+| --- | --- |
+| Object and purpose | |
+| Room measurements | |
+| Material or tool limits | |
+| Safety boundary | |
+| Success criteria | |
+
+## Parameters and versions
+
+| Version | Parameters changed | Expected effect | Result |
+| --- | --- | --- | --- |
+| 1 | | | |
+| 2 | | | |
+
+## Validation boundary
+
+What can the model or render show? What still requires physical measurement, engineering review, or a test build?
+
+## Verification and evidence
+
+Verify units, dimensions, fit, generated geometry, and exported files. Save source code, renders, measurements, and validation notes as evidence.
+
+## Reflection and human judgment
+
+Which design or safety decision could not be validated by appearance alone?
+
+## What I will change next time
+
+Which parameter or measurement will you test first?
+
+<!-- journal-tab: {"id":"lesson-11","title":"Lesson 11: Visual Story Plan"} -->
+# Lesson 11: Visual Story Plan
+
+Create a responsible visual story with clear sources, consent, captions, and authenticity choices.
+
+## Audience and message
+
+| Field | Your notes |
+| --- | --- |
+| Audience | |
+| Main message | |
+| Source media | |
+| Consent status | |
+| Authenticity disclosure | |
+
+## Storyboard
+
+| Scene | Visual | Caption or narration | Source or generation prompt |
+| --- | --- | --- | --- |
+| 1 | | | |
+| 2 | | | |
+| 3 | | | |
+
+## Export plan
+
+File names, aspect ratio, captions, credits, and destination:
+
+## Verification and evidence
+
+Verify consent, names, dates, captions, and whether generated media is labeled appropriately. Save the storyboard, permissions, prompts, and final export as evidence.
+
+## Reflection and human judgment
+
+Which emotional or authenticity choice required your judgment?
+
+## What I will change next time
+
+Which source, permission, or storyboard decision will you resolve earlier?
+
+<!-- journal-tab: {"id":"lesson-12","title":"Lesson 12: Personal Brand Portfolio"} -->
+# Lesson 12: Personal Brand Portfolio
+
+Turn genuine experience and course work into truthful, audience-specific application materials.
+
+## Evidence inventory
+
+| Experience or project | What I actually did | Evidence | Skill demonstrated |
+| --- | --- | --- | --- |
+| | | | |
+| | | | |
+
+## Audience and claims
+
+| Field | Your notes |
+| --- | --- |
+| Target role or audience | |
+| Three relevant strengths | |
+| Claims that need evidence | |
+| Information to keep private | |
+
+## Application package
+
+- [ ] CV revised for the audience
+- [ ] Profile summary remains truthful
+- [ ] Portfolio includes selected evidence
+- [ ] Application is logged with date and status
+
+## Verification and evidence
+
+Verify dates, role names, metrics, links, spelling, and every factual claim. Save the final documents and source evidence.
+
+## Reflection and human judgment
+
+Which experiences best represent you, and which AI suggestion did you reject because it was inaccurate or inauthentic?
+
+## What I will change next time
+
+Which project, result, or example will you strengthen next?
