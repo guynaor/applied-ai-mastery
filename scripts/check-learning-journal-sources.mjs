@@ -66,7 +66,7 @@ for(const tabs of Object.values(parsed)){
 }
 
 assert.throws(()=>parseJournalTabs('plain markdown'),/no journal-tab markers/);
-assert.throws(()=>parseJournalTabs('<!-- journal-tab: nope -->'),/Invalid journal-tab metadata/);
+assert.throws(()=>parseJournalTabs('<!-- journal-tab: {nope} -->'),/Invalid journal-tab metadata/);
 const extracted=parseJournalTabs('<!-- journal-tab: {"id":"one","title":"One"} -->\n# One\n\nVerify evidence and reflect next time.');
 assert.equal(extracted[0].id,'one');
 assert.match(extracted[0].markdown,/^# One/);
