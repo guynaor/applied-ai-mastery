@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import {existsSync,readFileSync} from 'node:fs';
+import {parseJournalTabs} from './lib/journal-tabs.mjs';
 
 const paths={
  personalEn:'personal-course/student/ai-learning-journal.md',
@@ -33,5 +34,41 @@ for(let mission=1;mission<=7;mission+=1){
 }
 assert.match(professionalEn,/Capstone/);
 assert.match(professionalHe,/פרויקט מסכם/);
+
+const expected={
+ personal:[
+  'journal-home','entry-template','prompt-library','course-reflection',
+  'lesson-01','lesson-02','lesson-03','lesson-04','lesson-05','lesson-06',
+  'lesson-07','lesson-08','lesson-09','lesson-10','lesson-11','lesson-12',
+ ],
+ professional:[
+  'journal-home','entry-template','workflow-library','course-reflection',
+  'mission-01','mission-02','mission-03','mission-04','mission-05','mission-06',
+  'mission-07','capstone',
+ ],
+};
+
+const journals={personalEn,personalHe,professionalEn,professionalHe};
+const parsed=Object.fromEntries(Object.entries(journals).map(([key,source])=>[key,parseJournalTabs(source)]));
+assert.deepEqual(parsed.personalEn.map(tab=>tab.id),expected.personal);
+assert.deepEqual(parsed.personalHe.map(tab=>tab.id),expected.personal);
+assert.deepEqual(parsed.professionalEn.map(tab=>tab.id),expected.professional);
+assert.deepEqual(parsed.professionalHe.map(tab=>tab.id),expected.professional);
+
+for(const tabs of Object.values(parsed)){
+ for(const tab of tabs){
+  assert.match(tab.title,/\S/);
+  assert.match(tab.markdown,/^# /m);
+  assert.match(tab.markdown,/verification|verify|אימות|בדיקה/i);
+  assert.match(tab.markdown,/evidence|saved|ראיות|שמר/i);
+  assert.match(tab.markdown,/reflection|next time|רפלקציה|בפעם הבאה/i);
+ }
+}
+
+assert.throws(()=>parseJournalTabs('plain markdown'),/no journal-tab markers/);
+assert.throws(()=>parseJournalTabs('<!-- journal-tab: nope -->'),/Invalid journal-tab metadata/);
+const extracted=parseJournalTabs('<!-- journal-tab: {"id":"one","title":"One"} -->\n# One\n\nVerify evidence and reflect next time.');
+assert.equal(extracted[0].id,'one');
+assert.match(extracted[0].markdown,/^# One/);
 
 console.log('Learning journal source contract passed');
