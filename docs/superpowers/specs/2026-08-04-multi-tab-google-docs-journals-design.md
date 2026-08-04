@@ -10,7 +10,7 @@ Replace the four single-tab Google Docs journal templates with polished, multi-t
 - Create distinct English and Hebrew workbooks for the personal and professional courses.
 - Use course-specific workbook prompts rather than repeating one generic journal entry on every tab.
 - Keep the repository Markdown as the canonical content source. Google Docs are the published template representation.
-- Leave the existing four Google Docs untouched. Update the site to point to the new document URLs.
+- Update the site to point to the new document URLs, then move the existing four Google Docs to Drive Trash after the replacements pass verification.
 - Share every new document as `Anyone with the link` with `Viewer` permission.
 - Continue instructing students to choose `File -> Make a copy` before writing.
 
@@ -86,7 +86,8 @@ Every lesson or mission tab adapts the corresponding course workbook and activit
 6. Paste the matching canonical content into each tab and set Hebrew direction where required.
 7. Configure each document as `Anyone with the link -> Viewer`.
 8. Update the personal and professional course URL maps with the four new document URLs.
-9. Keep the superseded documents unchanged.
+9. Verify the replacement documents, sharing settings, and site mappings end to end.
+10. Move the four superseded Google Docs to Drive Trash only after the replacement verification succeeds.
 
 Browser automation must verify each tab immediately after creation. If a paste, rename, or tab operation fails, retry only the affected tab rather than recreating the document.
 
@@ -100,11 +101,11 @@ Browser automation must verify each tab immediately after creation. If a paste, 
 - Sharing inspection confirms `Anyone with the link` and `Viewer` for all four documents.
 - Personal and professional course pages select the correct document after English and Hebrew language switches.
 - All journal links open safely in a new tab and display the copy instruction.
+- The four superseded document URLs no longer provide the old templates after those documents are moved to Drive Trash.
 
 ## Non-Goals
 
 - Do not implement authentication or a backend.
 - Do not add student data storage to the static site.
-- Do not delete the superseded Google Docs.
 - Do not expose instructor answer keys in the journals.
 - Do not automate Google Docs creation through a new API integration; the authenticated browser workflow is sufficient for this one-time migration.
