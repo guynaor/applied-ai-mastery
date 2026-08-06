@@ -36,6 +36,18 @@ const sessionBlock=(number,nextNumber)=>{
   return match[0];
 };
 
+const missionTwo=sessionBlock(2,3);
+for(const {path,enLabel,heLabel} of [
+  {path:'teacher-course/materials/session-02-research/sources/EDU-SRC-201-district-guidance.md',enLabel:'Source 1 — District guidance',heLabel:'מקור 1 — הנחיית מחוז (חומר עבודה באנגלית)'},
+  {path:'teacher-course/materials/session-02-research/sources/EDU-SRC-202-vendor-claim.md',enLabel:'Source 2 — Vendor claim',heLabel:'מקור 2 — טענת ספק (חומר עבודה באנגלית)'},
+  {path:'teacher-course/materials/session-02-research/sources/EDU-SRC-203-classroom-observation.md',enLabel:'Source 3 — Classroom observation',heLabel:'מקור 3 — תצפית כיתתית (חומר עבודה באנגלית)'},
+  {path:'teacher-course/materials/session-02-research/sources/EDU-SRC-204-research-summary.md',enLabel:'Source 4 — Research summary',heLabel:'מקור 4 — סיכום מחקר (חומר עבודה באנגלית)'}
+]){
+  assert.ok(missionTwo.includes(path),`Mission 2 must link research source: ${path}`);
+  assert.ok(missionTwo.includes(enLabel),`Mission 2 must label research source in English: ${enLabel}`);
+  assert.ok(missionTwo.includes(heLabel),`Mission 2 must label canonical-English research source in Hebrew: ${heLabel}`);
+}
+
 const missionSix=sessionBlock(6,7);
 assert.match(missionSix,/\b(?:no|without|exclude(?:s|d|ing)?|never)\s+(?:real\s+)?student data\b/i,'Mission 6 must exclude student data');
 assert.match(missionSix,/teacher approval/i,'Mission 6 must require teacher approval');
