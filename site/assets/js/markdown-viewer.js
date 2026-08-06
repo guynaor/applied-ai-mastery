@@ -1,8 +1,8 @@
 const params=new URLSearchParams(location.search);
 const source=params.get('src')||'';
 const requestedContext=params.get('context');
-const inferredContext=source.startsWith('personal-course/')?'personal':'professional';
-const documentContext=['personal','professional'].includes(requestedContext)?requestedContext:inferredContext;
+const inferredContext=source.startsWith('personal-course/')?'personal':source.startsWith('teacher-course/')?'teacher':'professional';
+const documentContext=['personal','professional','teacher'].includes(requestedContext)?requestedContext:inferredContext;
 const status=document.querySelector('[data-document-status]');
 const article=document.querySelector('[data-markdown]');
 const backLinks=[...document.querySelectorAll('[data-back-link]')];
@@ -12,12 +12,16 @@ const year=document.querySelector('[data-year]');
 if(year)year.textContent=new Date().getFullYear();
 
 const personalContext=documentContext==='personal';
+const teacherContext=documentContext==='teacher';
 const personalHebrewSource=source.startsWith('personal-course/he/');
 const professionalHebrewSource=source.startsWith('professional-course/he/');
-const hebrewSource=personalHebrewSource||professionalHebrewSource;
+const teacherHebrewSource=source.startsWith('teacher-course/he/');
+const hebrewSource=personalHebrewSource||professionalHebrewSource||teacherHebrewSource;
 const personalHebrewPreference=localStorage.getItem('aam-personal-language')==='he';
 const professionalHebrewPreference=localStorage.getItem('aam-professional-language')==='he';
-const hebrewNavigation=hebrewSource||(personalContext?personalHebrewPreference:professionalHebrewPreference);
+const teacherHebrewPreference=localStorage.getItem('aam-teacher-language')==='he';
+const hebrewPreference=personalContext?personalHebrewPreference:teacherContext?teacherHebrewPreference:professionalHebrewPreference;
+const hebrewNavigation=hebrewSource||hebrewPreference;
 const tableLabel=hebrewSource?'טבלה ניתנת לגלילה':'Scrollable table';
 document.documentElement.lang=hebrewSource?'he':'en';
 document.documentElement.dir=hebrewSource?'rtl':'ltr';
@@ -26,10 +30,14 @@ article.dir=hebrewSource?'rtl':'ltr';
 if(status&&hebrewNavigation)status.textContent='המסמך נטען...';
 const backTarget=personalContext
  ?(hebrewNavigation?'personal.html?lang=he#lessons':'personal.html#lessons')
- :(hebrewNavigation?'professional.html?lang=he#missions':'professional.html?lang=en#missions');
+ :teacherContext
+  ?(hebrewNavigation?'teacher.html?lang=he#missions':'teacher.html#missions')
+  :(hebrewNavigation?'professional.html?lang=he#missions':'professional.html?lang=en#missions');
 const backLabel=personalContext
  ?(hebrewNavigation?'חזרה לשיעורים האישיים':'Back to personal lessons')
- :(hebrewNavigation?'חזרה למסלול המקצועי':'Back to professional missions');
+ :teacherContext
+  ?(hebrewNavigation?'חזרה למסלול למורים':'Back to teacher missions')
+  :(hebrewNavigation?'חזרה למסלול המקצועי':'Back to professional missions');
 backLinks.forEach(link=>{link.href=backTarget;link.textContent=backLabel;});
 documentNavigations.forEach(navigation=>navigation.setAttribute('aria-label',hebrewNavigation?'ניווט במסמך':'Document navigation'));
 
