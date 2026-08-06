@@ -1,5 +1,5 @@
-# EDU-TRN-200 — מנחה מדריך
+# EDU-TRN-200 — מדריך למנחה
 
-Emphasize that EDU-SRC-201 is useful עבור local conditions, EDU-SRC-204 offers qualified מחקר context, EDU-SRC-203 is single contextual observation, ו־ EDU-SRC-202 is unsupported vendor assertion. אין לבצע let participants convert “can support engagement” into guaranteed achievement claim.
+הדגישו כי EDU-SRC-201 מועיל להבנת תנאים מקומיים, EDU-SRC-204 מציע הקשר מחקרי מסויג, EDU-SRC-203 הוא תצפית יחידה ותלוית הקשר, ו־EDU-SRC-202 הוא טענת ספק ללא ביסוס. אל תאפשרו למשתתפים להמיר את „עשוי לתמוך במעורבות” לטענה על הישג מובטח.
 
-Strong K–12 transfer keeps the ראיות claim constant while changing method: supported noticing עבור K–2, mapping עבור 3–5, structured ראיות עבור 6–8, ו־ methodological/civic critique עבור 9–12.
+העברה חזקה לגן–י״ב שומרת על טענת הראיות קבועה ומשנה את השיטה: התבוננות נתמכת לכיתות א׳–ב׳, מיפוי לג׳–ה׳, ראיות מובְנות לו׳–ח׳ וביקורת מתודולוגית ואזרחית לט׳–י״ב.

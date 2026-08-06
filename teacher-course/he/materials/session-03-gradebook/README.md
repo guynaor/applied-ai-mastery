@@ -1,3 +1,3 @@
-# משימה 3 — גיליון ציונים ו־ למידה-נתונים Spreadsheets
+# משימה 3 — גיליונות ציונים ונתוני למידה
 
-Use clearly בדיוני, anonymous גיליון ציונים to practice formula-based cleaning ו־ pattern בדיקה. spreadsheet supports מורה inquiry only. It יש never autonomously assign grades, placement, behavior decisions, or interventions.
+השתמשו בגיליון ציונים בדיוני ומאנונימי במפורש כדי להתאמן בניקוי מבוסס נוסחאות ובסקירת דפוסים. הגיליון תומך בבירור של המורה בלבד. אסור לו להקצות באופן אוטונומי ציונים, מסלולי לימוד, החלטות התנהגותיות או התערבויות.

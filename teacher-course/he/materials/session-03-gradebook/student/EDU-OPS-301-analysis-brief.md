@@ -1,7 +1,7 @@
-# EDU-OPS-301 — בדיוני גיליון ציונים Analysis תקציר
+# EDU-OPS-301 — מסמך ניתוח גיליון ציונים בדיוני
 
-Clean supplied בדיוני נתונים without deleting originals. Create formula column that distinguishes numeric scores מ־ blank/`NA`; אין לבצע convert missing work to zero. Calculate grade-band average only after checking missingness, ו־ flag patterns as questions עבור מורה בדיקה.
+נקו את הנתונים הבדיוניים שסופקו בלי למחוק את המקור. צרו עמודת נוסחה שמבחינה בין ציונים מספריים לבין ריק/`NA`; אין להמיר עבודה חסרה לאפס. חשבו ממוצע לשכבת גיל רק לאחר בדיקת ערכים חסרים, וסמנו דפוסים כשאלות לבדיקת המורה.
 
-Write a תקשורת-neutral תקציר: “table suggests…; מורה כדאי verify…; this does not establish….” Include one pattern עבור each relevant band ו־ an accessible instructional follow-up option. Do **not** autonomously grade, place learners, make behavior decisions, or choose interventions.
+כתבו מסמך בניסוח ניטרלי מבחינת תקשורת: „הטבלה מצביעה על…; על המורה לאמת…; אין בכך כדי לבסס….” כללו דפוס אחד לכל שכבה רלוונטית ואפשרות נגישה להמשך הוראה. אין **להעניק באופן אוטונומי** ציונים, לשבץ לומדים, לקבל החלטות התנהגותיות או לבחור התערבויות.
 
-No real names, IDs, protected information, or real grades may be used.
+אין להשתמש בשמות אמיתיים, מזהים, מידע מוגן או ציונים אמיתיים.

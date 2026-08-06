@@ -1,17 +1,17 @@
-# EDU-TRN-200 — שלב אחר שלב שיעור Script
+# EDU-TRN-200 — תסריט שיעור שלב אחר שלב
 
-## 0–8 minutes
+## 0–8 דקות
 
-Introduce the החלטה question. Say that a מקור type is not quality ranking by itself; purpose, method, ו־ limits matter.
+הציגו את שאלת ההחלטה. הבהירו שסוג המקור אינו דירוג איכות בפני עצמו; המטרה, השיטה והמגבלות חשובים.
 
-## 8–25 minutes
+## 8–25 דקות
 
-Teams annotate sources ו־ complete matrix. Ask them to highlight absolute language in vendor claim ו־ missing comparison/method information in observation.
+הצוותים מעירים על המקורות ומשלימים את המטריצה. בקשו מהם להדגיש ניסוח מוחלט בטענת הספק ומידע חסר על השוואה או שיטה בתצפית.
 
-## 25–40 minutes
+## 25–40 דקות
 
-Draft bounded memo. Require “safe to try,” “בדיקה locally,” ו־ “not established” headings.
+נסחו תזכיר מוגבל. דרשו כותרות „בטוח לנסות”, „יש לבדוק מקומית” ו„לא הוכח”.
 
-## Exit בדיקה
+## בדיקת יציאה
 
-Each participant names one claim they refused to make ו־ confirms no real learner נתונים was used.
+כל משתתף מציין טענה אחת שסירב לטעון ומאשר שלא השתמש בנתוני לומדים אמיתיים.

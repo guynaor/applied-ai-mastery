@@ -1,5 +1,5 @@
-# EDU-TRN-100 — מנחה מדריך
+# EDU-TRN-100 — מדריך למנחה
 
-Success is constrained, reviewable שיעור draft—not fluent prose. Look עבור a measurable objective, a feasible sequence, a planned formative בדיקה, access supports tied to card, ו־ explicit flags עבור תקנים/local facts. Invite multiple valid designs: K–2 may use sequencing cards, 3–5 map, 6–8 CER, ו־ 9–12 stakeholder analysis.
+הצלחה היא טיוטת שיעור מוגבלת וניתנת לבחינה — לא טקסט רהוט. חפשו מטרה מדידה, רצף ישים, בדיקה מעצבת מתוכננת, תמיכות נגישות הקשורות לכרטיס וסימונים מפורשים לתקנים ולעובדות מקומיות. אפשרו כמה תכנונים תקפים: כיתות א׳–ב׳ עשויות להשתמש בכרטיסי רצף, ג׳–ה׳ במפה, ו׳–ח׳ במבנה טענה–ראיה–הנמקה, וט׳–י״ב בניתוח בעלי עניין.
 
-Intervene when participants paste real כיתה records, accept invented standard, or treat בינה מלאכותית grouping/behavior suggestions as decisions. Ask: “What ראיות would make this safe to teach tomorrow?”
+התערבו כאשר משתתפים מדביקים רשומות כיתה אמיתיות, מקבלים תקן מומצא או מתייחסים להצעות של בינה מלאכותית לחלוקה לקבוצות או לניהול התנהגות כהחלטות. שאלו: „איזו ראיה תהפוך את השיעור הזה לבטוח להוראה מחר?”

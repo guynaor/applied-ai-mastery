@@ -1,21 +1,21 @@
-# EDU-TRN-100 — שלב אחר שלב שיעור Script
+# EDU-TRN-100 — תסריט שיעור שלב אחר שלב
 
-## Preparation
+## הכנה
 
-Provide four context cards ו־ keep scenario בדיוני. Ask participants to select band based on instructional fit, not perceived learner label.
+חלקו את ארבעת כרטיסי ההקשר ושמרו על כך שהתרחיש יהיה בדיוני. בקשו מהמשתתפים לבחור שכבת גיל לפי התאמה הוראתית, ולא לפי תווית שהם מייחסים לתלמיד.
 
-## 0–10 minutes: frame boundary
+## 0–10 דקות: מסגור הגבול
 
-Say: “בינה מלאכותית can produce draft. It cannot know our תקנים, learners, or כיתה context.” Model rejecting “make it engaging” as insufficient requirement.
+אמרו: „בינה מלאכותית יכולה להפיק טיוטה. היא אינה יכולה לדעת מהם התקנים שלנו, מי התלמידים שלנו או מהו הקשר הכיתה.” הדגימו מדוע „הפוך את השיעור למעניין” אינה דרישה מספקת.
 
-## 10–25 minutes: draft ו־ compare
+## 10–25 דקות: טיוטה והשוואה
 
-Participants complete RISEN ו־ compare it עם vague פרומפט. Pause them to identify invented standard, inaccessible activity, or missing material constraint.
+המשתתפים משלימים RISEN ומשווים אותה להנחיה העמומה. עצרו כדי שיזהו תקן שהומצא, פעילות שאינה נגישה או אילוץ חסר לגבי חומרים.
 
-## 25–40 minutes: מורה revision
+## 25–40 דקות: עריכת המורה
 
-Participants revise one output ו־ name local אימות נדרש. Collect comparison table.
+המשתתפים עורכים תוצר אחד ומציינים איזה אימות מקומי נדרש. אספו את טבלת ההשוואה.
 
-## Debrief
+## סיכום
 
-Ask which part נדרש מורה judgment. Confirm no real learner נתונים was used.
+שאלו איזה חלק חייב שיקול דעת של מורה. ודאו שלא נעשה שימוש בנתוני לומדים אמיתיים.

@@ -1,17 +1,17 @@
-# EDU-TRN-300 — שלב אחר שלב שיעור Script
+# EDU-TRN-300 — תסריט שיעור שלב אחר שלב
 
-## 0–10 minutes: establish the נתונים boundary
+## 0–10 דקות: קביעת גבול הנתונים
 
-State: “These aliases ו־ scores are בדיוני. In real work, אין לבצע paste תלמיד נתונים into an בינה מלאכותית tool.” Read prohibition on autonomous grading, placement, behavior, ו־ intervention decisions aloud.
+אמרו: „כינויים אלה והציונים הללו בדיוניים. בעבודה אמיתית אין להדביק נתוני תלמידים בכלי בינה מלאכותית.” קראו בקול את האיסור על מתן ציונים אוטונומי, שיבוץ, החלטות התנהגותיות והחלטות על התערבות.
 
-## 10–25 minutes: clean עם formulas
+## 10–25 דקות: ניקוי באמצעות נוסחאות
 
-Participants preserve raw cells, use `=IFERROR(VALUE(cell),"")`, ו־ mark missingness. Demonstrate why blank/NA is not zero.
+המשתתפים שומרים את תאי המקור, משתמשים ב־`=IFERROR(VALUE(cell),"")`, ומסמנים ערכים חסרים. הדגימו מדוע ריק/NA אינו אפס.
 
-## 25–40 minutes: inspect, אין לבצע decide
+## 25–40 דקות: בדקו, אל תחליטו
 
-Participants produce question-based תקציר ו־ בדיקה תבנית. Challenge causal language ו־ deficit labels.
+המשתתפים מפיקים מסמך המבוסס על שאלות ותבנית בדיקה. אתגרו שפה סיבתית ותוויות גירעון.
 
-## Exit בדיקה
+## בדיקת יציאה
 
-Ask: “What original ראיות יש a מורה בדיקה before acting?”
+שאלו: „איזו ראיה מקורית חייב מורה לבדוק לפני פעולה?”

@@ -1,17 +1,17 @@
-# EDU-TRN-100 — River Systems שיעור-Design תקציר
+# EDU-TRN-100 — מסמך תכנון שיעור: מערכות נהר
 
-## משימה
+## המשימה
 
-Create a מורה-reviewed 35–50 minute River Systems inquiry שיעור. Choose one context card, then ask an בינה מלאכותית tool עבור a draft using RISEN תבנית. Revise draft yourself.
+צרו שיעור חקר על מערכות נהר באורך 35–50 דקות, שעבר בדיקה של מורה. בחרו כרטיס הקשר אחד, בקשו מכלי בינה מלאכותית טיוטה באמצעות תבנית RISEN, ולאחר מכן ערכו את הטיוטה בעצמכם.
 
-## נדרש outcome
+## תוצר נדרש
 
-Submit a למידה objective, opening, investigation, formative בדיקה, accessible חומרים plan, ו־ closing. Cite exact אילוצים you honored. Explain which תקנים language ו־ claims you verified locally; district תקנים vary.
+הגישו מטרת למידה, פתיחה, חקירה, בדיקה מעצבת, תוכנית לחומרים נגישים וסיום. צטטו את האילוצים המדויקים שבהם עמדתם. הסבירו אילו ניסוחים של תקנים ואילו טענות אימתתם מקומית; התקנים המחוזיים משתנים.
 
-## Non-negotiable boundaries
+## גבולות שאינם נתונים למשא ומתן
 
-אין לבצע use real תלמיד information. אין לבצע let בינה מלאכותית decide grouping, accommodations, grades, behavior responses, or intervention. The מורה decides whether the שיעור is accurate ו־ appropriate.
+אין להשתמש במידע אמיתי על תלמידים. אין לאפשר לבינה המלאכותית להחליט על חלוקה לקבוצות, התאמות, ציונים, תגובות התנהגותיות או התערבות. המורה מחליט אם השיעור מדויק ומתאים.
 
-## ראיות to retain
+## ראיות לשמירה
 
-Keep your selected context card, original פרומפט, output comparison, revised plan, אימות notes, פרטיות בדיקה, ו־ one next-step רפלקציה.
+שמרו את כרטיס ההקשר שנבחר, ההנחיה המקורית, השוואת התוצרים, התוכנית המתוקנת, הערות האימות, בדיקת הפרטיות ורפלקציה אחת על הצעד הבא.

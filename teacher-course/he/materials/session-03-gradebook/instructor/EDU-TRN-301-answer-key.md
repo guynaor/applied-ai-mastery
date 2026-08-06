@@ -1,5 +1,5 @@
 # EDU-TRN-301 — מפתח תשובות
 
-Valid formula: `=IFERROR(VALUE(C2),"")` (adjust cell reference) retains blank/NA as blank. A valid average excludes blank numeric cells, עבור דוגמה `=AVERAGEIF(range,">=0")`, after verifying range contains only cleaned numeric values.
+נוסחה תקפה: `=IFERROR(VALUE(C2),"")` (יש להתאים את הפניית התא) משאירה ריק/NA כריק. ממוצע תקף אינו כולל תאים מספריים ריקים, לדוגמה `=AVERAGEIF(range,">=0")`, לאחר אימות שהטווח מכיל ערכים מספריים נקיים בלבד.
 
-Expected questions: Is Willow’s missing entry absence, access issue, or unrecorded ראיות? What does original work show עבור Harbor ו־ Atlas? Does River need clarified task? These are בדיקה questions. אין לבצע accept automatic score changes, placements, behavior labels, or intervention assignments.
+שאלות מצופות: האם הרשומה החסרה של וילו נובעת מהיעדרות, מבעיית נגישות או מראיה שלא תועדה? מה מראה העבודה המקורית של הארבור ואטלס? האם ריבר זקוק למשימה מובהרת? אלו שאלות לבדיקה. אין לקבל שינויי ציונים אוטומטיים, שיבוצים, תוויות התנהגות או הקצאות להתערבות.

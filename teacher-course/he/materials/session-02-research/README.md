@@ -1,3 +1,3 @@
-# משימה 2 — מחקר ו־ מקור Synthesis
+# משימה 2 — מחקר וסינתזה של מקורות
 
-Assess four intentionally unequal בדיוני sources before making bounded recommendation about River Systems teaching approach. Complete the ראיות matrix ו־ memo. A מקור can be useful without being sufficient ראיות.
+העריכו ארבעה מקורות בדיוניים, שנבנו בכוונה באיכות לא אחידה, לפני שתציעו המלצה מוגבלת על גישת הוראה למערכות נהר. השלימו את מטריצת הראיות ואת התזכיר. מקור יכול להיות שימושי גם אם אינו ראיה מספקת.

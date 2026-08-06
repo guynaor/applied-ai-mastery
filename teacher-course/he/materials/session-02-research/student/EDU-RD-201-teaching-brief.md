@@ -1,15 +1,15 @@
-# EDU-RD-201 — Teaching מחקר תקציר
+# EDU-RD-201 — מסמך מחקר להוראה
 
-## החלטה question
+## שאלת ההחלטה
 
-כדאי בדיוני Cedar Ridge School pilot short watershed field-observation activity as part of its River Systems יחידת לימוד?
+האם על בית הספר הבדיוני סידר רידג׳ להפעיל פעילות קצרה של תצפית שדה באגן היקוות כחלק מיחידת הלימוד על מערכות נהר?
 
-Read four supplied sources. Build an ראיות matrix that distinguishes district guidance, a vendor claim, a כיתה observation, ו־ a מחקר סיכום. Your memo יש recommend: safe to try, יש בדיקה locally, ו־ not established.
+קראו את ארבעת המקורות שסופקו. בנו מטריצת ראיות שמבחינה בין הנחיה מחוזית, טענת ספק, תצפית בכיתה וסיכום מחקר. התזכיר שלכם חייב להמליץ על: בטוח לנסות, יש לבדוק מקומית, ולא הוכח.
 
-## K–12 transfer
+## העברה לגן–י״ב
 
-Explain how activity would differ עבור K–2 (guided noticing), 3–5 (mapped observation), 6–8 (ראיות collection), or 9–12 (method/ethics critique). אין לבצע claim sources prove outcomes עבור every grade.
+הסבירו כיצד הפעילות תשתנה בכיתות א׳–ב׳ (התבוננות מונחית), ג׳–ה׳ (תצפית ממופה), ו׳–ח׳ (איסוף ראיות) או ט׳–י״ב (ביקורת של שיטה ואתיקה). אל תטענו שהמקורות מוכיחים תוצאות בכל שכבת גיל.
 
-## Boundary
+## גבול
 
-Sources ו־ school are בדיוני. No individual learner נתונים, behavior records, or משפחה information may be used.
+המקורות ובית הספר בדיוניים. אין להשתמש בנתונים של לומדים יחידים, ברשומות התנהגות או במידע על משפחות.

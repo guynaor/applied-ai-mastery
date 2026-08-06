@@ -1,5 +1,5 @@
 # EDU-TRN-101 — מפתח תשובות
 
-vague פרומפט כדאי usually omit grade, time, חומרים, access, ו־ אימות. A strong RISEN response names selected band ו־ אילוצים, but is still only draft.
+הנחיה עמומה צפויה להשמיט בדרך כלל שכבת גיל, זמן, חומרים, נגישות ואימות. תשובת RISEN חזקה מציינת את השכבה והאילוצים שנבחרו, אך היא עדיין טיוטה בלבד.
 
-Expected מורה checks: confirm תקנים wording עם local curriculum; בדיקה factual claims ו־ מקור dates; simplify language/visuals עבור K–2; ensure 3–5 maps are readable; require ראיות citations עבור 6–8; ו־ separate factual ראיות מ־ civic values עבור 9–12. Age appropriateness cannot be inferred reliably מ־ generic בינה מלאכותית language. Teachers retain authority עבור grouping, accommodations, ו־ final instruction.
+בדיקות המורה המצופות: לאמת את ניסוח התקנים מול תוכנית הלימודים המקומית; לבדוק טענות עובדתיות ותאריכי מקורות; לפשט שפה וחזות לכיתות א׳–ב׳; לוודא שמפות לכיתות ג׳–ה׳ קריאות; לדרוש ציטוטי ראיות בכיתות ו׳–ח׳; ולהפריד בין ראיות עובדתיות לערכים אזרחיים בכיתות ט׳–י״ב. אין להסיק התאמה לגיל באופן מהימן משפה כללית של בינה מלאכותית. המורים שומרים על הסמכות לגבי חלוקה לקבוצות, התאמות והוראה סופית.

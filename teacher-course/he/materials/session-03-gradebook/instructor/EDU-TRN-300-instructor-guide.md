@@ -1,5 +1,5 @@
-# EDU-TRN-300 — מנחה מדריך
+# EDU-TRN-300 — מדריך למנחה
 
-exercise is spreadsheet literacy ו־ אחראי interpretation, not predictive analytics. Require preservation of raw נתונים, documented cleaning, ו־ an explicit missing-נתונים בדיקה. Suitable observations: Harbor ו־ Atlas have lower displayed scores עם a `review` flag; Willow has missing river-map entry; River’s `NA` cannot be interpreted as score. None justifies learner-level action.
+התרגיל עוסק באוריינות גיליונות אלקטרוניים ובפרשנות אחראית, לא בניתוח חיזוי. דרשו שמירה של נתוני המקור, ניקוי מתועד ובדיקה מפורשת של נתונים חסרים. תצפיות מתאימות: להארבור ולאטלס ציונים מוצגים נמוכים יותר עם דגל `review`; לווילו חסרה רשומה של מפת הנהר; אין לפרש את `NA` של ריבר כציון. אף אחת מהן אינה מצדיקה פעולה ברמת הלומד.
 
-Invite grade-band appropriate follow-ups: K–2 may re-offer picture-supported demonstration; 3–5 may בדיקה map directions; 6–8 may revisit ראיות structure; 9–12 may ask learners to inspect מחוון ראיות. These are מורה-designed options after בדיקה, never automated prescriptions.
+הציעו פעולות המשך המתאימות לשכבת הגיל: כיתות א׳–ב׳ עשויות לקבל מחדש הדגמה הנתמכת בתמונות; בג׳–ה׳ אפשר לבדוק הוראות למפה; בו׳–ח׳ אפשר לחזור למבנה הראיות; ובט׳–י״ב אפשר לבקש מהלומדים לבחון ראיות מול מחוון. אלו אפשרויות שמורה מתכנן לאחר בדיקה, ולעולם לא מרשמים אוטומטיים.

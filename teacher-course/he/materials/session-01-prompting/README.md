@@ -1,5 +1,5 @@
-# משימה 1 — ניסוח פרומפטים עבור Instructional Design
+# משימה 1 — ניסוח הנחיות לתכנון הוראה
 
-Design River Systems inquiry שיעור מ־ a specific grade-band context. בינה מלאכותית drafts; the מורה checks תקנים alignment, age appropriateness, time, חומרים, language access, ו־ בטיחות. Complete the תקציר, context card, output comparison, ו־ RISEN פרומפט before submitting journal ראיות.
+תכננו שיעור חקר על מערכות נהר מתוך הקשר מוגדר של שכבת גיל. הבינה המלאכותית יוצרת טיוטה; המורה בודק התאמה לתקנים, התאמה לגיל, זמן, חומרים, נגישות שפתית ובטיחות. השלימו את מסמך המשימה, כרטיס ההקשר, השוואת התוצרים והנחיית RISEN לפני הגשת הראיות ביומן הלמידה.
 
-Use only supplied בדיוני scenario. A polished answer that ignores constraint is not successful.
+השתמשו רק בתרחיש הבדיוני שסופק. תשובה מלוטשת שמתעלמת מאילוץ אינה תשובה מוצלחת.
