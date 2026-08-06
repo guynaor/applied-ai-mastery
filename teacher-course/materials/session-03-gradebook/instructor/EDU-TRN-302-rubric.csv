@@ -1,0 +1,5 @@
+criterion,emerging,developing,secure
+Data contract,Uses unclear or real data,Identifies fictional boundary,Documents allowed values cleaning and limits
+Formula-based cleaning,Overwrites or treats missing as zero,Uses a formula with gaps,Preserves raw values and handles blank/NA correctly
+Pattern interpretation,Makes learner decisions,Names a review question,Uses neutral evidence-based questions and non-claims
+Safety and privacy,Missing boundary,States no real data,Explicitly prohibits autonomous grades placement behavior and interventions

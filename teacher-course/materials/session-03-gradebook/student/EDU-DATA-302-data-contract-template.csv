@@ -1,0 +1,5 @@
+field,allowed_values,cleaning_rule,formula_or_check,interpretation_boundary
+learner_alias,fictional aliases only,trim spaces,=TRIM(A2),not identity
+grade_band,K-2|3-5|6-8|9-12,validate list,=COUNTIF(list,B2),context not placement
+scores,0-4 or blank/NA,blank means missing not zero,=IFERROR(VALUE(C2),""),pattern for teacher review only
+attendance_flag,blank|review,do not infer cause,manual check,no behavior/intervention decision
