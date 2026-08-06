@@ -31,7 +31,7 @@ for(const requirement of [
 }
 
 const sessionBlock=(number,nextNumber)=>{
-  const match=courseJs.match(new RegExp(`\\{\\s*n:\\s*${number},([\\s\\S]*?)\\n\\s*\\},\\n\\s*\\{\\s*n:\\s*${nextNumber},`));
+  const match=courseJs.match(new RegExp(`\\{\\s*n:\\s*${number}\\s*,([\\s\\S]*?)(?=\\s*(?:(?:\\/\\*[\\s\\S]*?\\*\\/|\\/\\/[^\\n]*)\\s*)*(?:\\{\\s*n:\\s*${nextNumber}\\s*,|\\];))`));
   assert.ok(match,`could not isolate Mission ${number} metadata`);
   return match[0];
 };
