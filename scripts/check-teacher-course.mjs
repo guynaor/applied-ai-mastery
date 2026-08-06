@@ -1,8 +1,14 @@
 import assert from 'node:assert/strict';
-import {existsSync,readFileSync} from 'node:fs';
+import {existsSync,readdirSync,readFileSync} from 'node:fs';
+import path from 'node:path';
 
 const read=path=>readFileSync(new URL(`../${path}`,import.meta.url),'utf8');
 const exists=path=>existsSync(new URL(`../${path}`,import.meta.url));
+const root=path.resolve(path.dirname(new URL(import.meta.url).pathname),'..');
+const listMarkdown=directory=>readdirSync(path.join(root,directory),{withFileTypes:true}).flatMap(entry=>{
+  const relative=path.posix.join(directory,entry.name);
+  return entry.isDirectory()?listMarkdown(relative):relative.endsWith('.md')?[relative]:[];
+});
 
 const teacherHtml=read('teacher.html');
 const courseJs=read('site/assets/js/teacher-course.js');
@@ -61,6 +67,19 @@ const resourcePaths=[...courseJs.matchAll(/['"](teacher-course\/(?:he\/)?(?:mate
 assert.ok(resourcePaths.length>0,'teacher mission metadata must list local resources');
 for(const path of resourcePaths){
   assert.ok(exists(path),`missing local teacher resource: ${path}`);
+}
+
+const hebrewTeacherSources=[
+  ...listMarkdown('teacher-course/he'),
+  'site/assets/js/teacher-course.js'
+];
+const hebrewTeacherText=hebrewTeacherSources.map(path=>read(path)).join('\n');
+for(const term of ['יסודי','חטיבה','תיכון']){
+  assert.match(hebrewTeacherText,new RegExp(term),`missing Israeli Hebrew grade-band term: ${term}`);
+}
+for(const legacyTerm of ['K–12','K-12','K–2','K-2','3–5','3-5','6–8','6-8','9–12','9-12']){
+  const lines=hebrewTeacherText.split('\n').filter(line=>/[\u0590-\u05ff]/.test(line));
+  assert.ok(!lines.some(line=>line.includes(legacyTerm)),`legacy Hebrew grade-band term remains: ${legacyTerm}`);
 }
 
 console.log('Teacher course contract passed');
