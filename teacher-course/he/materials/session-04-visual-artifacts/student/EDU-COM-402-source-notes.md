@@ -1,12 +1,12 @@
-# EDU-COM-402 — מקור Notes
+# EDU-COM-402 — הערות מקור
 
-Use this record עבור all claims ו־ visuals. A URL alone is not אימות.
+השתמשו ברישום זה לכל טענה ולכל רכיב חזותי. כתובת URL לבדה אינה אימות.
 
-| Slide | Claim or חזותי purpose | מקור/creator | License or permission | What the מקור actually supports | Local בדיקה needed | מורה אימות date |
-| --- | --- | --- | --- | --- | --- | --- |
-| 2 | Water moves through connected systems. | מורה-created water-cycle diagram based on a ציבורי science text. | מורה-created; cite מקור. | A generic model, not local supply route. | Local utility terminology ו־ route. | |
-| 3 | Placeholder: “Our school uses water every day.” | School facilities observation plan. | Internal observation; no תלמיד נתונים. | Only observation, not consumption total. | Ask facilities staff before adding quantities. | |
+| שקופית | מטרת הטענה או הרכיב החזותי | מקור/יוצר | רישיון או אישור | במה המקור תומך בפועל | בדיקה מקומית נדרשת | תאריך אימות המורה |
+| --- | --- | --- | --- | --- | --- |
+| 2 | מים נעים במערכות מחוברות. | תרשים מחזור מים שהמורה יצר/ה על בסיס טקסט מדעי ציבורי. | יצירת המורה; יש לצטט את המקור. | מודל כללי, ולא מסלול אספקה מקומי. | המינוח והמסלול של רשות המים המקומית. | |
+| 3 | מציין מקום: “בית הספר שלנו משתמש במים בכל יום.” | תוכנית לתצפית במתקני בית הספר. | תצפית פנימית; ללא נתוני תלמידים. | תצפית בלבד, ולא כמות צריכה. | יש לשאול את צוות המתקנים לפני הוספת כמויות. | |
 
-## החלטה note
+## הערת החלטה
 
-Choose one claim you תבצעו **not** put on slide. Explain why its ראיות, date, geography, or audience fit is inadequate. Then state what would make it usable.
+בחרו טענה אחת שלא תופיע בשקופית. הסבירו מדוע הראיות, התאריך, הגאוגרפיה או ההתאמה לקהל אינם מספקים, ולאחר מכן פרטו מה יהפוך אותה לשימושית.

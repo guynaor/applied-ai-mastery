@@ -1,9 +1,9 @@
-# EDU-OPS-302 — מורה בדיקה תבנית
+# EDU-OPS-302 — תבנית בדיקת מורה
 
-| Observed בדיוני pattern | נתונים-quality בדיקה | Possible instructional question | What it does not mean | מורה’s next בדיקה step |
+| דפוס שנצפה בנתונים בדיוניים | בדיקת איכות הנתונים | שאלה הוראתית אפשרית | מה הדפוס אינו אומר | צעד הבדיקה הבא של המורה |
 | --- | --- | --- | --- | --- |
-| | | | Not grade, placement, behavior, or intervention החלטה | |
+| | | | אין זו החלטה על ציון, השמה, התנהגות או התערבות | |
 
-## תקשורת-neutral wording
+## ניסוח ניטרלי לתקשורת
 
-Use “may warrant closer look” rather than labels, diagnoses, promises, or causal claims. בדיקה original work, context, access to חומרים, ו־ learner voice before deciding anything.
+השתמשו בניסוח “ייתכן שכדאי לבחון מקרוב” במקום בתוויות, אבחנות, הבטחות או טענות סיבתיות. לפני כל החלטה בדקו עבודה מקורית, הקשר, גישה לחומרים וקולו של הלומד/ת.

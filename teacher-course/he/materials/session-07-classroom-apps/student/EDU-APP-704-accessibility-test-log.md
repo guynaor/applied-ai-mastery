@@ -1,21 +1,21 @@
-# EDU-APP-704 — Resource Hub נגישות ו־ בטיחות Test Log
+# EDU-APP-704 — יומן בדיקות נגישות ובטיחות למרכז המשאבים
 
-Complete this before local כיתה use. Record browser/device or inspection method ו־ change made. A “pass” without ראיות is not enough.
+השלימו יומן זה לפני שימוש מקומי בכיתה. תעדו את הדפדפן, המכשיר או שיטת הבדיקה ואת השינוי שבוצע. סימון “עבר” ללא ראיה אינו מספיק.
 
-| Test | Method ו־ ראיות | Pass / revise | Change or מורה החלטה |
+| בדיקה | שיטה וראיות | עבר / לתיקון | שינוי או החלטת מורה |
 | --- | --- | --- | --- |
-| Keyboard-only navigation reaches every button ו־ link in sensible order. | | | |
-| Focus is always visible ו־ not hidden by content. | | | |
-| Buttons state their purpose ו־ expanded/collapsed state. | | | |
-| Heading order ו־ landmarks make sense עם a screen reader or outline בדיקה. | | | |
-| Text/background ו־ focus-indicator contrast are readable. | | | |
-| Informative diagram alt text conveys its למידה meaning. | | | |
-| Reading load, images, ו־ discussion prompts fit chosen grade band. | | | |
-| Every material is בדיוני/ציבורי ו־ מקור status is recorded. | | | |
-| No form, analytics, cookie, login, network request, name field, or saved response collects נתונים. | | | |
+| ניווט במקלדת בלבד מגיע לכל כפתור וקישור בסדר הגיוני. | | | |
+| המיקוד תמיד גלוי ואינו מוסתר בתוכן. | | | |
+| הכפתורים מציינים את מטרתם ואת מצב הפתוח/סגור שלהם. | | | |
+| סדר הכותרות וציוני הדרך הגיוניים בקורא מסך או בבדיקת מתאר. | | | |
+| ניגודיות הטקסט/הרקע ומחוון המיקוד קריאים. | | | |
+| הטקסט החלופי של תרשים מידע מעביר את משמעותו הלימודית. | | | |
+| עומס הקריאה, התמונות ושאלות הדיון מתאימים לשכבת הגיל שנבחרה. | | | |
+| כל חומר בדיוני או ציבורי ומצב המקור שלו מתועד. | | | |
+| אין טופס, אנליטיקה, עוגייה, כניסה לחשבון, בקשת רשת, שדה שם או תשובה שמורה שאוספים נתונים. | | | |
 
-## מורה sign-off
+## אישור המורה
 
-Chosen grade band: __________. I checked age suitability, נגישות, factual/מקור fit, ו־ that local page collects no נתונים.
+שכבת הגיל שנבחרה: __________. בדקתי התאמת גיל, נגישות, התאמה עובדתית למקור ואת העובדה שהדף המקומי אינו אוסף נתונים.
 
-מורה: ____________________ Date: __________
+מורה: ____________________ תאריך: __________

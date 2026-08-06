@@ -1,19 +1,19 @@
-# EDU-TRN-101 — River Systems Context Cards
+# EDU-TRN-101 — כרטיסי הקשר: מערכות נהר
 
-All scenarios are בדיוני.
+כל התרחישים כאן בדיוניים.
 
-## K–2: Where does rain go?
+## K–2: לאן הולך הגשם?
 
-Objective: learners sequence rain, stream, river, ו־ sea using picture cards. אילוצים: 25 minutes; read-aloud plus partner talk; bilingual picture labels; no independent web search; tactile cards עבור a learner עם low vision.
+מטרה: הלומדים מסדרים בעזרת כרטיסי תמונות רצף של גשם, נחל, נהר וים. אילוצים: 25 דקות; הקראה ושיחה בזוגות; תוויות תמונה דו־לשוניות; אין חיפוש עצמאי ברשת; כרטיסים מוחשיים ללומד/ת עם לקות ראייה.
 
-## 3–5: How does watershed connect places?
+## 3–5: כיצד אגן היקוות מחבר בין מקומות?
 
-Objective: learners use simple map to explain how water moves downhill. אילוצים: 40 minutes; four map copies only; vocabulary support עבור multilingual learners; exit drawing עם labels.
+מטרה: הלומדים משתמשים במפה פשוטה כדי להסביר כיצד מים זורמים במורד. אילוצים: 40 דקות; ארבעה עותקי מפה בלבד; תמיכת אוצר מילים ללומדים רב־לשוניים; ציור יציאה עם תוויות.
 
-## 6–8: Why can one upstream choice affect river?
+## 6–8: מדוע בחירה במעלה הנהר יכולה להשפיע על הנהר כולו?
 
-Objective: learners cite two pieces of map/נתונים ראיות in claim-ראיות-reasoning paragraph. אילוצים: 48 minutes; mixed reading levels; no claim about local river without a מקור; paper alternative to slides.
+מטרה: הלומדים מצטטים שתי ראיות ממפה או מנתונים בפסקת טענה–ראיה–הנמקה. אילוצים: 48 דקות; רמות קריאה מגוונות; אין טענה על הנהר המקומי ללא מקור; חלופה ניירית למצגת.
 
-## 9–12: Who כדאי protect shared watershed?
+## 9–12: מי צריך להגן על אגן היקוות משותף?
 
-Objective: learners evaluate competing stakeholders ו־ write sourced civic recommendation. אילוצים: 50 minutes; distinguish ראיות מ־ values; accessible digital ו־ print sources; מורה verifies current local policy before use.
+מטרה: הלומדים בוחנים בעלי עניין מתחרים וכותבים המלצה אזרחית המבוססת על מקורות. אילוצים: 50 דקות; הבחנה בין ראיות לערכים; מקורות דיגיטליים ומודפסים נגישים; המורה בודק/ת את המדיניות המקומית העדכנית לפני השימוש.

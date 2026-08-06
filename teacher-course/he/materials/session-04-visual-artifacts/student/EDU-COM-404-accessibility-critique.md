@@ -1,21 +1,21 @@
-# EDU-COM-404 — נגישות ו־ Age-Appropriateness Critique
+# EDU-COM-404 — ביקורת נגישות והתאמת גיל
 
-בדיקה proposed deck before teaching. Mark **ready**, **revise**, or **remove**, then explain the ראיות עבור each החלטה.
+בדקו את המצגת המוצעת לפני ההוראה. סמנו **מוכנה**, **לתיקון** או **להסרה**, והסבירו את הראיה לכל החלטה.
 
-| בדיקה | Status | ראיות ו־ revision |
+| בדיקה | מצב | ראיות ותיקון |
 | --- | --- | --- |
-| Every factual claim has a מקור note ו־ a מורה אימות date. | | |
-| Captions say what a חזותי proves ו־ what it does not prove. | | |
-| Alt text conveys למידה meaning; decorative images are marked decorative. | | |
-| Meaning is not carried by color alone; contrast, font size, ו־ reading load work עבור chosen learners. | | |
-| Language, דוגמאות, ו־ emotional tone fit selected grade band. | | |
-| Perspectives אין לבצע stereotype families, neighborhoods, or communities. | | |
-| No image, chart, or בינה מלאכותית text implies unsupported local fact. | | |
+| לכל טענה עובדתית יש הערת מקור ותאריך אימות של המורה. | | |
+| הכתוביות מסבירות מה רכיב חזותי מוכיח ומה אינו מוכיח. | | |
+| הטקסט החלופי מעביר משמעות לימודית; תמונות קישוט מסומנות כקישוטיות. | | |
+| המשמעות אינה נשענת על צבע בלבד; ניגודיות, גודל גופן ועומס קריאה מתאימים ללומדים שנבחרו. | | |
+| השפה, הדוגמאות והטון הרגשי מתאימים לשכבת הגיל. | | |
+| נקודות המבט אינן מקבעות סטריאוטיפים על משפחות, שכונות או קהילות. | | |
+| שום תמונה, תרשים או טקסט AI אינם מרמזים על עובדה מקומית ללא ביסוס. | | |
 
-## נדרש rejection
+## דחייה נדרשת
 
-Identify one tempting חזותי or sentence to reject. Explain whether it is misleading, unsourced, inaccessible, developmentally inappropriate, or not useful עבור למידה. Replace it עם a safer alternative.
+זהו רכיב חזותי או משפט מפתה אחד שיש לדחות. הסבירו אם הוא מטעה, חסר מקור, אינו נגיש, אינו מתאים התפתחותית או אינו מועיל ללמידה. החליפו אותו בחלופה בטוחה יותר.
 
-## מורה sign-off
+## אישור המורה
 
-I verified final deck’s sources, נגישות, captions, ו־ age fit: ____________________ Date: __________
+אימתתי את מקורות המצגת הסופית, הנגישות, הכתוביות וההתאמה לגיל: ____________________ תאריך: __________

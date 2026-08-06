@@ -1,15 +1,15 @@
-# EDU-TRN-102 — פרומפט Comparison
+# EDU-TRN-102 — השוואת פרומפטים
 
-Run same task twice: first עם vague פרומפט, then עם your RISEN פרומפט.
+בצעו אותה משימה פעמיים: תחילה בעזרת הפרומפט המעורפל, ולאחר מכן בעזרת פרומפט RISEN שלכם.
 
-| Criterion | Vague output | RISEN output | מורה החלטה |
+| קריטריון | פלט הפרומפט המעורפל | פלט RISEN | החלטת המורה |
 | --- | --- | --- | --- |
-| Objective matches selected grade band | | | |
-| Time ו־ חומרים honored | | | |
-| Accessible language/options | | | |
-| Unsupported claim or assumption | | | |
-| Standard/age בדיקה נדרש | | | |
+| המטרה מתאימה לשכבת הגיל שנבחרה | | | |
+| הזמן והחומרים נשמרו | | | |
+| השפה ואפשרויות ההשתתפות נגישות | | | |
+| טענה או הנחה שאינן נתמכות | | | |
+| נדרשת בדיקת תקן או התאמת גיל | | | |
 
-Vague פרומפט: “Make fun שיעור about rivers.”
+פרומפט מעורפל: “הכינו שיעור מהנה על נהרות.”
 
-Conclude עם one revision you made because the בינה מלאכותית response was unsuitable.
+סיימו בתיאור תיקון אחד שעשיתם משום שתשובת ה-AI לא התאימה למשימה.

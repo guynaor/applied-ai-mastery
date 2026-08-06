@@ -1,17 +1,17 @@
-# EDU-OPS-504 — התאמה דיפרנציאלית Plan
+# EDU-OPS-504 — תוכנית התאמות
 
-## Central thinking
+## החשיבה המרכזית
 
-All learners תבצעו use observations ו־ sources to explain one water-system relationship ו־ communicate a אחראי, ראיות-aware action or question.
+כל הלומדים ישתמשו בתצפיות ובמקורות כדי להסביר קשר אחד במערכת מים ולתקשר פעולה או שאלה אחראית המבוססת על ראיות.
 
-| Learner access need or strength | Planned support/choice | Same central thinking remains because… | מורה בדיקה |
+| צורך גישה או חוזקה של לומד/ת | תמיכה או בחירה מתוכננת | אותה חשיבה מרכזית נשמרת כי… | בדיקת מורה |
 | --- | --- | --- | --- |
-| K–2 / early readers | Read-aloud, picture sequence, oral rehearsal, drawing plus dictated caption. | Learner still connects ראיות to explanation. | בדיקה vocabulary ו־ image interpretation. |
-| 3–5 | Guided נתונים table, sentence stems, partner investigator roles. | Learner still interprets a מקור ו־ observation. | Listen עבור ראיות language. |
-| 6–8 | Claim/ראיות/reasoning organizer ו־ מקור-limitation פרומפט. | Learner still evaluates ראיות ו־ revises claim. | Conference after Day 6. |
-| 9–12 | Stakeholder ראיות set ו־ civic argument עם counterclaim. | Learner still makes warranted, sourced argument. | Verify counterclaim ו־ citation quality. |
-| Screen-reader, multilingual, sensory, or participation variation | Headings/alt text, accessible digital text, home-language preview where available, חזותי schedule, dry/tactile-safe role, speech/drawing/writing response. | Access route changes; ראיות reasoning does not. | Confirm supports עם learner/staff, not assumptions. |
+| K–2 / קוראים בתחילת דרכם | הקראה, רצף תמונות, חזרה בעל־פה, ציור עם כיתוב מוכתב. | הלומד/ת עדיין מקשר/ת ראיה להסבר. | בדיקת אוצר מילים ופירוש תמונות. |
+| 3–5 | טבלת נתונים מודרכת, פתיחי משפטים ותפקידי חקירה בזוג. | הלומד/ת עדיין מפרש/ת מקור ותצפית. | הקשבה לשפת ראיות. |
+| 6–8 | מארגן טענה–ראיה–הנמקה ושאלה על מגבלת מקור. | הלומד/ת עדיין מעריך/ה ראיות ומתקן/ת טענה. | שיחה אישית לאחר יום 6. |
+| 9–12 | אוסף ראיות של בעלי עניין וטיעון אזרחי עם טענת־נגד. | הלומד/ת עדיין בונה טיעון מנומק ומבוסס מקור. | אימות טענת־הנגד ואיכות הציטוט. |
+| שונות של קורא מסך, רב־לשוניות, חישה או השתתפות | כותרות וטקסט חלופי, טקסט דיגיטלי נגיש, תצוגה מקדימה בשפת הבית כשאפשר, לוח זמנים חזותי, תפקיד יבש/בטוח למגע ומענה בדיבור/ציור/כתיבה. | מסלול הגישה משתנה; הנמקת הראיות אינה משתנה. | אישור התמיכות עם הלומד/ת והצוות, ולא על סמך הנחות. |
 
-## Adjustment protocol
+## נוהל התאמה
 
-At checkpoints, record observed ראיות, support to continue/change, ו־ why. Never use בינה מלאכותית to determine grades, interventions, behavior consequences, or placement.
+בנקודות הבדיקה תעדו את הראיות שנצפו, את התמיכה שיש להמשיך או לשנות ואת הסיבה לכך. אין להשתמש ב-AI לקביעת ציונים, התערבויות, השלכות התנהגות או השמה.

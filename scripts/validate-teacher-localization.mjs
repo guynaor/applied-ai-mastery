@@ -19,6 +19,13 @@ const fenceCount=markdown=>(markdown.match(/^```/gm)||[]).length;
 const documentIds=markdown=>[...new Set(markdown.replace(/(\[[^\]]*\])\([^)]+\)/g,'$1').match(/EDU-[A-Z]+-[0-9]+/g)||[])].sort();
 const numericTokens=markdown=>markdown.replace(/(\[[^\]]*\])\([^)]+\)/g,'$1').replace(/EDU-[A-Z]+-[0-9]+/g,'').match(/\d+(?:\.\d+)?%?|\d+[–-]\d+/g)?.sort()||[];
 const localLinks=markdown=>[...markdown.matchAll(/\[[^\]]*\]\(([^)]+)\)/g)].map(match=>match[1].trim().replace(/^<|>$/g,'').split('#')[0].split('?')[0]).filter(link=>link&&!/^(?:https?:|mailto:|tel:)/i.test(link));
+const proseLetterCounts=markdown=>{
+  const prose=markdown.split(/\r?\n/).filter(line=>{
+    const trimmed=line.trim();
+    return trimmed&&!trimmed.startsWith('```')&&!trimmed.startsWith('`')&&!/^(?:\|?\s*:?-{3,}:?\s*\|)+$/.test(trimmed)&&!/^\s*(?:EDU-[A-Z]+-\d+|[A-Za-z0-9_./-]+\.(?:csv|html|md))\s*$/.test(trimmed);
+  }).join(' ').replace(/`[^`]*`|\[[^\]]*\]\([^)]+\)|EDU-[A-Z]+-\d+|https?:\/\/\S+/g,'');
+  return {hebrew:(prose.match(/[\u0590-\u05ff]/g)||[]).length,latin:(prose.match(/[A-Za-z]/g)||[]).length};
+};
 
 assert.ok(existsSync(absolute(manifestPath)),`missing ${manifestPath}`);
 const manifest=JSON.parse(read(manifestPath));
@@ -42,6 +49,8 @@ for(const entry of manifest.entries){
   const source=read(`teacher-course/${entry.source}`);
   const target=read(entry.target);
   assert.match(target,/[\u0590-\u05ff]/,`${entry.target} contains no Hebrew`);
+  const {hebrew,latin}=proseLetterCounts(target);
+  assert.ok(hebrew>=latin,`${entry.target} is predominantly English prose (${latin} Latin letters, ${hebrew} Hebrew letters)`);
   assert.deepEqual(headings(target),headings(source),`${entry.target} heading structure differs from source`);
   assert.equal(fenceCount(target),fenceCount(source),`${entry.target} code-fence count differs from source`);
   assert.deepEqual(documentIds(target),documentIds(source),`${entry.target} document IDs differ from source`);

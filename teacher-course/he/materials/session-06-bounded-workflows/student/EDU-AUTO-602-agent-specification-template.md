@@ -1,57 +1,57 @@
-# EDU-AUTO-602 — Bounded סוכן Specification
+# EDU-AUTO-602 — מפרט סוכן תחום
 
-## 1. Scope ו־ owner
+## 1. תחום ואחריות
 
-| Field | Specification |
+| שדה | מפרט |
 | --- | --- |
-| תהליך עבודה name | Weekly ציבורי curriculum תכנון digest |
-| מורה owner | |
-| Purpose | Compare approved ציבורי snapshots ו־ draft private weekly תכנון digest. |
-| Deployment status | Specification ו־ test only; not deployed. |
-| Schedule | Friday 16:30 local time; maximum run time 10 minutes. |
+| שם תהליך העבודה | תקציר תכנון שבועי ממקורות תוכנית לימודים ציבוריים |
+| מורה אחראי/ת | |
+| מטרה | השוואת תמונות מצב ציבוריות מאושרות וטיוטת תקציר תכנון שבועי פרטי. |
+| מצב פריסה | מפרט ובדיקה בלבד; אינו נפרס. |
+| לוח זמנים | יום שישי 16:30 בזמן מקומי; זמן ריצה מרבי 10 דקות. |
 
-## 2. Allowed ו־ forbidden boundaries
+## 2. גבולות מותרים ואסורים
 
-| Allowed | Forbidden |
+| מותר | אסור |
 | --- | --- |
-| Read approved ציבורי snapshots ו־ last-run state. | Any תלמיד נתונים, roster, גיליון ציונים, attendance, behavior, placement, accommodation, משפחה-contact, LMS, or SIS נתונים. |
-| Detect duplicates by stable ID ו־ content hash. | Grades, behavioral decisions, placement, intervention, grouping, or recommendations about individual learners. |
-| Draft private digest עם citations ו־ uncertainty labels. | Sending external messages, publishing, posting, changing systems, or contacting students/families. |
-| Queue digest עבור מורה approval. | Treating changed מקור as verified or acting without מורה approval. |
+| קריאת תמונות מצב ציבוריות מאושרות ומצב הריצה הקודמת. | כל נתון תלמידים, רשימה כיתתית, גיליון ציונים, נוכחות, התנהגות, השמה, התאמות, פרטי משפחה, LMS או SIS. |
+| זיהוי כפילויות בעזרת מזהה יציב וגיבוב תוכן. | ציונים, החלטות התנהגות, השמה, התערבות, קיבוץ או המלצה על לומדים יחידים. |
+| טיוטת תקציר פרטי עם ציטוטים ותוויות אי־ודאות. | שליחת הודעות חיצוניות, פרסום, העלאה, שינוי מערכות או יצירת קשר עם תלמידים/משפחות. |
+| העברת תקציר לתור אישור של מורה. | התייחסות למקור שהשתנה כמאומת, או פעולה ללא אישור המורה. |
 
-## 3. Input validation ו־ state rules
+## 3. אימות קלט וכללי מצב
 
-- Accept only rows marked `public` עם a stable `snapshot_id`, date, מקור URL, ו־ content hash.
-- Reject ו־ stop run if row includes תלמיד נתונים or unapproved/private מקור.
-- State store keeps only `snapshot_id`, `content_hash`, `first_seen`, `last_seen`, `status`, ו־ מורה החלטה; no מקור body or personal נתונים.
-- Same ID ו־ same hash: mark `duplicate`, אין לבצע include in digest.
-- Same ID ו־ different hash: mark `changed—verify`; include מקור link ו־ before/after dates, never asserted conclusion.
-- New ID: mark `new—verify`; include only after input validation.
-- Never delete history automatically. A מורה may archive state after בדיקה.
+- קבלו רק שורות המסומנות `public` ובהן `snapshot_id` יציב, תאריך, כתובת מקור וגיבוב תוכן.
+- דחו ועצרו את הריצה אם שורה כוללת נתוני תלמידים או מקור פרטי/לא מאושר.
+- מאגר המצב מחזיק רק `snapshot_id`, `content_hash`, `first_seen`, `last_seen`, `status` והחלטת מורה; ללא גוף המקור וללא נתונים אישיים.
+- אותו מזהה ואותו גיבוב: סמנו `duplicate` ואל תכללו בתקציר.
+- אותו מזהה וגיבוב שונה: סמנו `changed—verify`; כללו קישור למקור ותאריכי לפני/אחרי, בלי מסקנה קובעת.
+- מזהה חדש: סמנו `new—verify`; כללו אותו רק לאחר אימות קלט.
+- אין למחוק היסטוריה אוטומטית. מורה יכול/ה לארכב מצב אחרי בדיקה.
 
-## 4. Digest ו־ approval gate
+## 4. תקציר ושער אישור
 
-Draft fields: run ID, time, מקור URL, snapshot ID, status, concise change description, related יחידת לימוד keyword, uncertainty, ו־ מורה בדיקה question.
+שדות הטיוטה: מזהה ריצה, שעה, כתובת מקור, מזהה תמונת מצב, מצב, תיאור שינוי תמציתי, מילת מפתח ליחידה, אי־ודאות ושאלת בדיקה למורה.
 
-נדרש gate: `pending_teacher_approval`. The מורה יש inspect original ציבורי sources, decide whether change applies locally, ו־ choose `approve`, `revise`, `archive`, or `reject`. Sending or publishing remains disabled until a מורה separately approves it; this תהליך עבודה has no delivery integration.
+השער הנדרש הוא `pending_teacher_approval`. המורה חייב/ת לבדוק את המקורות הציבוריים המקוריים, להחליט אם השינוי חל מקומית ולבחור `approve`, `revise`, `archive` או `reject`. שליחה ופרסום נשארים מושבתים עד אישור נפרד של מורה; לתהליך זה אין חיבור למסירה.
 
-## 5. Audit log
+## 5. יומן ביקורת
 
-עבור every run log: run ID; schedule trigger; input count; accepted/rejected/duplicate/changed counts; validation errors; state reads/writes; draft ID; approval state; stop reason; ו־ מורה החלטה. log יש never contain תלמיד נתונים or copied private content.
+לכל ריצה רשמו: מזהה ריצה; מפעיל לוח זמנים; מספר קלטים; ספירת התקבלו/נדחו/כפולים/השתנו; שגיאות אימות; קריאות/כתיבות מצב; מזהה טיוטה; מצב אישור; סיבת עצירה; והחלטת מורה. היומן לעולם לא יכיל נתוני תלמידים או תוכן פרטי שהועתק.
 
-## 6. Failures ו־ stop conditions
+## 6. כשלים ותנאי עצירה
 
-| Condition | Safe action |
+| תנאי | פעולה בטוחה |
 | --- | --- |
-| Missing/invalid URL, ID, date, or hash | Stop; log validation failure; create no digest. |
-| תלמיד or private נתונים detected | Stop immediately; quarantine nothing in state; log minimal reason; alert internal בדיקה queue. |
-| Conflicting identity or unapproved מקור | Stop; request מורה בדיקה. |
-| מקור unavailable or timeout | Mark run incomplete; אין לבצע infer change; log ו־ await מורה בדיקה. |
-| Duplicate snapshot | Log duplicate; no digest item. |
-| Runtime exceeds 10 minutes | Stop; preserve minimal audit event; no retries that widen scope. |
+| כתובת, מזהה, תאריך או גיבוב חסרים/לא תקינים | עצירה; רישום כשל אימות; אין יצירת תקציר. |
+| זוהו נתוני תלמידים או נתונים פרטיים | עצירה מיידית; אין בידוד נתונים במצב; רישום סיבה מזערית; התראה לתור בדיקה פנימי. |
+| זהות מתנגשת או מקור לא מאושר | עצירה ובקשת בדיקת מורה. |
+| מקור אינו זמין או פג הזמן | סימון ריצה כחלקית; אין להסיק שינוי; רישום והמתנה לבדיקת מורה. |
+| תמונת מצב כפולה | רישום כפילות; אין פריט בתקציר. |
+| זמן הריצה עולה על 10 דקות | עצירה; שמירת אירוע ביקורת מזערי; אין ניסיונות חוזרים המרחיבים את התחום. |
 
-## 7. מורה sign-off
+## 7. אישור המורה
 
-I verified allowed sources, state/duplicate logic, tests, audit fields, ו־ approval gate. I understand that this design cannot grade, decide behavior/placement/intervention, or send/publish externally.
+אימתתי את המקורות המותרים, את לוגיקת המצב/כפילויות, את הבדיקות, שדות הביקורת ושער האישור. אני מבין/ה שתכנון זה אינו יכול לתת ציון, להחליט על התנהגות/השמה/התערבות, או לשלוח/לפרסם החוצה.
 
-מורה: ____________________  Date: __________  החלטה: approve design / revise / reject
+מורה: ____________________  תאריך: __________  החלטה: approve design / revise / reject

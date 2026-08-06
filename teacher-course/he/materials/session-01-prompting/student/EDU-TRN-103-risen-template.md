@@ -1,11 +1,11 @@
-# EDU-TRN-103 — RISEN פרומפט תבנית
+# EDU-TRN-103 — תבנית פרומפט RISEN
 
-| Element | Draft |
+| רכיב | טיוטה |
 | --- | --- |
-| Role | You are a שיעור-design assistant; אין לבצע make learner decisions. |
-| הנחיות | Draft River Systems שיעור עבור [grade band] using only supplied context. |
-| Steps | State objective; propose opening, investigation, formative בדיקה, access supports, ו־ closing; flag assumptions. |
-| End goal | A מורה-reviewable plan, not final שיעור. |
-| Narrowing אילוצים | [time], [חומרים], [language/access needs], no real תלמיד נתונים, no invented תקנים or local facts. |
+| תפקיד | אתם עוזרי תכנון שיעור; אל תקבלו החלטות על לומדים. |
+| הנחיות | נסחו שיעור על מערכות נהר עבור [שכבת גיל], על סמך ההקשר שסופק בלבד. |
+| שלבים | ציינו מטרה; הציעו פתיחה, חקירה, בדיקה מעצבת, תמיכות נגישות וסגירה; סמנו הנחות. |
+| תוצר סופי | תוכנית שהמורה יכול/ה לבדוק, ולא שיעור סופי. |
+| אילוצים ממקדים | [זמן], [חומרים], [צורכי שפה/נגישות], ללא נתוני תלמידים אמיתיים וללא תקנים או עובדות מקומיות מומצאים. |
 
-End עם: “List claims ו־ תקנים language that the מורה יש verify locally before use.”
+סיימו במילים: “פרטו טענות וניסוחי תקנים שהמורה חייב/ת לאמת מקומית לפני השימוש.”

@@ -1,17 +1,17 @@
-# EDU-RD-203 — מחקר Memo תבנית
+# EDU-RD-203 — תבנית מזכר מחקר
 
-## Question ו־ scope
+## השאלה ותחום הבדיקה
 
-## What strongest ראיות supports
+## מה הראיות החזקות תומכות בו
 
-## What weaker or contextual ראיות suggests
+## מה מציעות ראיות חלשות יותר או תלויות הקשר
 
-## Conflicts, uncertainty, ו־ missing information
+## סתירות, אי־ודאות ומידע חסר
 
-## Bounded recommendation
+## המלצה תחומה
 
-State what is safe to try, עבור which grade-band adaptation, ו־ what יש be checked locally (permission, נגישות, site בטיחות, תקנים, current conditions).
+ציינו מה בטוח לנסות, לאיזו התאמה של שכבת גיל, ומה יש לבדוק מקומית: אישור, נגישות, בטיחות באתר, תקנים ותנאים עדכניים.
 
-## אימות, פרטיות, הצעד הבא
+## אימות, פרטיות והצעד הבא
 
-List מקור IDs checked, confirm בדיוני/ציבורי-only נתונים, ו־ name next ראיות needed.
+רשמו את מזהי המקורות שנבדקו, אשרו שימוש בנתונים בדיוניים או ציבוריים בלבד, וציינו איזו ראיה נוספת נדרשת בהמשך.
