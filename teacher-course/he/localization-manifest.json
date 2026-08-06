@@ -1,0 +1,307 @@
+{
+  "version": 1,
+  "canonicalLanguage": "en",
+  "locale": "he",
+  "entries": [
+    {
+      "source": "capstone/README.md",
+      "target": "teacher-course/he/capstone/README.md",
+      "kind": "overview",
+      "status": "reviewed"
+    },
+    {
+      "source": "capstone/instructor/EDU-CAP-099-step-by-step-facilitation-script.md",
+      "target": "teacher-course/he/capstone/instructor/EDU-CAP-099-step-by-step-facilitation-script.md",
+      "kind": "instructor",
+      "status": "reviewed"
+    },
+    {
+      "source": "capstone/instructor/EDU-CAP-100-capstone-teaching-guide.md",
+      "target": "teacher-course/he/capstone/instructor/EDU-CAP-100-capstone-teaching-guide.md",
+      "kind": "instructor",
+      "status": "reviewed"
+    },
+    {
+      "source": "capstone/instructor/EDU-CAP-101-instructor-guide.md",
+      "target": "teacher-course/he/capstone/instructor/EDU-CAP-101-instructor-guide.md",
+      "kind": "instructor",
+      "status": "reviewed"
+    },
+    {
+      "source": "capstone/student/EDU-CAP-001-unit-plan-brief.md",
+      "target": "teacher-course/he/capstone/student/EDU-CAP-001-unit-plan-brief.md",
+      "kind": "student",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-01-prompting/README.md",
+      "target": "teacher-course/he/materials/session-01-prompting/README.md",
+      "kind": "overview",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-01-prompting/instructor/EDU-TRN-100-instructor-guide.md",
+      "target": "teacher-course/he/materials/session-01-prompting/instructor/EDU-TRN-100-instructor-guide.md",
+      "kind": "instructor",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-01-prompting/instructor/EDU-TRN-100-step-by-step-lesson-script.md",
+      "target": "teacher-course/he/materials/session-01-prompting/instructor/EDU-TRN-100-step-by-step-lesson-script.md",
+      "kind": "instructor",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-01-prompting/instructor/EDU-TRN-101-answer-key.md",
+      "target": "teacher-course/he/materials/session-01-prompting/instructor/EDU-TRN-101-answer-key.md",
+      "kind": "answer-key",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-01-prompting/student/EDU-TRN-100-lesson-design-brief.md",
+      "target": "teacher-course/he/materials/session-01-prompting/student/EDU-TRN-100-lesson-design-brief.md",
+      "kind": "student",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-01-prompting/student/EDU-TRN-101-context-cards.md",
+      "target": "teacher-course/he/materials/session-01-prompting/student/EDU-TRN-101-context-cards.md",
+      "kind": "student",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-01-prompting/student/EDU-TRN-102-prompt-comparison.md",
+      "target": "teacher-course/he/materials/session-01-prompting/student/EDU-TRN-102-prompt-comparison.md",
+      "kind": "student",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-01-prompting/student/EDU-TRN-103-risen-template.md",
+      "target": "teacher-course/he/materials/session-01-prompting/student/EDU-TRN-103-risen-template.md",
+      "kind": "student",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-02-research/README.md",
+      "target": "teacher-course/he/materials/session-02-research/README.md",
+      "kind": "overview",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-02-research/instructor/EDU-TRN-200-instructor-guide.md",
+      "target": "teacher-course/he/materials/session-02-research/instructor/EDU-TRN-200-instructor-guide.md",
+      "kind": "instructor",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-02-research/instructor/EDU-TRN-200-step-by-step-lesson-script.md",
+      "target": "teacher-course/he/materials/session-02-research/instructor/EDU-TRN-200-step-by-step-lesson-script.md",
+      "kind": "instructor",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-02-research/instructor/EDU-TRN-201-answer-key.md",
+      "target": "teacher-course/he/materials/session-02-research/instructor/EDU-TRN-201-answer-key.md",
+      "kind": "answer-key",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-02-research/student/EDU-RD-201-teaching-brief.md",
+      "target": "teacher-course/he/materials/session-02-research/student/EDU-RD-201-teaching-brief.md",
+      "kind": "student",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-02-research/student/EDU-RD-203-research-memo-template.md",
+      "target": "teacher-course/he/materials/session-02-research/student/EDU-RD-203-research-memo-template.md",
+      "kind": "student",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-03-gradebook/README.md",
+      "target": "teacher-course/he/materials/session-03-gradebook/README.md",
+      "kind": "overview",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-03-gradebook/instructor/EDU-TRN-300-instructor-guide.md",
+      "target": "teacher-course/he/materials/session-03-gradebook/instructor/EDU-TRN-300-instructor-guide.md",
+      "kind": "instructor",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-03-gradebook/instructor/EDU-TRN-300-step-by-step-lesson-script.md",
+      "target": "teacher-course/he/materials/session-03-gradebook/instructor/EDU-TRN-300-step-by-step-lesson-script.md",
+      "kind": "instructor",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-03-gradebook/instructor/EDU-TRN-301-answer-key.md",
+      "target": "teacher-course/he/materials/session-03-gradebook/instructor/EDU-TRN-301-answer-key.md",
+      "kind": "answer-key",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-03-gradebook/student/EDU-OPS-301-analysis-brief.md",
+      "target": "teacher-course/he/materials/session-03-gradebook/student/EDU-OPS-301-analysis-brief.md",
+      "kind": "student",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-03-gradebook/student/EDU-OPS-302-teacher-review-template.md",
+      "target": "teacher-course/he/materials/session-03-gradebook/student/EDU-OPS-302-teacher-review-template.md",
+      "kind": "student",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-04-visual-artifacts/README.md",
+      "target": "teacher-course/he/materials/session-04-visual-artifacts/README.md",
+      "kind": "overview",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-04-visual-artifacts/instructor/EDU-TRN-400-instructor-guide.md",
+      "target": "teacher-course/he/materials/session-04-visual-artifacts/instructor/EDU-TRN-400-instructor-guide.md",
+      "kind": "instructor",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-04-visual-artifacts/instructor/EDU-TRN-400-step-by-step-lesson-script.md",
+      "target": "teacher-course/he/materials/session-04-visual-artifacts/instructor/EDU-TRN-400-step-by-step-lesson-script.md",
+      "kind": "instructor",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-04-visual-artifacts/instructor/EDU-TRN-401-answer-key.md",
+      "target": "teacher-course/he/materials/session-04-visual-artifacts/instructor/EDU-TRN-401-answer-key.md",
+      "kind": "answer-key",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-04-visual-artifacts/student/EDU-COM-401-presentation-brief.md",
+      "target": "teacher-course/he/materials/session-04-visual-artifacts/student/EDU-COM-401-presentation-brief.md",
+      "kind": "student",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-04-visual-artifacts/student/EDU-COM-402-source-notes.md",
+      "target": "teacher-course/he/materials/session-04-visual-artifacts/student/EDU-COM-402-source-notes.md",
+      "kind": "student",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-04-visual-artifacts/student/EDU-COM-404-accessibility-critique.md",
+      "target": "teacher-course/he/materials/session-04-visual-artifacts/student/EDU-COM-404-accessibility-critique.md",
+      "kind": "student",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-05-unit-planning/README.md",
+      "target": "teacher-course/he/materials/session-05-unit-planning/README.md",
+      "kind": "overview",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-05-unit-planning/instructor/EDU-TRN-500-instructor-guide.md",
+      "target": "teacher-course/he/materials/session-05-unit-planning/instructor/EDU-TRN-500-instructor-guide.md",
+      "kind": "instructor",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-05-unit-planning/instructor/EDU-TRN-500-step-by-step-lesson-script.md",
+      "target": "teacher-course/he/materials/session-05-unit-planning/instructor/EDU-TRN-500-step-by-step-lesson-script.md",
+      "kind": "instructor",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-05-unit-planning/instructor/EDU-TRN-501-answer-key.md",
+      "target": "teacher-course/he/materials/session-05-unit-planning/instructor/EDU-TRN-501-answer-key.md",
+      "kind": "answer-key",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-05-unit-planning/student/EDU-OPS-501-unit-brief.md",
+      "target": "teacher-course/he/materials/session-05-unit-planning/student/EDU-OPS-501-unit-brief.md",
+      "kind": "student",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-05-unit-planning/student/EDU-OPS-504-differentiation-plan.md",
+      "target": "teacher-course/he/materials/session-05-unit-planning/student/EDU-OPS-504-differentiation-plan.md",
+      "kind": "student",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-06-bounded-workflows/README.md",
+      "target": "teacher-course/he/materials/session-06-bounded-workflows/README.md",
+      "kind": "overview",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-06-bounded-workflows/instructor/EDU-TRN-600-instructor-guide.md",
+      "target": "teacher-course/he/materials/session-06-bounded-workflows/instructor/EDU-TRN-600-instructor-guide.md",
+      "kind": "instructor",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-06-bounded-workflows/instructor/EDU-TRN-600-step-by-step-lesson-script.md",
+      "target": "teacher-course/he/materials/session-06-bounded-workflows/instructor/EDU-TRN-600-step-by-step-lesson-script.md",
+      "kind": "instructor",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-06-bounded-workflows/instructor/EDU-TRN-601-answer-key.md",
+      "target": "teacher-course/he/materials/session-06-bounded-workflows/instructor/EDU-TRN-601-answer-key.md",
+      "kind": "answer-key",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-06-bounded-workflows/student/EDU-AUTO-601-workflow-brief.md",
+      "target": "teacher-course/he/materials/session-06-bounded-workflows/student/EDU-AUTO-601-workflow-brief.md",
+      "kind": "student",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-06-bounded-workflows/student/EDU-AUTO-602-agent-specification-template.md",
+      "target": "teacher-course/he/materials/session-06-bounded-workflows/student/EDU-AUTO-602-agent-specification-template.md",
+      "kind": "student",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-07-classroom-apps/README.md",
+      "target": "teacher-course/he/materials/session-07-classroom-apps/README.md",
+      "kind": "overview",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-07-classroom-apps/instructor/EDU-TRN-700-instructor-guide.md",
+      "target": "teacher-course/he/materials/session-07-classroom-apps/instructor/EDU-TRN-700-instructor-guide.md",
+      "kind": "instructor",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-07-classroom-apps/instructor/EDU-TRN-700-step-by-step-lesson-script.md",
+      "target": "teacher-course/he/materials/session-07-classroom-apps/instructor/EDU-TRN-700-step-by-step-lesson-script.md",
+      "kind": "instructor",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-07-classroom-apps/instructor/EDU-TRN-701-answer-key.md",
+      "target": "teacher-course/he/materials/session-07-classroom-apps/instructor/EDU-TRN-701-answer-key.md",
+      "kind": "answer-key",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-07-classroom-apps/student/EDU-APP-701-resource-hub-brief.md",
+      "target": "teacher-course/he/materials/session-07-classroom-apps/student/EDU-APP-701-resource-hub-brief.md",
+      "kind": "student",
+      "status": "reviewed"
+    },
+    {
+      "source": "materials/session-07-classroom-apps/student/EDU-APP-704-accessibility-test-log.md",
+      "target": "teacher-course/he/materials/session-07-classroom-apps/student/EDU-APP-704-accessibility-test-log.md",
+      "kind": "student",
+      "status": "reviewed"
+    }
+  ]
+}
