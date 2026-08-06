@@ -1,0 +1,5 @@
+evidence_id,source_or_artifact,type,claim_or_constraint_supported,limitation_or_uncertainty,teacher_verification,affected_deliverables,status
+E-01,EDU-SRC-204 research summary,fictional research summary,Inquiry discussion can support evidence-based explanation,Not local standards or proof for every age band,Check current district standards and adapt vocabulary,sequence rubric deck,pending
+E-02,EDU-SRC-201 district guidance,fictional district guidance,Family communication must be reviewed and accessible,Scenario document may not reflect local policy,Confirm local translation and communication policy,family draft,required
+E-03,EDU-OPS-502 constraints,fictional unit constraint,Ten-day schedule and accommodation checkpoints,Teacher must confirm current timetable and learner needs,Review schedule and approved supports before Day 1,sequence differentiation,required
+E-04,EDU-DATA-301 fictional gradebook,fictional instructional data,Missingness and score patterns are questions for review,Not evidence of learner ability behavior or placement,Inspect original work and context with teacher judgment,gradebook analysis,required
