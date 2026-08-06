@@ -6,6 +6,8 @@ const personalHtml=read('personal.html');
 const personalJs=read('site/assets/js/personal-course.js');
 const professionalHtml=read('professional.html');
 const professionalJs=read('site/assets/js/course.js');
+const teacherHtml=read('teacher.html');
+const teacherJs=read('site/assets/js/teacher-course.js');
 
 const urls={
   personalEn:'https://docs.google.com/document/d/1IHBKI8awtoKUCrxSvxyLP9rD0VwqvV4AJ3OqdZhXTuc/edit',
@@ -30,4 +32,9 @@ assert.match(professionalHtml,/data-professional-journal-link[^>]*target="_blank
 assert.match(professionalHtml,/data-i18n="journalInstruction"/);
 assert.match(professionalJs,/File -> Make a copy/);
 
-console.log('Bilingual Google Docs journal-link contract passed');
+assert.match(teacherHtml,/data-teacher-journal-link/);
+assert.match(teacherHtml,/document\.html\?src=teacher-course%2Fstudent%2Fai-learning-journal\.md/);
+assert.match(teacherJs,/const prefix=hebrew\?'teacher-course\/he\/':'teacher-course\//);
+assert.match(teacherJs,/resourceHref\(`\$\{prefix\}student\/ai-learning-journal\.md`\)/);
+
+console.log('Bilingual journal-link contract passed');

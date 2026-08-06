@@ -1,0 +1,6 @@
+date,decision_or_assumption,evidence_or_constraint,owner,verification_or_review,downstream_effect,open_question,status
+YYYY-MM-DD,Select target grade band and local connection,E-01;E-03,teacher,Check standards timetable and safety,sequence deck rubric,Which local example is accurate and appropriate?,open
+YYYY-MM-DD,Choose source set for learner evaluation,E-01,teacher,Read original source and note limitations,sequence deck,Do sources represent more than one perspective?,open
+YYYY-MM-DD,Respond to fictional gradebook pattern,E-04,teacher,Review work samples and context; do not automate outcome,formative follow-up,What support is appropriate after teacher review?,open
+YYYY-MM-DD,Approve family communication draft,E-02,teacher,Check policy language accessibility and translation,family draft,When and through which approved channel?,open
+YYYY-MM-DD,Optional extension remains a design only,capstone boundary,teacher,Confirm no deployment or external connection,extension,What would need approval before a future pilot?,open

@@ -1,0 +1,6 @@
+criterion,emerging,developing,proficient,advanced
+Local privacy-preserving build,Uses remote dependencies or collects data,Mostly local but a boundary is unclear,One dependency-free local file uses only fictional/public materials and collects no data,Submission documents inspection for forms trackers remote requests and data paths
+Accessibility,No accessibility evidence,Some semantic or visual checks exist,Keyboard focus headings controls contrast and meaningful alt text are tested and logged,Revisions show how findings improved access for the chosen learners
+Age suitability,Audience is unspecified,Grade band is named but not reflected,Language imagery and task demand fit a selected K-12 band,Adaptation thoughtfully compares needs across grade bands
+Resource integrity,Materials have no source status,Some sources are listed,Inventory identifies fictional/public status and teacher verifies claims,Teacher review anticipates local-context and representation concerns
+Teacher judgment and scope,App is treated as autonomous,Teacher review is mentioned,Teacher sign-off controls sharing and app avoids grades behavior and tracking,Reflection explains concrete limits of a simple classroom app
