@@ -17,7 +17,18 @@ const sourceInventory=listFiles('teacher-course').filter(file=>file.endsWith('.m
 const headings=markdown=>[...markdown.matchAll(/^(#{1,6})\s/gm)].map(match=>match[1].length);
 const fenceCount=markdown=>(markdown.match(/^```/gm)||[]).length;
 const documentIds=markdown=>[...new Set(markdown.replace(/(\[[^\]]*\])\([^)]+\)/g,'$1').match(/EDU-[A-Z]+-[0-9]+/g)||[])].sort();
-const numericTokens=markdown=>markdown.replace(/(\[[^\]]*\])\([^)]+\)/g,'$1').replace(/EDU-[A-Z]+-[0-9]+/g,'').match(/\d+(?:\.\d+)?%?|\d+[–-]\d+/g)?.sort()||[];
+const stripGradeBandTerms=markdown=>markdown.replace(/K[–-]12|K[–-]2|3[–-]5|6[–-]8|9[–-]12|יסודי א׳–ו׳|חטיבה ז׳–ט׳|תיכון י׳–י״ב/gu,'');
+const numericTokens=markdown=>stripGradeBandTerms(markdown).replace(/(\[[^\]]*\])\([^)]+\)/g,'$1').replace(/EDU-[A-Z]+-[0-9]+/g,'').match(/\d+[–-]\d+|\d+(?:\.\d+)?%?/g)?.sort()||[];
+assert.deepEqual(
+  numericTokens('K–2 with 35 minutes'),
+  numericTokens('יסודי א׳–ו׳ עם 35 דקות'),
+  'equivalent Israeli grade bands must not affect numeric parity',
+);
+assert.notDeepEqual(
+  numericTokens('K–2 with 35 minutes'),
+  numericTokens('יסודי א׳–ו׳ עם 40 דקות'),
+  'unrelated numeric changes must still fail parity',
+);
 const localLinks=markdown=>[...markdown.matchAll(/\[[^\]]*\]\(([^)]+)\)/g)].map(match=>match[1].trim().replace(/^<|>$/g,'').split('#')[0].split('?')[0]).filter(link=>link&&!/^(?:https?:|mailto:|tel:)/i.test(link));
 const proseLetterCounts=markdown=>{
   const prose=markdown.split(/\r?\n/).filter(line=>{
