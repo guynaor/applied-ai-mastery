@@ -42,6 +42,7 @@ assert.match(missionSix,/teacher approval/i,'Mission 6 must require teacher appr
 
 const missionSeven=sessionBlock(7,8);
 assert.match(missionSeven,/accessibility/i,'Mission 7 must address accessibility');
+assert.match(missionSeven,/no data collection/i,'Mission 7 must prohibit data collection');
 
 const resourcePaths=[...courseJs.matchAll(/['"](teacher-course\/(?:he\/)?(?:materials|capstone)\/[^'"\s]+)['"]/g)]
   .map(([,path])=>path);
