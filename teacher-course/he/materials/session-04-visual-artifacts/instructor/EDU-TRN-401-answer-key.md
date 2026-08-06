@@ -1,11 +1,11 @@
-# EDU-TRN-401 — מפתח תשובות ו־ Exemplar Decisions
+# EDU-TRN-401 — מפתח תשובות והחלטות לדוגמה
 
-There is no single deck design. Strong work makes these decisions:
+אין עיצוב יחיד נכון למצגת. עבודה חזקה מקבלת את ההחלטות הבאות:
 
-- Slide 2 labels water-cycle drawing as a **generic model** ו־ holds local supply route עבור מורה אימות.
-- Slide 3 uses dated, traceable מקור ו־ captions its scope. A school observation is not converted into district-wide statistic.
-- K–2 version uses read-aloud, picture vocabulary, ו־ מורה-mediated מקור talk. 3–5 version asks guided questions. 6–8 version asks claim/ראיות/reasoning. 9–12 version compares stakeholder claims ו־ ראיות limits.
-- Useful alt text: “Diagram uses arrows between cloud, rain, stream, ו־ tap to show simplified cycle; it is not map of our town.”
-- Reject image of dry, cracked field captioned “We are running out of water” if it has no local מקור, may induce fear, ו־ overstates claim. Replace it עם a sourced local question or generic diagram marked as illustrative.
+- שקף 2 מתייג ציור של מחזור מים כ־**מודל כללי**, ומשאיר את נתיב אספקת המים המקומי לאימות המורה.
+- שקף 3 משתמש במקור מתוארך ובר־מעקב ומציין בכיתוב את היקפו. תצפית בבית ספר אינה הופכת לסטטיסטיקה מחוזית.
+- גרסת K–2 משתמשת בהקראה, אוצר מילים חזותי ושיח מקור בתיווך המורה. גרסת 3–5 שואלת שאלות מודרכות. גרסת 6–8 מבקשת טענה/ראיה/הנמקה. גרסת 9–12 משווה טענות של בעלי עניין ומגבלות ראיות.
+- טקסט חלופי שימושי: ״בתרשים חצים בין ענן, גשם, נחל וברז המראים מחזור מפושט; זו אינה מפה של היישוב שלנו.״
+- דחו תמונה של שדה יבש וסדוק עם הכיתוב ״המים שלנו אוזלים״ אם אין לה מקור מקומי, היא עלולה לעורר פחד והיא מגזימה בטענה. החליפו אותה בשאלה מקומית מבוססת מקור או בתרשים כללי המסומן כהמחשה.
 
-A correct critique identifies specific סיכון ו־ a concrete revision, not merely “make it clearer.”
+ביקורת נכונה מזהה סיכון מסוים ותיקון מעשי, ולא רק ״להבהיר יותר״.

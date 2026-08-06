@@ -1,35 +1,35 @@
-# EDU-CAP-099 — שלב אחר שלב פרויקט מסכם Facilitation Script
+# EDU-CAP-099 — תסריט הנחיה לפרויקט הגמר, שלב אחר שלב
 
-**Suggested duration:** 4–6 sessions, 7–11 hours total.
+**משך מוצע:** 4–6 מפגשים, 7–11 שעות בסך הכול.
 
-**מנחה stance:** Ask עבור traceability ו־ מורה reasoning; אין לבצע supply instructional conclusion.
+**עמדת המנחה:** בקשו יכולת מעקב והנמקת מורה; אל תספקו את המסקנה ההוראתית.
 
-## 1. Kickoff: choose bounded context (30–45 min)
+## 1. פתיחה: בחירת הקשר מוגבל (30–45 דק׳)
 
-Have learner select one target band ו־ explain central inquiry. בדיקה rule that plan יש still show adaptations עבור all four bands. Confirm that all דוגמאות ו־ גיליון ציונים נתונים are בדיוני/ציבורי ו־ that מורה judgment remains final.
+בקשו מהלומד לבחור שכבת גיל יעד ולהסביר את החקר המרכזי. סקרו את הכלל שלפיו התכנית עדיין חייבת להציג התאמות לכל ארבע השכבות. ודאו שכל הדוגמאות ונתוני יומן הציונים הם בדיוניים/ציבוריים וששיקול דעת המורה נשאר סופי.
 
-פרומפט: “Which choice is ראיות-based, which is constrained by the כיתה, ו־ which is your professional judgment?”
+הנחיה: ״איזו בחירה מבוססת ראיות, איזו מוגבלת בידי הכיתה ואיזו היא שיקול דעתכם המקצועי?״
 
-## 2. ראיות ו־ constraint map (45–60 min)
+## 2. מפת ראיות ואילוצים (45–60 דק׳)
 
-בדיקה the ראיות register before drafting slides. Require four entries עם מקור type, limitation, local אימות, ו־ affected artifacts. Ask learner to mark a מקור that כדאי not be treated as authority, such as an בינה מלאכותית or vendor claim.
+עברו על מרשם הראיות לפני ניסוח השקפים. דרשו ארבע רשומות עם סוג מקור, מגבלה, אימות מקומי ותוצרים מושפעים. בקשו מהלומד לסמן מקור שאסור להתייחס אליו כסמכות, כגון טענת בינה מלאכותית או ספק.
 
-Checkpoint: no consequential claim may appear in sequence, מחוון, deck, or משפחה draft without an ראיות ID, a constraint, or labelled מורה judgment.
+נקודת בקרה: שום טענה בעלת משמעות אינה יכולה להופיע ברצף, ברובריקה, במצגת או בטיוטה למשפחות בלי מזהה ראיה, אילוץ או שיקול דעת מורה מסומן.
 
-## 3. Design the למידה arc ו־ התאמה דיפרנציאלית (75–100 min)
+## 3. עיצוב קשת הלמידה והדיפרנציאציה (75–100 דק׳)
 
-learner drafts ten-day sequence, formative checks, הערכה, ו־ four-band התאמה דיפרנציאלית. Ask how K–2 participation, 3–5 ראיות explanation, 6–8 מקור evaluation, ו־ 9–12 argument change same inquiry. Inspect access ו־ expression options; אין לבצע accept lower-thinking substitute as התאמה דיפרנציאלית.
+הלומד מנסח את הרצף בן עשרת הימים, בדיקות מעצבות, הערכה ודיפרנציאציה בארבע שכבות. שאלו כיצד השתתפות K–2, הסבר ראיות ב־3–5, הערכת מקור ב־6–8 וטיעון ב־9–12 משנים את אותו חקר. בחנו אפשרויות נגישות והבעה; אל תקבלו תחליף נמוך־חשיבה כדיפרנציאציה.
 
-## 4. Build ו־ בדיקה תקשורת artifacts (60–90 min)
+## 4. בנייה ובדיקה של תוצרי תקשורת (60–90 דק׳)
 
-בדיקה neutral בדיוני-גיליון ציונים pattern note, משפחה draft, ו־ six-slide deck. Ask learner to trace two slide claims to sources, read alt text aloud, ו־ identify approval נדרש before a משפחה message could be sent. Reject unsupported local facts, decorative but misleading visualizations, ו־ grading language that treats pattern as conclusion.
+עברו על הערת דפוס יומן הציונים הבדיוני הניטרלית, טיוטת המשפחה והמצגת בת שישה שקפים. בקשו מהלומד לעקוב אחר שתי טענות שקף אל מקורות, לקרוא טקסט חלופי בקול ולזהות את האישור הנדרש לפני שליחת הודעה למשפחה. דחו עובדות מקומיות לא מבוססות, חזות קישוטית אך מטעה ושפת ציונים ההופכת דפוס למסקנה.
 
-## 5. אופציונלי extension boundary בדיקה (20–30 min)
+## 5. בדיקת גבול ההרחבה האופציונלית (20–30 דק׳)
 
-If selected, inspect resource hub or digest specification. It יש remain local/design-only, avoid תלמיד נתונים ו־ נתונים collection, log or document intended behavior, ו־ require מורה approval before sharing. אין לבצע permit deployment, automated messaging, grade actions, placement, behavioral decisions, or interventions.
+אם נבחרה, בחנו את מרכז המשאבים או מפרט התקציר. הוא חייב להישאר מקומי/לעיצוב בלבד, להימנע מנתוני תלמידים ומאיסוף נתונים, לתעד או לרשום התנהגות מיועדת ולדרוש אישור מורה לפני שיתוף. אין לאפשר פריסה, הודעות אוטומטיות, פעולות ציון, החלטות השמה, החלטות התנהגותיות או התערבויות.
 
-## 6. Controlled challenge ו־ final defense (45–60 min)
+## 6. אתגר מבוקר והגנה סופית (45–60 דק׳)
 
-Introduce one change: a shorter שיעור period, unavailable investigation material, a משפחה translation need, or a מקור found to be weak. Require impact analysis before revision. Then ask learner to defend one ראיות choice, one נגישות choice, one פרטיות boundary, ו־ one החלטה בינה מלאכותית could not make.
+הציגו שינוי אחד: שיעור קצר יותר, חומר חקירה שאינו זמין, צורך בתרגום למשפחה או מקור שנמצא חלש. דרשו ניתוח השפעה לפני התיקון. אחר כך בקשו מהלומד להגן על בחירת ראיה אחת, בחירת נגישות אחת, גבול פרטיות אחד והחלטה אחת שבינה מלאכותית לא יכולה לקבל.
 
-Record the בדיקה in the החלטה log. A polished deck cannot compensate עבור missing traceability or human בדיקה.
+תעדו את הבדיקה ביומן ההחלטות. מצגת מלוטשת אינה מפצה על חוסר יכולת מעקב או בדיקה אנושית.

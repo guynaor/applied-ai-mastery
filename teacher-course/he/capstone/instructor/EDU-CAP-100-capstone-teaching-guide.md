@@ -1,52 +1,52 @@
-# EDU-CAP-100 — פרויקט מסכם Teaching מדריך
+# EDU-CAP-100 — מדריך הוראה לפרויקט הגמר
 
-## Purpose
+## מטרה
 
-This פרויקט מסכם assesses whether a מורה can use בינה מלאכותית as bounded design partner while retaining responsibility עבור למידה, ראיות, נגישות, פרטיות, ו־ תקשורת. It is not request עבור an autonomous teaching system or generic יחידת לימוד-plan download.
+פרויקט גמר זה בודק אם מורה יכול/ה להשתמש בבינה מלאכותית כשותפת תכנון מוגבלת, תוך שמירת האחריות ללמידה, ראיות, נגישות, פרטיות ותקשורת. אין זו בקשה למערכת הוראה אוטונומית או להורדת תכנית יחידה כללית.
 
-## Teaching יעדים
+## מטרות הוראה
 
-learner demonstrates that they can:
+הלומד מדגים שהוא/היא יכולים:
 
-1. connect sources ו־ כיתה אילוצים to consequential choices;
-2. create coherent water-יחידת לימוד sequence עבור a selected band while differentiating across K–12;
-3. evaluate ראיות quality, uncertainty, ו־ local fit;
-4. make instructional תקשורת accessible ו־ מותאם גיל;
-5. interpret בדיוני patterns as questions עבור מורה בדיקה, never automated conclusions;
-6. explain boundary between an בינה מלאכותית draft ו־ a מורה החלטה.
+1. לחבר מקורות ואילוצי כיתה לבחירות בעלות משמעות;
+2. ליצור רצף עקבי של יחידת מים לשכבה נבחרת תוך דיפרנציאציה לאורך K–12;
+3. להעריך איכות ראיות, אי־ודאות והתאמה מקומית;
+4. להפוך תקשורת הוראתית לנגישה ומתאימה לגיל;
+5. לפרש דפוסים בדיוניים כשאלות לבדיקת המורה, ולא כמסקנות אוטומטיות;
+6. להסביר את הגבול בין טיוטת בינה מלאכותית להחלטת מורה.
 
-## Recommended flow
+## מהלך מומלץ
 
-Use facilitation script in four to six meetings: kickoff/ראיות map; sequence ו־ התאמה דיפרנציאלית; הערכה/נתונים/תקשורת artifacts; cross-artifact בדיקה; controlled challenge ו־ defense. Require a בדיקה checkpoint before finalizing deck ו־ again before final הגשה.
+השתמשו בתסריט ההנחיה בארבעה עד שישה מפגשים: פתיחה/מפת ראיות; רצף ודיפרנציאציה; תוצרי הערכה/נתונים/תקשורת; בדיקה חוצת תוצרים; אתגר מבוקר והגנה. דרשו נקודת בדיקה לפני סיום המצגת ושוב לפני ההגשה הסופית.
 
-## What to inspect
+## מה לבדוק
 
-### Traceability
+### יכולת מעקב
 
-Select five consequential choices—such as local דוגמה, מקור, grouping approach, הערכה criterion, משפחה-message claim, or deck חזותי. learner יש locate each in the ראיות register or החלטה log, state constraint/assumption, ו־ identify a אימות method. Missing traceability is revision issue even if prose is polished.
+בחרו חמש בחירות בעלות משמעות — לדוגמה דוגמה מקומית, מקור, גישת קיבוץ, קריטריון הערכה, טענה בהודעה למשפחות או דימוי במצגת. הלומד חייב לאתר כל אחת במרשם הראיות או ביומן ההחלטות, לציין את האילוץ/ההנחה ולזהות שיטת אימות. חוסר יכולת מעקב מחייב תיקון גם אם הניסוח מלוטש.
 
-### התאמה דיפרנציאלית ו־ נגישות
+### דיפרנציאציה ונגישות
 
-בדיקה that all four bands change the למידה move appropriately, rather than merely simplifying vocabulary. Look עבור readable contrast, alt text/captions, non-colour cues, keyboard-ready interaction when an אפליקציה is chosen, language supports, ו־ multiple legitimate response modes.
+בדקו שכל ארבע השכבות משנות את מהלך הלמידה באופן מתאים, ולא רק מפשטות אוצר מילים. חפשו ניגודיות קריאה, טקסט חלופי/כיתובים, רמזים שאינם צבע בלבד, אינטראקציה מוכנה למקלדת אם נבחרה אפליקציה, תמיכות שפה ומצבי תגובה לגיטימיים מרובים.
 
-### פרטיות ו־ professional boundaries
+### פרטיות וגבולות מקצועיים
 
-Confirm that נתונים are בדיוני/ציבורי, missing values are preserved, ו־ no artifact asks בינה מלאכותית to grade, profile, place, discipline, select intervention, send message, or make safeguarding decisions. משפחה drafts require מורה/policy/translation בדיקה before any real use.
+ודאו שהנתונים בדיוניים/ציבוריים, שהערכים החסרים נשמרים ושאף תוצר אינו מבקש מבינה מלאכותית לציין, לאפיין, להשיב, למשמע, לבחור התערבות, לשלוח הודעה או לקבל החלטות הגנה. טיוטות משפחה דורשות בדיקת מורה/מדיניות/תרגום לפני כל שימוש אמיתי.
 
-### אימות ו־ human judgment
+### אימות ושיקול דעת אנושי
 
-Ask what the ראיות does not establish, what יש be checked locally, ו־ what the מורה changed or rejected מ־ בינה מלאכותית. A suitable answer names concrete בדיקה steps, not only “I would double-בדיקה it.”
+שאלו מה הראיות אינן מבססות, מה יש לבדוק מקומית ומה המורה שינה או דחה מפלט הבינה המלאכותית. תשובה מתאימה מציינת צעדי בדיקה קונקרטיים, ולא רק ״אבדוק שוב״.
 
-## Common difficulties ו־ interventions
+## קשיים נפוצים והתערבויות
 
-**Starting עם a beautiful deck.** Return learner to the ראיות register ו־ שיעור אילוצים.
+**התחלה במצגת יפה.** החזירו את הלומד למרשם הראיות ולאילוצי השיעור.
 
-**One-size-fits-all התאמה דיפרנציאלית.** Ask learners to demonstrate how each band handles ראיות ו־ expression differently while preserving inquiry.
+**דיפרנציאציה אחידה.** בקשו מהלומדים להדגים כיצד כל שכבה עובדת עם ראיות והבעה אחרת תוך שמירת החקר.
 
-**Treating a גיליון ציונים pattern as diagnosis.** Require neutral wording, original-work בדיקה, ו־ a מורה-selected low-stakes response.
+**התייחסות לדפוס ביומן ציונים כאבחנה.** דרשו ניסוח ניטרלי, בדיקת העבודה המקורית ותגובה בסיכון נמוך שנבחרה בידי מורה.
 
-**Calling digest or hub an סוכן deployment.** Keep it local design/specification עם no real נתונים, external connection, or sending authority.
+**כינוי תקציר או מרכז ״פריסת סוכן״.** השאירו אותו כעיצוב/מפרט מקומי ללא נתונים אמיתיים, חיבור חיצוני או סמכות שליחה.
 
-## הערכה discussion
+## דיון הערכה
 
-Ask learner to defend: one מקור they did not trust fully; one change they made עבור נגישות; one claim removed after אימות; ו־ one action deliberately reserved עבור the מורה. Score reasoning, traceability, ו־ safe implementation over volume or חזותי polish.
+בקשו מהלומד להגן על: מקור אחד שלא נתן בו אמון מלא; שינוי אחד שעשה לנגישות; טענה אחת שהסיר לאחר אימות; ופעולה אחת שהשאיר בכוונה בידי המורה. תנו משקל להנמקה, יכולת מעקב ויישום בטוח יותר מאשר לנפח או לליטוש חזותי.

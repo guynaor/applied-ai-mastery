@@ -1,17 +1,17 @@
-# EDU-TRN-700 — שלב אחר שלב שיעור Script
+# EDU-TRN-700 — תסריט שיעור שלב אחר שלב
 
-## Outcome
+## תוצאה
 
-Learners can adapt dependency-free local resource hub while verifying נגישות, age fit, מקור status, ו־ פרטיות.
+הלומדים יכולים להתאים מרכז משאבים מקומי ללא תלויות, תוך אימות נגישות, התאמה לגיל, סטטוס מקור ופרטיות.
 
-## 70-minute flow
+## מהלך של 70 דקות
 
-1. **10 min — Inspect boundary.** Open one-file hub locally ו־ identify its no-נתונים-collection statement.
-2. **15 min — Inventory ו־ age fit.** Choose grade band ו־ revise one resource עבור reading load ו־ task complexity.
-3. **20 min — Accessible interaction.** Navigate עם keyboard only; test focus ו־ disclosure button; inspect diagram alt text.
-4. **15 min — מקור ו־ פרטיות בדיקה.** Verify each item is בדיוני/ציבורי; search file עבור forms, remote URLs, trackers, ו־ תלמיד fields.
-5. **10 min — מורה sign-off.** Learners complete log ו־ state one item that needs revision before sharing.
+1. **10 דק׳ — בחינת הגבול.** פתחו את המרכז בעל הקובץ היחיד באופן מקומי וזהו את הצהרת אי־איסוף הנתונים שלו.
+2. **15 דק׳ — מלאי והתאמה לגיל.** בחרו שכבת גיל ועדכנו משאב אחד מבחינת עומס הקריאה ומורכבות המשימה.
+3. **20 דק׳ — אינטראקציה נגישה.** נווטו במקלדת בלבד; בדקו מיקוד ואת כפתור הגילוי; בחנו את הטקסט החלופי של התרשים.
+4. **15 דק׳ — סקירת מקור ופרטיות.** ודאו שכל פריט בדיוני/ציבורי; חפשו בקובץ טפסים, כתובות URL מרוחקות, עוקבים ושדות תלמידים.
+5. **10 דק׳ — אישור מורה.** הלומדים משלימים את היומן ומציינים פריט אחד המחייב תיקון לפני שיתוף.
 
-## בדיקה עבור understanding
+## בדיקת הבנה
 
-Ask: “Why does local one-file page still require מורה בדיקה?” Expected answer: נגישות, age appropriateness, accuracy/מקור fit, ו־ פרטיות are contextual ו־ cannot be assumed מ־ working code.
+שאלו: ״מדוע גם דף מקומי בעל קובץ יחיד זקוק לבדיקת מורה?״ תשובה צפויה: נגישות, התאמה לגיל, דיוק/התאמת מקור ופרטיות תלויי הקשר ואי אפשר להניח אותם מעצם העובדה שהקוד פועל.

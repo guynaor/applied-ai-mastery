@@ -1,27 +1,27 @@
-# EDU-APP-701 — Water-יחידת לימוד Resource Hub תקציר
+# EDU-APP-701 — תקציר מרכז משאבים ליחידת מים
 
-## User ו־ purpose
+## משתמש ומטרה
 
-Create simple תלמיד-facing hub עבור a בדיוני River Systems יחידת לימוד. It helps learners find read/watch/do activity ו־ understand how to use each resource. It is not quiz, tracker, גיליון ציונים, messaging tool, or account system.
+צרו מרכז פשוט המיועד לתלמידים עבור יחידת מערכות נהר בדיונית. הוא מסייע ללומדים למצוא פעילות קריאה/צפייה/עשייה ולהבין כיצד להשתמש בכל משאב. זה אינו בוחן, כלי מעקב, יומן ציונים, כלי הודעות או מערכת חשבונות.
 
-## Grade-band adaptation
+## התאמה לפי שכבת גיל
 
-| Grade band | Adaptation |
+| שכבת גיל | התאמה |
 | --- | --- |
-| K–2 | Use read-aloud wording, adult-supported activity cards, ו־ a short חזותי routine. |
-| 3–5 | Include guided vocabulary ו־ a labeled watershed-model activity. |
-| 6–8 | Add ראיות prompts ו־ a comparison task. |
-| 9–12 | Add civic-מקור evaluation ו־ an argument-תכנון פרומפט. |
+| K–2 | השתמשו בניסוח להקראה, בכרטיסי פעילות הנתמכים בידי מבוגר ובשגרה חזותית קצרה. |
+| 3–5 | כללו אוצר מילים מודרך ופעילות מודל אגן היקוות מסומן. |
+| 6–8 | הוסיפו הנחיות ראיות ומשימת השוואה. |
+| 9–12 | הוסיפו הערכת מקור אזרחית והנחיה לתכנון טיעון. |
 
-## Requirements
+## דרישות
 
-- Keep the אפליקציה in one local HTML file עם embedded CSS ו־ JavaScript; use no libraries or remote assets.
-- Use only provided בדיוני/ציבורי water חומרים. Name the מקור/status in inventory.
-- Provide logical keyboard navigation, a visible focus state, semantic headings/buttons, ו־ readable contrast.
-- Give every informative image meaningful alt text; decorative visuals יש have empty alt text.
-- בדיקה reading load, claims, imagery, ו־ task directions עבור selected age band.
-- Collect no נתונים: no forms, analytics, cookies, accounts, names, saved responses, or network requests.
+- שמרו את האפליקציה בקובץ HTML מקומי אחד עם CSS ו־JavaScript מוטמעים; אין להשתמש בספריות או בנכסים מרוחקים.
+- השתמשו רק בחומרי המים הבדיוניים/הציבוריים שסופקו. ציינו במלאי את המקור/הסטטוס.
+- ספקו ניווט מקלדת הגיוני, מצב מיקוד נראה לעין, כותרות/כפתורים סמנטיים וניגודיות קריאה.
+- לכל תמונה אינפורמטיבית תנו טקסט חלופי משמעותי; לדימויים קישוטיים חייב להיות טקסט חלופי ריק.
+- בדקו את עומס הקריאה, הטענות, הדימויים והוראות המשימה עבור שכבת הגיל שנבחרה.
+- אל תאספו נתונים: אין טפסים, ניתוח שימוש, עוגיות, חשבונות, שמות, תשובות שמורות או בקשות רשת.
 
-## מורה בדיקה
+## בדיקת מורה
 
-Before sharing locally, inspect every link/text claim, test by keyboard, בדיקה contrast ו־ alt text, ו־ confirm that no נתונים is collected. Record results in the נגישות test log.
+לפני שיתוף מקומי, בדקו כל קישור/טענת טקסט, נסו באמצעות מקלדת, בדקו ניגודיות וטקסט חלופי ואשרו שלא נאספים נתונים. תעדו את התוצאות ביומן בדיקת הנגישות.

@@ -1,21 +1,21 @@
-# מסלול למורים פרויקט מסכם — Water in Our Shared World
+# פרויקט גמר במסלול המורים — מים בעולמנו המשותף
 
-This פרויקט מסכם brings seven מורה-track missions into one מורה-reviewed, K–12-ready יחידת לימוד-design החלטה. scenario, learner work, ו־ גיליון ציונים patterns are בדיוני; אין לבצע add real learner names, grades, work, משפחה contact details, or protected information.
+פרויקט הגמר מאחד את שבע משימות מסלול המורים להחלטת תכנון יחידה המתאימה ל־K–12 ונבדקת בידי מורה. התרחיש, עבודת הלומדים ודפוסי יומן הציונים הם בדיוניים; אין להוסיף שמות לומדים אמיתיים, ציונים, עבודות, פרטי קשר של משפחות או מידע מוגן.
 
 ## משימה
 
-Act as the מורה אחראי עבור adapting the בדיוני **Water in Our Shared World** יחידת לימוד עבור a chosen grade band. Build coherent package that turns ראיות ו־ אילוצים into teachable choices while keeping professional judgment עם the מורה.
+פעלו כמורה האחראי/ת להתאמת יחידת **מים בעולמנו המשותף** הבדיונית לשכבת גיל נבחרת. בנו חבילה עקבית המתרגמת ראיות ואילוצים לבחירות שאפשר ללמד, תוך שמירה על שיקול הדעת המקצועי בידי המורה.
 
-## נדרש package
+## חבילה נדרשת
 
-- `student/EDU-CAP-001-unit-plan-brief.md` — assignment ו־ non-negotiable boundaries
-- `student/EDU-CAP-002-evidence-register.csv` — מקור, claim, limitation, ו־ אימות record
-- `student/EDU-CAP-003-deliverable-register.csv` — artifact dependency ו־ בדיקה checklist
-- `student/EDU-CAP-004-decision-log.csv` — assumptions, revisions, ownership, ו־ unresolved questions
-- `instructor/` — facilitation, הערכה, ו־ מחוון חומרים
+- `student/EDU-CAP-001-unit-plan-brief.md` — משימה וגבולות שאינם נתונים למשא ומתן
+- `student/EDU-CAP-002-evidence-register.csv` — מקור, טענה, מגבלה ורשומת אימות
+- `student/EDU-CAP-003-deliverable-register.csv` — תלות תוצרים ורשימת בדיקה
+- `student/EDU-CAP-004-decision-log.csv` — הנחות, תיקונים, בעלות ושאלות פתוחות
+- `instructor/` — חומרי הנחיה, הערכה ורובריקה
 
-final package contains a שיעור sequence, four-band התאמה דיפרנציאלית, ראיות choices, an הערכה מחוון, a בדיוני גיליון ציונים-pattern analysis, a משפחה תקשורת draft, a six-slide שיעור deck, ו־ רפלקציה. An אופציונלי extension may be local resource hub **or** a bounded תכנון-digest design. It is never real deployment.
+החבילה הסופית כוללת רצף שיעורים, דיפרנציאציה בארבע שכבות, בחירות ראיות, רובריקת הערכה, ניתוח בדיוני של דפוסי יומן ציונים, טיוטת תקשורת למשפחות, מצגת שיעור בת שישה שקפים ורפלקציה. הרחבה אפשרית היא מרכז משאבים מקומי **או** עיצוב תקציר תכנון מוגבל. לעולם אין זו פריסה אמיתית.
 
-## Completion standard
+## תקן השלמה
 
-Every consequential instructional choice יש be traceable to a מקור, a stated constraint, or clearly labelled מורה judgment. Accessible חומרים, פרטיות boundaries, ו־ uncertainty are part of quality—not אופציונלי polish.
+כל בחירה הוראתית בעלת משמעות חייבת להיות ניתנת למעקב למקור, לאילוץ מוצהר או לשיקול דעת מורה המסומן בבירור. חומרים נגישים, גבולות פרטיות ואי־ודאות הם חלק מהאיכות — לא ליטוש אופציונלי.

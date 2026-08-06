@@ -1,16 +1,16 @@
-# EDU-TRN-600 — מנחה מדריך
+# EDU-TRN-600 — מדריך למנחה
 
-## Facilitation priorities
+## עדיפויות להנחיה
 
-Keep exercise on system boundaries, not clever automation. A valid design has small ציבורי input set, minimal state, deterministic duplicate rules, visible audit events, ו־ a meaningful stop path. “A human can בדיקה later” is insufficient: מורה approval יש block every send/publish action.
+השאירו את התרגיל בגבולות המערכת, לא באוטומציה מתוחכמת. לעיצוב תקף יש קבוצת קלט ציבורית קטנה, מצב מינימלי, כללי כפילות דטרמיניסטיים, אירועי ביקורת גלויים ונתיב עצירה משמעותי. ״אדם יכול לבדוק אחר כך״ אינו מספיק: אישור מורה חייב לחסום כל פעולת שליחה/פרסום.
 
-## Ask
+## שאלו
 
-- “Which exact field proves this item came מ־ an approved ציבורי מקור?”
-- “What is retained after duplicate, a timeout, ו־ a prohibited-נתונים detection?”
-- “What החלטה remains entirely עם the מורה?”
-- “Where could external message occur? Why is it disabled here?”
+- ״איזה שדה מדויק מוכיח שהפריט הגיע ממקור ציבורי מאושר?״
+- ״מה נשמר לאחר כפילות, פסק זמן וזיהוי נתונים אסורים?״
+- ״איזו החלטה נשארת לחלוטין בידי המורה?״
+- ״היכן יכולה להתרחש הודעה חיצונית? מדוע היא מושבתת כאן?״
 
-## Guardrails
+## גבולות בטיחות
 
-Reject designs that connect to gradebooks, rosters, LMS נתונים, משפחה contacts, or school messaging. Reject summaries that call curriculum change ‘approved’ before מורה אימות. אין לבצע allow any grade, behavior, placement, intervention, or external-message feature—even as an אופציונלי future enhancement—inside this משימה.
+דחו עיצובים המתחברים ליומני ציונים, רשימות תלמידים, נתוני LMS, אנשי קשר של משפחות או הודעות בית ספר. דחו סיכומים הקוראים לשינוי בתכנית לימודים ״מאושר״ לפני אימות מורה. אל תאפשרו שום תכונת ציון, התנהגות, השמה, התערבות או הודעה חיצונית — גם לא כהרחבה עתידית אפשרית — במשימה זו.

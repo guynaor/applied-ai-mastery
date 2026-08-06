@@ -1,12 +1,12 @@
-# EDU-TRN-501 — מפתח תשובות ו־ Exemplar Decisions
+# EDU-TRN-501 — מפתח תשובות והחלטות לדוגמה
 
-Strong sequences אין לבצע have one fixed order, but they include:
+לרצפים חזקים אין סדר יחיד קבוע, אך הם כוללים:
 
-- Days 1–2: launch ו־ low-סיכון model/observation; Day 3: quick בדיקה that informs Day 4.
-- Day 4: compare sources/perspectives; Day 5: 35-minute synthesis, not basin investigation.
-- Day 6: מורה conference ו־ revision; Days 7–9: תקשורת product, peer נגישות בדיקה, ו־ revision; Day 10: 70-minute sharing/רפלקציה.
-- If outdoor work is cancelled, learners inspect מורה-provided photos/נתונים ו־ identify limitation. If tablet fails, a paper נתונים table ו־ partner role keep the ראיות task intact.
-- Appropriate supports include accessible headings/alt text, home-language preview where available, חזותי schedule, ו־ a dry role. They are confirmed עם learners/staff rather than presumed.
-- משפחה תקשורת is אופציונלי, translated/plain-language when available, ו־ does not ask עבור household water-use reporting.
+- ימים 1–2: פתיחה ומודל/תצפית בסיכון נמוך; יום 3: בדיקה מהירה שמנחה את יום 4.
+- יום 4: השוואת מקורות/נקודות מבט; יום 5: סיכום בן 35 דקות, ולא חקירת אגן ההיקוות.
+- יום 6: שיחת מורה ותיקון; ימים 7–9: תוצר תקשורתי, בדיקת נגישות עמיתים ותיקון; יום 10: שיתוף/רפלקציה בני 70 דקות.
+- אם עבודת החוץ מתבטלת, התלמידים בוחנים תמונות/נתונים שסיפק המורה ומזהים את המגבלה. אם טאבלט נכשל, טבלת נתונים מנייר ותפקיד בן־זוג שומרים על משימת הראיות.
+- תמיכות מתאימות כוללות כותרות/טקסט חלופי נגישים, תצוגה מקדימה בשפת הבית כשהיא זמינה, לוח זמנים חזותי ותפקיד יבש. מאשרים אותן עם תלמידים/צוות ולא מניחים אותן מראש.
+- תקשורת למשפחות היא אפשרית, מתורגמת/בשפה פשוטה כשניתן, ואינה מבקשת דיווח על שימוש ביתי במים.
 
-The מורה uses Day 3/6/9 ראיות to adjust support ו־ pacing; no automated score determines grade or next placement.
+המורה משתמש/ת בראיות מימים 3/6/9 כדי להתאים תמיכה וקצב; שום ציון אוטומטי אינו קובע ציון או השמה הבאה.

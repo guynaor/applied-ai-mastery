@@ -1,48 +1,48 @@
-# EDU-CAP-101 — פרויקט מסכם מנחה Reference מדריך
+# EDU-CAP-101 — מדריך עזר למנחה פרויקט הגמר
 
-## Strong הגשה characteristics
+## מאפייני הגשה חזקה
 
-A strong הגשה makes bounded, workable teaching plan rather than claiming universally correct one. It:
+הגשה חזקה מציגה תכנית הוראה מוגבלת וישימה, ולא טוענת לנכונות אוניברסלית. היא:
 
-- links consequential choices to the ראיות register, a constraint, or explicit מורה judgment;
-- distinguishes בדיוני מחקר/observation/guidance מ־ local verified facts;
-- makes water inquiry visible in ten-day sequence ו־ across all four grade bands;
-- uses formative ראיות to inform a מורה בדיקה, not automatic grades or labels;
-- includes a מחוון ו־ deck that learners can access without relying only on colour, tiny text, or unsupported visuals;
-- protects פרטיות ו־ reserves משפחה תקשורת, grades, interventions, ו־ safeguarding decisions עבור people;
-- documents אימות, revisions, uncertainty, ו־ a meaningful בינה מלאכותית limitation.
+- מקשרת בחירות בעלות משמעות למרשם הראיות, לאילוץ או לשיקול דעת מפורש של המורה;
+- מבדילה בין מחקר/תצפית/הנחיה בדיוניים לבין עובדות מקומיות שאומתו;
+- הופכת את חקר המים לנראה ברצף בן עשרה ימים ולאורך כל ארבע שכבות הגיל;
+- משתמשת בראיות מעצבות כדי להנחות בדיקת מורה, ולא ציונים או תוויות אוטומטיים;
+- כוללת רובריקה ומצגת שלומדים יכולים לגשת אליהן בלי להסתמך רק על צבע, טקסט זעיר או דימויים לא מבוססים;
+- מגנה על פרטיות ושומרת תקשורת עם משפחות, ציונים, התערבויות והחלטות הגנה לאנשים;
+- מתעדת אימות, תיקונים, אי־ודאות ומגבלה משמעותית של בינה מלאכותית.
 
-## Acceptable instructional conclusions
+## מסקנות הוראתיות קבילות
 
-There is no single correct local דוגמה, הערכה product, or משפחה message. Full credit can be earned by different approaches if they remain ראיות-bound, מותאם גיל, accessible, ו־ feasible. אין לבצע reward more technologically elaborate plan over safer, better-supported one.
+אין דוגמה מקומית, תוצר הערכה או הודעה למשפחות אחת נכונה. אפשר לקבל ציון מלא בגישות שונות אם הן נותרות כבולות לראיות, מתאימות לגיל, נגישות וישימות. אל תתגמלו תכנית מורכבת יותר טכנולוגית על פני תכנית בטוחה ומבוססת יותר.
 
-## נדרש challenge questions
+## שאלות אתגר נדרשות
 
-1. Which מקור supports this claim, ו־ what does it fail to establish?
-2. Which כיתה constraint changed your sequence?
-3. How does K–2 move preserve same central thinking as 9–12 move?
-4. What could a בדיוני גיליון ציונים pattern suggest, ו־ what may it never decide?
-5. How can learner access this slide without colour or a חזותי image?
-6. What יש the מורה verify before this משפחה draft is sent?
-7. Which בינה מלאכותית output did you reject, revise, or leave unresolved?
-8. If the אופציונלי digest/hub existed, what action יש remain behind מורה approval?
+1. איזה מקור תומך בטענה זו, ומה הוא אינו מצליח לבסס?
+2. איזה אילוץ כיתתי שינה את הרצף שלכם?
+3. כיצד המהלך ב־K–2 שומר על אותה חשיבה מרכזית כמו המהלך ב־9–12?
+4. מה עשוי לרמוז דפוס ביומן ציונים בדיוני, ומה אסור לו להחליט לעולם?
+5. כיצד לומד יכול לגשת לשקף הזה בלי צבע או תמונה חזותית?
+6. מה המורה חייב/ת לאמת לפני שליחת טיוטה זו למשפחה?
+7. איזה פלט בינה מלאכותית דחיתם, תיקנתם או השארתם פתוח?
+8. אילו היה קיים התקציר/המרכז האופציונלי, איזו פעולה חייבת להישאר מאחורי אישור המורה?
 
-## Controlled-change options
+## אפשרויות לשינוי מבוקר
 
-Give one change after first draft: investigation חומרים cannot be used; schedule loses one class period; a key מקור lacks adequate support; or the משפחה תקשורת requires new language/access format. learner first records which claims, files, ו־ decisions are affected, then updates only connected work. Look עבור stale slide claims, inaccessible alternatives, or lost פרטיות boundary.
+תנו שינוי אחד לאחר טיוטה ראשונה: לא ניתן להשתמש בחומרי החקירה; לוח הזמנים מאבד שיעור אחד; מקור מרכזי אינו תומך דיו; או שהתקשורת למשפחות דורשת שפה/פורמט נגישות חדש. הלומד מתעד תחילה אילו טענות, קבצים והחלטות מושפעים, ואז מעדכן רק את העבודה המחוברת. חפשו טענות ישנות בשקפים, חלופות בלתי נגישות או גבול פרטיות שאבד.
 
-## Red flags
+## סימני אזהרה
 
-Reduce credit or require revision when learner:
+הפחיתו ציון או דרשו תיקון כאשר הלומד:
 
-- presents בינה מלאכותית confidence as ראיות;
-- treats scores/missingness as learner ability, behavior, placement, or intervention ראיות;
-- provides identical התאמה דיפרנציאלית עבור every grade band;
-- omits alt text, caption תכנון, readable contrast, or non-colour cues;
-- uploads or invents real תלמיד/משפחה information;
-- allows a תהליך עבודה to send, publish, grade, or decide without מורה approval;
-- cannot trace major claim to a מקור, constraint, or documented judgment.
+- מציג ביטחון של בינה מלאכותית כראיה;
+- מתייחס לציונים/חסר כראיה ליכולת, התנהגות, השמה או התערבות של לומד;
+- מספק דיפרנציאציה זהה לכל שכבת גיל;
+- משמיט טקסט חלופי, תכנון כיתובים, ניגודיות קריאה או רמזים שאינם צבע;
+- מעלה או ממציא מידע אמיתי על תלמיד/משפחה;
+- מאפשר לתהליך עבודה לשלוח, לפרסם, לציין או להחליט ללא אישור מורה;
+- אינו יכול לעקוב אחר טענה מרכזית למקור, אילוץ או שיקול דעת מתועד.
 
-## Completion החלטה
+## החלטת השלמה
 
-learner meets the פרויקט מסכם standard when they can defend coherent K–12 water-יחידת לימוד package, show cross-artifact traceability, revise after challenge, ו־ explain exactly where מורה אימות ו־ judgment remain necessary.
+הלומד עומד בתקן פרויקט הגמר כשהוא/היא יכולים להגן על חבילת יחידת מים עקבית ל־K–12, להציג יכולת מעקב חוצת תוצרים, לתקן לאחר אתגר ולהסביר בדיוק היכן אימות ושיקול הדעת של המורה נותרו נחוצים.

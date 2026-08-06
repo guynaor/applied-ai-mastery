@@ -1,13 +1,13 @@
-# משימה 5 — שיעור ו־ יחידת לימוד תכנון Under אילוצים
+# משימה 5 — תכנון שיעורים ויחידות תחת אילוצים
 
-Design feasible two-week interdisciplinary water יחידת לימוד, not idealized wish list. The מורה retains responsibility עבור תקנים alignment, inclusion, בטיחות, הערכה, משפחה תקשורת, ו־ daily adjustments.
+תכננו יחידת מים בין־תחומית אפשרית בת שבועיים, ולא רשימת משאלות אידאלית. המורה נושא/ת באחריות להתאמה לתקנים, הכלה, בטיחות, הערכה, תקשורת עם משפחות והתאמות יומיומיות.
 
-Use provided בדיוני schedule ו־ משאבים. בינה מלאכותית may offer options, but it does not know your learners, local requirements, or changing conditions. Your plan יש show מורה בדיקה checkpoints.
+השתמשו בלוח הזמנים ובמשאבים הבדיוניים שסופקו. בינה מלאכותית יכולה להציע אפשרויות, אך אינה מכירה את הלומדים, הדרישות המקומיות או התנאים המשתנים. התכנית חייבת להציג נקודות בקרה של המורה.
 
-## Deliverables
+## תוצרים
 
 - `EDU-OPS-501-unit-brief.md`
-- completed `EDU-OPS-502-constraints.csv`
-- completed `EDU-OPS-503-learning-sequence-template.csv`
+- `EDU-OPS-502-constraints.csv` שהושלם
+- `EDU-OPS-503-learning-sequence-template.csv` שהושלם
 - `EDU-OPS-504-differentiation-plan.md`
-- `EDU-OPS-505-family-calendar-template.csv`
+- `EDU-OPS-505-family-calendar-template.csv` שהושלם

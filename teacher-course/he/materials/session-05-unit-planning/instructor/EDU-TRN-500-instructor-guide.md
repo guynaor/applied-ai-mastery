@@ -1,16 +1,16 @@
-# EDU-TRN-500 — מנחה מדריך
+# EDU-TRN-500 — מדריך למנחה
 
-## Facilitation priorities
+## עדיפויות להנחיה
 
-Insist on sequence that fits 50/35/70-minute periods. Strong plans use shorter Day 5 עבור synthesis, not new חומרים-heavy investigation. Require paper/offline alternative ו־ a dry simulation when water is restricted.
+התעקשו על רצף המתאים לשיעורים של 50/35/70 דקות. תכניות חזקות משתמשות ביום 5 הקצר לסיכום, ולא לחקירה חדשה הדורשת חומרים רבים. דרשו חלופה ניירית/לא־מקוונת וסימולציה יבשה כאשר השימוש במים מוגבל.
 
-## Ask
+## שאלו
 
-- “Which objective is protected when time shrinks?”
-- “What תבצעו you learn מ־ Day 3 ראיות, ו־ what could you change on Day 4?”
-- “How does this support preserve intellectual task?”
-- “What יש be verified locally before this משפחה note is sent?”
+- ״איזו מטרה מוגנת כשהזמן מתקצר?״
+- ״מה תלמדו מהראיות של יום 3, ומה תוכלו לשנות ביום 4?״
+- ״כיצד תמיכה זו שומרת על המשימה האינטלקטואלית?״
+- ״מה חייב לעבור אימות מקומי לפני שליחת הודעה זו למשפחות?״
 
-## Guardrails
+## גבולות בטיחות
 
-אין לבצע accept generic “differentiate” language without concrete access route. אין לבצע accept an בינה מלאכותית-generated calendar as approved תקשורת. No plan may automate grades, grouping, behavior, placement, or intervention decisions. מורה checkpoints יש name ראיות ו־ a possible human action.
+אין לקבל ניסוח כללי של ״לבצע דיפרנציאציה״ בלי נתיב נגישות קונקרטי. אין לקבל לוח שנה שנוצר בבינה מלאכותית כתקשורת מאושרת. שום תכנית אינה יכולה להפוך לאוטומטיים ציונים, קיבוץ, התנהגות, השמה או החלטות התערבות. נקודות הבקרה של המורה חייבות לציין ראיה ופעולה אנושית אפשרית.

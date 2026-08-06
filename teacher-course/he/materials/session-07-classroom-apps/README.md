@@ -1,18 +1,18 @@
-# משימה 7 — כיתה משאבים ו־ Simple Apps
+# משימה 7 — משאבי כיתה ואפליקציות פשוטות
 
-Build ו־ evaluate small, local כיתה resource hub. delivered scenario is a תלמיד-facing River Systems water-יחידת לימוד hub using only בדיוני/ציבורי חומרים. It runs מ־ one file, has no dependencies, makes no network request, ו־ collects no נתונים.
+בנו והעריכו מרכז משאבים כיתתי קטן ומקומי. התרחיש הנמסר הוא מרכז יחידת מים על מערכות נהר, המיועד לתלמידים ומשתמש רק בחומרים בדיוניים/ציבוריים. הוא פועל מקובץ אחד, ללא תלויות, אינו מבצע בקשת רשת ואינו אוסף נתונים.
 
-## Variants
+## גרסאות אפשריות
 
-same pattern could support vocabulary practice, a lab-group rotation board, a class resource hub, or parent-night information page. Choose only an מותאם גיל, פרטיות-preserving use. This משימה’s starter hub is resource hub, not a תלמיד tracker or החלטה tool.
+אותו דפוס יכול לתמוך בתרגול אוצר מילים, לוח תורנויות לקבוצות מעבדה, מרכז משאבי כיתה או דף מידע לערב הורים. בחרו שימוש אחד בלבד שמתאים לגיל ושומר פרטיות. מרכז ההתחלה במשימה זו הוא מרכז משאבים, לא כלי למעקב תלמידים או לקבלת החלטות.
 
-## Deliverables
+## תוצרים
 
 - `EDU-APP-701-resource-hub-brief.md`
-- completed `EDU-APP-702-resource-inventory.csv`
-- revised `EDU-APP-703-starter-resource-hub.html`
-- completed `EDU-APP-704-accessibility-test-log.md`
+- `EDU-APP-702-resource-inventory.csv` שהושלם
+- `EDU-APP-703-starter-resource-hub.html` שעודכן
+- `EDU-APP-704-accessibility-test-log.md` שהושלם
 
-## נדרש checks
+## בדיקות נדרשות
 
-Keyboard navigation, visible focus, readable contrast, meaningful alt text, age suitability, ו־ no נתונים collection are נדרש. אין לבצע add forms, analytics, logins, trackers, תלמיד names, or grade/behavior features.
+נדרשים ניווט מקלדת, מיקוד נראה לעין, ניגודיות קריאה, טקסט חלופי משמעותי, התאמה לגיל ואפס איסוף נתונים. אין להוסיף טפסים, ניתוח שימוש, כניסות, עוקבים, שמות תלמידים או תכונות של ציון/התנהגות.

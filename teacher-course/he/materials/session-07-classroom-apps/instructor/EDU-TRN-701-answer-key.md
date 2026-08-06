@@ -1,13 +1,13 @@
 # EDU-TRN-701 — מפתח תשובות
 
-## ראיות of sound הגשה
+## ראיות להגשה תקינה
 
-- hub stays in one local file עם embedded CSS/JavaScript ו־ no dependency, form, analytics, account, cookie, or network request.
-- disclosure control is native button עם an associated region ו־ `aria-expanded`; keyboard focus is visible.
-- watershed diagram uses alt text that names blue river path ו־ its directional relationship, rather than “image” or filename.
-- selected grade band changes language or cognitive demand: K–2 needs adult-supported concise steps; 6–8 needs ראיות discussion; 9–12 can evaluate civic claims.
-- inventory identifies חומרים as בדיוני/ציבורי ו־ the מורה verifies suitability before local use.
+- המרכז נשאר בקובץ מקומי אחד עם CSS/JavaScript מוטמעים וללא תלות, טופס, ניתוח שימוש, חשבון, עוגייה או בקשת רשת.
+- בקרת הגילוי היא כפתור מקורי עם אזור משויך ו־`aria-expanded`; מיקוד המקלדת נראה לעין.
+- תרשים אגן ההיקוות משתמש בטקסט חלופי המתאר את נתיב הנהר הכחול ואת יחס הכיוונים שלו, ולא ״תמונה״ או שם קובץ.
+- שכבת הגיל שנבחרה משנה את השפה או את הדרישה הקוגניטיבית: K–2 זקוקים לצעדים קצרים הנתמכים בידי מבוגר; 6–8 זקוקים לדיון ראיות; 9–12 יכולים להעריך טענות אזרחיות.
+- המלאי מזהה חומרים כבדיוניים/ציבוריים והמורה מאמת/ת התאמה לפני שימוש מקומי.
 
-## Common revisions
+## תיקונים נפוצים
 
-Remove generic “click here” link, improve it to name resource, ו־ keep focus visible. If learners propose feedback form or progress tracker, reject it: that would collect נתונים ו־ exceed resource-hub scope.
+הסירו קישור כללי ״לחצו כאן״, שפרו אותו כך שיציין את שם המשאב ושמרו על מיקוד נראה לעין. אם לומדים מציעים טופס משוב או כלי מעקב התקדמות, דחו זאת: זה יאסוף נתונים ויחרוג מהיקף מרכז המשאבים.

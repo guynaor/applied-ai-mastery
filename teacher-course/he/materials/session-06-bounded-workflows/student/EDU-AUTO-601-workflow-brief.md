@@ -1,35 +1,35 @@
-# EDU-AUTO-601 — Weekly תכנון-Digest תהליך עבודה תקציר
+# EDU-AUTO-601 — תקציר תהליך עבודה לתקציר תכנון שבועי
 
-## Purpose
+## מטרה
 
-Specify a בדיוני, unattended assistant that checks supplied **ציבורי curriculum update snapshots** once each Friday ו־ prepares draft תכנון digest עבור River Systems יחידת לימוד. assistant is monitor ו־ draft-maker, not a החלטה-maker or communicator.
+הגדירו עוזר בדיוני, בלתי־מושגח, הבודק פעם בכל יום שישי את **תמונות המצב הציבוריות של עדכוני תכנית הלימודים** שסופקו, ומכין טיוטת תקציר תכנון ליחידת מערכות הנהר. העוזר הוא מנטר ומנסח טיוטה, לא מקבל החלטות ולא מתקשר.
 
-## Permitted inputs
+## קלטים מורשים
 
-- `EDU-DATA-601-public-curriculum-snapshots.csv` only, plus a מורה-maintained list of approved ציבורי מקור URLs in future deployment.
-- last approved state record: snapshot ID, content hash, date checked, ו־ duplicate status.
-- מורה-authored יחידת לימוד keywords: `water`, `river systems`, `watershed`, ו־ `accessibility`.
+- `EDU-DATA-601-public-curriculum-snapshots.csv` בלבד, וכן רשימה שמתחזק/ת המורה של כתובות URL מאושרות ממקורות ציבוריים בפריסה עתידית.
+- רשומת המצב האחרונה שאושרה: מזהה תמונת מצב, גיבוב תוכן, תאריך בדיקה ומצב כפילות.
+- מילות מפתח שהמורה ניסח/ה ליחידה: `water`, `river systems`, `watershed`, ו־`accessibility`.
 
-## Excluded inputs ו־ outputs
+## קלטים ותוצרים מוחרגים
 
-אין לבצע provide תלמיד נתונים of any kind: no real or fictionalized exports of names, IDs, grades, attendance, behavior, disability/accommodation information, work samples, משפחה contacts, or placement נתונים. אין לבצע connect to a גיליון ציונים, LMS roster, email, messaging system, or תלמיד-information system.
+אין לספק נתוני תלמידים מכל סוג: לא ייצואים אמיתיים או מוסווים של שמות, מזהים, ציונים, נוכחות, התנהגות, מידע על מוגבלות/התאמות, דוגמאות עבודה, אנשי קשר של משפחות או נתוני השמה. אין להתחבר ליומן ציונים, לסגל LMS, לדוא״ל, למערכת הודעות או למערכת מידע לתלמידים.
 
-assistant אסור assign or suggest grades, make behavior/placement/intervention decisions, group learners, send external messages, or publish anything. It may only create private draft עבור מורה בדיקה.
+העוזר אינו רשאי להקצות או להציע ציונים, לקבל החלטות על התנהגות/השמה/התערבות, לקבץ תלמידים, לשלוח הודעות חיצוניות או לפרסם דבר. הוא רשאי ליצור טיוטה פרטית בלבד לבדיקת המורה.
 
-## Weekly operating cycle
+## מחזור פעולה שבועי
 
-1. Friday at 16:30 local time, read approved snapshots.
-2. Validate that each snapshot is ציבורי, has a מקור URL, date, ו־ stable ID.
-3. Compare ID ו־ content hash עם state record; suppress exact duplicates.
-4. Flag changed ID/hash as `needs teacher verification`, never as accepted fact.
-5. Draft digest containing מקור, change סיכום, uncertainty, relevant יחידת לימוד keyword, ו־ a suggested question עבור the מורה.
-6. Write audit-log event ו־ hold digest in `pending teacher approval`.
-7. A מורה verifies sources ו־ explicitly approves, revises, archives, or rejects draft. Only מורה-approved content could be sent or published later; this specification includes no sending/publishing action.
+1. בכל יום שישי בשעה 16:30 לפי הזמן המקומי, קראו את תמונות המצב המאושרות.
+2. בדקו שכל תמונת מצב ציבורית, כוללת כתובת מקור, תאריך ומזהה יציב.
+3. השוו מזהה וגיבוב תוכן לרשומת המצב; דכאו כפילויות זהות.
+4. סמנו מזהה/גיבוב שהשתנה כ־`needs teacher verification`, ולעולם לא כעובדה מאושרת.
+5. נסחו תקציר הכולל מקור, סיכום שינוי, אי־ודאות, מילת מפתח רלוונטית ליחידה ושאלה מוצעת למורה.
+6. כתבו אירוע ביומן ביקורת והחזיקו את התקציר במצב `pending teacher approval`.
+7. מורה מאמת/ת את המקורות ומאשר/ת במפורש, מתקן/ת, מאחסן/ת או דוחה את הטיוטה. רק תוכן שאישר/ה המורה עשוי להישלח או להתפרסם בעתיד; מפרט זה אינו כולל פעולת שליחה/פרסום.
 
-## Stop ו־ failure behavior
+## התנהגות עצירה וכשל
 
-Stop without digest if a מקור is not ציבורי, a URL is missing, a record contains תלמיד נתונים, an input is malformed, מקור identity conflicts, or run exceeds 10 minutes. Log reason, preserve no untrusted content beyond minimum error record, ו־ notify the מורה through approved internal בדיקה queue—not external message. Never retry by widening sources or inventing a סיכום.
+עצרו ללא תקציר אם מקור אינו ציבורי, חסרה כתובת URL, רשומה כוללת נתוני תלמידים, הקלט פגום, זהות המקור סותרת, או הרצה נמשכת יותר מ־10 דקות. רשמו את הסיבה, אל תשמרו תוכן לא מהימן מעבר לרשומת שגיאה מינימלית, והודיעו למורה דרך תור בדיקה פנימי מאושר — לא בהודעה חיצונית. לעולם אל תנסו שוב באמצעות הרחבת המקורות או המצאת סיכום.
 
-## Your task
+## המשימה שלכם
 
-Complete specification ו־ test log. עבור every test, state expected safe behavior ו־ audit-log ראיות. End עם a מורה sign-off explaining what was verified ו־ what remains unsuitable עבור automation.
+השלימו את המפרט ואת יומן הבדיקה. לכל בדיקה ציינו את ההתנהגות הבטוחה הצפויה ואת ראיית יומן הביקורת. סיימו באישור מורה המסביר מה אומת ומה עדיין אינו מתאים לאוטומציה.

@@ -1,31 +1,31 @@
-# EDU-COM-401 — מצגת תקציר
+# EDU-COM-401 — תקציר מצגת
 
-**Scenario:** Your בדיוני school is beginning water inquiry. Build six-slide deck titled **Local Water, Shared Responsibility** עבור one grade band. It introduces how water reaches community, why careful use matters, ו־ one ראיות-based action learners can discuss.
+**תרחיש:** בבית הספר הבדיוני שלכם מתחיל חקר בנושא מים. בנו מצגת בת שישה שקפים שכותרתה **מים מקומיים, אחריות משותפת** עבור שכבת גיל אחת. המצגת מציגה כיצד מים מגיעים לקהילה, מדוע שימוש מושכל חשוב, ופעולה אחת מבוססת־ראיות שהתלמידים יכולים לדון בה.
 
-## נדרש slide structure
+## מבנה השקפים הנדרש
 
-1. **Welcome/question:** “Where does our water go?” Use one uncluttered, locally appropriate חזותי.
-2. **System:** Explain verified local or generic water-cycle/water-system idea; label what is known ו־ what needs local checking.
-3. **ראיות:** One sourced fact or נתונים point, עם an understandable caption ו־ citation.
-4. **Perspectives:** Show that households, schools, communities, ו־ ecosystems can be affected differently; avoid blaming people.
-5. **Action:** Offer one realistic discussion or conservation action, not mandate.
-6. **Think/verify:** Ask learners to inspect a מקור, raise question, or plan what to בדיקה locally.
+1. **פתיחה/שאלה:** ״לאן הולכים המים שלנו?״ השתמשו בדימוי אחד נקי ומתאים מקומית.
+2. **מערכת:** הסבירו רעיון מאומת על מחזור המים או על מערכת מים מקומית/כללית; סמנו מה ידוע ומה מצריך בדיקה מקומית.
+3. **ראיה:** עובדה או נתון אחד עם מקור, כיתוב מובן והפניה.
+4. **נקודות מבט:** הראו שמשקי בית, בתי ספר, קהילות ומערכות אקולוגיות עשויים להיות מושפעים אחרת; הימנעו מהאשמת אנשים.
+5. **פעולה:** הציעו פעולת דיון או שימור מציאותית אחת, ולא הוראה מחייבת.
+6. **חשיבה/אימות:** בקשו מהתלמידים לבחון מקור, להעלות שאלה או לתכנן מה לבדוק מקומית.
 
-## Grade-band adaptation
+## התאמה לפי שכבת גיל
 
-| Band | Audience choice | ראיות task |
+| שכבת גיל | בחירת קהל | משימת ראיות |
 | --- | --- | --- |
-| K–2 | Read aloud, concrete objects, picture-supported vocabulary; no alarming scarcity claims. | מורה narrates simple מקור caption ו־ asks “What do you notice?” |
-| 3–5 | Guided inquiry עם labeled diagrams ו־ partner talk. | Learners connect caption to one observation or question. |
-| 6–8 | ראיות discussion עם a claim/ראיות/reasoning פרומפט. | Learners identify the מקור, its limits, ו־ a missing local fact. |
-| 9–12 | Civic argument עם multiple stakeholder perspectives. | Learners weigh claim against מקור quality ו־ propose verifiable הצעד הבא. |
+| K–2 | הקראה, חפצים מוחשיים ואוצר מילים נתמך תמונות; ללא טענות מפחידות על מחסור. | המורה מקריא/ה כיתוב מקור פשוט ושואל/ת: ״מה אתם מבחינים?״ |
+| 3–5 | חקר מודרך עם תרשימים מסומנים ושיח בזוגות. | התלמידים מחברים כיתוב לתצפית או לשאלה אחת. |
+| 6–8 | דיון ראיות עם הנחיית טענה/ראיה/הנמקה. | התלמידים מזהים את המקור, מגבלותיו ועובדה מקומית חסרה. |
+| 9–12 | טיעון אזרחי עם נקודות מבט של כמה בעלי עניין. | התלמידים שוקלים טענה מול איכות המקור ומציעים צעד בר־אימות. |
 
-## Non-negotiables
+## דרישות מחייבות
 
-- Six slides only; use large type, high contrast, plain language, ו־ one main idea per slide.
-- Record מקור, license/permission, claim, ו־ אימות date עבור every factual חזותי or statement.
-- Write alt text that communicates instructional meaning, not merely colors or layout.
-- Captions יש distinguish fact מ־ an illustration, estimate, or question.
-- Reject decorative images that mislead, stereotypes, fear-based visuals, ו־ unsupported בינה מלאכותית output.
+- שישה שקפים בלבד; השתמשו בגופן גדול, ניגודיות גבוהה, שפה פשוטה ורעיון מרכזי אחד בכל שקף.
+- תעדו מקור, רישיון/אישור, טענה ותאריך אימות עבור כל דימוי או אמירה עובדתיים.
+- כתבו טקסט חלופי שמוסר את המשמעות הלימודית, ולא רק צבעים או פריסה.
+- הכיתובים חייבים להבדיל בין עובדה לבין המחשה, אומדן או שאלה.
+- דחו תמונות קישוטיות מטעות, סטריאוטיפים, חזות מפחידה ותוצרי בינה מלאכותית לא מבוססים.
 
-Complete `EDU-COM-402`, `EDU-COM-403`, ו־ `EDU-COM-404` before producing slides.
+השלימו את `EDU-COM-402`, `EDU-COM-403` ו־`EDU-COM-404` לפני הפקת השקפים.

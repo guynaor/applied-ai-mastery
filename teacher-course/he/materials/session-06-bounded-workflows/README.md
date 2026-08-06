@@ -1,19 +1,19 @@
-# משימה 6 — Bounded מורה Workflows
+# משימה 6 — תהליכי עבודה מוגבלים למורים
 
-Design ו־ test specification עבור an unattended תכנון-digest assistant. You תבצעו **not deploy it**. The בדיוני assistant monitors ציבורי curriculum-update snapshots ו־ prepares weekly draft עבור a מורה to בדיקה.
+תכננו ובדקו מפרט לעוזר בלתי־מושגח המפיק תקציר תכנון. **לא תפרסמו אותו.** העוזר הבדיוני מנטר תמונות מצב ציבוריות של עדכוני תכנית לימודים ומכין טיוטה שבועית לבדיקת המורה.
 
-assistant may read only supplied ציבורי snapshots. It יש never receive real תלמיד נתונים, names, IDs, grades, attendance, behavior records, accommodation information, משפחה contact information, or any protected/תלמיד-identifying information.
+העוזר רשאי לקרוא רק את תמונות המצב הציבוריות שסופקו. אסור שיקבל נתוני תלמידים אמיתיים, שמות, מזהים, ציונים, נוכחות, רישומי התנהגות, מידע על התאמות, פרטי קשר של משפחות, או מידע מוגן/מזהה תלמידים.
 
-## Scenario
+## תרחיש
 
-The בדיוני River Systems יחידת לימוד may need revision when a ציבורי curriculum office updates its guidance. Your assistant compares supplied snapshots, identifies genuinely new notices, ו־ drafts private תכנון digest. A מורה verifies every מקור ו־ יש explicitly approve any sending or publishing.
+ייתכן שיש לעדכן את יחידת מערכות הנהר הבדיונית כאשר משרד תכניות לימודים ציבורי מעדכן את הנחיותיו. העוזר משווה את תמונות המצב שסופקו, מזהה הודעות חדשות באמת ומנסח תקציר תכנון פרטי. מורה מאמת/ת כל מקור וחייב/ת לאשר במפורש כל שליחה או פרסום.
 
-## Deliverables
+## תוצרים
 
 - `EDU-AUTO-601-workflow-brief.md`
-- completed `EDU-AUTO-602-agent-specification-template.md`
-- completed `EDU-AUTO-603-test-log-template.csv`
+- `EDU-AUTO-602-agent-specification-template.md` שהושלם
+- `EDU-AUTO-603-test-log-template.csv` שהושלם
 
-## Non-negotiable boundary
+## גבול שאינו נתון למשא ומתן
 
-This is design exercise, not permission to automate school decisions. The תהליך עבודה אסור make or recommend grades, behavior decisions, placement decisions, or intervention decisions. It אסור send external messages, publish content, change school systems, or contact families/students. מורה approval is נדרש before anything is sent or published.
+זהו תרגיל תכנון, לא אישור להפוך החלטות בית ספר לאוטומטיות. תהליך העבודה לא יקבל או ימליץ על ציונים, החלטות התנהגות, השמה או התערבות. הוא לא ישלח הודעות חיצוניות, לא יפרסם תוכן, לא ישנה מערכות בית ספר ולא ייצור קשר עם משפחות/תלמידים. נדרש אישור מורה לפני כל שליחה או פרסום.

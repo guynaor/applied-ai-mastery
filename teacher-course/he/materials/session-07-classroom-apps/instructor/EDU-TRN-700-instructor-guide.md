@@ -1,16 +1,16 @@
-# EDU-TRN-700 — מנחה מדריך
+# EDU-TRN-700 — מדריך למנחה
 
-## Facilitation priorities
+## עדיפויות להנחיה
 
-Treat the אפליקציה as a למידה artifact, not product demo. Require learners to test interaction without mouse ו־ to make concrete decisions about language ו־ images עבור a selected grade band. hub יש remain local ו־ dependency-free.
+התייחסו לאפליקציה כתוצר למידה, לא כהדגמת מוצר. דרשו מהלומדים לבדוק אינטראקציה ללא עכבר ולקבל החלטות קונקרטיות על שפה ודימויים לשכבת גיל נבחרת. המרכז חייב להישאר מקומי וללא תלויות.
 
-## Ask
+## שאלו
 
-- “What does this diagram communicate to learner who cannot see it?”
-- “Which phrase would overload second grader? Which ראיות task would underchallenge high-school learner?”
-- “Where could נתונים leave this page? How do you know it does not?”
-- “What יש the מורה verify before resource is shared?”
+- ״מה התרשים הזה מוסר ללומד שאינו יכול לראות אותו?״
+- ״איזה ביטוי יעמיס על תלמיד בכיתה ב׳? איזו משימת ראיות תהיה קלה מדי לתלמיד תיכון?״
+- ״היכן עלולים נתונים לצאת מדף זה? מניין אתם יודעים שאינם יוצאים?״
+- ״מה המורה חייב/ת לאמת לפני שיתוף משאב?״
 
-## Guardrails
+## גבולות בטיחות
 
-Reject forms, analytics, remote scripts, logins, tracking, תלמיד names, saved answers, grade features, ו־ behavior features. אין לבצע accept color-only הנחיות, decorative alt text עבור an informative image, or נגישות claims without test record. A technically polished hub that is unsuitable עבור selected age band does not meet the משימה.
+דחו טפסים, ניתוח שימוש, סקריפטים מרוחקים, כניסות, מעקב, שמות תלמידים, תשובות שמורות, תכונות ציון ותכונות התנהגות. אין לקבל הוראות המבוססות על צבע בלבד, טקסט חלופי קישוטי לתמונה אינפורמטיבית, או טענות נגישות ללא רשומת בדיקה. מרכז מלוטש טכנית שאינו מתאים לגיל שנבחר אינו עומד במשימה.

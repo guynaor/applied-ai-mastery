@@ -1,19 +1,19 @@
-# EDU-TRN-400 — מנחה מדריך
+# EDU-TRN-400 — מדריך למנחה
 
-## Look-fors
+## מה לחפש
 
-- deck has exactly six purposeful slides, not six text-heavy pages.
-- Participants identify מקור scope ו־ local uncertainty.
-- Alt text communicates information; captions make claims legible.
-- Adaptation changes the למידה move, not only reading level.
+- במצגת יש בדיוק שישה שקפים בעלי מטרה, ולא שישה עמודים עמוסי טקסט.
+- המשתתפים מזהים את היקף המקור ואת אי־הוודאות המקומית.
+- הטקסט החלופי מוסר מידע; הכיתובים מבהירים את הטענות.
+- ההתאמה משנה את מהלך הלמידה, ולא רק את רמת הקריאה.
 
-## Coaching questions
+## שאלות להנחיה
 
-- “What could learner wrongly infer מ־ this image?”
-- “Whose experience is missing מ־ this action slide?”
-- “Could a תלמיד access point without seeing color or hearing narration?”
-- “עבור a high-school civic argument, where is counterevidence or limitation?”
+- ״מה תלמיד עלול להסיק בטעות מהתמונה הזאת?״
+- ״איזו חוויה חסרה בשקף הפעולה הזה?״
+- ״האם תלמיד יכול לגשת לרעיון בלי לראות צבע או לשמוע קריינות?״
+- ״בטיעון אזרחי של תיכון, היכן הראיה הנגדית או המגבלה?״
 
-## Common corrections
+## תיקונים נפוצים
 
-אין לבצע accept an בינה מלאכותית-generated image as ראיות. אין לבצע accept “מקור: internet.” עבור K–2, replace abstract policy claims עם observable questions; עבור 9–12, retain complexity but require מקור evaluation. אין לבצע ask children to report household water use.
+אין לקבל תמונה שנוצרה בבינה מלאכותית כראיה, או ״מקור: אינטרנט״. עבור K–2 החליפו טענות מדיניות מופשטות בשאלות ניתנות לצפייה; עבור 9–12 שמרו על המורכבות אך דרשו הערכת מקור. אל תבקשו מילדים לדווח על צריכת המים בבית.

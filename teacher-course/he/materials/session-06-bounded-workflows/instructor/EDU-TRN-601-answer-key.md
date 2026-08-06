@@ -1,13 +1,13 @@
 # EDU-TRN-601 — מפתח תשובות
 
-## Expected design decisions
+## החלטות עיצוב צפויות
 
-- `CURR-101` on January 16 is duplicate because its stable ID ו־ hash match prior state; audit it ו־ omit it מ־ digest.
-- `CURR-101` on January 23 is changed item, not confirmed instructional requirement. It is labeled `changed—verify`, cited, ו־ held עבור מורה בדיקה.
-- `CURR-205` is new ציבורי, complete item; it becomes `new—verify` ו־ is held pending approval.
-- `CURR-309` stops run because it is private. state אסור store its content.
-- Any תלמיד-נתונים injection stops immediately, leaves no copied record, ו־ generates only minimal internal audit/בדיקה event.
+- `CURR-101` ב־January 16 הוא כפילות משום שהמזהה היציב והגיבוב תואמים למצב הקודם; רשמו אותו בביקורת והשמיטו אותו מן התקציר.
+- `CURR-101` ב־January 23 הוא פריט שהשתנה, ולא דרישת הוראה מאומתת. תייגו אותו `changed—verify`, צטטו אותו והחזיקו אותו לבדיקת המורה.
+- `CURR-205` הוא פריט ציבורי חדש ושלם; הוא נעשה `new—verify` ומוחזק בהמתנה לאישור.
+- `CURR-309` עוצר את ההרצה משום שהוא פרטי. המצב אינו רשאי לשמור את תוכנו.
+- כל הזרקה של נתוני תלמידים עוצרת מיד, אינה משאירה רשומה מועתקת ומייצרת רק אירוע ביקורת/בדיקה פנימי מינימלי.
 
-## נדרש בטיחות reasoning
+## הנמקת בטיחות נדרשת
 
-The תהליך עבודה can detect possible ציבורי update, but it cannot determine local תקנים alignment, learner appropriateness, or whether a משפחה/staff message כדאי be sent. The מורה checks original מקור ו־ owns every approval. No design receives credit if it proposes grading, behavior, placement, intervention, grouping, sending, publishing, or external messaging.
+תהליך העבודה יכול לזהות עדכון ציבורי אפשרי, אך אינו יכול לקבוע התאמה לתקנים מקומיים, התאמה ללומדים או אם יש לשלוח הודעה למשפחה/צוות. המורה בודק/ת את המקור המקורי, מפרש/ת את ההשפעה ומחליט/ה אם לפעול. אין נתיב לשליחה, לפרסום או לשינוי מערכת במפרט זה.

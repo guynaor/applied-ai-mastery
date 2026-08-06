@@ -1,21 +1,21 @@
-# משימה 4 — כיתה Presentations ו־ חזותי למידה Artifacts
+# משימה 4 — מצגות כיתתיות ותוצרי למידה חזותיים
 
-## Purpose
+## מטרה
 
-Create six-slide, ראיות-aware כיתה deck עבור the בדיוני inquiry **Local Water, Shared Responsibility**. בינה מלאכותית may propose language or storyboard; the מורה verifies every fact, מקור, image, caption, נגישות choice, ו־ developmental fit before use.
+צרו מצגת כיתתית בת שישה שקפים, המבוססת על ראיות, עבור החקר הבדיוני **מים מקומיים, אחריות משותפת**. בינה מלאכותית יכולה להציע ניסוח או לוח תכנון; המורה מאמת/ת כל עובדה, מקור, תמונה, כיתוב, בחירת נגישות והתאמה התפתחותית לפני השימוש.
 
-## Deliverables
+## תוצרים
 
-1. Complete the מצגת תקציר ו־ מקור notes.
-2. Plan six slides in storyboard CSV, including spoken narration ו־ alt text.
-3. Submit the נגישות ו־ age-appropriateness critique.
+1. השלימו את תקציר המצגת ורשימות המקורות.
+2. תכננו שישה שקפים ב־CSV של לוח התכנון, כולל קריינות וטקסט חלופי.
+3. הגישו את ביקורת הנגישות וההתאמה לגיל.
 
-Use only ציבורי, district-approved, or מורה-created חומרים. אין לבצע use תלמיד photos, names, work, or בינה מלאכותית-generated “facts” without אימות.
+השתמשו רק בחומרים ציבוריים, מאושרי מחוז או שיצר/ה המורה. אין להשתמש בתמונות, שמות או עבודות של תלמידים, או ב״עובדות״ שנוצרו בבינה מלאכותית, ללא אימות.
 
-## Package map
+## מפת החבילה
 
-- `student/EDU-COM-401-presentation-brief.md` — scenario ו־ six-slide תקציר
-- `student/EDU-COM-402-source-notes.md` — מקור ו־ claim record
-- `student/EDU-COM-403-storyboard-template.csv` — תכנון sheet
-- `student/EDU-COM-404-accessibility-critique.md` — preflight critique
-- `instructor/` — facilitation, מדריך, מפתח תשובות, ו־ מחוון
+- `student/EDU-COM-401-presentation-brief.md` — תרחיש ותקציר לשישה שקפים
+- `student/EDU-COM-402-source-notes.md` — רישום מקורות וטענות
+- `student/EDU-COM-403-storyboard-template.csv` — דף תכנון
+- `student/EDU-COM-404-accessibility-critique.md` — ביקורת טרום־הגשה
+- `instructor/` — הנחיה, מדריך, מפתח תשובות ורובריקה

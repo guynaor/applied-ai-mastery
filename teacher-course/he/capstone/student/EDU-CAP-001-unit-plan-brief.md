@@ -1,68 +1,68 @@
-# EDU-CAP-001 — מורה-Reviewed K–12 Water יחידת לימוד Plan
+# EDU-CAP-001 — תכנית יחידת מים ל־K–12 שנבדקת בידי מורה
 
-**Role:** מורה ו־ final instructional החלטה-maker
+**תפקיד:** מורה ומקבל/ת ההחלטות ההוראתיות הסופי/ת
 
-**Scenario:** Adapt the בדיוני two-week *Water in Our Shared World* יחידת לימוד עבור one selected grade band, while showing how same central inquiry changes עבור K–2, 3–5, 6–8, ו־ 9–12.
+**תרחיש:** התאימו את יחידת **מים בעולמנו המשותף** הבדיונית בת השבועיים לשכבת גיל אחת שנבחרה, תוך הצגת האופן שבו אותו חקר מרכזי משתנה עבור K–2, 3–5, 6–8 ו־9–12.
 
-## Central inquiry
+## חקר מרכזי
 
-How do people use, value, ו־ protect shared water? Choose local connection only after the מורה verifies its accuracy, בטיחות, relevance, ו־ community context.
+כיצד אנשים משתמשים במים משותפים, מעריכים אותם ומגינים עליהם? בחרו חיבור מקומי רק לאחר שהמורה מאמת/ת את דיוקו, בטיחותו, רלוונטיותו והקשרו הקהילתי.
 
-## נדרש deliverables
+## תוצרים נדרשים
 
-### 1. Traceable שיעור sequence
+### 1. רצף שיעורים בר־מעקב
 
-Create feasible ten-school-day sequence. Include investigation or observation, מקור-evaluation moment, נתונים representation, formative checks, final performance/תקשורת task, חומרים, timing, ו־ מורה checkpoints. Trace אילוצים such as schedule, access needs, בטיחות, language supports, ו־ הערכה dates to choices you make.
+צרו רצף ישים של עשרה ימי לימודים. כללו חקירה או תצפית, רגע להערכת מקור, ייצוג נתונים, בדיקות מעצבות, משימת ביצוע/תקשורת מסכמת, חומרים, זמנים ונקודות בקרה של המורה. עקבו אחר אילוצים כגון לוח זמנים, צורכי נגישות, בטיחות, תמיכות שפה ומועדי הערכה אל הבחירות שאתם עושים.
 
-### 2. Four-band התאמה דיפרנציאלית plan
+### 2. תכנית דיפרנציאציה בארבע שכבות
 
-Design one coherent למידה arc ו־ show meaningful version עבור every band:
+עצבו קשת למידה אחת עקבית והציגו גרסה משמעותית לכל שכבה:
 
-| Grade band | Expected למידה move |
+| שכבת גיל | מהלך למידה צפוי |
 |---|---|
-| K–2 | Observe water, use read-aloud or image sequence, sort ראיות עם oral/חזותי response options. |
-| 3–5 | Investigate local water question, interpret simple table or graph, ו־ explain claim עם ראיות. |
-| 6–8 | Evaluate מקור reliability, model patterns in נתונים, ו־ propose supported action. |
-| 9–12 | Compare claims ו־ trade-offs, evaluate methods/uncertainty, ו־ make civic argument עם rebuttal. |
+| K–2 | התבוננות במים, שימוש בהקראה או ברצף תמונות, ומיון ראיות עם אפשרויות מענה בעל פה/חזותיות. |
+| 3–5 | חקר שאלה מקומית על מים, פירוש טבלה או גרף פשוט והסבר טענה בעזרת ראיות. |
+| 6–8 | הערכת אמינות מקור, מידול דפוסים בנתונים והצעת פעולה נתמכת. |
+| 9–12 | השוואת טענות ופשרות, הערכת שיטות/אי־ודאות וניסוח טיעון אזרחי עם הפרכה. |
 
-Adjust access, participation, language, ו־ expression while preserving central thinking. אין לבצע label learner or make placement decisions מ־ בינה מלאכותית output.
+התאימו נגישות, השתתפות, שפה והבעה תוך שמירה על החשיבה המרכזית. אין לתייג לומד או לקבל החלטות השמה מפלט של בינה מלאכותית.
 
-### 3. ראיות-based content choice
+### 3. בחירת תוכן מבוססת ראיות
 
-Use the ראיות register to record at least four sources or supplied course artifacts. Distinguish מחקר, district/local guidance, observation, ו־ vendor/בינה מלאכותית claims. עבור every consequential claim, record what the מקור supports, its limit, ו־ how the מורה תבצעו verify local fit.
+השתמשו במרשם הראיות לתיעוד ארבעה מקורות לפחות או תוצרי קורס שסופקו. הבדילו בין מחקר, הנחיה מחוזית/מקומית, תצפית וטענות של ספק/בינה מלאכותית. לכל טענה בעלת משמעות, תעדו במה המקור תומך, מה מגביל אותו וכיצד המורה יאמת/תאמת התאמה מקומית.
 
-### 4. הערכה plan ו־ מחוון
+### 4. תכנית הערכה ורובריקה
 
-Create learner-facing or מורה-use הערכה מחוון aligned to the יחידת לימוד goal. It needs clear מדדי הצלחה, an accessible way to demonstrate למידה, ו־ a plan עבור feedback before final task. בינה מלאכותית may draft language, but it אסור assign grades, infer behavior, determine placement, or select interventions.
+צרו רובריקת הערכה המיועדת לתלמידים או לשימוש המורה, המותאמת למטרת היחידה. היא זקוקה לקריטריוני הצלחה ברורים, לדרך נגישה להדגים למידה ולתכנית משוב לפני המשימה הסופית. בינה מלאכותית רשאית לנסח טיוטת שפה, אך אסור לה להקצות ציונים, להסיק התנהגות, לקבוע השמה או לבחור התערבויות.
 
-### 5. בדיוני גיליון ציונים-pattern analysis
+### 5. ניתוח דפוסי יומן ציונים בדיוני
 
-Use only the בדיוני נתונים מ־ משימה 3. Preserve missing values, apply formula-based cleaning, ו־ write neutral pattern note: what table suggests, what the מורה יש בדיקה, ו־ what it does **not** establish. Propose low-stakes instructional follow-up; the מורה reviews all outcomes.
+השתמשו רק בנתונים הבדיוניים ממשימה 3. שמרו ערכים חסרים, הפעילו ניקוי מבוסס נוסחאות וכתבו הערת דפוס ניטרלית: מה הטבלה מרמזת, מה המורה חייב/ת לבדוק ומה היא **אינה** מבססת. הציעו המשך הוראתי בסיכון נמוך; המורה בודק/ת את כל התוצאות.
 
-### 6. משפחה תקשורת draft
+### 6. טיוטת תקשורת למשפחות
 
-Draft short, translation-ready משפחה message explaining inquiry, dates/חומרים, accessible participation options, ו־ a way to contact the מורה. אין לבצע request private household information. The מורה checks language, local policy, translation, ו־ distribution before sending.
+נסחו הודעה קצרה ומוכנה לתרגום למשפחות המסבירה את החקר, מועדים/חומרים, אפשרויות השתתפות נגישות ודרך לפנות למורה. אין לבקש מידע פרטי של משק הבית. המורה בודק/ת שפה, מדיניות מקומית, תרגום והפצה לפני שליחה.
 
-### 7. Six-slide teaching deck
+### 7. מצגת הוראה בת שישה שקפים
 
-Create six slides: (1) inquiry ו־ relevance, (2) what learners notice, (3) ראיות/מקור practice, (4) נתונים or investigation, (5) discussion/action choices, (6) רפלקציה or performance task. Provide מקור notes, speaker notes, captions/alt text, readable contrast, ו־ a non-colour-only way to read meaning. Claims ו־ visuals יש be מותאם גיל ו־ supported.
+צרו שישה שקפים: (1) חקר ורלוונטיות, (2) במה הלומדים מבחינים, (3) תרגול ראיות/מקור, (4) נתונים או חקירה, (5) אפשרויות דיון/פעולה, (6) רפלקציה או משימת ביצוע. ספקו רשימות מקור, הערות דובר, כיתובים/טקסט חלופי, ניגודיות קריאה ודרך שאינה מבוססת צבע בלבד לקריאת המשמעות. טענות ודימויים חייבים להיות מתאימים לגיל ומבוססים.
 
-### 8. רפלקציה ו־ בדיקה
+### 8. רפלקציה ובדיקה
 
-Explain where בינה מלאכותית helped, where it created סיכון or uncertainty, what you rejected or changed, ו־ which decisions נדרש מורה judgment. Update the החלטה log after peer/מנחה challenge.
+הסבירו היכן הבינה המלאכותית סייעה, היכן יצרה סיכון או אי־ודאות, מה דחיתם או שיניתם, ואילו החלטות דרשו שיקול דעת של מורה. עדכנו את יומן ההחלטות לאחר אתגר של עמית/מנחה.
 
-## אופציונלי extension — design only
+## הרחבה אופציונלית — עיצוב בלבד
 
-Choose **one**:
+בחרו **אחת**:
 
-- adapt local, dependency-free כיתה resource hub מ־ משימה 7 using בדיוני/ציבורי חומרים ו־ no נתונים collection; or
-- specify bounded weekly תכנון digest that monitors בדיוני ציבורי curriculum snapshots, logs changes, suppresses duplicates, stops safely, excludes תלמיד נתונים, ו־ requires מורה approval before any sharing.
+- התאימו את מרכז המשאבים הכיתתי המקומי וללא תלויות ממשימה 7 באמצעות חומרים בדיוניים/ציבוריים וללא איסוף נתונים; או
+- הגדירו תקציר תכנון שבועי מוגבל המנטר תמונות מצב בדיוניות של תכניות לימודים ציבוריות, מתעד שינויים, מדכא כפילויות, נעצר בבטחה, מוציא נתוני תלמידים ודורש אישור מורה לפני כל שיתוף.
 
-אין לבצע deploy, publish, send messages, collect נתונים, or connect extension to real school systems.
+אין לפרוס, לפרסם, לשלוח הודעות, לאסוף נתונים או לחבר את ההרחבה למערכות בית ספר אמיתיות.
 
-## Non-negotiable boundaries
+## גבולות שאינם נתונים למשא ומתן
 
-- Use בדיוני, ציבורי, or מורה-approved de-identified חומרים only.
-- Verify תקנים, local facts, נגישות needs, בטיחות expectations, משפחה-language needs, ו־ policy before use.
-- Label בינה מלאכותית outputs, assumptions, estimates, ו־ unresolved questions.
-- The מורה retains final responsibility עבור instructional choices, grading, תקשורת, safeguarding, ו־ any external action.
+- השתמשו רק בחומרים בדיוניים, ציבוריים או מאושרים בידי מורה ומנוטרלי זיהוי.
+- אמתו תקנים, עובדות מקומיות, צורכי נגישות, ציפיות בטיחות, צורכי שפת המשפחה ומדיניות לפני השימוש.
+- תייגו פלטי בינה מלאכותית, הנחות, אומדנים ושאלות פתוחות.
+- המורה שומר/ת על האחריות הסופית לבחירות הוראתיות, ציונים, תקשורת, הגנה על תלמידים וכל פעולה חיצונית.

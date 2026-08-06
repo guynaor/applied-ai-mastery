@@ -1,12 +1,12 @@
-# EDU-TRN-400 — שלב אחר שלב שיעור Script
+# EDU-TRN-400 — תסריט שיעור שלב אחר שלב
 
-**Time:** 70 minutes. **Outcome:** participants storyboard six-slide deck ו־ defend one revision using ראיות ו־ learner needs.
+**משך:** 70 דקות. **תוצאה:** המשתתפים מתכננים מצגת בת שישה שקפים ומצדיקים שינוי אחד באמצעות ראיות וצורכי תלמידים.
 
-1. **0–8 min — Frame.** Say: “A polished deck is not automatically trustworthy deck. Today the מורה is verifier.” Display six-slide sequence.
-2. **8–18 min — Model.** Read sample storyboard row. Ask what diagram can show ו־ what it cannot establish about local water system.
-3. **18–33 min — מקור work.** Participants complete מקור notes עבור slides 2–3. פרומפט: “What exactly does this מקור support?”
-4. **33–48 min — Storyboard.** Pairs draft all six rows ו־ select one grade band. Circulate using the מדריך questions.
-5. **48–60 min — Critique swap.** Partners use EDU-COM-404. Each יש identify one claim or חזותי to revise/remove.
-6. **60–70 min — Share ו־ exit.** Invite one K–2/3–5 adaptation ו־ one 6–8/9–12 adaptation. Exit ticket: name a אימות step בינה מלאכותית cannot perform עבור the מורה.
+1. **0–8 דק׳ — מסגור.** אמרו: ״מצגת מלוטשת אינה בהכרח מצגת מהימנה. היום המורה הוא/היא המאמת/ת.״ הציגו את רצף ששת השקפים.
+2. **8–18 דק׳ — הדגמה.** קראו את שורת לוח התכנון לדוגמה. שאלו מה התרשים יכול להראות ומה אינו יכול לבסס על מערכת המים המקומית.
+3. **18–33 דק׳ — עבודה עם מקורות.** המשתתפים משלימים רשימות מקורות לשקפים 2–3. הנחו: ״בדיוק במה המקור הזה תומך?״
+4. **33–48 דק׳ — לוח תכנון.** זוגות מנסחים את כל שש השורות ובוחרים שכבת גיל אחת. הסתובבו בעזרת שאלות ההנחיה.
+5. **48–60 דק׳ — החלפת ביקורת.** בני הזוג משתמשים ב־EDU-COM-404. כל אחד חייב לזהות טענה או דימוי אחד לשינוי/להסרה.
+6. **60–70 דק׳ — שיתוף ויציאה.** הזמינו התאמה אחת ל־K–2/3–5 והתאמה אחת ל־6–8/9–12. פתק יציאה: ציינו צעד אימות שבינה מלאכותית אינה יכולה לבצע במקום המורה.
 
-If time is short, complete slides 1–3 ו־ orally plan 4–6; אין לבצע skip מקור/alt-text בדיקה.
+אם הזמן קצר, השלימו שקפים 1–3 ותכננו בעל פה את 4–6; אל תדלגו על בדיקת המקור והטקסט החלופי.

@@ -1,17 +1,17 @@
-# EDU-TRN-600 — שלב אחר שלב שיעור Script
+# EDU-TRN-600 — תסריט שיעור שלב אחר שלב
 
-## Outcome
+## תוצאה
 
-Learners can specify narrowly bounded unattended monitoring תהליך עבודה whose only output is a מורה-reviewed private draft.
+הלומדים יכולים להגדיר תהליך ניטור בלתי־מושגח ומוגבל בקפידה, שתוצרו היחיד הוא טיוטה פרטית שנבדקת בידי מורה.
 
-## 70-minute flow
+## מהלך של 70 דקות
 
-1. **10 min — Frame boundary.** Contrast monitoring ציבורי curriculum snapshots עם automating כיתה decisions. State prohibited domains: grades, behavior, placement, intervention, ו־ external messages.
-2. **15 min — Trace inputs.** Inspect the בדיוני CSV ו־ identify why private row יש stop the תהליך עבודה.
-3. **20 min — Build state logic.** Learners complete ID/hash duplicate ו־ changed-item rules.
-4. **15 min — Test failure cases.** Run test-log scenarios mentally ו־ require audit-log field עבור each.
-5. **10 min — בדיקה gate.** Learners explain why a מורה יש verify מקור changes ו־ approve any future sending/publishing.
+1. **10 דק׳ — מסגור הגבול.** השוו ניטור של תמונות מצב ציבוריות של תכנית לימודים לאוטומציה של החלטות כיתה. ציינו את התחומים האסורים: ציונים, התנהגות, השמה, התערבות והודעות חיצוניות.
+2. **15 דק׳ — מעקב אחר קלטים.** בחנו את ה־CSV הבדיוני וזהו מדוע השורה הפרטית חייבת לעצור את התהליך.
+3. **20 דק׳ — בניית לוגיקת מצב.** הלומדים משלימים כללי כפילות ופריטים שהשתנו לפי מזהה/גיבוב.
+4. **15 דק׳ — בדיקת מקרי כשל.** הריצו מנטלית את תרחישי יומן הבדיקה ודרשו שדה ביומן הביקורת לכל אחד.
+5. **10 דק׳ — שער בדיקה.** הלומדים מסבירים מדוע מורה חייב/ת לאמת שינויי מקור ולאשר כל שליחה/פרסום עתידיים.
 
-## בדיקה עבור understanding
+## בדיקת הבנה
 
-Ask: “What happens if changed snapshot looks relevant but no מורה has checked original מקור?” Expected answer: it stays cited, uncertain draft in pending approval; it does not change plan or leave system.
+שאלו: ״מה קורה אם תמונת מצב שהשתנתה נראית רלוונטית אך שום מורה לא בדק את המקור המקורי?״ תשובה צפויה: היא נשארת טיוטה מצוטטת ולא ודאית הממתינה לאישור; היא אינה משנה תכנית ואינה יוצאת מן המערכת.
