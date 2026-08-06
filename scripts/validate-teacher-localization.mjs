@@ -17,7 +17,18 @@ const sourceInventory=listFiles('teacher-course').filter(file=>file.endsWith('.m
 const headings=markdown=>[...markdown.matchAll(/^(#{1,6})\s/gm)].map(match=>match[1].length);
 const fenceCount=markdown=>(markdown.match(/^```/gm)||[]).length;
 const documentIds=markdown=>[...new Set(markdown.replace(/(\[[^\]]*\])\([^)]+\)/g,'$1').match(/EDU-[A-Z]+-[0-9]+/g)||[])].sort();
-const numericTokens=markdown=>markdown.replace(/(\[[^\]]*\])\([^)]+\)/g,'$1').replace(/EDU-[A-Z]+-[0-9]+/g,'').match(/\d+(?:\.\d+)?%?|\d+[–-]\d+/g)?.sort()||[];
+const stripGradeBandTerms=markdown=>markdown.replace(/K[–-]12|K[–-]2|3[–-]5|6[–-]8|9[–-]12|יסודי א׳–ו׳|חטיבה ז׳–ט׳|תיכון י׳–י״ב/gu,'');
+const numericTokens=markdown=>stripGradeBandTerms(markdown).replace(/(\[[^\]]*\])\([^)]+\)/g,'$1').replace(/EDU-[A-Z]+-[0-9]+/g,'').match(/\d+[–-]\d+|\d+(?:\.\d+)?%?/g)?.sort()||[];
+assert.deepEqual(
+  numericTokens('K–2 with 35 minutes'),
+  numericTokens('יסודי א׳–ו׳ עם 35 דקות'),
+  'equivalent Israeli grade bands must not affect numeric parity',
+);
+assert.notDeepEqual(
+  numericTokens('K–2 with 35 minutes'),
+  numericTokens('יסודי א׳–ו׳ עם 40 דקות'),
+  'unrelated numeric changes must still fail parity',
+);
 const localLinks=markdown=>[...markdown.matchAll(/\[[^\]]*\]\(([^)]+)\)/g)].map(match=>match[1].trim().replace(/^<|>$/g,'').split('#')[0].split('?')[0]).filter(link=>link&&!/^(?:https?:|mailto:|tel:)/i.test(link));
 const proseLetterCounts=markdown=>{
   const prose=markdown.split(/\r?\n/).filter(line=>{
@@ -54,8 +65,7 @@ for(const entry of manifest.entries){
   assert.deepEqual(headings(target),headings(source),`${entry.target} heading structure differs from source`);
   assert.equal(fenceCount(target),fenceCount(source),`${entry.target} code-fence count differs from source`);
   assert.deepEqual(documentIds(target),documentIds(source),`${entry.target} document IDs differ from source`);
-  const usesIsraeliGradeBands=/יסודי א׳–ו׳|חטיבה ז׳–ט׳|תיכון י׳–י״ב/.test(target);
-  if(!usesIsraeliGradeBands)assert.deepEqual(numericTokens(target),numericTokens(source),`${entry.target} numeric/formula tokens differ from source`);
+  assert.deepEqual(numericTokens(target),numericTokens(source),`${entry.target} numeric/formula tokens differ from source`);
   for(const link of localLinks(target)){
     const resolved=path.resolve(path.dirname(absolute(entry.target)),decodeURIComponent(link));
     assert.ok(existsSync(resolved),`broken link in ${entry.target}: ${link}`);
