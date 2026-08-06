@@ -1,0 +1,6 @@
+criterion,emerging,developing,proficient,advanced
+Scope and data boundary,Inputs are broad or student data is possible,Some boundaries are named,Only approved public snapshots and minimal state are allowed; student data is explicitly excluded,Boundary identifies realistic injection paths and explains safe rejection
+State and duplicate logic,No durable duplicate rule,ID or date rule is incomplete,ID/hash state distinguishes duplicate new and changed items,Rules address conflicts retention and teacher-controlled archive
+Failure and audit design,Failures are ignored or retried blindly,Some errors are logged,Stop conditions safe actions and minimal audit fields are complete,Tests demonstrate containment timeout and prohibited-data behavior
+Teacher approval and safety,Human review is vague,Approval occurs after a possible action,Teacher approval blocks send/publish and source acceptance,Design clearly explains why grades behavior placement intervention and external messages are prohibited
+Test evidence,Tests are generic,Several cases are named,Test log covers duplicate change private data missing source timeout and approval gate,Evidence links each result to an audit event and a revision

@@ -1,0 +1,6 @@
+snapshot_id,snapshot_date,visibility,source_url,content_hash,headline,summary
+CURR-101,2026-01-09,public,https://curriculum.example.org/water/river-systems,v1a7,Watershed vocabulary guidance,Use watershed model and local glossary; fictional public snapshot.
+CURR-101,2026-01-16,public,https://curriculum.example.org/water/river-systems,v1a7,Watershed vocabulary guidance,Exact duplicate of the prior fictional public snapshot.
+CURR-101,2026-01-23,public,https://curriculum.example.org/water/river-systems,v2b4,Watershed vocabulary guidance,Updated fictional snapshot adds accessible caption guidance.
+CURR-205,2026-01-23,public,https://curriculum.example.org/accessibility/captions,c8d2,Caption guidance,Public fictional accessibility reminder for classroom visuals.
+CURR-309,2026-01-23,private,https://internal.example.org/notes,p9x1,Internal note,Rejected test row: not a public source.

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>River Systems Resource Hub</title>
+  <style>
+    :root { color-scheme: light; --ink:#102a43; --paper:#ffffff; --water:#0b5f9c; --sand:#f6f1e5; --focus:#d94801; }
+    * { box-sizing:border-box; } body { margin:0; font:1rem/1.55 system-ui,sans-serif; color:var(--ink); background:var(--sand); }
+    main { max-width:52rem; margin:auto; padding:2rem 1rem 3rem; } header, section { background:var(--paper); border-radius:.75rem; padding:1.25rem; margin-bottom:1rem; }
+    h1 { margin-top:0; } button { color:#fff; background:var(--water); border:0; border-radius:.35rem; padding:.7rem 1rem; font:inherit; cursor:pointer; }
+    button:hover { background:#084c7a; } button:focus-visible, a:focus-visible { outline:3px solid var(--focus); outline-offset:3px; }
+    .cards { display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(14rem,1fr)); } article { border:2px solid var(--water); border-radius:.5rem; padding:1rem; }
+    .tag { font-weight:700; color:#073b60; } [hidden] { display:none; } .notice { border-left:5px solid var(--water); padding-left:1rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>River Systems Resource Hub</h1>
+      <p>Choose a fictional classroom resource to explore how water moves and who shares it.</p>
+      <p class="notice">This local page collects no data. It has no accounts, forms, analytics, cookies, or network requests.</p>
+      <button type="button" id="toggle-help" aria-expanded="false" aria-controls="help">Show how to use this hub</button>
+      <p id="help" hidden>Read a card, choose one activity with your teacher, and use the question to explain your thinking. Ask for a printed version or read-aloud support if helpful.</p>
+    </header>
+    <section aria-labelledby="resources-heading">
+      <h2 id="resources-heading">Explore resources</h2>
+      <div class="cards">
+        <article><p class="tag">Make · K–5</p><h3>Build a Paper Watershed</h3><p>Fold paper, add drops of water, and notice where water travels.</p><p><a href="#teacher-note">Ask for the printable activity steps.</a></p></article>
+        <article><p class="tag">Read · 3–12</p><h3>Vocabulary Cards</h3><p>Use watershed, tributary, and riverbank in a labeled drawing.</p><p><a href="#teacher-note">Ask for the vocabulary cards.</a></p></article>
+        <article><p class="tag">Look · 3–12</p><h3>Watershed Diagram</h3><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='120'%3E%3Crect width='100%25' height='100%25' fill='%23d9f0ff'/%3E%3Cpath d='M15 20 C100 30 100 105 300 100' stroke='%230b5f9c' stroke-width='14' fill='none'/%3E%3C/svg%3E" alt="Blue river curves from upper left to lower right across a pale blue watershed diagram."><p>Describe what the arrowed river path shows before checking with a partner.</p></article>
+        <article><p class="tag">Discuss · 6–12</p><h3>Who Shares a River?</h3><p>What evidence would a community need before deciding how to care for shared water?</p><p><a href="#teacher-note">Use the fictional discussion prompt.</a></p></article>
+      </div>
+    </section>
+    <section id="teacher-note"><h2>Teacher note</h2><p>All materials named here are fictional/public course materials. Your teacher selects the age-appropriate version and verifies any local facts before use.</p></section>
+  </main>
+  <script>
+    const button=document.querySelector('#toggle-help'); const help=document.querySelector('#help');
+    button.addEventListener('click',()=>{ const open=button.getAttribute('aria-expanded')==='true'; button.setAttribute('aria-expanded',String(!open)); button.textContent=open?'Show how to use this hub':'Hide how to use this hub'; help.hidden=open; });
+  </script>
+</body>
+</html>
