@@ -25,13 +25,23 @@ assert.equal((courseJs.match(/\bn:\s*\d+/g)??[]).length,8,'teacher course must c
 for(const requirement of [
   'aam-teacher-language',
   'aam-teacher-mode',
-  'teacher-course/he/',
-  'student data',
-  'teacher approval',
-  'accessibility'
+  'teacher-course/he/'
 ]){
   assert.match(courseJs,new RegExp(requirement),`missing teacher course requirement: ${requirement}`);
 }
+
+const sessionBlock=(number,nextNumber)=>{
+  const match=courseJs.match(new RegExp(`\\{\\s*n:\\s*${number},([\\s\\S]*?)\\n\\s*\\},\\n\\s*\\{\\s*n:\\s*${nextNumber},`));
+  assert.ok(match,`could not isolate Mission ${number} metadata`);
+  return match[0];
+};
+
+const missionSix=sessionBlock(6,7);
+assert.match(missionSix,/\b(?:no|without|exclude(?:s|d|ing)?|never)\s+(?:real\s+)?student data\b/i,'Mission 6 must exclude student data');
+assert.match(missionSix,/teacher approval/i,'Mission 6 must require teacher approval');
+
+const missionSeven=sessionBlock(7,8);
+assert.match(missionSeven,/accessibility/i,'Mission 7 must address accessibility');
 
 const resourcePaths=[...courseJs.matchAll(/['"](teacher-course\/(?:he\/)?(?:materials|capstone)\/[^'"\s]+)['"]/g)]
   .map(([,path])=>path);
