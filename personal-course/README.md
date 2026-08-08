@@ -2,7 +2,7 @@
 
 ## Audience
 
-Young adults before university, during university, or shortly after graduation who have limited professional experience and want to use AI confidently in everyday life.
+Anyone who wants to use AI confidently in everyday life—across life stages, experience levels, and personal goals.
 
 ## Course goal
 
@@ -10,17 +10,16 @@ Teach practical AI-assisted problem solving for personal decisions, planning, co
 
 The course does not aim to make students dependent on AI. It teaches them to decide when AI is useful, provide the right context, compare options, verify important claims, protect private information, organize their digital lives, and retain responsibility for consequential decisions.
 
-## Lesson format
+## Session format
 
-Every lesson is designed for **20–30 minutes**:
+Every integrated session is designed for **45–60 minutes**. It combines related activities into one substantial real-life outcome:
 
-1. **2–3 minutes — Hook:** a familiar problem or decision.
-2. **4–6 minutes — Concept:** one durable AI skill in plain language.
-3. **10–15 minutes — Guided task:** create or improve a real artifact.
-4. **3–5 minutes — Check:** verify, compare, or stress-test the result.
-5. **1–2 minutes — Takeaway:** one reusable rule and a small optional extension.
+1. **5–10 minutes — Frame:** a real problem, privacy boundary, and success conditions.
+2. **25–35 minutes — Integrated studio:** linked activities build one artifact.
+3. **10–15 minutes — Verify:** compare, source-check, or stress-test the result.
+4. **5 minutes — Reflect:** save evidence, a reusable rule, and the next human action.
 
-Each lesson must be independently useful while also building toward a personal capstone and a final portfolio/CV lesson.
+Each session is independently useful while also building toward a personal capstone and portfolio. Claude, ChatGPT, and Gemini pathways are optional; free-access tools, offline workbooks, and facilitator observation always remain valid routes.
 
 ## Digital life management as a course-wide skill
 
@@ -34,23 +33,17 @@ Digital life management is woven through the course rather than isolated in one 
 - protect private, financial, identity, health, and account information
 - preserve useful project evidence for a later portfolio and CV.
 
-## Revised syllabus
+## Seven-session syllabus
 
-| Lesson | Title | Everyday outcome | Core AI skill | Digital-life connection |
-|---|---|---|---|---|
-| 1 | Ask Better, Get Better | Turn a vague request into a useful, testable result | Context, constraints, examples, iteration | Build reusable prompt templates and know what personal information not to share |
-| 2 | Summarize Without Losing What Matters | Convert a long message, article, lecture, video transcript, or document into decisions and actions | Structured summarization, missing-information checks | Turn summaries into notes, task lists, follow-ups, and calendar items |
-| 3 | Make Better Decisions | Compare meaningful options using explicit criteria instead of intuition alone | Decision matrices, assumptions, sensitivity | Keep a decision record with criteria, evidence, unresolved questions, and review dates |
-| 4 | Buy Smarter Online | Research products, compare real costs, seller quality, and misleading claims | Product research, source quality, total-cost comparison | Save comparison tables, warranties, return deadlines, receipts, and verification notes |
-| 5 | Create Personal Deal Alerts | Specify a safe monitor for price or availability changes without notification spam | Triggers, thresholds, duplicate suppression, stop rules | Use reminders and automations that can be paused, reviewed, and deleted |
-| 6 | Plan a Realistic Trip | Build a feasible itinerary with budget, travel time, buffers, and fallbacks | Constraint-based planning, staged verification | Coordinate calendar entries, bookings, packing lists, shared notes, and timed rechecks |
-| 7 | Plan an Event With Friends | Coordinate preferences, budget, tasks, invitations, and a poster | Collaborative planning, creative generation | Manage polls, shared task ownership, deadlines, reminders, and versioned invitation files |
-| 8 | Research Investing Responsibly | Build a balanced research brief and identify risks and unknowns without pretending to predict returns | Evidence synthesis, opposing views, uncertainty | Maintain watchlists and research notes without exposing account details or automating trades |
-| 9 | Build Your First Mini App | Create a small poll, expense splitter, packing checklist, or habit tool | Requirements, rapid prototyping, testing | Convert a recurring coordination problem into a simple maintainable digital workflow |
-| 10 | Design Something for Your Room | Turn room dimensions and needs into a parametric CAD concept | Design contracts, parameters, validation boundaries | Organize measurements, versions, source files, and a physical verification checklist |
-| 11 | Tell Stories with Images and Video | Create a responsible image/video summary of a trip, event, or project | Storyboarding, generation prompts, consent, authenticity | Organize source media, permissions, captions, exports, and backup copies |
-| 12 | Build Your Personal Brand | Turn course projects and real experience into a truthful CV, LinkedIn profile, portfolio, and application package | Evidence-based writing, audience adaptation, project selection | Curate reusable career records, achievement evidence, project links, and application tracking |
-| Final | Personal Life Project | Combine several skills to solve one genuine personal need | Integration, verification, reflection | Build one organized, reusable workflow with clear ownership, files, reminders, and review points |
+| Session | Title | Integrated outcome |
+|---|---|---|
+| 1 | Ask, Summarize, and Decide | Turn personal information into a verified decision or next step. |
+| 2 | Research, Buy, and Monitor | Compare evidence, identify uncertainty, and define a safe alert; Gemini Deep Research is optional. |
+| 3 | Plan Real Life Together | Produce a feasible travel or event plan with shared ownership and contingencies. |
+| 4 | Build a Small Personal Tool | Specify, test, and maintain a tiny personal web tool without complex coding. |
+| 5 | Design and Organize a Physical Project | Turn measured needs into a tested parametric design concept. |
+| 6 | Create a Trustworthy Visual Story | Create an ethical, sourced, accessible visual story. |
+| 7 | Build a Personal Workflow and Portfolio | Consolidate evidence, a recurring bounded workflow, and a final project. |
 
 ## Why the career lesson comes last
 
