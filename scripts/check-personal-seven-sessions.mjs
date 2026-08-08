@@ -112,6 +112,13 @@ assert.match(journal,/throughout all 7 integrated sessions\. Each session has it
  'English journal home must describe the seven integrated sessions');
 assert.doesNotMatch(journal,/throughout all 12 lessons|Each lesson has its own tab/i,
  'English journal home must not retain twelve-lesson wording');
+const sessionSevenJournal=journal.match(/<!-- journal-tab: \{"id":"session-07"[^]*$/)?.[0] ?? '';
+for(const term of [/personal workflow/i,/portfolio/i,/capstone|final personal project/i,/Claude Desktop/i,/permission/i,/OpenClaw/i,/no install|paper-only/i]){
+ assert.match(sessionSevenJournal,term,`English Session 7 journal must include ${term}`);
+}
+for(const term of [/application package/i,/audience-specific application/i,/target role or audience/i,/CV revised/i,/application is logged/i]){
+ assert.doesNotMatch(sessionSevenJournal,term,`English Session 7 journal must not retain application-package framing: ${term}`);
+}
 
 const sessionTwo={
  English:readFileSync('personal-course/sessions/session-02-research-buy-monitor.md','utf8'),

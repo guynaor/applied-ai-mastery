@@ -583,39 +583,46 @@ Which source, permission, or storyboard decision will you resolve earlier?
 <!-- journal-tab: {"id":"session-07","title":"Session 7: Build a Personal Workflow, Portfolio, and Project"} -->
 # Session 7: Build a Personal Workflow, Portfolio, and Project
 
-Turn genuine experience and course work into truthful, audience-specific application materials.
+Bring together the course work that is useful in your life: a personal workflow, a truthful portfolio of evidence, and a final personal project (capstone) that you can continue after the course.
 
 ## Evidence inventory
 
-| Experience or project | What I actually did | Evidence | Skill demonstrated |
+| Course work or personal project | What I actually did | Evidence I can save or link | Skill or decision demonstrated |
 | --- | --- | --- | --- |
 | | | | |
 | | | | |
 
-## Audience and claims
+## Personal workflow and portfolio plan
 
 | Field | Your notes |
 | --- | --- |
-| Target role or audience | |
-| Three relevant strengths | |
-| Claims that need evidence | |
+| A recurring task I want to improve | |
+| My human review point or stop rule | |
+| Portfolio evidence I will keep | |
+| Final personal project (capstone) I will complete or continue | |
 | Information to keep private | |
 
-## Application package
+## Optional Claude Desktop permissions map
 
-- [ ] CV revised for the audience
-- [ ] Profile summary remains truthful
-- [ ] Portfolio includes selected evidence
-- [ ] Application is logged with date and status
+Complete this only if you choose to explore Claude Desktop. You can also do it on paper without connecting anything.
+
+| Resource or action | Why it is needed | Permission I would allow | Human review / stop rule |
+| --- | --- | --- | --- |
+| | | | |
+| | | | |
+
+## Optional OpenClaw boundary exercise — paper-only
+
+Do **not** install, connect, deploy, or give OpenClaw access to an account, messages, files, or devices for this course. On paper, describe one low-risk task an agent could propose, the data it must never access, and the approval step that keeps you in control.
 
 ## Verification and evidence
 
-Verify dates, role names, metrics, links, spelling, and every factual claim. Save the final documents and source evidence.
+Verify every portfolio claim against the saved evidence. Check links, dates, numbers, privacy choices, permissions, and the final personal project plan before you rely on it. Save your workflow plan, evidence inventory, permission map (if used), and capstone artifact.
 
 ## Reflection and human judgment
 
-Which experiences best represent you, and which AI suggestion did you reject because it was inaccurate or inauthentic?
+Which part of your personal workflow needs your judgment most? Which AI suggestion, permission, or automation idea did you reject because it was inaccurate, unsafe, or not useful to you?
 
 ## What I will change next time
 
-Which project, result, or example will you strengthen next?
+Which portfolio item, workflow step, or part of your final personal project will you strengthen next?
