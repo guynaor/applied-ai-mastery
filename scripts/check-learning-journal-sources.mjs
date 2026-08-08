@@ -56,8 +56,8 @@ assert.match(teacherHe,/פרויקט מסכם/);
 const expected={
  personal:[
   'journal-home','entry-template','prompt-library','course-reflection',
-  'lesson-01','lesson-02','lesson-03','lesson-04','lesson-05','lesson-06',
-  'lesson-07','lesson-08','lesson-09','lesson-10','lesson-11','lesson-12',
+  'session-01','session-02','session-03','session-04','session-05','session-06',
+  'session-07',
  ],
  professional:[
   'journal-home','entry-template','workflow-library','course-reflection',
