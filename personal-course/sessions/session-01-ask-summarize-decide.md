@@ -3,18 +3,21 @@
 **Time:** 45–60 minutes  
 **Outcome:** Turn non-sensitive information into a clear request, a purpose-fit summary, and an evidence-based next action that remains your decision.
 
-## Prepare safely (5 minutes)
+## Before the session
 
 Choose a low-risk, real decision with two or three options. Remove names, account details, health information, private messages, passwords, precise location, and anything shared in confidence. AI output is a draft; source evidence and human judgment decide what happens next.
 
-## Integrated studio flow
+## Facilitator flow — 55 minutes
 
-1. **Frame the request — 10 minutes.** State your goal, useful context, constraints, desired format, and what the model must flag as unknown. Draft and improve one prompt.
-2. **Summarize for a purpose — 10 minutes.** Use a public or self-authored source. Request decisions, actions, dates, unresolved questions, and quotations or claims that need checking—not merely a shorter version.
-3. **Compare and decide — 15 minutes.** Put two or three options in a weighted comparison. Separate facts, preferences, assumptions, trade-offs, and unknowns. Ask the tool to stress-test the result, then choose your own next action and review date.
-4. **Verify and reflect — 10–15 minutes.** Check the two most consequential claims against their original sources. Record what changed after verification and save your prompt, summary, decision record, and evidence links.
+1. **AI geography, privacy, and a tool demonstration — 10 minutes.** Explain what a chat tool can and cannot know, what must not be shared, and why output is a draft rather than a source. Optionally demonstrate the same non-sensitive request in **Claude**, **ChatGPT**, or **Gemini**. Learners may use one accessible tool, work on paper, or observe the demonstration; free access is enough and access level is not success.
+2. **Frame the request — 10 minutes.** State your goal, useful context, constraints, desired format, and what the model must flag as unknown. Draft and improve one prompt.
+3. **Summarize for a purpose — 10 minutes.** Use a public or self-authored source. Request decisions, actions, dates, unresolved questions, and quotations or claims that need checking—not merely a shorter version.
+4. **Compare and decide — 15 minutes.** Put two or three options in a weighted comparison. Separate facts, preferences, assumptions, trade-offs, and unknowns. Ask the tool to stress-test the result, then choose your own next action and review date.
+5. **Verify and journal — 10 minutes.** Check the two most consequential claims against their original sources. Record what changed after verification and save your prompt, summary, decision record, and evidence links.
 
-## Complete these retained resources as phases
+## Required integrated phases; optional full activities
+
+Complete only the selected excerpts that support the timed phase above. The linked legacy activities, workbooks, missions, and instructor guides remain available as resources; completing every file is an **optional extension**, not a requirement for this 55-minute session.
 
 ### Phase A — Make a better request
 

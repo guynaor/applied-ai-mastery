@@ -10,7 +10,9 @@
 3. **Storyboard and create — 15 minutes.** Make a six-image carousel, short vertical video, poster, or before/after sequence. Use AI for a caption, layout, or clearly labelled illustrative asset—not to invent what happened.
 4. **Review for trust and access — 12–20 minutes.** Add captions/alt text, check readability and contrast, identify altered/generated material, fact-check claims, and ask whether a viewer could be misled.
 
-## Complete these retained resources as phases
+## Required integrated phases; optional full activities
+
+Complete only the selected excerpts that support the timed phase above. The linked legacy activities, workbooks, missions, and instructor guides remain available as resources; completing every file is an **optional extension**, not a requirement for this 45–60 minute session.
 
 - `personal-course/materials/lesson-11-visual-storytelling/student/activity.md`
 - `personal-course/materials/lesson-11-visual-storytelling/student/storyboard-workbook.md`

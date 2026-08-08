@@ -14,7 +14,9 @@ Use a meaningful product question or a general investment-research question. Nev
 3. **Gemini Deep Research workflow — 12 minutes.** Optionally ask **Gemini Deep Research** for a plan before research: question, source types, competing explanations, and unknowns. Review its source list; build an **evidence matrix** with claim, source, date, support/contradiction, and uncertainty. Its report is not evidence by itself.
 4. **Verify and monitor — 10–15 minutes.** Independently verify the most consequential claims in original sources. Specify one alert: exact target, condition, allowed sources, threshold, check frequency, duplicate suppression, expiry, pause/stop rule, and no automatic purchase or trade.
 
-## Complete these retained resources as phases
+## Required integrated phases; optional full activities
+
+Complete only the selected excerpts that support the timed phase above. The linked legacy activities, workbooks, missions, and instructor guides remain available as resources; completing every file is an **optional extension**, not a requirement for this 45–60 minute session.
 
 ### Phase A — Compare a purchase
 

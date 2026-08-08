@@ -1,7 +1,7 @@
 <!-- journal-tab: {"id":"journal-home","title":"My AI Learning Journal"} -->
 # My AI Learning Journal
 
-Use this workbook throughout all 12 lessons. Each lesson has its own tab, so your strongest prompts, decisions, checks, and projects stay easy to find.
+Use this workbook throughout all 7 integrated sessions. Each session has its own tab, so your strongest prompts, decisions, checks, and projects stay easy to find.
 
 ## Before you write
 

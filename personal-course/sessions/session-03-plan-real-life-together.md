@@ -10,7 +10,9 @@
 3. **Draft together — 15 minutes.** Ask AI to organize only supplied facts into a feasible itinerary or event plan: fixed commitments first, then travel, rest, buffers, tasks, deadlines, and fallbacks. For an event, create a short privacy-minimizing poll and one invitation draft.
 4. **Stress-test and share — 10–15 minutes.** Test a late arrival, sold-out option, weather change, or missing response. Assign owners and review dates. Verify changing facts near booking or sending invitations.
 
-## Complete these retained resources as phases
+## Required integrated phases; optional full activities
+
+Complete only the selected excerpts that support the timed phase above. The linked legacy activities, workbooks, missions, and instructor guides remain available as resources; completing every file is an **optional extension**, not a requirement for this 45–60 minute session.
 
 ### Phase A — Make a realistic trip plan
 

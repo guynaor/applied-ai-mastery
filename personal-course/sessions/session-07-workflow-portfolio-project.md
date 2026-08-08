@@ -10,7 +10,9 @@
 3. **Complete the capstone — 15 minutes.** Choose one personal project and define goal, constraints, compared options, evidence, created artifact, files/tasks/reminders, verification, and reflection on human judgment.
 4. **Bound a recurring workflow — 8–15 minutes.** Map what may be automated, what data is prohibited, audit notes, an approval gate, and a stop condition. No unattended system may make payments, send external messages, or make consequential decisions.
 
-## Complete these retained resources as phases
+## Required integrated phases; optional full activities
+
+Complete only the selected excerpts that support the timed phase above. The linked legacy activities, workbooks, missions, and instructor guides remain available as resources; completing every file is an **optional extension**, not a requirement for this 45–60 minute session.
 
 - `personal-course/materials/lesson-12-personal-brand/student/activity.md`
 - `personal-course/materials/lesson-12-personal-brand/student/portfolio-workbook.md`

@@ -66,6 +66,11 @@ for(const [index,slug] of sessionSlugs.entries()){
   ['Hebrew',readFileSync(hebrew,'utf8')],
  ];
  for(const [locale,brief] of briefs){
+  const phaseTerms=locale==='English'
+   ? [/Required integrated phases/i,/optional (?:full )?activit(?:y|ies)|optional extension/i,/selected excerpts/i]
+   : [/שלבים משולבים נדרשים/,/הרחבה אופציונלית/,/הקטעים הנבחרים/];
+  for(const term of phaseTerms)assert.match(brief,term,
+   `${locale} Session ${index+1} must distinguish selected integrated work from optional full legacy activities`);
   for(const legacyLesson of legacyLessons[index+1]){
    const lessonRoot=`personal-course/materials/lesson-${String(legacyLesson).padStart(2,'0')}-${legacyMaterialSlugs[legacyLesson]}`;
    for(const legacyFile of [
@@ -96,11 +101,17 @@ const sessionOne={
  Hebrew:readFileSync('personal-course/he/sessions/session-01-ask-summarize-decide.md','utf8'),
 };
 for(const [locale,terms] of Object.entries({
- English:[/prompt/i,/summary|summari/i,/decision/i,/privacy|private|sensitive/i,/Claude/i,/ChatGPT/i,/Gemini/i],
- Hebrew:[/פרומפט|בקשה/,/סיכום/,/החלט/,/פרטיות|פרטי|רגיש/,/Claude/i,/ChatGPT/i,/Gemini/i],
+ English:[/Facilitator flow[^\n]*55 minutes/i,/AI geography[^\n]*10 minutes/i,/Frame the request[^\n]*10 minutes/i,/Summarize for a purpose[^\n]*10 minutes/i,/Compare and decide[^\n]*15 minutes/i,/Verify and journal[^\n]*10 minutes/i,/privacy|private|sensitive/i,/Claude/i,/ChatGPT/i,/Gemini/i,/optionally demonstrate/i,/work on paper|observe/i,/free access/i],
+ Hebrew:[/מהלך הנחיה משולב[^\n]*55 דקות/,/גאוגרפיית AI[^\n]*10 דקות/,/בניית בקשה מובנית[^\n]*10 דקות/,/סיכום המעוגן במקור[^\n]*10 דקות/,/השוואה והחלטה[^\n]*15 דקות/,/אימות ויומן[^\n]*10 דקות/,/פרטיות|פרטי|רגיש/,/Claude/i,/ChatGPT/i,/Gemini/i,/הדגמה/,/צפו בהדגמה|צפו במנחה/,/מנוי|גישה/],
 })){
  for(const term of terms)assert.match(sessionOne[locale],term,`${locale} Session 1 must include ${term}`);
 }
+
+const journal=readFileSync('personal-course/student/ai-learning-journal.md','utf8');
+assert.match(journal,/throughout all 7 integrated sessions\. Each session has its own tab/i,
+ 'English journal home must describe the seven integrated sessions');
+assert.doesNotMatch(journal,/throughout all 12 lessons|Each lesson has its own tab/i,
+ 'English journal home must not retain twelve-lesson wording');
 
 const sessionTwo={
  English:readFileSync('personal-course/sessions/session-02-research-buy-monitor.md','utf8'),

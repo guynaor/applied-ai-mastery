@@ -10,7 +10,9 @@
 3. **Validate physically — 12 minutes.** Check dimensions against the actual space and object; test the most important fit with paper, cardboard, or a sketch. Note tolerances and unknown material behavior.
 4. **Organize and revise — 8–15 minutes.** Save versions, source files, measurements, and a fabrication/verification checklist. A concept is not proof that a build is safe.
 
-## Complete these retained resources as phases
+## Required integrated phases; optional full activities
+
+Complete only the selected excerpts that support the timed phase above. The linked legacy activities, workbooks, missions, and instructor guides remain available as resources; completing every file is an **optional extension**, not a requirement for this 45–60 minute session.
 
 - `personal-course/materials/lesson-10-room-design/student/activity.md`
 - `personal-course/materials/lesson-10-room-design/student/design-workbook.md`

@@ -10,7 +10,9 @@
 3. **Test — 12 minutes.** Run normal, blank-input, unexpected-input, reset, and refresh tests. Record expected versus actual behavior; fix one issue at a time.
 4. **Permission and maintenance review — 8–15 minutes.** Decide where the file lives, who can access it, and how to remove data. Do not put secrets or private group data into the tool.
 
-## Complete these retained resources as phases
+## Required integrated phases; optional full activities
+
+Complete only the selected excerpts that support the timed phase above. The linked legacy activities, workbooks, missions, and instructor guides remain available as resources; completing every file is an **optional extension**, not a requirement for this 45–60 minute session.
 
 - `personal-course/materials/lesson-09-mini-app/student/activity.md`
 - `personal-course/materials/lesson-09-mini-app/student/app-workbook.md`
