@@ -126,8 +126,8 @@ How has your view of useful, responsible AI work changed?
 
 Choose one next project, one skill to deepen, and one responsible-use boundary to keep.
 
-<!-- journal-tab: {"id":"lesson-01","title":"Lesson 1: Better Requests"} -->
-# Lesson 1: Better Requests
+<!-- journal-tab: {"id":"session-01","title":"Session 1: Ask, Summarize, and Decide"} -->
+# Session 1: Ask, Summarize, and Decide
 
 Turn one vague real-life request into a clear, testable prompt.
 
@@ -165,8 +165,7 @@ Which missing context required your judgment rather than the model's guess?
 
 What will you add earlier in your next request?
 
-<!-- journal-tab: {"id":"lesson-02","title":"Lesson 2: Summary Verification"} -->
-# Lesson 2: Summary Verification Workbook
+## Phase B: Summary Verification
 
 Summarize a source without losing the information needed for its purpose.
 
@@ -206,8 +205,7 @@ What did you choose to include or omit because of the summary's purpose?
 
 How will you make the requested summary structure clearer?
 
-<!-- journal-tab: {"id":"lesson-03","title":"Lesson 3: Decision Workbook"} -->
-# Lesson 3: Decision Workbook
+## Phase C: Decision Workbook
 
 Compare meaningful options with explicit criteria, evidence, and assumptions.
 
@@ -252,8 +250,8 @@ Which preference or tradeoff could not be decided by AI alone?
 
 Which criterion or evidence source needs improvement?
 
-<!-- journal-tab: {"id":"lesson-04","title":"Lesson 4: Smart Online Buying"} -->
-# Lesson 4: Smart Online Buying
+<!-- journal-tab: {"id":"session-02","title":"Session 2: Research, Buy, and Monitor"} -->
+# Session 2: Research, Buy, and Monitor
 
 Compare products using total cost, seller quality, return terms, and trustworthy evidence.
 
@@ -294,8 +292,7 @@ Which risk or preference mattered more than the lowest price?
 
 What will you check before asking AI to compare products?
 
-<!-- journal-tab: {"id":"lesson-05","title":"Lesson 5: Personal Alert Specification"} -->
-# Lesson 5: Personal Alert Specification
+## Phase B: Personal Alert Specification
 
 Specify a useful alert that can be reviewed, paused, and stopped.
 
@@ -339,8 +336,8 @@ Which action must never happen automatically?
 
 Which rule needs to be more precise?
 
-<!-- journal-tab: {"id":"lesson-06","title":"Lesson 6: Trip Planning"} -->
-# Lesson 6: Trip Planning Workbook
+<!-- journal-tab: {"id":"session-03","title":"Session 3: Plan Real Life Together"} -->
+# Session 3: Plan Real Life Together
 
 Build a feasible trip with constraints, travel time, buffers, fallbacks, and timed rechecks.
 
@@ -383,8 +380,7 @@ Which comfort, accessibility, or risk tradeoff required a personal decision?
 
 Where does the plan need more buffer or a better fallback?
 
-<!-- journal-tab: {"id":"lesson-07","title":"Lesson 7: Event Planning"} -->
-# Lesson 7: Event Planning Workbook
+## Phase B: Event Planning
 
 Coordinate preferences, ownership, deadlines, budget, invitations, and reminders.
 
@@ -425,8 +421,7 @@ Which preference conflict required a human conversation?
 
 Which responsibility or deadline will you clarify earlier?
 
-<!-- journal-tab: {"id":"lesson-08","title":"Lesson 8: Responsible Investment Research"} -->
-# Lesson 8: Responsible Investment Research
+## Phase C: Responsible Investment Research
 
 Create a balanced research brief without pretending to predict returns or provide personal advice.
 
@@ -466,8 +461,8 @@ Which financial decision belongs with the individual and a qualified professiona
 
 Which opposing source or uncertainty will you seek earlier?
 
-<!-- journal-tab: {"id":"lesson-09","title":"Lesson 9: Mini App Build Log"} -->
-# Lesson 9: Mini App Build Log
+<!-- journal-tab: {"id":"session-04","title":"Session 4: Build a Small Personal Tool"} -->
+# Session 4: Build a Small Personal Tool
 
 Build and test a small tool for one recurring real-life need.
 
@@ -508,8 +503,8 @@ Which requirement or tradeoff did you choose rather than delegate to AI?
 
 Which test or requirement will you define before building?
 
-<!-- journal-tab: {"id":"lesson-10","title":"Lesson 10: Room and CAD Design"} -->
-# Lesson 10: Room and CAD Design
+<!-- journal-tab: {"id":"session-05","title":"Session 5: Design a Physical Project"} -->
+# Session 5: Design a Physical Project
 
 Turn measurements and needs into a parametric concept with explicit validation boundaries.
 
@@ -546,8 +541,8 @@ Which design or safety decision could not be validated by appearance alone?
 
 Which parameter or measurement will you test first?
 
-<!-- journal-tab: {"id":"lesson-11","title":"Lesson 11: Visual Story Plan"} -->
-# Lesson 11: Visual Story Plan
+<!-- journal-tab: {"id":"session-06","title":"Session 6: Create a Trustworthy Visual Story"} -->
+# Session 6: Create a Trustworthy Visual Story
 
 Create a responsible visual story with clear sources, consent, captions, and authenticity choices.
 
@@ -585,8 +580,8 @@ Which emotional or authenticity choice required your judgment?
 
 Which source, permission, or storyboard decision will you resolve earlier?
 
-<!-- journal-tab: {"id":"lesson-12","title":"Lesson 12: Personal Brand Portfolio"} -->
-# Lesson 12: Personal Brand Portfolio
+<!-- journal-tab: {"id":"session-07","title":"Session 7: Build a Personal Workflow, Portfolio, and Project"} -->
+# Session 7: Build a Personal Workflow, Portfolio, and Project
 
 Turn genuine experience and course work into truthful, audience-specific application materials.
 
