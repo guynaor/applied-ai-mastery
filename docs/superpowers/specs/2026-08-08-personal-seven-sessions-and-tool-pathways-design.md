@@ -6,9 +6,8 @@ Reframe the Personal track for anyone who wants to use AI well in everyday life.
 
 ## Delivery order
 
-1. Make Personal Session 1 test-ready for tomorrow: learner materials, instructor script, teaching/review notes, and Hebrew counterparts.
-2. Convert the remaining Personal material into the seven-session structure and update portal progress, journal, descriptions, and bilingual course overview.
-3. Add embedded, optional tool pathways to relevant Professional and Teacher missions, including their instructor materials and Hebrew translations.
+1. Make the complete seven-session Personal course ready for tomorrow: integrated learner materials, instructor scripts, teaching/review notes, bilingual portal, journal, and course overview.
+2. Add embedded, optional tool pathways to relevant Professional and Teacher missions in a separate follow-up after the Personal course is ready.
 
 ## Personal audience and session map
 
@@ -39,7 +38,7 @@ Gemini Deep Research is the preferred concrete research example. It must produce
 
 Every pathway has a no-paid-feature alternative. Learners can use a free-access tool they already have, complete the planning/verification portion without the tool, or observe a facilitator demonstration.
 
-## Cross-track embedding
+## Deferred cross-track embedding
 
 Professional and Teacher receive short task-level tool-pathway sections rather than generic product lists:
 
@@ -47,9 +46,11 @@ Professional and Teacher receive short task-level tool-pathway sections rather t
 - Research tasks: Gemini Deep Research plan → sources/evidence matrix → human verification and bounded recommendation.
 - Agent/automation tasks: Claude Desktop/OpenClaw permission map, allowed inputs, prohibited data/actions, audit trail, approval gate, and stop condition. No track uses autonomous grading, communications, payments, or consequential decisions.
 
-## Personal Session 1 test-ready package
+This work is explicitly out of scope for the Personal-course implementation scheduled for tomorrow's test.
 
-Session 1 becomes a 45–60 minute facilitation package using the existing prompt, summary, and decision activities. Its flow is: AI/tool geography and privacy (10 minutes), a structured request (10), a source-grounded summary (10), a decision comparison (15), verification and journal reflection (10). It includes optional Claude, ChatGPT, and Gemini variants and a facilitator note that access level must not determine success.
+## Personal course test-ready package
+
+Every session becomes a 45–60 minute facilitation package with unified learner materials, instructor scripts, teaching/review notes, and Hebrew counterparts. Session 1 uses the existing prompt, summary, and decision activities: AI/tool geography and privacy (10 minutes), a structured request (10), a source-grounded summary (10), a decision comparison (15), verification and journal reflection (10). It includes optional Claude, ChatGPT, and Gemini variants and a facilitator note that access level must not determine success.
 
 The English and Hebrew learner/instructor material must explain: do not paste private data; distinguish AI output from source evidence; compare at least two options/outputs; record what needs human verification; and save an evidence-based decision or next action.
 
