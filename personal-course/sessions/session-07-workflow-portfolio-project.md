@@ -1,34 +1,23 @@
-# Session 7 — Build a Personal Workflow, Portfolio, and Project
+# Session 7 — Build a Personal System
 
 **Time:** 45–60 minutes  
-**Outcome:** Turn genuine course work into a truthful personal portfolio and a bounded workflow for one real need.
+**Outcome:** Launch one human-controlled personal system with truthful evidence and a clear permission boundary.
 
-## Integrated studio flow
+## Scenario
 
-1. **Collect evidence — 10 minutes.** Select three to five genuine artifacts from this course or life: a decision record, research brief, plan, mini tool, design concept, or visual story. Record what you actually did, evidence, and what you learned; do not invent results.
-2. **Present honestly — 12 minutes.** Create a short portfolio/CV/LinkedIn-style entry tailored to a real purpose, without exaggerating responsibilities, dates, tools, or outcomes.
-3. **Complete the capstone — 15 minutes.** Choose one personal project and define goal, constraints, compared options, evidence, created artifact, files/tasks/reminders, verification, and reflection on human judgment.
-4. **Bound a recurring workflow — 8–15 minutes.** Map what may be automated, what data is prohibited, audit notes, an approval gate, and a stop condition. No unattended system may make payments, send external messages, or make consequential decisions.
+You want to keep an ongoing goal moving: a project, learning habit, household routine, or personal portfolio. You need an organised launchpad—not a system that acts for you. Use only genuine evidence and exclude private data.
 
-## Required integrated phases; optional full activities
+## Sequence
 
-Complete only the selected excerpts that support the timed phase above. The linked legacy activities, workbooks, missions, and instructor guides remain available as resources; completing every file is an **optional extension**, not a requirement for this 45–60 minute session.
+1. **Choose the goal and evidence (10 minutes).** Select three to five real artifacts or notes. Make an evidence register: what happened, where it is recorded, what you did, and what you still need to learn. Do not invent outcomes.
+2. **Design the human system (12 minutes).** Turn the goal into a launchpad with a next action, review rhythm, files/tasks/reminders, and a capstone plan. Claude, ChatGPT, or Gemini may improve wording from your evidence, not choose your goal or outcome.
+3. **Map permission before connection (15 minutes).** As a demonstration or optional exercise, use **Claude Desktop** only with one bounded folder or app containing non-sensitive sample files. Review requested access, grant the **least privilege** (minimum necessary access), inspect the proposed action, verify the result, and retain human approval.
+4. **Draw the stop line (10 minutes).** Map prohibited data, external actions that always need approval, audit notes, and a stop condition. **OpenClaw** is a **paper-only** case: do not install, connect, deploy, or run it. **Claude for Chrome** is further exploration only: start read-only, review permissions, and never authorise account changes, payments, messages, or private data.
 
-- `personal-course/materials/lesson-12-personal-brand/student/activity.md`
-- `personal-course/materials/lesson-12-personal-brand/student/portfolio-workbook.md`
-- `personal-course/materials/lesson-12-personal-brand/student/real-life-mission.md`
-- `personal-course/materials/lesson-12-personal-brand/instructor/step-by-step-script.md`
+## Integrated artifact
 
-Also use the course capstone and review support: `personal-course/instructor/real-life-mission-review-guide.md` and `personal-course/student/ai-learning-journal.md`.
+Create a personal system/project launchpad with evidence register, truthful portfolio note, capstone plan, permission map, review point, and stop rule.
 
-## Optional advanced case studies; no install or deployment
+## Optional resources
 
-**Claude Desktop:** optionally draw a permissions map before connecting a local file or app—exact allowed folder/tool, permitted task, prohibited data/actions, review point, and disconnect/stop rule. Do not connect more access than needed.
-
-**OpenClaw:** optional paper-only case study. Define one trusted operator, allowlisted inputs, safe allowed actions, audit trail, approval gate, and stop condition. **Do not install, deploy, connect accounts, or run OpenClaw for this course.**
-
-Claude, ChatGPT, or Gemini may help improve wording from your evidence. A free-access route is to use the workbook, draft manually, or observe a facilitator; no paid feature is required.
-
-## Integrated artifact and completion check
-
-Submit an evidence-backed portfolio entry and capstone packet, plus a bounded workflow map. Confirm: every claim is truthful; private data is excluded; AI did not choose an outcome; and any future automation remains reviewable, stoppable, and unable to act outside its permission boundary.
+For deeper practice only: [portfolio workbook](../materials/lesson-12-personal-brand/student/portfolio-workbook.md), [review guide](../instructor/real-life-mission-review-guide.md), and [learning journal](../student/ai-learning-journal.md). Work on paper or observe the Claude Desktop demonstration if no suitable free tool or safe sample folder is available.

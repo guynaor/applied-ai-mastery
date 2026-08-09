@@ -1,28 +1,23 @@
-# Session 6 — Create a Trustworthy Visual Story
+# Session 6 — Tell a True Visual Story
 
 **Time:** 45–60 minutes  
-**Outcome:** Create a short, accessible visual story that is sourced, consent-aware, and honest about what is real, edited, or generated.
+**Outcome:** Produce a short visual story that is sourced, consent-aware, accessible, and honest about edits or generation.
 
-## Integrated studio flow
+## Scenario
 
-1. **Choose story and consent boundary — 8 minutes.** Pick a trip, event, hobby, room project, or course work. State audience, purpose, format, and who has consented to be included.
-2. **Organize evidence — 10 minutes.** Sort originals, selected assets, generated assets, exports, and permissions notes. Do not upload other people’s images without permission or misrepresent generated scenes as documentary evidence.
-3. **Storyboard and create — 15 minutes.** Make a six-image carousel, short vertical video, poster, or before/after sequence. Use AI for a caption, layout, or clearly labelled illustrative asset—not to invent what happened.
-4. **Review for trust and access — 12–20 minutes.** Add captions/alt text, check readability and contrast, identify altered/generated material, fact-check claims, and ask whether a viewer could be misled.
+You want to share a real trip, event, hobby, room project, or personal milestone. The story should be engaging without claiming that an illustrative or generated image documents something that did not happen. Do not upload another person's image without permission.
 
-## Required integrated phases; optional full activities
+## Sequence
 
-Complete only the selected excerpts that support the timed phase above. The linked legacy activities, workbooks, missions, and instructor guides remain available as resources; completing every file is an **optional extension**, not a requirement for this 45–60 minute session.
+1. **Set the trust boundary (8 minutes).** Choose the audience, purpose, format, claims you can support, and people who have consented to appear.
+2. **Sort the evidence (10 minutes).** Separate original assets, selected assets, generated or altered assets, exports, and permission notes. Keep a source beside every factual statement.
+3. **Build one story arc (15 minutes).** Storyboard a six-image carousel, short video, poster, or before/after sequence. Claude, ChatGPT, or Gemini may help turn non-sensitive notes into captions or a layout; label any illustrative generated asset.
+4. **Review through a viewer's eyes (12 minutes).** Add captions or alt text, check contrast and readability, fact-check key claims, and ask whether a reasonable viewer could be misled. Revise before sharing.
 
-- `personal-course/materials/lesson-11-visual-storytelling/student/activity.md`
-- `personal-course/materials/lesson-11-visual-storytelling/student/storyboard-workbook.md`
-- `personal-course/materials/lesson-11-visual-storytelling/student/real-life-mission.md`
-- `personal-course/materials/lesson-11-visual-storytelling/instructor/step-by-step-script.md`
+## Integrated artifact
 
-## Optional tool and free-access paths
+Create a responsible visual-story package: final storyboard/story, sources and permissions record, captions/alt text, and labels for altered or generated material.
 
-Claude, ChatGPT, or Gemini can suggest a storyboard or caption from non-sensitive notes. Use free editing tools, draw a paper storyboard, or observe a facilitator if no AI/image tool is available. The assessment is truthful communication and accessibility, not a paid generation feature.
+## Optional resources
 
-## Integrated artifact and completion check
-
-Submit the story, storyboard, source/permission record, labels for generated/altered assets, and accessibility check. Confirm every factual claim is supported and every person shown has appropriate permission.
+For deeper practice only: [storyboard workbook](../materials/lesson-11-visual-storytelling/student/storyboard-workbook.md). A paper storyboard and manually written captions are fully valid; paid image generation is not required.
