@@ -1,49 +1,23 @@
-# Session 1 — Ask, Summarize, and Decide
+# Session 1 — Decide What to Do Next
 
 **Time:** 45–60 minutes  
-**Outcome:** Turn non-sensitive information into a clear request, a purpose-fit summary, and an evidence-based next action that remains your decision.
+**Outcome:** Make one low-risk personal decision using a clear request, evidence, and your own judgment.
 
-## Before the session
+## Scenario
 
-Choose a low-risk, real decision with two or three options. Remove names, account details, health information, private messages, passwords, precise location, and anything shared in confidence. AI output is a draft; source evidence and human judgment decide what happens next.
+You are deciding between two or three realistic options—for example, which community class to try, which household task to prioritise, or whether to attend an event. The question is messy: time, cost, preferences, and one or two facts all matter. Choose a non-sensitive example. Do not share names, passwords, private messages, health information, account details, or someone else’s confidential information.
 
-## Facilitator flow — 55 minutes
+## Sequence
 
-1. **AI geography, privacy, and a tool demonstration — 10 minutes.** Explain what a chat tool can and cannot know, what must not be shared, and why output is a draft rather than a source. Optionally demonstrate the same non-sensitive request in **Claude**, **ChatGPT**, or **Gemini**. Learners may use one accessible tool, work on paper, or observe the demonstration; free access is enough and access level is not success.
-2. **Frame the request — 10 minutes.** State your goal, useful context, constraints, desired format, and what the model must flag as unknown. Draft and improve one prompt.
-3. **Summarize for a purpose — 10 minutes.** Use a public or self-authored source. Request decisions, actions, dates, unresolved questions, and quotations or claims that need checking—not merely a shorter version.
-4. **Compare and decide — 15 minutes.** Put two or three options in a weighted comparison. Separate facts, preferences, assumptions, trade-offs, and unknowns. Ask the tool to stress-test the result, then choose your own next action and review date.
-5. **Verify and journal — 10 minutes.** Check the two most consequential claims against their original sources. Record what changed after verification and save your prompt, summary, decision record, and evidence links.
+1. **Make the question usable (10 minutes).** Write your goal, the options, constraints, preferred format, and what you need the tool to mark as unknown. Ask Claude, ChatGPT, or Gemini to turn only those non-sensitive details into a decision-ready request; revise it until it represents your real question.
+2. **Extract what matters (10 minutes).** Give the tool a public or self-authored source and ask for decisions, dates, actions, unresolved questions, and claims that need checking—not simply a shorter version.
+3. **Compare the choices (15 minutes).** Make a compact comparison that separates verified facts, preferences, assumptions, trade-offs, and unknowns. Ask the tool for one challenge to your reasoning, then decide which next step you will take.
+4. **Check before acting (10 minutes).** Open the original source and verify the two claims that would most change your choice. Change the comparison if the source disagrees, and set a review date.
 
-## Required integrated phases; optional full activities
+## Integrated artifact
 
-Complete only the selected excerpts that support the timed phase above. The linked legacy activities, workbooks, missions, and instructor guides remain available as resources; completing every file is an **optional extension**, not a requirement for this 55-minute session.
+Create a one-page verified decision record: final request, source-grounded summary, comparison of at least two options, two source checks, uncertainties, your chosen next action, and review date. AI can structure a draft; you make the decision.
 
-### Phase A — Make a better request
+## Optional resources
 
-- `personal-course/materials/lesson-01-better-requests/student/activity.md`
-- `personal-course/materials/lesson-01-better-requests/student/prompt-workbook.md`
-- `personal-course/materials/lesson-01-better-requests/student/real-life-mission.md`
-- `personal-course/materials/lesson-01-better-requests/instructor/step-by-step-guide.md`
-
-### Phase B — Produce a useful summary
-
-- `personal-course/materials/lesson-02-summaries/student/activity.md`
-- `personal-course/materials/lesson-02-summaries/student/verification-workbook.md`
-- `personal-course/materials/lesson-02-summaries/student/real-life-mission.md`
-- `personal-course/materials/lesson-02-summaries/instructor/step-by-step-guide.md`
-
-### Phase C — Make the decision visible
-
-- `personal-course/materials/lesson-03-decisions/student/activity.md`
-- `personal-course/materials/lesson-03-decisions/student/decision-workbook.md`
-- `personal-course/materials/lesson-03-decisions/student/real-life-mission.md`
-- `personal-course/materials/lesson-03-decisions/instructor/step-by-step-guide.md`
-
-## Optional tool paths; none is required
-
-Use **Claude**, **ChatGPT**, or **Gemini** for the same structured prompt; compare two outputs if access allows. Do not give any tool private data. With free access, use one available chat tool, work from the supplied workbooks without a tool, or observe a facilitator. Access level is not a measure of success.
-
-## Integrated artifact and completion check
-
-Submit a one-page decision record containing: the final prompt; a source-grounded summary; a two-or-more-option comparison; at least two source checks; an uncertainty/assumption list; your chosen next action and review date. Confirm: I did not paste private data; I did not treat the model as a source; and I, not the tool, made the decision.
+For deeper practice only: [better requests activity](../materials/lesson-01-better-requests/student/activity.md), [summary verification workbook](../materials/lesson-02-summaries/student/verification-workbook.md), and [decision workbook](../materials/lesson-03-decisions/student/decision-workbook.md). You may work on paper, use a free accessible tool, or observe a demonstration; paid access is never required.

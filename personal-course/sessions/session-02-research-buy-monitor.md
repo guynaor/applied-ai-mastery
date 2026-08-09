@@ -1,48 +1,23 @@
-# Session 2 — Research, Buy, and Monitor
+# Session 2 — Buy With Confidence
 
 **Time:** 45–60 minutes  
-**Outcome:** Create a defensible purchase or financial research brief and a safe, non-purchasing monitor.
+**Outcome:** Research one meaningful purchase and define a monitor that cannot buy anything for you.
 
-## Boundary first (5 minutes)
+## Scenario
 
-Use a meaningful product question or a general investment-research question. Never enter account details, holdings, payment information, or a request for personalized financial advice. This is research, not a prediction, recommendation, or automatic purchase.
+You need a product that matters enough to compare carefully—perhaps headphones, a household appliance, or a course-related purchase. You want to decide with evidence, not an attractive AI answer. Do not enter payment details, account information, or request personalised financial advice.
 
-## Integrated studio flow
+## Sequence
 
-1. **Set the research question — 8 minutes.** Define the need, budget or research scope, criteria, time horizon, and what this work will not decide.
-2. **Build evidence — 15 minutes.** For purchases, compare total cost, seller, warranty, returns, and dated sources. For investments, use official material, filings/regulators or exchanges, and independent reporting; seek a credible opposing view.
-3. **Gemini Deep Research workflow — 12 minutes.** Optionally ask **Gemini Deep Research** for a plan before research: question, source types, competing explanations, and unknowns. Review its source list; build an **evidence matrix** with claim, source, date, support/contradiction, and uncertainty. Its report is not evidence by itself.
-4. **Verify and monitor — 10–15 minutes.** Independently verify the most consequential claims in original sources. Specify one alert: exact target, condition, allowed sources, threshold, check frequency, duplicate suppression, expiry, pause/stop rule, and no automatic purchase or trade.
+1. **Set a boundary (8 minutes).** State the need, budget, criteria, date by which you need it, and what this research will not decide.
+2. **Plan the evidence (12 minutes).** Use **Gemini Deep Research** to request a research plan: useful source types, competing explanations, and unknowns. Claude or ChatGPT can organise the same plan. The report is a starting point, not evidence.
+3. **Compare the real offer (15 minutes).** Build an evidence matrix: claim, source, date, support or contradiction, total cost, returns/warranty, and uncertainty. Inspect original seller and manufacturer terms, plus an independent source where useful.
+4. **Pause before action (10 minutes).** Independently verify the consequential claims. Write a safe alert specification: target, allowed sources, threshold, frequency, duplicate suppression, expiry, and a pause/stop rule. It must never purchase, trade, or send payment details.
 
-## Required integrated phases; optional full activities
+## Integrated artifact
 
-Complete only the selected excerpts that support the timed phase above. The linked legacy activities, workbooks, missions, and instructor guides remain available as resources; completing every file is an **optional extension**, not a requirement for this 45–60 minute session.
+Create a purchase research brief with your question and limits, evidence matrix, uncertainty log, verification notes, and a pauseable alert specification. You—not AI or an alert—choose whether and when to buy.
 
-### Phase A — Compare a purchase
+## Optional resources
 
-- `personal-course/materials/lesson-04-online-buying/student/activity.md`
-- `personal-course/materials/lesson-04-online-buying/student/comparison-workbook.md`
-- `personal-course/materials/lesson-04-online-buying/student/real-life-mission.md`
-- `personal-course/materials/lesson-04-online-buying/instructor/step-by-step-script.md`
-
-### Phase B — Define a safe alert
-
-- `personal-course/materials/lesson-05-deal-alerts/student/activity.md`
-- `personal-course/materials/lesson-05-deal-alerts/student/alert-specification.md`
-- `personal-course/materials/lesson-05-deal-alerts/student/real-life-mission.md`
-- `personal-course/materials/lesson-05-deal-alerts/instructor/step-by-step-script.md`
-
-### Phase C — Research finance responsibly
-
-- `personal-course/materials/lesson-08-investment-research/student/activity.md`
-- `personal-course/materials/lesson-08-investment-research/student/research-workbook.md`
-- `personal-course/materials/lesson-08-investment-research/student/real-life-mission.md`
-- `personal-course/materials/lesson-08-investment-research/instructor/step-by-step-guide.md`
-
-## Tool and access routes
-
-Gemini Deep Research is optional; **ChatGPT** or **Claude** can help organize a plan or table but must not replace verification. A free-access route is to use public search and the workbooks, use a free tier if available, or observe a facilitator demonstration—without payment.
-
-## Integrated artifact and completion check
-
-Submit one research brief: question and limits; comparison or evidence matrix; at least three source types where relevant; uncertainty log; independent verification notes; and a monitor specification with an explicit stop rule. Confirm no private financial data, no automated purchase/trade, and no claim treated as true merely because AI wrote it.
+For deeper practice only: [comparison workbook](../materials/lesson-04-online-buying/student/comparison-workbook.md), [alert specification](../materials/lesson-05-deal-alerts/student/alert-specification.md), and [research workbook](../materials/lesson-08-investment-research/student/research-workbook.md). Public search, paper notes, a free-access tool, or observation are valid routes; no payment is needed.
