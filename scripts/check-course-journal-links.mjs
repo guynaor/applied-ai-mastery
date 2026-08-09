@@ -10,8 +10,8 @@ const teacherHtml=read('teacher.html');
 const teacherJs=read('site/assets/js/teacher-course.js');
 
 const urls={
-  personalEn:'assets/downloads/applied-ai-mastery-personal-journal-en.docx',
-  personalHe:'assets/downloads/applied-ai-mastery-personal-journal-he.docx',
+  personalEn:'site/assets/downloads/applied-ai-mastery-personal-journal-en.docx',
+  personalHe:'site/assets/downloads/applied-ai-mastery-personal-journal-he.docx',
   professionalEn:'https://docs.google.com/document/d/102K0ED3qFCT2V0Kkz9XHTvLouQCkNvY1Xr7f8GpsPk0/edit',
   professionalHe:'https://docs.google.com/document/d/1g6RS11QayPUVbyAf-JIXzCKPIvEctz9l0S9_YY7idxk/edit',
 };

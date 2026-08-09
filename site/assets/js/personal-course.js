@@ -45,7 +45,7 @@ const saved=migrateLegacy();
 const state={language:localStorage.getItem('aam-personal-language')||'en',mode:localStorage.getItem('aam-personal-mode')||'student',completed:new Set(saved.completed||[]),missions:saved.missions||{},journals:new Set(saved.journals||[])};
 const grid=document.querySelector('[data-personal-lesson-grid]');
 const resourceHref=path=>path.toLowerCase().endsWith('.md')?`document.html?src=${encodeURIComponent(path)}`:path;
-const journalUrls={en:'assets/downloads/applied-ai-mastery-personal-journal-en.docx',he:'assets/downloads/applied-ai-mastery-personal-journal-he.docx'};
+const journalUrls={en:'site/assets/downloads/applied-ai-mastery-personal-journal-en.docx',he:'site/assets/downloads/applied-ai-mastery-personal-journal-he.docx'};
 const missionXp={bronze:30,silver:50,gold:80};
 const save=()=>localStorage.setItem('aam-personal-sessions',JSON.stringify({completed:[...state.completed],missions:state.missions,journals:[...state.journals]}));
 function totalXp(){let xp=state.completed.size*20+state.journals.size*20;Object.values(state.missions).forEach(level=>xp+=missionXp[level]||0);return xp;}
