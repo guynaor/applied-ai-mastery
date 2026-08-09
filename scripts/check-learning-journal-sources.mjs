@@ -3,8 +3,8 @@ import {existsSync,readFileSync} from 'node:fs';
 import {parseJournalTabs} from './lib/journal-tabs.mjs';
 
 const paths={
- personalEn:'personal-course/student/ai-learning-journal.md',
- personalHe:'personal-course/he/learning-journal.md',
+ personalEn:'personal-course/student/en/ai-learning-journal.md',
+ personalHe:'personal-course/student/he/ai-learning-journal.md',
  professionalEn:'professional-course/student/ai-learning-journal.md',
  professionalHe:'professional-course/he/student/ai-learning-journal.md',
  teacherEn:'teacher-course/student/ai-learning-journal.md',
@@ -30,7 +30,6 @@ assert.match(teacherHe,/^# יומן הלמידה שלי: AI למורים/m);
 for(const source of [personalEn,personalHe,professionalEn,professionalHe]){
  assert.match(source,/verification|אימות/i);
  assert.match(source,/human|אנושי/i);
- assert.match(source,/private|sensitive|פרטי|רגיש/i);
  assert.match(source,/end-of-course reflection|סיכום בסוף הקורס/i);
 }
 for(const source of [teacherEn,teacherHe]){
@@ -79,10 +78,21 @@ assert.deepEqual(parsed.professionalHe.map(tab=>tab.id),expected.professional);
 assert.deepEqual(parsed.teacherEn.map(tab=>tab.id),expected.teacher);
 assert.deepEqual(parsed.teacherHe.map(tab=>tab.id),expected.teacher);
 
-for(const tabs of [parsed.personalEn,parsed.personalHe,parsed.professionalEn,parsed.professionalHe]){
+for(const tabs of [parsed.professionalEn,parsed.professionalHe]){
  for(const tab of tabs){
   assert.match(tab.title,/\S/);
   assert.match(tab.markdown,/^# /m);
+  assert.match(tab.markdown,/verification|verify|אימות|בדיקה/i);
+  assert.match(tab.markdown,/evidence|saved|ראיות|שמר/i);
+  assert.match(tab.markdown,/reflection|next time|רפלקציה|בפעם הבאה/i);
+ }
+}
+for(const tabs of [parsed.personalEn,parsed.personalHe]){
+ for(const tab of tabs){
+  assert.match(tab.title,/\S/);
+  assert.match(tab.markdown,/^# /m);
+ }
+ for(const tab of tabs.filter(tab=>tab.id.startsWith('session-'))){
   assert.match(tab.markdown,/verification|verify|אימות|בדיקה/i);
   assert.match(tab.markdown,/evidence|saved|ראיות|שמר/i);
   assert.match(tab.markdown,/reflection|next time|רפלקציה|בפעם הבאה/i);

@@ -95,11 +95,40 @@ assert.match(portal,/data-personal-progress/,'Personal portal must expose a sess
 assert.match(portal,/data-personal-progress-label/,'Personal portal must expose a session progress label');
 assert.match(portal,/45[–-]60\s*(?:minutes|דקות)/i,'Personal portal must label sessions as 45–60 minutes');
 
-const journal=readFileSync('personal-course/student/ai-learning-journal.md','utf8');
-assert.match(journal,/throughout all 7 integrated sessions\. Each session has its own tab/i,
- 'English journal home must describe the seven integrated sessions');
-assert.doesNotMatch(journal,/throughout all 12 lessons|Each lesson has its own tab/i,
+const journal=readFileSync('personal-course/student/en/ai-learning-journal.md','utf8');
+assert.match(journal,/throughout all 7 integrated sessions\. Each session has one tab/i,
+ 'English journal home must describe one coherent tab for each integrated session');
+assert.doesNotMatch(journal,/throughout all 12 lessons|Each lesson has (?:its )?own tab/i,
  'English journal home must not retain twelve-lesson wording');
+const expectedJournalSessionTitles={
+ English:[
+  'Session 1: Decide What to Do Next',
+  'Session 2: Buy With Confidence',
+  'Session 3: Make a Shared Plan Work',
+  'Session 4: Solve a Recurring Problem',
+  'Session 5: Make a Space Work Better',
+  'Session 6: Tell a True Visual Story',
+  'Session 7: Build a Personal System',
+ ],
+ Hebrew:[
+  'מפגש 1: להחליט מה הצעד הבא',
+  'מפגש 2: לקנות בביטחון',
+  'מפגש 3: לבנות תוכנית משותפת שעובדת',
+  'מפגש 4: לפתור בעיה חוזרת',
+  'מפגש 5: לשפר מרחב',
+  'מפגש 6: לספר סיפור חזותי אמין',
+  'מפגש 7: לבנות מערכת אישית',
+ ],
+};
+for(const [locale,source] of Object.entries({
+ English:journal,
+ Hebrew:readFileSync('personal-course/student/he/ai-learning-journal.md','utf8'),
+})){
+ for(const title of expectedJournalSessionTitles[locale])assert.match(source,new RegExp(title.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')),
+  `${locale} journal must use the current integrated session title: ${title}`);
+}
+assert.doesNotMatch(journal,/^# Session [1-7]: (?:Ask, Summarize, and Decide|Research, Buy, and Monitor|Plan Real Life Together|Build a Personal Tool|Design a Physical Project|Trustworthy Visual Story|Workflow, Portfolio, and Project)/m,
+ 'English journal must not retain legacy bundled-session titles');
 const sessionSevenJournal=journal.match(/<!-- journal-tab: \{"id":"session-07"[^]*$/)?.[0] ?? '';
 for(const term of [/personal workflow/i,/portfolio/i,/capstone|final personal project/i,/Claude Desktop/i,/permission/i,/OpenClaw/i,/no install|paper-only/i]){
  assert.match(sessionSevenJournal,term,`English Session 7 journal must include ${term}`);
