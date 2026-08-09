@@ -28,19 +28,20 @@ const levels={
  ],
 };
 
-function cell(text,bold=false){return new TableCell({children:[new Paragraph({children:[new TextRun({text,bold})]})]});}
+const palette={primary:'4E356F',secondary:'7B4FB3',soft:'F0EAFA',text:'17242D',bronze:'C98A2E',silver:'94A3B8',gold:'D4A72C'};
+function cell(text,bold=false,rtl=false,fill='FFFFFF',color=palette.text){return new TableCell({shading:{fill},children:[new Paragraph({bidirectional:rtl,alignment:rtl?AlignmentType.RIGHT:undefined,children:[new TextRun({text,bold,color})]})]});}
 function renderMarkdown(markdown,rtl){
  const children=[];const lines=markdown.replace(/<!-- journal-tab: [^>]+ -->\n?/g,'').trim().split('\n');
- const paragraph=(text,options={})=>children.push(new Paragraph({bidirectional:rtl,alignment:rtl?AlignmentType.RIGHT:undefined,...options,children:[new TextRun({text})]}));
+ const paragraph=(text,options={})=>children.push(new Paragraph({bidirectional:rtl,alignment:rtl?AlignmentType.RIGHT:undefined,...options,children:[new TextRun({text,bold:Boolean(options.heading),color:options.heading===HeadingLevel.TITLE?'FFFFFF':options.heading?palette.primary:palette.text})]}));
  for(let index=0;index<lines.length;){
   const line=lines[index];
   if(!line.trim()){index+=1;continue;}
-  if(line.startsWith('# ')){paragraph(line.slice(2),{heading:HeadingLevel.TITLE});index+=1;continue;}
-  if(line.startsWith('## ')){paragraph(line.slice(3),{heading:HeadingLevel.HEADING_1});index+=1;continue;}
+  if(line.startsWith('# ')){paragraph(line.slice(2),{heading:HeadingLevel.TITLE,shading:{fill:palette.primary},spacing:{after:220}});index+=1;continue;}
+  if(line.startsWith('## ')){paragraph(line.slice(3),{heading:HeadingLevel.HEADING_1,shading:{fill:palette.soft},spacing:{before:200,after:100}});index+=1;continue;}
   if(line.startsWith('|')){
    const rows=[];while(index<lines.length&&lines[index].startsWith('|'))rows.push(lines[index++]);
    const data=rows.filter((row,rowIndex)=>rowIndex!==1).map(row=>row.split('|').slice(1,-1).map(value=>value.trim()));
-   children.push(new Table({width:{size:100,type:WidthType.PERCENTAGE},rows:data.map((row,rowIndex)=>new TableRow({children:row.map(value=>cell(value,rowIndex===0))}))}));continue;
+   children.push(new Table({visuallyRightToLeft:rtl,width:{size:100,type:WidthType.PERCENTAGE},rows:data.map((row,rowIndex)=>new TableRow({children:row.map(value=>cell(value,rowIndex===0,rtl,rowIndex===0?palette.primary:'FFFFFF',rowIndex===0?'FFFFFF':palette.text))}))}));continue;
   }
   if(line.startsWith('- ')){paragraph(line.slice(2),{bullet:{level:0}});index+=1;continue;}
   paragraph(line.replaceAll('**',''));index+=1;
@@ -50,9 +51,9 @@ function renderMarkdown(markdown,rtl){
 function taskTable(locale,session){
  const tasks=levels[locale].slice(session*3,session*3+3);const rtl=locale==='he';
  return [
-  new Paragraph({bidirectional:rtl,alignment:rtl?AlignmentType.RIGHT:undefined,heading:HeadingLevel.HEADING_1,children:[new TextRun({text:rtl?'בחירת רמת המשימה':'Choose your task level'})]}),
+  new Paragraph({bidirectional:rtl,alignment:rtl?AlignmentType.RIGHT:undefined,heading:HeadingLevel.HEADING_1,shading:{fill:palette.soft},children:[new TextRun({text:rtl?'בחירת רמת המשימה':'Choose your task level',bold:true,color:palette.primary})]}),
   new Paragraph({bidirectional:rtl,alignment:rtl?AlignmentType.RIGHT:undefined,children:[new TextRun({text:rtl?'Bronze מספיק להשלמה; Silver הוא היעד הרגיל; Gold הוא אתגר אופציונלי.':'Bronze is sufficient for completion; Silver is the normal target; Gold is an optional extension.'})]}),
-  new Table({width:{size:100,type:WidthType.PERCENTAGE},rows:[new TableRow({children:[cell(rtl?'רמה':'Level',true),cell(rtl?'המשימה':'Task',true)]}),...tasks.map(([level,task])=>new TableRow({children:[cell(level,true),cell(task)]}))]}),
+  new Table({visuallyRightToLeft:rtl,width:{size:100,type:WidthType.PERCENTAGE},rows:[new TableRow({children:[cell(rtl?'רמה':'Level',true,rtl,palette.primary,'FFFFFF'),cell(rtl?'המשימה':'Task',true,rtl,palette.primary,'FFFFFF')]}),...tasks.map(([level,task])=>{const fill=level==='Bronze'?palette.bronze:level==='Silver'?palette.silver:palette.gold;return new TableRow({children:[cell(level,true,rtl,fill,'FFFFFF'),cell(task,false,rtl,'FFFDF8')]});})]}),
  ];
 }
 async function build(locale){

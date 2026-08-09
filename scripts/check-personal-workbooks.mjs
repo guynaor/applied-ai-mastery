@@ -15,5 +15,11 @@ for(const [locale,path] of Object.entries(workbooks)){
   : ['מפגש 1: להחליט מה הצעד הבא','מפגש 7: לבנות מערכת אישית','Bronze','Silver','Gold']){
   assert.match(xml,new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')),`${locale} workbook must include ${term}`);
  }
+ assert.match(xml,/w:fill="4E356F"/,`${locale} workbook must use the Personal-course primary color`);
+ assert.match(xml,/w:fill="F0EAFA"/,`${locale} workbook must use the Personal-course soft background color`);
+ assert.match(xml,/w:fill="C98A2E"/,`${locale} workbook must visually distinguish Bronze tasks`);
+ assert.match(xml,/w:fill="94A3B8"/,`${locale} workbook must visually distinguish Silver tasks`);
+ assert.match(xml,/w:fill="D4A72C"/,`${locale} workbook must visually distinguish Gold tasks`);
+ if(locale==='Hebrew')assert.match(xml,/<w:bidi\/?>/,`Hebrew workbook must mark its paragraphs as RTL`);
 }
 console.log('Personal downloadable workbook contract passed');
