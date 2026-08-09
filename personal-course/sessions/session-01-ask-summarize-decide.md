@@ -5,7 +5,7 @@
 
 ## Scenario
 
-You are deciding between two or three realistic options—for example, which community class to try, which household task to prioritise, or whether to attend an event. The question is messy: time, cost, preferences, and one or two facts all matter. Choose a non-sensitive example. Do not share names, passwords, private messages, health information, account details, or someone else's confidence.
+You are deciding between two or three realistic options—for example, which community class to try, which household task to prioritise, or whether to attend an event. The question is messy: time, cost, preferences, and one or two facts all matter. Choose a non-sensitive example. Do not share names, passwords, private messages, health information, account details, or someone else’s confidential information.
 
 ## Sequence
 
