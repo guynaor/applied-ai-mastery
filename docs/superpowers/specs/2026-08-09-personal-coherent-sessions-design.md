@@ -31,6 +31,14 @@ Tool pathways appear inside the relevant move, not as product lessons. Claude, C
 
 Gemini Deep Research appears in Session 2 as research-plan support, followed by source inspection, evidence matrix, uncertainty log, and independent verification. Claude Desktop appears in Sessions 4 and 7 only as a least-privilege permissions exercise. OpenClaw remains a paper-only boundary case study: no installation, account connection, automation deployment, or external action.
 
+## Facilitator demonstrations and tool guidance
+
+Every session guide includes one concrete, worked demonstration: scenario, exact request, expected intermediate artifact, visible verification, human decision point, and debrief. The guide identifies a default tool path and parallel Claude, ChatGPT, and Gemini alternatives so a learner can use any accessible tool; no subscription level is required for completion.
+
+Session 4 uses **Claude Artifacts** as the default small-web-tool route: describe a small personal problem, create a self-contained tool, run it, test one normal case and one edge case, revise one behavior, and share only after review. The guide presents **Lovable** and **Replit** only as optional next steps for projects that exceed a small self-contained tool, require sustained development, collaboration, or deployment.
+
+Session 7 demonstrates **Claude Desktop** with one deliberately bounded folder or app and non-sensitive sample files: inspect requested permissions, grant the smallest useful scope, review the proposed action, verify the changed result, and retain human approval. **Claude for Chrome** appears only as a further-exploration note: read-only first, review permissions, and never authorize account changes, payments, messages, or private data. OpenClaw remains a no-install, paper-only permissions case study.
+
 ## Instructor and portal behavior
 
 Student cards link to one integrated brief and one completion toggle. Instructor mode exposes a concise facilitation kit: preparation resources, optional legacy material, anticipated misconceptions, timing adaptations, and review prompts. The portal no longer presents legacy activities as required “phases.”
