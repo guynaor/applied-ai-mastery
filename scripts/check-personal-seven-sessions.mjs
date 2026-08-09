@@ -119,6 +119,41 @@ for(const [locale,terms] of Object.entries({
  for(const term of terms)assert.match(sessionTwo[locale],term,`${locale} Session 2 must include ${term}`);
 }
 
+const sessionOneGuides={
+ English:readFileSync('personal-course/instructor/sessions/session-01-guide.md','utf8'),
+ Hebrew:readFileSync('personal-course/he/instructor/sessions/session-01-guide.md','utf8'),
+};
+for(const term of [
+ /^## AI Geography/im,
+ /Large language model/i,
+ /AI application/i,
+ /Tools and connectors/i,
+ /Artifact/i,
+ /Skill/i,
+ /Agent/i,
+ /public page/i,
+ /local (?:sample|page|fallback)/i,
+ /What to say/i,
+ /video/i,
+ /troubleshoot/i,
+])assert.match(sessionOneGuides.English,term,
+ `English Session 1 guide must include its full teacher-ready AI orientation: ${term}`);
+for(const term of [
+ /^## מפת עולם ה-AI/im,
+ /מודל שפה גדול/,
+ /יישום AI/,
+ /כלים ומחברים/,
+ /תוצר/,
+ /מיומנות/,
+ /סוכן/,
+ /דף ציבורי/,
+ /(?:דף (?:אפשרויות )?הדוגמה המקומי|חלופה מקומית)/,
+ /מה לומר/,
+ /וידאו/,
+ /תקלות/,
+])assert.match(sessionOneGuides.Hebrew,term,
+ `Hebrew Session 1 guide must include its full teacher-ready AI orientation: ${term}`);
+
 const audienceCopy=publicPaths.map(path=>readFileSync(path,'utf8')).join('\n');
 for(const term of [/young adults?/i,/before university/i,/צעירים|צעירות/,/לפני\s+(?:או\s+אחרי\s+)?(?:הלימודים\s+)?האוניברסיט(?:ה|איים)/i]){
  assert.doesNotMatch(audienceCopy,term,`Personal course must be audience-neutral; found ${term}`);
