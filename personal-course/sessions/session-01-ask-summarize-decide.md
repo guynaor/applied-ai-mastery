@@ -5,11 +5,11 @@
 
 ## Scenario
 
-You are deciding between two or three realistic options—for example, which community class to try, which household task to prioritise, or whether to attend an event. The question is messy: time, cost, preferences, and one or two facts all matter. Choose a non-sensitive example. Do not share names, passwords, private messages, health information, account details, or someone else’s confidential information.
+You are deciding between two or three realistic options—for example, which community class to try, which household task to prioritise, or whether to attend an event. The question is messy: time, cost, preferences, and one or two facts all matter. Choose a simple everyday example.
 
 ## Sequence
 
-1. **Make the question usable (10 minutes).** Write your goal, the options, constraints, preferred format, and what you need the tool to mark as unknown. Ask Claude, ChatGPT, or Gemini to turn only those non-sensitive details into a decision-ready request; revise it until it represents your real question.
+1. **Make the question usable (10 minutes).** Write your goal, the options, constraints, preferred format, and what you need the tool to mark as unknown. Ask Claude, ChatGPT, or Gemini to turn those details into a decision-ready request; revise it until it represents your real question.
 2. **Extract what matters (10 minutes).** Give the tool a public or self-authored source and ask for decisions, dates, actions, unresolved questions, and claims that need checking—not simply a shorter version.
 3. **Compare the choices (15 minutes).** Make a compact comparison that separates verified facts, preferences, assumptions, trade-offs, and unknowns. Ask the tool for one challenge to your reasoning, then decide which next step you will take.
 4. **Check before acting (10 minutes).** Open the original source and verify the two claims that would most change your choice. Change the comparison if the source disagrees, and set a review date.

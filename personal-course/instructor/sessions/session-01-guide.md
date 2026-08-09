@@ -11,10 +11,9 @@ This is a teach-from-the-page plan. It is deliberately written so that a teacher
 ### Prepare the room and tools
 
 1. Open one ordinary chat application. The default demonstration uses **Claude**, but ChatGPT or Gemini is equally valid. Log in only to the facilitator account; learners can observe, use a free account they already have, or work on paper.
-2. Open the [local sample options page](../samples/session-01-public-options-page.html) in a second tab. It is a deliberately non-sensitive, stable stand-in for a public event page. If you prefer a real public page, use a current library, museum, or community-class listing that shows date, cost, duration, and booking conditions; remove it from the lesson if it asks learners to log in or reveals personal information.
-3. Keep the [Session 1 learner brief](../../sessions/session-01-ask-summarize-decide.md) and a blank decision-record template on screen or on paper. A four-column page—facts, preferences, unknowns, next action—is enough.
-4. Put this safety boundary where everyone can see it: **no passwords, account numbers, private messages, health information, exact home location, or another person’s confidential information.** Use invented or public examples.
-5. Test the chat application, projector, and the local page. If any one fails, use the printed local-source text below and complete every activity on paper.
+2. Open the [local sample options page](../samples/session-01-public-options-page.html) in a second tab. It is a stable stand-in for a public event page. If you prefer a real public page, use a current library, museum, or community-class listing that shows date, cost, duration, and booking conditions.
+3. Keep the [Session 1 learner brief](../../sessions/session-01-ask-summarize-decide.md), the [Learning Journal](../../student/ai-learning-journal.md), and a blank decision-record template on screen or on paper. A four-column page—facts, preferences, unknowns, next action—is enough.
+4. Test the chat application, projector, and the local page. If any one fails, use the printed local-source text below and complete every activity on paper.
 
 ### What learners need
 
@@ -30,7 +29,7 @@ Use the local page by default. It lets you demonstrate source checking without a
 
 | Time | Teacher move | Learners produce or notice |
 |---:|---|---|
-| 0–5 | Welcome, safety boundary, low-risk decision hook | A decision they could make without private data |
+| 0–5 | Welcome and low-risk decision hook | A simple everyday decision |
 | 5–17 | AI Geography: map the layers and control boundary | A distinction between app, model, tool, artifact, skill, and agent |
 | 17–23 | Map the three course tools to task modes | A reason to choose one route, not all routes |
 | 23–30 | Reveal the source and model a bounded request | A prompt with goal, context, constraints, output, and check |
@@ -38,11 +37,11 @@ Use the local page by default. It lets you demonstrate source checking without a
 | 40–52 | Learners make and test their own decision record | A comparison and two source checks |
 | 52–60 | Exit check, reflection, and next-step commitment | A human decision and review date |
 
-## 0–5 minutes — Welcome and safety boundary
+## 0–5 minutes — Welcome and session focus
 
 ### What to say
 
-> “This course is not about finding one perfect AI product. It is about deciding what a tool is allowed to help with, what evidence you still need, and what remains your decision. Today we will use a small public example. If a detail is private, replace it with a placeholder or leave it out.”
+> “This course is not about finding one perfect AI product. It is about deciding what a tool is allowed to help with, what evidence you still need, and what remains your decision. Today we will use a small public example.”
 
 Ask learners to name a **low-risk** choice: an event, a club, a hobby class, a household task, or which public option to investigate first. Do not ask anyone to reveal the actual choice. Say that a tool may organise a decision but cannot own it.
 
@@ -60,7 +59,7 @@ Show the [AI Geography — 10-Minute Map](../../../materials/shared/AF-REF-001-a
 | **AI application** | The interface people use, such as Claude, ChatGPT, or Gemini. An app can combine a model with search, files, voice, memory, or images. | “Is the app name always the model name?” | Check what features and account settings are actually active. |
 | **Tools and connectors** | Controlled ways an application can search, read files, calculate, run code, or reach another service. | “What changes when a chat can read a calendar?” | Review access before connecting data or services. |
 | **Artifact** | A reusable thing you can keep and edit: a decision record, document, spreadsheet, presentation, webpage, or small app. | “Is our decision record an artifact?” | Inspect it before sharing or relying on it. |
-| **Skill** | Reusable instructions and resources for a repeatable kind of work. A prompt is one request; a skill packages a method. | “What would make today’s five-part request reusable?” | Keep structure, not private details. |
+| **Skill** | Reusable instructions and resources for a repeatable kind of work. A prompt is one request; a skill packages a method. | “What would make today’s five-part request reusable?” | Keep the reusable structure clear. |
 | **Agent** | A system that can plan, use permitted tools, inspect results, and continue toward a goal. | “What is different if it can send or change something?” | More ability to act requires more human approval. |
 
 ### What to say
@@ -153,14 +152,14 @@ Circulate with these prompts instead of supplying answers:
 
 - **No device or no account:** Give the printed source and decision-record grid. The learner highlights facts, writes unknowns, and compares on paper.
 - **Learner needs structure:** Provide the exact default prompt and ask them to replace only the constraints and preferences.
-- **Learner ready for more:** Let them choose a safe current public page, state why it is public/non-sensitive, and identify one source limitation.
+- **Learner ready for more:** Let them choose a current public page, explain why it suits the task, and identify one source limitation.
 - **Language support:** Permit a request in the learner’s stronger language; require labels for fact, preference, unknown, and check in the course language as well.
 
 ## 52–60 minutes — Exit check and evidence
 
 Ask each learner to complete this sentence: “I will take **[next action]** because the verified facts are **[two facts]**, but I still need to check **[unknown]** by **[review date]**.”
 
-Collect or photograph the decision record only through the agreed class process; do not require a learner to share private details. Completion evidence is:
+Collect or photograph the decision record only through the agreed class process. Completion evidence is:
 
 - a request with goal, context, constraint, output, and check,
 - a source-grounded comparison of at least two options,
@@ -175,7 +174,6 @@ Collect or photograph the decision record only through the agreed class process;
 | Request | Vague or asks the tool to decide | States constraints and asks the tool to mark unknowns |
 | Source use | Treats the response as proof | Checks consequential claims against the source |
 | Judgment | Lets the tool choose | Names a personal decision and an uncertainty |
-| Safety | Includes sensitive details or broad access | Uses public/self-authored non-sensitive material |
 
 ## Equivalent tool routes
 
@@ -191,7 +189,6 @@ Collect or photograph the decision record only through the agreed class process;
 |---|---|
 | Wi-Fi or AI site is unavailable | Use the local page’s printed transcript and complete the four-column table on paper. The learning objective is still met. |
 | The live public page has changed | Switch to the local sample. Do not spend the lesson repairing a changing webpage. |
-| Learner asks to paste a private message or account page | Stop kindly. Replace names and details with placeholders, choose the local source, or let them work privately on paper. |
 | Tool gives a confident but unsupported claim | Ask “Show me the source sentence.” Move it to unknown until the original source supports it. |
 | Tool tries to make the final choice | Re-run with “Do not choose for me; compare trade-offs and label uncertainty.” Then ask the learner to decide. |
 | Learners compare which chatbot is ‘best’ | Return to the route map: one tool, one bounded task, one source check. Product comparison is not today’s artifact. |

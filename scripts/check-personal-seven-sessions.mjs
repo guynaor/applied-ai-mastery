@@ -154,6 +154,22 @@ for(const term of [
 ])assert.match(sessionOneGuides.Hebrew,term,
  `Hebrew Session 1 guide must include its full teacher-ready AI orientation: ${term}`);
 
+assert.match(sessionOneGuides.English,/\[Learning Journal\]\(\.\.\/\.\.\/student\/ai-learning-journal\.md\)/,
+ 'English Session 1 guide must link the learner learning journal');
+assert.match(sessionOneGuides.Hebrew,/\[יומן הלמידה\]\(\.\.\/\.\.\/learning-journal\.md\)/,
+ 'Hebrew Session 1 guide must link the learner learning journal');
+assert.match(sessionOneGuides.Hebrew,/\[מפת עולם ה-AI בעשר דקות\]\(\.\.\/\.\.\/ai-geography\.md\)/,
+ 'Hebrew Session 1 guide must link its Hebrew AI Geography page');
+
+const sessionOneCopy=[
+ readFileSync('personal-course/sessions/session-01-ask-summarize-decide.md','utf8'),
+ readFileSync('personal-course/he/sessions/session-01-ask-summarize-decide.md','utf8'),
+ sessionOneGuides.English,
+ sessionOneGuides.Hebrew,
+].join('\n');
+for(const term of [/\b(?:non-sensitive|sensitive|password|private message|confidential|health information)\b/i,/לא־רגיש|רגיש|סיסמ|הודעות פרטיות|חסוי|מידע רפואי/])assert.doesNotMatch(sessionOneCopy,term,
+ `Session 1 materials must leave privacy/secrets discussion to the facilitator: ${term}`);
+
 const audienceCopy=publicPaths.map(path=>readFileSync(path,'utf8')).join('\n');
 for(const term of [/young adults?/i,/before university/i,/צעירים|צעירות/,/לפני\s+(?:או\s+אחרי\s+)?(?:הלימודים\s+)?האוניברסיט(?:ה|איים)/i]){
  assert.doesNotMatch(audienceCopy,term,`Personal course must be audience-neutral; found ${term}`);
