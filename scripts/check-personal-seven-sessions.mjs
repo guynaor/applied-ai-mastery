@@ -82,8 +82,10 @@ for(const [locale,brief] of Object.entries(sessionSeven)){
  assert.match(brief,locale==='English' ? /further exploration/i : /להעמקה|לחקירה נוספת/,
   `${locale} Session 7 must position Claude for Chrome as further exploration`);
  assert.match(brief,/OpenClaw/i,`${locale} Session 7 must mention OpenClaw`);
- assert.match(brief,locale==='English' ? /paper[- ]only/i : /על הנייר בלבד/,
-  `${locale} Session 7 must keep OpenClaw paper-only`);
+ assert.match(brief,locale==='English' ? /agent run record|review operations/i : /רישום ההרצה|בודקים תפעול/,
+  `${locale} Session 7 must review bounded OpenClaw operations`);
+ assert.doesNotMatch(brief,locale==='English' ? /paper[- ]only/i : /על הנייר בלבד/,
+  `${locale} Session 7 must not keep OpenClaw paper-only`);
 }
 
 assert.match(portal,/\bsession\w*\s*=\s*\[/i,
@@ -130,7 +132,7 @@ for(const [locale,source] of Object.entries({
 assert.doesNotMatch(journal,/^# Session [1-7]: (?:Ask, Summarize, and Decide|Research, Buy, and Monitor|Plan Real Life Together|Build a Personal Tool|Design a Physical Project|Trustworthy Visual Story|Workflow, Portfolio, and Project)/m,
  'English journal must not retain legacy bundled-session titles');
 const sessionSevenJournal=journal.match(/<!-- journal-tab: \{"id":"session-07"[^]*$/)?.[0] ?? '';
-for(const term of [/personal workflow/i,/portfolio/i,/capstone|final personal project/i,/Claude Desktop/i,/permission/i,/OpenClaw/i,/no install|paper-only/i]){
+for(const term of [/personal workflow/i,/portfolio/i,/capstone|final personal project/i,/Claude Desktop/i,/permission/i,/OpenClaw/i,/bounded run record|account, payment, messaging/i]){
  assert.match(sessionSevenJournal,term,`English Session 7 journal must include ${term}`);
 }
 for(const term of [/application package/i,/audience-specific application/i,/target role or audience/i,/CV revised/i,/application is logged/i]){
