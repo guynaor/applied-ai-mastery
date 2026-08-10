@@ -1,6 +1,7 @@
 import {mkdirSync,readFileSync,writeFileSync} from 'node:fs';
 import {dirname} from 'node:path';
 import {AlignmentType,Document,HeadingLevel,Packer,Paragraph,Table,TableCell,TableRow,TextRun,WidthType,HeightRule} from 'docx';
+import JSZip from 'jszip';
 import {parseJournalTabs} from './lib/journal-tabs.mjs';
 
 const outputDirectory=process.env.PERSONAL_WORKBOOK_OUTPUT_DIR??'site/assets/downloads';
@@ -82,12 +83,23 @@ function taskTable(locale,taskTexts){
   new Table({visuallyRightToLeft:rtl,width:{size:100,type:WidthType.PERCENTAGE},rows:[new TableRow({children:[cell(rtl?'רמה':'Level',true,rtl,palette.primary,'FFFFFF'),cell(rtl?'המשימה':'Task',true,rtl,palette.primary,'FFFFFF')]}),...tasks.map(([level,task])=>{const fill=level==='Bronze'?palette.bronze:level==='Silver'?palette.silver:palette.gold;return new TableRow({children:[cell(level,true,rtl,fill,'FFFFFF'),cell(task,false,rtl,'FFFDF8')]});})]}),
  ];
 }
+// docx stamps docProps/core.xml and every zip entry with the current time, so an unchanged journal still produces a different .docx on every run and the committed artifact churns in git. Pin both, so these files change only when their content does.
+const buildTimestamp='2020-01-01T00:00:00.000Z';
+async function withPinnedTimestamp(buffer){
+ const archive=await JSZip.loadAsync(buffer);
+ const core=(await archive.file('docProps/core.xml').async('string'))
+  .replace(/(<dcterms:(?:created|modified)[^>]*>)[^<]*(<)/g,`$1${buildTimestamp}$2`);
+ archive.file('docProps/core.xml',core);
+ const pinned=new Date(buildTimestamp);
+ archive.forEach((path,entry)=>{entry.date=pinned;});
+ return archive.generateAsync({type:'nodebuffer',compression:'DEFLATE'});
+}
 async function build(locale){
  const source=locale==='en'?'personal-course/student/en/ai-learning-journal.md':'personal-course/student/he/ai-learning-journal.md';
  const tabs=parseJournalTabs(readFileSync(source,'utf8'));
  const sections=[];
  tabs.forEach((tab,index)=>{sections.push(...renderMarkdown(tab.markdown,locale,tab.id.startsWith('session-')));if(index<tabs.length-1)sections.push(new Paragraph({pageBreakBefore:true}));});
  const document=new Document({sections:[{properties:{},children:sections}]});
- mkdirSync(dirname(output[locale]),{recursive:true});writeFileSync(output[locale],await Packer.toBuffer(document));
+ mkdirSync(dirname(output[locale]),{recursive:true});writeFileSync(output[locale],await withPinnedTimestamp(await Packer.toBuffer(document)));
 }
 await build('en');await build('he');
