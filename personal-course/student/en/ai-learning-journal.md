@@ -10,15 +10,19 @@ Use this workbook throughout all 7 integrated sessions. Each session has one tab
 - Verify the part that matters before relying on it; record the evidence you saved.
 - Reflect on your own judgment and name one improvement for next time.
 
+## How to read the tables
+
+Grey italic text is an example, filled in for you. It shows the kind of answer that works. Write your own answer in the empty cells; never leave the example as your answer.
+
 <!-- journal-tab: {"id":"entry-template","title":"Entry Template"} -->
 # Entry Template
 
-| Field | Your notes |
-| --- | --- |
-| Session and date | |
-| Real-life task and intended result | |
-| Constraints and context | |
-| Exact prompt or workflow worth saving | |
+| Field | Example | Your notes |
+| --- | --- | --- |
+| Session and date | Session 3, 14 November | |
+| Real-life task and intended result | Plan a 40-person family event so everyone knows where to be and what it costs | |
+| Constraints and context | Hall booked for 7 Nov; budget 18,000; three relatives helping | |
+| Exact prompt or workflow worth saving | "Here are my constraints and dates. Give me a table with columns Time / Task / Owner / Cost / Buffer, then list what could go wrong." | |
 
 ## Verification and evidence
 
@@ -33,6 +37,9 @@ What was uncertain or weak? What did you decide yourself, and what will you chan
 
 | Name and purpose | Exact prompt or workflow | Useful context and format | When not to use it | Verification / evidence | Next improvement |
 | --- | --- | --- | --- | --- | --- |
+| Example: Compare two options fairly | "Compare A and B against these criteria. Give a table, then say which you would choose and why." | Give the criteria and the budget first; ask for a table | When I have not decided my criteria yet, because it will invent them for me | Checked both prices at the seller's own site, 2 June | Ask it to mark which numbers it is unsure about |
+| | | | | | |
+| | | | | | |
 | | | | | | |
 
 <!-- journal-tab: {"id":"course-reflection","title":"End-of-Course Reflection"} -->
@@ -55,13 +62,13 @@ Move from a vague question to a small decision you can explain and revisit.
 
 ## 1. Frame the situation
 
-| Field | Your notes |
-| --- | --- |
-| Question or decision | |
-| Who the result is for | |
-| Must-have constraints | |
-| Preferences and trade-offs | |
-| Decision date / review date | |
+| Field | Example | Your notes |
+| --- | --- | --- |
+| Question or decision | Where should we go on the summer trip, Greece or London? | |
+| Who the result is for | Two adults and a 9-year-old travelling together | |
+| Must-have constraints | Under 9,000 total; 10 to 14 August; direct flight only | |
+| Preferences and trade-offs | We prefer sea over museums; we would pay about 700 more for a shorter flight | |
+| Decision date / review date | Decide by 20 June; recheck prices on 5 June | |
 
 ## 2. Ask, inspect, and improve
 
@@ -69,6 +76,7 @@ Record two prompt versions. Ask for a structured summary of a public source or s
 
 | Version | What I added or changed | What improved or failed |
 | --- | --- | --- |
+| Example | Added the budget, the dates, and "answer as a table with columns Option / Cost / Travel time" | Stopped the generic advice and gave me comparable options, but it invented one hotel price |
 | 1 | | |
 | 2 | | |
 
@@ -76,10 +84,58 @@ Record two prompt versions. Ask for a structured summary of a public source or s
 
 | Option | Criterion | Evidence | Confidence | My judgment |
 | --- | --- | --- | --- | --- |
+| Example: Crete, Greece | Total cost for three people | 8,200 including flights and 7 nights, from the airline and hotel sites, 2 June | Medium, because prices move every week | Fits the budget with room to spare, so it stays in |
+| | | | | |
 | | | | | |
 | | | | | |
 
 **Verified decision record:** current choice, reason, uncertainty, and what would make me reconsider.
+
+## Goal
+
+Make one real decision with AI's help that you can explain to another person in your own words, rather than saying "the AI told me to".
+
+## Steps
+
+1. Choose one decision you genuinely face, with at least two realistic options (for example: Greece or London for the summer trip; repair the old car or replace it; which laptop to buy for studying).
+2. Complete the three tables above: the situation, your two prompt versions, and the comparison.
+3. Check the single most important claim against its original source, then write your verified decision record.
+
+## Bronze
+
+Complete one checked decision record for a real choice you actually face.
+
+## Silver
+
+Compare at least two options with evidence and explain the trade-off you chose (for example: an open prompt against a precise one, or Claude against Gemini on the same question).
+
+## Gold
+
+Ask a trusted person to challenge your criteria, then revise the record and note what changed.
+
+## My task
+
+| Level | What I chose | By when |
+| --- | --- | --- |
+| Example: Silver | Whether to repair the old car or replace it | 20 June |
+| | | |
+
+## Compare and decide, for the real case
+
+| Option | Criterion | Evidence | Confidence | My judgment |
+| --- | --- | --- | --- | --- |
+| | | | | |
+| | | | | |
+| | | | | |
+| | | | | |
+
+## Evidence I saved
+
+| What I checked | Source and date | Where I saved it |
+| --- | --- | --- |
+| Example: the 8,200 total against the real prices | Airline and hotel sites, 2 June | Screenshot in my trip folder |
+| | | |
+| | | |
 
 ## Verification and evidence
 
@@ -98,6 +154,9 @@ Use Gemini Deep Research or another research tool to investigate a real purchase
 
 | Need / question | Budget and deadline | Must-haves | Deal-breakers |
 | --- | --- | --- | --- |
+| Example: A quiet dishwasher that fits the 60 cm gap in our kitchen | Up to 3,000, installed before the holidays | 60 cm wide, quiet at 44 dB or less, three-year warranty | No brand without local service; nothing that needs a plumber to move the pipes |
+| | | | |
+| | | | |
 | | | | |
 
 ## 2. Research plan and evidence matrix
@@ -106,6 +165,8 @@ If using Gemini Deep Research, save the research plan and source list. Then chec
 
 | Claim or product | Source and date | Supports / contradicts | Uncertainty | Checked? |
 | --- | --- | --- | --- | --- |
+| Example: Model X runs at 42 dB | Manufacturer spec sheet, 12 May | Supports my "quiet" requirement | It is the maker's own number; one reviewer measured 46 dB in a small kitchen | Yes, I read one independent review |
+| | | | | |
 | | | | | |
 | | | | | |
 
@@ -114,6 +175,53 @@ If using Gemini Deep Research, save the research plan and source list. Then chec
 **Research brief:** what I learned, what remains uncertain, and what I would buy, wait for, or reject.
 
 If useful, specify a reviewable alert: source, trigger, threshold, frequency, duplicate rule, stop rule, and the action that still needs my approval.
+
+## Goal
+
+Produce a purchase brief you would trust with your own money, plus one alert rule that watches on your behalf and never buys anything.
+
+## Steps
+
+1. Pick one purchase you might genuinely make (for example: a dishwasher, a used car, a flight, a phone) and complete the need table.
+2. Use Gemini Deep Research or another tool for a source plan, then open the two most important original sources and read them yourself.
+3. Complete the evidence matrix and write what you would buy, wait for, or reject, and why.
+4. Choose one route: write and test the no-install agent run record; optionally run a local Ollama lab; or take the Advanced Adventure with your own cloud/API account.
+
+## Bronze
+
+Research one realistic purchase and complete the evidence matrix.
+
+## Silver
+
+Write a research brief and test a reviewable monitoring rule with public or mock data (for example: "tell me when this model drops below 2,700 at a shop that delivers to my address").
+
+## Gold
+
+Run one bounded agent-monitor test, inspect its log or run record, and revise the rule from what happened (for example: it alerted three times for the same price, so add a duplicate rule).
+
+## My task
+
+| Level | What I chose | By when |
+| --- | --- | --- |
+| Example: Bronze | A dishwasher for the kitchen | Before the holidays |
+| | | |
+
+## Evidence matrix, for the real purchase
+
+| Claim or product | Source and date | Supports / contradicts | Uncertainty | Checked? |
+| --- | --- | --- | --- | --- |
+| | | | | |
+| | | | | |
+| | | | | |
+| | | | | |
+
+## Evidence I saved
+
+| What I checked | Source and date | Where I saved it |
+| --- | --- | --- |
+| Example: the price and the return terms | The seller's own page, 14 May | Dated screenshot in my purchase folder |
+| | | |
+| | | |
 
 ## Verification and evidence
 
@@ -132,12 +240,16 @@ Turn a trip, event, household task, or other shared commitment into a plan peopl
 
 | Goal | Fixed constraints | Preferences | Decision owner | Contributors | Budget / dates |
 | --- | --- | --- | --- | --- | --- |
+| Example: A 40-person family event that stays calm | Hall booked 7 Nov, 18:00 to 23:00 | Family-style seating; short speeches only | Me | Partner on food, brother on music, aunt on invitations | 18,000; invitations sent by 1 Oct |
+| | | | | | |
 | | | | | | |
 
 ## 2. Draft the shareable plan
 
 | Time / deadline | Activity or task | Owner | Cost / effort | Buffer | Status |
 | --- | --- | --- | --- | --- | --- |
+| Example: 1 Oct | Send invitations with an RSVP link | Aunt | 150 printing plus 2 hours | 5 days before the printer's cut-off | Not started |
+| | | | | | |
 | | | | | | |
 | | | | | | |
 
@@ -146,6 +258,52 @@ Turn a trip, event, household task, or other shared commitment into a plan peopl
 **Fallback:** What changes if a booking, weather, time, price, or person changes?
 
 **Recheck list:** what, when, source, and owner will verify it before action?
+
+## Goal
+
+Write a plan that someone else can pick up and run without calling you to ask what you meant.
+
+## Steps
+
+1. Choose something you are actually organising with other people (for example: a family event, a trip with friends, a move, a shared household rota) and agree the goal, constraints, and decision owner.
+2. Fill in the plan with owners, dates, cost or effort, and buffer.
+3. Add one fallback and one recheck item before anyone relies on the plan.
+
+## Bronze
+
+Create a shareable plan with owners, dates, and one fallback.
+
+## Silver
+
+Stress-test the plan against two changes and add a recheck list (for example: the hall cancels a week before, or eight more guests confirm).
+
+## Gold
+
+Use the plan with another person or group and improve it from their feedback.
+
+## My task
+
+| Level | What I chose | By when |
+| --- | --- | --- |
+| Example: Silver | The family event on 7 November | Plan shared by 1 October |
+| | | |
+
+## The shareable plan, for the real task
+
+| Time / deadline | Activity or task | Owner | Cost / effort | Buffer | Status |
+| --- | --- | --- | --- | --- | --- |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+
+## Evidence I saved
+
+| What I checked | Source and date | Where I saved it |
+| --- | --- | --- |
+| Example: the hall's hours and cancellation terms | The booking email, 2 September | Saved email plus a note in the plan |
+| | | |
+| | | |
 
 ## Verification and evidence
 
@@ -164,6 +322,8 @@ Use Claude Artifacts to make a small, shareable web tool for a repeated personal
 
 | User and recurring problem | Inputs | Up to three actions | Output | What it must not do |
 | --- | --- | --- | --- | --- |
+| Example: I split shared expenses with two flatmates every month | Who paid, how much, and what for | Add an expense; show balances; clear a debt | One line per person saying who owes whom | Store anyone's bank details, or move real money |
+| | | | | |
 | | | | | |
 
 ## 2. Build and revise
@@ -174,10 +334,57 @@ Paste the Artifact link or describe the working version. What changed after the 
 
 | Test | Expected | Actual | Fix / next step |
 | --- | --- | --- | --- |
+| Example: two people, one shared expense | "Dana owes Yossi 75" | It showed 150, because it forgot to halve the amount | Fixed the split calculation and tested it again |
 | Normal case | | | |
 | Empty input | | | |
 | Edge case | | | |
 | Reset or refresh | | | |
+
+## Goal
+
+Build a small working web tool that solves one thing you currently redo by hand every week or month.
+
+## Steps
+
+1. Name one user, one recurring problem, and the smallest output that would actually help (for example: splitting shared expenses, a packing list for a regular trip, a shift-swap calculator).
+2. Build a first version in Claude Artifacts.
+3. Record a normal, empty-input, and edge-case test; repair one problem you found.
+
+## Bronze
+
+Build a Claude Artifact that solves one recurring problem and pass a normal test.
+
+## Silver
+
+Revise it after normal, empty-input, and edge-case tests (for example: someone types a negative number, or leaves the name blank).
+
+## Gold
+
+Let one other person try it and improve one part from their feedback.
+
+## My task
+
+| Level | What I chose | By when |
+| --- | --- | --- |
+| Example: Silver | The shared-expense splitter | Sunday evening |
+| | | |
+
+## Test results, for the real tool
+
+| Test | Expected | Actual | Fix / next step |
+| --- | --- | --- | --- |
+| Normal case | | | |
+| Empty input | | | |
+| Edge case | | | |
+| Someone else tried it | | | |
+
+## Evidence I saved
+
+| What I checked | Source and date | Where I saved it |
+| --- | --- | --- |
+| Example: the split calculation on two real expenses | My own test, 12 May | Artifact link plus a screenshot of the result |
+| | | |
+| | | |
 
 ## Verification and evidence
 
@@ -196,6 +403,9 @@ Use AI to explore a layout or physical-project idea, then check it in the real w
 
 | Parameter / measurement | Value | Measured, defined, assumed, or derived? | Source / note |
 | --- | --- | --- | --- |
+| Example: Wall width available for the desk | 218 cm | Measured | Tape measure, 3 May, measured twice at floor height and at desk height |
+| Example: Chair needs clearance behind the desk | 90 cm | Assumed | Taken from a furniture guide, not yet checked with our actual chair |
+| | | | |
 | | | | |
 | | | | |
 
@@ -206,6 +416,52 @@ Sketch the layout, materials, quantities, clearances, and intended use. Mark eac
 ## 3. Fit check
 
 What did a paper, cardboard, tape, or in-space test reveal? What changed in the plan?
+
+## Goal
+
+Make one proposal for a real space that has survived contact with a tape measure.
+
+## Steps
+
+1. Measure or define the key parameters and mark which ones are assumptions (for example: a home-office corner, a child's room, a balcony, a kitchen wall).
+2. Create one layout or project proposal.
+3. Perform a simple fit check and record what changed.
+
+## Bronze
+
+Capture the key measurements and make one layout proposal.
+
+## Silver
+
+Run a physical fit check and revise the proposal from what you found (for example: the drawer cannot open because the radiator is in the way).
+
+## Gold
+
+Prototype one element with paper, cardboard, or tape and document the improvement.
+
+## My task
+
+| Level | What I chose | By when |
+| --- | --- | --- |
+| Example: Bronze | The home-office corner | End of the month |
+| | | |
+
+## Measurements, for the real space
+
+| Parameter / measurement | Value | Measured, defined, assumed, or derived? | Source / note |
+| --- | --- | --- | --- |
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+
+## Evidence I saved
+
+| What I checked | Source and date | Where I saved it |
+| --- | --- | --- |
+| Example: the 218 cm wall against the desk I want | Tape measure and the product page, 3 May | Photo of the outline I taped on the floor |
+| | | |
+| | | |
 
 ## Verification and evidence
 
@@ -224,12 +480,15 @@ Plan a short visual story whose audience can understand what is true, selected, 
 
 | Purpose and audience | Main message | Format | Source assets | Consent / permission |
 | --- | --- | --- | --- | --- |
+| Example: Show my running group why the new route is safer | The new route has wider, better-lit pavements | 60-second vertical video | Eight of my own photos and one AI-generated map illustration | Two runners appear and both agreed in writing |
+| | | | | |
 | | | | | |
 
 ## 2. Storyboard the sequence
 
 | Frame | What the audience sees | Caption / voice | Accessibility note | Label needed? |
 | --- | --- | --- | --- | --- |
+| Example | Wide shot of the old junction at dusk | "This is where we used to cross." | Describe the junction aloud; captions burned into the video | No, it is an unedited photo |
 | 1 | | | | |
 | 2 | | | | |
 | 3 | | | | |
@@ -240,6 +499,54 @@ Plan a short visual story whose audience can understand what is true, selected, 
 ## 3. Review for truth and clarity
 
 Which claim needs checking? Could a viewer mistake a generated or edited element for a real record? Add the needed label, context, caption, or alternative text.
+
+## Goal
+
+Make a short visual story whose audience can tell what is real, what was edited, and what a machine made.
+
+## Steps
+
+1. Decide the audience, main message, source assets, and permissions (for example: a neighbourhood group, a club, your family, a class).
+2. Fill in the storyboard with captions and accessibility notes.
+3. Fact-check one claim that would matter if it were wrong, and add every label the audience needs.
+
+## Bronze
+
+Create a short storyboard with sources and labels.
+
+## Silver
+
+Produce the visual story with accessibility notes and fact checks (for example: alternative text on every image, and a visible "AI-generated illustration" label).
+
+## Gold
+
+Show it to a member of the intended audience and revise for clarity or trust.
+
+## My task
+
+| Level | What I chose | By when |
+| --- | --- | --- |
+| Example: Silver | The video about the running route | Before Friday's run |
+| | | |
+
+## Storyboard, for the real story
+
+| Frame | What the audience sees | Caption / voice | Accessibility note | Label needed? |
+| --- | --- | --- | --- | --- |
+| 1 | | | | |
+| 2 | | | | |
+| 3 | | | | |
+| 4 | | | | |
+| 5 | | | | |
+| 6 | | | | |
+
+## Evidence I saved
+
+| What I checked | Source and date | Where I saved it |
+| --- | --- | --- |
+| Example: the claim that the new route is better lit | The council street-lighting map, 20 April | Link saved next to the storyboard |
+| | | |
+| | | |
 
 ## Verification and evidence
 
@@ -258,18 +565,68 @@ Combine your strongest work into a personal workflow and a small final personal 
 
 | Personal problem | Useful outcome | Inputs / sources | Steps | Human approval point | Review date |
 | --- | --- | --- | --- | --- | --- |
+| Example: bills arrive scattered across email and I lose track of them | One weekly list of what is due and when | Bills in my email; the household calendar | Collect, extract the amount and date, draft the list | I approve the list before anything is paid or filed | First Sunday of each month |
+| | | | | | |
 | | | | | | |
 
 ## 2. Map the workflow and evidence
 
 | Step | Tool or method | Output | Evidence register | Permission needed | Stop / fallback |
 | --- | --- | --- | --- | --- | --- |
+| Example: extract the amount and due date | Claude Desktop reading one local folder | A table of bills with amounts and dates | The saved file plus the dated table | Read-only access to that one folder | If a due date is unreadable, stop and flag it for me |
+| | | | | | |
 | | | | | | |
 | | | | | | |
 
 ## 3. Portfolio and next experiment
 
-Choose two artifacts, an honest description of what you did and learned, and one improvement experiment. Claude Desktop can demonstrate real files and apps; use minimum necessary access. Claude for Chrome is for further exploration. Discuss OpenClaw only as a paper-only workflow—no install or account connection.
+Choose two artifacts, an honest description of what you did and learned, and one improvement experiment. Claude Desktop can demonstrate real files and apps; use minimum necessary access. Claude for Chrome is for further exploration. If you used OpenClaw in the optional Agent Lab, include only the bounded run record and keep all account, payment, messaging, and private-data actions outside its scope.
+
+## Goal
+
+Start one personal system that you can look inside, pause, and improve, rather than a one-off AI answer.
+
+## Steps
+
+1. Choose one personal problem and map its inputs, steps, approval point, and review date (for example: bills, a weekly meal plan, job applications, medical appointments).
+2. Save two honest portfolio artifacts and complete the evidence register and permission map.
+3. If you used the optional Agent Lab, review the run record, permissions, alert quality, and stop rule before deciding what to keep.
+
+## Bronze
+
+Create a small personal workflow with one approval point.
+
+## Silver
+
+Complete the evidence register and permission map for a final personal project.
+
+## Gold
+
+Run a limited real-world trial, then document what you paused, changed, or kept under your control.
+
+## My task
+
+| Level | What I chose | By when |
+| --- | --- | --- |
+| Example: Gold | The weekly bills list | First Sunday of next month |
+| | | |
+
+## Workflow and evidence, for the real system
+
+| Step | Tool or method | Output | Evidence register | Permission needed | Stop / fallback |
+| --- | --- | --- | --- | --- | --- |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+
+## Evidence I saved
+
+| What I checked | Source and date | Where I saved it |
+| --- | --- | --- |
+| Example: that the workflow never paid anything by itself | My run record, 6 June | Saved run log with the approval step marked |
+| | | |
+| | | |
 
 ## Verification and evidence
 

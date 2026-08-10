@@ -14,7 +14,7 @@ Use Claude Desktop with: **“In the selected sample folder only, list the filen
 
 ## Visible verification and teaching notes
 
-Before connecting, show requested permissions and grant the **least privilege**—only the sample folder. Confirm filenames/results, then disconnect or retain no broader access. Misconceptions: convenience justifies broad access; an agent can send messages or decide outcomes. No-paid/no-tool alternative: paper permission map and evidence register. **Claude for Chrome** is further exploration only: start read-only and never authorise account changes, payments, messages, or private data. **OpenClaw** is paper-only: do not install, connect, deploy, or run it.
+Before connecting, show requested permissions and grant the **least privilege**—only the sample folder. Confirm filenames/results, then disconnect or retain no broader access. Misconceptions: convenience justifies broad access; an agent can send messages or decide outcomes. No-paid/no-tool alternative: paper permission map and evidence register. If a learner used the optional OpenClaw Agent Lab, review only their bounded run record, source list, alert quality, and stop action; never use personal accounts, payments, messages, or private data. **Claude for Chrome** is further exploration only: start read-only and never authorise account changes, payments, messages, or private data.
 
 ## Review prompts
 
