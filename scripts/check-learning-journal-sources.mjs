@@ -96,6 +96,13 @@ for(const tabs of [parsed.personalEn,parsed.personalHe]){
   assert.match(tab.markdown,/verification|verify|אימות|בדיקה/i);
   assert.match(tab.markdown,/evidence|saved|ראיות|שמר/i);
   assert.match(tab.markdown,/reflection|next time|רפלקציה|בפעם הבאה/i);
+  assert.match(tab.markdown,/## (?:Goal|מטרה)/,`${tab.id} must state a homework goal`);
+  assert.match(tab.markdown,/## (?:Steps|שלבים)/,`${tab.id} must give homework steps`);
+  assert.match(tab.markdown,/## (?:Bronze|ארד)/,`${tab.id} must define Bronze completion`);
+  assert.match(tab.markdown,/## (?:Silver|כסף)/,`${tab.id} must define Silver practice`);
+  assert.match(tab.markdown,/## (?:Gold|זהב)/,`${tab.id} must define Gold extension`);
+  assert.match(tab.markdown,/(?:for example|לדוגמה|למשל):?/i,`${tab.id} must show at least one worked example`);
+  assert.match(tab.markdown,/^\| (?:Example|דוגמה)/m,`${tab.id} must give its tables a filled example row`);
  }
 }
 for(const tabs of [parsed.teacherEn,parsed.teacherHe]){
