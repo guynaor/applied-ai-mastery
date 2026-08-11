@@ -368,7 +368,15 @@ Use Claude Artifacts to make a small, shareable web tool for a repeated personal
 
 ## 2. Build and revise
 
-Paste the Artifact link or describe the working version. What changed after the first result? What instructions, labels, defaults, or calculations did you improve?
+The first version almost always works on the case you had in mind and breaks on the second. Record each round: what failed, what you asked to change, and what came out.
+
+| Round | What failed in the previous version | What I asked to change | What came out |
+| --- | --- | --- | --- |
+| Example: 2 | It calculated the tip as a percentage, but entering an amount with small change gave three decimal places | Round to two decimals and add a “total to pay” label | Readable now, but I found it does not handle an amount of 0 |
+| | | | |
+| | | | |
+
+**Link to the artifact:** paste the Artifact link here, or describe where the working version is saved.
 
 ## 3. Test before sharing
 
@@ -451,11 +459,24 @@ Use AI to explore a layout or physical-project idea, then check it in the real w
 
 ## 2. Create and challenge the proposal
 
-Sketch the layout, materials, quantities, clearances, and intended use. Mark each assumption that needs a physical check.
+Sketch the layout, then break it down into numbers. Any line without a source is an assumption, and every assumption needs a physical check before you buy anything.
+
+| Component | Measurement or quantity | Where the number came from | Assumption to check physically |
+| --- | --- | --- | --- |
+| Example: desk for the work corner | 120 by 60 cm | Manufacturer's product page, 4 May | That the door still opens fully with the desk in place |
+| | | | |
+| | | | |
+| | | | |
 
 ## 3. Fit check
 
-What did a paper, cardboard, tape, or in-space test reveal? What changed in the plan?
+Tape down paper or cardboard at the real size and try living with it. This is the cheapest test you will run, and the one that prevents the expensive mistake.
+
+| What I tested | How I tested it | What I found | What I changed in the plan |
+| --- | --- | --- | --- |
+| Example: that the desk does not block the walkway | Taped 120 by 60 cardboard to the floor and moved around the room for two days | 55 cm of walkway left, too narrow with two people in the room | Reduced to 100 cm wide and moved the chair to the other side |
+| | | | |
+| | | | |
 
 ## Goal
 
@@ -538,7 +559,14 @@ Plan a short visual story whose audience can understand what is true, selected, 
 
 ## 3. Review for truth and clarity
 
-Which claim needs checking? Could a viewer mistake a generated or edited element for a real record? Add the needed label, context, caption, or alternative text.
+Go through the story item by item and ask what a viewer might wrongly conclude. A generated image that is not labelled is not decoration — it is a claim.
+
+| Item in the story | Original, edited, or generated? | What a viewer might wrongly think | What I added to prevent that |
+| --- | --- | --- | --- |
+| Example: the neighbourhood background image | AI generated | That it is a real photograph of the street the story is about | A “illustration, not a photograph” caption and alt text saying the same |
+| | | | |
+| | | | |
+| | | | |
 
 ## Goal
 
@@ -620,7 +648,16 @@ Combine your strongest work into a personal workflow and a small final personal 
 
 ## 3. Portfolio and next experiment
 
-Choose two artifacts, an honest description of what you did and learned, and one improvement experiment. Claude Desktop can demonstrate real files and apps; use minimum necessary access. Claude for Chrome is for further exploration. If you used OpenClaw in the optional Agent Lab, include only the bounded run record and keep all account, payment, messaging, and private-data actions outside its scope.
+Choose two artifacts from the course. An honest description is worth more than an impressive one: whoever reads you wants to know what you actually did, and what you learned when something did not work.
+
+| The artifact | What I did myself | What the tool did | What I learned when something failed |
+| --- | --- | --- | --- |
+| Example: the purchase brief from Session 2 | Set the criteria, opened the manufacturer page, and found the warranty was conditional on registration | Built the research plan and organised the evidence matrix | That the report sounds exactly as confident when it is wrong |
+| | | | |
+
+**My next experiment:** what will you change next time, and how will you know whether it worked?
+
+**Permissions:** Claude Desktop can work with real files and apps, so give it the minimum necessary access. Claude for Chrome is for further exploration. If you used OpenClaw in the optional Agent Lab, include only the bounded run record and keep all account, payment, messaging, and private-data actions outside its scope.
 
 ## Goal
 

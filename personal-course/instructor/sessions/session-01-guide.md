@@ -6,13 +6,24 @@
 
 This is a teach-from-the-page plan. It is deliberately written so that a teacher who did not design the course can run it, and so its numbered blocks can later become a self-paced video. Do not require learners to create accounts or to use more than one AI tool.
 
+## Session materials
+
+These four links are everything you need open to run the session.
+
+| Material | What it is for |
+|---|---|
+| [Projection slides](../samples/session-01-slides.html) | Ten slides, in session order. Every “show on the board” moment in this guide is prepared there. |
+| [Sample options page](../samples/session-01-public-options-page.html) | A stable local source for the two options, with dates, costs, and booking conditions. |
+| [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | A downloadable Word file. Every table learners fill in today is in it. |
+| [Session 1 brief](../../sessions/session-01-ask-summarize-decide.md) | What learners see. |
+
 ## Before learners arrive
 
 ### Prepare the room and tools
 
 1. Open one ordinary chat application. The default demonstration uses **Claude**, but ChatGPT or Gemini is equally valid. Log in only to the facilitator account; learners can observe, use a free account they already have, or work on paper.
 2. Open the [local sample options page](../samples/session-01-public-options-page.html) in a second tab. It is a stable stand-in for a public event page. If you prefer a real public page, use a current library, museum, or community-class listing that shows date, cost, duration, and booking conditions.
-3. Keep the [Session 1 learner brief](../../sessions/session-01-ask-summarize-decide.md), the [Learning Journal](../../student/ai-learning-journal.md), and a blank decision-record template on screen or on paper. A four-column page—facts, preferences, unknowns, next action—is enough.
+3. Keep the [Session 1 learner brief](../../sessions/session-01-ask-summarize-decide.md), the [learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx), and a blank decision-record template on screen or on paper. A four-column page—facts, preferences, unknowns, next action—is enough.
 4. Test the chat application, projector, and the local page. If any one fails, use the printed local-source text below and complete every activity on paper.
 
 ### What learners need
@@ -51,7 +62,7 @@ Ask: “Would choosing a medical treatment or sending a message on someone else�
 
 ## AI Geography — 5–17 minutes
 
-Show the [AI Geography — 10-Minute Map](../../../materials/shared/AF-REF-001-ai-geography.md), but teach it rather than assigning it as silent reading. Draw six nested boxes or use the table below. Product names are examples, not a ranking.
+Show [slide 2](../samples/session-01-slides.html) and the [AI Geography — 10-Minute Map](../../../materials/shared/AF-REF-001-ai-geography.md), but teach it rather than assigning it as silent reading. Draw six nested boxes or use the table below. Product names are examples, not a ranking.
 
 | Layer | Plain-language teacher definition | Ask learners | Control point |
 |---|---|---|---|
@@ -66,7 +77,7 @@ Show the [AI Geography — 10-Minute Map](../../../materials/shared/AF-REF-001-a
 
 > “A chat answer is text. A tool can reach something else. An agent can take several steps with permitted tools. The closer a system gets to real data or real-world action, the more carefully we choose permissions and approval points.”
 
-Use three rapid checks. Have learners show fingers or write a letter:
+Use three rapid checks with [slide 3](../samples/session-01-slides.html). Have learners show fingers or write a letter:
 
 1. “A saved presentation: artifact or skill?” — **Artifact.**
 2. “A reusable set of instructions and examples for planning a week: prompt or skill?” — **Skill.**
@@ -107,7 +118,7 @@ Ask: “What would the tool have to guess?” Take answers: date, budget, availa
 
 Build the request live. Type this exact default prompt into Claude, including the page text or its facts. Do not give the tool browser, account, or file access.
 
-> I am choosing between the Saturday gardening class and the museum talk described below. I have 3 hours, a 30-unit budget, and want a social activity. Use only the supplied source. Create a table with: verified facts, my preferences, unknowns, and claims I must check. Then compare the two options. Do not choose for me, do not invent availability, and label uncertainty.
+> I am choosing between the Saturday gardening class and the museum talk described below. I have 3 hours, a budget of 100, and want a social activity. Use only the supplied source. Create a table with: verified facts, my preferences, unknowns, and claims I must check. Then compare the two options. Do not choose for me, do not invent availability, and label uncertainty.
 > **Source:** [paste the local page text or facts]
 
 ### Expected intermediate output
