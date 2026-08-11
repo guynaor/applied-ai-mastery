@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>שקפים להקרנה — מפגש 7: לבנות מערכת אישית</title>
+    <style>
+      :root{--primary:#4E356F;--soft:#F0EAFA;--text:#17242D;--line:#d6dae0;--muted:#55606E;--warn:#b3413f}
+      *{box-sizing:border-box}
+      body{font-family:system-ui,sans-serif;line-height:1.5;margin:0;color:var(--text);background:#fff}
+      .slide{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:4vh 6vw;border-bottom:1px solid var(--line);page-break-after:always}
+      .num{color:var(--muted);font-size:1rem;letter-spacing:.08em;margin-bottom:1rem}
+      h1{font-size:clamp(1.8rem,4.5vw,3rem);color:var(--primary);margin:0 0 1.5rem}
+      h2{font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--primary);margin:1.5rem 0 .6rem}
+      p,li{font-size:clamp(1.05rem,1.9vw,1.4rem)}
+      .big{font-size:clamp(1.3rem,2.8vw,2rem);line-height:1.45}
+      .box{background:var(--soft);border-inline-start:6px solid var(--primary);padding:1.2rem 1.5rem;border-radius:6px}
+      .prompt{background:#17242D;color:#F4F6F8;padding:1.2rem 1.5rem;border-radius:6px;font-size:clamp(1rem,1.9vw,1.35rem);line-height:1.6}
+      .warn{background:#fdf0f0;border-inline-start:6px solid var(--warn);padding:1rem 1.4rem;border-radius:6px;margin:.6rem 0;font-size:clamp(1.1rem,2.2vw,1.5rem)}
+      table{border-collapse:collapse;width:100%;font-size:clamp(.95rem,1.7vw,1.25rem)}
+      th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:start}
+      th{background:var(--primary);color:#fff}
+      tbody tr:nth-child(even){background:#FAFAFC}
+      .total td{font-weight:700;background:var(--soft)}
+      .say{border:2px dashed var(--primary);border-radius:6px;padding:1.2rem 1.5rem;font-style:italic}
+      ol,ul{padding-inline-start:1.4rem}
+      @media print{.slide{min-height:auto;padding:1.5rem;border:0}}
+    </style>
+  </head>
+  <body>
+
+    <section class="slide">
+      <p class="num">שקף 1 — פתיחה, דקות 0–5</p>
+      <h1>מה מכל מה שעשינו בקורס אתם באמת תמשיכו לעשות?</h1>
+      <div class="say big">היום נבנה דף פתיחה אחד. המדד היחיד שלו: האם תחזרו אליו בעוד חודש.</div>
+    </section>
+    <section class="slide">
+      <p class="num">שקף 2 — ראיות, דקות 5–15</p>
+      <h1>שלושה עד חמישה דברים שבאמת עשיתם</h1>
+      <table>
+        <thead><tr><th>מה קרה</th><th>איפה זה מתועד</th><th>מה עשיתי בעצמי</th><th>מה עוד לא ידוע לי</th></tr></thead>
+        <tbody>
+          <tr><td>סיכום מחקר הקנייה, מפגש 2</td><td>ביומן, טבלת הראיות</td><td>הגדרתי קריטריונים ופתחתי את דף היצרן</td><td>אם הייתי מוצא/ת את אותה סתירה בלי הטבלה</td></tr>
+        </tbody>
+      </table>
+      <div class="say">אל תמציאו תוצאות — וגם אל תשפרו אותן קצת. „לא עבד” הוא ראיה טובה בדיוק כמו „עבד”.</div>
+    </section>
+    <section class="slide">
+      <p class="num">שקף 3 — דף פתיחה, דקות 15–27</p>
+      <h1>ארבע שורות שהופכות מטרה למשהו שחוזרים אליו</h1>
+      <div class="box big">
+        <p><strong>הצעד הבא:</strong> פעולה אחת, לא „להתקדם”.</p>
+        <p><strong>כל כמה זמן אני בודק/ת:</strong> תאריך, לא „מדי פעם”.</p>
+        <p><strong>איפה הדברים:</strong> קבצים, תזכורות, רשימות.</p>
+        <p><strong>מתי זה נגמר:</strong> איך נראה „סיימתי”.</p>
+      </div>
+      <div class="say">מטרה בלי השורה האחרונה נמשכת לנצח, ואז נזנחת.</div>
+    </section>
+    <section class="slide">
+      <p class="num">שקף 4 — הרשאות, דקות 27–42</p>
+      <h1>קוראים את בקשת ההרשאות לפני שמאשרים</h1>
+      <div class="warn">„קריאה וכתיבה בכל תיקיית המסמכים” &nbsp;•&nbsp; „קבצים שנפתחו לאחרונה” &nbsp;•&nbsp; „הרצה בלי אישור לכל פעולה”</div>
+      <p class="big">שלוש בקשות. אף אחת מהן אינה נחוצה כדי לקרוא שמות קבצים בתיקייה אחת.</p>
+    </section>
+    <section class="slide">
+      <p class="num">שקף 5 — הרגע החשוב</p>
+      <h1>הכפתור הנכון הוא לא זה שבולט</h1>
+      <div class="box big">„בחירת תיקייה מסוימת” הוא כפתור שקט. „אישור” הוא כפתור צבעוני.</div>
+      <div class="say">זה לא זדון. זו ברירת מחדל שנוחה למי שבנה את הממשק — ולכן ההחלטה צריכה להיות שלכם ולא של העיצוב.</div>
+    </section>
+    <section class="slide">
+      <p class="num">שקף 6 — הרשאה מזערית</p>
+      <h1>מה מאשרים, ומה לא</h1>
+      <table>
+        <thead><tr><th>הבקשה</th><th>ההחלטה</th><th>למה</th></tr></thead>
+        <tbody>
+          <tr><td>קריאה בתיקיית הפרויקט</td><td>כן</td><td>בדיוק מה שהמשימה צריכה</td></tr>
+          <tr><td>כל תיקיית המסמכים</td><td>לא</td><td>נוחות אינה סיבה</td></tr>
+          <tr><td>כתיבה ומחיקה</td><td>לא</td><td>היום רק קוראים</td></tr>
+          <tr class="total"><td>הרצה בלי אישור</td><td>לא</td><td>נקודת האישור מפרידה בין הצעה לפעולה</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="slide">
+      <p class="num">שקף 7 — אחרי ההרצה</p>
+      <h1>מאשרים, ואז בודקים — לא להפך</h1>
+      <ul class="big">
+        <li>האם רשימת הקבצים תואמת בדיוק את התיקייה?</li>
+        <li>האם הוא ניסה לצאת ממנה?</li>
+        <li>האם ההצעה נשענת על מה שראה, או על ניחוש?</li>
+        <li>האם ניתקתם את הגישה בסוף?</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <p class="num">שקף 8 — קו העצירה, דקות 42–52</p>
+      <h1>שלוש שורות שכל מערכת אישית צריכה</h1>
+      <div class="box big">
+        <p><strong>מה אסור:</strong> אילו נתונים לא נכנסים לכאן לעולם.</p>
+        <p><strong>מה תמיד באישור:</strong> שליחה, תשלום, שינוי חשבון.</p>
+        <p><strong>מתי נעצרים:</strong> התנאי שאחריו המערכת מפסיקה מעצמה.</p>
+      </div>
+    </section>
+    <section class="slide">
+      <p class="num">שקף 9 — רישום ההרצה</p>
+      <h1>הרצה שעבדה היא ראיה לבדיקה, לא רשות להרחיב</h1>
+      <p class="big">מקורות מורשים &nbsp;•&nbsp; הרצה אחרונה &nbsp;•&nbsp; כפילויות &nbsp;•&nbsp; הערת כשל &nbsp;•&nbsp; התראה &nbsp;•&nbsp; פעולת עצירה</p>
+      <div class="warn">ומה שהכי נשכח: <strong>נקודת האישור האנושי</strong> — מי מאשר, ולפני איזו פעולה.</div>
+      <div class="say">Claude for Chrome הוא להעמקה בלבד: מתחילים בקריאה בלבד, ולעולם לא מאשרים שינוי חשבון, תשלום או הודעה.</div>
+    </section>
+    <section class="slide">
+      <p class="num">שקף 10 — סיום הקורס, דקות 52–60</p>
+      <h1>להשלים בקול או בכתב</h1>
+      <div class="box big">אמשיך לעבוד על <strong>[מה]</strong>. הצעד הבא הוא <strong>[מה]</strong>, עד <strong>[מתי]</strong>. הגישה היחידה שנתתי היא <strong>[מה]</strong>, ותמיד יידרש אישור שלי לפני <strong>[מה]</strong>.</div>
+      <h2>ושאלת ההתבוננות</h2>
+      <p class="big">מה שינה הקורס הזה בדרך שבה אתם מחליטים — לא בדרך שבה אתם מקלידים?</p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projection slides — Session 7: Build a Personal System</title>
+    <style>
+      :root{--primary:#4E356F;--soft:#F0EAFA;--text:#17242D;--line:#d6dae0;--muted:#55606E;--warn:#b3413f}
+      *{box-sizing:border-box}
+      body{font-family:system-ui,sans-serif;line-height:1.5;margin:0;color:var(--text);background:#fff}
+      .slide{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:4vh 6vw;border-bottom:1px solid var(--line);page-break-after:always}
+      .num{color:var(--muted);font-size:1rem;letter-spacing:.08em;margin-bottom:1rem}
+      h1{font-size:clamp(1.8rem,4.5vw,3rem);color:var(--primary);margin:0 0 1.5rem}
+      h2{font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--primary);margin:1.5rem 0 .6rem}
+      p,li{font-size:clamp(1.05rem,1.9vw,1.4rem)}
+      .big{font-size:clamp(1.3rem,2.8vw,2rem);line-height:1.45}
+      .box{background:var(--soft);border-inline-start:6px solid var(--primary);padding:1.2rem 1.5rem;border-radius:6px}
+      .prompt{background:#17242D;color:#F4F6F8;padding:1.2rem 1.5rem;border-radius:6px;font-size:clamp(1rem,1.9vw,1.35rem);line-height:1.6}
+      .warn{background:#fdf0f0;border-inline-start:6px solid var(--warn);padding:1rem 1.4rem;border-radius:6px;margin:.6rem 0;font-size:clamp(1.1rem,2.2vw,1.5rem)}
+      table{border-collapse:collapse;width:100%;font-size:clamp(.95rem,1.7vw,1.25rem)}
+      th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:start}
+      th{background:var(--primary);color:#fff}
+      tbody tr:nth-child(even){background:#FAFAFC}
+      .total td{font-weight:700;background:var(--soft)}
+      .say{border:2px dashed var(--primary);border-radius:6px;padding:1.2rem 1.5rem;font-style:italic}
+      ol,ul{padding-inline-start:1.4rem}
+      @media print{.slide{min-height:auto;padding:1.5rem;border:0}}
+    </style>
+  </head>
+  <body>
+
+    <section class="slide">
+      <p class="num">Slide 1 — Opening, minutes 0–5</p>
+      <h1>Of everything we did in this course, what will you actually keep doing?</h1>
+      <div class="say big">Today we build one starting page. Its only measure: whether you come back to it in a month.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 2 — Evidence, minutes 5–15</p>
+      <h1>Three to five things you actually did</h1>
+      <table>
+        <thead><tr><th>What happened</th><th>Where it is recorded</th><th>What I did myself</th><th>What I still do not know</th></tr></thead>
+        <tbody>
+          <tr><td>The purchase brief, Session 2</td><td>In the journal, evidence matrix</td><td>Set the criteria and opened the manufacturer page</td><td>Whether I'd have found that contradiction without the table</td></tr>
+        </tbody>
+      </table>
+      <div class="say">Do not invent results — and do not quietly improve them either. “It did not work” is evidence exactly as good as “it worked”.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 3 — Starting page, minutes 15–27</p>
+      <h1>Four lines that turn a goal into something you return to</h1>
+      <div class="box big">
+        <p><strong>The next step:</strong> one action, not “make progress”.</p>
+        <p><strong>How often I check in:</strong> a date, not “now and then”.</p>
+        <p><strong>Where things live:</strong> files, reminders, lists.</p>
+        <p><strong>When it is finished:</strong> what “done” looks like.</p>
+      </div>
+      <div class="say">A goal without that last line runs forever, and then gets abandoned.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 4 — Permissions, minutes 27–42</p>
+      <h1>Read the permission request before approving it</h1>
+      <div class="warn">“Read and write across your entire Documents folder” &nbsp;•&nbsp; “recently opened files” &nbsp;•&nbsp; “run actions without per-action approval”</div>
+      <p class="big">Three requests. None of them is needed to list file names in one folder.</p>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 5 — The moment that matters</p>
+      <h1>The right button is not the prominent one</h1>
+      <div class="box big">“Choose a specific folder” is the quiet button. “Allow” is the coloured one.</div>
+      <div class="say">That is not malice. It is a default that suits whoever built the interface — which is exactly why the decision has to be yours rather than the design's.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 6 — Least privilege</p>
+      <h1>What to approve, and what not to</h1>
+      <table>
+        <thead><tr><th>The request</th><th>Decision</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Read the project folder</td><td>Yes</td><td>Exactly what the task needs</td></tr>
+          <tr><td>The whole Documents folder</td><td>No</td><td>Convenience is not a reason</td></tr>
+          <tr><td>Write and delete</td><td>No</td><td>Today is read-only</td></tr>
+          <tr class="total"><td>Run without approval</td><td>No</td><td>The approval point separates a proposal from an action</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 7 — After the run</p>
+      <h1>Approve, then verify — not the other way round</h1>
+      <ul class="big">
+        <li>Does the file list match the folder exactly?</li>
+        <li>Did it try to step outside it?</li>
+        <li>Does the draft rest on what it saw, or on a guess?</li>
+        <li>Did you disconnect the access at the end?</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 8 — The stop line, minutes 42–52</p>
+      <h1>Three lines every personal system needs</h1>
+      <div class="box big">
+        <p><strong>What is off limits:</strong> which data never enters this.</p>
+        <p><strong>What always needs approval:</strong> sending, paying, changing an account.</p>
+        <p><strong>When it stops:</strong> the condition after which the system halts itself.</p>
+      </div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 9 — The run record</p>
+      <h1>A run that worked is evidence to review, not permission to widen</h1>
+      <p class="big">Allowed sources &nbsp;•&nbsp; last run &nbsp;•&nbsp; duplicates &nbsp;•&nbsp; failure note &nbsp;•&nbsp; alert &nbsp;•&nbsp; stop action</p>
+      <div class="warn">And the most forgotten one: the <strong>human approval point</strong> — who approves, and before which action.</div>
+      <div class="say">Claude for Chrome is for further exploration only: start read-only, and never approve an account change, a payment, or a message.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 10 — Closing the course, minutes 52–60</p>
+      <h1>Complete out loud or in writing</h1>
+      <div class="box big">I will keep working on <strong>[what]</strong>. The next step is <strong>[what]</strong>, by <strong>[when]</strong>. The only access I granted is <strong>[what]</strong>, and my approval will always be required before <strong>[what]</strong>.</div>
+      <h2>And the reflection question</h2>
+      <p class="big">What did this course change about how you decide — not about how you type?</p>
+    </section>
+  </body>
+</html>
