@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projection slides — Session 1: Decide What to Do Next</title>
+    <style>
+      :root{--primary:#4E356F;--soft:#F0EAFA;--text:#17242D;--line:#d6dae0;--muted:#55606E;--warn:#b3413f}
+      *{box-sizing:border-box}
+      body{font-family:system-ui,sans-serif;line-height:1.5;margin:0;color:var(--text);background:#fff}
+      .slide{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:4vh 6vw;border-bottom:1px solid var(--line);page-break-after:always}
+      .num{color:var(--muted);font-size:1rem;letter-spacing:.08em;margin-bottom:1rem}
+      h1{font-size:clamp(1.8rem,4.5vw,3rem);color:var(--primary);margin:0 0 1.5rem}
+      h2{font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--primary);margin:1.5rem 0 .6rem}
+      p,li{font-size:clamp(1.05rem,1.9vw,1.4rem)}
+      .big{font-size:clamp(1.3rem,2.8vw,2rem);line-height:1.45}
+      .box{background:var(--soft);border-inline-start:6px solid var(--primary);padding:1.2rem 1.5rem;border-radius:6px}
+      .prompt{background:#17242D;color:#F4F6F8;padding:1.2rem 1.5rem;border-radius:6px;font-size:clamp(1rem,1.9vw,1.35rem);line-height:1.6}
+      .weak{background:#fdf0f0;border-inline-start:6px solid var(--warn);padding:1rem 1.4rem;border-radius:6px;font-size:clamp(1.1rem,2.2vw,1.6rem)}
+      table{border-collapse:collapse;width:100%;font-size:clamp(.95rem,1.7vw,1.25rem)}
+      th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:start}
+      th{background:var(--primary);color:#fff}
+      tbody tr:nth-child(even){background:#FAFAFC}
+      .total td{font-weight:700;background:var(--soft)}
+      .say{border:2px dashed var(--primary);border-radius:6px;padding:1.2rem 1.5rem;font-style:italic}
+      ol,ul{padding-inline-start:1.4rem}
+      @media print{.slide{min-height:auto;padding:1.5rem;border:0}}
+    </style>
+  </head>
+  <body>
+
+    <section class="slide">
+      <p class="num">Slide 1 — Opening, minutes 0–5</p>
+      <h1>A useful AI answer is not a decision</h1>
+      <div class="say big">Today we build one decision page. By the end you will know not only what you chose, but on what basis — and what you still have not checked.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">Slide 2 — AI Geography, minutes 5–17</p>
+      <h1>Six layers, and one control point in each</h1>
+      <table>
+        <thead><tr><th>Layer</th><th>In plain terms</th><th>Where we keep control</th></tr></thead>
+        <tbody>
+          <tr><td>Large language model</td><td>The engine that produces the answer</td><td>Check important claims at the source</td></tr>
+          <tr><td>AI application</td><td>The interface: Claude, ChatGPT, Gemini</td><td>Check which capabilities are active</td></tr>
+          <tr><td>Tools and connectors</td><td>Search, files, calculation, another service</td><td>Check access before connecting</td></tr>
+          <tr><td>Artifact</td><td>Something you can save and edit</td><td>Review it before relying on it</td></tr>
+          <tr><td>Skill</td><td>A method packaged for reuse</td><td>Keep the structure explicit</td></tr>
+          <tr class="total"><td>Agent</td><td>Plans, uses tools, continues on its own</td><td>The more it can act, the more human approval</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="slide">
+      <p class="num">Slide 3 — Three quick checks</p>
+      <h1>Fingers in the air</h1>
+      <ol class="big">
+        <li>A saved presentation — artifact or skill?</li>
+        <li>A reusable set of instructions and examples — prompt or skill?</li>
+        <li>A system that reads a calendar and sends an invitation — chat or agent-like process?</li>
+      </ol>
+      <div class="box big">Artifact &nbsp;•&nbsp; Skill &nbsp;•&nbsp; Agent-like process, which needs a permission check and human approval</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">Slide 4 — The vague request, minutes 23–30</p>
+      <h1>What would the tool have to guess?</h1>
+      <div class="weak">“Which Saturday activity should I choose?”</div>
+      <p class="big">Date &nbsp;•&nbsp; budget &nbsp;•&nbsp; time available &nbsp;•&nbsp; distance &nbsp;•&nbsp; what interests you &nbsp;•&nbsp; who decides</p>
+      <div class="say">Anything we did not say, the tool will fill in itself — and with complete confidence.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">Slide 5 — The built request</p>
+      <h1>Five parts: goal, context, constraints, output, check</h1>
+      <div class="prompt">I am choosing between the Saturday gardening class and the museum talk described below. I have 3 hours, a budget of 100, and want a social activity. Use only the supplied source. Create a table with: verified facts, my preferences, unknowns, and claims I must check. Then compare the two options. Do not choose for me, do not invent availability, and label uncertainty.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">Slide 6 — The four labels</p>
+      <h1>Not everything belongs on the same line</h1>
+      <table>
+        <thead><tr><th>Label</th><th>Example from the page</th></tr></thead>
+        <tbody>
+          <tr><td>Verified fact</td><td>The class runs 10:00–12:00, costs 45, booking required by Thursday</td></tr>
+          <tr><td>Preference</td><td>“I want a social activity”</td></tr>
+          <tr><td>Assumption</td><td>“There will probably be space without booking”</td></tr>
+          <tr class="total"><td>Unknown</td><td>Whether a friend is free, and how long the journey takes</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="slide">
+      <p class="num">Slide 7 — Visible verification, minutes 30–40</p>
+      <h1>The tidy table is a draft, not a source</h1>
+      <p class="big">Check two claims only — the ones that would change the decision if they turned out to be wrong.</p>
+      <div class="say">We go back to the original page because a decision changes when a fact changes. A confident answer is not evidence.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">Slide 8 — When the output is weak</p>
+      <h1>Three failures and what to say</h1>
+      <table>
+        <thead><tr><th>What happened</th><th>What to say</th></tr></thead>
+        <tbody>
+          <tr><td>It invented a detail not on the page</td><td>“Where did that come from?” and move it to “unknown”</td></tr>
+          <tr><td>The tool chose for us</td><td>Return to “do not choose for me” and re-run</td></tr>
+          <tr><td>It only shortened the page</td><td>“Which facts affect a decision, and what still needs verifying?”</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="slide">
+      <p class="num">Slide 9 — What stays human judgment</p>
+      <h1>What the tool cannot decide for you</h1>
+      <ul class="big">
+        <li>What actually matters to you</li>
+        <li>How much uncertainty you are willing to absorb</li>
+        <li>Whether to act now or gather more information</li>
+      </ul>
+      <div class="say">The tool organises. You decide. That is not a polite formula — it is the division of labour for the whole course.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">Slide 10 — Exit check, minutes 52–60</p>
+      <h1>Complete out loud or in writing</h1>
+      <div class="box big">I will do <strong>[next step]</strong> because the verified facts are <strong>[two facts]</strong>, but I still need to check <strong>[unknown]</strong> by <strong>[recheck date]</strong>.</div>
+      <h2>And the reflection question</h2>
+      <p class="big">Which preference or missing context could the tool not decide for you?</p>
+    </section>
+
+  </body>
+</html>

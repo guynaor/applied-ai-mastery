@@ -1,23 +1,23 @@
 # Session 1 — Decide What to Do Next
 
 **Time:** 45–60 minutes  
-**Outcome:** Make one low-risk personal decision using a clear request, evidence, and your own judgment.
+**Outcome:** One small, real, personal decision that rests on a source you opened yourself and on your own judgment.
 
 ## Scenario
 
-You are deciding between two or three realistic options—for example, which community class to try, which household task to prioritise, or whether to attend an event. The question is messy: time, cost, preferences, and one or two facts all matter. Choose a simple everyday example.
+Pick a small decision genuinely in front of you this week: which workshop to attend, what to do with a free evening, which repair to tackle first. It has time, cost, and preferences in it — and alongside them, a few facts you have not checked yet. The more everyday the example, the better the method sticks.
 
 ## Sequence
 
-1. **Make the question usable (10 minutes).** Write your goal, the options, constraints, preferred format, and what you need the tool to mark as unknown. Ask Claude, ChatGPT, or Gemini to turn those details into a decision-ready request; revise it until it represents your real question.
-2. **Extract what matters (10 minutes).** Give the tool a public or self-authored source and ask for decisions, dates, actions, unresolved questions, and claims that need checking—not simply a shorter version.
-3. **Compare the choices (15 minutes).** Make a compact comparison that separates verified facts, preferences, assumptions, trade-offs, and unknowns. Ask the tool for one challenge to your reasoning, then decide which next step you will take.
-4. **Check before acting (10 minutes).** Open the original source and verify the two claims that would most change your choice. Change the comparison if the source disagrees, and set a review date.
+1. **Turn a vague question into a clear request (10 minutes).** Write down the goal, the options, what limits you, the format you want back, and what is still unknown. Ask Claude, ChatGPT, or Gemini to turn that into one well-formed request — then edit it yourself, until it genuinely describes your question rather than a politer version of it.
+2. **Pull out what matters (10 minutes).** Take one public page or a text you wrote, and ask the tool to extract decisions, dates, actions, open questions, and claims that need checking. Not a summary — a tidy summary is exactly what hides the gaps.
+3. **Compare, and choose yourself (15 minutes).** Build a small comparison that separates four things: verified facts, your preferences, assumptions, and unknowns. Ask the tool to attack your reasoning and point at what you missed — then you choose.
+4. **Verify before you act (10 minutes).** Open the source and check the two claims that would change the decision if they turned out to be wrong. Correct the comparison if needed, and set a date to revisit whatever is still open.
 
 ## Integrated artifact
 
-Create a one-page verified decision record: final request, source-grounded summary, comparison of at least two options, two source checks, uncertainties, your chosen next action, and review date. AI can structure a draft; you make the decision.
+Create one decision page: the final request, what you extracted from the source, the comparison of options, the two source checks you made, what remains uncertain, the step you chose, and a recheck date. The tool can organise a draft — the decision is yours.
 
 ## Optional resources
 
-For deeper practice only: [better requests activity](../materials/lesson-01-better-requests/student/activity.md), [summary verification workbook](../materials/lesson-02-summaries/student/verification-workbook.md), and [decision workbook](../materials/lesson-03-decisions/student/decision-workbook.md). You may work on paper, use a free accessible tool, or observe a demonstration; paid access is never required.
+Every table for this session is in the [learning journal](../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx): framing the situation, the request-and-improve table, and the comparison and decision table. Download it as a Word file and fill it in by hand or on screen — nothing else is needed. You can also work on paper, with a free-access tool, or by watching the demonstration, at no cost.

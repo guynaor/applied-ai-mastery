@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>שקפים להקרנה — מפגש 1: להחליט מה הצעד הבא</title>
+    <style>
+      :root{--primary:#4E356F;--soft:#F0EAFA;--text:#17242D;--line:#d6dae0;--muted:#55606E;--warn:#b3413f}
+      *{box-sizing:border-box}
+      body{font-family:system-ui,sans-serif;line-height:1.5;margin:0;color:var(--text);background:#fff}
+      .slide{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:4vh 6vw;border-bottom:1px solid var(--line);page-break-after:always}
+      .num{color:var(--muted);font-size:1rem;letter-spacing:.08em;margin-bottom:1rem}
+      h1{font-size:clamp(1.8rem,4.5vw,3rem);color:var(--primary);margin:0 0 1.5rem}
+      h2{font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--primary);margin:1.5rem 0 .6rem}
+      p,li{font-size:clamp(1.05rem,1.9vw,1.4rem)}
+      .big{font-size:clamp(1.3rem,2.8vw,2rem);line-height:1.45}
+      .box{background:var(--soft);border-inline-start:6px solid var(--primary);padding:1.2rem 1.5rem;border-radius:6px}
+      .prompt{background:#17242D;color:#F4F6F8;padding:1.2rem 1.5rem;border-radius:6px;font-size:clamp(1rem,1.9vw,1.35rem);line-height:1.6}
+      .weak{background:#fdf0f0;border-inline-start:6px solid var(--warn);padding:1rem 1.4rem;border-radius:6px;font-size:clamp(1.1rem,2.2vw,1.6rem)}
+      table{border-collapse:collapse;width:100%;font-size:clamp(.95rem,1.7vw,1.25rem)}
+      th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:start}
+      th{background:var(--primary);color:#fff}
+      tbody tr:nth-child(even){background:#FAFAFC}
+      .total td{font-weight:700;background:var(--soft)}
+      .say{border:2px dashed var(--primary);border-radius:6px;padding:1.2rem 1.5rem;font-style:italic}
+      ol,ul{padding-inline-start:1.4rem}
+      @media print{.slide{min-height:auto;padding:1.5rem;border:0}}
+    </style>
+  </head>
+  <body>
+
+    <section class="slide">
+      <p class="num">שקף 1 — פתיחה, דקות 0–5</p>
+      <h1>תשובה שימושית של AI היא לא החלטה</h1>
+      <div class="say big">היום נבנה דף החלטה אחד. בסופו תדעו לא רק מה בחרתם, אלא גם על סמך מה — ומה עוד לא בדקתם.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 2 — מפת עולם ה-AI, דקות 5–17</p>
+      <h1>שש שכבות, ונקודת שליטה אחת בכל אחת</h1>
+      <table>
+        <thead><tr><th>השכבה</th><th>בפשטות</th><th>איפה אנחנו שולטים</th></tr></thead>
+        <tbody>
+          <tr><td>מודל שפה גדול</td><td>המנוע שמייצר את התשובה</td><td>בודקים טענות חשובות במקור</td></tr>
+          <tr><td>יישום AI</td><td>הממשק: Claude, ChatGPT, Gemini</td><td>בודקים אילו יכולות פעילות</td></tr>
+          <tr><td>כלים ומחברים</td><td>חיפוש, קבצים, חישוב, שירות אחר</td><td>בודקים גישה לפני שמחברים</td></tr>
+          <tr><td>תוצר</td><td>דבר שאפשר לשמור ולערוך</td><td>בודקים אותו לפני שמסתמכים עליו</td></tr>
+          <tr><td>מיומנות</td><td>שיטה ארוזה לשימוש חוזר</td><td>שומרים מבנה ברור</td></tr>
+          <tr class="total"><td>סוכן</td><td>מתכנן, משתמש בכלים, ממשיך לבד</td><td>ככל שהוא יכול לפעול — יותר אישור אנושי</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 3 — שלוש בדיקות מהירות</p>
+      <h1>אצבעות באוויר</h1>
+      <ol class="big">
+        <li>מצגת שמורה — תוצר או מיומנות?</li>
+        <li>סט הוראות ודוגמאות לשימוש חוזר — בקשה או מיומנות?</li>
+        <li>מערכת שקוראת יומן ושולחת הזמנה — צ׳אט או תהליך דמוי־סוכן?</li>
+      </ol>
+      <div class="box big">תוצר &nbsp;•&nbsp; מיומנות &nbsp;•&nbsp; תהליך דמוי־סוכן, שדורש בדיקת הרשאות ואישור אנושי</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 4 — הבקשה העמומה, דקות 23–30</p>
+      <h1>מה הכלי יצטרך לנחש?</h1>
+      <div class="weak">„איזו פעילות בשבת כדאי לי לבחור?”</div>
+      <p class="big">תאריך &nbsp;•&nbsp; תקציב &nbsp;•&nbsp; זמן פנוי &nbsp;•&nbsp; מרחק &nbsp;•&nbsp; מה מעניין אתכם &nbsp;•&nbsp; מי מחליט</p>
+      <div class="say">כל דבר שלא אמרנו, הכלי ימלא בעצמו — ובביטחון מלא.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 5 — הבקשה הבנויה</p>
+      <h1>חמישה חלקים: מטרה, הקשר, אילוצים, תוצר, בדיקה</h1>
+      <div class="prompt">אני בוחר/ת בין סדנת הגינון בשבת לבין ההרצאה במוזאון המתוארות למטה. יש לי 3 שעות, תקציב של 100 ש"ח, וחשובה לי פעילות חברתית. השתמש/י רק במקור שסופק. צור/י טבלה עם: עובדות מאומתות, ההעדפות שלי, אי־ידועים וטענות שעליי לבדוק. לאחר מכן השווה/י בין שתי האפשרויות. אל תבחר/י במקומי, אל תמציא/י זמינות, וסמן/י אי־ודאות.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 6 — ארבע התוויות</p>
+      <h1>לא הכול באותה שורה</h1>
+      <table>
+        <thead><tr><th>התווית</th><th>דוגמה מהדף</th></tr></thead>
+        <tbody>
+          <tr><td>עובדה מאומתת</td><td>הסדנה ב-10:00–12:00, 45 ש"ח, נדרשת הרשמה עד חמישי</td></tr>
+          <tr><td>העדפה</td><td>„אני רוצה פעילות חברתית”</td></tr>
+          <tr><td>הנחה</td><td>„כנראה יהיה מקום גם בלי הרשמה”</td></tr>
+          <tr class="total"><td>לא ידוע</td><td>אם חבר/ה פנוי/ה, וכמה זמן ייקח להגיע</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 7 — אימות גלוי, דקות 30–40</p>
+      <h1>הטבלה המסודרת היא טיוטה, לא מקור</h1>
+      <p class="big">בודקים שתי טענות בלבד — אלה שישנו את ההחלטה אם יתברר שהן שגויות.</p>
+      <div class="say">אנחנו חוזרים לדף המקורי כי החלטה משתנה כאשר עובדה משתנה. תשובה בטוחה בעצמה היא לא ראיה.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 8 — כשהפלט חלש</p>
+      <h1>שלוש תקלות ומה עונים עליהן</h1>
+      <table>
+        <thead><tr><th>מה קרה</th><th>מה אומרים</th></tr></thead>
+        <tbody>
+          <tr><td>הומצא פרט שאינו בדף</td><td>„מאין זה הגיע?” ומעבירים ל„לא ידוע”</td></tr>
+          <tr><td>הכלי בחר במקומנו</td><td>חוזרים ל„אל תבחר/י במקומי” ומריצים שוב</td></tr>
+          <tr><td>הוא רק קיצר את הדף</td><td>„אילו עובדות משפיעות על החלטה, ומה עוד צריך לאמת?”</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 9 — מה נשאר שיקול דעת אנושי</p>
+      <h1>מה הכלי לא יכול להחליט במקומכם</h1>
+      <ul class="big">
+        <li>מה חשוב לכם באמת</li>
+        <li>כמה אי־ודאות אתם מוכנים לספוג</li>
+        <li>אם לפעול עכשיו או לאסוף עוד מידע</li>
+      </ul>
+      <div class="say">הכלי מארגן. אתם מחליטים. זה לא ניסוח מנומס — זו חלוקת העבודה של כל הקורס.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 10 — בדיקת יציאה, דקות 52–60</p>
+      <h1>להשלים בקול או בכתב</h1>
+      <div class="box big">אעשה <strong>[הצעד הבא]</strong> כי העובדות המאומתות הן <strong>[שתי עובדות]</strong>, אבל עדיין עליי לבדוק <strong>[אי־ידוע]</strong> עד <strong>[מועד בדיקה]</strong>.</div>
+      <h2>ושאלת ההתבוננות</h2>
+      <p class="big">איזו העדפה או איזה מידע חסר הכלי לא יכול היה להחליט במקומכם?</p>
+    </section>
+
+  </body>
+</html>

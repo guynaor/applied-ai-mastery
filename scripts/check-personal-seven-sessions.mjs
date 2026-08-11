@@ -185,10 +185,21 @@ for(const term of [
 ])assert.match(sessionOneGuides.Hebrew,term,
  `Hebrew Session 1 guide must include its full teacher-ready AI orientation: ${term}`);
 
-assert.match(sessionOneGuides.English,/\[Learning Journal\]\(\.\.\/\.\.\/student\/ai-learning-journal\.md\)/,
- 'English Session 1 guide must link the learner learning journal');
-assert.match(sessionOneGuides.Hebrew,/\[יומן הלמידה\]\(\.\.\/\.\.\/learning-journal\.md\)/,
- 'Hebrew Session 1 guide must link the learner learning journal');
+// These asserted ../../student/ai-learning-journal.md and ../../learning-journal.md until the journal
+// moved under student/en and student/he in ff1c7c5, so the contract guaranteed two dead links in the
+// guides. Assert the downloadable workbook the other session guides link, and resolve the path from
+// each guide's own directory so a future move fails here instead of shipping.
+for(const [locale,guidePath,linkText,file] of [
+ ['English','personal-course/instructor/sessions/session-01-guide.md','learning journal','applied-ai-mastery-personal-journal-en.docx'],
+ ['Hebrew','personal-course/he/instructor/sessions/session-01-guide.md','יומן הלמידה','applied-ai-mastery-personal-journal-he.docx'],
+]){
+ const guide=sessionOneGuides[locale];
+ const link=new RegExp(`\\[${linkText}\\]\\(([^)]*${file.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})\\)`);
+ const found=guide.match(link);
+ assert.ok(found,`${locale} Session 1 guide must link the downloadable learning journal (${file})`);
+ const resolved=new URL(found[1],new URL(`../${guidePath}`,import.meta.url));
+ assert.ok(existsSync(resolved),`${locale} Session 1 guide journal link does not resolve: ${found[1]}`);
+}
 assert.match(sessionOneGuides.Hebrew,/\[מפת עולם ה-AI בעשר דקות\]\(\.\.\/\.\.\/ai-geography\.md\)/,
  'Hebrew Session 1 guide must link its Hebrew AI Geography page');
 
