@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sample permission map — Session 7</title>
+    <style>
+      body{font-family:system-ui,sans-serif;line-height:1.6;max-width:56rem;margin:0 auto;padding:1.5rem;color:#17242D}
+      h1{border-bottom:3px solid #4E356F;padding-bottom:.4rem}
+      h2{color:#4E356F;margin-top:2rem}
+      .note{background:#F1F3F6;border-inline-start:4px solid #7B4FB3;padding:.75rem 1rem;border-radius:4px}
+      .warn{background:#fdf0f0;border-inline-start:4px solid #b3413f;padding:.75rem 1rem;border-radius:4px}
+      table{border-collapse:collapse;width:100%;margin:.8rem 0}
+      th,td{border:1px solid #d6dae0;padding:.5rem .65rem;text-align:start}
+      th{background:#4E356F;color:#fff}
+      tbody tr:nth-child(even){background:#FAFAFC}
+      .dialog{border:2px solid #4E356F;border-radius:10px;max-width:32rem;margin:1rem 0;background:#fff;overflow:hidden}
+      .dialog header{background:#F0EAFA;padding:.7rem 1rem;font-weight:700;color:#4E356F}
+      .dialog .content{padding:1rem}
+      .dialog ul{margin:.4rem 0;padding-inline-start:1.3rem}
+      .dialog .buttons{padding:.7rem 1rem;background:#FAFAFC;border-top:1px solid #d6dae0;display:flex;gap:.6rem;justify-content:flex-end}
+      .btn{border:1px solid #d6dae0;border-radius:6px;padding:.35rem 1rem;font-size:.95rem;background:#fff}
+      .btn.primary{background:#4E356F;color:#fff;border-color:#4E356F}
+      pre{background:#F1F3F6;padding:.9rem 1.1rem;border-radius:6px;overflow-x:auto;line-height:1.4;margin:.6rem 0}
+      .yes{color:#1f5b32;font-weight:700}
+      .no{color:#8a1f1d;font-weight:700}
+      details{margin:.6rem 0;background:#F0EAFA;border-radius:6px;padding:.6rem .9rem}
+      summary{cursor:pointer;color:#4E356F;font-weight:600}
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Sample permission map — Session 7</h1>
+      <p>The material for the permission demonstration. It works without installing anything: this session is about what you approve, not about installation.</p>
+      <p class="note">Do not connect a tool to a learner's account, and do not use real files. The folder below is entirely invented.</p>
+
+      <h2>The sample folder</h2>
+      <pre>
+garden-project/
+├── task-list.txt
+├── bed-measurements.txt
+├── photos/
+│   ├── before-14-04.jpg
+│   └── after-14-04.jpg
+└── archive/
+    └── old-notes.txt
+      </pre>
+      <p>Two text files, two photos, and an archive folder. Nothing personal is in it — and that is the point. The demonstration folder is chosen so that even a mistake costs nothing.</p>
+
+      <h2>The permission request — read it before approving</h2>
+      <div class="dialog">
+        <header>Claude Desktop is requesting access</header>
+        <div class="content">
+          <p>The application is requesting:</p>
+          <ul>
+            <li>Read and write across <strong>your entire Documents folder</strong></li>
+            <li>Access to recently opened files</li>
+            <li>Running actions without separate approval for each</li>
+          </ul>
+        </div>
+        <div class="buttons">
+          <span class="btn">Choose a specific folder</span>
+          <span class="btn primary">Allow</span>
+        </div>
+      </div>
+      <p class="warn"><strong>The right button is the quiet one, not the prominent one.</strong> Interfaces are designed so the broad approval is the easiest path. That is not malice — it is a default that suits whoever built it, which is exactly why the decision has to be yours rather than the design's.</p>
+
+      <h2>What to approve and what not to</h2>
+      <table>
+        <tr><th>The request</th><th>Decision</th><th>Why</th></tr>
+        <tr><td>Read the garden-project folder</td><td class="yes">Yes</td><td>Exactly what the task needs, and no more</td></tr>
+        <tr><td>Read the whole Documents folder</td><td class="no">No</td><td>The task does not require it. Convenience is not a reason</td></tr>
+        <tr><td>Write or delete in the folder</td><td class="no">No</td><td>Today is read-only. Writing stays with us</td></tr>
+        <tr><td>Recently opened files</td><td class="no">No</td><td>That is a list of everything you have done, not of the project</td></tr>
+        <tr><td>Running without per-action approval</td><td class="no">No</td><td>The approval point is all that separates a proposal from an action</td></tr>
+      </table>
+
+      <h2>The demonstration request</h2>
+      <pre>In the selected sample folder only: list the file names, and draft one
+opening sentence for the project page. Do not change, delete, move, upload,
+or share anything, and do not go outside this folder. Ask for approval before
+any action, and state what you were unable to see.</pre>
+
+      <h2>After the run — what to check</h2>
+      <table>
+        <tr><th>The check</th><th>What to look for</th></tr>
+        <tr><td>The file names</td><td>Does the list match exactly what is in the folder?</td></tr>
+        <tr><td>What stayed out</td><td>Did it try to touch the archive, or anything outside the folder?</td></tr>
+        <tr><td>The draft</td><td>Does it rest on what it saw, or on a generic guess?</td></tr>
+        <tr><td>Disconnecting</td><td>Did you remove the access at the end of the demonstration?</td></tr>
+      </table>
+
+      <h2>Agent run record — to review</h2>
+      <p>If anyone did the OpenClaw lab in Session 2, this is what gets reviewed. This record can be used as the example.</p>
+      <table>
+        <tr><th>Field</th><th>What it says</th><th>Sound?</th></tr>
+        <tr><td>Allowed sources</td><td>Two public product pages</td><td></td></tr>
+        <tr><td>Last run</td><td>14 May, 14:00</td><td></td></tr>
+        <tr><td>Duplicate handling</td><td>No identical alert for 48 hours</td><td></td></tr>
+        <tr><td>Failure note</td><td>“Source did not load, attempt 1”</td><td></td></tr>
+        <tr><td>The alert</td><td>“Price dropped to 780”</td><td></td></tr>
+        <tr><td>Stop action</td><td>Pause after two failures</td><td></td></tr>
+      </table>
+      <details>
+        <summary>What is missing from this record</summary>
+        <p>It has no <strong>human approval point</strong> — who approves, and before which action. Without that field the record describes an agent that alerts, but does not demonstrate that it cannot do more than that.</p>
+      </details>
+    </main>
+  </body>
+</html>

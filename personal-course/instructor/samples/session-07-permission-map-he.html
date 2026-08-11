@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>מפת הרשאות לדוגמה — מפגש 7</title>
+    <style>
+      body{font-family:system-ui,sans-serif;line-height:1.6;max-width:56rem;margin:0 auto;padding:1.5rem;color:#17242D}
+      h1{border-bottom:3px solid #4E356F;padding-bottom:.4rem}
+      h2{color:#4E356F;margin-top:2rem}
+      .note{background:#F1F3F6;border-inline-start:4px solid #7B4FB3;padding:.75rem 1rem;border-radius:4px}
+      .warn{background:#fdf0f0;border-inline-start:4px solid #b3413f;padding:.75rem 1rem;border-radius:4px}
+      table{border-collapse:collapse;width:100%;margin:.8rem 0}
+      th,td{border:1px solid #d6dae0;padding:.5rem .65rem;text-align:start}
+      th{background:#4E356F;color:#fff}
+      tbody tr:nth-child(even){background:#FAFAFC}
+      .dialog{border:2px solid #4E356F;border-radius:10px;max-width:32rem;margin:1rem 0;background:#fff;overflow:hidden}
+      .dialog header{background:#F0EAFA;padding:.7rem 1rem;font-weight:700;color:#4E356F}
+      .dialog .content{padding:1rem}
+      .dialog ul{margin:.4rem 0;padding-inline-start:1.3rem}
+      .dialog .buttons{padding:.7rem 1rem;background:#FAFAFC;border-top:1px solid #d6dae0;display:flex;gap:.6rem;justify-content:flex-end}
+      .btn{border:1px solid #d6dae0;border-radius:6px;padding:.35rem 1rem;font-size:.95rem;background:#fff}
+      .btn.primary{background:#4E356F;color:#fff;border-color:#4E356F}
+      pre{background:#F1F3F6;padding:.9rem 1.1rem;border-radius:6px;overflow-x:auto;line-height:1.4;margin:.6rem 0}
+      .yes{color:#1f5b32;font-weight:700}
+      .no{color:#8a1f1d;font-weight:700}
+      details{margin:.6rem 0;background:#F0EAFA;border-radius:6px;padding:.6rem .9rem}
+      summary{cursor:pointer;color:#4E356F;font-weight:600}
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>מפת הרשאות לדוגמה — מפגש 7</h1>
+      <p>החומר להדגמת ההרשאות. אפשר להשתמש בו גם בלי להתקין שום דבר: המפגש עוסק בשאלה מה מאשרים, לא בהתקנה.</p>
+      <p class="note">אין לחבר כלי לחשבון של לומד/ת, ואין להשתמש בקבצים אמיתיים. התיקייה למטה בדויה במלואה.</p>
+
+      <h2>תיקיית הדוגמה</h2>
+      <pre>
+פרויקט-גינה/
+├── רשימת-משימות.txt
+├── מדידות-ערוגה.txt
+├── תמונות/
+│   ├── לפני-14-04.jpg
+│   └── אחרי-14-04.jpg
+└── ארכיון/
+    └── הערות-ישנות.txt
+      </pre>
+      <p>שני קבצי טקסט, שתי תמונות ותיקיית ארכיון. אין כאן שום דבר אישי — וזו הנקודה. תיקיית ההדגמה נבחרת כך שגם טעות לא תעלה במחיר.</p>
+
+      <h2>בקשת ההרשאות — לקרוא לפני שמאשרים</h2>
+      <div class="dialog">
+        <header>‏Claude Desktop מבקש גישה</header>
+        <div class="content">
+          <p>האפליקציה מבקשת:</p>
+          <ul>
+            <li>קריאה וכתיבה ב<strong>כל תיקיית המסמכים</strong></li>
+            <li>גישה לקבצים שנפתחו לאחרונה</li>
+            <li>הרצת פעולות בלי אישור נפרד לכל אחת</li>
+          </ul>
+        </div>
+        <div class="buttons">
+          <span class="btn">בחירת תיקייה מסוימת</span>
+          <span class="btn primary">אישור</span>
+        </div>
+      </div>
+      <p class="warn"><strong>הכפתור הנכון הוא השמאלי, והוא לא זה שבולט.</strong> ממשקים מעוצבים כך שהאישור הרחב יהיה הנוח ביותר. זה לא זדון — זו ברירת מחדל שנוחה למי שבנה אותה, ולכן ההחלטה צריכה להיות שלכם ולא של העיצוב.</p>
+
+      <h2>מה מאשרים ומה לא</h2>
+      <table>
+        <tr><th>הבקשה</th><th>ההחלטה</th><th>למה</th></tr>
+        <tr><td>קריאה בתיקיית פרויקט-גינה</td><td class="yes">כן</td><td>זה בדיוק מה שצריך למשימה, ולא יותר</td></tr>
+        <tr><td>קריאה בכל תיקיית המסמכים</td><td class="no">לא</td><td>המשימה לא דורשת את זה. נוחות אינה סיבה</td></tr>
+        <tr><td>כתיבה או מחיקה בתיקייה</td><td class="no">לא</td><td>היום רק קוראים. כתיבה נשארת אצלנו</td></tr>
+        <tr><td>קבצים שנפתחו לאחרונה</td><td class="no">לא</td><td>זו רשימה של כל מה שעשיתם, לא של הפרויקט</td></tr>
+        <tr><td>הרצה בלי אישור לכל פעולה</td><td class="no">לא</td><td>נקודת האישור היא כל מה שמפריד בין הצעה לפעולה</td></tr>
+      </table>
+
+      <h2>הבקשה להדגמה</h2>
+      <pre>בתיקיית הדוגמה שנבחרה בלבד: הצג את שמות הקבצים, וכתוב הצעה למשפט
+פתיחה אחד לדף הפרויקט. אל תשנה, תמחק, תעביר, תעלה או תשתף שום דבר,
+ואל תצא מהתיקייה הזאת. בקש אישור לפני כל פעולה, וציין מה לא הצלחת לראות.</pre>
+
+      <h2>אחרי ההרצה — מה בודקים</h2>
+      <table>
+        <tr><th>הבדיקה</th><th>מה מחפשים</th></tr>
+        <tr><td>שמות הקבצים</td><td>האם הרשימה תואמת בדיוק את מה שיש בתיקייה?</td></tr>
+        <tr><td>מה נשאר בחוץ</td><td>האם הוא ניסה לגעת בארכיון או מחוץ לתיקייה?</td></tr>
+        <tr><td>ההצעה</td><td>האם היא נשענת על מה שראה, או על ניחוש כללי?</td></tr>
+        <tr><td>ניתוק</td><td>האם הסרתם את הגישה בסוף ההדגמה?</td></tr>
+      </table>
+
+      <h2>רישום הרצת סוכן — לבדיקה</h2>
+      <p>אם מישהו עשה את מעבדת OpenClaw במפגש 2, זה מה שבודקים. אפשר להשתמש ברישום הזה כדוגמה.</p>
+      <table>
+        <tr><th>השדה</th><th>מה רשום</th><th>תקין?</th></tr>
+        <tr><td>מקורות מורשים</td><td>שני דפי מוצר ציבוריים</td><td></td></tr>
+        <tr><td>ההרצה האחרונה</td><td>14 במאי, 14:00</td><td></td></tr>
+        <tr><td>טיפול בכפילויות</td><td>לא נשלחה התראה זהה 48 שעות</td><td></td></tr>
+        <tr><td>הערת כשל</td><td>„מקור לא נפתח, ניסיון 1”</td><td></td></tr>
+        <tr><td>ההתראה</td><td>„המחיר ירד ל-780”</td><td></td></tr>
+        <tr><td>פעולת עצירה</td><td>השהיה אחרי שני כשלים</td><td></td></tr>
+      </table>
+      <details>
+        <summary>מה חסר ברישום הזה</summary>
+        <p>אין בו <strong>נקודת האישור האנושי</strong> — מי מאשר, ולפני איזו פעולה. בלי השדה הזה הרישום מתאר סוכן שמתריע, אבל לא מוכיח שהוא לא יכול לעשות יותר מזה.</p>
+      </details>
+    </main>
+  </body>
+</html>

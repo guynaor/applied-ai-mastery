@@ -1,23 +1,23 @@
 # Session 7 — Build a Personal System
 
 **Time:** 45–60 minutes  
-**Outcome:** Launch one human-controlled personal system with truthful evidence and a clear permission boundary.
+**Outcome:** One starting page for something you genuinely keep doing, with real evidence, a clear permission boundary, and a stop rule.
 
 ## Scenario
 
-You want to keep an ongoing goal moving: a project, learning habit, household routine, or personal portfolio. You need an organised launchpad—not a system that acts for you. Use only genuine evidence and exclude private data.
+Pick something ongoing you want to move forward: a project, a learning habit, a household routine, or a personal portfolio. The goal is an organised starting point you will come back to — not a system that works instead of you. Use only real evidence, and leave private information out.
 
 ## Sequence
 
-1. **Choose the goal and evidence (10 minutes).** Select three to five real artifacts or notes. Make an evidence register: what happened, where it is recorded, what you did, and what you still need to learn. Do not invent outcomes.
-2. **Design the human system (12 minutes).** Turn the goal into a launchpad with a next action, review rhythm, files/tasks/reminders, and a capstone plan. Claude, ChatGPT, or Gemini may improve wording from your evidence, not choose your goal or outcome.
-3. **Map permission before connection (15 minutes).** As a demonstration or optional exercise, use **Claude Desktop** only with one bounded folder or app containing non-sensitive sample files. Review requested access, grant the **least privilege** (minimum necessary access), inspect the proposed action, verify the result, and retain human approval.
-4. **Draw the stop line and review operations (10 minutes).** Map prohibited data, external actions that always need approval, audit notes, and a stop condition. If you completed the optional Session 2 **OpenClaw Agent Lab**, inspect its agent run record: allowed sources, latest run, duplicate handling, failure note, notification, and stop action. An agent run is evidence to review—not permission to expand access. **Claude for Chrome** is further exploration only: start read-only, review permissions, and never authorise account changes, payments, messages, or private data.
+1. **Gather real evidence (10 minutes).** Choose three to five things you actually did, including from earlier sessions. For each, write what happened, where it is recorded, what you did yourself, and what you still do not know. Do not invent results, and do not quietly improve them either.
+2. **Build a human starting page (12 minutes).** Turn the goal into one page: the next step, how often you check in, where the files and reminders live, and when the project counts as finished. You can ask Claude, ChatGPT, or Gemini to redraft it from your evidence — not to choose your goal or invent an outcome.
+3. **Map permissions before connecting (15 minutes).** In the demonstration or optional practice, **Claude Desktop** works only on a bounded folder of non-sensitive sample files. Read the permission request before approving it, grant **least privilege**, inspect the proposed action before it runs, and verify the result afterwards. Approval stays with you.
+4. **Draw the stop line (10 minutes).** Write down which data is off limits, which actions always need approval, and what the stop condition is. If you did the **OpenClaw** agent lab in Session 2, this is the moment to review the **agent run record**: allowed sources, last run, duplicate handling, failure note, the alert, and the stop action. A run that worked is evidence to review — not a reason to widen access. **Claude for Chrome** is for further exploration only: start read-only, and never approve an account change, a payment, a message, or access to private data.
 
 ## Integrated artifact
 
-Create a personal system/project launchpad with evidence register, truthful portfolio note, capstone plan, permission map, review point, and stop rule.
+Create one starting page: the goal, the evidence record, an honestly written portfolio note, the finish plan, the permission map, the next check-in, and the stop rule. This page is measured by one thing: whether you come back to it in a month.
 
 ## Optional resources
 
-For deeper practice only: [portfolio workbook](../materials/lesson-12-personal-brand/student/portfolio-workbook.md), [review guide](../instructor/real-life-mission-review-guide.md), and [learning journal](../student/ai-learning-journal.md). Work on paper or observe the Claude Desktop demonstration if no suitable free tool or safe sample folder is available.
+Every table for this session is in the [learning journal](../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx): the starting point, the process and evidence map, and the portfolio table. The [mission review guide](../instructor/real-life-mission-review-guide.md) is also available. Working on paper or watching the Claude Desktop demonstration is a full and valid free-access route at no cost, and you never need to connect any tool to your own account.
