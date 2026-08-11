@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projection slides — Session 5: Make a Space Work Better</title>
+    <style>
+      :root{--primary:#4E356F;--soft:#F0EAFA;--text:#17242D;--line:#d6dae0;--muted:#55606E;--warn:#b3413f}
+      *{box-sizing:border-box}
+      body{font-family:system-ui,sans-serif;line-height:1.5;margin:0;color:var(--text);background:#fff}
+      .slide{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:4vh 6vw;border-bottom:1px solid var(--line);page-break-after:always}
+      .num{color:var(--muted);font-size:1rem;letter-spacing:.08em;margin-bottom:1rem}
+      h1{font-size:clamp(1.8rem,4.5vw,3rem);color:var(--primary);margin:0 0 1.5rem}
+      h2{font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--primary);margin:1.5rem 0 .6rem}
+      p,li{font-size:clamp(1.05rem,1.9vw,1.4rem)}
+      .big{font-size:clamp(1.3rem,2.8vw,2rem);line-height:1.45}
+      .box{background:var(--soft);border-inline-start:6px solid var(--primary);padding:1.2rem 1.5rem;border-radius:6px}
+      .prompt{background:#17242D;color:#F4F6F8;padding:1.2rem 1.5rem;border-radius:6px;font-size:clamp(1rem,1.9vw,1.35rem);line-height:1.6}
+      .warn{background:#fdf0f0;border-inline-start:6px solid var(--warn);padding:1rem 1.4rem;border-radius:6px;margin:.6rem 0;font-size:clamp(1.1rem,2.2vw,1.5rem)}
+      table{border-collapse:collapse;width:100%;font-size:clamp(.95rem,1.7vw,1.25rem)}
+      th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:start}
+      th{background:var(--primary);color:#fff}
+      tbody tr:nth-child(even){background:#FAFAFC}
+      .total td{font-weight:700;background:var(--soft)}
+      .say{border:2px dashed var(--primary);border-radius:6px;padding:1.2rem 1.5rem;font-style:italic}
+      ol,ul{padding-inline-start:1.4rem}
+      @media print{.slide{min-height:auto;padding:1.5rem;border:0}}
+    </style>
+  </head>
+  <body>
+
+    <section class="slide">
+      <p class="num">Slide 1 — Opening, minutes 0–5</p>
+      <h1>Which one corner of your home annoys you daily, but never quite enough to fix?</h1>
+      <div class="say big">Today we design one small fix — and test it in cardboard before spending anything.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 2 — Measuring, minutes 5–17</p>
+      <h1>Every number has a source</h1>
+      <table>
+        <thead><tr><th>Label</th><th>What it means</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td>Measured</td><td>You put a ruler on it</td><td>Internal width 36 cm</td></tr>
+          <tr><td>Spec</td><td>It is on the maker's sheet</td><td>Panel thickness 1.8 cm</td></tr>
+          <tr><td>Assumed</td><td>You took it as true without checking</td><td>“The drawer opens fully”</td></tr>
+          <tr class="total"><td>Calculated</td><td>Derived from other numbers</td><td>Usable area 36 x 42</td></tr>
+        </tbody>
+      </table>
+      <div class="say">Assumptions are not the problem. Assumptions that look like measurements are.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 3 — The assumption everyone forgets</p>
+      <h1>“The drawer opens fully”</h1>
+      <div class="warn">Nobody measured that. Cheap runners stop at 80 per cent.</div>
+      <p class="big">If that holds, the usable depth is <strong>33.6 cm</strong>, not 42 — and the back of the organiser you designed is out of reach.</p>
+      <div class="say">One measurement you did not take outranks every calculation you did.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 4 — Constraints, minutes 17–29</p>
+      <h1>Three clearances people forget</h1>
+      <ul class="big">
+        <li><strong>A finger:</strong> it has to get in to lift something out — at least 1.5 cm around each compartment.</li>
+        <li><strong>Above:</strong> the organiser must not touch the runner — 0.5 cm.</li>
+        <li><strong>The wall thickness itself:</strong> it eats into the internal dimension, not the external one.</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 5 — The request</p>
+      <h1>The tool has not seen the room</h1>
+      <div class="prompt">These are measurements I took in a drawer, each with a source label. Turn them into a specification for a drawer organiser that carries no weight and involves no electrics. Separate clearly: measured values, assumptions, clearances, and one adjustable parameter. Flag every place where I am missing a dimension. Do not claim the design is safe or engineering-approved.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 6 — The parameter you change</p>
+      <h1>Predict first, then check</h1>
+      <p class="big">Number of cable compartments: from <strong>5</strong> to <strong>7</strong>.</p>
+      <div class="box big">Write down <strong>before</strong> you change it: what should happen to the width of each one? Then change it, and check whether that is what happened.</div>
+      <div class="say">If your prediction was wrong, you did not understand the model — and that is exactly what you want to find out now rather than after printing.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 7 — The cardboard test, minutes 44–54</p>
+      <h1>The cheapest test you will run</h1>
+      <p class="big">Cut a rectangle at the real size, pencil in the compartments, put it in place — and use it as you would on an ordinary day.</p>
+      <table>
+        <thead><tr><th>What to test</th><th>Why that specifically</th></tr></thead>
+        <tbody>
+          <tr><td>That it fits the width</td><td>The easiest dimension to get wrong</td></tr>
+          <tr><td>That something comes out one-handed</td><td>That is how a drawer is actually used</td></tr>
+          <tr class="total"><td>That the drawer still closes</td><td>The expensive failure: found after building</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 8 — What a drawing does not prove</p>
+      <h1>A convincing sketch is not proof that something fits</h1>
+      <div class="warn">A neat render, a clean 3D model, an image from the tool — all of them look right even when one dimension is wrong.</div>
+      <p class="big">The cardboard is the only thing here that touches reality.</p>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 9 — The limit of this session</p>
+      <h1>What we are not designing today</h1>
+      <ul class="big">
+        <li>Nothing that carries a person's weight</li>
+        <li>Nothing involving electrics</li>
+        <li>Nothing that is dangerous if it fails</li>
+      </ul>
+      <div class="say">We are designing an organiser, not a shelf above a cot. That is not modesty — it is scoping.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 10 — Exit check, minutes 54–60</p>
+      <h1>Complete out loud or in writing</h1>
+      <div class="box big">My design rests on <strong>[number]</strong> measured dimensions and <strong>[number]</strong> assumptions. The most dangerous assumption is <strong>[which]</strong>. The cardboard test revealed that <strong>[what]</strong>, so I changed <strong>[what]</strong>.</div>
+      <h2>And the reflection question</h2>
+      <p class="big">Which dimension were you certain of — until you measured it?</p>
+    </section>
+  </body>
+</html>
