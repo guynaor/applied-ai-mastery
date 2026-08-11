@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>שקפים להקרנה — מפגש 3: לבנות תוכנית משותפת שעובדת</title>
+    <style>
+      :root{--primary:#4E356F;--soft:#F0EAFA;--text:#17242D;--line:#d6dae0;--muted:#55606E;--warn:#b3413f}
+      *{box-sizing:border-box}
+      body{font-family:system-ui,sans-serif;line-height:1.5;margin:0;color:var(--text);background:#fff}
+      .slide{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:4vh 6vw;border-bottom:1px solid var(--line);page-break-after:always}
+      .num{color:var(--muted);font-size:1rem;letter-spacing:.08em;margin-bottom:1rem}
+      h1{font-size:clamp(1.8rem,4.5vw,3rem);color:var(--primary);margin:0 0 1.5rem}
+      h2{font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--primary);margin:1.5rem 0 .6rem}
+      p,li{font-size:clamp(1.05rem,1.9vw,1.4rem)}
+      .big{font-size:clamp(1.3rem,2.8vw,2rem);line-height:1.45}
+      .box{background:var(--soft);border-inline-start:6px solid var(--primary);padding:1.2rem 1.5rem;border-radius:6px}
+      .prompt{background:#17242D;color:#F4F6F8;padding:1.2rem 1.5rem;border-radius:6px;font-size:clamp(1rem,1.9vw,1.35rem);line-height:1.6}
+      table{border-collapse:collapse;width:100%;font-size:clamp(.95rem,1.7vw,1.25rem)}
+      th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:start}
+      th{background:var(--primary);color:#fff}
+      tbody tr:nth-child(even){background:#FAFAFC}
+      .total td{font-weight:700;background:var(--soft)}
+      .say{border:2px dashed var(--primary);border-radius:6px;padding:1.2rem 1.5rem;font-style:italic}
+      .clash{background:#fdf0f0;border-inline-start:6px solid var(--warn);padding:1rem 1.4rem;border-radius:6px;margin:.6rem 0}
+      ol,ul{padding-inline-start:1.4rem}
+      @media print{.slide{min-height:auto;padding:1.5rem;border:0}}
+    </style>
+  </head>
+  <body>
+
+    <section class="slide">
+      <p class="num">שקף 1 — פתיחה, דקות 0–5</p>
+      <h1>מה אתם מארגנים עכשיו שדורש עוד מישהו כדי שיקרה?</h1>
+      <div class="say big">תוכנית טובה היא לא זו שנראית הכי מסודרת. היא זו שמישהו אחר יכול לקחת ולהריץ בלי להתקשר אליכם ולשאול למה התכוונתם.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 2 — אילוץ מול העדפה, דקות 5–15</p>
+      <h1>שתי עמודות, ורוב הטעויות קורות בגבול ביניהן</h1>
+      <table>
+        <thead><tr><th>אילוץ — אי אפשר להזיז</th><th>העדפה — אפשר להתפשר</th></tr></thead>
+        <tbody>
+          <tr><td>האולם הוזמן ל-7 בנובמבר</td><td>ישיבה משפחתית סביב שולחנות</td></tr>
+          <tr><td>תקציב 18,000 ש"ח</td><td>נאומים קצרים בלבד</td></tr>
+          <tr><td>סבתא צריכה גישה ללא מדרגות</td><td>שתהיה מוזיקה חיה ולא רשימת השמעה</td></tr>
+        </tbody>
+      </table>
+      <h2>והשורה שמכריעה</h2>
+      <p class="big"><strong>מי מחליט כשההעדפות מתנגשות?</strong> שם אחד. לא „נדבר על זה”.</p>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 3 — העובדות שמשתנות, דקות 15–25</p>
+      <h1>לכל עובדה: מקור ותאריך</h1>
+      <p class="big">שעות פתיחה &nbsp;•&nbsp; זמני נסיעה &nbsp;•&nbsp; מחירים &nbsp;•&nbsp; תנאי ביטול &nbsp;•&nbsp; מועדי סגירה של הזמנות</p>
+      <div class="say">אלה בדיוק הפרטים שהיו נכונים בשנה שעברה ואינם נכונים היום. „ידעתי” הוא לא מקור.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 4 — הבקשה, דקות 25–40</p>
+      <h1>הכלי מסדר, הוא לא ממציא</h1>
+      <div class="prompt">סדר/י את האירוע הזה רק לפי העובדות שלמטה. אל תוסיף/י שום פרט שלא נתתי, ואל תמציא/י שעות, מחירים או זמינות. שים/י קודם את מה שקבוע, ואז משימות, נסיעות והפסקות. לכל שורה תן/י אחראי ותאריך, והוסף/י מרווח ביטחון של 30 דקות בין שלבים. סמן/י בנפרד כל מקום שבו העובדות שנתתי סותרות זו את זו, וכל דבר שחסר לי כדי להשלים את התוכנית.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 5 — מה שהכלי אמור למצוא</p>
+      <h1>שלוש התנגשויות שכבר נמצאות בעובדות</h1>
+      <div class="clash big"><strong>האולם:</strong> שימוש עד 22:00, יציאה מלאה עד 22:30. אבל בתוכנית שלנו האירוע רשום עד 23:00.</div>
+      <div class="clash big"><strong>קו 47:</strong> אוטובוס אחרון ב-22:40. מי שהגיע בתחבורה ציבורית צריך לצאת לפני סוף האירוע.</div>
+      <div class="clash big"><strong>הקייטרינג:</strong> סוגר כמות 10 ימים לפני. ההזמנות בדפוס לוקחות 7 ימי עסקים אחרי אישור עיצוב.</div>
+      <div class="say">אם הכלי לא סימן אותן — זה לא אומר שהן לא שם. זה אומר שביקשנו ממנו לסדר, והוא סידר.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 6 — התוכנית לשיתוף</p>
+      <h1>שורה בלי שם היא משאלה</h1>
+      <table>
+        <thead><tr><th>מתי</th><th>המשימה</th><th>אחראי/ת</th><th>מרווח ביטחון</th></tr></thead>
+        <tbody>
+          <tr><td>1 באוקטובר</td><td>לשלוח הזמנות עם אישור הגעה</td><td>דודה</td><td>5 ימים לפני סגירת הדפוס</td></tr>
+          <tr><td>28 באוקטובר</td><td>למסור כמות סופית לקייטרינג</td><td>בן הזוג</td><td>יומיים לפני מועד הסגירה</td></tr>
+          <tr class="total"><td>7 בנובמבר, 16:30</td><td>לפתוח את האולם ולקלוט את הקייטרינג</td><td>אני</td><td>שעה לפני האורחים</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 7 — קלף השיבוש, דקות 40–50</p>
+      <h1>עכשיו נשבור אותה</h1>
+      <p class="big">קלף אחד. לא תרחיש שהכנתם מראש — משהו שבאמת קורה.</p>
+      <ul class="big">
+        <li>יורד גשם חזק בין 17:00 ל-19:00, והחניה בחצר מוצפת.</li>
+        <li>נשארו 12 ימים, שמונה אורחים לא אישרו, והקייטרינג סוגר בעוד יומיים.</li>
+        <li>מי שאחראי על המוזיקה חולה, יומיים לפני.</li>
+        <li>עבודות ברחוב יחסמו את הכניסה לחצר באותו ערב.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 8 — מה תוכנית חלופית חייבת לכלול</p>
+      <h1>שלושה דברים, אחרת זו לא תוכנית</h1>
+      <ol class="big">
+        <li><strong>מה עושים במקום</strong> — פעולה אחת ברורה.</li>
+        <li><strong>מי מפעיל אותה</strong> — שם, לא „מישהו”.</li>
+        <li><strong>עד מתי אפשר להחליט</strong> — הרגע שאחריו כבר אין ברירה.</li>
+      </ol>
+      <div class="say">„נראה מה יקרה” היא לא תוכנית חלופית. זו דחייה של ההחלטה לרגע שבו היא כבר תהיה יקרה יותר.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 9 — בדיקה חוזרת</p>
+      <h1>מה נבדק שוב לפני שמזמינים או שולחים</h1>
+      <table>
+        <thead><tr><th>מה בודקים</th><th>מתי</th><th>לפי איזה מקור</th><th>מי בודק</th></tr></thead>
+        <tbody>
+          <tr><td>שעות האולם ותנאי הביטול</td><td>שבוע לפני</td><td>מייל ההזמנה מהאולם</td><td>אני</td></tr>
+          <tr><td>לוח הזמנים של קו 47</td><td>יומיים לפני</td><td>דף החברה</td><td>אחי</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 10 — בדיקת יציאה, דקות 50–60</p>
+      <h1>להשלים בקול או בכתב</h1>
+      <div class="box big">התוכנית שלי נשברת אם <strong>[השיבוש]</strong>. במקרה כזה <strong>[מי]</strong> יעשה <strong>[מה]</strong>, ואת ההחלטה צריך לקבל עד <strong>[מתי]</strong>. לפני שאני שולח/ת משהו לאנשים, אבדוק שוב את <strong>[עובדה אחת]</strong>.</div>
+      <h2>ושאלת ההתבוננות</h2>
+      <p class="big">איזו העדפה שלכם התחפשה לאילוץ?</p>
+    </section>
+
+  </body>
+</html>
