@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>שקפים להקרנה — מפגש 4: לפתור בעיה חוזרת</title>
+    <style>
+      :root{--primary:#4E356F;--soft:#F0EAFA;--text:#17242D;--line:#d6dae0;--muted:#55606E;--warn:#b3413f}
+      *{box-sizing:border-box}
+      body{font-family:system-ui,sans-serif;line-height:1.5;margin:0;color:var(--text);background:#fff}
+      .slide{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:4vh 6vw;border-bottom:1px solid var(--line);page-break-after:always}
+      .num{color:var(--muted);font-size:1rem;letter-spacing:.08em;margin-bottom:1rem}
+      h1{font-size:clamp(1.8rem,4.5vw,3rem);color:var(--primary);margin:0 0 1.5rem}
+      h2{font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--primary);margin:1.5rem 0 .6rem}
+      p,li{font-size:clamp(1.05rem,1.9vw,1.4rem)}
+      .big{font-size:clamp(1.3rem,2.8vw,2rem);line-height:1.45}
+      .box{background:var(--soft);border-inline-start:6px solid var(--primary);padding:1.2rem 1.5rem;border-radius:6px}
+      .prompt{background:#17242D;color:#F4F6F8;padding:1.2rem 1.5rem;border-radius:6px;font-size:clamp(1rem,1.9vw,1.35rem);line-height:1.6}
+      .warn{background:#fdf0f0;border-inline-start:6px solid var(--warn);padding:1rem 1.4rem;border-radius:6px;margin:.6rem 0;font-size:clamp(1.1rem,2.2vw,1.5rem)}
+      table{border-collapse:collapse;width:100%;font-size:clamp(.95rem,1.7vw,1.25rem)}
+      th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:start}
+      th{background:var(--primary);color:#fff}
+      tbody tr:nth-child(even){background:#FAFAFC}
+      .total td{font-weight:700;background:var(--soft)}
+      .say{border:2px dashed var(--primary);border-radius:6px;padding:1.2rem 1.5rem;font-style:italic}
+      ol,ul{padding-inline-start:1.4rem}
+      @media print{.slide{min-height:auto;padding:1.5rem;border:0}}
+    </style>
+  </head>
+  <body>
+
+    <section class="slide">
+      <p class="num">שקף 1 — פתיחה, דקות 0–5</p>
+      <h1>מה אתם עושים כל חודש מחדש על פתק, ותמיד מאבדים?</h1>
+      <div class="say big">היום נבנה כלי אחד קטן. המדד להצלחה הוא לא שהוא נראה טוב — אלא שאתם יודעים בדיוק איפה הוא נשבר.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 2 — מצמצמים, דקות 5–15</p>
+      <h1>משתמש אחד, בעיה אחת, עד שלוש פעולות</h1>
+      <div class="box big">
+        <p><strong>המשתמש והבעיה:</strong> אני מחלק הוצאות משותפות עם שני שותפים לדירה בכל חודש.</p>
+        <p><strong>שלוש פעולות:</strong> להוסיף הוצאה &nbsp;•&nbsp; להציג יתרות &nbsp;•&nbsp; לסגור חוב.</p>
+        <p><strong>מה אסור לו:</strong> לשמור פרטי חשבון בנק, או להעביר כסף אמיתי.</p>
+      </div>
+      <div class="say">כל פעולה רביעית שתוסיפו עולה לכם בבדיקה שלא תספיקו להריץ.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 3 — הבקשה, דקות 15–30</p>
+      <h1>מבקשים כלי אחד, לא אפליקציה</h1>
+      <div class="prompt">בנה/י עמוד רשת עצמאי אחד לחלוקת הוצאות בין שלושה שותפים לדירה. שלוש פעולות בלבד: להוסיף הוצאה (מי שילם, כמה, על מה), להציג כמה כל אחד חייב, ולאפס. תוויות בעברית, כפתור איפוס ברור, והכול בקובץ אחד. בלי התחברות, בלי חיבור לשירות חיצוני ובלי שליחת נתונים לשום מקום. אם שדה ריק או לא מספרי, הצג/י הודעה מועילה במקום לחשב.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 4 — לפני שנוגעים בכלי</p>
+      <h1>שלוש שאלות על הקוד שקיבלתם</h1>
+      <ol class="big">
+        <li>איפה הנתונים נשמרים — ומה קורה כשמרעננים?</li>
+        <li>מה הוא עושה עם קלט שלא ציפיתם לו?</li>
+        <li>האם משהו כאן יוצא מהדף אל האינטרנט?</li>
+      </ol>
+      <div class="warn">קוד שנוצר תוך שלושים שניות אינו בטוח מעצם זה שהוא רץ.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 5 — הבדיקה, דקות 30–42</p>
+      <h1>קודם המקרה הרגיל</h1>
+      <p class="big">הפעולה שלשמה בניתם את הכלי, בדיוק כמו שתכננתם. אם זו לא עוברת — אין טעם להמשיך.</p>
+      <table>
+        <thead><tr><th>הבדיקה</th><th>מה ציפיתי</th><th>מה קרה בפועל</th><th>התיקון</th></tr></thead>
+        <tbody>
+          <tr><td>שני אנשים, הוצאה אחת של 150 ש"ח</td><td>„דנה חייבת ליוסי 75 ש"ח”</td><td>הציג 150 — לא חילק לשניים</td><td>תיקנתי את החלוקה ובדקתי שוב</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 6 — ואז מקרה הקצה</p>
+      <h1>מושכים קלף</h1>
+      <table>
+        <thead><tr><th>הקלף</th><th>מה בודקים</th></tr></thead>
+        <tbody>
+          <tr><td>ריק</td><td>לוחצים „הוסף” בלי להקליד כלום</td></tr>
+          <tr><td>אפס</td><td>מזינים 0 — ערך חוקי לגמרי</td></tr>
+          <tr><td>טקסט במקום מספר</td><td>„שלושים” בשדה סכום</td></tr>
+          <tr><td>אגורות</td><td>מחלקים 100 בשלושה</td></tr>
+          <tr class="total"><td>רענון הדף</td><td>הכול נעלם? והאם המשתמש ידע?</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 7 — הרגע החשוב</p>
+      <h1>קלף ששבר את הכלי הוא בדיקה שהצליחה</h1>
+      <div class="say big">אנחנו לא מחפשים כלי שעובד. אנחנו מחפשים את הגבול שלו — כי בלעדיו לא תדעו מתי לא לסמוך עליו.</div>
+      <h2>ואז</h2>
+      <p class="big">רושמים מה קרה &nbsp;→&nbsp; מתקנים <strong>דבר אחד</strong> &nbsp;→&nbsp; בודקים שוב.</p>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 8 — שליטה, דקות 42–50</p>
+      <h1>ארבע החלטות לפני ששולחים למישהו</h1>
+      <table>
+        <thead><tr><th>השאלה</th><th>דוגמה</th></tr></thead>
+        <tbody>
+          <tr><td>איפה הכלי נשמר?</td><td>קובץ אחד על המחשב שלי, לא באוויר</td></tr>
+          <tr><td>מי יכול לפתוח אותו?</td><td>אני, ובהמשך שני השותפים</td></tr>
+          <tr><td>איך מוחקים נתונים?</td><td>כפתור איפוס, וסגירת הדף מוחקת ממילא</td></tr>
+          <tr class="total"><td>מתי מפסיקים להשתמש בו?</td><td>אם נעבור לאפליקציה אמיתית, או אם הוא יטעה פעם אחת בכסף</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 9 — מה לא בונים היום</p>
+      <h1>הגבול של הכלי הזה</h1>
+      <ul class="big">
+        <li>בלי סיסמאות ובלי פרטי חשבון</li>
+        <li>בלי נתונים של אנשים אחרים בלי שהם יודעים</li>
+        <li>בלי החלטות עם משמעות כספית או רפואית</li>
+      </ul>
+      <div class="say">Lovable ו-Replit הם צעד המשך לפרויקט גדול או משותף — לא נדרשים היום, ואין צורך להירשם.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">שקף 10 — בדיקת יציאה, דקות 50–60</p>
+      <h1>להשלים בקול או בכתב</h1>
+      <div class="box big">הכלי שלי עושה <strong>[פעולה אחת]</strong>. הוא נשבר כש<strong>[מקרה הקצה]</strong>, ולכן <strong>[התיקון או האזהרה]</strong>. הנתונים נשמרים ב<strong>[איפה]</strong> ונמחקים ב<strong>[איך]</strong>.</div>
+      <h2>ושאלת ההתבוננות</h2>
+      <p class="big">מה הכלי עושה טוב יותר מהפתק — ומה הפתק עשה טוב יותר ממנו?</p>
+    </section>
+
+  </body>
+</html>

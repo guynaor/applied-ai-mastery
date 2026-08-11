@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test cards — Session 4</title>
+    <style>
+      body{font-family:system-ui,sans-serif;line-height:1.6;max-width:54rem;margin:0 auto;padding:1.5rem;color:#17242D}
+      h1{border-bottom:3px solid #4E356F;padding-bottom:.4rem}
+      h2{color:#4E356F;margin-top:2rem}
+      .note{background:#F1F3F6;border-inline-start:4px solid #7B4FB3;padding:.75rem 1rem;border-radius:4px}
+      .deck{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:.9rem;margin:1rem 0}
+      .card{border:1px solid #d6dae0;border-radius:8px;padding:.9rem 1rem;background:#fff;page-break-inside:avoid}
+      .card h3{margin:0 0 .4rem;color:#4E356F;font-size:1.05rem}
+      .card p{margin:.3rem 0;font-size:.95rem}
+      .what{color:#55606E;font-style:italic}
+      .hard{border-color:#b3413f;background:#fdf0f0}
+      table{border-collapse:collapse;width:100%;margin-top:.6rem}
+      th,td{border:1px solid #d6dae0;padding:.45rem .6rem;text-align:start}
+      th{background:#F0EAFA;color:#4E356F}
+      @media print{.card{break-inside:avoid}}
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Test cards — Session 4</h1>
+      <p>The tool you built works. The only question left is where it breaks. Cut out or project these cards, and let each learner draw one once the normal case passes.</p>
+      <p class="note">One rule: a card that makes the tool behave strangely is a successful test, not a failed tool. Record what happened, fix one thing, and test again.</p>
+
+      <h2>The first card — always</h2>
+      <div class="deck">
+        <div class="card">
+          <h3>The normal case</h3>
+          <p>The action you built the tool for, exactly as you intended it.</p>
+          <p class="what">If this does not work, there is no point drawing the rest.</p>
+        </div>
+      </div>
+
+      <h2>Input cards</h2>
+      <div class="deck">
+        <div class="card">
+          <h3>Empty</h3>
+          <p>Press “add” without typing anything.</p>
+          <p class="what">Did a blank row appear? Is there a message explaining what is missing?</p>
+        </div>
+        <div class="card">
+          <h3>Zero</h3>
+          <p>Enter 0 in a field expecting a number.</p>
+          <p class="what">Zero is a legitimate value. Does the tool treat it as nothing entered?</p>
+        </div>
+        <div class="card">
+          <h3>Negative number</h3>
+          <p>Enter -25.</p>
+          <p class="what">Does that even make sense in your tool? If not, does it prevent it or just calculate?</p>
+        </div>
+        <div class="card">
+          <h3>Text where a number goes</h3>
+          <p>Type “thirty” into an amount field.</p>
+          <p class="what">Does the result become NaN? Is there a message? Or does the row silently vanish?</p>
+        </div>
+        <div class="card">
+          <h3>Far too long</h3>
+          <p>Paste a whole paragraph into a name field.</p>
+          <p class="what">Does the layout break? Can you still reach the buttons?</p>
+        </div>
+        <div class="card">
+          <h3>Fractions of a penny</h3>
+          <p>Enter 33.333, or divide 100 by three.</p>
+          <p class="what">How many decimal places show? Do the amounts still add up together?</p>
+        </div>
+      </div>
+
+      <h2>State cards</h2>
+      <div class="deck">
+        <div class="card">
+          <h3>The same thing twice</h3>
+          <p>Add the same item or the same name twice.</p>
+          <p class="what">Two separate rows? Merged? A message?</p>
+        </div>
+        <div class="card">
+          <h3>Delete everything</h3>
+          <p>Remove every item, then look at the result.</p>
+          <p class="what">What shows with no data — an empty screen, a zero, or an error?</p>
+        </div>
+        <div class="card hard">
+          <h3>Refresh the page</h3>
+          <p>Reload the browser after entering data.</p>
+          <p class="what">Everything gone? That is fine — but does the user know that in advance?</p>
+        </div>
+        <div class="card hard">
+          <h3>Reset by accident</h3>
+          <p>Press “reset” while there is data in it.</p>
+          <p class="what">Is there a confirmation before deleting? If not, are you happy with that?</p>
+        </div>
+      </div>
+
+      <h2>Boundary cards — for anyone who finishes early</h2>
+      <div class="deck">
+        <div class="card hard">
+          <h3>Only one person</h3>
+          <p>In a cost-splitting tool: enter a single participant.</p>
+          <p class="what">Divide by one, or divide by zero and error?</p>
+        </div>
+        <div class="card hard">
+          <h3>Narrow screen</h3>
+          <p>Shrink the browser window to phone width.</p>
+          <p class="what">Is it still usable? That is where you will actually use it.</p>
+        </div>
+      </div>
+
+      <h2>Test log</h2>
+      <p>The same table is in the learning journal. Fill it in here on screen and copy it across, or work straight in the journal.</p>
+      <table>
+        <tr><th>The test</th><th>What I expected</th><th>What actually happened</th><th>The fix or next step</th></tr>
+        <tr><td>The normal case</td><td></td><td></td><td></td></tr>
+        <tr><td>Empty input</td><td></td><td></td><td></td></tr>
+        <tr><td>The edge case I drew</td><td></td><td></td><td></td></tr>
+        <tr><td>Reset or refresh</td><td></td><td></td><td></td></tr>
+      </table>
+    </main>
+  </body>
+</html>

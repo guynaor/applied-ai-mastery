@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>קלפי בדיקה — מפגש 4</title>
+    <style>
+      body{font-family:system-ui,sans-serif;line-height:1.6;max-width:54rem;margin:0 auto;padding:1.5rem;color:#17242D}
+      h1{border-bottom:3px solid #4E356F;padding-bottom:.4rem}
+      h2{color:#4E356F;margin-top:2rem}
+      .note{background:#F1F3F6;border-inline-start:4px solid #7B4FB3;padding:.75rem 1rem;border-radius:4px}
+      .deck{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:.9rem;margin:1rem 0}
+      .card{border:1px solid #d6dae0;border-radius:8px;padding:.9rem 1rem;background:#fff;page-break-inside:avoid}
+      .card h3{margin:0 0 .4rem;color:#4E356F;font-size:1.05rem}
+      .card p{margin:.3rem 0;font-size:.95rem}
+      .what{color:#55606E;font-style:italic}
+      .hard{border-color:#b3413f;background:#fdf0f0}
+      table{border-collapse:collapse;width:100%;margin-top:.6rem}
+      th,td{border:1px solid #d6dae0;padding:.45rem .6rem;text-align:start}
+      th{background:#F0EAFA;color:#4E356F}
+      @media print{.card{break-inside:avoid}}
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>קלפי בדיקה — מפגש 4</h1>
+      <p>הכלי שבניתם עובד. השאלה היחידה שנשארה היא איפה הוא נשבר. גזרו או הקרינו את הקלפים, ותנו לכל לומד/ת למשוך אחד אחרי שהמקרה הרגיל עבר.</p>
+      <p class="note">כלל אחד: קלף שגורם לכלי להתנהג מוזר הוא הצלחה של הבדיקה, לא כישלון של הכלי. רושמים מה קרה, מתקנים דבר אחד, ובודקים שוב.</p>
+
+      <h2>הקלף הראשון — תמיד</h2>
+      <div class="deck">
+        <div class="card">
+          <h3>המקרה הרגיל</h3>
+          <p>הפעולה שלשמה בניתם את הכלי, בדיוק כמו שתכננתם.</p>
+          <p class="what">אם זה לא עובד, אין טעם להמשיך לקלפים הבאים.</p>
+        </div>
+      </div>
+
+      <h2>קלפי קלט</h2>
+      <div class="deck">
+        <div class="card">
+          <h3>ריק</h3>
+          <p>לוחצים „הוסף” בלי להקליד כלום.</p>
+          <p class="what">האם נוספה שורה ריקה? האם יש הודעה שמסבירה מה חסר?</p>
+        </div>
+        <div class="card">
+          <h3>אפס</h3>
+          <p>מזינים 0 בשדה שמצפה למספר.</p>
+          <p class="what">אפס הוא ערך חוקי. האם הכלי מתייחס אליו כאילו לא הוזן כלום?</p>
+        </div>
+        <div class="card">
+          <h3>מספר שלילי</h3>
+          <p>מזינים 25- .</p>
+          <p class="what">האם זה הגיוני בכלל בכלי שלכם? אם לא — האם הוא מונע את זה או פשוט מחשב?</p>
+        </div>
+        <div class="card">
+          <h3>טקסט במקום מספר</h3>
+          <p>מקלידים „שלושים” בשדה סכום.</p>
+          <p class="what">התוצאה הופכת ל-NaN? מופיעה הודעה? או שהשורה פשוט נעלמת?</p>
+        </div>
+        <div class="card">
+          <h3>ארוך מדי</h3>
+          <p>מדביקים פסקה שלמה בשדה שם.</p>
+          <p class="what">האם העיצוב נשבר? האם אפשר עדיין להגיע לכפתורים?</p>
+        </div>
+        <div class="card">
+          <h3>אגורות</h3>
+          <p>מזינים 33.333 או מחלקים 100 בשלושה.</p>
+          <p class="what">כמה ספרות אחרי הנקודה מוצגות? הסכומים עדיין מסתדרים יחד?</p>
+        </div>
+      </div>
+
+      <h2>קלפי מצב</h2>
+      <div class="deck">
+        <div class="card">
+          <h3>פעמיים אותו דבר</h3>
+          <p>מוסיפים את אותו פריט או אותו שם פעמיים.</p>
+          <p class="what">שתי שורות נפרדות? מיזוג? הודעה?</p>
+        </div>
+        <div class="card">
+          <h3>מוחקים הכול</h3>
+          <p>מוחקים את כל הפריטים ואז מסתכלים על התוצאה.</p>
+          <p class="what">מה מוצג כשאין נתונים — מסך ריק, אפס, או שגיאה?</p>
+        </div>
+        <div class="card hard">
+          <h3>רענון הדף</h3>
+          <p>מרעננים את הדפדפן אחרי שהזנתם נתונים.</p>
+          <p class="what">הכול נעלם? זה בסדר — אבל האם המשתמש יודע את זה מראש?</p>
+        </div>
+        <div class="card hard">
+          <h3>איפוס בטעות</h3>
+          <p>לוחצים „איפוס” כשיש נתונים בפנים.</p>
+          <p class="what">יש אישור לפני מחיקה? אם לא, האם זה מקובל עליכם?</p>
+        </div>
+      </div>
+
+      <h2>קלפי גבול — למי שסיים מוקדם</h2>
+      <div class="deck">
+        <div class="card hard">
+          <h3>אדם אחד בלבד</h3>
+          <p>בכלי לחלוקת הוצאות: מזינים משתתף אחד.</p>
+          <p class="what">חלוקה באחד, או חלוקה באפס ושגיאה?</p>
+        </div>
+        <div class="card hard">
+          <h3>מסך צר</h3>
+          <p>מקטינים את חלון הדפדפן לרוחב של טלפון.</p>
+          <p class="what">אפשר עדיין להשתמש בו? זה הרי איפה שתשתמשו בו באמת.</p>
+        </div>
+      </div>
+
+      <h2>רישום הבדיקה</h2>
+      <p>אותה טבלה נמצאת ביומן הלמידה. אפשר למלא כאן על המסך ולהעתיק, או ישירות ביומן.</p>
+      <table>
+        <tr><th>הבדיקה</th><th>מה ציפיתי שיקרה</th><th>מה קרה בפועל</th><th>התיקון או הצעד הבא</th></tr>
+        <tr><td>המקרה הרגיל</td><td></td><td></td><td></td></tr>
+        <tr><td>קלט ריק</td><td></td><td></td><td></td></tr>
+        <tr><td>מקרה הקצה שמשכתי</td><td></td><td></td><td></td></tr>
+        <tr><td>איפוס או רענון</td><td></td><td></td><td></td></tr>
+      </table>
+    </main>
+  </body>
+</html>
