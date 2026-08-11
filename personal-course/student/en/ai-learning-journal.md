@@ -372,7 +372,7 @@ The first version almost always works on the case you had in mind and breaks on 
 
 | Round | What failed in the previous version | What I asked to change | What came out |
 | --- | --- | --- | --- |
-| Example: 2 | It calculated the tip as a percentage, but entering an amount with small change gave three decimal places | Round to two decimals and add a “total to pay” label | Readable now, but I found it does not handle an amount of 0 |
+| Example: 2 | I split 100 between three people and each share came out as 33.333333 | Round to two decimals and add a “total” row that checks the shares balance | The amounts are readable, but I found they add up to 99.99 rather than 100 |
 | | | | |
 | | | | |
 
@@ -449,7 +449,7 @@ Use AI to explore a layout or physical-project idea, then check it in the real w
 
 ## 1. Capture the parameters
 
-| Parameter / measurement | Value | Measured, defined, assumed, or derived? | Source / note |
+| Parameter / measurement | Value | Measured / spec / assumed / calculated | Source / note |
 | --- | --- | --- | --- |
 | Example: Wall width available for the desk | 218 cm | Measured | Tape measure, 3 May, measured twice at floor height and at desk height |
 | Example: Chair needs clearance behind the desk | 90 cm | Assumed | Taken from a furniture guide, not yet checked with our actual chair |
@@ -509,7 +509,7 @@ Prototype one element with paper, cardboard, or tape and document the improvemen
 
 ## Measurements, for the real space
 
-| Parameter / measurement | Value | Measured, defined, assumed, or derived? | Source / note |
+| Parameter / measurement | Value | Measured / spec / assumed / calculated | Source / note |
 | --- | --- | --- | --- |
 | | | | |
 | | | | |
