@@ -36,4 +36,4 @@ If you already have an account with a model provider, you may connect OpenClaw t
 
 ## Optional resources
 
-For deeper practice only: [comparison workbook](../materials/lesson-04-online-buying/student/comparison-workbook.md), [alert specification](../materials/lesson-05-deal-alerts/student/alert-specification.md), and [research workbook](../materials/lesson-08-investment-research/student/research-workbook.md). You can also work with ordinary search, on paper, with a free-access tool, or by watching the demonstration. No payment is needed.
+Every table for this session is in the [learning journal](../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx): the need table, the evidence matrix, the total-cost breakdown, and the alert behaviour table. Download it as a Word file and fill it in by hand or on screen — nothing else is needed. You can also work with ordinary search, on paper, with a free-access tool, or by watching the demonstration. No payment is needed.

@@ -170,11 +170,37 @@ If using Gemini Deep Research, save the research plan and source list. Then chec
 | | | | | |
 | | | | | |
 
-## 3. Make a buying decision and monitoring rule
+## 3. Work out the total cost
+
+The headline price is a marketing number. Add up everything that will have left your account by the end of the first year, and only then compare it with your budget.
+
+| Cost component | Example: a dishwasher | My purchase |
+| --- | --- | --- |
+| Headline price | 2,690 | |
+| Delivery | 150 | |
+| Installation | 250, including the water connection | |
+| Import duty and handling | Not applicable, bought locally | |
+| Required accessories | A longer hose, 80 | |
+| Extended warranty | 300 for two more years | |
+| Cost of returning it, if it does not suit | 200 in carrier fees | |
+| Total cost | 3,470 — over the 3,000 budget, even though the headline price was under it | |
+
+## 4. Make a buying decision and monitoring rule
 
 **Research brief:** what I learned, what remains uncertain, and what I would buy, wait for, or reject.
 
-If useful, specify a reviewable alert: source, trigger, threshold, frequency, duplicate rule, stop rule, and the action that still needs my approval.
+If useful, specify a reviewable alert. Work through the situations below and write what your alert should do in each. The last rows are the ones people forget, and they are what makes an alert either nag or fall silent without you noticing.
+
+| Situation | Example | What my alert does |
+| --- | --- | --- |
+| The condition is not met | Price is 950, threshold is 800 — keeps watching, does not alert, saves the price and date | |
+| Met for the first time | Drops to 780 — sends one alert and saves "already alerted at 780" | |
+| Met again, at the same price | Still 780 six hours later — stays quiet | |
+| Rose, then dropped again | 820 and then 770 — sends a new alert and saves the new price | |
+| The source fails to load | The page returns an error — retries once, does not alert | |
+| The source fails twice | An error on the retry too — stops itself and sends one "needs review" notice | |
+| The data is stale | The last price read is a week old — flags it as stale instead of presenting it as current | |
+| What always stays with me | The purchase itself. The alert tells me, it does not buy and it does not order | |
 
 ## Goal
 
