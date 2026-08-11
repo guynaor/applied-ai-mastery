@@ -279,11 +279,25 @@ Turn a trip, event, household task, or other shared commitment into a plan peopl
 | | | | | | |
 | | | | | | |
 
-## 3. Stress-test it
+## 3. Find where the plan breaks
 
-**Fallback:** What changes if a booking, weather, time, price, or person changes?
+Pick one disruption that could genuinely happen and run the plan against it. A fallback with no name and no decision deadline is not a plan — it is a hope.
 
-**Recheck list:** what, when, source, and owner will verify it before action?
+| The disruption | What breaks first | What happens instead | Who triggers it | Decide by |
+| --- | --- | --- | --- | --- |
+| Example: heavy rain 17:00–19:00 and the yard parking floods | Guests arrive wet and late, and the outdoor reception is off | Move the reception indoors and drop the photographs in the yard | Me | 10:00 on the morning of the event, on the forecast |
+| | | | | |
+| | | | | |
+
+## 4. Recheck list
+
+The facts you checked a month ago are exactly the ones that change. Check them again before anything is booked or sent.
+
+| What to recheck | When | Against which source | Who checks |
+| --- | --- | --- | --- |
+| Example: hall hours and cancellation terms | One week before the event | The booking email from the hall | Me |
+| | | | |
+| | | | |
 
 ## Goal
 

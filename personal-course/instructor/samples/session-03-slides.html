@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projection slides — Session 3: Make a Shared Plan Work</title>
+    <style>
+      :root{--primary:#4E356F;--soft:#F0EAFA;--text:#17242D;--line:#d6dae0;--muted:#55606E;--warn:#b3413f}
+      *{box-sizing:border-box}
+      body{font-family:system-ui,sans-serif;line-height:1.5;margin:0;color:var(--text);background:#fff}
+      .slide{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:4vh 6vw;border-bottom:1px solid var(--line);page-break-after:always}
+      .num{color:var(--muted);font-size:1rem;letter-spacing:.08em;margin-bottom:1rem}
+      h1{font-size:clamp(1.8rem,4.5vw,3rem);color:var(--primary);margin:0 0 1.5rem}
+      h2{font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--primary);margin:1.5rem 0 .6rem}
+      p,li{font-size:clamp(1.05rem,1.9vw,1.4rem)}
+      .big{font-size:clamp(1.3rem,2.8vw,2rem);line-height:1.45}
+      .box{background:var(--soft);border-inline-start:6px solid var(--primary);padding:1.2rem 1.5rem;border-radius:6px}
+      .prompt{background:#17242D;color:#F4F6F8;padding:1.2rem 1.5rem;border-radius:6px;font-size:clamp(1rem,1.9vw,1.35rem);line-height:1.6}
+      table{border-collapse:collapse;width:100%;font-size:clamp(.95rem,1.7vw,1.25rem)}
+      th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:start}
+      th{background:var(--primary);color:#fff}
+      tbody tr:nth-child(even){background:#FAFAFC}
+      .total td{font-weight:700;background:var(--soft)}
+      .say{border:2px dashed var(--primary);border-radius:6px;padding:1.2rem 1.5rem;font-style:italic}
+      .clash{background:#fdf0f0;border-inline-start:6px solid var(--warn);padding:1rem 1.4rem;border-radius:6px;margin:.6rem 0}
+      ol,ul{padding-inline-start:1.4rem}
+      @media print{.slide{min-height:auto;padding:1.5rem;border:0}}
+    </style>
+  </head>
+  <body>
+
+    <section class="slide">
+      <p class="num">Slide 1 — Opening, minutes 0–5</p>
+      <h1>What are you organising right now that needs someone else to make it happen?</h1>
+      <div class="say big">A good plan is not the one that looks tidiest. It is the one someone else can pick up and run without calling you to ask what you meant.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">Slide 2 — Constraint vs preference, minutes 5–15</p>
+      <h1>Two columns, and most mistakes happen on the border between them</h1>
+      <table>
+        <thead><tr><th>Constraint — cannot move</th><th>Preference — can flex</th></tr></thead>
+        <tbody>
+          <tr><td>The hall is booked for 7 November</td><td>Family-style seating at tables</td></tr>
+          <tr><td>Budget of 18,000</td><td>Short speeches only</td></tr>
+          <tr><td>Grandma needs step-free access</td><td>Live music rather than a playlist</td></tr>
+        </tbody>
+      </table>
+      <h2>And the line that settles it</h2>
+      <p class="big"><strong>Who decides when preferences collide?</strong> One name. Not “we'll talk about it”.</p>
+    </section>
+
+    <section class="slide">
+      <p class="num">Slide 3 — The facts that change, minutes 15–25</p>
+      <h1>Every fact gets a source and a date</h1>
+      <p class="big">Opening hours &nbsp;•&nbsp; travel times &nbsp;•&nbsp; prices &nbsp;•&nbsp; cancellation terms &nbsp;•&nbsp; booking cut-offs</p>
+      <div class="say">These are exactly the details that were true last year and are not true now. “I knew that” is not a source.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">Slide 4 — The request, minutes 25–40</p>
+      <h1>The tool arranges. It does not invent.</h1>
+      <div class="prompt">Arrange this event using only the facts below. Do not add any detail I did not give you, and do not invent times, prices, or availability. Put what is fixed first, then tasks, travel, and breaks. Give every row an owner and a date, and add a 30-minute buffer between stages. Separately flag every place where the facts I gave you contradict each other, and anything missing that I need in order to finish the plan.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">Slide 5 — What the tool should find</p>
+      <h1>Three conflicts already sitting in the facts</h1>
+      <div class="clash big"><strong>The venue:</strong> available until 22:00, fully vacated by 22:30. But our plan has the event running to 23:00.</div>
+      <div class="clash big"><strong>Route 47:</strong> last bus at 22:40. Anyone who came by public transport has to leave before the event ends.</div>
+      <div class="clash big"><strong>The caterer:</strong> closes numbers 10 days before. Printed invitations take 7 working days after design approval.</div>
+      <div class="say">If the tool did not flag them, that does not mean they are not there. It means we asked it to arrange, and it arranged.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">Slide 6 — The shareable plan</p>
+      <h1>A row without a name is a wish</h1>
+      <table>
+        <thead><tr><th>When</th><th>Task</th><th>Owner</th><th>Buffer</th></tr></thead>
+        <tbody>
+          <tr><td>1 October</td><td>Send invitations with RSVP</td><td>Aunt</td><td>5 days before the printer's cut-off</td></tr>
+          <tr><td>28 October</td><td>Give final numbers to the caterer</td><td>Partner</td><td>2 days before the cut-off</td></tr>
+          <tr class="total"><td>7 November, 16:30</td><td>Open the hall and receive the caterer</td><td>Me</td><td>One hour before guests</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="slide">
+      <p class="num">Slide 7 — The disruption card, minutes 40–50</p>
+      <h1>Now we break it</h1>
+      <p class="big">One card. Not a scenario you prepared for — something that actually happens.</p>
+      <ul class="big">
+        <li>Heavy rain between 17:00 and 19:00, and the yard parking floods.</li>
+        <li>Twelve days left, eight guests unconfirmed, caterer closes in two days.</li>
+        <li>Whoever runs the music is ill, two days before.</li>
+        <li>Street works will block access to the yard that evening.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <p class="num">Slide 8 — What a fallback must contain</p>
+      <h1>Three things, or it is not a plan</h1>
+      <ol class="big">
+        <li><strong>What happens instead</strong> — one clear action.</li>
+        <li><strong>Who triggers it</strong> — a name, not “someone”.</li>
+        <li><strong>By when it must be decided</strong> — the moment after which there is no choice left.</li>
+      </ol>
+      <div class="say">“We'll see what happens” is not a fallback. It is postponing the decision to the moment it becomes more expensive.</div>
+    </section>
+
+    <section class="slide">
+      <p class="num">Slide 9 — Recheck list</p>
+      <h1>What gets checked again before anything is booked or sent</h1>
+      <table>
+        <thead><tr><th>What to check</th><th>When</th><th>Against which source</th><th>Who checks</th></tr></thead>
+        <tbody>
+          <tr><td>Hall hours and cancellation terms</td><td>One week before</td><td>The booking email from the hall</td><td>Me</td></tr>
+          <tr><td>Route 47 timetable</td><td>Two days before</td><td>The operator's page</td><td>My brother</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="slide">
+      <p class="num">Slide 10 — Exit check, minutes 50–60</p>
+      <h1>Complete out loud or in writing</h1>
+      <div class="box big">My plan breaks if <strong>[the disruption]</strong>. In that case <strong>[who]</strong> will do <strong>[what]</strong>, and the decision has to be made by <strong>[when]</strong>. Before I send anything to people, I will recheck <strong>[one fact]</strong>.</div>
+      <h2>And the reflection question</h2>
+      <p class="big">Which of your preferences was disguised as a constraint?</p>
+    </section>
+
+  </body>
+</html>
