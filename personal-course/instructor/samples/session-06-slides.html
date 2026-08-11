@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projection slides — Session 6: Tell a True Visual Story</title>
+    <style>
+      :root{--primary:#4E356F;--soft:#F0EAFA;--text:#17242D;--line:#d6dae0;--muted:#55606E;--warn:#b3413f}
+      *{box-sizing:border-box}
+      body{font-family:system-ui,sans-serif;line-height:1.5;margin:0;color:var(--text);background:#fff}
+      .slide{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:4vh 6vw;border-bottom:1px solid var(--line);page-break-after:always}
+      .num{color:var(--muted);font-size:1rem;letter-spacing:.08em;margin-bottom:1rem}
+      h1{font-size:clamp(1.8rem,4.5vw,3rem);color:var(--primary);margin:0 0 1.5rem}
+      h2{font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--primary);margin:1.5rem 0 .6rem}
+      p,li{font-size:clamp(1.05rem,1.9vw,1.4rem)}
+      .big{font-size:clamp(1.3rem,2.8vw,2rem);line-height:1.45}
+      .box{background:var(--soft);border-inline-start:6px solid var(--primary);padding:1.2rem 1.5rem;border-radius:6px}
+      .prompt{background:#17242D;color:#F4F6F8;padding:1.2rem 1.5rem;border-radius:6px;font-size:clamp(1rem,1.9vw,1.35rem);line-height:1.6}
+      .warn{background:#fdf0f0;border-inline-start:6px solid var(--warn);padding:1rem 1.4rem;border-radius:6px;margin:.6rem 0;font-size:clamp(1.1rem,2.2vw,1.5rem)}
+      table{border-collapse:collapse;width:100%;font-size:clamp(.95rem,1.7vw,1.25rem)}
+      th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:start}
+      th{background:var(--primary);color:#fff}
+      tbody tr:nth-child(even){background:#FAFAFC}
+      .total td{font-weight:700;background:var(--soft)}
+      .say{border:2px dashed var(--primary);border-radius:6px;padding:1.2rem 1.5rem;font-style:italic}
+      ol,ul{padding-inline-start:1.4rem}
+      @media print{.slide{min-height:auto;padding:1.5rem;border:0}}
+    </style>
+  </head>
+  <body>
+
+    <section class="slide">
+      <p class="num">Slide 1 — Opening, minutes 0–5</p>
+      <h1>When did you last see an image online and believe it immediately?</h1>
+      <div class="say big">Today we build one visual story you can stand behind. Not a dull one — one whose claims hold up when someone checks them.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 2 — The trust boundary, minutes 5–13</p>
+      <h1>Four decisions before touching an image</h1>
+      <table>
+        <thead><tr><th>The decision</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td>Who am I telling</td><td>Neighbours in the building's group chat</td></tr>
+          <tr><td>What is it for</td><td>So they join the next volunteering day</td></tr>
+          <tr><td>Which claims can I support</td><td>“We cleared the bed in one day” — I have before and after</td></tr>
+          <tr class="total"><td>Who agreed to appear</td><td>Two of three. The third was never asked.</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 3 — Sorting the evidence, minutes 13–23</p>
+      <h1>Three labels for every asset</h1>
+      <div class="box big">
+        <p><strong>Original</strong> — I took it, and changed nothing beyond a crop.</p>
+        <p><strong>Edited</strong> — I took it, but changed something that changes the meaning.</p>
+        <p><strong>Generated</strong> — it does not exist in reality.</p>
+      </div>
+      <div class="say">The label alone is not enough. The real question is what a viewer takes from the image together with the caption beside it.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 4 — The moment that matters</p>
+      <h1>An unlabelled generated image is not decoration</h1>
+      <div class="warn">An AI-generated image, captioned “this is how the garden looks now”.</div>
+      <p class="big">That is a factual claim about a real place, supported by an image that is not a record.</p>
+      <div class="say">Either label it clearly as an illustration and change the caption, or take it out. There is no third option.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 5 — The harder problem to see</p>
+      <h1>A completely real photo, in the wrong context</h1>
+      <div class="warn">A genuine photo of an abundant bed — from another garden, last July — captioned “this is what we grew”.</div>
+      <p class="big">Not a pixel here was invented. The deception is entirely in the caption.</p>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 6 — The request, minutes 23–38</p>
+      <h1>Build a storyboard, not content</h1>
+      <div class="prompt">From these notes about the volunteering day, build a six-panel storyboard: a short caption and alt text for each panel. Separately flag which claims need a source I have to attach. Do not invent quotes, numbers, or details I did not give you, and do not suggest presenting a generated image as if it were a record.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 7 — Through a viewer's eyes, minutes 38–50</p>
+      <h1>Four checks, a minute each</h1>
+      <table>
+        <thead><tr><th>The check</th><th>What to look for</th></tr></thead>
+        <tbody>
+          <tr><td>Alt text</td><td>A sentence describing what is visible — not “a photo of the garden”</td></tr>
+          <tr><td>Contrast</td><td>White text over a bright image almost always fails</td></tr>
+          <tr><td>Not colour alone</td><td>“Before” and “after” need a word too, not just a hue</td></tr>
+          <tr class="total"><td>Read it aloud</td><td>Read the story from the alt text alone. Does it still make sense?</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 8 — The question that settles it</p>
+      <h1>“Could a reasonable viewer take something untrue from this?”</h1>
+      <div class="say big">Not “did I lie”. People almost never lie in a story like this — they simply do not write down what was obvious to them.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 9 — Consent</p>
+      <h1>“It was a public place” is not consent</h1>
+      <ul class="big">
+        <li>An identifiable person in shot — ask them.</li>
+        <li>Children — ask the parents, always.</li>
+        <li>Anyone who said no, or was never asked — blur, crop, or leave them out.</li>
+      </ul>
+      <div class="say">And “a public image I found online” is not permission to use it either.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 10 — Exit check, minutes 50–60</p>
+      <h1>Complete out loud or in writing</h1>
+      <div class="box big">My story has <strong>[number]</strong> assets. <strong>[how many]</strong> are edited or generated, and I labelled them by <strong>[how]</strong>. The claim that needed a source is <strong>[what]</strong>, and the source is <strong>[what]</strong>. Before publishing I still need <strong>[what]</strong>.</div>
+      <h2>And the reflection question</h2>
+      <p class="big">Which image did you most want to use — and could not?</p>
+    </section>
+  </body>
+</html>
