@@ -1,6 +1,6 @@
 import {mkdirSync,readFileSync,writeFileSync} from 'node:fs';
 import {dirname} from 'node:path';
-import {AlignmentType,Document,HeadingLevel,Packer,Paragraph,Table,TableCell,TableRow,TextRun,WidthType,HeightRule} from 'docx';
+import {AlignmentType,Document,HeadingLevel,Packer,Paragraph,Table,TableCell,TableLayoutType,TableRow,TextRun,WidthType,HeightRule} from 'docx';
 import JSZip from 'jszip';
 import {parseJournalTabs} from './lib/journal-tabs.mjs';
 
@@ -16,7 +16,34 @@ const palette={primary:'4E356F',secondary:'7B4FB3',soft:'F0EAFA',text:'17242D',b
 const exampleLabel=/^(?:Example|דוגמה)/;
 // w:jc is logical, not physical: LEFT means start-of-line, so it aligns left in LTR and right inside w:bidi. Never use RIGHT for Hebrew (it means end-of-line, which renders visually left), and never omit it, because renderers then fall back to their own default direction.
 const startAligned=AlignmentType.LEFT;
-function cell(text,bold=false,rtl=false,fill='FFFFFF',color=palette.text,italics=false){return new TableCell({shading:{fill},children:[new Paragraph({bidirectional:rtl,alignment:startAligned,children:[new TextRun({text,bold,italics,color,rightToLeft:rtl})]})]});}
+// A4 is 11906 twips wide and the section uses 1440 margins, so a table has this much to live in.
+// Every width below is in twips (1/1440in) because that is what w:tblGrid and w:tcW are measured in.
+const usableWidth=11906-1440-1440;
+// Percentage table widths make docx emit <w:gridCol w:w="100"/> — a literal 100 twips, about one
+// character — and <w:tblW w:type="pct" w:w="100%"/>, which is invalid: pct wants fiftieths of a
+// percent as an integer, not a string. Word and LibreOffice auto-fit around both, so the damage is
+// invisible in the editors we build in, but Google Docs honours the grid and collapses every column
+// until the text runs vertically. Always emit a real twip grid, real cell widths, and fixed layout.
+const levelWidths=[1600,usableWidth-1600];
+const columnWidths=count=>{
+ const base=Math.floor(usableWidth/count);
+ // Give the remainder to the first column so the row still sums to exactly usableWidth.
+ return Array.from({length:count},(unused,index)=>index===0?usableWidth-base*(count-1):base);
+};
+function cell(text,bold=false,rtl=false,fill='FFFFFF',color=palette.text,italics=false,width=undefined){
+ return new TableCell({
+  shading:{fill},
+  ...(width===undefined?{}:{width:{size:width,type:WidthType.DXA}}),
+  children:[new Paragraph({bidirectional:rtl,alignment:startAligned,children:[new TextRun({text,bold,italics,color,rightToLeft:rtl})]})],
+ });
+}
+const sizedTable=(rtl,widths,rows)=>new Table({
+ visuallyRightToLeft:rtl,
+ layout:TableLayoutType.FIXED,
+ width:{size:usableWidth,type:WidthType.DXA},
+ columnWidths:widths,
+ rows,
+});
 function renderMarkdown(markdown,locale,isSession=false){
  const rtl=locale==='he';const names=levelHeadings[locale];
  const children=[];const lines=markdown.replace(/<!-- journal-tab: [^>]+ -->\n?/g,'').trim().split('\n');
@@ -50,13 +77,15 @@ function renderMarkdown(markdown,locale,isSession=false){
    const rows=[];while(index<lines.length&&lines[index].startsWith('|'))rows.push(lines[index++]);
    const data=rows.filter((row,rowIndex)=>rowIndex!==1).map(row=>row.split('|').slice(1,-1).map(value=>value.trim().replaceAll('**','')));
    const exampleColumns=new Set((data[0]??[]).flatMap((value,column)=>exampleLabel.test(value)?[column]:[]));
-   children.push(new Table({visuallyRightToLeft:rtl,width:{size:100,type:WidthType.PERCENTAGE},rows:data.map((row,rowIndex)=>{
+   // Column count comes from the header row: a short body row would otherwise shrink the grid.
+   const widths=columnWidths(data[0]?.length??1);
+   children.push(sizedTable(rtl,widths,data.map((row,rowIndex)=>{
     const header=rowIndex===0;const exampleRow=!header&&exampleLabel.test(row[0]??'');
     return new TableRow({height:header?undefined:{value:454,rule:HeightRule.ATLEAST},children:row.map((value,column)=>{
      const example=!header&&(exampleRow||exampleColumns.has(column));
-     return cell(value,header,rtl,header?palette.primary:example?palette.example:'FFFFFF',header?'FFFFFF':example?palette.exampleText:palette.text,example);
+     return cell(value,header,rtl,header?palette.primary:example?palette.example:'FFFFFF',header?'FFFFFF':example?palette.exampleText:palette.text,example,widths[column]);
     })});
-   })}));continue;
+   })));continue;
   }
   if(line.startsWith('- ')){paragraph(line.slice(2),{bullet:{level:0}});index+=1;continue;}
   paragraph(line.replaceAll('**',''));index+=1;
@@ -80,7 +109,11 @@ function taskTable(locale,taskTexts){
  return [
   new Paragraph({bidirectional:rtl,alignment:startAligned,heading:HeadingLevel.HEADING_2,shading:{fill:'E9F1FB'},children:[new TextRun({text:rtl?'בחירת רמת המשימה':'Choose your task level',bold:true,color:palette.primary,rightToLeft:rtl})]}),
   new Paragraph({bidirectional:rtl,alignment:startAligned,children:[new TextRun({text:rtl?'Bronze מספיק להשלמה; Silver הוא היעד הרגיל; Gold הוא אתגר אופציונלי.':'Bronze is sufficient for completion; Silver is the normal target; Gold is an optional extension.',rightToLeft:rtl})]}),
-  new Table({visuallyRightToLeft:rtl,width:{size:100,type:WidthType.PERCENTAGE},rows:[new TableRow({children:[cell(rtl?'רמה':'Level',true,rtl,palette.primary,'FFFFFF'),cell(rtl?'המשימה':'Task',true,rtl,palette.primary,'FFFFFF')]}),...tasks.map(([level,task])=>{const fill=level==='Bronze'?palette.bronze:level==='Silver'?palette.silver:palette.gold;return new TableRow({children:[cell(level,true,rtl,fill,'FFFFFF'),cell(task,false,rtl,'FFFDF8')]});})]}),
+  // The level column holds one short word, so it does not get an equal share of the page.
+  sizedTable(rtl,levelWidths,[
+   new TableRow({children:[cell(rtl?'רמה':'Level',true,rtl,palette.primary,'FFFFFF',false,levelWidths[0]),cell(rtl?'המשימה':'Task',true,rtl,palette.primary,'FFFFFF',false,levelWidths[1])]}),
+   ...tasks.map(([level,task])=>{const fill=level==='Bronze'?palette.bronze:level==='Silver'?palette.silver:palette.gold;return new TableRow({children:[cell(level,true,rtl,fill,'FFFFFF',false,levelWidths[0]),cell(task,false,rtl,'FFFDF8',palette.text,false,levelWidths[1])]});}),
+  ]),
  ];
 }
 // docx stamps docProps/core.xml and every zip entry with the current time, so an unchanged journal still produces a different .docx on every run and the committed artifact churns in git. Pin both, so these files change only when their content does.

@@ -3,6 +3,8 @@ import {existsSync,readFileSync} from 'node:fs';
 import JSZip from 'jszip';
 
 const outputDirectory=process.env.PERSONAL_WORKBOOK_OUTPUT_DIR??'site/assets/downloads';
+// A4 width less the section's two 1440-twip margins, matching build-personal-workbooks.mjs.
+const usableWidth=11906-1440-1440;
 const workbooks={
  English:`${outputDirectory}/applied-ai-mastery-personal-journal-en.docx`,
  Hebrew:`${outputDirectory}/applied-ai-mastery-personal-journal-he.docx`,
@@ -54,5 +56,27 @@ for(const [locale,path] of Object.entries(workbooks)){
   assert.equal(rtlTables,tables,'every Hebrew table needs w:bidiVisual so Word orders its columns right-to-left');
   assert.ok((xml.match(/<w:rtl\/?>/g)||[]).length>0,'Hebrew runs must set w:rtl so mixed Hebrew and Latin text orders correctly');
  }
+
+ // A percentage table width made docx emit <w:gridCol w:w="100"/>, a literal 100 twips, and
+ // <w:tblW w:type="pct" w:w="100%"/>, which is invalid because pct wants an integer in fiftieths of
+ // a percent. Word and LibreOffice auto-fit around both, so this looked fine everywhere we build,
+ // while Google Docs honoured the grid and collapsed every column until the text ran vertically.
+ const tableCount=(xml.match(/<w:tbl>/g)||[]).length;
+ assert.doesNotMatch(xml,/<w:tblW[^>]*w:type="pct"/,
+  `${locale} workbook must size tables in twips, not percent, or Google Docs collapses the columns`);
+ assert.equal((xml.match(/<w:tblLayout w:type="fixed"\/?>/g)||[]).length,tableCount,
+  `${locale} workbook must set a fixed table layout on every table`);
+ const gridTotals=[...xml.matchAll(/<w:tblGrid>([\s\S]*?)<\/w:tblGrid>/g)]
+  .map(([,grid])=>[...grid.matchAll(/w:w="(\d+)"/g)].map(([,width])=>Number(width)));
+ assert.equal(gridTotals.length,tableCount,`${locale} workbook must give every table a column grid`);
+ for(const columns of gridTotals){
+  // 500 twips is about a third of an inch: narrower than any real column, wide enough to catch the
+  // one-character collapse without pinning the exact layout.
+  assert.ok(Math.min(...columns)>=500,
+   `${locale} workbook has a column of ${Math.min(...columns)} twips, which Google Docs renders as vertical text`);
+  assert.equal(columns.reduce((total,width)=>total+width,0),usableWidth,
+   `${locale} workbook table columns must sum to the ${usableWidth}-twip text width`);
+ }
+ assert.ok((xml.match(/<w:tcW/g)||[]).length>0,`${locale} workbook cells must carry explicit widths`);
 }
 console.log('Personal downloadable workbook contract passed');
