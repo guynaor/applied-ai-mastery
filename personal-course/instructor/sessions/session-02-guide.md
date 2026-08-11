@@ -6,15 +6,26 @@
 
 This guide can be taught from directly. It is written so that a facilitator who did not build the course can run it. Do not require learners to open a paid account, and do not ask them to enter payment or account details at any point.
 
+## Session materials
+
+These four links are everything you need open to run the session.
+
+| Material | What it is for |
+|---|---|
+| [Projection slides](../../instructor/samples/session-02-slides.html) | Ten slides, in session order. Every “show on the board” moment in this guide is prepared there. |
+| [Sample product sources](../../instructor/samples/session-02-product-sources.html) | Two seller pages, a manufacturer page, and an independent review, with contradictions planted — and three monitoring snapshots at the end for the agent demonstration. |
+| [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | A downloadable Word file. Every table learners fill in today is in it. |
+| [Session 2 brief](../../sessions/session-02-research-buy-monitor.md) | What learners see. |
+
 ## Before learners arrive
 
 ### Prepare the room and tools
 
 1. Open **Gemini** in the facilitator account. If Deep Research is available to you, good. If not, Claude or ChatGPT do the same job and the session does not break.
 2. Prepare a **saved Deep Research report** on the same purchase question in advance. This is the most important safety net in this session, for the reason given below.
-3. Open four pages in tabs: two public offers for the same model or for two competing models, a manufacturer warranty page, and one independent review source.
-4. Prepare a board or a single slide with three empty columns: **headline price / what gets added / total cost**.
-5. Have the [Session 2 brief](../../sessions/session-02-research-buy-monitor.md) and the learning journal on screen or in print.
+3. Open the [four sample product sources](../../instructor/samples/session-02-product-sources.html) — two seller offers, a manufacturer warranty page, and an independent review. This is a stable substitute for live pages: the numbers will not shift mid-explanation, and the contradictions the lesson depends on are already planted. If you prefer real pages, check in advance that at least one contradiction exists between them.
+4. Open the [projection slides](../../instructor/samples/session-02-slides.html) in a separate tab. Every moment where this guide says “show on the board” is already prepared there, in the same order.
+5. Have the [Session 2 brief](../../sessions/session-02-research-buy-monitor.md) and the [learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) on screen or in print. Every table learners fill in today is in the journal.
 
 ### What learners need
 
@@ -50,7 +61,7 @@ Ask: “Which purchase have you been putting off for weeks because there is too 
 
 ## 5–13 minutes — Define what you need and what you don't
 
-Ask every learner to fill four boxes: the need, the budget and deadline, the must-haves, and what rules a product out immediately. Show a complete example on the board:
+Ask every learner to fill four boxes: the need, the budget and deadline, the must-haves, and what rules a product out immediately. Show [slide 2](../../instructor/samples/session-02-slides.html), which has the example filled in:
 
 > A quiet dishwasher that fits the 60 cm gap. Up to 3,000, installed before the holidays. Must have: 60 cm wide, 44 dB or less, three-year warranty. Rules it out: a brand with no local service, a model that needs the pipes moved.
 
@@ -62,7 +73,7 @@ Then add the box that is easiest to skip: **what this research will not decide.*
 
 ## 13–25 minutes — A research plan, not an answer
 
-At minute 13, send the request in front of the class. Type it out in full on screen before sending:
+At minute 13, send the request in front of the class. Show it in full on [slide 3](../../instructor/samples/session-02-slides.html) before sending, or type it out on screen:
 
 > “Plan research for buying noise-cancelling headphones under 800. Do not recommend a model. Set out which kinds of sources establish total cost, warranty, return policy, and durability over time, and which question each kind of source is suited to. Add one opposing viewpoint and a list of what is still unknown.”
 
@@ -94,11 +105,11 @@ A list of source types — manufacturer, seller, independent tester, user forum 
 
 This is the long block, and the heart of the session. Learners fill five columns: the claim, the source and date, supports or contradicts, what is uncertain, and checked yes or no.
 
-Demonstrate one complete row from the sources you prepared, including the source date. Then open the seller page and the manufacturer page side by side and find one difference between them — there is almost always one, usually in the warranty terms or in what counts as a “defect”.
+Demonstrate one complete row from the [sample sources](../../instructor/samples/session-02-product-sources.html), including the source date. Then open the seller page and the manufacturer page side by side and find one difference between them. Two contradictions are planted in the samples: the seller promises three years of warranty while the manufacturer gives two and makes the third conditional on registering within 30 days and on installation by an approved technician, and the independent review measured 46 dB against the 42 dB the manufacturer publishes — above the 44 dB requirement learners set for themselves at minute 8. [Slide 6](../../instructor/samples/session-02-slides.html) puts both side by side, after the class has found them.
 
 ### The moment that matters: total cost
 
-Fill in the three columns you prepared on the board together with the class. Look for delivery, installation, import duty and handling fees, consumables, extended warranty, and what it costs to send the thing back if it does not suit.
+Fill the table in together with the class on [slide 5](../../instructor/samples/session-02-slides.html). Look for delivery, installation, import duty and handling fees, consumables, extended warranty, and what it costs to send the thing back if it does not suit. In the sample sources the headline price is 2,690 and the total cost reaches 3,470 — over a budget of 3,000, even though the headline price was under it. The same table waits for learners in the journal, to fill in for their own purchase.
 
 ### What to say
 
@@ -115,7 +126,7 @@ Circulate with these questions rather than answers:
 
 Ask each learner to choose the two claims that would change the decision if they turned out to be wrong, and to open the original source for both. Only two, so they are worth choosing carefully.
 
-Then write one alert rule together on the board. Do not hand out a list of terms — build it as questions:
+Then write one alert rule together. Do not hand out a list of terms — build it as questions. [Slide 7](../../instructor/samples/session-02-slides.html) has this table ready to project:
 
 | The question | Example |
 |---|---|
@@ -133,7 +144,7 @@ Then write one alert rule together on the board. Do not hand out a list of terms
 
 ## 50–60 minutes — Exit check and reflection
 
-Ask each learner to complete, out loud or in writing:
+Show [slide 10](../../instructor/samples/session-02-slides.html) and ask each learner to complete, out loud or in writing:
 
 > “I am **[buying / waiting on / rejecting]** **[the product]**, because I checked for myself that **[two claims]**. I am still unsure about **[one uncertainty]**, so I will look again on **[date]**.”
 
@@ -151,13 +162,13 @@ One written reflection question: “What had almost convinced you before you ope
 
 ### Setup the night before
 
-Use only a provider or API account you own. Do not display an API key on screen, do not add learners to the account, and do not ask them for access details. Install OpenClaw on the demonstration machine, complete onboarding against your chosen cloud model, and run its health check. Prepare a separate project and key with a low budget, a workspace with no sensitive material, two saved snapshots of a public product page, and one notification channel you control.
+Use only a provider or API account you own. Do not display an API key on screen, do not add learners to the account, and do not ask them for access details. Install OpenClaw on the demonstration machine, complete onboarding against your chosen cloud model, and run its health check. Prepare a separate project and key with a low budget, a workspace with no sensitive material, and one notification channel you control. The three demonstration snapshots — above the threshold, below it, and a source that does not load — are at the bottom of the [sample product sources](../../instructor/samples/session-02-product-sources.html).
 
-Before you open the tool, write a three-step **kill switch** on the board: disable the schedule, stop the gateway, revoke the separate key. Leave it visible for the whole demonstration.
+Before you open the tool, show the three-step **kill switch** on [slide 9](../../instructor/samples/session-02-slides.html): disable the schedule, stop the gateway, revoke the separate key. Leave it visible for the whole demonstration.
 
 ### Demo agent contract
 
-Show the contract before you open the tool:
+Show the contract on [slide 8](../../instructor/samples/session-02-slides.html) before you open the tool:
 
 > Every six hours, read only these two public product pages or snapshots. Alert only if the total cost has dropped to 800 or below, if availability has changed, or if a warranty or return term has changed. Save the last value you saw and the source date. Do not send an identical alert again for 48 hours. If a source fails to load twice, send one “needs review” notice and pause yourself. Do not buy, do not log in, do not send messages, do not touch private data, and do not infer a recommendation.
 
@@ -187,7 +198,7 @@ Everyone completes the no-install specification and run-review route. The local 
 **Gemini (default):** Deep Research if it is available, otherwise ordinary Gemini with the same request. The report is longer, the method is identical.
 **Claude:** Ask for the same source plan and the same matrix template. There is no automatic web research — learners open the sources themselves, which is entirely fine for this session.
 **ChatGPT:** The same request and the same matrix.
-**No tool:** Open the four pages you prepared and fill the matrix on paper. The learning goal remains fully intact.
+**No tool:** Open or print the [sample sources](../../instructor/samples/session-02-product-sources.html) and fill the matrix on paper. The learning goal remains fully intact.
 
 ## Troubleshoot without losing the lesson
 
@@ -202,7 +213,7 @@ Everyone completes the no-install specification and run-review route. The local 
 
 ## Differentiation
 
-- **No device or account:** A printout of the four sources and an evidence matrix on paper. The whole session can be completed this way.
+- **No device or account:** A printout of the [sample sources](../../instructor/samples/session-02-product-sources.html) and an evidence matrix on paper. The whole session can be completed this way.
 - **For learners who need structure:** Give them the dishwasher example from the journal and ask them to change only the product and the budget.
 - **For learners ready to extend:** Ask them to find a real contradiction between seller and manufacturer and record both, with dates.
 - **Language support:** The request may be written in the learner's strongest language. Require the matrix labels — source, date, supports or contradicts, uncertain — in the course language.

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sample product sources — Session 2</title>
+    <style>
+      body{font-family:system-ui,sans-serif;line-height:1.6;max-width:52rem;margin:0 auto;padding:1.5rem;color:#17242D}
+      h1{border-bottom:3px solid #4E356F;padding-bottom:.4rem}
+      section{border:1px solid #d6dae0;border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+      h2{margin-top:0;color:#4E356F}
+      .tag{display:inline-block;background:#F0EAFA;color:#4E356F;border-radius:999px;padding:.15rem .7rem;font-size:.85rem;margin-bottom:.5rem}
+      .note{background:#F1F3F6;border-inline-start:4px solid #7B4FB3;padding:.75rem 1rem;border-radius:4px}
+      table{border-collapse:collapse;width:100%}
+      th,td{border:1px solid #d6dae0;padding:.45rem .6rem;text-align:start}
+      th{background:#F0EAFA;color:#4E356F}
+      .fail{background:#fdf0f0;border-inline-start:4px solid #b3413f}
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Sample product sources — Session 2</h1>
+      <p>This is a stable local source set for the Session 2 demonstration in Applied AI Mastery. These are not real sales pages, they contain no purchase links, and they hold no personal information. Use them when you want the lesson to work without a network, and so the numbers do not change mid-explanation.</p>
+      <p class="note">The first two sources are seller pages. The third is the manufacturer's page and the fourth is an independent review. Real contradictions are planted between them — they are meant to be found.</p>
+
+      <section>
+        <span class="tag">Source 1 — seller page</span>
+        <h2>KitchenPlus: AquaSilent AS-640 dishwasher</h2>
+        <ul>
+          <li>Price: 2,690</li>
+          <li>Width: 60 cm</li>
+          <li>Noise level: 42 dB</li>
+          <li>Warranty: 3 years</li>
+          <li>Delivery: 150, within 5 working days</li>
+          <li>Installation: not included in the price</li>
+          <li>Returns: within 14 days, in the original packaging</li>
+          <li>Stock: 3 units left</li>
+        </ul>
+        <p>Last updated: 14 May</p>
+      </section>
+
+      <section>
+        <span class="tag">Source 2 — seller page</span>
+        <h2>DirectElectric: NordWash NW-2 dishwasher</h2>
+        <ul>
+          <li>Price: 2,450</li>
+          <li>Width: 59.8 cm</li>
+          <li>Noise level: 47 dB</li>
+          <li>Warranty: 2 years</li>
+          <li>Delivery: free</li>
+          <li>Installation: 190, by a technician sent by the shop</li>
+          <li>Returns: within 14 days, 200 carrier fee paid by the customer</li>
+          <li>Stock: in stock</li>
+        </ul>
+        <p>Last updated: 2 May</p>
+      </section>
+
+      <section>
+        <span class="tag">Source 3 — manufacturer page</span>
+        <h2>AquaSilent — official warranty terms</h2>
+        <ul>
+          <li>Manufacturer warranty: <strong>two years</strong> on parts and labour.</li>
+          <li>A third year is granted <strong>only</strong> if the product is registered on the manufacturer's site within 30 days of purchase.</li>
+          <li>The warranty does not apply if installation was not carried out by a manufacturer-approved technician.</li>
+          <li>The stated noise level is measured under laboratory conditions, on the eco programme, in a closed kitchen.</li>
+        </ul>
+        <p>Last updated: 3 February</p>
+      </section>
+
+      <section>
+        <span class="tag">Source 4 — independent review</span>
+        <h2>Home Lab: quiet dishwashers compared</h2>
+        <ul>
+          <li>We measured the AS-640 in an open 9 m² kitchen and got <strong>46 dB</strong>, not 42.</li>
+          <li>The NW-2 measured 47 dB for us — so the real gap between the two models is smaller than the sales pages suggest.</li>
+          <li>Installing the AS-640 requires an approved technician to keep the warranty valid. The market rate is around 250.</li>
+          <li>Both models sometimes need a longer inlet hose, about 80, if the tap is far from the opening.</li>
+        </ul>
+        <p>Published: 28 April</p>
+      </section>
+
+      <h1>Monitoring snapshots</h1>
+      <p>These three snapshots are used in the agent demonstration. They represent the same product page at three points in time.</p>
+
+      <section>
+        <span class="tag">Snapshot A — above the threshold</span>
+        <h2>AquaSilent AS-640</h2>
+        <table>
+          <tr><th>Field</th><th>Value</th></tr>
+          <tr><td>Total cost</td><td>950</td></tr>
+          <tr><td>Availability</td><td>In stock</td></tr>
+          <tr><td>Return terms</td><td>14 days</td></tr>
+          <tr><td>Read at</td><td>14 May, 08:00</td></tr>
+        </table>
+      </section>
+
+      <section>
+        <span class="tag">Snapshot B — below the threshold</span>
+        <h2>AquaSilent AS-640</h2>
+        <table>
+          <tr><th>Field</th><th>Value</th></tr>
+          <tr><td>Total cost</td><td>780</td></tr>
+          <tr><td>Availability</td><td>In stock</td></tr>
+          <tr><td>Return terms</td><td>14 days</td></tr>
+          <tr><td>Read at</td><td>14 May, 14:00</td></tr>
+        </table>
+      </section>
+
+      <section class="fail">
+        <span class="tag">Snapshot C — the source does not load</span>
+        <h2>Error 503 — service unavailable</h2>
+        <p>The page could not be read. There is no new value and no read timestamp.</p>
+        <p><strong>What the agent should do:</strong> not alert on price, not guess a value, and not treat the old value as current. On the first failure, retry. On the second, stop itself and send one “needs review” notice.</p>
+      </section>
+    </main>
+  </body>
+</html>

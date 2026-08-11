@@ -36,4 +36,4 @@
 
 ## משאבים אופציונליים
 
-להעמקה בלבד: [חוברת השוואה](../../materials/lesson-04-online-buying/student/comparison-workbook.md), [מפרט התראה](../../materials/lesson-05-deal-alerts/student/alert-specification.md) ו[חוברת מחקר](../../materials/lesson-08-investment-research/student/research-workbook.md). אפשר לעבוד גם בחיפוש רגיל, על נייר, בכלי בגישה חינמית או בצפייה בהדגמה. אין צורך בתשלום.
+כל הטבלאות של המפגש נמצאות ב[יומן הלמידה](../../../site/assets/downloads/applied-ai-mastery-personal-journal-he.docx): טבלת הצורך, טבלת הראיות, פירוק העלות הכוללת וטבלת התנהגות ההתראה. הורידו אותו כקובץ Word ומלאו ביד או במחשב — אין צורך בחומר נוסף. אפשר לעבוד גם בחיפוש רגיל, על נייר, בכלי בגישה חינמית או בצפייה בהדגמה. אין צורך בתשלום.
