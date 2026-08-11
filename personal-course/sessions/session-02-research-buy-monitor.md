@@ -1,39 +1,39 @@
 # Session 2 — Buy With Confidence
 
 **Time:** 45–60 minutes  
-**Outcome:** Research one meaningful purchase and define a monitor that cannot buy anything for you.
+**Outcome:** A purchase brief you would trust with your own money, and one alert rule that watches on your behalf and never buys anything.
 
 ## Scenario
 
-You need a product that matters enough to compare carefully—perhaps headphones, a household appliance, or a course-related purchase. You want to decide with evidence, not an attractive AI answer. Do not enter payment details, account information, or request personalised financial advice.
+Pick one purchase you are genuinely weighing right now — a dishwasher, headphones, a phone, a flight, or a course. There is plenty of information about it, and most of it was written to sell. Today you reach a decision that rests on sources you opened yourself, not on a persuasive AI answer. Do not enter payment details or account information, and do not ask for personalised financial advice.
 
 ## Sequence
 
-1. **Set a boundary (8 minutes).** State the need, budget, criteria, date by which you need it, and what this research will not decide.
-2. **Plan the evidence (12 minutes).** Use **Gemini Deep Research** to request a research plan: useful source types, competing explanations, and unknowns. Claude or ChatGPT can organise the same plan. The report is a starting point, not evidence.
-3. **Compare the real offer (15 minutes).** Build an evidence matrix: claim, source, date, support or contradiction, total cost, returns/warranty, and uncertainty. Inspect original seller and manufacturer terms, plus an independent source where useful.
-4. **Pause before action (10 minutes).** Independently verify the consequential claims. Write a safe alert specification: target, allowed sources, threshold, frequency, duplicate suppression, expiry, and a pause/stop rule. It must never purchase, trade, or send payment details.
+1. **Set the boundary (8 minutes).** Write what you need, what you are willing to spend, by when, what it must have, and what rules it out immediately. Add one sentence on what this research will *not* decide — for instance, it will not decide whether to buy at all this year.
+2. **Plan the evidence (12 minutes).** Ask **Gemini Deep Research** for a research plan, not an answer: which kinds of sources to consult, which competing explanations exist, and what is still unknown. Claude or ChatGPT can produce the same plan. The report that comes back is a starting point — it points you at sources, it does not replace them.
+3. **Compare the real offer (15 minutes).** Fill in an evidence matrix: the claim, the source and its date, whether it supports or contradicts, total cost, return and warranty terms, and what remains uncertain. Open the seller's page and the manufacturer's page yourself, and add one independent source. Work out the total cost rather than the headline price: delivery, installation, import duty, consumables, and extended warranty.
+4. **Verify, then pause before acting (10 minutes).** Choose the two claims that would change your decision if they turned out to be wrong, and open the original source for each. That verification is what separates a brief resting on evidence from a brief resting on the tool's confidence. Then write one alert rule you can actually review: what it watches, which sources it may read, what triggers it, how often it runs, what it remembers so it does not alert twice about the same thing, when it stops on its own, and which action always stays with you. An alert tells you — it does not buy and it does not order.
 
 ## Integrated artifact
 
-Create a purchase research brief with your question and limits, evidence matrix, uncertainty log, verification notes, and a pauseable alert specification. You—not AI or an alert—choose whether and when to buy.
+Produce a one-page purchase brief: your question and limits, the evidence matrix, what remains uncertain, your verification notes, and an alert rule you can pause at any moment. Whether and when to buy is your decision — not the tool's and not the alert's.
 
 ## Unattended Agent Lab (optional)
 
-The learning goal is to build and review a dependable monitor, not to give software permission to buy or decide for you. Every route creates the same **agent run record**: target, allowed public sources, trigger, saved state/duplicate rule, expected alert, human approval point, stop rule, and one test result.
+The learning goal is to build a monitoring agent you can inspect and trust, not to give software permission to buy or decide for you. All three routes produce the same **agent run record**: what the agent watches, which public sources it may read, what triggers it, what it remembers so it does not repeat itself, what the expected alert looks like, where your approval is required, when it stops, and what happened in one test run.
 
 ### No-install route — everyone can do this
 
-Write the agent run record on paper or in your journal. Use Claude, ChatGPT, or Gemini to challenge the specification with: **“Act as a test reviewer. Here is my shopping-monitor specification. Find unclear triggers, duplicate-alert risks, missing stop conditions, and any action I must keep under human approval. Do not recommend a product or make a purchase.”** Run it once using two saved public product pages or a teacher-provided snapshot. Decide whether it should alert, remain silent, or stop, then record why.
+Write the agent run record on paper or in your learning journal. Then ask Claude, ChatGPT, or Gemini to attack it: **“Act as a QA reviewer. Here is a specification for an agent that tracks a product price. Find triggers that are not unambiguous, cases where the same alert would be sent twice, situations where it is not stated when the agent stops, and any action that must stay under human approval. Do not recommend a product and do not make a purchase.”** Run the rule by hand once against two public product pages you saved, or against the snapshot your facilitator provides. Decide whether the agent should have alerted, stayed quiet, or stopped — and write down why.
 
 ### Minimal local lab — optional student installation
 
-If your device is suitable and you want a hands-on lab, install OpenClaw and Ollama with a local model. Start with public or mock product data, keep the model and logs on your own device, and run the monitor manually once before adding any schedule. Use a local log or visible dashboard; do not add payment details, shopping accounts, private files, financial accounts, or automatic messages. If the local model gives unreliable tool results, return to the no-install route—the learning evidence is the specification and run review, not the installation.
+If you have a suitable machine and want hands-on work, install OpenClaw alongside Ollama with a local model. Start from public or mock product data, keep the model and the logs on your own machine, and run the agent manually once before you give it any schedule. A local log or a visible status screen is enough. Do not connect payment details, shopping accounts, personal files, or bank accounts, and do not enable automatic messaging. If the local model cannot use tools reliably, go back to the no-install route: the learning evidence here is the specification and the run review, not the installation.
 
 ### Advanced Adventure — optional student-owned cloud setup
 
-Students who already own a provider account may connect OpenClaw to their own cloud/API model. Create a separate project/key, set a small spending limit, save no key in the journal or shared work, and test a single public-data monitor before scheduling it. Use an alert/draft only. Your agent may never purchase, contact a seller, access a financial account, trade, or make an investment recommendation. A paid chat subscription and API credits are not always the same thing; check the provider's current account rules before connecting.
+If you already have an account with a model provider, you may connect OpenClaw to your own cloud model or API. Open a separate project and key for the course, set a low spending cap, keep the key out of your learning journal and any shared file, and test one agent against public data before you schedule it. The only permitted output is an alert or a draft. The agent does not buy, does not contact a seller, does not enter a financial account, does not trade, and does not make an investment recommendation. Note that a paid chat subscription and API credits are not necessarily the same thing — check the provider's current account terms before you connect.
 
 ## Optional resources
 
-For deeper practice only: [comparison workbook](../materials/lesson-04-online-buying/student/comparison-workbook.md), [alert specification](../materials/lesson-05-deal-alerts/student/alert-specification.md), and [research workbook](../materials/lesson-08-investment-research/student/research-workbook.md). Public search, paper notes, a free-access tool, or observation are valid routes; no payment is needed.
+For deeper practice only: [comparison workbook](../materials/lesson-04-online-buying/student/comparison-workbook.md), [alert specification](../materials/lesson-05-deal-alerts/student/alert-specification.md), and [research workbook](../materials/lesson-08-investment-research/student/research-workbook.md). You can also work with ordinary search, on paper, with a free-access tool, or by watching the demonstration. No payment is needed.
