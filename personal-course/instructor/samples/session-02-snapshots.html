@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monitoring snapshots — Session 2</title>
+    <style>
+      body{font-family:system-ui,sans-serif;line-height:1.6;max-width:54rem;margin:0 auto;padding:1.5rem;color:#17242D}
+      h1{border-bottom:3px solid #4E356F;padding-bottom:.4rem}
+      h2{color:#4E356F;margin-top:2rem}
+      .note{background:#F1F3F6;border-inline-start:4px solid #7B4FB3;padding:.75rem 1rem;border-radius:4px}
+      .warn{background:#fdf0f0;border-inline-start:4px solid #b3413f;padding:.75rem 1rem;border-radius:4px}
+      section{border:1px solid #d6dae0;border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+      section h2{margin-top:0}
+      .tag{display:inline-block;background:#F0EAFA;color:#4E356F;border-radius:999px;padding:.15rem .7rem;font-size:.85rem;margin-bottom:.5rem}
+      table{border-collapse:collapse;width:100%;margin:.6rem 0}
+      th,td{border:1px solid #d6dae0;padding:.45rem .6rem;text-align:start}
+      th{background:#F0EAFA;color:#4E356F}
+      .copybar{background:#F0EAFA;border:1px solid #cdbde6;border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+      .copybar p{margin:0 0 .6rem}
+      .copybtn{font:inherit;font-weight:600;background:#4E356F;color:#fff;border:0;border-radius:6px;padding:.5rem 1.2rem;cursor:pointer}
+      .copybtn:focus-visible{outline:3px solid #7B4FB3;outline-offset:2px}
+      .plain{width:100%;min-height:11rem;margin-top:.7rem;font:inherit;font-size:.9rem;line-height:1.5;padding:.7rem;border:1px solid #cdbde6;border-radius:6px;background:#fff;color:#17242D}
+      .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:.9rem;margin:1rem 0}
+      .card{border:1px solid #b3413f;background:#fdf0f0;border-radius:8px;padding:.9rem 1rem;page-break-inside:avoid}
+      .card h3{margin:0 0 .4rem;color:#4E356F;font-size:1.05rem}
+      .card p{margin:.3rem 0;font-size:.95rem}
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Monitoring snapshots — Session 2</h1>
+      <p class="warn"><strong>Agent demonstration material only.</strong> This page is separate from the product sources so an AI tool can be given the sources without the snapshots.</p>
+      <p>These three snapshots are used in the agent demonstration. They represent the same product page at three points in time.</p>
+
+      <section>
+        <span class="tag">Snapshot A — above the threshold</span>
+        <h2>AquaSilent AS-640</h2>
+        <table>
+          <tr><th>Field</th><th>Value</th></tr>
+          <tr><td>Total cost</td><td>950</td></tr>
+          <tr><td>Availability</td><td>In stock</td></tr>
+          <tr><td>Return terms</td><td>14 days</td></tr>
+          <tr><td>Read at</td><td>14 May, 08:00</td></tr>
+        </table>
+      </section>
+
+      <section>
+        <span class="tag">Snapshot B — below the threshold</span>
+        <h2>AquaSilent AS-640</h2>
+        <table>
+          <tr><th>Field</th><th>Value</th></tr>
+          <tr><td>Total cost</td><td>780</td></tr>
+          <tr><td>Availability</td><td>In stock</td></tr>
+          <tr><td>Return terms</td><td>14 days</td></tr>
+          <tr><td>Read at</td><td>14 May, 14:00</td></tr>
+        </table>
+      </section>
+
+      <section class="fail">
+        <span class="tag">Snapshot C — the source does not load</span>
+        <h2>Error 503 — service unavailable</h2>
+        <p>The page could not be read. There is no new value and no read timestamp.</p>
+        <p><strong>What the agent should do:</strong> not alert on price, not guess a value, and not treat the old value as current. On the first failure, retry. On the second, stop itself and send one “needs review” notice.</p>
+      </section>
+    </main>
+  </body>
+</html>

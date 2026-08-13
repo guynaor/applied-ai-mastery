@@ -19,14 +19,14 @@ This guide can be taught from directly. No design or 3D-printing knowledge is ne
 
 ### Prepare the room and tools
 
-1. **Bring real objects.** A small box, a ruler or tape measure, scissors, and a sheet of cardboard for each pair. This is the one session in the course where hands do the important work.
+1. **Ask learners to have a ruler or tape measure, scissors, and cardboard to hand** — remotely this is an advantage, because they are sitting beside the thing they are measuring. If the session is in a room, bring a box, a ruler, and cardboard for each pair. This is the one session in the course where hands do the important work.
 2. Open the [sample measurements](../../instructor/samples/session-05-measurements.html). Not every learner will have something to measure in the room, and this gives them a complete drawer to work with.
 3. Open the [slides](../../instructor/samples/session-05-slides.html) and a chat tool in the facilitator account.
 4. If there is a real object in the room that can be measured — a cupboard, a drawer, a shelf — it beats any sample.
 
 ### What learners need
 
-- One small corner they know and find annoying. If they are not at home, they can work from memory and label everything as an assumption — which is a lesson in itself.
+- One small corner they know and find annoying. Anyone joining from home is sitting right beside the drawer or corner in question, which is this session's big advantage when run remotely. Anyone not at home works from memory and labels everything as an assumption — a lesson in itself.
 - A ruler or tape measure, paper, and cardboard.
 - A device with one AI tool is optional. The whole session works without it.
 

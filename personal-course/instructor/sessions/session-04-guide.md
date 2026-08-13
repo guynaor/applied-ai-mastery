@@ -20,7 +20,7 @@ This guide can be taught from directly. The facilitator does not need to be able
 ### Prepare the room and tools
 
 1. Open **Claude** in the facilitator account with Artifacts available. Without Artifacts, ChatGPT or Gemini can return a single HTML file — but then the facilitator opens it locally, and only after reading it.
-2. Open the [test cards](../../instructor/samples/session-04-test-cards.html). Print them if you can: physically drawing a card works better than picking from a list.
+2. Open the [test cards](../../instructor/samples/session-04-test-cards.html). Remotely, paste the link into the chat at the testing stage and let each learner pick one. In a room you can print them: physically drawing a card works slightly better.
 3. Open the [slides](../../instructor/samples/session-04-slides.html) in a separate tab.
 4. Have paper and pencils ready. At least one learner will work on a paper prototype, and that is a full route, not a consolation prize.
 

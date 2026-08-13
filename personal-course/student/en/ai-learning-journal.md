@@ -260,44 +260,57 @@ Which risk or preference mattered more than the lowest price? What will never be
 <!-- journal-tab: {"id":"session-03","title":"Session 3: Make a Shared Plan Work"} -->
 # Session 3: Make a Shared Plan Work
 
-Turn a trip, event, household task, or other shared commitment into a plan people can actually use.
+Turn a real event you are organising into five jobs done with AI, checking after each one what the tool assumed, what it invented, and who actually owns it.
 
-## 1. Agree the planning contract
+## 1. Food and drinks — and what the tool assumed
 
-| Goal | Fixed constraints | Preferences | Decision owner | Contributors | Budget / dates |
-| --- | --- | --- | --- | --- | --- |
-| Example: A 40-person family event that stays calm | Hall booked 7 Nov, 18:00 to 23:00 | Family-style seating; short speeches only | Me | Partner on food, brother on music, aunt on invitations | 18,000; invitations sent by 1 Oct |
-| | | | | | |
-| | | | | | |
+Ask for quantities, then explicitly ask it to separate what you told it from what it assumed. The second row is the one that moves money.
 
-## 2. Draft the shareable plan
-
-| Time / deadline | Activity or task | Owner | Cost / effort | Buffer | Status |
-| --- | --- | --- | --- | --- | --- |
-| Example: 1 Oct | Send invitations with an RSVP link | Aunt | 150 printing plus 2 hours | 5 days before the printer's cut-off | Not started |
-| | | | | | |
-| | | | | | |
-| | | | | | |
-
-## 3. Find where the plan breaks
-
-Pick one disruption that could genuinely happen and run the plan against it. A fallback with no name and no decision deadline is not a plan — it is a hope.
-
-| The disruption | What breaks first | What happens instead | Who triggers it | Decide by |
-| --- | --- | --- | --- | --- |
-| Example: heavy rain 17:00–19:00 and the yard parking floods | Guests arrive wet and late, and the outdoor reception is off | Move the reception indoors and drop the photographs in the yard | Me | 10:00 on the morning of the event, on the forecast |
-| | | | | |
-| | | | | |
-
-## 4. Recheck list
-
-The facts you checked a month ago are exactly the ones that change. Check them again before anything is booked or sent.
-
-| What to recheck | When | Against which source | Who checks |
+| What I asked for | What it returned | What it assumed without asking | What I corrected |
 | --- | --- | --- | --- |
-| Example: hall hours and cancellation terms | One week before the event | The booking email from the hall | Me |
+| Example: quantities for 40 people, 4 hours, 3 vegetarians, 4 children, budget 3,800 | 60 main portions and 160 drinks | One and a half portions per person, two drinks an hour, children eating like adults | Cut to one portion each and a half for children — 2,900 rather than 3,800 |
 | | | | |
 | | | | |
+
+## 2. The image display
+
+| What I tested | What I expected | What actually happened | What I fixed |
+| --- | --- | --- | --- |
+| Example: only two images in the loop | It would swap every 8 seconds | It cycled too fast and the swap flickered | Asked for a minimum display time even with few images |
+| Only two images | | | |
+| A very long caption | | | |
+
+**Link to the display:** ______________________
+
+**Whose photos, and who agreed to appear?** ______________________
+
+## 3. Timing — and what changes
+
+| Time and activity | The fact behind it | Source and date, or "assumption" | What happens if it changes |
+| --- | --- | --- | --- |
+| Example: 22:00 finish and clear down | Hall available until 22:00, full vacation by 22:30 | Venue page, 3 September | We planned to 23:00 — the whole evening moves an hour earlier |
+| | | | |
+| | | | |
+| | | | |
+
+## 4. Dividing the work
+
+The tool will write "someone should". That is the line you fix.
+
+| The task | Who owns it | By when | What the tool could not know |
+| --- | --- | --- | --- |
+| Example: send invitations with RSVP | Aunt | 1 October | That she is away in September, so it has to happen earlier |
+| | | | |
+| | | | |
+| | | | |
+
+## 5. What breaks
+
+| The disruption I drew | What breaks first | What happens instead | Who triggers it | Decide by |
+| --- | --- | --- | --- | --- |
+| Example: heavy rain 17:00–19:00 and the parking floods | Guests arrive wet and late | Reception moves indoors, drop the photos in the yard | Me | 10:00 on the morning, on the forecast |
+| | | | | |
+| | | | | |
 
 ## Goal
 
@@ -305,21 +318,21 @@ Write a plan that someone else can pick up and run without calling you to ask wh
 
 ## Steps
 
-1. Choose something you are actually organising with other people (for example: a family event, a trip with friends, a move, a shared household rota) and agree the goal, constraints, and decision owner.
-2. Fill in the plan with owners, dates, cost or effort, and buffer.
-3. Add one fallback and one recheck item before anyone relies on the plan.
+1. Choose something you are actually organising with other people (for example: a family event, a party, a trip with friends, a class evening).
+2. Run at least two of the five jobs with AI — food and drinks, image display, timing, dividing the work — and after each one record what the tool assumed and what it invented.
+3. Fix at least one line from "someone should" into a name and a date, and add one fallback for a disruption that could genuinely happen.
 
 ## Bronze
 
-Create a shareable plan with owners, dates, and one fallback.
+Run one job with AI and record what it assumed about you without asking.
 
 ## Silver
 
-Stress-test the plan against two changes and add a recheck list (for example: the hall cancels a week before, or eight more guests confirm).
+Run two or three of the jobs, and check at least one changing fact against its source (for example: the venue's hours, or the supplier's deadline for changing numbers).
 
 ## Gold
 
-Use the plan with another person or group and improve it from their feedback.
+Build the image display, test it with two images and with a long caption, and let somebody else run your plan and tell you where it is unclear.
 
 ## My task
 
@@ -328,7 +341,7 @@ Use the plan with another person or group and improve it from their feedback.
 | Example: Silver | The family event on 7 November | Plan shared by 1 October |
 | | | |
 
-## The shareable plan, for the real task
+## The task table, for the real task
 
 | Time / deadline | Activity or task | Owner | Cost / effort | Buffer | Status |
 | --- | --- | --- | --- | --- | --- |
