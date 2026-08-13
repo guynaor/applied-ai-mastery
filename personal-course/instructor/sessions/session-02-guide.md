@@ -13,7 +13,8 @@ These four links are everything you need open to run the session.
 | Material | What it is for |
 |---|---|
 | [Projection slides](../../instructor/samples/session-02-slides.html) | Ten slides, in session order. Every “show on the board” moment in this guide is prepared there. |
-| [Sample product sources](../../instructor/samples/session-02-product-sources.html) | Two seller pages, a manufacturer page, and an independent review, with contradictions planted — and three monitoring snapshots at the end for the agent demonstration. |
+| [Sample product sources](../../instructor/samples/session-02-product-sources.html) | Two seller pages, a manufacturer page, and an independent review, with contradictions planted. The address can be handed straight to an AI tool, or the text copied from it. |
+| [Monitoring snapshots](../../instructor/samples/session-02-snapshots.html) | A separate page, for the agent demonstration only. |
 | [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | A downloadable Word file. Every table learners fill in today is in it. |
 | [Session 2 brief](../../sessions/session-02-research-buy-monitor.md) | What learners see. |
 
@@ -162,7 +163,7 @@ One written reflection question: “What had almost convinced you before you ope
 
 ### Setup the night before
 
-Use only a provider or API account you own. Do not display an API key on screen, do not add learners to the account, and do not ask them for access details. Install OpenClaw on the demonstration machine, complete onboarding against your chosen cloud model, and run its health check. Prepare a separate project and key with a low budget, a workspace with no sensitive material, and one notification channel you control. The three demonstration snapshots — above the threshold, below it, and a source that does not load — are at the bottom of the [sample product sources](../../instructor/samples/session-02-product-sources.html).
+Use only a provider or API account you own. Do not display an API key on screen, do not add learners to the account, and do not ask them for access details. Install OpenClaw on the demonstration machine, complete onboarding against your chosen cloud model, and run its health check. Prepare a separate project and key with a low budget, a workspace with no sensitive material, and one notification channel you control. The three demonstration snapshots — above the threshold, below it, and a source that does not load — are on the [snapshots page](../../instructor/samples/session-02-snapshots.html), kept separate from the product sources so an AI tool can be given the sources alone.
 
 Before you open the tool, show the three-step **kill switch** on [slide 9](../../instructor/samples/session-02-slides.html): disable the schedule, stop the gateway, revoke the separate key. Leave it visible for the whole demonstration.
 

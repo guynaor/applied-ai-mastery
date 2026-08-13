@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Planning sources — Session 3</title>
+    <style>
+      body{font-family:system-ui,sans-serif;line-height:1.6;max-width:54rem;margin:0 auto;padding:1.5rem;color:#17242D}
+      h1{border-bottom:3px solid #4E356F;padding-bottom:.4rem}
+      h2{color:#4E356F;margin-top:2rem}
+      .note{background:#F1F3F6;border-inline-start:4px solid #7B4FB3;padding:.75rem 1rem;border-radius:4px}
+      .warn{background:#fdf0f0;border-inline-start:4px solid #b3413f;padding:.75rem 1rem;border-radius:4px}
+      section{border:1px solid #d6dae0;border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+      section h2{margin-top:0}
+      .tag{display:inline-block;background:#F0EAFA;color:#4E356F;border-radius:999px;padding:.15rem .7rem;font-size:.85rem;margin-bottom:.5rem}
+      table{border-collapse:collapse;width:100%;margin:.6rem 0}
+      th,td{border:1px solid #d6dae0;padding:.45rem .6rem;text-align:start}
+      th{background:#F0EAFA;color:#4E356F}
+      .copybar{background:#F0EAFA;border:1px solid #cdbde6;border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+      .copybar p{margin:0 0 .6rem}
+      .copybtn{font:inherit;font-weight:600;background:#4E356F;color:#fff;border:0;border-radius:6px;padding:.5rem 1.2rem;cursor:pointer}
+      .copybtn:focus-visible{outline:3px solid #7B4FB3;outline-offset:2px}
+      .plain{width:100%;min-height:11rem;margin-top:.7rem;font:inherit;font-size:.9rem;line-height:1.5;padding:.7rem;border:1px solid #cdbde6;border-radius:6px;background:#fff;color:#17242D}
+      .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:.9rem;margin:1rem 0}
+      .card{border:1px solid #b3413f;background:#fdf0f0;border-radius:8px;padding:.9rem 1rem;page-break-inside:avoid}
+      .card h3{margin:0 0 .4rem;color:#4E356F;font-size:1.05rem}
+      .card p{margin:.3rem 0;font-size:.95rem}
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Planning sources — Session 3</h1>
+      <p>The facts for the sample scenario: a 40-person family event on 7 November, on a midweek evening. These are not real booking pages and contain no personal details.</p>
+      <div class="copybar">
+        <p>If your tool cannot open links, copy from here and paste it into the chat. If it can, just give it this page's address.</p>
+        <button class="copybtn" type="button" data-copy="plain-en" data-done="Copied">Copy all sources as text</button>
+        <textarea class="plain" id="plain-en" readonly aria-label="Copy all sources as text">Planning sources - a 40-person family event, 7 November (a midweek evening)
+
+1) The venue - Community House, small hall (updated 3 September)
+- Hall available 08:00-22:00. Full vacation by 22:30.
+- Evening rate: 6,400, tables and chairs included.
+- Cleaning: 400, mandatory.
+- Cancellation: full refund up to 30 days before; then 50%; under 14 days no refund.
+- Outside catering: permitted with one week&#x27;s notice.
+- Parking: 12 spaces in the yard.
+
+2) The caterer - Field Kitchen (updated 21 August)
+- Per head: 95. Minimum 30 covers.
+- Arrival to set up: 90 minutes before the event starts.
+- Equipment collected: within one hour after the event ends.
+- Final numbers: 10 days before. After that, billed at the number given.
+- No menu changes in the final week.
+
+3) Transport - Route 47 (updated 1 September)
+- Last departure from the stop by the hall: Sunday to Thursday 22:40; Friday 15:10; Saturday no service.
+- Journey time to the town centre: 25 minutes.
+
+4) The printer - Almog Print (updated 12 August)
+- Turnaround: 7 working days from design approval.
+- Cost for 50 invitations: 150.
+- Any change after design approval restarts the count.</textarea>
+      </div>
+      <p class="note">Real conflicts are planted between these sources. They are meant to surface while the plan is being arranged, not before.</p>
+
+      <section>
+        <span class="tag">Source 1 — the venue</span>
+        <h2>Community House — small hall</h2>
+        <ul>
+          <li>Hall available: 08:00–22:00. <strong>Full vacation by 22:30.</strong></li>
+          <li>Evening rate: 6,400, tables and chairs included.</li>
+          <li>Cleaning: 400, mandatory.</li>
+          <li>Cancellation: full refund up to 30 days before. After that 50%. Under 14 days, no refund.</li>
+          <li>Outside catering: permitted, with at least one week's notice.</li>
+          <li>Parking: 12 spaces in the yard.</li>
+        </ul>
+        <p>Last updated: 3 September</p>
+      </section>
+
+      <section>
+        <span class="tag">Source 2 — the caterer</span>
+        <h2>Field Kitchen — event quote</h2>
+        <ul>
+          <li>Per head: 95. Minimum 30 covers.</li>
+          <li>Arrival to set up: 90 minutes before the event starts.</li>
+          <li>Equipment collected: within one hour after the event ends.</li>
+          <li>Final numbers confirmed: <strong>10 days before</strong> the event. After that, billed at the number given.</li>
+          <li>No menu changes in the final week.</li>
+        </ul>
+        <p>Last updated: 21 August</p>
+      </section>
+
+      <section>
+        <span class="tag">Source 3 — public transport</span>
+        <h2>Route 47 — evening timetable</h2>
+        <table>
+          <tr><th>Day</th><th>Last departure from the stop by the hall</th></tr>
+          <tr><td>Sunday to Thursday</td><td>22:40</td></tr>
+          <tr><td>Friday</td><td>15:10</td></tr>
+          <tr><td>Saturday</td><td>No service</td></tr>
+        </table>
+        <p>Journey time to the town centre: 25 minutes. Last updated: 1 September</p>
+        <p class="note">For this exercise, the event falls on a midweek evening: the last bus leaves at 22:40.</p>
+      </section>
+
+      <section>
+        <span class="tag">Source 4 — the printer</span>
+        <h2>Almog Print — printed invitations</h2>
+        <ul>
+          <li>Turnaround: 7 working days from design approval.</li>
+          <li>Cost for 50 invitations: 150.</li>
+          <li>Any change after design approval restarts the count.</li>
+        </ul>
+        <p>Last updated: 12 August</p>
+      </section>
+    </main>
+    <script>
+      document.querySelectorAll('[data-copy]').forEach(function(button){
+        var target=document.getElementById(button.getAttribute('data-copy'));
+        var original=button.textContent;
+        button.addEventListener('click',function(){
+          // Clipboard API needs a secure context. Selecting the text always works,
+          // so fall back to that and let the learner press their own copy shortcut.
+          var done=function(){button.textContent=button.getAttribute('data-done');
+            setTimeout(function(){button.textContent=original;},2000);};
+          if(navigator.clipboard&&window.isSecureContext){
+            navigator.clipboard.writeText(target.value).then(done,function(){target.select();});
+          }else{target.select();}
+        });
+      });
+    </script>
+  </body>
+</html>

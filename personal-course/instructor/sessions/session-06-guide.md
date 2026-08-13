@@ -11,7 +11,8 @@ This guide can be taught from directly. No paid image generator is needed, and l
 | Material | What it is for |
 |---|---|
 | [Projection slides](../../instructor/samples/session-06-slides.html) | Ten slides, in session order. |
-| [Sample asset set](../../instructor/samples/session-06-asset-set.html) | Six assets for one story, two of them problematic, with the answers hidden. |
+| [Sample asset set](../../instructor/samples/session-06-asset-set.html) | Six assets for one story, two of them problematic. The address can be given to an AI tool without exposing the answers. |
+| [The answers](../../instructor/samples/session-06-answers.html) | A separate page. **Do not open before the class has been through all six.** |
 | [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | Downloadable Word file with the story rules, the storyboard, and the truth-check table. |
 | [Session 6 brief](../../sessions/session-06-trustworthy-visual-story.md) | What learners see. |
 
@@ -19,7 +20,7 @@ This guide can be taught from directly. No paid image generator is needed, and l
 
 ### Prepare the room and tools
 
-1. Open the [sample asset set](../../instructor/samples/session-06-asset-set.html). **Do not open the answers section** — it is deliberately hidden behind a click.
+1. Open the [sample asset set](../../instructor/samples/session-06-asset-set.html). The answers are on a [separate page](../../instructor/samples/session-06-answers.html) — do not open it early, and it is separate so that an AI tool reading the asset set does not also receive the answers.
 2. Open the [slides](../../instructor/samples/session-06-slides.html) and a chat tool in the facilitator account.
 3. Have paper ready for storyboarding: six rectangles on one sheet is enough.
 4. If you bring your own example, make sure it contains at least one problematic asset. A clean story teaches nothing in this session.

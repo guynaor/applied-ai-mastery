@@ -5,16 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sample product sources — Session 2</title>
     <style>
-      body{font-family:system-ui,sans-serif;line-height:1.6;max-width:52rem;margin:0 auto;padding:1.5rem;color:#17242D}
+      body{font-family:system-ui,sans-serif;line-height:1.6;max-width:54rem;margin:0 auto;padding:1.5rem;color:#17242D}
       h1{border-bottom:3px solid #4E356F;padding-bottom:.4rem}
-      section{border:1px solid #d6dae0;border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
-      h2{margin-top:0;color:#4E356F}
-      .tag{display:inline-block;background:#F0EAFA;color:#4E356F;border-radius:999px;padding:.15rem .7rem;font-size:.85rem;margin-bottom:.5rem}
+      h2{color:#4E356F;margin-top:2rem}
       .note{background:#F1F3F6;border-inline-start:4px solid #7B4FB3;padding:.75rem 1rem;border-radius:4px}
-      table{border-collapse:collapse;width:100%}
+      .warn{background:#fdf0f0;border-inline-start:4px solid #b3413f;padding:.75rem 1rem;border-radius:4px}
+      section{border:1px solid #d6dae0;border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+      section h2{margin-top:0}
+      .tag{display:inline-block;background:#F0EAFA;color:#4E356F;border-radius:999px;padding:.15rem .7rem;font-size:.85rem;margin-bottom:.5rem}
+      table{border-collapse:collapse;width:100%;margin:.6rem 0}
       th,td{border:1px solid #d6dae0;padding:.45rem .6rem;text-align:start}
       th{background:#F0EAFA;color:#4E356F}
-      .fail{background:#fdf0f0;border-inline-start:4px solid #b3413f}
+      .copybar{background:#F0EAFA;border:1px solid #cdbde6;border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+      .copybar p{margin:0 0 .6rem}
+      .copybtn{font:inherit;font-weight:600;background:#4E356F;color:#fff;border:0;border-radius:6px;padding:.5rem 1.2rem;cursor:pointer}
+      .copybtn:focus-visible{outline:3px solid #7B4FB3;outline-offset:2px}
+      .plain{width:100%;min-height:11rem;margin-top:.7rem;font:inherit;font-size:.9rem;line-height:1.5;padding:.7rem;border:1px solid #cdbde6;border-radius:6px;background:#fff;color:#17242D}
+      .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:.9rem;margin:1rem 0}
+      .card{border:1px solid #b3413f;background:#fdf0f0;border-radius:8px;padding:.9rem 1rem;page-break-inside:avoid}
+      .card h3{margin:0 0 .4rem;color:#4E356F;font-size:1.05rem}
+      .card p{margin:.3rem 0;font-size:.95rem}
     </style>
   </head>
   <body>
@@ -22,6 +32,38 @@
       <h1>Sample product sources — Session 2</h1>
       <p>This is a stable local source set for the Session 2 demonstration in Applied AI Mastery. These are not real sales pages, they contain no purchase links, and they hold no personal information. Use them when you want the lesson to work without a network, and so the numbers do not change mid-explanation.</p>
       <p class="note">The first two sources are seller pages. The third is the manufacturer's page and the fourth is an independent review. Real contradictions are planted between them — they are meant to be found.</p>
+      <div class="copybar">
+        <p>If your tool cannot open links, copy from here and paste it into the chat. If it can, give it this page address.</p>
+        <button class="copybtn" type="button" data-copy="plain-s2-en" data-done="Copied">Copy all sources as text</button>
+        <textarea class="plain" id="plain-s2-en" readonly aria-label="Copy all sources as text">Product sources - a dishwasher, two competing models
+
+1) Seller: KitchenPlus - AquaSilent AS-640 (updated 14 May)
+- Price: 2,690
+- Width: 60 cm | Noise: 42 dB | Warranty: 3 years
+- Delivery: 150, within 5 working days
+- Installation: not included
+- Returns: within 14 days, original packaging
+- Stock: 3 units left
+
+2) Seller: DirectElectric - NordWash NW-2 (updated 2 May)
+- Price: 2,450
+- Width: 59.8 cm | Noise: 47 dB | Warranty: 2 years
+- Delivery: free | Installation: 190, by a technician sent by the shop
+- Returns: within 14 days, 200 carrier fee paid by the customer
+- Stock: in stock
+
+3) Manufacturer: AquaSilent - official warranty terms (updated 3 February)
+- Manufacturer warranty: two years on parts and labour.
+- A third year only if the product is registered on the site within 30 days of purchase.
+- The warranty does not apply if installation was not by a manufacturer-approved technician.
+- The stated noise level is measured under laboratory conditions, eco programme, closed kitchen.
+
+4) Independent review: Home Lab (published 28 April)
+- We measured the AS-640 in an open 9 sq m kitchen and got 46 dB, not 42.
+- The NW-2 measured 47 dB for us.
+- Installing the AS-640 requires an approved technician to keep the warranty. Around 250.
+- Both models sometimes need a longer inlet hose, about 80.</textarea>
+      </div>
 
       <section>
         <span class="tag">Source 1 — seller page</span>
@@ -79,39 +121,21 @@
         <p>Published: 28 April</p>
       </section>
 
-      <h1>Monitoring snapshots</h1>
-      <p>These three snapshots are used in the agent demonstration. They represent the same product page at three points in time.</p>
-
-      <section>
-        <span class="tag">Snapshot A — above the threshold</span>
-        <h2>AquaSilent AS-640</h2>
-        <table>
-          <tr><th>Field</th><th>Value</th></tr>
-          <tr><td>Total cost</td><td>950</td></tr>
-          <tr><td>Availability</td><td>In stock</td></tr>
-          <tr><td>Return terms</td><td>14 days</td></tr>
-          <tr><td>Read at</td><td>14 May, 08:00</td></tr>
-        </table>
-      </section>
-
-      <section>
-        <span class="tag">Snapshot B — below the threshold</span>
-        <h2>AquaSilent AS-640</h2>
-        <table>
-          <tr><th>Field</th><th>Value</th></tr>
-          <tr><td>Total cost</td><td>780</td></tr>
-          <tr><td>Availability</td><td>In stock</td></tr>
-          <tr><td>Return terms</td><td>14 days</td></tr>
-          <tr><td>Read at</td><td>14 May, 14:00</td></tr>
-        </table>
-      </section>
-
-      <section class="fail">
-        <span class="tag">Snapshot C — the source does not load</span>
-        <h2>Error 503 — service unavailable</h2>
-        <p>The page could not be read. There is no new value and no read timestamp.</p>
-        <p><strong>What the agent should do:</strong> not alert on price, not guess a value, and not treat the old value as current. On the first failure, retry. On the second, stop itself and send one “needs review” notice.</p>
-      </section>
     </main>
+    <script>
+      document.querySelectorAll('[data-copy]').forEach(function(button){
+        var target=document.getElementById(button.getAttribute('data-copy'));
+        var original=button.textContent;
+        button.addEventListener('click',function(){
+          // Clipboard API needs a secure context. Selecting the text always works,
+          // so fall back to that and let the learner press their own copy shortcut.
+          var done=function(){button.textContent=button.getAttribute('data-done');
+            setTimeout(function(){button.textContent=original;},2000);};
+          if(navigator.clipboard&&window.isSecureContext){
+            navigator.clipboard.writeText(target.value).then(done,function(){target.select();});
+          }else{target.select();}
+        });
+      });
+    </script>
   </body>
 </html>
