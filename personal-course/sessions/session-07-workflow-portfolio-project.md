@@ -1,6 +1,6 @@
 # Session 7 — Build a Personal System
 
-**Time:** 45–60 minutes  
+**Time:** 90 minutes  
 **Outcome:** One starting page for something you genuinely keep doing, with real evidence, a clear permission boundary, and a stop rule.
 
 ## Scenario

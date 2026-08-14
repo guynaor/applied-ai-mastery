@@ -1,6 +1,6 @@
 # Session 1 — Decide What to Do Next
 
-**Time:** 45–60 minutes  
+**Time:** 90 minutes  
 **Outcome:** One small, real, personal decision that rests on a source you opened yourself and on your own judgment.
 
 ## Scenario

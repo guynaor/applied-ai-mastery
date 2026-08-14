@@ -1,8 +1,10 @@
 # Full session plan — Session 7: Build a Personal System
 
-**Time:** 55–60 minutes
+**Time:** 90 minutes
 **Learning outcome:** Learners gather real evidence of what they did, build a starting page they will return to, read a permission request before approving it, and set a stop line on what a tool may do on their behalf.
 **Session artifact:** One starting page: goal, evidence record, portfolio note, finish plan, permission map, next check-in, and stop rule.
+
+**This session runs 90 minutes, not 60.** The extra time is not overrun — it is questions, and that is where the learning happens.
 
 This is the last session of the course, and it closes what Session 1 opened: who decides. No learner is required to connect a tool to their own account.
 
@@ -14,6 +16,22 @@ This is the last session of the course, and it closes what Session 1 opened: who
 | [Sample permission map](../../instructor/samples/session-07-permission-map.html) | A sample folder, a permission request to read, a decision table, and a run record to review. |
 | [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | Downloadable Word file with the starting point, the process map, and the portfolio table. |
 | [Session 7 brief](../../sessions/session-07-workflow-portfolio-project.md) | What learners see. |
+
+## The recommended way: a real case, on your screen
+
+What works best is to **take a real case of your own and work it live in front of the class on your own screen.** Three reasons: learners' free accounts run out midway; a real case produces real questions; and they watch you correct the tool, which is worth more than any explanation.
+
+Learners fill in the journal tables for **their own case**. You run it; they think.
+
+**Before every prompt** ask: "What do you think it will come back with?" and "What is missing from my request?"
+**When the answer returns**, read the first number aloud and ask "where is that from?", hunt for the assumption, and correct one thing in front of them.
+**After each stage**, give two minutes for them to fill in the journal. A session where only you typed is a demonstration, not a lesson.
+
+The prepared sample materials stay as backup — for a class with no network, when you have no example of your own, or for a facilitator who wants a guaranteed script.
+
+## Start slow things in the background
+
+Some requests take time — a detailed spreadsheet, a presentation, or anything that generates code. **Do not wait for them in front of the class.** Send it, keep talking about the next thing, and come back when it is ready.
 
 ## Before learners arrive
 
@@ -40,14 +58,27 @@ This is the last session of the course, and it closes what Session 1 opened: who
 
 | Time | What the facilitator does | What learners produce or identify |
 |---:|---|---|
-| 0–5 | Opening: what will you really keep doing | One ongoing goal |
-| 5–15 | Gather real evidence | Three to five lines, including what did not work |
-| 15–27 | Build a four-line starting page | Next step, cadence, location, finish condition |
-| 27–42 | Read a permission request and decide what to grant | Least privilege, and verification after the run |
-| 42–52 | Stop line and the run record | What is off limits, what needs approval, when it halts |
-| 52–60 | Closing the course and reflection | One commitment with a date |
+| 0–10 | **Homework discussion** | What worked and what broke for other people |
+| 10–15 | Opening: what will you really keep doing | One ongoing goal |
+| 15–30 | Gather real evidence | Three to five lines, including what did not work |
+| 30–45 | Build a four-line starting page | Next step, cadence, location, finish condition |
+| 45–65 | Read a permission request and decide what to grant | Least privilege, and verification after the run |
+| 65–80 | Stop line and the run record | What is off limits, what needs approval, when it halts |
+| 80–90 | Closing the course and reflection | One commitment with a date |
 
-## 0–5 minutes — Opening
+## 0–10 minutes — Homework discussion
+
+**Start here in every session from the second onwards.** It works well, and not because it is a check — because a learner who hears what broke for someone else learns faster than from a lesson.
+
+Three questions, in this order:
+
+1. **"Who managed to do something with what we talked about?"** Two or three tell it.
+2. **"Who did it not work for, and where did it get stuck?"** This is the important one. If nobody answers, tell them about something that got stuck for you.
+3. **"What surprised you?"** The best insights arrive here.
+
+Note two things that came up, and return to them later in the session by the name of whoever raised them.
+
+## 10–15 minutes — Opening
 
 Show [slide 1](../../instructor/samples/session-07-slides.html): “Of everything we did in this course, what will you actually keep doing?”
 
@@ -55,7 +86,7 @@ Show [slide 1](../../instructor/samples/session-07-slides.html): “Of everythin
 
 > “This is the last session, so we are closing what we opened in the first one: who decides. Today we build one starting page, and its only measure is whether you come back to it in a month.”
 
-## 5–15 minutes — Real evidence
+## 15–30 minutes — Real evidence
 
 Show [slide 2](../../instructor/samples/session-07-slides.html). Each learner records three to five things: what happened, where it is recorded, what they did themselves, and what they still do not know.
 
@@ -63,13 +94,13 @@ Show [slide 2](../../instructor/samples/session-07-slides.html). Each learner re
 
 > “Do not invent results — and do not quietly improve them either. ‘I tried it and it did not work’ is evidence exactly as good as ‘it worked’, and sometimes it teaches more. The fourth column, ‘what I still do not know’, is what separates a portfolio from an advert.”
 
-## 15–27 minutes — The starting page
+## 30–45 minutes — The starting page
 
 Show [slide 3](../../instructor/samples/session-07-slides.html) and the four lines: the next step, the check-in cadence, where things live, and what “done” looks like.
 
 The fourth is the one that gets forgotten. A goal with no finish condition runs forever and is then abandoned.
 
-## 27–42 minutes — Permissions
+## 45–65 minutes — Permissions
 
 Show [slide 4](../../instructor/samples/session-07-slides.html) and the permission request from the [permission map](../../instructor/samples/session-07-permission-map.html). Read it aloud, line by line, before touching a button.
 
@@ -87,7 +118,7 @@ Work through the decision table on [slide 6](../../instructor/samples/session-07
 
 That is entirely fine, and it is an opportunity. “The tool could not read the folder” is precisely the result that shows the permission was narrow. Do not fix it by widening access in front of the class.
 
-## 42–52 minutes — The stop line and the run record
+## 65–80 minutes — The stop line and the run record
 
 Show [slide 8](../../instructor/samples/session-07-slides.html): what is off limits, what always needs approval, and when it stops.
 
@@ -97,7 +128,7 @@ Anyone who did the OpenClaw lab in Session 2 now reviews their **agent run recor
 
 > “A run that worked is evidence to review, not permission to widen access. That may be the most important sentence in the whole course, and it holds for tools that do not exist yet.”
 
-## 52–60 minutes — Closing the course
+## 80–90 minutes — Closing the course
 
 Show [slide 10](../../instructor/samples/session-07-slides.html):
 

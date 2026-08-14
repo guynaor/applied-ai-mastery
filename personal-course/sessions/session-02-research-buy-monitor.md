@@ -1,6 +1,6 @@
 # Session 2 — Buy With Confidence
 
-**Time:** 45–60 minutes  
+**Time:** 90 minutes  
 **Outcome:** A purchase brief you would trust with your own money, and one alert rule that watches on your behalf and never buys anything.
 
 ## Scenario

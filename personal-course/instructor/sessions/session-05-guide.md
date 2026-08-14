@@ -1,8 +1,10 @@
 # Full session plan — Session 5: Make a Space Work Better
 
-**Time:** 55–60 minutes
+**Time:** 90 minutes
 **Learning outcome:** Learners label where every dimension came from, tell a measurement from an assumption, and test physical fit in cardboard before buying or building anything.
 **Session artifact:** One design sheet: a dimension table with a source for every number, clearances, an adjustable parameter, the cardboard-test result, and a sentence on what the design is not suitable for.
+
+**This session runs 90 minutes, not 60.** The extra time is not overrun — it is questions, and that is where the learning happens.
 
 This guide can be taught from directly. No design or 3D-printing knowledge is needed. This session is about measuring, assumptions, and physical testing — exactly the parts no tool will do for you, because it has not seen the room.
 
@@ -14,6 +16,22 @@ This guide can be taught from directly. No design or 3D-printing knowledge is ne
 | [Sample measurements](../../instructor/samples/session-05-measurements.html) | A measured drawer with objects, clearances, and one planted assumption — for anyone with nothing to measure. |
 | [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | Downloadable Word file with the dimension table, the proposal table, and the fit-check table. |
 | [Session 5 brief](../../sessions/session-05-design-physical-project.md) | What learners see. |
+
+## The recommended way: a real case, on your screen
+
+What works best is to **take a real case of your own and work it live in front of the class on your own screen.** Three reasons: learners' free accounts run out midway; a real case produces real questions; and they watch you correct the tool, which is worth more than any explanation.
+
+Learners fill in the journal tables for **their own case**. You run it; they think.
+
+**Before every prompt** ask: "What do you think it will come back with?" and "What is missing from my request?"
+**When the answer returns**, read the first number aloud and ask "where is that from?", hunt for the assumption, and correct one thing in front of them.
+**After each stage**, give two minutes for them to fill in the journal. A session where only you typed is a demonstration, not a lesson.
+
+The prepared sample materials stay as backup — for a class with no network, when you have no example of your own, or for a facilitator who wants a guaranteed script.
+
+## Start slow things in the background
+
+Some requests take time — a detailed spreadsheet, a presentation, or anything that generates code. **Do not wait for them in front of the class.** Send it, keep talking about the next thing, and come back when it is ready.
 
 ## Before learners arrive
 
@@ -40,14 +58,27 @@ This guide can be taught from directly. No design or 3D-printing knowledge is ne
 
 | Time | What the facilitator does | What learners produce or identify |
 |---:|---|---|
-| 0–5 | Opening: which corner annoys you daily | One real corner |
-| 5–17 | Measure, and label every number's source | The difference between measured, spec, assumed, calculated |
-| 17–29 | Clearances, material, one adjustable parameter | Constraints written down rather than assumed |
-| 29–44 | One proposal, and a parameter change with a prediction | Whether the model behaves as expected |
-| 44–54 | Full-size cardboard test | One assumption proved wrong |
-| 54–60 | Exit check and reflection | A design sheet you could build from |
+| 0–10 | **Homework discussion** | What worked and what broke for other people |
+| 10–15 | Opening: which corner annoys you daily | One real corner |
+| 15–35 | Measure, and label every number's source | The difference between measured, spec, assumed, calculated |
+| 35–48 | Clearances, material, one adjustable parameter | Constraints written down rather than assumed |
+| 48–68 | One proposal, and a parameter change with a prediction | Whether the model behaves as expected |
+| 68–82 | Full-size cardboard test | One assumption proved wrong |
+| 82–90 | Exit check and reflection | A design sheet you could build from |
 
-## 0–5 minutes — Opening
+## 0–10 minutes — Homework discussion
+
+**Start here in every session from the second onwards.** It works well, and not because it is a check — because a learner who hears what broke for someone else learns faster than from a lesson.
+
+Three questions, in this order:
+
+1. **"Who managed to do something with what we talked about?"** Two or three tell it.
+2. **"Who did it not work for, and where did it get stuck?"** This is the important one. If nobody answers, tell them about something that got stuck for you.
+3. **"What surprised you?"** The best insights arrive here.
+
+Note two things that came up, and return to them later in the session by the name of whoever raised them.
+
+## 10–15 minutes — Opening
 
 Show [slide 1](../../instructor/samples/session-05-slides.html): “Which one corner of your home annoys you daily, but never quite enough to fix?”
 
@@ -55,7 +86,7 @@ Show [slide 1](../../instructor/samples/session-05-slides.html): “Which one co
 
 > “Today we design one small fix — and test it in cardboard before spending anything. Most failures in projects like this are not design failures. They are one dimension nobody checked.”
 
-## 5–17 minutes — Measure, and label the source
+## 15–35 minutes — Measure, and label the source
 
 Show [slide 2](../../instructor/samples/session-05-slides.html) with the four labels: **measured**, **spec**, **assumed**, **calculated**.
 
@@ -75,13 +106,13 @@ The answer: cheap runners stop at 80 per cent, so the usable depth is 33.6 cm ra
 
 Good — have them write the dimensions from memory and label every one “assumed”. At the end they will be looking at a sheet that is entirely assumptions, which demonstrates the point better than any explanation.
 
-## 17–29 minutes — Constraints and clearances
+## 35–48 minutes — Constraints and clearances
 
 Show [slide 4](../../instructor/samples/session-05-slides.html) and the three forgotten clearances: room for a finger, the gap above, and the wall thickness eating into the internal dimension.
 
 Each learner picks **one parameter** that can change — number of compartments, divider height, compartment width.
 
-## 29–44 minutes — Proposal, and a parameter change
+## 48–68 minutes — Proposal, and a parameter change
 
 Show the request on [slide 5](../../instructor/samples/session-05-slides.html) and run it with the measurements on screen.
 
@@ -103,7 +134,7 @@ Show [slide 6](../../instructor/samples/session-05-slides.html). Before changing
 - **It declared the design safe.** Remind them the request forbade that, and re-run.
 - **It gave a nice drawing with no numbers.** Ask for a dimension table. A drawing is not a specification.
 
-## 44–54 minutes — The cardboard test
+## 68–82 minutes — The cardboard test
 
 This is the part not to skip. Show [slide 7](../../instructor/samples/session-05-slides.html).
 
@@ -115,7 +146,7 @@ Cut at the real size, pencil the compartments in, put it in place — and use it
 
 Circulate and ask: “Which dimension surprised you?” and “What would you have bought just now, if you had not checked?”
 
-## 54–60 minutes — Exit check and reflection
+## 82–90 minutes — Exit check and reflection
 
 Show [slide 10](../../instructor/samples/session-05-slides.html):
 

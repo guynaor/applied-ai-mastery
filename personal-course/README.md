@@ -12,7 +12,7 @@ The course does not aim to make students dependent on AI. It teaches them to dec
 
 ## Session format
 
-Every integrated session is designed for **45–60 minutes**. It combines related activities into one substantial real-life outcome:
+Every integrated session is designed for **90 minutes**. It combines related activities into one substantial real-life outcome:
 
 1. **5–10 minutes — Frame:** a real problem, privacy boundary, and success conditions.
 2. **25–35 minutes — Integrated studio:** linked activities build one artifact.

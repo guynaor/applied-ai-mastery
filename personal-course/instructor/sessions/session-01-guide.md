@@ -1,8 +1,10 @@
 # Full session plan — Session 1: Decide What to Do Next
 
-**Length:** 55–60 minutes
+**Length:** 90 minutes
 **Learner outcome:** Learners can explain the main layers of an AI system, choose an appropriately bounded tool route, and make a low-risk decision from a clear request, a source, and their own judgment.
 **Session artifact:** A one-page verified decision record: request, source-grounded summary, comparison, two checked claims, uncertainty, next action, and review date.
+
+**This session runs 90 minutes, not 60.** The extra time is not overrun — it is questions, and that is where the learning happens.
 
 This is a teach-from-the-page plan. It is deliberately written so that a teacher who did not design the course can run it, and so its numbered blocks can later become a self-paced video. Do not require learners to create accounts or to use more than one AI tool.
 
@@ -16,6 +18,22 @@ These four links are everything you need open to run the session.
 | [Sample options page](../samples/session-01-public-options-page.html) | A stable local source for the two options, with dates, costs, and booking conditions. |
 | [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | A downloadable Word file. Every table learners fill in today is in it. |
 | [Session 1 brief](../../sessions/session-01-ask-summarize-decide.md) | What learners see. |
+
+## The recommended way: a real case, on your screen
+
+What works best is to **take a real case of your own and work it live in front of the class on your own screen.** Three reasons: learners' free accounts run out midway; a real case produces real questions; and they watch you correct the tool, which is worth more than any explanation.
+
+Learners fill in the journal tables for **their own case**. You run it; they think.
+
+**Before every prompt** ask: "What do you think it will come back with?" and "What is missing from my request?"
+**When the answer returns**, read the first number aloud and ask "where is that from?", hunt for the assumption, and correct one thing in front of them.
+**After each stage**, give two minutes for them to fill in the journal. A session where only you typed is a demonstration, not a lesson.
+
+The prepared sample materials stay as backup — for a class with no network, when you have no example of your own, or for a facilitator who wants a guaranteed script.
+
+## Start slow things in the background
+
+Some requests take time — a detailed spreadsheet, a presentation, or anything that generates code. **Do not wait for them in front of the class.** Send it, keep talking about the next thing, and come back when it is ready.
 
 ## Before learners arrive
 
@@ -41,12 +59,12 @@ Use the local page by default. It lets you demonstrate source checking without a
 | Time | Teacher move | Learners produce or notice |
 |---:|---|---|
 | 0–5 | Welcome and low-risk decision hook | A simple everyday decision |
-| 5–17 | AI Geography: map the layers and control boundary | A distinction between app, model, tool, artifact, skill, and agent |
-| 17–23 | Map the three course tools to task modes | A reason to choose one route, not all routes |
-| 23–30 | Reveal the source and model a bounded request | A prompt with goal, context, constraints, output, and check |
-| 30–40 | Run, read, and correct an AI summary | Facts, preferences, unknowns, and claims to verify |
-| 40–52 | Learners make and test their own decision record | A comparison and two source checks |
-| 52–60 | Exit check, reflection, and next-step commitment | A human decision and review date |
+| 5–20 | AI Geography: map the layers and control boundary | A distinction between app, model, tool, artifact, skill, and agent |
+| 20–30 | Map the three course tools to task modes | A reason to choose one route, not all routes |
+| 30–42 | Reveal the source and model a bounded request | A prompt with goal, context, constraints, output, and check |
+| 42–58 | Run, read, and correct an AI summary | Facts, preferences, unknowns, and claims to verify |
+| 58–78 | Learners make and test their own decision record | A comparison and two source checks |
+| 78–90 | Exit check, reflection, and next-step commitment | A human decision and review date |
 
 ## 0–5 minutes — Welcome and session focus
 
@@ -85,7 +103,7 @@ Use three rapid checks with [slide 3](../samples/session-01-slides.html). Have l
 
 Do not get stuck on brand names. If a learner asks whether a named product “is an agent,” say: “It depends on which features and permissions are active. We name the ability, then decide the control.”
 
-## 17–23 minutes — Map the course tools to the work
+## 20–30 minutes — Map the course tools to the work
 
 Present this as a route map, not a product contest. The learner needs only one route today.
 
@@ -102,7 +120,7 @@ Present this as a route map, not a product contest. The learner needs only one r
 
 Point out the transition: today uses a text-only chat with a supplied source. A later session can use web research; a later session can make a small web artifact; a still later session discusses desktop access. The permissions become broader only when the purpose justifies them.
 
-## 23–30 minutes — Demonstrate the source and a better request
+## 30–42 minutes — Demonstrate the source and a better request
 
 Open the local sample page. Read just enough of both options aloud. Ask learners to identify:
 
@@ -131,7 +149,7 @@ The tool should produce a table. It may correctly identify date, cost, duration,
 - If it picks an option, point back to “Do not choose for me.” Ask for a revised comparison.
 - If it merely shortens the page, ask: “Which facts affect a decision, and which claims still need checking?”
 
-## 30–40 minutes — Make verification visible
+## 42–58 minutes — Make verification visible
 
 Project the response beside the local page. Verify two claims that could change the decision—normally **cost** and **time/registration condition**.
 
@@ -143,7 +161,7 @@ Deliberately make one small correction if possible: perhaps the tool has treated
 
 Ask: “What remains human judgment?” Expected answers include value, interest, social preference, tolerance for uncertainty, and whether to act now or gather more information.
 
-## 40–52 minutes — Guided learner work
+## 58–78 minutes — Guided learner work
 
 Learners now work individually, in pairs, or on paper. Keep the same local source unless they independently choose a similarly safe public page.
 
@@ -166,7 +184,7 @@ Circulate with these prompts instead of supplying answers:
 - **Learner ready for more:** Let them choose a current public page, explain why it suits the task, and identify one source limitation.
 - **Language support:** Permit a request in the learner’s stronger language; require labels for fact, preference, unknown, and check in the course language as well.
 
-## 52–60 minutes — Exit check and evidence
+## 78–90 minutes — Exit check and evidence
 
 Ask each learner to complete this sentence: “I will take **[next action]** because the verified facts are **[two facts]**, but I still need to check **[unknown]** by **[review date]**.”
 
