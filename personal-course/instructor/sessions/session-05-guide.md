@@ -1,192 +1,180 @@
 # Full session plan — Session 5: Make a Space Work Better
 
 **Time:** 90 minutes
-**Learning outcome:** Learners label where every dimension came from, tell a measurement from an assumption, and test physical fit in cardboard before buying or building anything.
-**Session artifact:** One design sheet: a dimension table with a source for every number, clearances, an adjustable parameter, the cardboard-test result, and a sentence on what the design is not suitable for.
+**Learning outcome:** Learners label where every dimension came from, describe an object to an AI and get a parametric 3D model, change one parameter having predicted the result, and check the outcome against the physical world.
+**Session artifact:** A design sheet with a dimension table and sources, the model file or code, a parameter changed with a prediction, and a physical-check result.
 
-**This session runs 90 minutes, not 60.** The extra time is not overrun — it is questions, and that is where the learning happens.
+**This session runs 90 minutes.** The extra time is questions, and they are heaviest here — this is the session where people discover you can talk to CAD software.
 
-This guide can be taught from directly. No design or 3D-printing knowledge is needed. This session is about measuring, assumptions, and physical testing — exactly the parts no tool will do for you, because it has not seen the room.
+## Send a week ahead — the setup guide
+
+**This is the only session in the course with real installation.** Send the [setup guide](../../sessions/session-05-setup.md) a week before, not two days.
+
+> Session 5 needs some installation. Work through the setup guide and pick **one route only**. The free route — OpenSCAD alone — is enough for the whole session, with no account and no payment. If you want to watch a model change as you talk to it, take route 2. Do not try to install everything. Every step in the guide ends with a check — if it fails, drop one route, and that is completely fine.
+
+**Test all three routes yourself in the week before.** This is the most fragile session in the course, and almost every failure is installation rather than design.
 
 ## Session materials
 
 | Material | What it is for |
 |---|---|
 | [Projection slides](../../instructor/samples/session-05-slides.html) | Ten slides, in session order. |
-| [Sample measurements](../../instructor/samples/session-05-measurements.html) | A measured drawer with objects, clearances, and one planted assumption — for anyone with nothing to measure. |
-| [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | Downloadable Word file with the dimension table, the proposal table, and the fit-check table. |
-| [Session 5 brief](../../sessions/session-05-design-physical-project.md) | What learners see. |
+| [Setup guide](../../sessions/session-05-setup.md) | Send a week ahead. Three routes, with a check at every step. |
+| [OpenSCAD starter](../../instructor/samples/session-05-organiser.scad) | A parametric drawer organiser that runs immediately. The basis for the demonstration. |
+| [Sample measurements](../../instructor/samples/session-05-measurements.html) | A measured drawer with one planted assumption, for anyone with nothing to measure. |
+| [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | The dimension table, the proposal table, and the fit-check table. |
 
-## The recommended way: a real case, on your screen
+## The three routes — and what they share
 
-What works best is to **take a real case of your own and work it live in front of the class on your own screen.** Three reasons: learners' free accounts run out midway; a real case produces real questions; and they watch you correct the tool, which is worth more than any explanation.
+| Route | Tools | What the learner does |
+|---|---|---|
+| **1 — Free** | OpenSCAD + any AI chat | Asks for code, pastes it, presses F5, sees a model |
+| **2 — Visual** | FreeCAD + the MCP + Claude Desktop | Talks, and watches the model being built |
+| **3 — Advanced** | Claude Code or Antigravity | Drives both from an editor or a terminal |
 
-Learners fill in the journal tables for **their own case**. You run it; they think.
+**What they share — and this is what gets assessed:** measurement with a source for every number, a prediction before changing a parameter, and a physical check in cardboard. Anyone on route 1 is missing none of the learning. Say that out loud at the start, or whoever failed to install will feel excluded.
 
-**Before every prompt** ask: "What do you think it will come back with?" and "What is missing from my request?"
-**When the answer returns**, read the first number aloud and ask "where is that from?", hunt for the assumption, and correct one thing in front of them.
-**After each stage**, give two minutes for them to fill in the journal. A session where only you typed is a demonstration, not a lesson.
+## The recommended way: your own real object, on your screen
 
-The prepared sample materials stay as backup — for a class with no network, when you have no example of your own, or for a facilitator who wants a guaranteed script.
+**Take something you genuinely want to exist and design it live in front of the class.** The demonstration runs on your machine, and here there is an extra reason: the advanced routes need installation that will not have worked for everyone, and when the demonstration is yours, nobody is blocked.
+
+**Before every request** ask: "Which dimension will it need that I have not given it?"
+**When the model comes back**, hunt for the number it invented — there is always one — and ask "where is that from?"
+**After each stage**, two minutes for them to fill in the journal for their own object.
 
 ## Start slow things in the background
 
-Some requests take time — a detailed spreadsheet, a presentation, or anything that generates code. **Do not wait for them in front of the class.** Send it, keep talking about the next thing, and come back when it is ready.
-
-## Before learners arrive
-
-### Prepare the room and tools
-
-1. **Ask learners to have a ruler or tape measure, scissors, and cardboard to hand** — remotely this is an advantage, because they are sitting beside the thing they are measuring. If the session is in a room, bring a box, a ruler, and cardboard for each pair. This is the one session in the course where hands do the important work.
-2. Open the [sample measurements](../../instructor/samples/session-05-measurements.html). Not every learner will have something to measure in the room, and this gives them a complete drawer to work with.
-3. Open the [slides](../../instructor/samples/session-05-slides.html) and a chat tool in the facilitator account.
-4. If there is a real object in the room that can be measured — a cupboard, a drawer, a shelf — it beats any sample.
-
-### What learners need
-
-- One small corner they know and find annoying. Anyone joining from home is sitting right beside the drawer or corner in question, which is this session's big advantage when run remotely. Anyone not at home works from memory and labels everything as an assumption — a lesson in itself.
-- A ruler or tape measure, paper, and cardboard.
-- A device with one AI tool is optional. The whole session works without it.
-
-### Two facilitator decisions before starting
-
-**How much time to give to hands.** The cardboard test is the heart, and learners always discover something in it. Do not let the measuring stage or the tool stage eat into it. If something has to be cut short, it is the tool stage.
-
-**Whether to use an AI tool at all.** It is useful for organising the specification and spotting missing dimensions. It is entirely useless on the question of whether something fits. Say so up front, or somebody will trust a drawing.
+Rendering a complex model takes time, and so does asking an AI to write a long piece of code. **Send it and keep talking.** At minute 40, when you ask for a variation or a second model, do not stand watching the screen — move on to discussing the physical check while it runs.
 
 ## Session map
 
-| Time | What the facilitator does | What learners produce or identify |
+| Time | What happens | What learners produce |
 |---:|---|---|
-| 0–10 | **Homework discussion** | What worked and what broke for other people |
-| 10–15 | Opening: which corner annoys you daily | One real corner |
-| 15–35 | Measure, and label every number's source | The difference between measured, spec, assumed, calculated |
-| 35–48 | Clearances, material, one adjustable parameter | Constraints written down rather than assumed |
-| 48–68 | One proposal, and a parameter change with a prediction | Whether the model behaves as expected |
-| 68–82 | Full-size cardboard test | One assumption proved wrong |
-| 82–90 | Exit check and reflection | A design sheet you could build from |
+| 0–10 | **Homework discussion** | What broke for other people |
+| 10–15 | Readiness check: who is on which route | Everyone knows where they are, nobody is stuck |
+| 15–30 | Measure, and label every number's source | The difference between measured, spec, assumed, calculated |
+| 30–55 | Describe it to the AI, and it builds | A parametric model, and a list of what it invented |
+| 55–70 | Change one parameter, after predicting | Whether the model behaves as expected |
+| 70–85 | Physical check in cardboard | One assumption proved wrong |
+| 85–90 | Exit check, decision, and homework | What next, and what to check first |
 
 ## 0–10 minutes — Homework discussion
 
-**Start here in every session from the second onwards.** It works well, and not because it is a check — because a learner who hears what broke for someone else learns faster than from a lesson.
+Three questions: **Who managed it? Who did it not work for, and where did it stick? What surprised you?**
 
-Three questions, in this order:
+## 10–15 minutes — Readiness check
 
-1. **"Who managed to do something with what we talked about?"** Two or three tell it.
-2. **"Who did it not work for, and where did it get stuck?"** This is the important one. If nobody answers, tell them about something that got stuck for you.
-3. **"What surprised you?"** The best insights arrive here.
+**Do not skip this, and do not let it expand.** Five minutes, no more.
 
-Note two things that came up, and return to them later in the session by the name of whoever raised them.
+Ask in the chat or by show of hands: "Who is on route 1? Route 2? Route 3? Who has nothing working?"
 
-## 10–15 minutes — Opening
-
-Show [slide 1](../../instructor/samples/session-05-slides.html): “Which one corner of your home annoys you daily, but never quite enough to fix?”
+- Nothing working → route 1, now. One download, and they will keep up.
+- Stuck on route 2 → drop to route 1 for today, and you help them afterwards.
 
 ### What to say
 
-> “Today we design one small fix — and test it in cardboard before spending anything. Most failures in projects like this are not design failures. They are one dimension nobody checked.”
+> "The tools differ, the thinking is identical. Anyone on OpenSCAD alone does exactly the same exercise and checks exactly the same cardboard at the end. We are not learning software today — we are learning how to give an AI real numbers and how to check what it gave back."
 
-## 15–35 minutes — Measure, and label the source
+### The failure everyone hits
+
+If someone on route 2 says "it will not connect" or shows `Connection refused` — almost always **FreeCAD is not open, or its internal server was never started.** The MCP server alone is not enough. That resolves most cases in ten seconds.
+
+## 15–30 minutes — Measuring
 
 Show [slide 2](../../instructor/samples/session-05-slides.html) with the four labels: **measured**, **spec**, **assumed**, **calculated**.
 
-Measure a real object in front of the class and record it with its label. Then let learners measure their own, or work from the [sample measurements](../../instructor/samples/session-05-measurements.html).
+Measure a real object in front of the class and record it with its label. Anyone with nothing to measure works from the [sample measurements](../../instructor/samples/session-05-measurements.html).
 
-### The moment that matters: the planted assumption
+### The moment that matters
 
-The sample says “the drawer opens fully — assumed”. Show [slide 3](../../instructor/samples/session-05-slides.html) and ask what happens if that assumption is wrong.
-
-The answer: cheap runners stop at 80 per cent, so the usable depth is 33.6 cm rather than 42. Any organiser designed for the full depth will be out of reach at the back.
+Show [slide 3](../../instructor/samples/session-05-slides.html) — the planted assumption: "the drawer opens fully", which nobody measured. If the runners stop at 80 per cent, usable depth is 33.6 cm rather than 42.
 
 ### What to say
 
-> “Assumptions are not the problem. You cannot measure everything. The problem is an assumption written in the same table, in the same pencil, looking exactly like a measurement.”
+> "This is the part the AI cannot do. It has not seen the room. It will invent a dimension that looks reasonable, with total confidence, and it will look exactly like a measurement."
 
-### If a learner cannot measure right now
+**Two minutes in the journal.**
 
-Good — have them write the dimensions from memory and label every one “assumed”. At the end they will be looking at a sheet that is entirely assumptions, which demonstrates the point better than any explanation.
+## 30–55 minutes — Describe it, and the AI builds
 
-## 35–48 minutes — Constraints and clearances
-
-Show [slide 4](../../instructor/samples/session-05-slides.html) and the three forgotten clearances: room for a finger, the gap above, and the wall thickness eating into the internal dimension.
-
-Each learner picks **one parameter** that can change — number of compartments, divider height, compartment width.
-
-## 48–68 minutes — Proposal, and a parameter change
-
-Show the request on [slide 5](../../instructor/samples/session-05-slides.html) and run it with the measurements on screen.
+The long block. Show the request on [slide 5](../../instructor/samples/session-05-slides.html) and run it on your route.
 
 ### Expected intermediate output
 
-A specification that separates measurements, assumptions, and clearances, and flags missing dimensions. If the tool returned numbers you never gave it, that is the important finding of this stage.
+**Route 1:** OpenSCAD code that runs and produces a shape. **Routes 2–3:** a solid appearing in FreeCAD.
 
-### The moment that matters: predict before changing
+### The moment that matters: what it invented
 
-Show [slide 6](../../instructor/samples/session-05-slides.html). Before changing the parameter, each learner writes what **should** happen. Then change it and check.
+Once the model exists, ask the tool explicitly:
 
-### What to say
+> Which dimensions did you use that I did not give you? List each one, and what you assumed about it.
 
-> “If your prediction did not match what happened, you did not understand the model. Better to find that out now, on screen, than after a three-hour print.”
+It will produce a list: wall thickness, clearances, heights, fillet radii. **None of them is necessarily wrong — they simply were not measured.** This is exactly the "assumption that looks like a measurement" lesson, now inside geometry.
 
 ### If the output is weak
 
-- **The tool invented dimensions.** Point at them and ask “where did that come from?” This is the moment to show it has not seen the room.
-- **It declared the design safe.** Remind them the request forbade that, and re-run.
-- **It gave a nice drawing with no numbers.** Ask for a dimension table. A drawing is not a specification.
+- **The code does not run.** Good, and it happens. Paste the error straight back into the tool — that is the thing being learned.
+- **It built something handsome that ignores your measurements.** Point at it. A model not derived from the measurements is decoration.
+- **It declared the design strong or safe.** Remind them it cannot know that, and remove the claim.
 
-## 68–82 minutes — The cardboard test
+**Two minutes in the journal.**
 
-This is the part not to skip. Show [slide 7](../../instructor/samples/session-05-slides.html).
+## 55–70 minutes — One parameter, with a prediction
 
-Cut at the real size, pencil the compartments in, put it in place — and use it as you would on an ordinary day. The three checks: that it fits the width, that something comes out one-handed, and that the drawer still closes.
+Show [slide 6](../../instructor/samples/session-05-slides.html). Before changing anything, everyone writes what **should** happen.
+
+In the starter file: `compartments` from 5 to 7. Each compartment should drop from 68.7 mm to 48.4 mm. Change it, press F5, and check whether that is what happened.
 
 ### What to say
 
-> “The cardboard is the only thing here that touches reality. A convincing sketch is not proof that something fits — a neat render looks right even when one dimension is wrong.”
+> "If your prediction did not match, you did not understand the model. Better to find that out now, on screen, than after a three-hour print."
 
-Circulate and ask: “Which dimension surprised you?” and “What would you have bought just now, if you had not checked?”
+## 70–85 minutes — The physical check
 
-## 82–90 minutes — Exit check and reflection
+**The part not to skip.** Show [slide 7](../../instructor/samples/session-05-slides.html).
 
-Show [slide 10](../../instructor/samples/session-05-slides.html):
+Cut cardboard to the model's dimensions, put it in place, and try to use it normally. The three checks: it fits the width, something comes out one-handed, and the drawer still closes.
 
-> My design rests on **[number]** measured dimensions and **[number]** assumptions. The most dangerous assumption is **[which]**. The cardboard test revealed that **[what]**, so I changed **[what]**.
+### What to say
 
-Reflection question: “Which dimension were you certain of — until you measured it?”
+> "The model looks perfect on screen because it is perfect — in a world with no dust, no warped panel, and no runner that stops at 80 per cent. The cardboard is the only thing here that touches reality."
+
+## 85–90 minutes — Exit
+
+[Slide 10](../../instructor/samples/session-05-slides.html):
+
+> My design rests on **[number]** measured dimensions and **[number]** assumptions — including **[number]** the AI invented. The physical check revealed that **[what]**, so I changed **[what]**.
+
+### The homework
+
+"Change one more parameter in your model and predict the result first. **I will ask at the start what did not work** — especially if the installation broke."
 
 ### Quick assessment rubric
 
 | Evidence | Not yet | Ready |
 |---|---|---|
 | Dimensions | A list of numbers | Every number carries a source label |
-| Assumptions | Unmarked | Marked, with one identified as the most dangerous |
-| Parameter | “Things could change” | One parameter, with a prediction that was checked |
-| Physical test | “It'll fit” | Cardboard cut, placed, and the result recorded |
-
-## Equivalent tool routes
-
-**No tool (a full route):** A ruler, paper, and cardboard. This is the main route, not a fallback.
-**Gemini / Claude / ChatGPT:** Exactly the same request, for organising the specification and spotting missing dimensions.
-**Anyone already comfortable with 3D:** Open a parametric file and change a parameter in it, but the cardboard test remains compulsory.
+| What the AI invented | Never asked | Asked explicitly, and has the list |
+| Parameter | "I changed something" | A prediction written first, then checked |
+| Physical check | "It'll fit" | Cardboard cut, placed, and the result recorded |
 
 ## Troubleshoot without losing the lesson
 
 | Situation | Facilitator response |
 |---|---|
-| Nothing to measure in the room | Switch to the sample measurements, or measure something that is in the room. |
-| A learner picks too large a project | “A new wardrobe” is not a project for today. Narrow to one shelf inside it. |
-| Someone wants to design something load-bearing | Stop and explain the limit. Offer an organiser instead. |
-| The tool declares the design safe | Show the sentence, remind them it has not seen the object, and remove the claim. |
-| The cardboard shows the design does not fit | That is the best outcome in the session. Record it and change one dimension. |
-| Time runs out | Drop the tool stage, not the cardboard test. |
+| `Connection refused` on route 2 | FreeCAD is not open, or its internal server was not started. Almost always this. |
+| Someone's installation did not work | Route 1, now. One download, and it is enough. |
+| The AI's code will not run | Paste the error back into it. That is part of the lesson. |
+| A handsome model that ignores the measurements | "Where did that number come from?" Return to the measurements. |
+| Someone wants to design something load-bearing | Stop and explain the limit. Offer an organiser. |
+| Time runs out | Drop the parameter change. Not the physical check. |
 
 ## Differentiation
 
-- **No device:** The whole session works with a ruler and paper. There is no gap here.
-- **For learners who need structure:** Give them the sample measurements and ask them to design only the compartment layout.
-- **For learners ready to extend:** Ask them to work out what happens to the design if wall thickness grows from 2 mm to 4 mm.
-- **Motor or vision difficulty:** Measure in pairs, and note that full-size cardboard helps more than any drawing.
+- **Remote:** An advantage here — learners are at home, beside the object they are measuring.
+- **No installation at all:** Paper and a ruler. The same table, the same physical check, the same rubric.
+- **For learners ready to extend:** Ask the tool to add a parameter that did not exist, and see what breaks.
 
 ## After the session
 
-Note which assumption turned out wrong for the most learners — it will probably recur, and is worth promoting into slide 3. If someone actually built what they designed, ask them to bring it next session: an object built after a cardboard test is the best evidence the method works.
+Note how many learners finished on each route, and which installation broke most often — that is what you fix in the setup guide before next time. If anyone printed what they designed, ask them to bring it next session: an object built after a cardboard test is the best evidence the method works.

@@ -30,85 +30,105 @@
   <body>
 
     <section class="slide">
-      <p class="num">Slide 1 — Opening, minutes 0–5</p>
-      <h1>Which one corner of your home annoys you daily, but never quite enough to fix?</h1>
-      <div class="say big">Today we design one small fix — and test it in cardboard before spending anything.</div>
+      <p class="num">Slide 1 — Readiness check, minutes 10–15</p>
+      <h1>Who is on which route?</h1>
+      <table>
+        <thead><tr><th>Route</th><th>Tools</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1 — Free</strong></td><td>OpenSCAD + any AI chat</td></tr>
+          <tr><td><strong>2 — Visual</strong></td><td>FreeCAD + the MCP + Claude Desktop</td></tr>
+          <tr class="total"><td><strong>3 — Advanced</strong></td><td>Claude Code or Antigravity</td></tr>
+        </tbody>
+      </table>
+      <div class="say">The tools differ, the thinking is identical. Anyone on route 1 does exactly the same exercise and checks exactly the same cardboard.</div>
     </section>
     <section class="slide">
-      <p class="num">Slide 2 — Measuring, minutes 5–17</p>
+      <p class="num">Slide 2 — Measuring, minutes 15–30</p>
       <h1>Every number has a source</h1>
       <table>
         <thead><tr><th>Label</th><th>What it means</th><th>Example</th></tr></thead>
         <tbody>
-          <tr><td>Measured</td><td>You put a ruler on it</td><td>Internal width 36 cm</td></tr>
+          <tr><td>Measured</td><td>You put a ruler on it</td><td>Internal width 360 mm</td></tr>
           <tr><td>Spec</td><td>It is on the maker's sheet</td><td>Panel thickness 1.8 cm</td></tr>
           <tr><td>Assumed</td><td>You took it as true without checking</td><td>“The drawer opens fully”</td></tr>
-          <tr class="total"><td>Calculated</td><td>Derived from other numbers</td><td>Usable area 36 x 42</td></tr>
+          <tr class="total"><td>Calculated</td><td>Derived from other numbers</td><td>Compartment width 68.7 mm</td></tr>
         </tbody>
       </table>
-      <div class="say">Assumptions are not the problem. Assumptions that look like measurements are.</div>
+      <div class="say">This is the part the AI cannot do. It has not seen the room.</div>
     </section>
     <section class="slide">
-      <p class="num">Slide 3 — The assumption everyone forgets</p>
+      <p class="num">Slide 3 — The forgotten assumption</p>
       <h1>“The drawer opens fully”</h1>
       <div class="warn">Nobody measured that. Cheap runners stop at 80 per cent.</div>
-      <p class="big">If that holds, the usable depth is <strong>33.6 cm</strong>, not 42 — and the back of the organiser you designed is out of reach.</p>
-      <div class="say">One measurement you did not take outranks every calculation you did.</div>
+      <p class="big">If that holds, usable depth is <strong>33.6 cm</strong>, not 42 — and the back of the organiser is out of reach.</p>
     </section>
     <section class="slide">
-      <p class="num">Slide 4 — Constraints, minutes 17–29</p>
-      <h1>Three clearances people forget</h1>
-      <ul class="big">
-        <li><strong>A finger:</strong> it has to get in to lift something out — at least 1.5 cm around each compartment.</li>
-        <li><strong>Above:</strong> the organiser must not touch the runner — 0.5 cm.</li>
-        <li><strong>The wall thickness itself:</strong> it eats into the internal dimension, not the external one.</li>
-      </ul>
+      <p class="num">Slide 4 — What talking to CAD looks like</p>
+      <h1>Three routes to the same model</h1>
+      <table>
+        <thead><tr><th></th><th>Route 1</th><th>Routes 2–3</th></tr></thead>
+        <tbody>
+          <tr><td>What the AI produces</td><td>OpenSCAD code</td><td>Commands to FreeCAD</td></tr>
+          <tr><td>What you do</td><td>Paste it, press F5</td><td>Watch</td></tr>
+          <tr><td>What you see</td><td>All of the code</td><td>The shape</td></tr>
+          <tr class="total"><td>What gets checked at the end</td><td colspan="2">Exactly the same cardboard</td></tr>
+        </tbody>
+      </table>
     </section>
     <section class="slide">
-      <p class="num">Slide 5 — The request</p>
-      <h1>The tool has not seen the room</h1>
-      <div class="prompt">These are measurements I took in a drawer, each with a source label. Turn them into a specification for a drawer organiser that carries no weight and involves no electrics. Separate clearly: measured values, assumptions, clearances, and one adjustable parameter. Flag every place where I am missing a dimension. Do not claim the design is safe or engineering-approved.</div>
+      <p class="num">Slide 5 — The request, minutes 30–55</p>
+      <h1>Give it real numbers</h1>
+      <div class="prompt">These are measurements I took, each with a source label: [the measurements]. I want a drawer organiser with compartments for cables. Build a parametric model where every dimension derives from the numbers I gave, with the parameters at the top of the file so I can change them. Do not invent dimensions — if something is missing, ask me instead of filling it in. Do not claim the design is strong or safe.</div>
     </section>
     <section class="slide">
-      <p class="num">Slide 6 — The parameter you change</p>
-      <h1>Predict first, then check</h1>
-      <p class="big">Number of cable compartments: from <strong>5</strong> to <strong>7</strong>.</p>
-      <div class="box big">Write down <strong>before</strong> you change it: what should happen to the width of each one? Then change it, and check whether that is what happened.</div>
-      <div class="say">If your prediction was wrong, you did not understand the model — and that is exactly what you want to find out now rather than after printing.</div>
+      <p class="num">Slide 6 — The question that comes after</p>
+      <h1>“Which dimensions did you use that I did not give you?”</h1>
+      <p class="big">It will produce a list: wall thickness, clearances, heights, fillet radii.</p>
+      <div class="say">None of them is necessarily wrong. They simply were not measured — the same assumption-that-looks-like-a-measurement, now inside geometry.</div>
     </section>
     <section class="slide">
-      <p class="num">Slide 7 — The cardboard test, minutes 44–54</p>
-      <h1>The cheapest test you will run</h1>
-      <p class="big">Cut a rectangle at the real size, pencil in the compartments, put it in place — and use it as you would on an ordinary day.</p>
+      <p class="num">Slide 7 — One parameter, minutes 55–70</p>
+      <h1>Predict first, then change</h1>
+      <div class="box big">
+        <p><code>compartments = 5;</code> &nbsp;→&nbsp; <code>7</code></p>
+        <p>What should happen to the width of each compartment?</p>
+      </div>
+      <table>
+        <thead><tr><th>Compartments</th><th>Width of each</th></tr></thead>
+        <tbody>
+          <tr><td>5</td><td>68.7 mm</td></tr>
+          <tr class="total"><td>7</td><td>48.4 mm</td></tr>
+        </tbody>
+      </table>
+      <div class="say">If your prediction did not match, you did not understand the model. Better now than after a three-hour print.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 8 — Physical check, minutes 70–85</p>
+      <h1>The cardboard is the only thing that touches reality</h1>
+      <p class="big">Cut to the model's dimensions, put it in place, and use it normally.</p>
       <table>
         <thead><tr><th>What to test</th><th>Why that specifically</th></tr></thead>
         <tbody>
           <tr><td>That it fits the width</td><td>The easiest dimension to get wrong</td></tr>
-          <tr><td>That something comes out one-handed</td><td>That is how a drawer is actually used</td></tr>
-          <tr class="total"><td>That the drawer still closes</td><td>The expensive failure: found after building</td></tr>
+          <tr><td>That something comes out one-handed</td><td>That is how it is actually used</td></tr>
+          <tr class="total"><td>That the drawer still closes</td><td>The expensive failure: found after printing</td></tr>
         </tbody>
       </table>
     </section>
     <section class="slide">
-      <p class="num">Slide 8 — What a drawing does not prove</p>
-      <h1>A convincing sketch is not proof that something fits</h1>
-      <div class="warn">A neat render, a clean 3D model, an image from the tool — all of them look right even when one dimension is wrong.</div>
-      <p class="big">The cardboard is the only thing here that touches reality.</p>
-    </section>
-    <section class="slide">
-      <p class="num">Slide 9 — The limit of this session</p>
+      <p class="num">Slide 9 — The limit</p>
       <h1>What we are not designing today</h1>
       <ul class="big">
         <li>Nothing that carries a person's weight</li>
         <li>Nothing involving electrics</li>
         <li>Nothing that is dangerous if it fails</li>
       </ul>
-      <div class="say">We are designing an organiser, not a shelf above a cot. That is not modesty — it is scoping.</div>
+      <div class="warn">And the tool does not know this. It will happily build a bracket for a heavy shelf and tell you it looks good.</div>
     </section>
     <section class="slide">
-      <p class="num">Slide 10 — Exit check, minutes 54–60</p>
+      <p class="num">Slide 10 — Exit, minutes 85–90</p>
       <h1>Complete out loud or in writing</h1>
-      <div class="box big">My design rests on <strong>[number]</strong> measured dimensions and <strong>[number]</strong> assumptions. The most dangerous assumption is <strong>[which]</strong>. The cardboard test revealed that <strong>[what]</strong>, so I changed <strong>[what]</strong>.</div>
+      <div class="box big">My design rests on <strong>[number]</strong> measured dimensions and <strong>[number]</strong> assumptions — including <strong>[number]</strong> the AI invented. The physical check revealed that <strong>[what]</strong>, so I changed <strong>[what]</strong>.</div>
       <h2>And the reflection question</h2>
       <p class="big">Which dimension were you certain of — until you measured it?</p>
     </section>
