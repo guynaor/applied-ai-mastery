@@ -1,18 +1,29 @@
 # Full session plan — Session 4: Solve a Recurring Problem
 
 **Time:** 90 minutes
-**Learning outcome:** Learners build the same problem twice — a tiny version in chat and a real one in Lovable — test each against a normal case and an edge case, and can explain when the tiny version is enough.
+**Learning outcome:** Learners build the same problem twice — a tiny version in chat and a real one in Lovable or Manus — test each against a normal case and an edge case, and can explain when the tiny version is enough.
 **Session artifact:** Two versions (or one plus a description of the other) and a test log: the problem, the permitted actions, the normal case, the edge case, and a sentence on which will still be in use in a month.
 
 **This session runs 90 minutes.** The extra time is questions, and they are heaviest here — this is the session where people discover they can build software.
 
-## Send before the session — sign up for Lovable
+## Send before the session — sign up for one platform
 
 **Send this to learners at least a day ahead.** If sign-up happens in the lesson, you have lost twenty minutes.
 
-> Before the next session, open a free account at lovable.dev. Sign up with Google or an email address, no credit card. If you are asked for payment details, stop — you are in the wrong place. Open one empty project to check it works. If you cannot, that is fine — you will be able to watch and do everything else.
+There are two options, and the choice is about **what you are building**, not which is better:
 
-Lovable's free tier is generous enough for what we do. No subscription is needed.
+| Platform | Suits | Note |
+|---|---|---|
+| [Lovable](https://lovable.dev) | A **web** app — opens in a browser, has an address you can send | Generous free tier, no credit card |
+| [Manus](https://manus.im) | A **mobile** app — it has a mode dedicated to building phone apps | Check its current free allowance before the session |
+
+The message to send:
+
+> Before the next session, open a free account on one of two: lovable.dev if you want to build a web app, or manus.im if you want a phone app. Sign up with Google or an email address, no credit card. If payment details are required just to start, stop and pick the other one. Open one empty project to check it works. If you cannot, that is fine — you will be able to watch and do everything else.
+
+**Learners already met Manus in Session 2**, as a managed agent platform. It is worth naming that: same platform, different job. That is a lesson in itself — the line between "a tool that does something for me" and "a tool that builds something for me" is blurrier than it looks.
+
+**Try both platforms yourself in the week before.** Free tiers change without notice, and that is the one thing that can break this session.
 
 ## Session materials
 
@@ -25,9 +36,9 @@ Lovable's free tier is generous enough for what we do. No subscription is needed
 
 ## The recommended way: your own real problem, on your screen
 
-As in earlier sessions — **take a real recurring problem of your own and build it live in front of the class.** Here there is an extra reason: Lovable burns through a free quota fairly quickly, and if everyone builds separately some will stall halfway. When the heavy building runs on your account, nobody gets blocked.
+As in earlier sessions — **take a real recurring problem of your own and build it live in front of the class.** Here there is an extra reason: these platforms burn through a free quota fairly quickly, and if everyone builds separately some will stall halfway. When the heavy building runs on your account, nobody gets blocked.
 
-Learners build the tiny version themselves — it is cheap — and fill in the journal for their own problem. You run Lovable; they propose what to ask for.
+Learners build the tiny version themselves — it is cheap — and fill in the journal for their own problem. You run the platform; they propose what to ask for.
 
 ### What to ask before every request
 
@@ -38,12 +49,12 @@ Learners build the tiny version themselves — it is cheap — and fill in the j
 ### What to highlight when it comes back
 
 - **Open it immediately and click something.** Do not settle for what the tool shows you on screen.
-- **Hunt for what it added that you did not ask for** — Lovable almost always adds screens and features. That is convenient and dangerous.
+- **Hunt for what it added that you did not ask for** — both platforms almost always add screens and features. That is convenient and dangerous.
 - **Fix one thing in front of them** and re-run.
 
 ## Start slow things in the background
 
-A Lovable build takes minutes, not seconds. **Send the request, then talk** — do not stand in front of a progress bar. In this session: at minute 45, send the Lovable request and move on to discussing the tiny version's test results while it builds.
+A build on one of these platforms takes minutes, not seconds. **Send the request, then talk** — do not stand in front of a progress bar. In this session: at minute 45, send the platform request and move on to discussing the tiny version's test results while it builds.
 
 The same rule applies to anything slow: a detailed spreadsheet, a presentation, or an application. Send, keep going, come back.
 
@@ -55,8 +66,8 @@ The same rule applies to anything slow: a detailed spreadsheet, a presentation, 
 | 10–20 | Shrink it: one user, at most three actions | A definition you can build from |
 | 20–35 | Tiny version in chat, and downloading it to run locally | A tool that runs on their own machine |
 | 35–45 | Normal case, then an edge-case card | A test log with expected against actual |
-| 45–70 | Lovable — a real application (sent at minute 45) | The difference between a prototype and an application |
-| 70–80 | Test Lovable, and decide what is enough | What is stored where, and who can open it |
+| 45–70 | A real application in Lovable or Manus (sent at minute 45) | The difference between a prototype and an application |
+| 70–80 | Test the application, and decide what is enough | What is stored where, and who can open it |
 | 80–90 | Control, exit check, and homework | A reasoned choice between the two |
 
 ## 0–10 minutes — Homework discussion
@@ -65,7 +76,7 @@ Three questions, in this order: **Who managed it? Who did it not work for, and w
 
 The second is the important one. If nobody answers, tell them about something that got stuck for you.
 
-In this session it is also worth asking: **"Who managed to open a Lovable account, and who got stuck?"** That tells you immediately who to pair up.
+In this session it is also worth asking: **"Who managed to open an account, on which platform, and who got stuck?"** That tells you immediately who to pair up.
 
 ## 10–20 minutes — Shrink it
 
@@ -99,41 +110,46 @@ Show [slide 4](../../instructor/samples/session-04-slides.html) and the three qu
 
 Show [slide 5](../../instructor/samples/session-04-slides.html). The **normal case** first, and only when it passes, a [test card](../../instructor/samples/session-04-test-cards.html) each.
 
-**At exactly minute 45, send the Lovable request** and let it build while you carry on discussing the results.
+**At exactly minute 45, send the platform request** and let it build while you carry on discussing the results.
 
 ### What to say
 
 > "A card that broke the tool is a test that succeeded. We are looking for the limit, because without it you will not know when to stop trusting it."
 
-## 45–70 minutes — Lovable
+## 45–70 minutes — The real application
 
 The request you sent at minute 45 is under way. While it runs, ask: "What will be different between this and what we already built?"
 
-### The request
+Demonstrate whichever platform most of the class signed up for. If the group is split, demonstrate one and ask someone who chose the other to report at the end on what came out differently. That comparison is worth more than a double demonstration.
+
+### The request — the same one on either platform
 
 > Build an application for splitting costs between three flatmates. One screen to add an expense — who paid, how much, what for — and one screen showing how much each person owes. The data should persist between visits. No user login, no real payments, and do not store bank details. Keep it as simple as possible.
 
+**In Manus**, add at the end: "Build this as a phone app." That is what triggers its dedicated mode, and it changes the result — phone-sized screens, bottom navigation, and touch rather than a mouse.
+
 ### What is different here, and why it matters
 
-| The tiny version in chat | Lovable |
-|---|---|
-| One file on your machine | An application with a real address |
-| Data disappears on refresh | Data persists |
-| Only you see it | You can send it to someone |
-| A minute to build | Minutes, sometimes more |
-| You understand every line | It built things you never asked for |
+| | The tiny version in chat | Lovable | Manus |
+|---|---|---|---|
+| What you get | One file on your machine | A web app with an address | A phone-sized app |
+| The data | Disappears on refresh | Persists | Persists |
+| How you share it | Send the file | Send a link | Open it on a phone |
+| Build time | A minute | Minutes | Minutes |
+| What you understand | Every line | Some | Some |
+| Added unasked | Nothing | A lot | A lot |
 
-**That last row is the heart of it.** Lovable almost always adds screens and features. Show it: "I asked for two screens. How many are here?"
+**That last row is the heart of it.** Both platforms almost always add screens and features. Show it: "I asked for two screens. How many are here?"
 
 ### One change
 
-Ask for one change — say, "add a button to reset the month". This is where the real difference shows: in chat you get a new file, in Lovable it modifies an existing application and sometimes breaks something else.
+Ask for one change — say, "add a button to reset the month". This is where the real difference shows: in chat you get a new file; on a platform it modifies an existing application and sometimes breaks something else.
 
-### If Lovable fails or the quota runs out
+### If the platform fails or the quota runs out
 
 It happens. Say so out loud, carry on with the tiny version, and ask learners to record in the journal what **would** have been different. The comparison is the learning, not the application.
 
-## 70–80 minutes — Test Lovable and decide
+## 70–80 minutes — Test the application and decide
 
 Run the same test cards against the application. Empty field, zero, text where a number goes.
 
@@ -141,7 +157,7 @@ Then the question that closes the session: **"Which of the two will you actually
 
 For most people the answer is the tiny version, and that is a correct answer. A real application is only worth more if you use it.
 
-Show [slide 8](../../instructor/samples/session-04-slides.html): where it is stored, who opens it, how it is cleared, when to stop. Lovable has a different answer to each — the data sits on somebody else's server.
+Show [slide 8](../../instructor/samples/session-04-slides.html): where it is stored, who opens it, how it is cleared, when to stop. Both platforms answer each differently from the tiny version — the data sits on somebody else's server, and real deletion is not always what looks like deletion.
 
 ## 80–90 minutes — Exit check and homework
 
@@ -159,36 +175,38 @@ Show [slide 8](../../instructor/samples/session-04-slides.html): where it is sto
 |---|---|---|
 | The definition | "A tool to help me get organised" | One user, one problem, at most three actions |
 | Testing | "I tried it, it works" | Expected against actual, both cases, both versions |
-| Understanding the difference | "Lovable is better" | Can say what is stored where, and what was added unasked |
+| Understanding the difference | "The platform is better" | Can say what is stored where, and what was added unasked |
 | The decision | "I'll use both" | Picked one, and can explain why |
 
 ## Equivalent tool routes
 
 **Claude Artifacts (default for the tiny version):** Fast, runs immediately, cheap on quota.
 **ChatGPT / Gemini:** Ask for one self-contained HTML file and download it.
-**Lovable:** For the real application. Free tier, no credit card.
-**Without Lovable:** Watch the demonstration and fill in the comparison table. The learning is fully preserved.
+**Lovable:** For a web application. Free tier, no credit card.
+**Manus:** For a mobile application, in its dedicated phone mode. Check the current free allowance first.
+**Without either:** Watch the demonstration and fill in the comparison table. The learning is fully preserved.
 **Paper:** Sketch the screens and run the test cards against them.
 
 ## Troubleshoot without losing the lesson
 
 | Situation | Facilitator response |
 |---|---|
-| A learner could not open a Lovable account | Pair them with someone who did, or they watch. No learning gap. |
-| Lovable's quota runs out midway | Which is why the demonstration runs on your account. Carry on with the comparison. |
-| Lovable built something enormous | Excellent — that is exactly what we wanted to show. Count how many screens nobody asked for. |
+| A learner could not open an account | Pair them with someone who did, or they watch. No learning gap. |
+| Half the class on Lovable, half on Manus | Demonstrate one, and ask the other half to report what came out differently. |
+| The platform's quota runs out midway | Which is why the demonstration runs on your account. Carry on with the comparison. |
+| The platform built something enormous | Excellent — that is exactly what we wanted to show. Count how many screens nobody asked for. |
 | The local file will not run | The prompt in the download section. |
 | Someone wants to enter real people's data | Invented names, invented amounts. Always. |
-| Questions overrun | That is why there are 90 minutes. If you must cut, shorten the Lovable stage, not the testing. |
-| Time runs out | Drop the change in Lovable. Not the comparison, and not the decision. |
+| Questions overrun | That is why there are 90 minutes. If you must cut, shorten the platform stage, not the testing. |
+| Time runs out | Drop the change on the platform. Not the comparison, and not the decision. |
 
 ## Differentiation
 
-- **Remote:** One shared screen for Lovable, independent building for the tiny version.
+- **Remote:** One shared screen for the platform, independent building for the tiny version.
 - **No device:** A paper prototype and the test cards.
 - **For learners who need structure:** The cost-splitting example from the journal, changing only the names.
-- **For learners ready to extend:** Ask Lovable to add a second user and see what breaks in the split.
+- **For learners ready to extend:** Build the same application on both platforms and compare what each added unasked.
 
 ## After the session
 
-Note who chose the tiny version and who chose Lovable, and why. Next session, ask who is still using theirs — that is the real answer, and it is almost always a surprise. If Lovable has changed its interface or free tier, update the sign-up message above before you send it again.
+Note who chose the tiny version, who chose Lovable, and who chose Manus, and why. Next session, ask who is still using theirs — that is the real answer, and it is almost always a surprise. If either platform has changed its interface or free tier, update the sign-up message above before you send it again.

@@ -30,106 +30,102 @@
   <body>
 
     <section class="slide">
-      <p class="num">Slide 1 — Opening, minutes 0–5</p>
+      <p class="num">Slide 1 — Opening, minutes 10–20</p>
       <h1>What do you redo on a scrap of paper every month, and always lose?</h1>
-      <div class="say big">Today we build one small tool. Success is not that it looks good — it is that you know exactly where it breaks.</div>
+      <div class="say big">Today we build it twice: a tiny version in chat, and a real application. The comparison between them is the lesson.</div>
     </section>
-
     <section class="slide">
-      <p class="num">Slide 2 — Shrink it, minutes 5–15</p>
+      <p class="num">Slide 2 — Shrink it</p>
       <h1>One user, one problem, at most three actions</h1>
       <div class="box big">
-        <p><strong>User and problem:</strong> I split shared costs with two flatmates every month.</p>
-        <p><strong>Three actions:</strong> add an expense &nbsp;•&nbsp; show balances &nbsp;•&nbsp; settle up.</p>
-        <p><strong>What it must not do:</strong> store bank details, or move real money.</p>
+        <p><strong>User and problem:</strong> I split costs with two flatmates every month.</p>
+        <p><strong>Three actions:</strong> add an expense &nbsp;•&nbsp; show balances &nbsp;•&nbsp; reset.</p>
+        <p><strong>Forbidden:</strong> storing bank details, or moving real money.</p>
       </div>
-      <div class="say">Every fourth action you add costs you a test you will not have time to run.</div>
+      <div class="say">Every fourth action costs you a test you will not run — doubly so today, because we build twice.</div>
     </section>
-
     <section class="slide">
-      <p class="num">Slide 3 — The request, minutes 15–30</p>
-      <h1>Ask for one tool, not an app</h1>
-      <div class="prompt">Build one self-contained web page for splitting costs between three flatmates. Three actions only: add an expense (who paid, how much, what for), show how much each person owes, and reset. Plain labels, a clear reset button, everything in a single file. No login, no connection to an external service, and no sending data anywhere. If a field is empty or not a number, show a helpful message instead of calculating.</div>
+      <p class="num">Slide 3 — The tiny version, minutes 20–35</p>
+      <h1>The cheap, fast one first</h1>
+      <div class="prompt">Build one self-contained web page for splitting costs between three flatmates. Three actions only: add an expense (who paid, how much, what for), show how much each person owes, and reset. Plain labels, a clear reset button, everything in one file. No login and nothing sent anywhere. If a field is empty or not a number, show a message instead of calculating.</div>
     </section>
-
     <section class="slide">
-      <p class="num">Slide 4 — Before touching the tool</p>
-      <h1>Three questions about the code you were handed</h1>
+      <p class="num">Slide 4 — Getting it out of the tool</p>
+      <h1>An artifact that only runs inside the tool is not yours yet</h1>
       <ol class="big">
-        <li>Where is the data stored — and what happens on refresh?</li>
-        <li>What does it do with input you did not expect?</li>
-        <li>Does anything here leave the page and go to the internet?</li>
+        <li>Download the file, or copy the code into <code>tool.html</code>.</li>
+        <li>Open it in a browser by double-clicking. It should run with no internet.</li>
+        <li>If something breaks — usually an external file that did not come down with it.</li>
       </ol>
-      <div class="warn">Code generated in thirty seconds is not safe merely because it runs.</div>
+      <div class="warn">“Change it so everything is in one file — no external library, no font from the internet, no remote image.”</div>
     </section>
-
     <section class="slide">
-      <p class="num">Slide 5 — Testing, minutes 30–42</p>
-      <h1>The normal case first</h1>
-      <p class="big">The action you built the tool for, exactly as you intended it. If this does not pass, there is no point going on.</p>
+      <p class="num">Slide 5 — Testing, minutes 35–45</p>
+      <h1>The normal case first, and only then a card</h1>
       <table>
         <thead><tr><th>The test</th><th>Expected</th><th>Actually happened</th><th>The fix</th></tr></thead>
         <tbody>
-          <tr><td>Two people, one expense of 150</td><td>“Dana owes Yossi 75”</td><td>Showed 150 — did not halve it</td><td>Fixed the division and retested</td></tr>
+          <tr><td>Two people, one expense of 150</td><td>“Dana owes Yossi 75”</td><td>Showed 150 — did not divide</td><td>Fixed it and retested</td></tr>
         </tbody>
       </table>
+      <div class="say">A card that broke the tool is a test that succeeded.</div>
     </section>
-
     <section class="slide">
-      <p class="num">Slide 6 — Then the edge case</p>
-      <h1>Draw a card</h1>
+      <p class="num">Slide 6 — The real application, minutes 45–70</p>
+      <h1>Same problem, a real platform</h1>
       <table>
-        <thead><tr><th>The card</th><th>What it tests</th></tr></thead>
+        <thead><tr><th>Platform</th><th>Suits</th></tr></thead>
         <tbody>
-          <tr><td>Empty</td><td>Press “add” without typing anything</td></tr>
-          <tr><td>Zero</td><td>Enter 0 — a perfectly legitimate value</td></tr>
-          <tr><td>Text where a number goes</td><td>“thirty” in an amount field</td></tr>
-          <tr><td>Fractions of a penny</td><td>Divide 100 by three</td></tr>
-          <tr class="total"><td>Refresh the page</td><td>Everything gone? And did the user know?</td></tr>
+          <tr><td><strong>Lovable</strong></td><td>A web app — opens in a browser, has an address you can send</td></tr>
+          <tr class="total"><td><strong>Manus</strong></td><td>A mobile app — a mode dedicated to building for phones</td></tr>
         </tbody>
       </table>
+      <div class="say">In Manus, add at the end of the request: “Build this as a phone app.” That is what triggers its dedicated mode.</div>
     </section>
-
     <section class="slide">
-      <p class="num">Slide 7 — The moment that matters</p>
-      <h1>A card that broke the tool is a test that succeeded</h1>
-      <div class="say big">We are not looking for a tool that works. We are looking for its limit — because without it you will not know when to stop trusting it.</div>
-      <h2>Then</h2>
-      <p class="big">Record what happened &nbsp;→&nbsp; fix <strong>one thing</strong> &nbsp;→&nbsp; test again.</p>
+      <p class="num">Slide 7 — The comparison is the lesson</p>
+      <h1>Three routes to the same problem</h1>
+      <table>
+        <thead><tr><th></th><th>Chat</th><th>Lovable</th><th>Manus</th></tr></thead>
+        <tbody>
+          <tr><td>What you get</td><td>One file</td><td>A web app</td><td>A phone app</td></tr>
+          <tr><td>The data</td><td>Gone on refresh</td><td>Persists</td><td>Persists</td></tr>
+          <tr><td>How you share</td><td>Send the file</td><td>Send a link</td><td>Open on a phone</td></tr>
+          <tr><td>What you understand</td><td>Every line</td><td>Some</td><td>Some</td></tr>
+          <tr class="total"><td>Added unasked</td><td>Nothing</td><td>A lot</td><td>A lot</td></tr>
+        </tbody>
+      </table>
+      <div class="say">“I asked for two screens. How many are here?”</div>
     </section>
-
     <section class="slide">
-      <p class="num">Slide 8 — Control, minutes 42–50</p>
+      <p class="num">Slide 8 — Control, minutes 70–80</p>
       <h1>Four decisions before you send it to anyone</h1>
       <table>
-        <thead><tr><th>The question</th><th>Example</th></tr></thead>
+        <thead><tr><th>The question</th><th>Tiny version</th><th>Platform</th></tr></thead>
         <tbody>
-          <tr><td>Where is the tool stored?</td><td>One file on my own machine, not in the cloud</td></tr>
-          <tr><td>Who can open it?</td><td>Me, and later my two flatmates</td></tr>
-          <tr><td>How is data cleared?</td><td>A reset button, and closing the page clears it anyway</td></tr>
-          <tr class="total"><td>When do you stop using it?</td><td>If we move to a real app, or if it gets money wrong once</td></tr>
+          <tr><td>Where is it stored?</td><td>A file on my machine</td><td>Somebody else's server</td></tr>
+          <tr><td>Who can open it?</td><td>Whoever has the file</td><td>Whoever has the link</td></tr>
+          <tr><td>How is it cleared?</td><td>Delete the file</td><td>Not always what looks like deletion</td></tr>
+          <tr class="total"><td>When do you stop?</td><td>Whenever you like</td><td>Partly up to them</td></tr>
         </tbody>
       </table>
     </section>
-
     <section class="slide">
       <p class="num">Slide 9 — What we are not building today</p>
-      <h1>The limit of this tool</h1>
+      <h1>The limit</h1>
       <ul class="big">
         <li>No passwords and no account details</li>
         <li>No other people's data without their knowing</li>
         <li>No decisions with financial or medical weight</li>
       </ul>
-      <div class="say">Lovable and Replit are a next step for a larger or collaborative project — not needed today, and no sign-up required.</div>
+      <div class="say">And we met Manus back in Session 2, in a completely different role. Same platform — once an agent, once an app builder.</div>
     </section>
-
     <section class="slide">
-      <p class="num">Slide 10 — Exit check, minutes 50–60</p>
+      <p class="num">Slide 10 — Exit check, minutes 80–90</p>
       <h1>Complete out loud or in writing</h1>
-      <div class="box big">My tool does <strong>[one action]</strong>. It breaks when <strong>[the edge case]</strong>, so <strong>[the fix or the warning]</strong>. The data lives in <strong>[where]</strong> and is cleared by <strong>[how]</strong>.</div>
+      <div class="box big">My tool does <strong>[one action]</strong>. It breaks when <strong>[the edge case]</strong>. I will actually use <strong>[which version]</strong> because <strong>[why]</strong>.</div>
       <h2>And the reflection question</h2>
-      <p class="big">What does the tool do better than the scrap of paper — and what did the paper do better than it?</p>
+      <p class="big">What does the application do better than the scrap of paper — and what did the paper do better than it?</p>
     </section>
-
   </body>
 </html>
