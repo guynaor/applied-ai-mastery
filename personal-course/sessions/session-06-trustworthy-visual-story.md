@@ -1,6 +1,6 @@
 # Session 6 — Tell a True Visual Story
 
-**Time:** 45–60 minutes  
+**Time:** 90 minutes  
 **Outcome:** A short visual story you are willing to stand behind — every claim supported, every image labelled correctly, and everyone in it consenting.
 
 ## Scenario

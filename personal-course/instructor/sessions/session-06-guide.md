@@ -1,8 +1,10 @@
 # Full session plan — Session 6: Tell a True Visual Story
 
-**Time:** 55–60 minutes
+**Time:** 90 minutes
 **Learning outcome:** Learners label every asset as original, edited, or generated, recognise when a caption turns a real photo into a deception, and add alt text and labels before they share.
 **Session artifact:** One story package: a storyboard, a record of sources and consents, captions and alt text, and a visible label on every edited or generated asset.
+
+**This session runs 90 minutes, not 60.** The extra time is not overrun — it is questions, and that is where the learning happens.
 
 This guide can be taught from directly. No paid image generator is needed, and learners do not have to publish anything at the end.
 
@@ -15,6 +17,22 @@ This guide can be taught from directly. No paid image generator is needed, and l
 | [The answers](../../instructor/samples/session-06-answers.html) | A separate page. **Do not open before the class has been through all six.** |
 | [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | Downloadable Word file with the story rules, the storyboard, and the truth-check table. |
 | [Session 6 brief](../../sessions/session-06-trustworthy-visual-story.md) | What learners see. |
+
+## The recommended way: a real case, on your screen
+
+What works best is to **take a real case of your own and work it live in front of the class on your own screen.** Three reasons: learners' free accounts run out midway; a real case produces real questions; and they watch you correct the tool, which is worth more than any explanation.
+
+Learners fill in the journal tables for **their own case**. You run it; they think.
+
+**Before every prompt** ask: "What do you think it will come back with?" and "What is missing from my request?"
+**When the answer returns**, read the first number aloud and ask "where is that from?", hunt for the assumption, and correct one thing in front of them.
+**After each stage**, give two minutes for them to fill in the journal. A session where only you typed is a demonstration, not a lesson.
+
+The prepared sample materials stay as backup — for a class with no network, when you have no example of your own, or for a facilitator who wants a guaranteed script.
+
+## Start slow things in the background
+
+Some requests take time — a detailed spreadsheet, a presentation, or anything that generates code. **Do not wait for them in front of the class.** Send it, keep talking about the next thing, and come back when it is ready.
 
 ## Before learners arrive
 
@@ -41,14 +59,27 @@ This guide can be taught from directly. No paid image generator is needed, and l
 
 | Time | What the facilitator does | What learners produce or identify |
 |---:|---|---|
-| 0–5 | Opening: when did you believe an image immediately | Attention to the gap between image and claim |
-| 5–13 | Trust boundary: audience, purpose, claims, consents | Four decisions written down |
-| 13–23 | Sort the asset set and find the problems | The difference between a labelled asset and a misleading one |
-| 23–38 | Storyboard with captions and alt text | Six panels, and claims flagged as needing a source |
-| 38–50 | The four viewer checks | Alt text, contrast, labelling, and reading aloud |
-| 50–60 | Exit check and reflection | A package ready to publish, or a list of what is missing |
+| 0–10 | **Homework discussion** | What worked and what broke for other people |
+| 10–15 | Opening: when did you believe an image immediately | Attention to the gap between image and claim |
+| 15–25 | Trust boundary: audience, purpose, claims, consents | Four decisions written down |
+| 25–40 | Sort the asset set and find the problems | The difference between a labelled asset and a misleading one |
+| 40–60 | Storyboard with captions and alt text | Six panels, and claims flagged as needing a source |
+| 60–80 | The four viewer checks | Alt text, contrast, labelling, and reading aloud |
+| 80–90 | Exit check and reflection | A package ready to publish, or a list of what is missing |
 
-## 0–5 minutes — Opening
+## 0–10 minutes — Homework discussion
+
+**Start here in every session from the second onwards.** It works well, and not because it is a check — because a learner who hears what broke for someone else learns faster than from a lesson.
+
+Three questions, in this order:
+
+1. **"Who managed to do something with what we talked about?"** Two or three tell it.
+2. **"Who did it not work for, and where did it get stuck?"** This is the important one. If nobody answers, tell them about something that got stuck for you.
+3. **"What surprised you?"** The best insights arrive here.
+
+Note two things that came up, and return to them later in the session by the name of whoever raised them.
+
+## 10–15 minutes — Opening
 
 Show [slide 1](../../instructor/samples/session-06-slides.html): “When did you last see an image online and believe it immediately?”
 
@@ -56,13 +87,13 @@ Show [slide 1](../../instructor/samples/session-06-slides.html): “When did you
 
 > “Today we build one story you can stand behind. Note that this does not mean a dull story. It means one whose claims hold up when somebody checks them.”
 
-## 5–13 minutes — The trust boundary
+## 15–25 minutes — The trust boundary
 
 Show [slide 2](../../instructor/samples/session-06-slides.html) and the four decisions: who, what for, which claims can be supported, and who consented.
 
 Stress this: a claim you cannot support is not banned. It is worded differently. “12 volunteers came”, with no list, becomes “far more people turned up than we expected”.
 
-## 13–23 minutes — Sort, and find
+## 25–40 minutes — Sort, and find
 
 Open the [asset set](../../instructor/samples/session-06-asset-set.html). Show [slide 3](../../instructor/samples/session-06-slides.html) and the three labels: original, edited, generated.
 
@@ -80,7 +111,7 @@ Then [slide 5](../../instructor/samples/session-06-slides.html) — **asset 6**:
 
 Point them at asset 3 as well: a third person who was never asked, and a caption claiming “12 volunteers” when three are visible. The claim may well be true — the photo simply is not its source.
 
-## 23–38 minutes — The storyboard
+## 40–60 minutes — The storyboard
 
 Show the request on [slide 6](../../instructor/samples/session-06-slides.html) and run it with non-sensitive notes.
 
@@ -94,7 +125,7 @@ Six panels with captions and alt text, and a separate list of claims that need a
 - **It proposed a generated image as a record.** That is precisely the mistake this session is about. Show it.
 - **The alt text is “a photo of the garden”.** Ask for a sentence describing what is actually visible.
 
-## 38–50 minutes — The four viewer checks
+## 60–80 minutes — The four viewer checks
 
 Show [slide 7](../../instructor/samples/session-06-slides.html). Each check takes a minute:
 
@@ -109,7 +140,7 @@ The fourth is the one that surprises. Ask one learner to read out a partner's al
 
 > “The question is not ‘did I lie’. People almost never lie in a story like this. They simply do not write down what was obvious to them. The question is whether a reasonable viewer could take something untrue from it.”
 
-## 50–60 minutes — Exit check and reflection
+## 80–90 minutes — Exit check and reflection
 
 Show [slide 10](../../instructor/samples/session-06-slides.html):
 

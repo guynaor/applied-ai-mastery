@@ -1,8 +1,10 @@
 # Full session plan — Session 2: Buy With Confidence
 
-**Time:** 55–60 minutes, plus 15 if you run the OpenClaw extension
+**Time:** 90 minutes, plus 15 if you run the OpenClaw extension
 **Learning outcome:** Learners can separate a research report from evidence, work out total cost rather than headline price, and write an alert rule that can be reviewed and that never takes an action.
 **Session artifact:** A one-page purchase brief: the question and limits, an evidence matrix with two source checks, what remains uncertain, and one alert rule that can be paused.
+
+**This session runs 90 minutes, not 60.** The extra time is not overrun — it is questions, and that is where the learning happens.
 
 This guide can be taught from directly. It is written so that a facilitator who did not build the course can run it. Do not require learners to open a paid account, and do not ask them to enter payment or account details at any point.
 
@@ -17,6 +19,22 @@ These four links are everything you need open to run the session.
 | [Monitoring snapshots](../../instructor/samples/session-02-snapshots.html) | A separate page, for the agent demonstration only. |
 | [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | A downloadable Word file. Every table learners fill in today is in it. |
 | [Session 2 brief](../../sessions/session-02-research-buy-monitor.md) | What learners see. |
+
+## The recommended way: a real case, on your screen
+
+What works best is to **take a real case of your own and work it live in front of the class on your own screen.** Three reasons: learners' free accounts run out midway; a real case produces real questions; and they watch you correct the tool, which is worth more than any explanation.
+
+Learners fill in the journal tables for **their own case**. You run it; they think.
+
+**Before every prompt** ask: "What do you think it will come back with?" and "What is missing from my request?"
+**When the answer returns**, read the first number aloud and ask "where is that from?", hunt for the assumption, and correct one thing in front of them.
+**After each stage**, give two minutes for them to fill in the journal. A session where only you typed is a demonstration, not a lesson.
+
+The prepared sample materials stay as backup — for a class with no network, when you have no example of your own, or for a facilitator who wants a guaranteed script.
+
+## Start slow things in the background
+
+Some requests take time — a detailed spreadsheet, a presentation, or anything that generates code. **Do not wait for them in front of the class.** Send it, keep talking about the next thing, and come back when it is ready.
 
 ## Before learners arrive
 
@@ -44,15 +62,28 @@ These four links are everything you need open to run the session.
 
 | Time | What the facilitator does | What learners produce or identify |
 |---:|---|---|
-| 0–5 | Opening: the purchase you keep putting off | One real purchase to work on |
-| 5–13 | Define need, budget, must-haves, deal-breakers | A boundary you can research against |
-| 13–25 | Send the research request, build a source list by hand meanwhile | The difference between a research plan and an answer |
-| 25–40 | Evidence matrix and total cost | Source, date, supports or contradicts, what is uncertain |
-| 40–50 | Two source checks and writing the alert rule | A rule that can be reviewed and takes no action |
-| 50–60 | Exit check and reflection | A human decision and a re-check date |
+| 0–10 | **Homework discussion** | What worked and what broke for other people |
+| 10–15 | Opening: the purchase you keep putting off | One real purchase to work on |
+| 15–25 | Define need, budget, must-haves, deal-breakers | A boundary you can research against |
+| 25–45 | Send the research request, build a source list by hand meanwhile | The difference between a research plan and an answer |
+| 45–65 | Evidence matrix and total cost | Source, date, supports or contradicts, what is uncertain |
+| 65–80 | Two source checks and writing the alert rule | A rule that can be reviewed and takes no action |
+| 80–90 | Exit check and reflection | A human decision and a re-check date |
 | +15 (optional) | OpenClaw demonstration with a kill switch | Permissions, saved state, and a stop rule |
 
-## 0–5 minutes — Opening
+## 0–10 minutes — Homework discussion
+
+**Start here in every session from the second onwards.** It works well, and not because it is a check — because a learner who hears what broke for someone else learns faster than from a lesson.
+
+Three questions, in this order:
+
+1. **"Who managed to do something with what we talked about?"** Two or three tell it.
+2. **"Who did it not work for, and where did it get stuck?"** This is the important one. If nobody answers, tell them about something that got stuck for you.
+3. **"What surprised you?"** The best insights arrive here.
+
+Note two things that came up, and return to them later in the session by the name of whoever raised them.
+
+## 10–15 minutes — Opening
 
 Ask: “Which purchase have you been putting off for weeks because there is too much information about it?” Collect three examples out loud. Choose one to work on together, and ask each learner to choose their own.
 
@@ -60,7 +91,7 @@ Ask: “Which purchase have you been putting off for weeks because there is too 
 
 > “Today we are not looking for the best product. We are building a brief you would agree to trust with your own money — and that is a different thing entirely. When someone is selling to you, how convincing the text is proves nothing.”
 
-## 5–13 minutes — Define what you need and what you don't
+## 15–25 minutes — Define what you need and what you don't
 
 Ask every learner to fill four boxes: the need, the budget and deadline, the must-haves, and what rules a product out immediately. Show [slide 2](../../instructor/samples/session-02-slides.html), which has the example filled in:
 
@@ -72,7 +103,7 @@ Then add the box that is easiest to skip: **what this research will not decide.*
 
 “A flat”, “a car”, and “studying” will not close in forty minutes. Ask them to narrow to one decision inside the topic: not “which car”, but “this model, this year, from this seller — yes or no”.
 
-## 13–25 minutes — A research plan, not an answer
+## 25–45 minutes — A research plan, not an answer
 
 At minute 13, send the request in front of the class. Show it in full on [slide 3](../../instructor/samples/session-02-slides.html) before sending, or type it out on screen:
 
@@ -102,7 +133,7 @@ A list of source types — manufacturer, seller, independent tester, user forum 
 - **It returns a generic list.** Ask it to attach to each source type the question that source answers, and what it cannot answer.
 - **It cites a source that does not exist.** Excellent. Open it in front of the class, show that it does not resolve, and move the claim to the “uncertain” column.
 
-## 25–40 minutes — The evidence matrix and total cost
+## 45–65 minutes — The evidence matrix and total cost
 
 This is the long block, and the heart of the session. Learners fill five columns: the claim, the source and date, supports or contradicts, what is uncertain, and checked yes or no.
 
@@ -123,7 +154,7 @@ Circulate with these questions rather than answers:
 - “Would the decision change if this detail were wrong?”
 - “What else gets paid beyond this price?”
 
-## 40–50 minutes — Verification and the alert rule
+## 65–80 minutes — Verification and the alert rule
 
 Ask each learner to choose the two claims that would change the decision if they turned out to be wrong, and to open the original source for both. Only two, so they are worth choosing carefully.
 
@@ -143,7 +174,7 @@ Then write one alert rule together. Do not hand out a list of terms — build it
 
 > “Notice that the last row is not a technical limitation — it is our decision. It is possible to build a system that buys. We are choosing not to, because the alert does not know what is going on in your life this week.”
 
-## 50–60 minutes — Exit check and reflection
+## 80–90 minutes — Exit check and reflection
 
 Show [slide 10](../../instructor/samples/session-02-slides.html) and ask each learner to complete, out loud or in writing:
 

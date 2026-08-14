@@ -1,6 +1,6 @@
 # Session 3 — Make a Shared Plan Work
 
-**Time:** 45–60 minutes  
+**Time:** 90 minutes  
 **Outcome:** A real event moved forward today — food, drinks, a running image display, a schedule, and divided work — with every tool output checked before you relied on it.
 
 ## Scenario

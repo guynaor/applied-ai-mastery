@@ -1,160 +1,194 @@
 # Full session plan — Session 4: Solve a Recurring Problem
 
-**Time:** 55–60 minutes
-**Learning outcome:** Learners reduce a recurring problem to one tool with at most three actions, build it in Claude Artifacts, and test it against a normal case and an edge case until they know where it breaks.
-**Session artifact:** A working tool or paper prototype, with a test log: the problem, the permitted actions, the normal-case result, the edge-case result, one revision, and a privacy note.
+**Time:** 90 minutes
+**Learning outcome:** Learners build the same problem twice — a tiny version in chat and a real one in Lovable — test each against a normal case and an edge case, and can explain when the tiny version is enough.
+**Session artifact:** Two versions (or one plus a description of the other) and a test log: the problem, the permitted actions, the normal case, the edge case, and a sentence on which will still be in use in a month.
 
-This guide can be taught from directly. The facilitator does not need to be able to program. This session is about definition and testing, and those are exactly the parts the tool will not do for you.
+**This session runs 90 minutes.** The extra time is questions, and they are heaviest here — this is the session where people discover they can build software.
+
+## Send before the session — sign up for Lovable
+
+**Send this to learners at least a day ahead.** If sign-up happens in the lesson, you have lost twenty minutes.
+
+> Before the next session, open a free account at lovable.dev. Sign up with Google or an email address, no credit card. If you are asked for payment details, stop — you are in the wrong place. Open one empty project to check it works. If you cannot, that is fine — you will be able to watch and do everything else.
+
+Lovable's free tier is generous enough for what we do. No subscription is needed.
 
 ## Session materials
 
 | Material | What it is for |
 |---|---|
 | [Projection slides](../../instructor/samples/session-04-slides.html) | Ten slides, in session order. |
-| [Test cards](../../instructor/samples/session-04-test-cards.html) | Ready-made edge cases to draw from, plus a projectable test log. The heart of the session. |
-| [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | Downloadable Word file with the definition table, the revision log, and the test table. |
+| [Test cards](../../instructor/samples/session-04-test-cards.html) | Ready-made edge cases. Remotely, paste the link into the chat. |
+| [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | The definition table, the revision log, and the test table. |
 | [Session 4 brief](../../sessions/session-04-build-personal-tool.md) | What learners see. |
 
-## Before learners arrive
+## The recommended way: your own real problem, on your screen
 
-### Prepare the room and tools
+As in earlier sessions — **take a real recurring problem of your own and build it live in front of the class.** Here there is an extra reason: Lovable burns through a free quota fairly quickly, and if everyone builds separately some will stall halfway. When the heavy building runs on your account, nobody gets blocked.
 
-1. Open **Claude** in the facilitator account with Artifacts available. Without Artifacts, ChatGPT or Gemini can return a single HTML file — but then the facilitator opens it locally, and only after reading it.
-2. Open the [test cards](../../instructor/samples/session-04-test-cards.html). Remotely, paste the link into the chat at the testing stage and let each learner pick one. In a room you can print them: physically drawing a card works slightly better.
-3. Open the [slides](../../instructor/samples/session-04-slides.html) in a separate tab.
-4. Have paper and pencils ready. At least one learner will work on a paper prototype, and that is a full route, not a consolation prize.
+Learners build the tiny version themselves — it is cheap — and fill in the journal for their own problem. You run Lovable; they propose what to ask for.
 
-### What learners need
+### What to ask before every request
 
-- One small, real, recurring problem. The journal example — splitting costs with flatmates — works well because it involves arithmetic, and therefore has real edge cases.
-- A device with one AI tool, **or** paper.
-- Somewhere to keep the tool and the test log.
+- "What do you think it will build?" before it builds.
+- "What is missing from my request?" They will find it.
+- "What am I not willing to let this tool store?"
 
-### Two facilitator decisions before starting
+### What to highlight when it comes back
 
-**How much code to show.** You do not need to teach programming, and you should not walk through the code line by line. What you do need to show: where the data is stored, and what happens on refresh. Those two questions teach more than any explanation of JavaScript.
+- **Open it immediately and click something.** Do not settle for what the tool shows you on screen.
+- **Hunt for what it added that you did not ask for** — Lovable almost always adds screens and features. That is convenient and dangerous.
+- **Fix one thing in front of them** and re-run.
 
-**When to hand out the test cards.** Only once the normal case passes. A learner who knows in advance which edge cases are coming will build a tool that survives them — which is precisely what is not being tested here.
+## Start slow things in the background
+
+A Lovable build takes minutes, not seconds. **Send the request, then talk** — do not stand in front of a progress bar. In this session: at minute 45, send the Lovable request and move on to discussing the tiny version's test results while it builds.
+
+The same rule applies to anything slow: a detailed spreadsheet, a presentation, or an application. Send, keep going, come back.
 
 ## Session map
 
-| Time | What the facilitator does | What learners produce or identify |
+| Time | What happens | What learners produce |
 |---:|---|---|
-| 0–5 | Opening: what do you redo on paper every time | One recurring problem |
-| 5–15 | Shrink to one user and three actions | A definition you can build from |
-| 15–30 | Build in Claude Artifacts and read the code | A first running version |
-| 30–42 | Normal case, then an edge-case card | A test log with expected against actual |
-| 42–50 | One fix, retest, and control decisions | A tool whose limit is known |
-| 50–60 | Exit check and reflection | Clarity on what the tool should and should not do |
+| 0–10 | **Homework discussion** | What broke for other people |
+| 10–20 | Shrink it: one user, at most three actions | A definition you can build from |
+| 20–35 | Tiny version in chat, and downloading it to run locally | A tool that runs on their own machine |
+| 35–45 | Normal case, then an edge-case card | A test log with expected against actual |
+| 45–70 | Lovable — a real application (sent at minute 45) | The difference between a prototype and an application |
+| 70–80 | Test Lovable, and decide what is enough | What is stored where, and who can open it |
+| 80–90 | Control, exit check, and homework | A reasoned choice between the two |
 
-## 0–5 minutes — Opening
+## 0–10 minutes — Homework discussion
 
-Show [slide 1](../../instructor/samples/session-04-slides.html) and ask: “What do you redo on a scrap of paper every month, and always lose?” Collect three examples.
+Three questions, in this order: **Who managed it? Who did it not work for, and where did it get stuck? What surprised you?**
 
-### What to say
+The second is the important one. If nobody answers, tell them about something that got stuck for you.
 
-> “We are not building an app today. We are building one small tool, and success is not that it looks good — it is that you know exactly where it breaks.”
+In this session it is also worth asking: **"Who managed to open a Lovable account, and who got stuck?"** That tells you immediately who to pair up.
 
-## 5–15 minutes — Shrink it
+## 10–20 minutes — Shrink it
 
-Show [slide 2](../../instructor/samples/session-04-slides.html). Each learner fills in the journal: who the user is, what the problem is, at most three actions, and what the tool must never do.
-
-The three-action limit is not a whim. It is what makes the tool testable inside twelve minutes.
-
-### What to say
-
-> “Every fourth action you add costs you a test you will not have time to run. An untested tool is not a tool — it is a guess with buttons.”
-
-### If a learner describes a whole system
-
-“Something to run my whole household” is not a tool. Ask them to pick one action out of it — not “chore management”, but “whose turn is it to take the bins out this week”.
-
-## 15–30 minutes — Build, then look
-
-Show the request on [slide 3](../../instructor/samples/session-04-slides.html) and run it in Claude Artifacts in front of the class.
-
-### Expected intermediate output
-
-One running web page with the three actions and a reset button. If it came back as an app with screens, a login, or cloud storage, the request was too broad — and that is a good thing to show.
-
-### The moment that matters: read the code before using it
-
-Show [slide 4](../../instructor/samples/session-04-slides.html) and ask the three questions against the code you got:
-
-1. Where is the data stored, and what happens on refresh?
-2. What does it do with input you did not expect?
-3. Does anything here leave the page and go to the internet?
-
-You do not need to answer these by understanding the code. You can search it for `fetch`, `http`, or `localStorage` and ask the tool what they are doing there.
+Show [slide 2](../../instructor/samples/session-04-slides.html). Each learner fills in the journal: who the user is, what the problem is, at most three actions, what is forbidden.
 
 ### What to say
 
-> “Code generated in thirty seconds is not safe merely because it runs. That is not a criticism of the tool — it is the reason we test at all.”
+> "Every fourth action you add costs you a test you will not have time to run. And that is doubly true today, because we are building this twice."
 
-## 30–42 minutes — Normal case, then a card
+## 20–35 minutes — The tiny version
 
-Show [slide 5](../../instructor/samples/session-04-slides.html). Everyone runs the **normal case** first — the action the tool was built for — and records in the journal what they expected and what happened.
+Show the request on [slide 3](../../instructor/samples/session-04-slides.html) and run it in Claude Artifacts. **Here learners do build for themselves** — it is fast and cheap on quota.
 
-Only once that passes, hand each learner a [test card](../../instructor/samples/session-04-test-cards.html). [Slide 6](../../instructor/samples/session-04-slides.html) shows the common ones.
+### Getting it out of the tool
 
-The cards that almost always find something: **empty input**, **zero**, **text where a number goes**, **a division that produces fractions of a penny**, and **refreshing the page**.
+The artifact runs inside the preview pane, but to actually use it you need it as a file. Show this:
+
+1. Download the artifact, or copy the code into a file called `tool.html`.
+2. Open it in a browser by double-clicking. It should run with no internet.
+3. **If something is missing or broken** — usually it is an external file that did not come down with it.
+
+The prompt to fix it:
+
+> The file runs locally but not everything works. Change it so everything is in one file — no link to an external library, no font from the internet, no remote image. If something external is needed, replace it with something simple and local.
+
+### The moment that matters
+
+Show [slide 4](../../instructor/samples/session-04-slides.html) and the three questions about the code: where the data is stored, what happens with unexpected input, and whether anything leaves for the internet. Search the code for `fetch`, `http`, and `localStorage`.
+
+## 35–45 minutes — Testing
+
+Show [slide 5](../../instructor/samples/session-04-slides.html). The **normal case** first, and only when it passes, a [test card](../../instructor/samples/session-04-test-cards.html) each.
+
+**At exactly minute 45, send the Lovable request** and let it build while you carry on discussing the results.
 
 ### What to say
 
-> “A card that broke the tool is a test that succeeded. We are not looking for a tool that works — we are looking for its limit, because without it you will not know when to stop trusting it.”
+> "A card that broke the tool is a test that succeeded. We are looking for the limit, because without it you will not know when to stop trusting it."
 
-### If the tool survives every card
+## 45–70 minutes — Lovable
 
-It happens, and usually it means the tool is very narrow — which is fine. Give a boundary card: only one person, or a phone-width screen.
+The request you sent at minute 45 is under way. While it runs, ask: "What will be different between this and what we already built?"
 
-## 42–50 minutes — One fix and control
+### The request
 
-**One** fix only, then retest. A learner who changes three things at once will not know which of them worked.
+> Build an application for splitting costs between three flatmates. One screen to add an expense — who paid, how much, what for — and one screen showing how much each person owes. The data should persist between visits. No user login, no real payments, and do not store bank details. Keep it as simple as possible.
 
-Then show [slide 8](../../instructor/samples/session-04-slides.html) and the four control decisions: where it is stored, who opens it, how data is cleared, when to stop.
+### What is different here, and why it matters
 
-## 50–60 minutes — Exit check and reflection
+| The tiny version in chat | Lovable |
+|---|---|
+| One file on your machine | An application with a real address |
+| Data disappears on refresh | Data persists |
+| Only you see it | You can send it to someone |
+| A minute to build | Minutes, sometimes more |
+| You understand every line | It built things you never asked for |
 
-Show [slide 10](../../instructor/samples/session-04-slides.html):
+**That last row is the heart of it.** Lovable almost always adds screens and features. Show it: "I asked for two screens. How many are here?"
 
-> My tool does **[one action]**. It breaks when **[the edge case]**, so **[the fix or the warning]**. The data lives in **[where]** and is cleared by **[how]**.
+### One change
 
-Reflection question: “What does the tool do better than the scrap of paper — and what did the paper do better than it?”
+Ask for one change — say, "add a button to reset the month". This is where the real difference shows: in chat you get a new file, in Lovable it modifies an existing application and sometimes breaks something else.
+
+### If Lovable fails or the quota runs out
+
+It happens. Say so out loud, carry on with the tiny version, and ask learners to record in the journal what **would** have been different. The comparison is the learning, not the application.
+
+## 70–80 minutes — Test Lovable and decide
+
+Run the same test cards against the application. Empty field, zero, text where a number goes.
+
+Then the question that closes the session: **"Which of the two will you actually use?"**
+
+For most people the answer is the tiny version, and that is a correct answer. A real application is only worth more if you use it.
+
+Show [slide 8](../../instructor/samples/session-04-slides.html): where it is stored, who opens it, how it is cleared, when to stop. Lovable has a different answer to each — the data sits on somebody else's server.
+
+## 80–90 minutes — Exit check and homework
+
+[Slide 10](../../instructor/samples/session-04-slides.html):
+
+> My tool does **[one action]**. It breaks when **[the edge case]**. I will actually use **[which version]** because **[why]**.
+
+### The homework
+
+"Before next session, genuinely use one of the versions, at least twice. **I will ask at the start what did not work** — especially if you stopped using it, and why."
 
 ### Quick assessment rubric
 
 | Evidence | Not yet | Ready |
 |---|---|---|
-| The definition | “A tool to help me get organised” | One user, one problem, at most three actions |
-| The testing | “I tried it, it works” | Expected against actual, written down, for two cases |
-| The edge case | Only tested what was planned for | Drew a card, and recorded the result even when embarrassing |
-| Control | “It's just a file” | Knows where it is stored, how to clear it, when to stop |
+| The definition | "A tool to help me get organised" | One user, one problem, at most three actions |
+| Testing | "I tried it, it works" | Expected against actual, both cases, both versions |
+| Understanding the difference | "Lovable is better" | Can say what is stored where, and what was added unasked |
+| The decision | "I'll use both" | Picked one, and can explain why |
 
 ## Equivalent tool routes
 
-**Claude (default):** Artifacts. The tool runs inside the window, so you can fix and see immediately.
-**ChatGPT:** Ask for one self-contained HTML file. Open it locally only if the facilitator can read the code first.
-**Gemini:** The same request and the same testing.
-**Paper:** Sketch the screens and run the same test cards against them by hand. This works well — an edge case is found on paper just as readily as on screen.
+**Claude Artifacts (default for the tiny version):** Fast, runs immediately, cheap on quota.
+**ChatGPT / Gemini:** Ask for one self-contained HTML file and download it.
+**Lovable:** For the real application. Free tier, no credit card.
+**Without Lovable:** Watch the demonstration and fill in the comparison table. The learning is fully preserved.
+**Paper:** Sketch the screens and run the test cards against them.
 
 ## Troubleshoot without losing the lesson
 
 | Situation | Facilitator response |
 |---|---|
-| Artifacts is unavailable | Ask for one HTML file and open it locally, or move to a paper prototype. |
-| The tool came back as a large app | Return to the three actions and ask for a rebuild of only those. |
-| A learner gets stuck on styling | “Does that change what happens on empty input?” Return them to testing. |
-| The fix broke something else | Excellent — that is exactly why we change one thing at a time. Record it and retest. |
-| Someone wants to enter real people's data | Stop. Invented names, invented amounts. |
-| Time runs out | Drop the fix, not the edge case. A broken tool that is documented is worth more than a tidy-looking one that was never tested. |
+| A learner could not open a Lovable account | Pair them with someone who did, or they watch. No learning gap. |
+| Lovable's quota runs out midway | Which is why the demonstration runs on your account. Carry on with the comparison. |
+| Lovable built something enormous | Excellent — that is exactly what we wanted to show. Count how many screens nobody asked for. |
+| The local file will not run | The prompt in the download section. |
+| Someone wants to enter real people's data | Invented names, invented amounts. Always. |
+| Questions overrun | That is why there are 90 minutes. If you must cut, shorten the Lovable stage, not the testing. |
+| Time runs out | Drop the change in Lovable. Not the comparison, and not the decision. |
 
 ## Differentiation
 
-- **No device or account:** A paper prototype and the test cards. Exactly the same test log.
-- **For learners who need structure:** Give them the cost-splitting example from the journal and ask them to change only the names and the amounts.
-- **For learners ready to extend:** Ask them to write three tests the tool must pass *before* building it.
-- **Language support:** The tool's labels can be requested in the learner's language. The test log stays in the course language.
+- **Remote:** One shared screen for Lovable, independent building for the tiny version.
+- **No device:** A paper prototype and the test cards.
+- **For learners who need structure:** The cost-splitting example from the journal, changing only the names.
+- **For learners ready to extend:** Ask Lovable to add a second user and see what breaks in the split.
 
 ## After the session
 
-Note which edge case broke the most tools in the room — it will probably work again next time, and is worth promoting to the first card. If a learner built something they will genuinely use, ask them to report back next session on what happened when they tried to use it in real life.
+Note who chose the tiny version and who chose Lovable, and why. Next session, ask who is still using theirs — that is the real answer, and it is almost always a surprise. If Lovable has changed its interface or free tier, update the sign-up message above before you send it again.

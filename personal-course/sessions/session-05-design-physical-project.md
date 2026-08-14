@@ -1,6 +1,6 @@
 # Session 5 — Make a Space Work Better
 
-**Time:** 45–60 minutes  
+**Time:** 90 minutes  
 **Outcome:** A measured concept for a small physical project, tested in cardboard before anything is bought or built.
 
 ## Scenario

@@ -95,7 +95,7 @@ assert.match(portal,/\bsessions?\.length\b/i,
  'Personal progress must derive its total from the session collection');
 assert.match(portal,/data-personal-progress/,'Personal portal must expose a session progress control');
 assert.match(portal,/data-personal-progress-label/,'Personal portal must expose a session progress label');
-assert.match(portal,/45[–-]60\s*(?:minutes|דקות)/i,'Personal portal must label sessions as 45–60 minutes');
+assert.match(portal,/90\s*(?:minutes|דקות|-minute)/i,'Personal portal must label sessions as 90 minutes');
 
 const journal=readFileSync('personal-course/student/en/ai-learning-journal.md','utf8');
 assert.match(journal,/throughout all 7 integrated sessions\. Each session has one tab/i,

@@ -1,23 +1,33 @@
 # Session 4 — Solve a Recurring Problem
 
-**Time:** 45–60 minutes  
-**Outcome:** One small web tool that you built, tested, and know exactly where it breaks.
+**Time:** 90 minutes  
+**Outcome:** Two tools for the same problem — a tiny one built in chat and a real one built in Lovable — and testing that knows where each of them breaks.
+
+## Before the session — open a Lovable account
+
+**Do this before the session, not during it.** [Lovable](https://lovable.dev) builds a real application from a description in plain words. Its free tier is generous enough for everything we do.
+
+1. Go to [lovable.dev](https://lovable.dev) and sign up with a Google account or an email address.
+2. No payment details are needed. If you are asked for a card, stop — you are in the wrong place.
+3. Open one empty project to confirm it works, and give it any name.
+4. If sign-up fails or the free tier is not available to you, that is fine. You can watch the demonstration and do everything else.
 
 ## Scenario
 
-Pick a small thing you keep losing track of: splitting costs with flatmates, a packing list, a rota of household chores, tracking a habit. Not a software project — one tiny tool, with one user and a deliberately limited job. Do not put passwords, account details, other people's data, or decisions with financial or medical weight into it.
+Pick a small thing you keep losing track of: splitting costs with flatmates, a rota of household chores, tracking a habit, a kit list you rewrite every time. Today we build it **twice**: first as a tiny version in chat, then as a real application. Put no passwords, account details, or other people's data into either.
 
 ## Sequence
 
-1. **Choose the friction and shrink it (10 minutes).** Write down who the user is, what problem recurs, and no more than three actions the tool can perform. Write down what it may store and what it must never do. The most useful resistance here is to yourself: every fourth action you add costs you a test you will not have time to run.
-2. **Build the smallest version that is already useful (15 minutes).** In **Claude Artifacts**, ask for one self-contained web page: plain labels, a reset control, no login, no connection to an external service, and no sending data anywhere. A paper prototype is equally valid — the learning here is in the definition and the testing, not the code.
-3. **Test what will actually happen (12 minutes).** Run a **normal case** — the action you built the tool for. Then run an **edge case**: an empty field, zero, a negative number, text where a number belongs, or an absurdly long value. Record what you expected and what actually happened, revise one behaviour, and retest.
-4. **Keep control (8 minutes).** Decide where the tool is stored, who can open it, how data gets cleared, and when you stop using it. Share it only after you have checked it yourself.
+1. **Choose the friction and shrink it (8 minutes).** Who the user is, what recurs, and at most three actions. What the tool may store and what it must never do.
+2. **A tiny version in chat (12 minutes).** In **Claude Artifacts**, ChatGPT, or Gemini, ask for one self-contained web page with the three actions and a reset control. It is fast, it runs immediately, and it is enough to find out whether the idea is worth anything.
+3. **Test before going further (10 minutes).** Run a **normal case** — the action you built it for. Then an **edge case**: an empty field, zero, text where a number belongs, or refreshing the page. Record expected against actual. If the tiny version is enough for you, you are done, and that is a good result.
+4. **A real application in Lovable (15 minutes).** Describe exactly the same problem to Lovable in words. It builds an application with screens, saved data, and a real address you can open from your phone. Change one thing and ask it to fix that — this is where the real difference between the two shows.
+5. **Decide what is enough (10 minutes).** Which of the two will you actually use? What is stored where, who can open it, and how is it cleared? A real application is only worth more if you genuinely use it.
 
 ## Integrated artifact
 
-Submit the tool — or the paper prototype — with a short test log: the problem, the permitted actions, the normal-case result, the edge-case result, the revision you made, and one sentence on privacy and maintenance. Code that was generated quickly is not safe merely because it runs.
+Submit both versions — or one plus a description of the other — with a short test log: the problem, the permitted actions, the normal-case result, the edge-case result, and one sentence on which of them will still be in use in a month.
 
 ## Optional resources
 
-Every table for this session is in the [learning journal](../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx): defining the useful minimum, the revision log, and the test table. Download it as a Word file and fill it in by hand or on screen. A paper prototype is a full and valid free-access route, at no cost. **Lovable** and **Replit** are optional next steps for larger or collaborative projects — no sign-up is needed for this course.
+Every table for this session is in the [learning journal](../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx). [Lovable](https://lovable.dev) is optional: the whole session works with the tiny version alone, or by watching the demonstration. A paper prototype is a completely valid free-access route at no cost.
