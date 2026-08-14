@@ -1,23 +1,30 @@
 # Session 5 — Make a Space Work Better
 
 **Time:** 90 minutes  
-**Outcome:** A measured concept for a small physical project, tested in cardboard before anything is bought or built.
+**Outcome:** A parametric 3D model of something you actually want, driven by AI, checked against a real measurement and a physical test before anything is printed.
+
+## Before this session
+
+Work through the [setup guide](session-05-setup.md) **in the week before**, not on the day. You only need one route, and the free one — OpenSCAD alone — completes the whole session.
+
+Bring a tape measure, paper or cardboard, and one small thing that annoys you.
 
 ## Scenario
 
-Pick one small corner that does not work: cables sprawling behind the desk, a drawer you can never find anything in, a shelf that needs a divider, an object with no permanent home. You will design a simple organiser, tray, divider, or stand. This is not engineering approval: do not design anything that carries a person's weight, involves electrics, or is dangerous if it fails.
+Pick something small you want to exist: a drawer organiser, a cable tray, a shelf divider, a stand for a specific object, a bracket, a holder for the thing that never has a home. You will describe it to an AI, watch it become a real 3D model, change it, and test it against the physical world. This is not engineering approval: nothing that carries a person's weight, involves electrics, or is dangerous if it fails.
 
 ## Sequence
 
-1. **Measure, and mark where every number came from (12 minutes).** Measure the space and the objects. Beside each number, write its origin: **measured** with a ruler, **from the maker's spec**, **assumed** by you, or **calculated** from other numbers. Photograph only if no people or personal details are in shot — or simply sketch.
-2. **Make the constraints visible (12 minutes).** Write down the clearances you need to leave, the material you intend to build from, and the one parameter you want to be able to change later. You can ask Claude, ChatGPT, or Gemini to draft a checklist — but the measurements stay yours, and the tool has not seen the room.
-3. **Propose one option (15 minutes).** Sketch one idea, or open a ready-made parametric file. Change one parameter deliberately, and write down in advance what should change in the object — then check whether that is what happened.
-4. **Test in cardboard before building (10 minutes).** Cut paper or cardboard to the real size, put it in place, and try to use the space as you normally would. Record the tolerance you discovered, which assumption turned out to be wrong, and the name of the corrected version.
+1. **Measure, and mark where every number came from (15 minutes).** Measure the space and the objects. Beside each number write its origin: **measured** with a ruler, **from the maker's spec**, **assumed** by you, or **calculated**. The AI cannot do this part — it has not seen the room, and it will happily invent a dimension that looks reasonable.
+2. **Describe it and let the AI build it (25 minutes).** Give the tool your measurements and what the object has to do. On the free route it writes OpenSCAD code you paste and render. On the other routes it drives FreeCAD directly and you watch the shape appear. Either way, **read what it produced before you trust it** — ask it which numbers it invented.
+3. **Change one parameter, having predicted the result (15 minutes).** Pick one number — the number of compartments, a wall thickness, a height — and write down what *should* change before you change it. Then change it. If your prediction was wrong, you did not understand the model, and it is much cheaper to find that out now.
+4. **Check it against the real world (25 minutes).** Print the outline at real size, or cut cardboard to the model's dimensions, and put it where it will live. Record the tolerance you found, which assumption turned out wrong, and what you changed. A model that looks correct on screen is not a model that fits.
+5. **Decide what happens next (10 minutes).** Is it worth printing or building? What would you check first if you did? What did the AI get wrong that you only caught because you measured?
 
 ## Integrated artifact
 
-Create one design sheet: a dimension table where every number has a source, the constraints and clearances, the adjustable parameter, the cardboard-test result, and one sentence on what this design is not suitable for. A convincing sketch is not proof that something fits.
+One design sheet: the dimension table with a source for every number, the model file or the code, the parameter you changed and what you predicted, the physical-check result, and one sentence on what this design is not suitable for. A convincing render is not proof that something fits.
 
 ## Optional resources
 
-Every table for this session is in the [learning journal](../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx): the dimension table, the proposal and assumptions table, and the fit-check table. Download it as a Word file and fill it in by hand or on screen. A ruler, paper, and cardboard are a completely valid full route, free to access and at no cost.
+The [starter model](../instructor/samples/session-05-organiser.scad) is a parametric drawer organiser you can open and change immediately — change `compartments` from 5 to 7 and watch every compartment recalculate. Every table for this session is in the [learning journal](../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx). A ruler, paper, and cardboard remain a completely valid free-access route at no cost: the design thinking is the same whether the model is on screen or on paper.

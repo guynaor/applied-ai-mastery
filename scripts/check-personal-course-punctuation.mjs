@@ -7,9 +7,14 @@ const markdownFiles=directory=>readdirSync(directory,{withFileTypes:true}).flatM
  return entry.isDirectory()?markdownFiles(path):entry.name.endsWith('.md')?[path]:[];
 });
 
+// This catches prose that ends in a semicolon, a habit that reads as translated English.
+// Code is exempt: a fenced OpenSCAD or JavaScript line ending in ";" is correct, not a lapse.
 const violations=[];
 for(const path of markdownFiles('personal-course')){
+ let inFence=false;
  readFileSync(path,'utf8').split(/\r?\n/).forEach((line,index)=>{
+  if(/^\s*```/.test(line)){inFence=!inFence;return;}
+  if(inFence)return;
   if(/;\s*$/.test(line))violations.push(`${path}:${index+1}`);
  });
 }
