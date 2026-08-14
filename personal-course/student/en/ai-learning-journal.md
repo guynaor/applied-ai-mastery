@@ -458,7 +458,7 @@ What still needs your decision? What would you simplify before a real person use
 <!-- journal-tab: {"id":"session-05","title":"Session 5: Make a Space Work Better"} -->
 # Session 5: Make a Space Work Better
 
-Use AI to explore a layout or physical-project idea, then check it in the real world.
+Measure something real, let an AI build a 3D model from it, change one parameter — and check it in cardboard before printing.
 
 ## 1. Capture the parameters
 
@@ -470,48 +470,57 @@ Use AI to explore a layout or physical-project idea, then check it in the real w
 | | | | |
 | | | | |
 
-## 2. Create and challenge the proposal
+## 2. The AI builds it — and what it invented
 
-Sketch the layout, then break it down into numbers. Any line without a source is an assumption, and every assumption needs a physical check before you buy anything.
+Give the tool your measurements and what the object has to do. Once the model exists, ask it explicitly: **"Which dimensions did you use that I did not give you?"** The list that comes back is the heart of this stage.
 
-| Component | Measurement or quantity | Where the number came from | Assumption to check physically |
+| Route I worked on | What I asked it to build | What I got | Dimensions it invented that I never gave it |
 | --- | --- | --- | --- |
-| Example: desk for the work corner | 120 by 60 cm | Manufacturer's product page, 4 May | That the door still opens fully with the desk in place |
-| | | | |
+| Example: Route 1, OpenSCAD + chat | An organiser for a 360 by 420 mm drawer, with compartments for cables | Code that runs and produces a tray with 5 compartments | Wall thickness 2.4 mm, 1 mm clearance each side, compartment height 60 mm — none of them measured |
 | | | | |
 | | | | |
 
-## 3. Fit check
+## 3. Change one parameter — predict first
 
-Tape down paper or cardboard at the real size and try living with it. This is the cheapest test you will run, and the one that prevents the expensive mistake.
+Pick one number, write down what **should** happen, and only then change it. If the prediction did not match, you did not understand the model — which is exactly what you want to find out now.
 
-| What I tested | How I tested it | What I found | What I changed in the plan |
+| Parameter I changed | From / to | What I predicted | What actually happened |
 | --- | --- | --- | --- |
-| Example: that the desk does not block the walkway | Taped 120 by 60 cardboard to the floor and moved around the room for two days | 55 cm of walkway left, too narrow with two people in the room | Reduced to 100 cm wide and moved the chair to the other side |
+| Example: number of compartments | 5 to 7 | Each compartment narrower, roughly 48 mm instead of 69 | Exactly that — 48.4 mm. But the dividers stayed the same thickness, so I lost more space than I expected |
+| | | | |
+| | | | |
+
+## 4. Physical check — before printing
+
+Cut cardboard to the model's dimensions, put it in place, and try to use it normally. This is the cheapest test you will run, and the one that saves a three-hour print from the bin.
+
+| What I tested | How I tested it | What I found | What I changed in the model |
+| --- | --- | --- | --- |
+| Example: that the organiser fits and the drawer still closes | Cut 358 by 418 mm cardboard and put it in the drawer | It fits, but the drawer only opens 80% and I could not reach the back compartment | Shortened the depth to 330 mm and added a finger notch |
 | | | | |
 | | | | |
 
 ## Goal
 
-Make one proposal for a real space that has survived contact with a tape measure.
+Produce one 3D model of something you genuinely want, where every dimension derives from something you measured, and which has already survived contact with cardboard.
 
 ## Steps
 
-1. Measure or define the key parameters and mark which ones are assumptions (for example: a home-office corner, a child's room, a balcony, a kitchen wall).
-2. Create one layout or project proposal.
-3. Perform a simple fit check and record what changed.
+1. Measure a real object or corner, and label where every number came from (for example: a drawer, a shelf, a cable corner, a cupboard shelf).
+2. Let the AI build a model from your measurements — on whichever route you installed — then ask it which dimensions it invented.
+3. Change one parameter after predicting the result, and check the outcome in cardboard.
 
 ## Bronze
 
-Capture the key measurements and make one layout proposal.
+Measure something real, get a model from the AI, and write down which dimensions it invented that you never gave it.
 
 ## Silver
 
-Run a physical fit check and revise the proposal from what you found (for example: the drawer cannot open because the radiator is in the way).
+Change one parameter after writing a prediction, and check whether the model behaved as you expected (for example: I increased the number of compartments and found the dividers ate more space than I thought).
 
 ## Gold
 
-Prototype one element with paper, cardboard, or tape and document the improvement.
+Cut cardboard to the model's dimensions, test it in the real place, and correct the model from what you found — recording what would have happened had you printed without checking.
 
 ## My task
 
@@ -520,7 +529,7 @@ Prototype one element with paper, cardboard, or tape and document the improvemen
 | Example: Bronze | The home-office corner | End of the month |
 | | | |
 
-## Measurements, for the real space
+## Measurements, for the real object
 
 | Parameter / measurement | Value | Measured / spec / assumed / calculated | Source / note |
 | --- | --- | --- | --- |
