@@ -10,7 +10,7 @@
 | Platform | Suits | Note |
 |---|---|---|
 | [Lovable](https://lovable.dev) | A **web** app — opens in a browser, has an address you can send | Generous free tier, no credit card |
-| [Manus](https://manus.im) | A **mobile** app — it has a mode dedicated to building phone apps | Check its current free allowance before the session |
+| [Manus](https://manus.im) | An **installable app with accounts** — a PWA you add to your home screen, with a backend and sign-in | Check its current free allowance before the session |
 
 1. Sign up with Google or an email address. **Do not enter payment details.** If a card is required just to start, stop and pick the other one.
 2. Open one empty project to confirm it works.
@@ -27,7 +27,7 @@ Pick a small thing you keep losing track of: splitting costs with flatmates, a r
 1. **Choose the friction and shrink it (10 minutes).** Who the user is, what recurs, and at most three actions. What the tool may store and what it must never do.
 2. **A tiny version in chat (15 minutes).** In **Claude Artifacts**, ChatGPT, or Gemini, ask for one self-contained web page with the three actions and a reset control. Download it and run it on your own machine — an artifact that only runs inside the tool is not yet a thing you own.
 3. **Test before going further (10 minutes).** Run a **normal case** — the action you built it for. Then an **edge case**: an empty field, zero, text where a number belongs, or refreshing the page. Record expected against actual. If the tiny version is enough for you, you are done, and that is a good result.
-4. **A real application (25 minutes).** Describe exactly the same problem in **Lovable** (web) or **Manus** (mobile). The platform builds an application with screens, saved data, and a real address. Ask for one change — this is where the real difference from chat shows.
+4. **A real application (25 minutes).** Describe exactly the same problem in **Lovable** (a web app with an address) or **Manus** (an installable PWA with sign-in and a backend, so several people share the same data). Ask for one change — this is where the real difference from chat shows. Note what arrives that you never asked for: on Manus that usually includes a whole sign-in flow.
 5. **Decide what is enough (20 minutes).** Which version will you actually use? What is stored where, who can open it, and how is it cleared? A real application is only worth more if you genuinely use it.
 
 ## Integrated artifact

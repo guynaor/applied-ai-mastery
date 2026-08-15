@@ -15,11 +15,11 @@ There are two options, and the choice is about **what you are building**, not wh
 | Platform | Suits | Note |
 |---|---|---|
 | [Lovable](https://lovable.dev) | A **web** app — opens in a browser, has an address you can send | Generous free tier, no credit card |
-| [Manus](https://manus.im) | A **mobile** app — it has a mode dedicated to building phone apps | Check its current free allowance before the session |
+| [Manus](https://manus.im) | An **installable app with accounts** — a PWA added to the home screen, with a backend and sign-in | Check its current free allowance before the session |
 
 The message to send:
 
-> Before the next session, open a free account on one of two: lovable.dev if you want to build a web app, or manus.im if you want a phone app. Sign up with Google or an email address, no credit card. If payment details are required just to start, stop and pick the other one. Open one empty project to check it works. If you cannot, that is fine — you will be able to watch and do everything else.
+> Before the next session, open a free account on one of two: lovable.dev if you want to build a web app, or manus.im if you want an app you can install on your phone with sign-in. Sign up with Google or an email address, no credit card. If payment details are required just to start, stop and pick the other one. Open one empty project to check it works. If you cannot, that is fine — you will be able to watch and do everything else.
 
 **Learners already met Manus in Session 2**, as a managed agent platform. It is worth naming that: same platform, different job. That is a lesson in itself — the line between "a tool that does something for me" and "a tool that builds something for me" is blurrier than it looks.
 
@@ -126,18 +126,20 @@ Demonstrate whichever platform most of the class signed up for. If the group is 
 
 > Build an application for splitting costs between three flatmates. One screen to add an expense — who paid, how much, what for — and one screen showing how much each person owes. The data should persist between visits. No user login, no real payments, and do not store bank details. Keep it as simple as possible.
 
-**In Manus**, add at the end: "Build this as a phone app." That is what triggers its dedicated mode, and it changes the result — phone-sized screens, bottom navigation, and touch rather than a mouse.
+**In Manus**, add at the end: "Build this as an installable PWA with user accounts, so each flatmate signs in and they all see the same shared data. It should work well on a phone screen." That changes the result substantially — phone-sized layout, a sign-in screen, and data on a server rather than in the browser.
+
+**Why a PWA and not a real phone app.** Putting a native app on an iPhone needs an Apple developer account, signing, and review — none of which belongs in a 90-minute session. A PWA sidesteps all of it: it opens in the browser, and on a phone you add it to the home screen where it behaves like an app. On iPhone that is Safari, then Share, then **Add to Home Screen**. On Android, Chrome offers **Install app**. Show this on your own phone if you can — it is the moment the thing stops feeling like a web page.
 
 ### What is different here, and why it matters
 
 | | The tiny version in chat | Lovable | Manus |
 |---|---|---|---|
-| What you get | One file on your machine | A web app with an address | A phone-sized app |
-| The data | Disappears on refresh | Persists | Persists |
-| How you share it | Send the file | Send a link | Open it on a phone |
-| Build time | A minute | Minutes | Minutes |
-| What you understand | Every line | Some | Some |
-| Added unasked | Nothing | A lot | A lot |
+| What you get | One file on your machine | A web app with an address | An installable PWA with sign-in |
+| The data | Disappears on refresh | Persists | Persists on a server, per account |
+| Who can see it | Only you | Anyone with the link | Only people you invite, once signed in |
+| Getting it on a phone | Not really | Bookmark the link | Add to Home Screen, behaves like an app |
+| What you understand | Every line | Some | Less — there is now a backend |
+| Added unasked | Nothing | A lot | A lot, including a whole sign-in flow |
 
 **That last row is the heart of it.** Both platforms almost always add screens and features. Show it: "I asked for two screens. How many are here?"
 
@@ -157,7 +159,9 @@ Then the question that closes the session: **"Which of the two will you actually
 
 For most people the answer is the tiny version, and that is a correct answer. A real application is only worth more if you use it.
 
-Show [slide 8](../../instructor/samples/session-04-slides.html): where it is stored, who opens it, how it is cleared, when to stop. Both platforms answer each differently from the tiny version — the data sits on somebody else's server, and real deletion is not always what looks like deletion.
+Show [slide 8](../../instructor/samples/session-04-slides.html): where it is stored, who opens it, how it is cleared, when to stop.
+
+**Manus raises a question the others do not.** Once there is sign-in and a backend, there are real accounts holding real data on somebody else's server. Ask the group: whose accounts are those? What happens to the data if you stop using the platform, or stop paying? Can you get it out? Nobody has to answer perfectly — the point is that a tool which persists other people's data has obligations a single HTML file never had.
 
 ## 80–90 minutes — Exit check and homework
 
@@ -183,7 +187,7 @@ Show [slide 8](../../instructor/samples/session-04-slides.html): where it is sto
 **Claude Artifacts (default for the tiny version):** Fast, runs immediately, cheap on quota.
 **ChatGPT / Gemini:** Ask for one self-contained HTML file and download it.
 **Lovable:** For a web application. Free tier, no credit card.
-**Manus:** For a mobile application, in its dedicated phone mode. Check the current free allowance first.
+**Manus:** For an installable PWA with sign-in and a backend. Check the current free allowance first.
 **Without either:** Watch the demonstration and fill in the comparison table. The learning is fully preserved.
 **Paper:** Sketch the screens and run the test cards against them.
 
@@ -205,7 +209,7 @@ Show [slide 8](../../instructor/samples/session-04-slides.html): where it is sto
 - **Remote:** One shared screen for the platform, independent building for the tiny version.
 - **No device:** A paper prototype and the test cards.
 - **For learners who need structure:** The cost-splitting example from the journal, changing only the names.
-- **For learners ready to extend:** Build the same application on both platforms and compare what each added unasked.
+- **For learners ready to extend:** Install the PWA on an actual phone and try it where you would really use it — in the kitchen, at the shop. A tool that is awkward one-handed is a tool nobody uses.
 
 ## After the session
 
