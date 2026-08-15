@@ -1,7 +1,7 @@
 # Full session plan — Session 4: Solve a Recurring Problem
 
 **Time:** 90 minutes
-**Learning outcome:** Learners build the same problem twice — a tiny version in chat and a real one in Lovable or Manus — test each against a normal case and an edge case, and can explain when the tiny version is enough.
+**Learning outcome:** Learners build a solution to the same problem twice — a tiny version in chat and a real one in Lovable or Manus — test each against a normal case and an edge case, and can explain when the tiny version is enough.
 **Session artifact:** Two versions (or one plus a description of the other) and a test log: the problem, the permitted actions, the normal case, the edge case, and a sentence on which will still be in use in a month.
 
 **This session runs 90 minutes.** The extra time is questions, and they are heaviest here — this is the session where people discover they can build software.
@@ -36,7 +36,7 @@ The message to send:
 
 ## The recommended way: your own real problem, on your screen
 
-As in earlier sessions — **take a real recurring problem of your own and build it live in front of the class.** Here there is an extra reason: these platforms burn through a free quota fairly quickly, and if everyone builds separately some will stall halfway. When the heavy building runs on your account, nobody gets blocked.
+As in earlier sessions — **take a real recurring problem of your own and build the solution live in front of the class.** Here there is an extra reason: these platforms burn through a free quota fairly quickly, and if everyone builds separately some will stall halfway. When the heavy building runs on your account, nobody gets blocked.
 
 Learners build the tiny version themselves — it is cheap — and fill in the journal for their own problem. You run the platform; they propose what to ask for.
 
@@ -84,7 +84,7 @@ Show [slide 2](../../instructor/samples/session-04-slides.html). Each learner fi
 
 ### What to say
 
-> "Every fourth action you add costs you a test you will not have time to run. And that is doubly true today, because we are building this twice."
+> "Every fourth action you add costs you a test you will not have time to run. And that is doubly true today, because we are building the solution twice."
 
 ## 20–35 minutes — The tiny version
 
