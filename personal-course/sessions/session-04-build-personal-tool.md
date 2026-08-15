@@ -20,7 +20,7 @@ You already met **Manus** in Session 2, as a managed agent platform. Here it doe
 
 ## Scenario
 
-Pick a small thing you keep losing track of: splitting costs with flatmates, a rota of household chores, tracking a habit, a kit list you rewrite every time. Today we build it **twice**: first as a tiny version in chat, then as a real application. Put no passwords, account details, or other people's data into either.
+Pick a small thing you keep losing track of: splitting costs with flatmates, a rota of household chores, tracking a habit, a kit list you rewrite every time. Today we build a solution for it **twice**: first as a tiny version in chat, then as a real application. Put no passwords, account details, or other people's data into either.
 
 ## Sequence
 
