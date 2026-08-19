@@ -156,7 +156,7 @@ Show [slide 9](../../instructor/samples/session-06-slides.html).
 
 Learners write a short script that narrates the piece they've built — their subject, the image, and the two clips — for the ear, not the eye: short sentences, one idea per breath, numbers spoken rather than written. Full pattern on the [toolkit page](../../instructor/samples/session-06-toolkit.html).
 
-They record it in Google AI Studio, Google's text-to-speech surface. *Only Gemini's video generation has been tested by the course author (2026-08-19) — this narration routing hasn't been separately confirmed, so check it works before you teach.*
+They record it in Google Cloud's speech studio: [https://console.cloud.google.com/agent-platform/studio/media/speech](https://console.cloud.google.com/agent-platform/studio/media/speech). **Put that link in the chat — do not just say "Google's speech tool".** It lives in the Cloud console, not at aistudio.google.com, and the two are easy to confuse and not reachable from each other. Confirmed working in the first delivery.
 
 ### If the output is weak
 
@@ -223,7 +223,8 @@ Reflection question: "Which stage surprised you — because the tool did better,
 | Someone wants to publish a generated clip as a record of a real place | That is slide 8. Do not resolve it — run the discussion |
 | A learner has no subject of their own | Have them describe anything simple in the room — a mug, a pet, an object — and generate it from words. Never hand them an existing image to animate; item 6 is a real photo and can't enter the chain |
 | Time runs out | Drop the Canva half of stage 6, not the exit check. The Claude file is enough on its own |
-| Google AI Studio won't generate the narration, refuses, or drops the voice | Not separately confirmed — expect this. Read the script aloud yourself as a stand-in narration and move on; fix the audio after the session |
+| Someone cannot find the speech tool | They are almost certainly at aistudio.google.com. Paste the link: https://console.cloud.google.com/agent-platform/studio/media/speech |
+| The speech studio won't generate, refuses, or drops the voice | Read the script aloud yourself as a stand-in narration and move on; fix the audio after the session |
 
 ## Differentiation
 
