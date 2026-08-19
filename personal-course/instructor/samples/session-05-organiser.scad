@@ -3,8 +3,12 @@
 // Every measurement is in millimetres.
 
 /* [The drawer you measured] */
-drawer_width  = 360;   // internal width
-drawer_depth  = 420;   // internal depth
+drawer_width  = 360;   // internal width          <- measured
+drawer_depth  = 420;   // internal depth          <- measured
+// ASSUMED, not measured. The clear height was measured at 75, and the sheet
+// says leave 5 under the runner, which gives 70. This says 60. Nobody wrote
+// down why. It is the one number in this file that cannot answer
+// "where did that come from?" — decide for yourself whether to keep it.
 usable_height = 60;    // how tall the organiser may be
 
 /* [The organiser] */

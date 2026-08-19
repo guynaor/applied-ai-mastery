@@ -23,6 +23,13 @@
       tbody tr:nth-child(even){background:#FAFAFC}
       .total td{font-weight:700;background:var(--soft)}
       .say{border:2px dashed var(--primary);border-radius:6px;padding:1.2rem 1.5rem;font-style:italic}
+      .src{font-size:.8em;border-radius:999px;padding:.1rem .55rem;display:inline-block;margin-inline-end:.4rem}
+      .measured{background:#e3f1e6;color:#1f5b32}
+      .spec{background:#e6ecf7;color:#26406e}
+      .assumed{background:#fdecd8;color:#8a4b06}
+      .calc{background:#efe6f7;color:#4E356F}
+      .unit{font-size:clamp(.9rem,1.5vw,1.1rem);color:var(--muted);margin:.6rem 0 0}
+      .prompt .data{display:block;font-size:.88em;background:#22323d;border-radius:4px;padding:.7rem .9rem;margin:.6rem 0}
       ol,ul{padding-inline-start:1.4rem}
       @media print{.slide{min-height:auto;padding:1.5rem;border:0}}
     </style>
@@ -46,14 +53,17 @@
       <p class="num">Slide 2 — Measuring, minutes 15–30</p>
       <h1>Every number has a source</h1>
       <table>
-        <thead><tr><th>Label</th><th>What it means</th><th>Example</th></tr></thead>
+        <thead><tr><th>Dimension</th><th>Value</th><th>Where it came from</th></tr></thead>
         <tbody>
-          <tr><td>Measured</td><td>You put a ruler on it</td><td>Internal width 360 mm</td></tr>
-          <tr><td>Spec</td><td>It is on the maker's sheet</td><td>Panel thickness 1.8 cm</td></tr>
-          <tr><td>Assumed</td><td>You took it as true without checking</td><td>“The drawer opens fully”</td></tr>
-          <tr class="total"><td>Calculated</td><td>Derived from other numbers</td><td>Compartment width 68.7 mm</td></tr>
+          <tr><td>Internal width</td><td>36.0 cm</td><td><span class="src measured">measured</span> ruler, at the base of the drawer</td></tr>
+          <tr><td>Internal depth</td><td>42.0 cm</td><td><span class="src measured">measured</span> front face to back panel</td></tr>
+          <tr><td>Clear height</td><td>7.5 cm</td><td><span class="src measured">measured</span> up to the runner above</td></tr>
+          <tr><td>Panel thickness</td><td>1.8 cm</td><td><span class="src spec">spec</span> the maker's furniture sheet</td></tr>
+          <tr><td>The drawer opens fully</td><td>Yes</td><td><span class="src assumed">assumed</span> never checked</td></tr>
+          <tr class="total"><td>Width of one compartment</td><td>68.7 mm</td><td><span class="src calc">calculated</span> from the width, at 5 compartments</td></tr>
         </tbody>
       </table>
+      <p class="unit">Tables are in centimetres, because that is how a tape measure reads. The code is in millimetres: <strong>36.0 cm = 360 mm</strong>.</p>
       <div class="say">This is the part the AI cannot do. It has not seen the room.</div>
     </section>
     <section class="slide">
@@ -78,7 +88,12 @@
     <section class="slide">
       <p class="num">Slide 5 — The request, minutes 30–55</p>
       <h1>Give it real numbers</h1>
-      <div class="prompt">These are measurements I took, each with a source label: [the measurements]. I want a drawer organiser with compartments for cables. Build a parametric model where every dimension derives from the numbers I gave, with the parameters at the top of the file so I can change them. Do not invent dimensions — if something is missing, ask me instead of filling it in. Do not claim the design is strong or safe.</div>
+      <div class="prompt">These are measurements I took, each with a source label. All of them are in millimetres.
+        <span class="data">Drawer, internal: width 360 (measured), depth 420 (measured), clear height 75 (measured).<br>
+        Must fit: 2 power banks 105 × 65 × 22 (measured); 5 coiled cables about 80 across (assumed); 6 connectors up to 50 × 30 (measured); 1 headphone case 95 across, 40 tall (spec); 1 notebook 210 × 148 × 8 (spec).<br>
+        Clearances: at least 15 around each compartment so a finger gets in; 5 below the runner above.</span>
+        I want a drawer organiser with compartments for cables. Build a parametric model where every dimension derives from the numbers I gave, with the parameters at the top of the file so I can change them. Do not invent dimensions — if something is missing, ask me instead of filling it in. Do not claim the design is strong or safe.</div>
+      <p class="unit">The full sheet, with the objects and the planted assumption, is in <strong>Sample measurements</strong>.</p>
     </section>
     <section class="slide">
       <p class="num">Slide 6 — The question that comes after</p>
