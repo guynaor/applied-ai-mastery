@@ -12,7 +12,8 @@ stop line. Guy is not going to teach it. He wants a mentored home project
 instead — one subject the learner chooses, carried through research, a plan
 with a spreadsheet, a presentation, a small app, and a designed object.
 
-The five deliverables he named map almost exactly onto sessions 2 through 6.
+The five deliverables he named map onto sessions 2 through 6 — exactly, and
+in order, once the 2026-08-19 reorder lands.
 That makes the capstone a **synthesis** rather than a seventh topic: every
 session's skill used once, on one subject the learner cares about. Session
 1's skill — deciding, and judging a source — is what they use to choose the
@@ -68,9 +69,17 @@ subject, so all six taught sessions are exercised.
 |---|---|---|---|
 | 1 | Research brief | Session 2 | Sources the learner opened themselves, what they decided, what they still do not know |
 | 2 | Plan with a spreadsheet | Session 3 | Budget, schedule, who does what |
-| 3 | Small app | Session 4 | Plus a permission boundary and a stop rule |
+| 3 | Presentation | Session 4 | The production chain, everything generated visibly labelled |
 | 4 | Designed object | Session 5 | Parametric, checked against at least one real measurement |
-| 5 | Presentation | Session 6 | The production chain, everything generated visibly labelled |
+| 5 | Small app | Session 6 | Plus a permission boundary and a stop rule |
+
+After the 2026-08-19 reorder these are simply **sessions 2 through 6, in
+order**. Say that in the learner brief: "one deliverable per session, in the
+order you learned them" is easier to hold than a mapping, and it is now
+literally true.
+
+The last deliverable is the app, which is also the one carrying the
+permission boundary and the stop rule. The capstone ends on human control.
 
 Each deliverable's review criteria come from the session that taught it.
 The mentor is not inventing standards; the rubrics already exist.
