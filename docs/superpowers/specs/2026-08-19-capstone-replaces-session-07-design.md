@@ -1,4 +1,4 @@
-# Capstone replaces session 7 — Make One Thing Real
+# Capstone replaces session 7 — One Project, Every Skill
 
 **Date:** 2026-08-19
 **Status:** shape approved in brainstorming; title pending confirmation; not implemented
@@ -29,10 +29,12 @@ subject, so all six taught sessions are exercised.
    mitigation is designed in — see "The learner's own end date" below.
 4. **Mentoring is asynchronous and written**, over email or WhatsApp — the
    same channels session 6's homework already uses.
-5. **Title:** English *Make One Thing Real*, Hebrew *להוציא דבר אחד לפועל*.
-   Every other session title is an imperative phrase and this sits beside
-   them. **Pending Guy's confirmation** — it threads through the spec but is
-   a find-replace to change.
+5. **Title:** English *One Project, Every Skill*, Hebrew
+   *פרויקט אחד, כל המיומנויות*. Confirmed by Guy on 2026-08-19.
+   Note that every session title is an imperative phrase — *Decide What to
+   Do Next*, *Buy With Confidence*, *Make a Space Work Better* — and this
+   one deliberately is not. The grammatical break is useful: it signals at a
+   glance that the capstone is not another session.
 
 ## Goals
 
