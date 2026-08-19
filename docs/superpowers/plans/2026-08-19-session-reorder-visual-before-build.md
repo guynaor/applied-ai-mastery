@@ -106,7 +106,7 @@ single run should show the whole blast radius.
 - [ ] **Step 3: Prove it detects a real break**
 
 ```bash
-git mv personal-course/instructor/samples/session-06-slides.html /tmp/s6-slides-holdout.html
+mv personal-course/instructor/samples/session-06-slides.html /tmp/s6-slides-holdout.html
 node scripts/check-session-links.mjs; echo "exit=$?"
 ```
 
@@ -116,7 +116,7 @@ is the failing test — a guard that cannot fail is not a guard.
 - [ ] **Step 4: Restore and confirm green**
 
 ```bash
-git mv /tmp/s6-slides-holdout.html personal-course/instructor/samples/session-06-slides.html
+mv /tmp/s6-slides-holdout.html personal-course/instructor/samples/session-06-slides.html
 node scripts/check-session-links.mjs && echo "PASS"
 ```
 
