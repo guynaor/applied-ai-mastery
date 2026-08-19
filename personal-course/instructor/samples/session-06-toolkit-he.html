@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>מדריך כלים — מפגש 6</title>
+    <style>
+      body{font-family:system-ui,sans-serif;line-height:1.6;max-width:56rem;margin:0 auto;padding:1.5rem;color:#17242D}
+      h1{border-bottom:3px solid #4E356F;padding-bottom:.4rem}
+      h2{color:#4E356F;margin-top:2rem}
+      .note{background:#F1F3F6;border-inline-start:4px solid #7B4FB3;padding:.75rem 1rem;border-radius:4px}
+      .assets{display:grid;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr));gap:1rem;margin:1rem 0}
+      .asset{border:1px solid #d6dae0;border-radius:8px;overflow:hidden;background:#fff}
+      .frame{height:7rem;display:flex;align-items:center;justify-content:center;background:#eceff3;color:#55606E;font-size:.9rem;text-align:center;padding:.5rem;border-bottom:1px solid #d6dae0}
+      .body{padding:.8rem .9rem}
+      .asset h3{margin:0 0 .4rem;font-size:1rem;color:#4E356F}
+      .asset p{margin:.25rem 0;font-size:.9rem}
+      .tag{font-size:.78rem;border-radius:999px;padding:.1rem .6rem;display:inline-block;margin-bottom:.3rem}
+      .orig{background:#e3f1e6;color:#1f5b32}
+      .edit{background:#fdecd8;color:#8a4b06}
+      .gen{background:#f7e0e0;color:#8a1f1d}
+      .stock{background:#e6ecf7;color:#26406e}
+      .problem{border-color:#b3413f}
+      .problem .body{background:#fdf0f0}
+      table{border-collapse:collapse;width:100%;margin:.8rem 0}
+      th,td{border:1px solid #d6dae0;padding:.5rem .65rem;text-align:start}
+      th{background:#4E356F;color:#fff}
+      details{margin:.6rem 0;background:#F0EAFA;border-radius:6px;padding:.6rem .9rem}
+      summary{cursor:pointer;color:#4E356F;font-weight:600}
+      .prompt-pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;margin:1rem 0}
+      .prompt{border:1px solid #d6dae0;border-radius:8px;padding:.8rem .9rem;background:#fff}
+      .prompt.weak{border-color:#b3413f;background:#fdf0f0}
+      .prompt.strong{border-color:#3f8a5b;background:#eef7f0}
+      .prompt h3{margin:0 0 .4rem;font-size:.95rem}
+      .prompt.weak h3{color:#8a1f1d}
+      .prompt.strong h3{color:#1f5b32}
+      .prompt p{margin:0;font-size:.92rem;font-style:italic}
+      .anatomy{list-style:none;margin:.8rem 0;padding:0}
+      .anatomy li{padding:.35rem 0 .35rem 0;border-bottom:1px dashed #d6dae0}
+      .anatomy li:last-child{border-bottom:none}
+      .anatomy strong{color:#4E356F;display:inline-block;min-width:6.5rem}
+      .trap{border:1px solid #b3413f;background:#fdf0f0;border-radius:8px;padding:.8rem 1rem;margin:.8rem 0}
+      .trap h3{margin:0 0 .3rem;color:#8a1f1d;font-size:1rem}
+      .trap p{margin:.25rem 0}
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>מדריך כלים — מפגש 6</h1>
+      <p class="note">הדף הזה בשבילכם כמנחים, לא בשביל הלומדים. תשאירו אותו פתוח גם בהכנה וגם תוך כדי המפגש — תנאי החינם של הכלים מתעדכנים מהר יותר מתוכן הקורס. כל מספר כאן מלבד אימות הווידאו של <span dir="ltr">Gemini</span> מקורו במקור משני ומסומן ככזה בהתאם; תבדקו אותו לפני שמלמדים.</p>
+
+      <h2>1. הכלים, לפי שלב</h2>
+      <p>שישה שלבים, חמישה כלים. בשלבים <span dir="ltr">1–2</span> יש ללומדים בחירה אמיתית בין <span dir="ltr">Gemini</span> ל-<span dir="ltr">ChatGPT</span>; בשלבים <span dir="ltr">3–4</span> עובדים אך ורק עם <span dir="ltr">Gemini</span>, כי זה מסלול הווידאו היחיד שנבדק בפועל ועבד. <span dir="ltr">Sora</span> מופיע רק כהדגמה של המנחה.</p>
+      <table>
+        <tr><th>כלי</th><th>שלב</th><th>מסלול חינמי</th><th>למה לשים לב</th></tr>
+        <tr>
+          <td>Gemini</td>
+          <td><span dir="ltr">1–2</span> תמונה, <span dir="ltr">3–4</span> סרטון, 5 קריינות</td>
+          <td><span class="tag orig">מאומת ב-<span dir="ltr">19.08.2026</span></span> חינם עם חשבון גוגל; יצירת הסרטון נבדקה בפועל ועבדה</td>
+          <td>שלושה שלבים תלויים בחשבון אחד — אם <span dir="ltr">Gemini</span> נופל, רוב המפגש נופל איתו</td>
+        </tr>
+        <tr>
+          <td>ChatGPT</td>
+          <td><span dir="ltr">1–2</span> תמונה</td>
+          <td><span class="tag edit">נכון לזמן הכתיבה</span> המסלול החינמי מוגבל בקצב; הגבול המדויק לא אומת</td>
+          <td>אם המכסה נגמרת באמצע המפגש, ההשוואה בין שני הכלים קורסת לכלי אחד — <span dir="ltr">Gemini</span></td>
+        </tr>
+        <tr>
+          <td>Claude</td>
+          <td>6 מצגת</td>
+          <td><span class="tag edit">נכון לזמן הכתיבה</span> יש מסלול חינמי</td>
+          <td>מפיק קובץ <span dir="ltr">PPTX</span> או <span dir="ltr">HTML</span> עצמאי — קובץ שנשאר אצל הלומד</td>
+        </tr>
+        <tr>
+          <td>Canva</td>
+          <td>6 מצגת</td>
+          <td><span class="tag edit">נכון לזמן הכתיבה</span> יש מסלול חינמי</td>
+          <td>גימור עיצובי נאה, אבל המצגת נשארת על הפלטפורמה של <span dir="ltr">Canva</span>, לא אצל הלומד</td>
+        </tr>
+        <tr>
+          <td>Sora</td>
+          <td>להדגמה בלבד</td>
+          <td><span class="tag stock">נכון לזמן הכתיבה</span> דורש תוכנית בתשלום</td>
+          <td>הדגמת מנחה בלבד. לעולם לא כמשימה ללומד</td>
+        </tr>
+      </table>
+      <p class="note">כל שורה מעל שורת <span dir="ltr">Gemini</span> מגיעה ממקור משני — מבלוגים שעוקבים אחרי כלי בינה מלאכותית, לא מבדיקה ידנית. בבוקר המפגש פתחו את דף התמחור של כל כלי ותקנו את הטבלה במקום, אם מכסה או תוכנית השתנו.</p>
+
+      <h2>2. אנטומיה של פרומפט לתמונה</h2>
+      <p>פרומפט שמניב תמונה שימושית באופן עקבי נוטה להגדיר חמישה דברים. מדלגים על אחד מהם, והמודל מנחש — וההימור הזה כמעט אף פעם לא יוצא כמו שרציתם.</p>
+      <ul class="anatomy">
+        <li><strong>נושא</strong> — מה בפועל נמצא בפריים</li>
+        <li><strong>קומפוזיציה</strong> — מאיזו זווית ומאיזה מרחק רואים אותו</li>
+        <li><strong>תאורה</strong> — מקור האור, הכיוון שלו ושעת היום</li>
+        <li><strong>מסגור</strong> — איפה נשאר שטח ריק, לטקסט או ללוגו שיתווספו אחר כך</li>
+        <li><strong>החרגות</strong> — מה בשום פנים ואופן לא יופיע</li>
+      </ul>
+      <div class="prompt-pair">
+        <div class="prompt weak">
+          <h3>חלש</h3>
+          <p>„תמונה יפה של גינה.”</p>
+        </div>
+        <div class="prompt strong">
+          <h3>חזק</h3>
+          <p>„ערוגה בגינה קהילתית, פורחת במלואה, מצולמת בגובה העיניים מהשביל. אור זהוב של אחר הצהריים מגיע מצד שמאל ומטיל צללים ארוכים. הרבע העליון-שמאלי נשאר ריק, לכותרת שתתווסף. בלי אנשים, בלי שלטים, בלי זבל.”</p>
+        </div>
+      </div>
+      <p>אותה כוונה בדיוק, חמישה פרטים שנוספו. קראו את הפרומפט החזק מול הרשימה למעלה — כל משפט בו עונה על סעיף אחר.</p>
+
+      <h2>3. תבנית לתסריט קריינות</h2>
+      <p>תסריט שנקרא טוב על הדף יכול עדיין להישמע רע כשמקריאים אותו בקול. כותבים לאוזן, לא לעין:</p>
+      <ul class="anatomy">
+        <li><strong>משפטים</strong> — קצרים. אם משפט צריך פסיק כדי לשרוד, פצלו אותו לשניים</li>
+        <li><strong>רעיון אחד</strong> — לנשימה. משפט אחד למחשבה אחת, לא שלוש מחוברות ב„וגם”</li>
+        <li><strong>מספרים</strong> — נאמרים, לא נכתבים: „בערך שנים עשר אלף איש הגיעו”, לא „<span dir="ltr">12,847</span> משתתפים”</li>
+        <li><strong>שמות</strong> — ההגייה שלהם כמעט תמיד דורשת מעבר שני. מייצרים את הקריינות, מאזינים לה פעם אחת, ורק אז מתקנים שמות לפני הקלטה חוזרת</li>
+      </ul>
+
+      <h2>4. שני המלכודות</h2>
+      <p>שתי המלכודות האלה נראות חינמיות עד שהן נכשלות — באמצע המפגש עצמו, בלי דרך להתאושש במקום.</p>
+      <div class="trap">
+        <h3>הקרדיטים של <span dir="ltr">Runway</span> הם חד-פעמיים, לא חודשיים</h3>
+        <p><span dir="ltr">125</span> קרדיטים, פעם אחת ולתמיד — לא מכסה שמתחדשת כל חודש. זה עובד ללומד הראשון שמנסה, ואז החשבון ריק לכל מי שאחריו, בלי איפוס עד המפגש הבא.</p>
+      </div>
+      <div class="trap">
+        <h3><span dir="ltr">Kling AI</span> מטביע סימן מים על כל ייצוא חינמי</h3>
+        <p>אין דרך לעקוף את זה במסלול החינמי. הסימן נחתם בדיוק על הסרטון שהמפגש כולו קיים כדי להפיק אותו — אל תעבירו דרך הכלי הזה את התוצר הסופי של לומד.</p>
+      </div>
+    </main>
+  </body>
+</html>
