@@ -5,7 +5,7 @@
 
 ## Before this session
 
-Create two accounts before the day, not during it: Google (stages 1 through 5) and Claude (stage 6) — both free, and together they complete the whole chain. That's one account fewer than this session used to need. If you already use ChatGPT, bring it too: stage 1 uses it for an optional comparison, but a Google account alone is a complete route on its own.
+Create two accounts before the day, not during it: Google (stages 1 through 5) and Claude (stage 6) — both free, and together they complete the whole chain. If you already use ChatGPT, bring it too: stage 1 uses it for an optional comparison, but a Google account alone is a complete route on its own.
 
 ## Scenario
 

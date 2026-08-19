@@ -1,7 +1,7 @@
 # Full session plan — Session 6: From Prompt to Presentation
 
 **Time:** 90 minutes
-**Learning outcome:** Learners generate an image and repair it, animate their own image and generate a second clip from words alone, write a narration script for the ear and record it, and assemble the same deck through two different tools — labelling every generated piece and never presenting a convincing clip as a record of something real.
+**Learning outcome:** Learners generate an image and repair it, animate their own image and generate a second clip from words alone, write a narration script for the ear and record it, and assemble the same deck with one tool in two output formats — labelling every generated piece and never presenting a convincing clip as a record of something real.
 **Session artifact:** One production set: the generated image, its fixed version, the animated clip, the text-generated clip, the narration, and a deck built two ways — with a visible label on every generated piece.
 
 **This session runs 90 minutes, not 60.** The extra time is not overrun — it is questions, and that is where the learning happens.
@@ -173,6 +173,8 @@ Show [slide 10](../../instructor/samples/session-06-slides.html).
 
 Learners build the same short deck twice with Claude: once as a PPTX file, once as a single self-contained HTML file. Same slides, same script, same images — only the output format changes.
 
+Holding the tool constant and varying only the output format is a sharper comparison than varying the tool would have been — everything else about the task is controlled, so what's left standing is the real difference: what each format costs and gives back.
+
 ### Expected intermediate output
 
 Two short decks that say the same thing and open differently: the PPTX opens in PowerPoint, Keynote, or Google Slides, and anyone can edit its slides there; the HTML opens in any browser with nothing installed, is trivial to share as a link or attachment, and is readable as plain text. Neither is "the" deck — the point is that they now have both, and can name what each format cost.
@@ -186,6 +188,10 @@ Ask each learner, out loud, one sentence each: "Which format would you send some
 - **The PPTX looks plain.** That's expected, not a failure — it's an editable starting point, not a finished polish job. Point at what it buys them: anyone can open and restyle it.
 - **The HTML deck drifted from the script.** Point them back to the narration script from stage 5 — the deck should say what the script says, not reinvent it.
 - **A learner only has time for one route.** Build the PPTX — it's the format an institution or colleague expects. If time is short, show them the HTML rather than building it.
+
+### If you finish early
+
+This block was sized for two tools; producing a second export is a follow-up prompt, not a rebuild, so it may now run short — that is a guess, untested at this new shape, so watch the clock rather than assume it. If minutes are left over, have a learner open their PPTX in Google Slides and their HTML in a second browser tab side by side, and ask what changed when they switched.
 
 ## 85–90 minutes — Exit check and reflection
 
@@ -222,7 +228,7 @@ Reflection question: "Which stage surprised you — because the tool did better,
 | A video generation has not returned | Move to the next stage and come back. Never wait on screen |
 | Someone wants to publish a generated clip as a record of a real place | That is slide 8. Do not resolve it — run the discussion |
 | A learner has no subject of their own | Have them describe anything simple in the room — a mug, a pet, an object — and generate it from words. Never hand them an existing image to animate; item 6 is a real photo and can't enter the chain |
-| Time runs out | Build the PPTX, not both. If minutes are short, show the HTML rather than having them build it |
+| Time runs out | Build the PPTX, not both — show the HTML rather than having them build it |
 | The PPTX is missing an image or clip on a slide | Claude dropped the asset reference during generation — re-generate that one slide with the asset re-attached, don't restart the whole deck |
 | The HTML file opens as raw text or code instead of a slide deck | The OS handed it to a text editor, not a browser. Drag the file into an open browser window, or right-click and choose "open with" the browser |
 | Someone cannot find the speech tool | They are almost certainly at aistudio.google.com. Paste the link: https://console.cloud.google.com/agent-platform/studio/media/speech |
