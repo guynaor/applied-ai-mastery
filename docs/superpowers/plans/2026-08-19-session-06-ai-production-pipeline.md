@@ -46,6 +46,10 @@ Every task's requirements implicitly include this section.
 - **Stage tool map:** stages 1–2 Gemini *or* ChatGPT; stages 3–4 Gemini
   only; stage 5 Google TTS; stage 6 Claude *versus* Canva. Sora is a
   facilitator demo, never a learner task.
+  **Superseded 2026-08-19, after the first live delivery:** Canva could not
+  receive the chain's generated assets, so stage 6 dropped it. Stage 6 is
+  now Claude → PPTX versus Claude → self-contained HTML — one tool, two
+  output formats.
 
 ## File Structure
 
@@ -274,6 +278,12 @@ out for. Rows:
 | Canva | 6 deck | Free tier available | Design polish, but the deck lives on their platform |
 | Sora | demo only | Needs a paid plan | Facilitator demo. Never set as a learner task |
 
+**Superseded 2026-08-19, after the first live delivery:** the Canva row
+above no longer applies. Canva could not receive the chain's generated
+assets, so it was dropped from stage 6 and from this table; the built page
+carries four tool rows (Gemini, ChatGPT, Claude, Sora), and Claude's row
+reads "produces both a PPTX and a self-contained HTML file."
+
 Every free-tier claim except Gemini's carries the words "at the time of
 writing" and a line telling the facilitator to check before teaching.
 
@@ -374,6 +384,9 @@ Fixed inventory. Slide numbers are referenced by the guide:
    breath, numbers spoken.
 10. **Claude versus Canva** — a comparison table: what you get, where it
     lives, can you edit it in a year, what it is good at.
+    **Superseded 2026-08-19, after the first live delivery:** Canva could
+    not take the chain's generated assets, so this became PPTX versus
+    self-contained HTML, both from Claude, same table shape.
 11. **Exit check** — the completion sentence and the reflection question.
 
 Slide 8 must use the learners' own stage-3 and stage-4 output, not a

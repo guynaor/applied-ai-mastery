@@ -45,6 +45,16 @@ written; 4–7 were added on 2026-08-19 after Guy tested the tools directly.
    session already runs Gemini for three stages. Do not re-add a third
    route — 20 minutes carries two hands-on, not three.
 
+   **Superseded 2026-08-19, after the first live delivery.** Tried as
+   decided above. The delivery found Canva cannot receive the learner's
+   generated assets — there is no way to get the image and clips built in
+   stages 1–4 into it — so the two decks were never comparable, and the
+   premise for the 20-minute block did not hold. Canva is dropped from
+   stage 6. The two routes become Claude → PPTX and Claude →
+   self-contained HTML: one tool, two output formats, everything else held
+   constant — a sharper comparison than tool versus tool, for the same
+   reason decision 6 gave for keeping video single-tool.
+
 ## Goals
 
 - Teach the six-stage AI production chain end to end in 90 minutes.
@@ -74,6 +84,10 @@ written; 4–7 were added on 2026-08-19 after Guy tested the tools directly.
 | 65–85 | **Assemble**, two routes | Claude deck (PPTX or self-contained HTML) versus Canva. The comparison is the lesson, not either tool. |
 | 85–90 | Exit check | |
 
+**The stage-6 row above is superseded — see decision 7's 2026-08-19 note.**
+The routes are now Claude → PPTX versus Claude → self-contained HTML: one
+tool, two output formats, not Claude versus Canva.
+
 Stage 2 is the highest-value stage and must not be cut for time. Editing a
 masked region rather than regenerating is what separates people who get a
 usable image from people who generate forty and settle for one.
@@ -81,6 +95,8 @@ usable image from people who generate forty and settle for one.
 Stage 6 gets twenty minutes because two routes run inside it. The contrast
 to draw: a PPTX or HTML deck is a file the learner owns, can diff, and can
 edit forever; Canva gives faster polish and keeps them on the platform.
+*(Superseded — see decision 7. Canva is dropped; the contrast is now PPTX
+versus self-contained HTML, both from Claude.)*
 
 ### The comparison motif
 
@@ -93,7 +109,10 @@ and compares. Where it does not, it says so and explains why.
   mid-session. "There is currently one workable free option" is a finding,
   not a gap.
 - Stage 6: Claude **and** Canva. A portable file you own against platform
-  design polish.
+  design polish. *(Superseded — see decision 7. Now Claude's PPTX against
+  Claude's self-contained HTML: one tool held constant, two output formats
+  compared — a sharper comparison than tool versus tool, because everything
+  else is controlled.)*
 
 This gives the session a second learning outcome beyond the chain itself —
 learners practise judging tools against a task rather than adopting whatever

@@ -5,7 +5,7 @@
 
 ## Before this session
 
-Create three accounts before the day, not during it: Google (stages 1 through 5), and free accounts on Claude and Canva (stage 6) — all three free, and together they complete the whole chain. If you already use ChatGPT, bring it too: stage 1 uses it for an optional comparison, but a Google account alone is a complete route on its own.
+Create two accounts before the day, not during it: Google (stages 1 through 5) and Claude (stage 6) — both free, and together they complete the whole chain. If you already use ChatGPT, bring it too: stage 1 uses it for an optional comparison, but a Google account alone is a complete route on its own.
 
 ## Scenario
 
@@ -17,8 +17,8 @@ Pick one subject to carry through the whole chain: a place, a creature, an objec
 2. **Fix it (11 minutes).** Do not throw the prompt away and re-roll: edit the region that is wrong, in the same tool you used for stage 1. Re-rolling destroys whatever already worked. Label the result before you move on — it carries that label for the rest of the chain.
 3. **Animate your own image (8 minutes).** Upload the image you built and fixed into Gemini, and add a short prompt that steers the motion. The subject stays yours; the prompt only tells it how to move.
 4. **Generate a clip from words alone (10 minutes).** Same tool, a text prompt with nothing else behind it — nothing of yours survives into this clip. Watch for where it breaks: text, hands, continuity, physics. Then ask yourself: would you publish either of today's two clips as a record of a real place? Neither is — so no. A label doesn't make it true; it stops it from deceiving. That's rule three, applied to something you made ten minutes ago.
-5. **Narrate (9 minutes).** Write a short script that narrates the piece you've built — your subject, the image, and the two clips. For the ear, not the eye: short sentences, one idea each, numbers spoken rather than written. Record it in Google AI Studio. A second take usually fixes a mispronounced name faster than fighting with the first one.
-6. **Assemble a deck, two routes (20 minutes).** Build the same short deck twice: once with Claude, as a file you own and can keep editing, and once in Canva, for faster visual polish. The comparison is the point — notice what each route cost you and what it gave back.
+5. **Narrate (9 minutes).** Write a short script that narrates the piece you've built — your subject, the image, and the two clips. For the ear, not the eye: short sentences, one idea each, numbers spoken rather than written. Record it in Google Cloud's speech studio: [https://console.cloud.google.com/agent-platform/studio/media/speech](https://console.cloud.google.com/agent-platform/studio/media/speech) — it is in the Cloud console, not aistudio.google.com. A second take usually fixes a mispronounced name faster than fighting with the first one.
+6. **Assemble a deck, two routes (20 minutes).** Build the same short deck twice with Claude: once as a PPTX file you can open and edit in PowerPoint, Keynote, or Google Slides, and once as a single self-contained HTML file that opens in any browser with nothing installed. The comparison is the point — notice what each format cost you and what it gave back.
 
 ## Integrated artifact
 

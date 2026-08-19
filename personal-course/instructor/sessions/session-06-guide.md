@@ -1,12 +1,12 @@
 # Full session plan — Session 6: From Prompt to Presentation
 
 **Time:** 90 minutes
-**Learning outcome:** Learners generate an image and repair it, animate their own image and generate a second clip from words alone, write a narration script for the ear and record it, and assemble the same deck through two different tools — labelling every generated piece and never presenting a convincing clip as a record of something real.
+**Learning outcome:** Learners generate an image and repair it, animate their own image and generate a second clip from words alone, write a narration script for the ear and record it, and assemble the same deck with one tool in two output formats — labelling every generated piece and never presenting a convincing clip as a record of something real.
 **Session artifact:** One production set: the generated image, its fixed version, the animated clip, the text-generated clip, the narration, and a deck built two ways — with a visible label on every generated piece.
 
 **This session runs 90 minutes, not 60.** The extra time is not overrun — it is questions, and that is where the learning happens.
 
-This guide can be taught from directly. The whole chain runs on free accounts — Google, Claude, and Canva — and learners do not have to publish anything at the end.
+This guide can be taught from directly. The whole chain runs on free accounts — Google and Claude — and learners do not have to publish anything at the end.
 
 ## Session materials
 
@@ -41,12 +41,12 @@ Video generation is slow, and stage 4's clip has to be ready by the time the cla
 
 1. Open the [toolkit reference](../../instructor/samples/session-06-toolkit.html) and correct anything that's moved since it was written — free-tier terms change faster than this guide does.
 2. Open the [sample asset set](../../instructor/samples/session-06-asset-set.html). The answers are on a [separate page](../../instructor/samples/session-06-answers.html) — do not open it early, and it is separate so that an AI tool reading the asset set does not also receive the answers.
-3. Open the [slides](../../instructor/samples/session-06-slides.html), and sign into Google, Claude, and Canva in the facilitator account. Sign into ChatGPT too if you plan to run the stage-1 comparison.
+3. Open the [slides](../../instructor/samples/session-06-slides.html), and sign into Google and Claude in the facilitator account. Sign into ChatGPT too if you plan to run the stage-1 comparison.
 4. **Run the demo on a desktop, not a laptop.** Video generation is render-heavy, and a session built around it drags badly on underpowered hardware.
 
 ### What learners need
 
-- Three free accounts, set up before the day: Google, Claude, and Canva. ChatGPT is optional, a fourth.
+- Two free accounts, set up before the day: Google and Claude — one fewer than this session used to need. ChatGPT is optional, a third.
 - One real subject they want to carry through the chain — a place, a creature, an object, a small scene.
 - A device with a browser. That is enough for the whole session.
 
@@ -67,8 +67,8 @@ Video generation is slow, and stage 4's clip has to be ready by the time the cla
 | 38–46 | Move | Their own image, animated |
 | 46–56 | Video, then the safety callback | A second clip from text alone, and the honest answer about publishing either one |
 | 56–65 | Narrate | A script written for the ear, recorded |
-| 65–85 | Assemble, two routes | The same deck, built in Claude and in Canva |
-| 85–90 | Exit check and reflection | A production set ready to review, or a list of what's missing |
+| 65–85 | Assemble, two routes | The same deck, built by Claude as PPTX and as self-contained HTML |
+| 85–90 | Exit check, reflection, and the homework | A production set ready to review, or a list of what's missing |
 
 ## 0–10 minutes — Homework discussion
 
@@ -156,7 +156,7 @@ Show [slide 9](../../instructor/samples/session-06-slides.html).
 
 Learners write a short script that narrates the piece they've built — their subject, the image, and the two clips — for the ear, not the eye: short sentences, one idea per breath, numbers spoken rather than written. Full pattern on the [toolkit page](../../instructor/samples/session-06-toolkit.html).
 
-They record it in Google AI Studio, Google's text-to-speech surface. *Only Gemini's video generation has been tested by the course author (2026-08-19) — this narration routing hasn't been separately confirmed, so check it works before you teach.*
+They record it in Google Cloud's speech studio: [https://console.cloud.google.com/agent-platform/studio/media/speech](https://console.cloud.google.com/agent-platform/studio/media/speech). **Put that link in the chat — do not just say "Google's speech tool".** It lives in the Cloud console, not at aistudio.google.com, and the two are easy to confuse and not reachable from each other. Confirmed working in the first delivery.
 
 ### If the output is weak
 
@@ -169,31 +169,49 @@ Show [slide 10](../../instructor/samples/session-06-slides.html).
 
 ### What to say
 
-> "The comparison is the lesson, not either tool. Notice what each route cost you, and what it gave back."
+> "The comparison is the lesson, not the tool — it's the same tool both times. Notice what each format cost you, and what it gave back."
 
-Learners build the same short deck twice: once with Claude, as a file they own and can keep editing, and once in Canva, for faster visual polish. Same slides, same script, same images — only the tool changes.
+Learners build the same short deck twice with Claude: once as a PPTX file, once as a single self-contained HTML file. Same slides, same script, same images — only the output format changes.
+
+Holding the tool constant and varying only the output format is a sharper comparison than varying the tool would have been — everything else about the task is controlled, so what's left standing is the real difference: what each format costs and gives back.
 
 ### Expected intermediate output
 
-Two short decks that say the same thing and look different: Claude's as a file the learner can keep opening and editing, Canva's as a polished layout that lives on Canva's platform. Neither is "the" deck — the point is that they now have both, and can name what each one cost.
+Two short decks that say the same thing and open differently: the PPTX opens in PowerPoint, Keynote, or Google Slides, and anyone can edit its slides there; the HTML opens in any browser with nothing installed, is trivial to share as a link or attachment, and is readable as plain text. Neither is "the" deck — the point is that they now have both, and can name what each format cost.
 
 ### Checkpoint: before moving to the exit check
 
-Ask each learner, out loud, one sentence each: "Which route would you use next time, and why?" A real answer names a trade-off (speed versus ownership, polish versus portability) — not just a preference.
+Ask each learner, out loud, one sentence each: "Which format would you send someone else, and why?" A real answer names a trade-off (needs software to open versus opens anywhere, easy to restyle versus easy to share and read as text) — not just a preference.
 
 ### If the output is weak
 
-- **The Claude file looks plain next to Canva's.** That's expected, not a failure — point at the difference and ask what it cost to get Canva's polish (a platform lock-in, not a file).
-- **The Canva deck drifted from the script.** Point them back to the narration script from stage 5 — the deck should say what the script says, not reinvent it.
-- **A learner only has time for one route.** Claude first — it produces the file they keep. Canva can wait for the reflection question, not the checkpoint.
+- **The PPTX looks plain.** That's expected, not a failure — it's an editable starting point, not a finished polish job. Point at what it buys them: anyone can open and restyle it.
+- **The HTML deck drifted from the script.** Point them back to the narration script from stage 5 — the deck should say what the script says, not reinvent it.
+- **A learner only has time for one route.** Build the PPTX — it's the format an institution or colleague expects. If time is short, show them the HTML rather than building it.
 
-## 85–90 minutes — Exit check and reflection
+### If you finish early
+
+This block was sized for two tools; producing a second export is a follow-up prompt, not a rebuild, so it may now run short — that is a guess, untested at this new shape, so watch the clock rather than assume it. If minutes are left over, have a learner open their PPTX in Google Slides and their HTML in a second browser tab side by side, and ask what changed when they switched.
+
+## 85–90 minutes — Exit check, reflection, and the homework
 
 Show [slide 11](../../instructor/samples/session-06-slides.html):
 
 > My subject was **[what]**. It went through **[how many]** of the six stages. The stage I would cut if I only had an hour is **[which]**. The clip I would not publish about a real place is **[which]**, because **[why]**.
 
 Reflection question: "Which stage surprised you — because the tool did better, or worse, than you expected?"
+
+### The homework
+
+"Take something you actually care about — a hobby, a place you know well, a project, anything you would want to show someone — and run it through the whole chain on your own. Generate the images, fix the one that comes back wrong, animate it, generate a second clip from words alone, write and record the narration, and build the deck both ways. Then send it to the class, by email or on WhatsApp. Generate every image — do not start from a photo you already have. And label everything that was generated, exactly the way you did today."
+
+**Set a date when you give it.** With no next class to anchor it, an open-ended task drifts and quietly becomes nothing.
+
+**Say that a partial run counts.** This guide's own reason for demonstrating live is that free accounts run out mid-chain, and that will happen to some of them alone at home too. Tell them to send what they have and name the stage they stopped at — the exit slide already accepts "how many of the six stages", so the homework should too.
+
+This is the first time they run the chain without you in the room, so the questions arrive as messages rather than raised hands. Expect the most common one to be where the speech tool lives — keep the link somewhere you can paste it quickly.
+
+Two things worth saying out loud: the labelling rule still applies when nobody is watching, and a piece nobody sees is not finished. Sending it is part of the task, not an optional extra.
 
 ### Quick assessment rubric
 
@@ -202,13 +220,13 @@ Reflection question: "Which stage surprised you — because the tool did better,
 | Labelling | "It's just the output" | Every generated piece is visibly labelled, in the caption itself |
 | The safety callback | "I'd probably post the better one" | Neither clip is presented as a record without a label |
 | Consent | "Nobody's in it" taken as enough | A real person's likeness only with consent, a child's only with a parent's |
-| The two routes | Only one deck exists | Both the Claude file and the Canva deck exist, and the learner can say what each cost and gave back |
+| The two routes | Only one format exists | Both the PPTX and the HTML exist, and the learner can say what each format cost and gave back |
 
 ## Equivalent tool routes
 
 **Gemini alone** completes stages 1 through 5 in full. Nothing assessed depends on a second tool.
 **ChatGPT, at stages 1–2 only:** an optional second opinion for the comparison — never required, and never used past stage 2.
-**Claude and Canva, at stage 6:** not a choice between them — both, so the comparison itself is the exercise.
+**Claude, at stage 6, two output formats:** not a choice between them — both, so the comparison itself is the exercise.
 **Sora:** a facilitator demo only, if you want to show what a paid tool produces. Never a learner task.
 **Any other free video or image tool a learner already has:** check the [toolkit page](../../instructor/samples/session-06-toolkit.html)'s two traps before you let anyone route their final piece through it.
 
@@ -222,8 +240,11 @@ Reflection question: "Which stage surprised you — because the tool did better,
 | A video generation has not returned | Move to the next stage and come back. Never wait on screen |
 | Someone wants to publish a generated clip as a record of a real place | That is slide 8. Do not resolve it — run the discussion |
 | A learner has no subject of their own | Have them describe anything simple in the room — a mug, a pet, an object — and generate it from words. Never hand them an existing image to animate; item 6 is a real photo and can't enter the chain |
-| Time runs out | Drop the Canva half of stage 6, not the exit check. The Claude file is enough on its own |
-| Google AI Studio won't generate the narration, refuses, or drops the voice | Not separately confirmed — expect this. Read the script aloud yourself as a stand-in narration and move on; fix the audio after the session |
+| Time runs out | Build the PPTX, not both — show the HTML rather than having them build it |
+| The PPTX is missing an image or clip on a slide | Claude dropped the asset reference during generation — re-generate that one slide with the asset re-attached, don't restart the whole deck |
+| The HTML file opens as raw text or code instead of a slide deck | The OS handed it to a text editor, not a browser. Drag the file into an open browser window, or right-click and choose "open with" the browser |
+| Someone cannot find the speech tool | They are almost certainly at aistudio.google.com. Paste the link: https://console.cloud.google.com/agent-platform/studio/media/speech |
+| The speech studio won't generate, refuses, or drops the voice | Read the script aloud yourself as a stand-in narration and move on; fix the audio after the session |
 
 ## Differentiation
 
