@@ -785,7 +785,8 @@ Expected: `unclosed: [] mismatched: []` for all six pages.
 ```bash
 node -e "
 const s=require('fs').readFileSync('site/assets/js/personal-course.js','utf8');
-const m=s.match(/\{n:6,[^}]*\}/)[0];
+const sessionsBlock=s.slice(s.indexOf('const sessions=['));
+const m=sessionsBlock.match(/\{n:6,[^}]*\}/)[0];
 for(const p of m.match(/'[a-z][^']*\.md'/g)||[]) {
   const f=p.slice(1,-1);
   console.log(require('fs').existsSync(f)?'OK  '+f:'MISSING '+f);

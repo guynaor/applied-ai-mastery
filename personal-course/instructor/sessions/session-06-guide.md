@@ -154,7 +154,7 @@ If someone pushes on which clip is "worse," don't resolve it — that's exactly 
 
 Show [slide 9](../../instructor/samples/session-06-slides.html).
 
-Learners write a short script for the ear, not the eye: short sentences, one idea per breath, numbers spoken rather than written. Full pattern on the [toolkit page](../../instructor/samples/session-06-toolkit.html).
+Learners write a short script that narrates the piece they've built — their subject, the image, and the two clips — for the ear, not the eye: short sentences, one idea per breath, numbers spoken rather than written. Full pattern on the [toolkit page](../../instructor/samples/session-06-toolkit.html).
 
 They record it in Google AI Studio, Google's text-to-speech surface. *Only Gemini's video generation has been tested by the course author (2026-08-19) — this narration routing hasn't been separately confirmed, so check it works before you teach.*
 

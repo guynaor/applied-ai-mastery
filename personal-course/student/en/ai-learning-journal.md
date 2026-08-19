@@ -597,7 +597,7 @@ Carry one idea through the whole pipeline — a generated image, a fix, an anima
 
 1. Pick one subject and audience, and write what the piece must say (for example: a product idea, a family announcement, a short lesson).
 2. Generate an image and fix it in Gemini (or compare it against ChatGPT), animate it and generate a second clip from text alone in Gemini, narrate it in Google AI Studio, then assemble the deck in Claude and Canva — logging the tool, prompt, and result at each stage.
-3. Compare at least two tools at the generate and fix stages, then label every generated piece before you show it to anyone.
+3. Label every generated piece before you show it to anyone.
 
 ## Bronze
 
