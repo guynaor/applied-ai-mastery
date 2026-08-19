@@ -581,6 +581,8 @@ Log every stage as you go. A generated image or clip that is not labelled is not
 
 ## 3. Tool verdict
 
+Note it as you go — which tool you actually used at each stage, and whether its free tier held up before you forget which one you hit a limit on.
+
 | Tool | Did I hit a free limit? | What it did well | What it did badly | Use again? |
 | --- | --- | --- | --- | --- |
 |  |  |  |  |  |
@@ -619,6 +621,8 @@ Show the finished deck to someone from the intended audience, and revise it from
 | | | |
 
 ## Stage log, for the real piece
+
+Log every stage as you go. A generated image or clip that is not labelled is not decoration — it is a claim, so write what the label actually said, not just yes or no.
 
 | Stage | Tool | Prompt or setting | What came back | What I fixed | Labelled? |
 | --- | --- | --- | --- | --- | --- |

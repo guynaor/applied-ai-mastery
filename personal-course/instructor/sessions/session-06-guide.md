@@ -146,7 +146,7 @@ Ask: "If you captioned either one 'this is this place,' right now — would that
 
 ### What to say
 
-> "Neither one — not without a label. That's rule three from slide 1. Say so out loud before anyone asks; that's rule one, applied to something you made ten minutes ago."
+> "Neither is a record of that place — so no. A label doesn't make it true; it stops it from deceiving. That's rule three from slide 1. Say so out loud before anyone asks; that's rule one, applied to something you made ten minutes ago."
 
 If someone pushes on which clip is "worse," don't resolve it — that's exactly the discussion this slide exists to run.
 
