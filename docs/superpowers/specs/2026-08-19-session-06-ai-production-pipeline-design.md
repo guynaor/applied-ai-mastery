@@ -45,6 +45,16 @@ written; 4–7 were added on 2026-08-19 after Guy tested the tools directly.
    session already runs Gemini for three stages. Do not re-add a third
    route — 20 minutes carries two hands-on, not three.
 
+   **Superseded 2026-08-19, after the first live delivery.** Tried as
+   decided above. The delivery found Canva cannot receive the learner's
+   generated assets — there is no way to get the image and clips built in
+   stages 1–4 into it — so the two decks were never comparable, and the
+   premise for the 20-minute block did not hold. Canva is dropped from
+   stage 6. The two routes become Claude → PPTX and Claude →
+   self-contained HTML: one tool, two output formats, everything else held
+   constant — a sharper comparison than tool versus tool, for the same
+   reason decision 6 gave for keeping video single-tool.
+
 ## Goals
 
 - Teach the six-stage AI production chain end to end in 90 minutes.

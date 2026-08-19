@@ -6,7 +6,7 @@
 
 **This session runs 90 minutes, not 60.** The extra time is not overrun — it is questions, and that is where the learning happens.
 
-This guide can be taught from directly. The whole chain runs on free accounts — Google, Claude, and Canva — and learners do not have to publish anything at the end.
+This guide can be taught from directly. The whole chain runs on free accounts — Google and Claude — and learners do not have to publish anything at the end.
 
 ## Session materials
 
@@ -41,12 +41,12 @@ Video generation is slow, and stage 4's clip has to be ready by the time the cla
 
 1. Open the [toolkit reference](../../instructor/samples/session-06-toolkit.html) and correct anything that's moved since it was written — free-tier terms change faster than this guide does.
 2. Open the [sample asset set](../../instructor/samples/session-06-asset-set.html). The answers are on a [separate page](../../instructor/samples/session-06-answers.html) — do not open it early, and it is separate so that an AI tool reading the asset set does not also receive the answers.
-3. Open the [slides](../../instructor/samples/session-06-slides.html), and sign into Google, Claude, and Canva in the facilitator account. Sign into ChatGPT too if you plan to run the stage-1 comparison.
+3. Open the [slides](../../instructor/samples/session-06-slides.html), and sign into Google and Claude in the facilitator account. Sign into ChatGPT too if you plan to run the stage-1 comparison.
 4. **Run the demo on a desktop, not a laptop.** Video generation is render-heavy, and a session built around it drags badly on underpowered hardware.
 
 ### What learners need
 
-- Three free accounts, set up before the day: Google, Claude, and Canva. ChatGPT is optional, a fourth.
+- Two free accounts, set up before the day: Google and Claude — one fewer than this session used to need. ChatGPT is optional, a third.
 - One real subject they want to carry through the chain — a place, a creature, an object, a small scene.
 - A device with a browser. That is enough for the whole session.
 
@@ -67,7 +67,7 @@ Video generation is slow, and stage 4's clip has to be ready by the time the cla
 | 38–46 | Move | Their own image, animated |
 | 46–56 | Video, then the safety callback | A second clip from text alone, and the honest answer about publishing either one |
 | 56–65 | Narrate | A script written for the ear, recorded |
-| 65–85 | Assemble, two routes | The same deck, built in Claude and in Canva |
+| 65–85 | Assemble, two routes | The same deck, built by Claude as PPTX and as self-contained HTML |
 | 85–90 | Exit check and reflection | A production set ready to review, or a list of what's missing |
 
 ## 0–10 minutes — Homework discussion
@@ -169,23 +169,23 @@ Show [slide 10](../../instructor/samples/session-06-slides.html).
 
 ### What to say
 
-> "The comparison is the lesson, not either tool. Notice what each route cost you, and what it gave back."
+> "The comparison is the lesson, not the tool — it's the same tool both times. Notice what each format cost you, and what it gave back."
 
-Learners build the same short deck twice: once with Claude, as a file they own and can keep editing, and once in Canva, for faster visual polish. Same slides, same script, same images — only the tool changes.
+Learners build the same short deck twice with Claude: once as a PPTX file, once as a single self-contained HTML file. Same slides, same script, same images — only the output format changes.
 
 ### Expected intermediate output
 
-Two short decks that say the same thing and look different: Claude's as a file the learner can keep opening and editing, Canva's as a polished layout that lives on Canva's platform. Neither is "the" deck — the point is that they now have both, and can name what each one cost.
+Two short decks that say the same thing and open differently: the PPTX opens in PowerPoint, Keynote, or Google Slides, and anyone can edit its slides there; the HTML opens in any browser with nothing installed, is trivial to share as a link or attachment, and is readable as plain text. Neither is "the" deck — the point is that they now have both, and can name what each format cost.
 
 ### Checkpoint: before moving to the exit check
 
-Ask each learner, out loud, one sentence each: "Which route would you use next time, and why?" A real answer names a trade-off (speed versus ownership, polish versus portability) — not just a preference.
+Ask each learner, out loud, one sentence each: "Which format would you send someone else, and why?" A real answer names a trade-off (needs software to open versus opens anywhere, easy to restyle versus easy to share and read as text) — not just a preference.
 
 ### If the output is weak
 
-- **The Claude file looks plain next to Canva's.** That's expected, not a failure — point at the difference and ask what it cost to get Canva's polish (a platform lock-in, not a file).
-- **The Canva deck drifted from the script.** Point them back to the narration script from stage 5 — the deck should say what the script says, not reinvent it.
-- **A learner only has time for one route.** Claude first — it produces the file they keep. Canva can wait for the reflection question, not the checkpoint.
+- **The PPTX looks plain.** That's expected, not a failure — it's an editable starting point, not a finished polish job. Point at what it buys them: anyone can open and restyle it.
+- **The HTML deck drifted from the script.** Point them back to the narration script from stage 5 — the deck should say what the script says, not reinvent it.
+- **A learner only has time for one route.** Build the PPTX — it's the format an institution or colleague expects. If time is short, show them the HTML rather than building it.
 
 ## 85–90 minutes — Exit check and reflection
 
@@ -202,13 +202,13 @@ Reflection question: "Which stage surprised you — because the tool did better,
 | Labelling | "It's just the output" | Every generated piece is visibly labelled, in the caption itself |
 | The safety callback | "I'd probably post the better one" | Neither clip is presented as a record without a label |
 | Consent | "Nobody's in it" taken as enough | A real person's likeness only with consent, a child's only with a parent's |
-| The two routes | Only one deck exists | Both the Claude file and the Canva deck exist, and the learner can say what each cost and gave back |
+| The two routes | Only one format exists | Both the PPTX and the HTML exist, and the learner can say what each format cost and gave back |
 
 ## Equivalent tool routes
 
 **Gemini alone** completes stages 1 through 5 in full. Nothing assessed depends on a second tool.
 **ChatGPT, at stages 1–2 only:** an optional second opinion for the comparison — never required, and never used past stage 2.
-**Claude and Canva, at stage 6:** not a choice between them — both, so the comparison itself is the exercise.
+**Claude, at stage 6, two output formats:** not a choice between them — both, so the comparison itself is the exercise.
 **Sora:** a facilitator demo only, if you want to show what a paid tool produces. Never a learner task.
 **Any other free video or image tool a learner already has:** check the [toolkit page](../../instructor/samples/session-06-toolkit.html)'s two traps before you let anyone route their final piece through it.
 
@@ -222,7 +222,9 @@ Reflection question: "Which stage surprised you — because the tool did better,
 | A video generation has not returned | Move to the next stage and come back. Never wait on screen |
 | Someone wants to publish a generated clip as a record of a real place | That is slide 8. Do not resolve it — run the discussion |
 | A learner has no subject of their own | Have them describe anything simple in the room — a mug, a pet, an object — and generate it from words. Never hand them an existing image to animate; item 6 is a real photo and can't enter the chain |
-| Time runs out | Drop the Canva half of stage 6, not the exit check. The Claude file is enough on its own |
+| Time runs out | Build the PPTX, not both. If minutes are short, show the HTML rather than having them build it |
+| The PPTX is missing an image or clip on a slide | Claude dropped the asset reference during generation — re-generate that one slide with the asset re-attached, don't restart the whole deck |
+| The HTML file opens as raw text or code instead of a slide deck | The OS handed it to a text editor, not a browser. Drag the file into an open browser window, or right-click and choose "open with" the browser |
 | Someone cannot find the speech tool | They are almost certainly at aistudio.google.com. Paste the link: https://console.cloud.google.com/agent-platform/studio/media/speech |
 | The speech studio won't generate, refuses, or drops the voice | Read the script aloud yourself as a stand-in narration and move on; fix the audio after the session |
 
