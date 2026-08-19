@@ -109,7 +109,7 @@ const expectedJournalSessionTitles={
   'Session 3: Make a Shared Plan Work',
   'Session 4: Solve a Recurring Problem',
   'Session 5: Make a Space Work Better',
-  'Session 6: Tell a True Visual Story',
+  'Session 6: From Prompt to Presentation',
   'Session 7: Build a Personal System',
  ],
  Hebrew:[
@@ -118,7 +118,7 @@ const expectedJournalSessionTitles={
   'מפגש 3: לבנות תוכנית משותפת שעובדת',
   'מפגש 4: לפתור בעיה חוזרת',
   'מפגש 5: לשפר מרחב',
-  'מפגש 6: לספר סיפור חזותי אמין',
+  'מפגש 6: מהנחיה למצגת',
   'מפגש 7: לבנות מערכת אישית',
  ],
 };

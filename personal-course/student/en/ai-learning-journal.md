@@ -554,8 +554,8 @@ Save measurements, source/version, the draft, a photo or note from the fit check
 
 Which parameter needs another real measurement? What will you change before making or buying anything?
 
-<!-- journal-tab: {"id":"session-06","title":"Session 6: Tell a True Visual Story"} -->
-# Session 6: Tell a True Visual Story
+<!-- journal-tab: {"id":"session-06","title":"Session 6: From Prompt to Presentation"} -->
+# Session 6: From Prompt to Presentation
 
 Plan a short visual story whose audience can understand what is true, selected, edited, or generated.
 
