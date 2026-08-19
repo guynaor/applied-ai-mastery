@@ -23,6 +23,13 @@
       tbody tr:nth-child(even){background:#FAFAFC}
       .total td{font-weight:700;background:var(--soft)}
       .say{border:2px dashed var(--primary);border-radius:6px;padding:1.2rem 1.5rem;font-style:italic}
+      .src{font-size:.8em;border-radius:999px;padding:.1rem .55rem;display:inline-block;margin-inline-end:.4rem}
+      .measured{background:#e3f1e6;color:#1f5b32}
+      .spec{background:#e6ecf7;color:#26406e}
+      .assumed{background:#fdecd8;color:#8a4b06}
+      .calc{background:#efe6f7;color:#4E356F}
+      .unit{font-size:clamp(.9rem,1.5vw,1.1rem);color:var(--muted);margin:.6rem 0 0}
+      .prompt .data{display:block;font-size:.88em;background:#22323d;border-radius:4px;padding:.7rem .9rem;margin:.6rem 0}
       ol,ul{padding-inline-start:1.4rem}
       @media print{.slide{min-height:auto;padding:1.5rem;border:0}}
     </style>
@@ -46,14 +53,17 @@
       <p class="num">שקף 2 — מודדים, דקות 15–30</p>
       <h1>לכל מספר יש מקור</h1>
       <table>
-        <thead><tr><th>התווית</th><th>מה זה אומר</th><th>דוגמה</th></tr></thead>
+        <thead><tr><th>המידה</th><th>הערך</th><th>מאיפה היא הגיעה</th></tr></thead>
         <tbody>
-          <tr><td>נמדד</td><td>שמתם סרגל ובדקתם</td><td>רוחב פנימי 360 מ"מ</td></tr>
-          <tr><td>מפרט</td><td>מופיע בדף של היצרן</td><td>עובי דופן 1.8 ס"מ</td></tr>
-          <tr><td>הנחה</td><td>הנחתם, בלי לבדוק</td><td>„המגירה נפתחת עד הסוף”</td></tr>
-          <tr class="total"><td>חושב</td><td>נגזר ממספרים אחרים</td><td>רוחב תא 68.7 מ"מ</td></tr>
+          <tr><td>רוחב פנימי</td><td>36.0 ס"מ</td><td><span class="src measured">נמדד</span> סרגל, בתחתית המגירה</td></tr>
+          <tr><td>עומק פנימי</td><td>42.0 ס"מ</td><td><span class="src measured">נמדד</span> מהחזית ועד הדופן האחורית</td></tr>
+          <tr><td>גובה פנוי</td><td>7.5 ס"מ</td><td><span class="src measured">נמדד</span> עד המסילה שמעל</td></tr>
+          <tr><td>עובי דופן</td><td>1.8 ס"מ</td><td><span class="src spec">מפרט</span> דף הרהיט של היצרן</td></tr>
+          <tr><td>המגירה נפתחת עד הסוף</td><td>כן</td><td><span class="src assumed">הנחה</span> לא נבדק מעולם</td></tr>
+          <tr class="total"><td>רוחב תא אחד</td><td>68.7 מ"מ</td><td><span class="src calc">חושב</span> מהרוחב, ב-5 תאים</td></tr>
         </tbody>
       </table>
+      <p class="unit">הטבלאות בסנטימטרים, כי ככה קוראים סרט מדידה. הקוד במילימטרים: <strong>36.0 ס"מ = 360 מ"מ</strong>.</p>
       <div class="say">את החלק הזה ה-AI לא יכול לעשות. הוא לא ראה את החדר.</div>
     </section>
     <section class="slide">
@@ -78,7 +88,12 @@
     <section class="slide">
       <p class="num">שקף 5 — הבקשה, דקות 30–55</p>
       <h1>נותנים לו מספרים אמיתיים</h1>
-      <div class="prompt">אלה מידות שמדדתי, עם תווית מקור לכל אחת: [המידות]. אני רוצה מארגן מגירה עם תאים לכבלים. בנה/י מודל פרמטרי שכל מידה בו נגזרת מהמספרים שנתתי, עם פרמטרים בראש הקובץ שאפשר לשנות. אל תמציא/י מידות — ואם חסר לך משהו, שאל/י אותי במקום להשלים. אל תטען/י שהתכנון חזק או בטוח.</div>
+      <div class="prompt">אלה מידות שמדדתי, עם תווית מקור לכל אחת. כולן במילימטרים.
+        <span class="data">המגירה, מידות פנים: רוחב <span dir="ltr">360</span> (נמדד), עומק <span dir="ltr">420</span> (נמדד), גובה פנוי <span dir="ltr">75</span> (נמדד).<br>
+        צריך להיכנס: 2 מטעני נייד <span dir="ltr">105 × 65 × 22</span> (נמדד); 5 כבלים מגולגלים בקוטר <span dir="ltr">80</span> בערך (הנחה); 6 מתאמים ומחברים עד <span dir="ltr">50 × 30</span> (נמדד); נרתיק אוזניות אחד <span dir="ltr">95</span> רוחב, <span dir="ltr">40</span> גובה (מפרט); מחברת אחת <span dir="ltr">210 × 148 × 8</span> (מפרט).<br>
+        מרווחים: לפחות <span dir="ltr">15</span> סביב כל תא כדי שאצבע תיכנס; <span dir="ltr">5</span> מתחת למסילה שמעל.</span>
+        אני רוצה מארגן מגירה עם תאים לכבלים. בנה/י מודל פרמטרי שכל מידה בו נגזרת מהמספרים שנתתי, עם פרמטרים בראש הקובץ שאפשר לשנות. אל תמציא/י מידות — ואם חסר לך משהו, שאל/י אותי במקום להשלים. אל תטען/י שהתכנון חזק או בטוח.</div>
+      <p class="unit">הדף המלא, עם החפצים ועם ההנחה השתולה, נמצא ב<strong>מידות לדוגמה</strong>.</p>
     </section>
     <section class="slide">
       <p class="num">שקף 6 — השאלה שאחרי</p>

@@ -81,9 +81,11 @@ If someone on route 2 says "it will not connect" or shows `Connection refused` �
 
 ## 15–30 minutes — Measuring
 
-Show [slide 2](../../instructor/samples/session-05-slides.html) with the four labels: **measured**, **spec**, **assumed**, **calculated**.
+[Slide 2](../../instructor/samples/session-05-slides.html) is a real measured drawer — 36 × 42 × 7.5 cm — with every row carrying its label: **measured**, **spec**, **assumed**, **calculated**. Read the rows aloud rather than defining the four labels first; the labels land better attached to numbers than ahead of them.
 
-Measure a real object in front of the class and record it with its label. Anyone with nothing to measure works from the [sample measurements](../../instructor/samples/session-05-measurements.html).
+Measure a real object in front of the class and record it with its label. Anyone with nothing to measure works from the drawer on the slide, or from the fuller [sample measurements](../../instructor/samples/session-05-measurements.html) sheet, which adds the objects that must fit and the clearances.
+
+The slide also states the unit convention once: tables in centimetres, code in millimetres, 36.0 cm = 360 mm. Say it there and you will not have to untangle it at minute 40.
 
 ### The moment that matters
 
@@ -97,7 +99,7 @@ Show [slide 3](../../instructor/samples/session-05-slides.html) — the planted 
 
 ## 30–55 minutes — Describe it, and the AI builds
 
-The long block. Show the request on [slide 5](../../instructor/samples/session-05-slides.html) and run it on your route.
+The long block. Show the request on [slide 5](../../instructor/samples/session-05-slides.html) and run it on your route. **The measurements are on the slide, in millimetres and ready to paste** — you do not have to improvise a dimension block mid-demo. If you are designing your own object, swap your numbers in and keep the four instructions at the end of the prompt exactly as they are: they are what stops the tool inventing and overclaiming.
 
 ### Expected intermediate output
 
@@ -124,6 +126,8 @@ It will produce a list: wall thickness, clearances, heights, fillet radii. **Non
 Show [slide 6](../../instructor/samples/session-05-slides.html). Before changing anything, everyone writes what **should** happen.
 
 In the starter file: `compartments` from 5 to 7. Each compartment should drop from 68.7 mm to 48.4 mm. Change it, press F5, and check whether that is what happened.
+
+**If someone asks about `usable_height = 60`, they have found the planted one.** The clear height was measured at 75 mm and the sheet says leave 5 mm under the runner, which gives 70 — so 60 is an assumption nobody wrote down, sitting in a block labelled "the drawer you measured". It is commented as such in the file. Treat the question as the best thing that can happen in this block: they audited a number instead of accepting it.
 
 ### What to say
 
