@@ -27,8 +27,13 @@ subject, so all six taught sessions are exercised.
    topic taught on its own.
 3. **Open-ended, with milestone reviews.** No course deadline. One
    mitigation is designed in — see "The learner's own end date" below.
-4. **Mentoring is asynchronous and written**, over email or WhatsApp — the
-   same channels session 6's homework already uses.
+4. **Mentoring runs in one shared group chat**, asynchronous and written, on
+   WhatsApp or equivalent — the same channel session 6's homework already
+   uses. Deliverables are posted to the group, not sent privately, and the
+   mentor answers in the open. This is the point, not a convenience: one
+   answer serves everyone, and learners see each other's work.
+6. **Attendance is expected.** A learner who missed a session skips that
+   session's deliverable rather than attempting it unprepared.
 5. **Title:** English *One Project, Every Skill*, Hebrew
    *פרויקט אחד, כל המיומנויות*. Confirmed by Guy on 2026-08-19.
    Note that every session title is an imperative phrase — *Decide What to
@@ -128,11 +133,37 @@ uncertain, and a self-set date is the lightest anchor that still exists.
 
 ### Mentoring model
 
-Asynchronous and written. Five milestones plus the subject gate. The
-learner sends a deliverable when it is ready; the mentor writes back. The
-mentor guide must say what "written back" contains, so it does not decay
-into "looks good": what the deliverable got right, the one thing that would
-most improve it, and whether it is done or coming back.
+One shared group chat, asynchronous and written. Five milestones plus the
+subject gate. The learner **posts** a deliverable to the group when it is
+ready; the mentor answers in the open, where everyone reads it.
+
+This is a design decision, not a logistics one. Feedback compounds: the
+answer to "your sources are all one vendor's marketing" is worth more to the
+five people who have not posted yet than to the one who did. It also means
+the mentor's effort does not scale linearly with the group — the failure
+mode that would otherwise make six touchpoints per learner unsustainable.
+
+The mentor guide must say what an answer contains, so it does not decay into
+"looks good": what the deliverable got right, the one thing that would most
+improve it, and whether it is done or coming back. In a group thread that
+matters more, because every answer is also teaching whoever is reading.
+
+**Two consequences to state plainly in the learner brief**, before anyone
+picks a subject:
+
+- Your work will be visible to the group. Choose a subject you are willing
+  to show, and keep private information out of it — the same rule session 6
+  applies to what you publish.
+- You are expected to read other people's deliverables and the answers they
+  get. That is where half the value is.
+
+### If a learner missed a session
+
+Attendance is expected. A learner who was not there for the session a
+deliverable draws on **skips that deliverable** rather than attempting it
+unprepared — a shorter capstone honestly done beats five deliverables where
+one was guessed at. The mentor guide says this plainly so it is decided in
+advance rather than negotiated per learner.
 
 ## What changes about "seven"
 
@@ -218,8 +249,11 @@ a caption.
   fix is fewer deliverables, not more mentoring.
 - **Open-ended has no forcing function** beyond the learner's own date. This
   is a known, accepted trade — Guy chose it with the drift risk stated.
-- **Mentor load scales linearly with learners.** Six touchpoints each. The
-  spec does not solve this; a group thread was offered and declined.
+- **The group thread depends on a group willing to share.** Mentoring in the
+  open is what stops the effort scaling linearly, but it only works if
+  learners will post work in progress. If the group goes quiet, the model
+  degrades to private mentoring at full cost with none of the compounding.
+  Watch the first subject gate: if nobody posts, that is the signal.
 - **The capstone assumes all six sessions were attended.** A learner who
   missed session 5 cannot produce deliverable 4. The mentor guide should say
   what to do about that rather than leaving it to be discovered.
