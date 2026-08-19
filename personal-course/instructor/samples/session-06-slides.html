@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Projection slides — Session 6: Tell a True Visual Story</title>
+    <title>Projection slides — Session 6: From Prompt to Presentation</title>
     <style>
       :root{--primary:#4E356F;--soft:#F0EAFA;--text:#17242D;--line:#d6dae0;--muted:#55606E;--warn:#b3413f}
       *{box-sizing:border-box}
@@ -24,91 +24,130 @@
       .total td{font-weight:700;background:var(--soft)}
       .say{border:2px dashed var(--primary);border-radius:6px;padding:1.2rem 1.5rem;font-style:italic}
       ol,ul{padding-inline-start:1.4rem}
+      .pair{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:1rem}
+      .pair .prompt{flex:1 1 16rem}
       @media print{.slide{min-height:auto;padding:1.5rem;border:0}}
     </style>
   </head>
   <body>
 
     <section class="slide">
-      <p class="num">Slide 1 — Opening, minutes 0–5</p>
-      <h1>When did you last see an image online and believe it immediately?</h1>
-      <div class="say big">Today we build one visual story you can stand behind. Not a dull one — one whose claims hold up when someone checks them.</div>
-    </section>
-    <section class="slide">
-      <p class="num">Slide 2 — The trust boundary, minutes 5–13</p>
-      <h1>Four decisions before touching an image</h1>
-      <table>
-        <thead><tr><th>The decision</th><th>Example</th></tr></thead>
-        <tbody>
-          <tr><td>Who am I telling</td><td>Neighbours in the building's group chat</td></tr>
-          <tr><td>What is it for</td><td>So they join the next volunteering day</td></tr>
-          <tr><td>Which claims can I support</td><td>“We cleared the bed in one day” — I have before and after</td></tr>
-          <tr class="total"><td>Who agreed to appear</td><td>Two of three. The third was never asked.</td></tr>
-        </tbody>
-      </table>
-    </section>
-    <section class="slide">
-      <p class="num">Slide 3 — Sorting the evidence, minutes 13–23</p>
-      <h1>Three labels for every asset</h1>
+      <p class="num">Slide 1 — The three rules, minutes 10–16</p>
+      <h1>Three rules, stated once, applied all session</h1>
       <div class="box big">
-        <p><strong>Original</strong> — I took it, and changed nothing beyond a crop.</p>
-        <p><strong>Edited</strong> — I took it, but changed something that changes the meaning.</p>
-        <p><strong>Generated</strong> — it does not exist in reality.</p>
+        <p><strong>Label it.</strong> Anything generated gets said out loud — in the caption, not buried in a settings screen.</p>
+        <p><strong>No real people without consent.</strong> Not even from a public place.</p>
+        <p><strong>Never a record.</strong> Generated work does not stand in for something that actually happened.</p>
       </div>
-      <div class="say">The label alone is not enough. The real question is what a viewer takes from the image together with the caption beside it.</div>
+      <div class="say">Six stages from here. At every one of them, ask these three questions again — that repetition is the safety lesson, not a slide you see once and forget.</div>
     </section>
     <section class="slide">
-      <p class="num">Slide 4 — The moment that matters</p>
-      <h1>An unlabelled generated image is not decoration</h1>
-      <div class="warn">An AI-generated image, captioned “this is how the garden looks now”.</div>
-      <p class="big">That is a factual claim about a real place, supported by an image that is not a record.</p>
-      <div class="say">Either label it clearly as an illustration and change the caption, or take it out. There is no third option.</div>
-    </section>
-    <section class="slide">
-      <p class="num">Slide 5 — The harder problem to see</p>
-      <h1>A completely real photo, in the wrong context</h1>
-      <div class="warn">A genuine photo of an abundant bed — from another garden, last July — captioned “this is what we grew”.</div>
-      <p class="big">Not a pixel here was invented. The deception is entirely in the caption.</p>
-    </section>
-    <section class="slide">
-      <p class="num">Slide 6 — The request, minutes 23–38</p>
-      <h1>Build a storyboard, not content</h1>
-      <div class="prompt">From these notes about the volunteering day, build a six-panel storyboard: a short caption and alt text for each panel. Separately flag which claims need a source I have to attach. Do not invent quotes, numbers, or details I did not give you, and do not suggest presenting a generated image as if it were a record.</div>
-    </section>
-    <section class="slide">
-      <p class="num">Slide 7 — Through a viewer's eyes, minutes 38–50</p>
-      <h1>Four checks, a minute each</h1>
+      <p class="num">Slide 2 — The chain</p>
+      <h1>One subject, six stages, one artifact</h1>
       <table>
-        <thead><tr><th>The check</th><th>What to look for</th></tr></thead>
+        <thead><tr><th>#</th><th>Stage</th><th>Tool</th></tr></thead>
         <tbody>
-          <tr><td>Alt text</td><td>A sentence describing what is visible — not “a photo of the garden”</td></tr>
-          <tr><td>Contrast</td><td>White text over a bright image almost always fails</td></tr>
-          <tr><td>Not colour alone</td><td>“Before” and “after” need a word too, not just a hue</td></tr>
-          <tr class="total"><td>Read it aloud</td><td>Read the story from the alt text alone. Does it still make sense?</td></tr>
+          <tr><td>1</td><td>Generate — an image from a prompt</td><td>Gemini or ChatGPT</td></tr>
+          <tr><td>2</td><td>Fix — edit the weak region</td><td>same tool as stage 1</td></tr>
+          <tr><td>3</td><td>Move — animate your own image</td><td>Gemini</td></tr>
+          <tr><td>4</td><td>Video — generate from a text prompt alone</td><td>Gemini</td></tr>
+          <tr><td>5</td><td>Narrate — write the script, then voice it</td><td>Google AI Studio</td></tr>
+          <tr class="total"><td>6</td><td>Assemble — build the deck</td><td>Claude or Canva</td></tr>
         </tbody>
       </table>
+      <div class="say">One subject travels the whole way. Nothing gets swapped out partway through — stage six presents the same thing stage one generated.</div>
     </section>
     <section class="slide">
-      <p class="num">Slide 8 — The question that settles it</p>
-      <h1>“Could a reasonable viewer take something untrue from this?”</h1>
-      <div class="say big">Not “did I lie”. People almost never lie in a story like this — they simply do not write down what was obvious to them.</div>
-    </section>
-    <section class="slide">
-      <p class="num">Slide 9 — Consent</p>
-      <h1>“It was a public place” is not consent</h1>
+      <p class="num">Slide 3 — Prompt anatomy, minutes 16–27</p>
+      <h1>Five things a prompt has to say</h1>
       <ul class="big">
-        <li>An identifiable person in shot — ask them.</li>
-        <li>Children — ask the parents, always.</li>
-        <li>Anyone who said no, or was never asked — blur, crop, or leave them out.</li>
+        <li><strong>Subject</strong> — what is actually in the frame</li>
+        <li><strong>Composition</strong> — the angle and distance it's seen from</li>
+        <li><strong>Light</strong> — the light source, direction, and time of day</li>
+        <li><strong>Framing</strong> — where the empty space sits, for a title later</li>
+        <li><strong>Exclusions</strong> — what must not appear</li>
       </ul>
-      <div class="say">And “a public image I found online” is not permission to use it either.</div>
+      <div class="pair">
+        <div class="prompt"><strong>Weak</strong><br>“A nice photo of a garden.”</div>
+        <div class="prompt"><strong>Strong</strong><br>“A community garden bed in full bloom, seen at eye level from the path. Golden late-afternoon light from the left casting long shadows. Leave the upper-left quarter empty for a title. No people, no signage, no litter.”</div>
+      </div>
+      <p>Same intent, five specifics added. Leave one out and the model guesses — and the guess is rarely the one you wanted.</p>
     </section>
     <section class="slide">
-      <p class="num">Slide 10 — Exit check, minutes 50–60</p>
+      <p class="num">Slide 4 — Same prompt, two tools, minutes 16–27</p>
+      <h1>Same prompt, two tools: Gemini and ChatGPT</h1>
+      <table>
+        <thead><tr><th>What to compare</th><th>The question</th></tr></thead>
+        <tbody>
+          <tr><td>Exclusions</td><td>Which one actually left out what you told it to leave out?</td></tr>
+          <tr><td>Invention</td><td>Which one added a detail you never asked for?</td></tr>
+          <tr class="total"><td>Match</td><td>Which is closer to what you actually asked for?</td></tr>
+        </tbody>
+      </table>
+      <div class="say">Run your prompt through both, side by side. The comparison is the lesson — not either tool. Full detail: <a href="session-06-toolkit.html">toolkit reference</a>.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 5 — Fix the region, minutes 27–38</p>
+      <h1>Fix the region, do not re-roll</h1>
+      <div class="warn">Re-rolling the whole prompt destroys whatever already worked, along with whatever was wrong.</div>
+      <p class="big">One region is off — a hand, a sign, a shadow. Edit only that region. Everything else stays exactly as it was.</p>
+      <div class="say">Same tool as stage 1. Aim the edit at the patch that failed, not at the picture again from nothing.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 6 — Animate your own image, minutes 38–46</p>
+      <h1>The prompt steers the motion. It does not invent the subject.</h1>
+      <p class="big">Upload the image from stages 1 and 2. Add a short prompt describing what moves, and how.</p>
+      <div class="prompt">“Leaves sway gently in the light breeze. Camera holds still. Nothing else in frame changes.”</div>
+      <div class="say">This is still your image. The model is moving it, not replacing it.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 7 — Generate from text alone, minutes 46–56</p>
+      <h1>Text, hands, continuity, physics — where video generation still breaks</h1>
+      <ul class="big">
+        <li><strong>Text</strong> — signage and labels come out wrong more often than right</li>
+        <li><strong>Hands</strong> — count the fingers before you trust the frame</li>
+        <li><strong>Continuity</strong> — what's true in frame one may not hold by frame four</li>
+        <li><strong>Physics</strong> — weight, water, and shadows drift</li>
+      </ul>
+      <div class="say">Shoot short. A four-second clip that holds together beats a fifteen-second clip that falls apart halfway through. Send the job, then keep talking — it is not instant.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 8 — The safety callback, about ninety seconds</p>
+      <h1>Which of those two would you publish about a real place?</h1>
+      <div class="say big">Put your stage-3 clip and your stage-4 clip side by side — the one that started from your photo, and the one that started from nothing.</div>
+      <p class="big">If you captioned either one as this place, right now, would that be true?</p>
+      <div class="box">Say which one is generated from nothing, out loud, before anyone asks. That is the whole rule from slide 1, applied to something you made ten minutes ago.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 9 — Write for the ear, minutes 56–65</p>
+      <h1>Write for the ear, not the eye</h1>
+      <ul class="big">
+        <li><strong>Sentences</strong> — short. If it needs a comma to survive, split it.</li>
+        <li><strong>One idea</strong> — per breath. One clause per sentence, not three joined with “and.”</li>
+        <li><strong>Numbers</strong> — spoken, not written: “about twelve thousand people,” not “12,847 attendees.”</li>
+      </ul>
+      <div class="say">The script matters more than the voice. Fix it on the page before you generate the narration.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 10 — Assemble: Claude versus Canva, minutes 65–85</p>
+      <h1>Claude versus Canva</h1>
+      <table>
+        <thead><tr><th></th><th>Claude</th><th>Canva</th></tr></thead>
+        <tbody>
+          <tr><td>What you get</td><td>A file — PPTX or self-contained HTML</td><td>A design on Canva's platform</td></tr>
+          <tr><td>Where it lives</td><td>Your own drive</td><td>Canva's servers</td></tr>
+          <tr><td>Edit it in a year</td><td>Yes — it's yours, and it's diffable</td><td>Only if the account still exists</td></tr>
+          <tr class="total"><td>Good at</td><td>Speed, structure, a file you keep</td><td>Visual polish, templates</td></tr>
+        </tbody>
+      </table>
+      <div class="say">The comparison is the lesson, not either tool. Full detail: <a href="session-06-toolkit.html">toolkit reference</a>.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 11 — Exit check, minutes 85–90</p>
       <h1>Complete out loud or in writing</h1>
-      <div class="box big">My story has <strong>[number]</strong> assets. <strong>[how many]</strong> are edited or generated, and I labelled them by <strong>[how]</strong>. The claim that needed a source is <strong>[what]</strong>, and the source is <strong>[what]</strong>. Before publishing I still need <strong>[what]</strong>.</div>
+      <div class="box big">My subject was <strong>[what]</strong>. It went through <strong>[how many]</strong> of the six stages. The stage I would cut if I only had an hour is <strong>[which]</strong>. The clip I would not publish about a real place is <strong>[which]</strong>, because <strong>[why]</strong>.</div>
       <h2>And the reflection question</h2>
-      <p class="big">Which image did you most want to use — and could not?</p>
+      <p class="big">Which stage surprised you — because the tool did better, or worse, than you expected?</p>
     </section>
   </body>
 </html>
