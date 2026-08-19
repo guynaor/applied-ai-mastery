@@ -68,7 +68,7 @@ Video generation is slow, and stage 4's clip has to be ready by the time the cla
 | 46–56 | Video, then the safety callback | A second clip from text alone, and the honest answer about publishing either one |
 | 56–65 | Narrate | A script written for the ear, recorded |
 | 65–85 | Assemble, two routes | The same deck, built by Claude as PPTX and as self-contained HTML |
-| 85–90 | Exit check and reflection | A production set ready to review, or a list of what's missing |
+| 85–90 | Exit check, reflection, and the homework | A production set ready to review, or a list of what's missing |
 
 ## 0–10 minutes — Homework discussion
 
@@ -193,13 +193,25 @@ Ask each learner, out loud, one sentence each: "Which format would you send some
 
 This block was sized for two tools; producing a second export is a follow-up prompt, not a rebuild, so it may now run short — that is a guess, untested at this new shape, so watch the clock rather than assume it. If minutes are left over, have a learner open their PPTX in Google Slides and their HTML in a second browser tab side by side, and ask what changed when they switched.
 
-## 85–90 minutes — Exit check and reflection
+## 85–90 minutes — Exit check, reflection, and the homework
 
 Show [slide 11](../../instructor/samples/session-06-slides.html):
 
 > My subject was **[what]**. It went through **[how many]** of the six stages. The stage I would cut if I only had an hour is **[which]**. The clip I would not publish about a real place is **[which]**, because **[why]**.
 
 Reflection question: "Which stage surprised you — because the tool did better, or worse, than you expected?"
+
+### The homework
+
+"Take something you actually care about — a hobby, a place you know well, a project, anything you would want to show someone — and run it through the whole chain on your own. Generate the images, fix the one that comes back wrong, animate it, generate a second clip from words alone, write and record the narration, and build the deck both ways. Then send it to the class, by email or on WhatsApp. Generate every image — do not start from a photo you already have. And label everything that was generated, exactly the way you did today."
+
+**Set a date when you give it.** With no next class to anchor it, an open-ended task drifts and quietly becomes nothing.
+
+**Say that a partial run counts.** This guide's own reason for demonstrating live is that free accounts run out mid-chain, and that will happen to some of them alone at home too. Tell them to send what they have and name the stage they stopped at — the exit slide already accepts "how many of the six stages", so the homework should too.
+
+This is the first time they run the chain without you in the room, so the questions arrive as messages rather than raised hands. Expect the most common one to be where the speech tool lives — keep the link somewhere you can paste it quickly.
+
+Two things worth saying out loud: the labelling rule still applies when nobody is watching, and a piece nobody sees is not finished. Sending it is part of the task, not an optional extra.
 
 ### Quick assessment rubric
 
