@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Toolkit reference — Session 6</title>
+    <style>
+      body{font-family:system-ui,sans-serif;line-height:1.6;max-width:56rem;margin:0 auto;padding:1.5rem;color:#17242D}
+      h1{border-bottom:3px solid #4E356F;padding-bottom:.4rem}
+      h2{color:#4E356F;margin-top:2rem}
+      .note{background:#F1F3F6;border-inline-start:4px solid #7B4FB3;padding:.75rem 1rem;border-radius:4px}
+      .assets{display:grid;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr));gap:1rem;margin:1rem 0}
+      .asset{border:1px solid #d6dae0;border-radius:8px;overflow:hidden;background:#fff}
+      .frame{height:7rem;display:flex;align-items:center;justify-content:center;background:#eceff3;color:#55606E;font-size:.9rem;text-align:center;padding:.5rem;border-bottom:1px solid #d6dae0}
+      .body{padding:.8rem .9rem}
+      .asset h3{margin:0 0 .4rem;font-size:1rem;color:#4E356F}
+      .asset p{margin:.25rem 0;font-size:.9rem}
+      .tag{font-size:.78rem;border-radius:999px;padding:.1rem .6rem;display:inline-block;margin-bottom:.3rem}
+      .orig{background:#e3f1e6;color:#1f5b32}
+      .edit{background:#fdecd8;color:#8a4b06}
+      .gen{background:#f7e0e0;color:#8a1f1d}
+      .stock{background:#e6ecf7;color:#26406e}
+      .problem{border-color:#b3413f}
+      .problem .body{background:#fdf0f0}
+      table{border-collapse:collapse;width:100%;margin:.8rem 0}
+      th,td{border:1px solid #d6dae0;padding:.5rem .65rem;text-align:start}
+      th{background:#4E356F;color:#fff}
+      details{margin:.6rem 0;background:#F0EAFA;border-radius:6px;padding:.6rem .9rem}
+      summary{cursor:pointer;color:#4E356F;font-weight:600}
+      .prompt-pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;margin:1rem 0}
+      .prompt{border:1px solid #d6dae0;border-radius:8px;padding:.8rem .9rem;background:#fff}
+      .prompt.weak{border-color:#b3413f;background:#fdf0f0}
+      .prompt.strong{border-color:#3f8a5b;background:#eef7f0}
+      .prompt h3{margin:0 0 .4rem;font-size:.95rem}
+      .prompt.weak h3{color:#8a1f1d}
+      .prompt.strong h3{color:#1f5b32}
+      .prompt p{margin:0;font-size:.92rem;font-style:italic}
+      .anatomy{list-style:none;margin:.8rem 0;padding:0}
+      .anatomy li{padding:.35rem 0 .35rem 0;border-bottom:1px dashed #d6dae0}
+      .anatomy li:last-child{border-bottom:none}
+      .anatomy strong{color:#4E356F;display:inline-block;min-width:6.5rem}
+      .trap{border:1px solid #b3413f;background:#fdf0f0;border-radius:8px;padding:.8rem 1rem;margin:.8rem 0}
+      .trap h3{margin:0 0 .3rem;color:#8a1f1d;font-size:1rem}
+      .trap p{margin:.25rem 0}
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Toolkit reference — Session 6</h1>
+      <p class="note">For the facilitator, not the learner. Open this while prepping and keep it open during the session — free-tier terms move faster than course content does. Every figure below except Gemini's video confirmation is secondary-sourced and marked accordingly; check it before you teach.</p>
+
+      <h2>1. Tools, by stage</h2>
+      <p>Six stages, five tools. Gemini alone completes stages 1–2 in full; ChatGPT is optional there too — never required, and what it buys you is the comparison. Stages 3–4 run on Gemini only, because that is the one video path confirmed working. Stage 5’s narration routes through Google AI Studio’s text-to-speech — as of the time of writing, that routing is not separately confirmed, so check it before you teach. Sora only ever appears as a facilitator demo.</p>
+      <table>
+        <tr><th>Tool</th><th>Stage</th><th>Free tier</th><th>Watch out for</th></tr>
+        <tr>
+          <td>Gemini</td>
+          <td>1–2 image, 3–4 video, 5 narration (Google AI Studio)</td>
+          <td><span class="tag orig">confirmed 2026-08-19</span> Free with a Google account; video generation tested and working by the course author. <span class="tag edit">at the time of writing</span> Narration routing through Google AI Studio was not separately tested — check before teaching.</td>
+          <td>Three stages ride one account — if Gemini is down, most of the session is down</td>
+        </tr>
+        <tr>
+          <td>ChatGPT</td>
+          <td>1–2 image</td>
+          <td><span class="tag edit">at the time of writing</span> Free tier is rate-limited; the exact cap is unverified</td>
+          <td>If the cap bites mid-session, the two-tool comparison collapses to Gemini alone</td>
+        </tr>
+        <tr>
+          <td>Claude</td>
+          <td>6 deck</td>
+          <td><span class="tag edit">at the time of writing</span> Free tier available</td>
+          <td>Produces a PPTX or a self-contained HTML file — something the learner keeps</td>
+        </tr>
+        <tr>
+          <td>Canva</td>
+          <td>6 deck</td>
+          <td><span class="tag edit">at the time of writing</span> Free tier available</td>
+          <td>Design polish, but the deck lives on Canva's platform, not the learner's drive</td>
+        </tr>
+        <tr>
+          <td>Sora</td>
+          <td>demo only</td>
+          <td><span class="tag stock">at the time of writing</span> Needs a paid plan</td>
+          <td>Facilitator demo. Never set it as a learner task</td>
+        </tr>
+      </table>
+      <p class="note">Every row except Gemini's is second-hand, pulled from AI-tooling blogs, not tested by hand. Open each tool's pricing page the morning of the session and correct this table on the spot if a cap or a plan requirement has moved.</p>
+
+      <h2>2. Image prompt anatomy</h2>
+      <p>A prompt that reliably produces a usable image tends to specify five things. Leave one out and the model guesses, and its guess is rarely the one you wanted.</p>
+      <ul class="anatomy">
+        <li><strong>Subject</strong> — what is actually in the frame</li>
+        <li><strong>Composition</strong> — the angle and distance it's seen from</li>
+        <li><strong>Light</strong> — the light source, direction, and time of day</li>
+        <li><strong>Framing</strong> — where the empty space sits, for text or a logo later</li>
+        <li><strong>Exclusions</strong> — what must not appear</li>
+      </ul>
+      <div class="prompt-pair">
+        <div class="prompt weak">
+          <h3>Weak</h3>
+          <p>“A nice photo of a garden.”</p>
+        </div>
+        <div class="prompt strong">
+          <h3>Strong</h3>
+          <p>“A community garden bed in full bloom, seen at eye level from the path. Golden late-afternoon light from the left casting long shadows. Leave the upper-left quarter empty for a title. No people, no signage, no litter.”</p>
+        </div>
+      </div>
+      <p>Same intent, five specifics added. Read the strong prompt back against the list above — each clause answers one part.</p>
+
+      <h2>3. Narration script pattern</h2>
+      <p>A script that reads well on the page can still sound wrong out loud. Write for the ear:</p>
+      <ul class="anatomy">
+        <li><strong>Sentences</strong> — short. If a sentence needs a comma to survive, split it</li>
+        <li><strong>One idea</strong> — per breath. One clause per sentence, not three joined with “and”</li>
+        <li><strong>Numbers</strong> — spoken, not written: “about twelve thousand people,” not “12,847 attendees”</li>
+        <li><strong>Names</strong> — pronunciation usually needs a second pass. Generate the narration, listen to it once, then fix names before recording again</li>
+      </ul>
+
+      <h2>4. The two traps</h2>
+      <p>Both of these look free right up until they fail mid-session, with no recovery available on the spot.</p>
+      <div class="trap">
+        <h3>Runway's credits are lifetime, not monthly</h3>
+        <p>125 credits, once, ever — not a monthly allowance. It works for the first learner who tries it, then the account is empty for everyone after, with no reset before next session.</p>
+      </div>
+      <div class="trap">
+        <h3>Kling AI watermarks every free export</h3>
+        <p>There is no workaround on the free tier. It puts a visible mark on the exact artifact the session exists to produce — do not route a learner's final deliverable through it.</p>
+      </div>
+    </main>
+  </body>
+</html>

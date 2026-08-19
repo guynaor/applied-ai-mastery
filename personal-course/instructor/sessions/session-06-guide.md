@@ -1,71 +1,74 @@
-# Full session plan — Session 6: Tell a True Visual Story
+# Full session plan — Session 6: From Prompt to Presentation
 
 **Time:** 90 minutes
-**Learning outcome:** Learners label every asset as original, edited, or generated, recognise when a caption turns a real photo into a deception, and add alt text and labels before they share.
-**Session artifact:** One story package: a storyboard, a record of sources and consents, captions and alt text, and a visible label on every edited or generated asset.
+**Learning outcome:** Learners generate an image and repair it, animate their own image and generate a second clip from words alone, write a narration script for the ear and record it, and assemble the same deck through two different tools — labelling every generated piece and never presenting a convincing clip as a record of something real.
+**Session artifact:** One production set: the generated image, its fixed version, the animated clip, the text-generated clip, the narration, and a deck built two ways — with a visible label on every generated piece.
 
 **This session runs 90 minutes, not 60.** The extra time is not overrun — it is questions, and that is where the learning happens.
 
-This guide can be taught from directly. No paid image generator is needed, and learners do not have to publish anything at the end.
+This guide can be taught from directly. The whole chain runs on free accounts — Google, Claude, and Canva — and learners do not have to publish anything at the end.
 
 ## Session materials
 
 | Material | What it is for |
 |---|---|
-| [Projection slides](../../instructor/samples/session-06-slides.html) | Ten slides, in session order. |
-| [Sample asset set](../../instructor/samples/session-06-asset-set.html) | Six assets for one story, two of them problematic. The address can be given to an AI tool without exposing the answers. |
-| [The answers](../../instructor/samples/session-06-answers.html) | A separate page. **Do not open before the class has been through all six.** |
-| [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | Downloadable Word file with the story rules, the storyboard, and the truth-check table. |
+| [Projection slides](../../instructor/samples/session-06-slides.html) | Eleven slides, in session order. |
+| [Toolkit reference](../../instructor/samples/session-06-toolkit.html) | Free-tier notes by tool, the image-prompt anatomy, and the narration script pattern. Open it while prepping and keep it open during the session. |
+| [Sample asset set](../../instructor/samples/session-06-asset-set.html) | Two examples for the opening, and a fallback: item 4, a generated image passed off as a record, and item 6, a real photograph, edited and captioned with the wrong place and time. |
+| [The answers](../../instructor/samples/session-06-answers.html) | A separate page, so an AI tool reading the asset set does not also receive the answers. **Do not open before you've walked both examples with the class.** |
+| [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | Downloadable Word file with the production plan, the stage log, and the tool verdict table. |
 | [Session 6 brief](../../sessions/session-06-trustworthy-visual-story.md) | What learners see. |
 
-## The recommended way: a real case, on your screen
+## The recommended way: your own subject, on your screen
 
-What works best is to **take a real case of your own and work it live in front of the class on your own screen.** Three reasons: learners' free accounts run out midway; a real case produces real questions; and they watch you correct the tool, which is worth more than any explanation.
+What works best is to **pick one real subject of your own and run the whole six-stage chain live in front of the class, on your own screen.** Three reasons: learners' free accounts run out mid-chain; a real subject produces real questions; and they watch you fix a bad generation in front of them, which teaches more than any explanation would.
 
-Learners fill in the journal tables for **their own case**. You run it; they think.
+Learners fill in the journal tables for **their own subject**. You run the chain; they think.
 
-**Before every prompt** ask: "What do you think it will come back with?" and "What is missing from my request?"
-**When the answer returns**, read the first number aloud and ask "where is that from?", hunt for the assumption, and correct one thing in front of them.
-**After each stage**, give two minutes for them to fill in the journal. A session where only you typed is a demonstration, not a lesson.
+**Before every generation**, ask: "What do you expect back?" and "What's missing from this prompt?"
+**When the output returns**, name the first thing that's wrong with it out loud, and fix that one thing in front of them.
+**After each stage**, give two minutes for the journal. A session where only you generated something is a demonstration, not a lesson.
 
-The prepared sample materials stay as backup — for a class with no network, when you have no example of your own, or for a facilitator who wants a guaranteed script.
+Item 4 and item 6 stay as backup for the opening discussion only — for a class with no network, or a facilitator who wants a guaranteed script for those six minutes. They are never a substitute subject for the six-stage demo: if you have no subject of your own, pick anything simple on the spot and generate it from words.
 
 ## Start slow things in the background
 
-Some requests take time — a detailed spreadsheet, a presentation, or anything that generates code. **Do not wait for them in front of the class.** Send it, keep talking about the next thing, and come back when it is ready.
+Video generation is slow, and stage 4's clip has to be ready by the time the class reaches the video block. **Send the stage-4 request the moment stage 3 begins** — while learners are animating their own image, start the text-only clip generating in the background on your machine — and keep teaching. Come back to it at minute 46.
 
 ## Before learners arrive
 
 ### Prepare the room and tools
 
-1. Open the [sample asset set](../../instructor/samples/session-06-asset-set.html). The answers are on a [separate page](../../instructor/samples/session-06-answers.html) — do not open it early, and it is separate so that an AI tool reading the asset set does not also receive the answers.
-2. Open the [slides](../../instructor/samples/session-06-slides.html) and a chat tool in the facilitator account.
-3. Have paper ready for storyboarding: six rectangles on one sheet is enough.
-4. If you bring your own example, make sure it contains at least one problematic asset. A clean story teaches nothing in this session.
+1. Open the [toolkit reference](../../instructor/samples/session-06-toolkit.html) and correct anything that's moved since it was written — free-tier terms change faster than this guide does.
+2. Open the [sample asset set](../../instructor/samples/session-06-asset-set.html). The answers are on a [separate page](../../instructor/samples/session-06-answers.html) — do not open it early, and it is separate so that an AI tool reading the asset set does not also receive the answers.
+3. Open the [slides](../../instructor/samples/session-06-slides.html), and sign into Google, Claude, and Canva in the facilitator account. Sign into ChatGPT too if you plan to run the stage-1 comparison.
+4. **Run the demo on a desktop, not a laptop.** Video generation is render-heavy, and a session built around it drags badly on underpowered hardware.
 
 ### What learners need
 
-- One real event they want to tell, and if they have them, a few photos they already took.
-- Paper and a pencil. That is enough for the whole session.
-- A device with one AI tool is optional.
+- Three free accounts, set up before the day: Google, Claude, and Canva. ChatGPT is optional, a fourth.
+- One real subject they want to carry through the chain — a place, a creature, an object, a small scene.
+- A device with a browser. That is enough for the whole session.
 
 ### Two facilitator decisions before starting
 
-**Whether to work on learners' real photos.** It is better, but note: the moment a photo of a person goes up on the classroom screen, you are inside the subject of the session. Say up front that nobody has to show anything.
+**Your own subject, or the sample items.** The chain runs either way, but a subject you're actually building live produces better questions than a prepared one. If you fall back to the sample items, open them only for the two-item opening — don't run the whole chain on them.
 
-**When to reveal the answers in the asset set.** Only after the class has been through all six. Open it early and you have lost the exercise.
+**When to open the answers page.** Only after you've walked both opening examples with the class. Open it early and you've lost the discussion.
 
 ## Session map
 
 | Time | What the facilitator does | What learners produce or identify |
 |---:|---|---|
 | 0–10 | **Homework discussion** | What worked and what broke for other people |
-| 10–15 | Opening: when did you believe an image immediately | Attention to the gap between image and claim |
-| 15–25 | Trust boundary: audience, purpose, claims, consents | Four decisions written down |
-| 25–40 | Sort the asset set and find the problems | The difference between a labelled asset and a misleading one |
-| 40–60 | Storyboard with captions and alt text | Six panels, and claims flagged as needing a source |
-| 60–80 | The four viewer checks | Alt text, contrast, labelling, and reading aloud |
-| 80–90 | Exit check and reflection | A package ready to publish, or a list of what is missing |
+| 10–16 | Three rules, and two examples that earn them | The gap between a generated image passed off as a record, and a real, edited photo mis-captioned to the wrong place and time |
+| 16–27 | Generate | A first image, from a prompt that names all five things a prompt has to say |
+| 27–38 | Fix | The same image, one region repaired, labelled |
+| 38–46 | Move | Their own image, animated |
+| 46–56 | Video, then the safety callback | A second clip from text alone, and the honest answer about publishing either one |
+| 56–65 | Narrate | A script written for the ear, recorded |
+| 65–85 | Assemble, two routes | The same deck, built in Claude and in Canva |
+| 85–90 | Exit check and reflection | A production set ready to review, or a list of what's missing |
 
 ## 0–10 minutes — Homework discussion
 
@@ -79,108 +82,156 @@ Three questions, in this order:
 
 Note two things that came up, and return to them later in the session by the name of whoever raised them.
 
-## 10–15 minutes — Opening
+## 10–16 minutes — Three rules, and two examples that earn them
 
-Show [slide 1](../../instructor/samples/session-06-slides.html): “When did you last see an image online and believe it immediately?”
-
-### What to say
-
-> “Today we build one story you can stand behind. Note that this does not mean a dull story. It means one whose claims hold up when somebody checks them.”
-
-## 15–25 minutes — The trust boundary
-
-Show [slide 2](../../instructor/samples/session-06-slides.html) and the four decisions: who, what for, which claims can be supported, and who consented.
-
-Stress this: a claim you cannot support is not banned. It is worded differently. “12 volunteers came”, with no list, becomes “far more people turned up than we expected”.
-
-## 25–40 minutes — Sort, and find
-
-Open the [asset set](../../instructor/samples/session-06-asset-set.html). Show [slide 3](../../instructor/samples/session-06-slides.html) and the three labels: original, edited, generated.
-
-Go through all six with the class and ask them to label each one. Do not hint where the problems are.
-
-### The moment that matters: two completely different problems
-
-Show [slide 4](../../instructor/samples/session-06-slides.html) — **asset 4**: an AI-generated image captioned “this is how the garden looks now”. That is a factual claim about a real place, supported by an image that is not a record.
-
-Then [slide 5](../../instructor/samples/session-06-slides.html) — **asset 6**: a completely real photograph, from another garden and last July, captioned “this is what we grew”.
+Show [slide 1](../../instructor/samples/session-06-slides.html): the three rules.
 
 ### What to say
 
-> “Notice the gap between the two. In one, the pixels were invented. In the other, nothing was invented — and the deception is larger, because it looks entirely credible. The most common deception is not a fake image. It is a real image with a wrong caption.”
+> "Six stages from here. At every one of them, ask these three questions again — that repetition is the safety lesson, not a slide you see once and forget."
 
-Point them at asset 3 as well: a third person who was never asked, and a caption claiming “12 volunteers” when three are visible. The claim may well be true — the photo simply is not its source.
+Show [slide 2](../../instructor/samples/session-06-slides.html): one subject, six stages, one artifact — the map of the chain they're about to run.
 
-## 40–60 minutes — The storyboard
+Open the [sample asset set](../../instructor/samples/session-06-asset-set.html) to **item 4**: a beautiful, generated garden image, captioned "this is how the garden looks now." That's a factual claim about a real place, supported by an image that isn't a record of it.
 
-Show the request on [slide 6](../../instructor/samples/session-06-slides.html) and run it with non-sensitive notes.
+Then **item 6**: a real photograph — genuinely taken, not generated — but edited (the saturation raised, the background cropped), from a different garden, last July, captioned "this is what we grew."
 
-### Expected intermediate output
+### What to say
 
-Six panels with captions and alt text, and a separate list of claims that need a source. If the tool added numbers, quotes, or details you never gave it, that is this stage's finding.
+> "Notice the gap. Item 4 invented every pixel. Item 6 invented none of them — it's a real photo, edited, from the wrong garden and the wrong month. Nothing in it is fake, and that's exactly what makes it harder to catch: a real photo can be edited, mis-placed, and mis-captioned, all at once, with no invented pixel to give it away."
+
+Don't resolve which is worse; hold both against rule three and move on. Slide 8 brings the class back to this exact question in about half an hour, on output they made themselves.
+
+## 16–27 minutes — Generate
+
+Show [slide 3](../../instructor/samples/session-06-slides.html) and [slide 4](../../instructor/samples/session-06-slides.html).
+
+Learners write a prompt that names five things: subject, composition, light, framing, and what to exclude. Full detail, including the weak/strong prompt pair, is on the [toolkit page](../../instructor/samples/session-06-toolkit.html).
+
+Run it in Gemini — that alone completes this stage in full. If a learner also has ChatGPT, they run the identical prompt there too and compare the two results. The comparison is the stage's real teaching point, not either tool — a Gemini-only learner isn't missing anything assessed.
 
 ### If the output is weak
 
-- **It invented details.** Point at them. The tool was not there, so every concrete detail it added is a guess.
-- **It proposed a generated image as a record.** That is precisely the mistake this session is about. Show it.
-- **The alt text is “a photo of the garden”.** Ask for a sentence describing what is actually visible.
+- **It's generic.** Read the five-part list back against their prompt — usually one part was never said.
+- **It added something they didn't ask for.** Point at it. The model filled a gap they left open; that's the lesson, not a bug.
+- **They're stuck comparing Gemini and ChatGPT and can't decide which is "better."** They're not supposed to decide — they're supposed to notice what each one did with the same words.
 
-## 60–80 minutes — The four viewer checks
+## 27–38 minutes — Fix
 
-Show [slide 7](../../instructor/samples/session-06-slides.html). Each check takes a minute:
-
-1. **Alt text** — a sentence describing what is visible.
-2. **Contrast** — white text over a bright image almost always fails.
-3. **Not colour alone** — “before” and “after” need a word too.
-4. **Read it aloud** — read the story from the alt text alone. If it does not make sense, the story is not accessible.
-
-The fourth is the one that surprises. Ask one learner to read out a partner's alt text without looking at the images.
+Show [slide 5](../../instructor/samples/session-06-slides.html).
 
 ### What to say
 
-> “The question is not ‘did I lie’. People almost never lie in a story like this. They simply do not write down what was obvious to them. The question is whether a reasonable viewer could take something untrue from it.”
+> "Same tool as stage 1. Aim the edit at the patch that failed, not at the picture again from nothing."
 
-## 80–90 minutes — Exit check and reflection
+Same tool as stage 1. Learners edit the specific region that's wrong — they don't throw the prompt away and regenerate from nothing. Re-rolling destroys whatever already worked. Once it's fixed, they label it before moving on — that label rides with this image for the rest of the chain.
 
-Show [slide 10](../../instructor/samples/session-06-slides.html):
+## 38–46 minutes — Move
 
-> My story has **[number]** assets. **[how many]** are edited or generated, and I labelled them by **[how]**. The claim that needed a source is **[what]**, and the source is **[what]**. Before publishing I still need **[what]**.
+Show [slide 6](../../instructor/samples/session-06-slides.html).
 
-Reflection question: “Which image did you most want to use — and could not?”
+Learners upload the image they built and fixed into Gemini, and add a short prompt describing only the motion. The subject stays theirs; the prompt only tells it how to move.
+
+**This is where you send the stage-4 background generation** (see "Start slow things in the background," above): kick it off now, keep teaching stage 3, and come back to it at minute 46.
+
+## 46–56 minutes — Video, then the safety callback
+
+Show [slide 7](../../instructor/samples/session-06-slides.html).
+
+Same tool, this time a text prompt with nothing else behind it — nothing of the learner's survives into this clip. Watch for where it breaks: text, hands, continuity, physics. Send the job, then keep talking — it isn't instant.
+
+Then show [slide 8](../../instructor/samples/session-06-slides.html), which closes this block on the class's own output. Put a learner's stage-3 clip and stage-4 clip side by side. Both are generated — nothing in this chain was shot with a camera. The real difference is how much they directed: stage 3 animates an image they built and fixed; stage 4 came from words alone.
+
+Ask: "If you captioned either one 'this is this place,' right now — would that be true?"
+
+### What to say
+
+> "Neither is a record of that place — so no. A label doesn't make it true; it stops it from deceiving. That's rule three from slide 1. Say so out loud before anyone asks; that's rule one, applied to something you made ten minutes ago."
+
+If someone pushes on which clip is "worse," don't resolve it — that's exactly the discussion this slide exists to run.
+
+## 56–65 minutes — Narrate
+
+Show [slide 9](../../instructor/samples/session-06-slides.html).
+
+Learners write a short script that narrates the piece they've built — their subject, the image, and the two clips — for the ear, not the eye: short sentences, one idea per breath, numbers spoken rather than written. Full pattern on the [toolkit page](../../instructor/samples/session-06-toolkit.html).
+
+They record it in Google AI Studio, Google's text-to-speech surface. *Only Gemini's video generation has been tested by the course author (2026-08-19) — this narration routing hasn't been separately confirmed, so check it works before you teach.*
+
+### If the output is weak
+
+- **A name comes out wrong.** A second take usually fixes it faster than fighting with the first one.
+- **The script sounds fine on the page and wrong out loud.** Read it aloud yourself before recording — a sentence that needs a comma to survive needs to be split instead.
+
+## 65–85 minutes — Assemble, two routes
+
+Show [slide 10](../../instructor/samples/session-06-slides.html).
+
+### What to say
+
+> "The comparison is the lesson, not either tool. Notice what each route cost you, and what it gave back."
+
+Learners build the same short deck twice: once with Claude, as a file they own and can keep editing, and once in Canva, for faster visual polish. Same slides, same script, same images — only the tool changes.
+
+### Expected intermediate output
+
+Two short decks that say the same thing and look different: Claude's as a file the learner can keep opening and editing, Canva's as a polished layout that lives on Canva's platform. Neither is "the" deck — the point is that they now have both, and can name what each one cost.
+
+### Checkpoint: before moving to the exit check
+
+Ask each learner, out loud, one sentence each: "Which route would you use next time, and why?" A real answer names a trade-off (speed versus ownership, polish versus portability) — not just a preference.
+
+### If the output is weak
+
+- **The Claude file looks plain next to Canva's.** That's expected, not a failure — point at the difference and ask what it cost to get Canva's polish (a platform lock-in, not a file).
+- **The Canva deck drifted from the script.** Point them back to the narration script from stage 5 — the deck should say what the script says, not reinvent it.
+- **A learner only has time for one route.** Claude first — it produces the file they keep. Canva can wait for the reflection question, not the checkpoint.
+
+## 85–90 minutes — Exit check and reflection
+
+Show [slide 11](../../instructor/samples/session-06-slides.html):
+
+> My subject was **[what]**. It went through **[how many]** of the six stages. The stage I would cut if I only had an hour is **[which]**. The clip I would not publish about a real place is **[which]**, because **[why]**.
+
+Reflection question: "Which stage surprised you — because the tool did better, or worse, than you expected?"
 
 ### Quick assessment rubric
 
 | Evidence | Not yet | Ready |
 |---|---|---|
-| Labelling | “It's just a background image” | Every edited or generated asset is visibly labelled |
-| Claims | A caption that sounds good | Every factual claim has a source beside it |
-| Consent | “It was a public place” | Known who consented, and anyone who did not is not shown |
-| Accessibility | “There's a caption” | Alt text that describes, and contrast that was checked |
+| Labelling | "It's just the output" | Every generated piece is visibly labelled, in the caption itself |
+| The safety callback | "I'd probably post the better one" | Neither clip is presented as a record without a label |
+| Consent | "Nobody's in it" taken as enough | A real person's likeness only with consent, a child's only with a parent's |
+| The two routes | Only one deck exists | Both the Claude file and the Canva deck exist, and the learner can say what each cost and gave back |
 
 ## Equivalent tool routes
 
-**ChatGPT / Claude / Gemini:** Exactly the same request, for drafting captions and alt text from the notes.
-**No tool (a full route):** Six rectangles on a sheet and handwritten captions. The viewer checks are identical, and sometimes more thorough.
-**An image generator:** Not required. If someone uses one, it is an excellent opportunity to practise labelling.
+**Gemini alone** completes stages 1 through 5 in full. Nothing assessed depends on a second tool.
+**ChatGPT, at stages 1–2 only:** an optional second opinion for the comparison — never required, and never used past stage 2.
+**Claude and Canva, at stage 6:** not a choice between them — both, so the comparison itself is the exercise.
+**Sora:** a facilitator demo only, if you want to show what a paid tool produces. Never a learner task.
+**Any other free video or image tool a learner already has:** check the [toolkit page](../../instructor/samples/session-06-toolkit.html)'s two traps before you let anyone route their final piece through it.
 
 ## Troubleshoot without losing the lesson
 
 | Situation | Facilitator response |
 |---|---|
-| Learners have no photos of their own | Work from the sample asset set. It is deliberately complete. |
-| Someone wants to post an image of another person | Stop and ask “do they know?”. That is the subject, not an interruption to it. |
-| The class cannot find the problems | Steer with a question: “which image promises something it cannot prove?” |
-| Someone argues that labelling ruins the story | Agree it is less smooth, and ask what happens when a viewer works it out themselves. |
-| Discussion drifts into AI and deepfakes | Return to asset 6: real photo, wrong caption. That is where most of it lives. |
-| Time runs out | Drop the full storyboard, not the viewer checks. |
+| Someone used Runway and ran out mid-session | 125 lifetime credits, not monthly. Move them to Gemini and continue |
+| Their export has a Kling watermark | Expected on that free tier. Note it, and use it as a labelling example |
+| ChatGPT hit its image cap | Drop to Gemini. The comparison is lost for them, not the stage |
+| A video generation has not returned | Move to the next stage and come back. Never wait on screen |
+| Someone wants to publish a generated clip as a record of a real place | That is slide 8. Do not resolve it — run the discussion |
+| A learner has no subject of their own | Have them describe anything simple in the room — a mug, a pet, an object — and generate it from words. Never hand them an existing image to animate; item 6 is a real photo and can't enter the chain |
+| Time runs out | Drop the Canva half of stage 6, not the exit check. The Claude file is enough on its own |
+| Google AI Studio won't generate the narration, refuses, or drops the voice | Not separately confirmed — expect this. Read the script aloud yourself as a stand-in narration and move on; fix the audio after the session |
 
 ## Differentiation
 
-- **No device:** A paper storyboard and captions by hand. A full route.
-- **For learners who need structure:** Give them the asset set and ask them to arrange just six panels from it.
-- **For learners ready to extend:** Ask them to rewrite “12 volunteers came” three ways, all of them true.
-- **Accessibility:** If someone in the room uses a screen reader, ask for their help with the fourth check. It is the strongest insight in the session.
+- **No accounts set up yet:** Pair with someone who has them. Watching a live fix is most of the lesson anyway.
+- **For learners who need structure:** Give them a narrow, concrete subject to describe — "a park bench in the rain" — and the toolkit page's prompt-anatomy list to build the prompt from.
+- **For learners ready to extend:** After stage 4 breaks, have them predict where a second attempt will break before they run it.
+- **Accessibility:** If someone in the room uses a screen reader or dictation regularly, ask them to lead stage 5 — "write for the ear, not the eye" is closest to skills they already use daily.
 
 ## After the session
 
-Note which asset the most learners missed. If it is asset 6, that is expected — it is the hardest, because nothing in it is fake. Keep real examples learners brought, with their permission, as next year's asset set.
+Note which stage broke down for the most learners — an account not set up in advance, a tool cap hit mid-chain, or a video generation that never returned. If a learner's own subject produced an especially sharp example for the safety callback, ask their permission to keep it as next session's opening example.
