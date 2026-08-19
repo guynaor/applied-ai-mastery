@@ -557,94 +557,87 @@ Which parameter needs another real measurement? What will you change before maki
 <!-- journal-tab: {"id":"session-06","title":"Session 6: From Prompt to Presentation"} -->
 # Session 6: From Prompt to Presentation
 
-Plan a short visual story whose audience can understand what is true, selected, edited, or generated.
+Generate an image, fix it, animate it, generate a second clip from text alone, narrate it, and assemble a deck two ways — labelling every generated piece as you go.
 
-## 1. Set the story contract
+## 1. The production plan
 
-| Purpose and audience | Main message | Format | Source assets | Consent / permission |
-| --- | --- | --- | --- | --- |
-| Example: Show my running group why the new route is safer | The new route has wider, better-lit pavements | 60-second vertical video | Eight of my own photos and one AI-generated map illustration | Two runners appear and both agreed in writing |
-| | | | | |
-| | | | | |
-
-## 2. Storyboard the sequence
-
-| Frame | What the audience sees | Caption / voice | Accessibility note | Label needed? |
-| --- | --- | --- | --- | --- |
-| Example | Wide shot of the old junction at dusk | "This is where we used to cross." | Describe the junction aloud; captions burned into the video | No, it is an unedited photo |
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
-| 6 | | | | |
-
-## 3. Review for truth and clarity
-
-Go through the story item by item and ask what a viewer might wrongly conclude. A generated image that is not labelled is not decoration — it is a claim.
-
-| Item in the story | Original, edited, or generated? | What a viewer might wrongly think | What I added to prevent that |
+| Subject | Audience | What the piece must say | Tool per stage |
 | --- | --- | --- | --- |
-| Example: the neighbourhood background image | AI generated | That it is a real photograph of the street the story is about | A “illustration, not a photograph” caption and alt text saying the same |
-| | | | |
-| | | | |
-| | | | |
+| Example: the walk I do every morning | My family | That the route is worth an early start | Gemini throughout; Claude for the deck |
+|  |  |  |  |
+
+## 2. Stage log
+
+| Stage | Tool | Prompt or setting | What came back | What I fixed | Labelled? |
+| --- | --- | --- | --- | --- | --- |
+| 1 Generate |  |  |  |  |  |
+| 2 Fix |  |  |  |  |  |
+| 3 Move |  |  |  |  |  |
+| 4 Video |  |  |  |  |  |
+| 5 Narrate |  |  |  |  |  |
+| 6 Assemble |  |  |  |  |  |
+
+## 3. Tool verdict
+
+| Tool | Did I hit a free limit? | What it did well | What it did badly | Use again? |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
 
 ## Goal
 
-Make a short visual story whose audience can tell what is real, what was edited, and what a machine made.
+Carry one idea through the whole pipeline — a generated image, a fix, an animated clip of your own image, a second clip generated from text alone, a narration, and a deck assembled two ways — labelling every generated piece as you go.
 
 ## Steps
 
-1. Decide the audience, main message, source assets, and permissions (for example: a neighbourhood group, a club, your family, a class).
-2. Fill in the storyboard with captions and accessibility notes.
-3. Fact-check one claim that would matter if it were wrong, and add every label the audience needs.
+1. Pick one subject and audience, and write what the piece must say (for example: a product idea, a family announcement, a short lesson).
+2. Generate an image and fix it in Gemini (or compare it against ChatGPT), animate it and generate a second clip from text alone in Gemini, narrate it in Google AI Studio, then assemble the deck in Claude and Canva — logging the tool, prompt, and result at each stage.
+3. Compare at least two tools at the generate and fix stages, then label every generated piece before you show it to anyone.
 
 ## Bronze
 
-Create a short storyboard with sources and labels.
+Complete the full six-stage chain — image, fix, animation, text-to-clip, narration, assembled deck — with every generated piece labelled.
 
 ## Silver
 
-Produce the visual story with accessibility notes and fact checks (for example: alternative text on every image, and a visible "AI-generated illustration" label).
+Add a tool comparison at the generate and fix stages (stages 1–2), and a working narration synced to the deck.
 
 ## Gold
 
-Show it to a member of the intended audience and revise for clarity or trust.
+Show the finished deck to someone from the intended audience, and revise it from what they tell you.
 
 ## My task
 
 | Level | What I chose | By when |
 | --- | --- | --- |
-| Example: Silver | The video about the running route | Before Friday's run |
+| Example: Silver | The morning-walk deck for my family | Before the weekend |
 | | | |
 
-## Storyboard, for the real story
+## Stage log, for the real piece
 
-| Frame | What the audience sees | Caption / voice | Accessibility note | Label needed? |
-| --- | --- | --- | --- | --- |
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
-| 6 | | | | |
+| Stage | Tool | Prompt or setting | What came back | What I fixed | Labelled? |
+| --- | --- | --- | --- | --- | --- |
+| 1 Generate |  |  |  |  |  |
+| 2 Fix |  |  |  |  |  |
+| 3 Move |  |  |  |  |  |
+| 4 Video |  |  |  |  |  |
+| 5 Narrate |  |  |  |  |  |
+| 6 Assemble |  |  |  |  |  |
 
 ## Evidence I saved
 
 | What I checked | Source and date | Where I saved it |
 | --- | --- | --- |
-| Example: the claim that the new route is better lit | The council street-lighting map, 20 April | Link saved next to the storyboard |
+| Example: that every generated clip carries a visible label | My own review before sharing, 12 May | Screenshot of the label on the deck slide |
 | | | |
 | | | |
 
 ## Verification and evidence
 
-Save source links, permissions or consent notes, fact checks, the storyboard, and the final labels as evidence.
+Save the stage log with prompts and fixes, the tool verdict, the finished deck with its labels, and a note of which tool you used at each stage as evidence.
 
 ## Reflection and human judgment
 
-Where could the audience be misled? What will make the story more accessible and trustworthy next time?
+Where might a viewer mistake a generated clip for something real? What would you change before showing this to a wider audience?
 
 <!-- journal-tab: {"id":"session-07","title":"Session 7: Build a Personal System"} -->
 # Session 7: Build a Personal System
