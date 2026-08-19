@@ -29,7 +29,8 @@ const ui={
 };
 
 const readJson=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key)||JSON.stringify(fallback));}catch{return fallback;}};
-const legacyToSession={1:1,2:1,3:1,4:2,5:2,8:2,6:3,7:3,9:4,10:5,11:6,12:7};
+const legacyToSession={1:1,2:1,3:1,4:2,5:2,8:2,6:3,7:3,9:6,10:5,11:4,12:7};
+const REORDER_MARKER='reorder2026081904';
 const mergeLevels=(left,right)=>(['','bronze','silver','gold'].indexOf(left)>=['','bronze','silver','gold'].indexOf(right)?left:right);
 function migrateLegacy(){
  if(localStorage.getItem('aam-personal-sessions'))return readJson('aam-personal-sessions',{});
@@ -37,17 +38,39 @@ function migrateLegacy(){
  const journals=new Set(readJson('aam-personal-journals',[]).map(n=>legacyToSession[n]||n));
  const missions={};
  Object.entries(readJson('aam-personal-missions',{})).forEach(([n,level])=>{const session=legacyToSession[n]||Number(n);missions[session]=mergeLevels(missions[session]||'',level);});
- const migrated={completed:[...completed],journals:[...journals],missions};
+ // legacyToSession already maps onto the post-2026-08-19 numbering, so data
+ // arriving this way is born in the new order and must not be swapped again.
+ const migrated={completed:[...completed],journals:[...journals],missions,[REORDER_MARKER]:true};
  localStorage.setItem('aam-personal-sessions',JSON.stringify(migrated));
  return migrated;
 }
-const saved=migrateLegacy();
+// 2026-08-19: the visual session moved to 4 and the app session to 6. Progress
+// is stored as session numbers, so stored data must be swapped to match or a
+// learner's completed app session would read as a completed visual session.
+// The marker is explicit and must stay: without it this swap re-applies on
+// every load, and a learner's history degrades a little each visit.
+const reorderSwap={4:6,6:4};
+function migrateReorder(saved){
+ if(saved&&saved[REORDER_MARKER])return saved;
+ const swap=n=>reorderSwap[n]||Number(n);
+ const missions={};
+ Object.entries(saved.missions||{}).forEach(([n,level])=>{missions[swap(n)]=level;});
+ const migrated={
+  completed:[...new Set((saved.completed||[]).map(swap))],
+  journals:[...new Set((saved.journals||[]).map(swap))],
+  missions,
+  [REORDER_MARKER]:true,
+ };
+ localStorage.setItem('aam-personal-sessions',JSON.stringify(migrated));
+ return migrated;
+}
+const saved=migrateReorder(migrateLegacy());
 const state={language:localStorage.getItem('aam-personal-language')||'en',mode:localStorage.getItem('aam-personal-mode')||'student',completed:new Set(saved.completed||[]),missions:saved.missions||{},journals:new Set(saved.journals||[])};
 const grid=document.querySelector('[data-personal-lesson-grid]');
 const resourceHref=path=>path.toLowerCase().endsWith('.md')?`document.html?src=${encodeURIComponent(path)}`:path;
 const journalUrls={en:'site/assets/downloads/applied-ai-mastery-personal-journal-en.docx',he:'site/assets/downloads/applied-ai-mastery-personal-journal-he.docx'};
 const missionXp={bronze:30,silver:50,gold:80};
-const save=()=>localStorage.setItem('aam-personal-sessions',JSON.stringify({completed:[...state.completed],missions:state.missions,journals:[...state.journals]}));
+const save=()=>localStorage.setItem('aam-personal-sessions',JSON.stringify({completed:[...state.completed],missions:state.missions,journals:[...state.journals],[REORDER_MARKER]:true}));
 function totalXp(){let xp=state.completed.size*20+state.journals.size*20;Object.values(state.missions).forEach(level=>xp+=missionXp[level]||0);return xp;}
 function legacyRoot(lesson){return `personal-course/materials/lesson-${String(lesson.n).padStart(2,'0')}-${lesson.slug}`;}
 function optionalLegacyLinks(lesson,he){
