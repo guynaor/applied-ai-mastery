@@ -2,9 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Move the visual session before the two build sessions — 6→4, 4→5, 5→6 — across filenames, content, portal, journal and stored learner progress, without breaking a link or corrupting anyone's history.
+**Goal:** Put the visual session fourth and the app session last — a straight swap of sessions 4 and 6 — across filenames, content, portal, journal and stored learner progress, without breaking a link or corrupting anyone's history.
 
-**Architecture:** A three-way rotation of 31 files plus every reference to them. The renumber is atomic: renaming files without updating their internal links, the portal's paths, the journal tab order and the check script's title list leaves the repo red, so those move as one unit. Two things land safely on their own before it — a link-integrity guard and the progress migration.
+**Architecture:** A two-way swap of 20 files plus every reference to them. Every `session-05-*` file is untouched — the object session does not move. The renumber is atomic: renaming files without updating their internal links, the portal's paths, the journal tab order and the check script's title list leaves the repo red, so those move as one unit. Two things land safely on their own before it — a link-integrity guard and the progress migration.
 
 **Tech Stack:** Markdown, static HTML, `git mv`, Node validation scripts under `scripts/`, `build-personal-workbooks.mjs` for DOCX, browser `localStorage` for progress.
 
@@ -12,7 +12,8 @@
 
 ## Global Constraints
 
-- **The rotation is `{6→4, 4→5, 5→6}`.** Sessions 1, 2, 3 and 7 do not move.
+- **The swap is `{4 ↔ 6}`.** Sessions 1, 2, 3, 5 and 7 do not move, and no
+  `session-05-*` file is renamed or edited.
 - **Slugs never change.** `trustworthy-visual-story`, `build-personal-tool`,
   `design-physical-project` stay attached to their sessions.
 - **`aam-personal-sessions` is never renamed.** Renaming it discards every
@@ -37,9 +38,9 @@
 - `scripts/check-session-links.mjs` — asserts every `session-0N-*` path
   referenced anywhere resolves to a file that exists.
 
-**Renamed (31, three-way rotation)** — full list in the spec's "The 31 file
-renames" section. Summary: 12 visual files `06→04`, 8 app files `04→05`,
-11 object files `05→06`.
+**Renamed (20, two-way swap)** — 12 visual files `06→04`, 8 app files
+`04→06`. Full list in the spec's "The 20 file renames" section. No
+`session-05-*` file moves.
 
 **Modified**
 
@@ -150,9 +151,9 @@ Beside `migrateLegacy`, add a one-shot that:
 
 - reads `aam-personal-sessions`;
 - if its marker says the reorder migration already ran, returns untouched;
-- otherwise maps `completed` and `journals` through `{4:5, 5:6, 6:4}`,
-  leaving every other number as-is, and rewrites the keys of `missions` the
-  same way;
+- otherwise swaps `completed` and `journals` through `{4:6, 6:4}`, leaving
+  every other number as-is — 5 included — and rewrites the keys of
+  `missions` the same way;
 - writes the marker and persists.
 
 The marker must be explicit — a version field in the stored object, or a
@@ -168,11 +169,11 @@ migrated.
 const legacyToSession={1:1,2:1,3:1,4:2,5:2,8:2,6:3,7:3,9:4,10:5,11:6,12:7};
 ```
 
-Original lesson 9 (mini app) now belongs to session 5, lesson 10 (room
-design) to session 6, lesson 11 (visual) to session 4:
+Original lesson 9 (mini app) now belongs to session 6 and lesson 11 (visual)
+to session 4. Lesson 10 (room design) stays at 5:
 
 ```javascript
-const legacyToSession={1:1,2:1,3:1,4:2,5:2,8:2,6:3,7:3,9:5,10:6,11:4,12:7};
+const legacyToSession={1:1,2:1,3:1,4:2,5:2,8:2,6:3,7:3,9:6,10:5,11:4,12:7};
 ```
 
 - [ ] **Step 3: Test the migration, including that it is idempotent**
@@ -183,12 +184,16 @@ Run in Node, simulating the stored object:
 // seed old-order progress
 let store = {completed:[2,4,5,6], journals:[4,6], missions:{4:'gold',5:'silver',6:'bronze'}};
 // apply the migration once
-// assert: completed contains 2,5,6,4 (i.e. 4→5, 5→6, 6→4; 2 unchanged)
-//         journals contains 5,4
-//         missions is {5:'gold',6:'silver',4:'bronze'}
+// assert: completed contains 2,6,5,4  (4→6, 6→4; 2 and 5 unchanged)
+//         journals contains 6,4
+//         missions is {6:'gold',5:'silver',4:'bronze'}   // note 5 keeps 'silver'
 // apply the migration a SECOND time
 // assert: the object is unchanged from after the first application
 ```
+
+Session 5 appearing in the seed data is deliberate: it is the number most
+likely to be swept up by a careless implementation, and the assertion that
+it keeps `'silver'` is what catches that.
 
 The second-run assertion is not optional. Without the marker, a repeat
 rotates the numbers again on every page load and degrades a learner's
@@ -225,27 +230,30 @@ part of it alone.
 
 - [ ] **Step 1: Rotate the files, via a temporary name**
 
-A three-way rotation collides if done naively. Use one temp step, and
+A two-way swap still collides if done naively. Use one temp step, and
 `git mv` so history follows:
 
 1. `session-04-*` → `session-tmp-*` (frees `04`)
 2. `session-06-*` → `session-04-*` (frees `06`)
-3. `session-05-*` → `session-06-*` (frees `05`)
-4. `session-tmp-*` → `session-05-*`
+3. `session-tmp-*` → `session-06-*`
+
+**Do not touch `session-05-*`.** Those 11 files stay exactly as they are.
 
 Topic slugs inside filenames do not change: the visual brief becomes
 `session-04-trustworthy-visual-story.md`, not `session-04-visual.md`.
 
-The four globs above fully determine which files move — there is no
+The three globs above fully determine which files move — there is no
 hand-picked list to consult, and the spec's enumeration is there only if you
-want to read it. Verify the count before and after:
+want to read it. Verify the counts before and after:
 
 ```bash
-find personal-course -name '*session-0[456]*' | wc -l   # expect 31 before and after
+find personal-course -name '*session-04*' | wc -l   # 8 before, 12 after
+find personal-course -name '*session-05*' | wc -l   # 11 before AND after
+find personal-course -name '*session-06*' | wc -l   # 12 before, 8 after
 ```
 
-If that number is not 31 on both sides, a file was dropped or duplicated by
-the rotation — stop and find it before continuing.
+The middle line is the important one: if the `session-05-*` count changes at
+all, the swap has touched the session that must not move — stop and undo.
 
 - [ ] **Step 2: Run the guard to see the full blast radius**
 
@@ -261,8 +269,10 @@ is your worklist for Step 3.
 Work the guard's list. Each renamed file links its own siblings; those paths
 move with it. Known traps:
 
-- `session-05-setup.md` becomes `session-06-setup.md` and is referenced from
-  both the object brief and the object guide.
+- `session-05-setup.md` keeps its name, because the object session does not
+  move. Its references from the object brief and guide are correct as they
+  stand — leave them alone. An earlier version of this plan renamed it; that
+  was for the three-way rotation and no longer applies.
 - Hebrew guides sit one directory deeper than English ones, so their
   relative depth differs (`../../../` versus `../../`). Do not assume the
   English fix transfers.
@@ -282,8 +292,8 @@ number, in both languages.
 - [ ] **Step 5: Reorder the portal entries**
 
 In `site/assets/js/personal-course.js`, the `sessions` array: the visual
-entry becomes `n:4`, the app entry `n:5`, the object entry `n:6`, and the
-array is ordered 1..7. Each entry keeps its own `slug` and `legacy` — the
+entry becomes `n:4` and the app entry `n:6`; the object entry stays `n:5`.
+The array is ordered 1..7. Each entry keeps its own `slug` and `legacy` — the
 visual entry keeps `legacy:[11]` when it becomes `n:4`.
 
 - [ ] **Step 6: Reorder the journal tabs**
@@ -335,7 +345,11 @@ git commit -m "feat: move the visual session before the two build sessions"
 
 Its five deliverables currently map to the old numbers. They become sessions
 2 through 6 **in order**: research (2), plan with a spreadsheet (3),
-presentation (4), small app (5), designed object (6).
+presentation (4), designed object (5), small app (6).
+
+Worth stating in the capstone brief: the last deliverable is the app, which
+is also the one carrying the permission boundary and the stop rule. The
+capstone ends on human control, which is the right note to end on.
 
 Say that explicitly — "one deliverable per session, in the order you learned
 them" is simpler for a learner to hold and for the mentor to review against
@@ -384,6 +398,8 @@ that nothing reads as though it assumes an earlier session came later. The
 sessions have no prose cross-references between 4, 5 and 6 — verified during
 design — but session 7's brief references session 2, and phrasing like
 "as you did last time" carries an order assumption without naming a number.
+The object session did not move, so its text is the least likely to have
+drifted; the visual and app sessions are where to look hardest.
 
 - [ ] **Step 6: Report anything for Guy**
 
