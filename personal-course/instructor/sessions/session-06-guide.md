@@ -98,7 +98,7 @@ Then **item 6**: a real photograph — genuinely taken, not generated — but ed
 
 ### What to say
 
-> "Notice the gap. Item 4 invented every pixel. Item 6 invented none of them — it's a real photo, edited, from the wrong garden and the wrong month — and the deception is still bigger, because it looks entirely credible. A real photo can be edited, and mis-placed, and mis-captioned, all at once. That's what makes it the harder one to catch."
+> "Notice the gap. Item 4 invented every pixel. Item 6 invented none of them — it's a real photo, edited, from the wrong garden and the wrong month. Nothing in it is fake, and that's exactly what makes it harder to catch: a real photo can be edited, mis-placed, and mis-captioned, all at once, with no invented pixel to give it away."
 
 Don't resolve which is worse; hold both against rule three and move on. Slide 8 brings the class back to this exact question in about half an hour, on output they made themselves.
 
