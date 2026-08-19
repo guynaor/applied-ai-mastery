@@ -236,6 +236,17 @@ A three-way rotation collides if done naively. Use one temp step, and
 Topic slugs inside filenames do not change: the visual brief becomes
 `session-04-trustworthy-visual-story.md`, not `session-04-visual.md`.
 
+The four globs above fully determine which files move — there is no
+hand-picked list to consult, and the spec's enumeration is there only if you
+want to read it. Verify the count before and after:
+
+```bash
+find personal-course -name '*session-0[456]*' | wc -l   # expect 31 before and after
+```
+
+If that number is not 31 on both sides, a file was dropped or duplicated by
+the rotation — stop and find it before continuing.
+
 - [ ] **Step 2: Run the guard to see the full blast radius**
 
 ```bash
