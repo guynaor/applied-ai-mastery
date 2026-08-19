@@ -32,14 +32,14 @@ subject, so all six taught sessions are exercised.
    uses. Deliverables are posted to the group, not sent privately, and the
    mentor answers in the open. This is the point, not a convenience: one
    answer serves everyone, and learners see each other's work.
-6. **Attendance is expected.** A learner who missed a session skips that
-   session's deliverable rather than attempting it unprepared.
 5. **Title:** English *One Project, Every Skill*, Hebrew
    *פרויקט אחד, כל המיומנויות*. Confirmed by Guy on 2026-08-19.
    Note that every session title is an imperative phrase — *Decide What to
    Do Next*, *Buy With Confidence*, *Make a Space Work Better* — and this
    one deliberately is not. The grammatical break is useful: it signals at a
    glance that the capstone is not another session.
+6. **Attendance is expected.** A learner who missed a session skips that
+   session's deliverable rather than attempting it unprepared.
 
 ## Goals
 
