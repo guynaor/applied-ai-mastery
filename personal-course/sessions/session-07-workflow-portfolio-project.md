@@ -1,23 +1,55 @@
-# Session 7 — Build a Personal System
+# One Project, Every Skill
 
-**Time:** 90 minutes  
-**Outcome:** One starting page for something you genuinely keep doing, with real evidence, a clear permission boundary, and a stop rule.
+**Format:** A project you do at home, mentored in the group — not a session.
+**Outcome:** One subject of your choosing, carried through five deliverables, each using a skill you already learned. Everything generated is labelled, and the app you build knows what it may not do.
+
+## Before you choose anything
+
+Two things about how this runs, because they change what subject you should pick.
+
+**Your work is visible to the group.** You post each deliverable to the group chat and the answer comes back where everyone can read it. Choose a subject you are willing to show, and keep private information out of it — other people's details, anything you would not want quoted later.
+
+**Reading other people's work is part of the task.** Half the value here is watching five other projects hit problems yours has not reached yet. One answer about weak sources is worth more to the people who have not posted than to the person who did.
+
+**If you missed a session, skip that deliverable.** A shorter project honestly done is worth more than five deliverables where one was guessed at. Say which one you are skipping when you propose your subject.
 
 ## Scenario
 
-Pick something ongoing you want to move forward: a project, a learning habit, a household routine, or a personal portfolio. The goal is an organised starting point you will come back to — not a system that works instead of you. Use only real evidence, and leave private information out.
+Pick one thing you actually want to exist or to happen. Not an exercise — a trip you intend to take, a patch of garden you mean to plant, a setup you keep meaning to build, an event you are going to host. You will carry that one subject through all five deliverables, and each deliverable uses a session you have already done.
+
+There is no deadline set for you. You set your own, at the subject gate, and tell the group.
 
 ## Sequence
 
-1. **Gather real evidence (10 minutes).** Choose three to five things you actually did, including from earlier sessions. For each, write what happened, where it is recorded, what you did yourself, and what you still do not know. Do not invent results, and do not quietly improve them either.
-2. **Build a human starting page (12 minutes).** Turn the goal into one page: the next step, how often you check in, where the files and reminders live, and when the project counts as finished. You can ask Claude, ChatGPT, or Gemini to redraft it from your evidence — not to choose your goal or invent an outcome.
-3. **Map permissions before connecting (15 minutes).** In the demonstration or optional practice, **Claude Desktop** works only on a bounded folder of non-sensitive sample files. Read the permission request before approving it, grant **least privilege**, inspect the proposed action before it runs, and verify the result afterwards. Approval stays with you.
-4. **Draw the stop line (10 minutes).** Write down which data is off limits, which actions always need approval, and what the stop condition is. If you did the **OpenClaw** agent lab in Session 2, this is the moment to review the **agent run record**: allowed sources, last run, duplicate handling, failure note, the alert, and the stop action. A run that worked is evidence to review — not a reason to widen access. **Claude for Chrome** is for further exploration only: start read-only, and never approve an account change, a payment, a message, or access to private data.
+**0. Propose your subject, and wait.** Post what it is, why this one, which deliverable you are skipping if any, and the date you intend to finish by. **Do not start deliverable one until your subject is confirmed.** This is the step that saves you weeks — see the test below.
+
+1. **Research brief** — *uses Session 2.* What you need to know before committing: options compared, sources you opened yourself, what you decided, and what you still do not know. An assumption you have not checked is not a finding; label it as an assumption.
+2. **Plan with a spreadsheet** — *uses Session 3.* Budget, schedule, and who does what. Include the thing that will go wrong and what happens then.
+3. **Presentation** — *uses Session 4.* The production chain: a generated image, fixed; a clip animated from it; a clip generated from words alone; narration; the deck. Everything generated carries a visible label, and nothing generated is presented as a record of something real.
+4. **Designed object** — *uses Session 5.* Something physical your project needs. Parametric, with every dimension traceable to a source, and checked against at least one real measurement you took yourself.
+5. **Small app** — *uses Session 6.* A working tool for the part of this project you will do more than once. Then write its boundary: what it may touch, what always needs your approval, and what makes it stop. The app is not finished without that.
+
+## Choosing a subject that works
+
+The test, and it takes one minute: **do all five deliverables arise from this subject naturally?** If you would have to invent a reason to design an object, or your "app" is a spreadsheet with a different name, it is the wrong subject — and finding that out at deliverable four costs you weeks.
+
+Four that pass:
+
+| Subject | Research | Plan | Presentation | Object | App |
+|---|---|---|---|---|---|
+| **A weekend trip** | Destinations, real costs | Itinerary and budget | Show it to whoever is coming | A travel-organiser insert | Packing list |
+| **A vegetable patch** | What grows in your soil and season | Planting calendar, costs, yields | Pitch it to family or neighbours | Seedling-tray dividers, plant labels | Watering reminder |
+| **A home coffee setup** | Grinders and beans, against real sources | Budget and running costs | Why this setup | A tamper stand or drip tray | Brew-ratio calculator |
+| **A child's birthday party** | Venues and catering | Guest list, budget, schedule | The plan, shown to the family | Party-favour boxes, name cards | RSVP tracker |
+
+**And one that fails.** *"Learn to play the guitar."* The research is real, and you could build a practice-log app. But the plan is a wish rather than a schedule with costs, there is no presentation anyone needs to see, and the designed object — a pick holder? — is invented to satisfy the requirement rather than because the project needs it. Two of five bolted on means a wrong subject, not a hard one. **Narrow it until the deliverables come to you**: *"set up a corner of the house where practising actually happens"* passes, because now the object is a stand or a cable tidy you genuinely need, and the presentation is showing the household why that corner is worth giving up.
 
 ## Integrated artifact
 
-Create one starting page: the goal, the evidence record, an honestly written portfolio note, the finish plan, the permission map, the next check-in, and the stop rule. This page is measured by one thing: whether you come back to it in a month.
+Everything in one place: the research brief, the spreadsheet, the presentation, the object's design file and the measurement you checked it against, the app, and the app's boundary written out. Plus one sentence on what this project is not — where it would fail, or who it is not for.
+
+The measure is not that it looks finished. It is whether you would actually use it.
 
 ## Optional resources
 
-Every table for this session is in the [learning journal](../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx): the starting point, the process and evidence map, and the portfolio table. The [mission review guide](../instructor/real-life-mission-review-guide.md) is also available. Working on paper or watching the Claude Desktop demonstration is a full and valid free-access route at no cost, and you never need to connect any tool to your own account.
+Every table for this project is in the [learning journal](../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx): the subject, the deliverable log, and the app's boundary. Each deliverable's standard is the one you already learned — go back to that session's brief if you are unsure what "done" looks like. The [sample permission map](../instructor/samples/session-07-permission-map.html) shows what an app boundary contains, including least-privilege access and a stop rule.
