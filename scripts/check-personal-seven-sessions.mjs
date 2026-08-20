@@ -103,6 +103,60 @@ for(const [locale,brief] of Object.entries(capstone)){
   `${locale} capstone must not retain session 7's demonstration tooling`);
 }
 
+assert.match(portal,/\bsession\w*\s*=\s*\[/i,
+ 'Personal portal must expose its integrated sessions as an array');
+assert.match(portal,/aam-personal-sessions/,'Personal progress must use the session storage key');
+assert.match(portal,/\bsessions?\.length\b/i,
+ 'Personal progress must derive its total from the session collection');
+assert.match(portal,/data-personal-progress/,'Personal portal must expose a session progress control');
+assert.match(portal,/data-personal-progress-label/,'Personal portal must expose a session progress label');
+assert.match(portal,/90\s*(?:minutes|דקות|-minute)/i,'Personal portal must label sessions as 90 minutes');
+
+const journal=readFileSync('personal-course/student/en/ai-learning-journal.md','utf8');
+assert.match(journal,/six integrated sessions and the capstone/i,
+ 'English journal home must describe six sessions plus the capstone');
+assert.doesNotMatch(journal,/throughout all 12 lessons|Each lesson has (?:its )?own tab|all 7 integrated sessions/i,
+ 'English journal home must not retain twelve-lesson or seven-session wording');
+const expectedJournalSessionTitles={
+ English:[
+  'Session 1: Decide What to Do Next',
+  'Session 2: Buy With Confidence',
+  'Session 3: Make a Shared Plan Work',
+  'Session 4: From Prompt to Presentation',
+  'Session 5: Make a Space Work Better',
+  'Session 6: Solve a Recurring Problem',
+  'Capstone: One Project, Every Skill',
+ ],
+ Hebrew:[
+  'מפגש 1: להחליט מה הצעד הבא',
+  'מפגש 2: לקנות בביטחון',
+  'מפגש 3: לבנות תוכנית משותפת שעובדת',
+  'מפגש 4: מהנחיה למצגת',
+  'מפגש 5: לשפר מרחב',
+  'מפגש 6: לפתור בעיה חוזרת',
+  'פרויקט סיום: פרויקט אחד, כל המיומנויות',
+ ],
+};
+for(const [locale,source] of Object.entries({
+ English:journal,
+ Hebrew:readFileSync('personal-course/student/he/ai-learning-journal.md','utf8'),
+})){
+ for(const title of expectedJournalSessionTitles[locale])assert.match(source,new RegExp(title.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')),
+  `${locale} journal must use the current tab title: ${title}`);
+}
+assert.doesNotMatch(journal,/^# Session [1-7]: (?:Ask, Summarize, and Decide|Research, Buy, and Monitor|Plan Real Life Together|Build a Personal Tool|Design a Physical Project|Trustworthy Visual Story|Workflow, Portfolio, and Project)/m,
+ 'English journal must not retain legacy bundled-session titles');
+// The capstone replaced session 7's class on 2026-08-20. Its tab logs a
+// subject, five deliverables and the app's boundary — not a workflow and
+// portfolio, and not the Claude Desktop / OpenClaw demonstration tooling.
+const capstoneJournal=journal.match(/<!-- journal-tab: \{"id":"session-07"[^]*$/)?.[0] ?? '';
+for(const term of [/capstone/i,/subject/i,/deliverable/i,/end date/i,/boundary/i,/approval/i,/group/i]){
+ assert.match(capstoneJournal,term,`English capstone journal must include ${term}`);
+}
+for(const term of [/Claude Desktop/i,/OpenClaw/i,/Claude for Chrome/i,/personal workflow/i]){
+ assert.doesNotMatch(capstoneJournal,term,`English capstone journal must not retain session 7 framing: ${term}`);
+}
+
 const sessionTwo={
  English:readFileSync('personal-course/sessions/session-02-research-buy-monitor.md','utf8'),
  Hebrew:readFileSync('personal-course/he/sessions/session-02-research-buy-monitor.md','utf8'),
