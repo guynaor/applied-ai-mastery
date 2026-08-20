@@ -17,9 +17,9 @@ const sessions=[
  {n:1,slug:'ask-summarize-decide',legacy:[1,2,3],briefEn:'personal-course/sessions/session-01-ask-summarize-decide.md',briefHe:'personal-course/he/sessions/session-01-ask-summarize-decide.md',guideEn:'personal-course/instructor/sessions/session-01-guide.md',guideHe:'personal-course/he/instructor/sessions/session-01-guide.md',en:['Decide What to Do Next','Turn a messy, low-risk question into a verified decision and a next step you choose.'],he:['להחליט מה הצעד הבא','להפוך שאלה אישית ולא רגישה להחלטה בדוקה ולצעד הבא שבחרתם.']},
  {n:2,slug:'research-buy-monitor',legacy:[4,5,8],briefEn:'personal-course/sessions/session-02-research-buy-monitor.md',briefHe:'personal-course/he/sessions/session-02-research-buy-monitor.md',guideEn:'personal-course/instructor/sessions/session-02-guide.md',guideHe:'personal-course/he/instructor/sessions/session-02-guide.md',en:['Buy With Confidence','Research a meaningful purchase, check the evidence and terms, then define a safe next step.'],he:['לקנות בביטחון','לחקור רכישה משמעותית, לבדוק ראיות ותנאים, ולהגדיר צעד הבא בטוח.']},
  {n:3,slug:'plan-real-life-together',legacy:[6,7],briefEn:'personal-course/sessions/session-03-plan-real-life-together.md',briefHe:'personal-course/he/sessions/session-03-plan-real-life-together.md',guideEn:'personal-course/instructor/sessions/session-03-guide.md',guideHe:'personal-course/he/instructor/sessions/session-03-guide.md',en:['Make a Shared Plan Work','Create a realistic shared plan with responsibilities, buffers, and a fallback.'],he:['לבנות תוכנית משותפת שעובדת','ליצור תוכנית משותפת ומעשית עם אחריות, מרווחי ביטחון וחלופה.']},
- {n:4,slug:'build-personal-tool',legacy:[9],briefEn:'personal-course/sessions/session-04-build-personal-tool.md',briefHe:'personal-course/he/sessions/session-04-build-personal-tool.md',guideEn:'personal-course/instructor/sessions/session-04-guide.md',guideHe:'personal-course/he/instructor/sessions/session-04-guide.md',en:['Solve a Recurring Problem','Make and test a small, self-contained tool for a recurring everyday friction.'],he:['לפתור בעיה חוזרת','ליצור ולבדוק כלי קטן ועצמאי לבעיה חוזרת בחיי היום־יום.']},
+ {n:4,slug:'trustworthy-visual-story',legacy:[11],briefEn:'personal-course/sessions/session-04-trustworthy-visual-story.md',briefHe:'personal-course/he/sessions/session-04-trustworthy-visual-story.md',guideEn:'personal-course/instructor/sessions/session-04-guide.md',guideHe:'personal-course/he/instructor/sessions/session-04-guide.md',en:['From Prompt to Presentation','Carry one idea through the AI production chain: generate an image, fix it, animate it, generate a second clip from text alone, narrate it, and build the deck.'],he:['מהנחיה למצגת','להעביר רעיון אחד לאורך שרשרת ההפקה: ליצור תמונה, לתקן אותה, להנפיש אותה, ליצור קליפ שני מטקסט בלבד, לקריין אותו ולבנות מצגת.']},
  {n:5,slug:'design-physical-project',legacy:[10],briefEn:'personal-course/sessions/session-05-design-physical-project.md',briefHe:'personal-course/he/sessions/session-05-design-physical-project.md',guideEn:'personal-course/instructor/sessions/session-05-guide.md',guideHe:'personal-course/he/instructor/sessions/session-05-guide.md',en:['Make a Space Work Better','Use real dimensions and constraints to test a practical idea for a space.'],he:['לשפר מרחב','להשתמש במידות ובאילוצים אמיתיים כדי לבדוק רעיון מעשי למרחב.']},
- {n:6,slug:'trustworthy-visual-story',legacy:[11],briefEn:'personal-course/sessions/session-06-trustworthy-visual-story.md',briefHe:'personal-course/he/sessions/session-06-trustworthy-visual-story.md',guideEn:'personal-course/instructor/sessions/session-06-guide.md',guideHe:'personal-course/he/instructor/sessions/session-06-guide.md',en:['From Prompt to Presentation','Carry one idea through the AI production chain: generate an image, fix it, animate it, generate a second clip from text alone, narrate it, and build the deck.'],he:['מהנחיה למצגת','להעביר רעיון אחד לאורך שרשרת ההפקה: ליצור תמונה, לתקן אותה, להנפיש אותה, ליצור קליפ שני מטקסט בלבד, לקריין אותו ולבנות מצגת.']},
+ {n:6,slug:'build-personal-tool',legacy:[9],briefEn:'personal-course/sessions/session-06-build-personal-tool.md',briefHe:'personal-course/he/sessions/session-06-build-personal-tool.md',guideEn:'personal-course/instructor/sessions/session-06-guide.md',guideHe:'personal-course/he/instructor/sessions/session-06-guide.md',en:['Solve a Recurring Problem','Make and test a small, self-contained tool for a recurring everyday friction.'],he:['לפתור בעיה חוזרת','ליצור ולבדוק כלי קטן ועצמאי לבעיה חוזרת בחיי היום־יום.']},
  {n:7,slug:'workflow-portfolio-project',legacy:[12],briefEn:'personal-course/sessions/session-07-workflow-portfolio-project.md',briefHe:'personal-course/he/sessions/session-07-workflow-portfolio-project.md',guideEn:'personal-course/instructor/sessions/session-07-guide.md',guideHe:'personal-course/he/instructor/sessions/session-07-guide.md',en:['Build a Personal System','Launch a human-controlled personal system with evidence, boundaries, and a useful next project.'],he:['לבנות מערכת אישית','להפעיל מערכת אישית בשליטה אנושית עם ראיות, גבולות ופרויקט המשך שימושי.']},
 ];
 
@@ -29,7 +29,8 @@ const ui={
 };
 
 const readJson=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key)||JSON.stringify(fallback));}catch{return fallback;}};
-const legacyToSession={1:1,2:1,3:1,4:2,5:2,8:2,6:3,7:3,9:4,10:5,11:6,12:7};
+const legacyToSession={1:1,2:1,3:1,4:2,5:2,8:2,6:3,7:3,9:6,10:5,11:4,12:7};
+const REORDER_MARKER='reorder2026081904';
 const mergeLevels=(left,right)=>(['','bronze','silver','gold'].indexOf(left)>=['','bronze','silver','gold'].indexOf(right)?left:right);
 function migrateLegacy(){
  if(localStorage.getItem('aam-personal-sessions'))return readJson('aam-personal-sessions',{});
@@ -37,17 +38,39 @@ function migrateLegacy(){
  const journals=new Set(readJson('aam-personal-journals',[]).map(n=>legacyToSession[n]||n));
  const missions={};
  Object.entries(readJson('aam-personal-missions',{})).forEach(([n,level])=>{const session=legacyToSession[n]||Number(n);missions[session]=mergeLevels(missions[session]||'',level);});
- const migrated={completed:[...completed],journals:[...journals],missions};
+ // legacyToSession already maps onto the post-2026-08-19 numbering, so data
+ // arriving this way is born in the new order and must not be swapped again.
+ const migrated={completed:[...completed],journals:[...journals],missions,[REORDER_MARKER]:true};
  localStorage.setItem('aam-personal-sessions',JSON.stringify(migrated));
  return migrated;
 }
-const saved=migrateLegacy();
+// 2026-08-19: the visual session moved to 4 and the app session to 6. Progress
+// is stored as session numbers, so stored data must be swapped to match or a
+// learner's completed app session would read as a completed visual session.
+// The marker is explicit and must stay: without it this swap re-applies on
+// every load, and a learner's history degrades a little each visit.
+const reorderSwap={4:6,6:4};
+function migrateReorder(saved){
+ if(saved&&saved[REORDER_MARKER])return saved;
+ const swap=n=>reorderSwap[n]||Number(n);
+ const missions={};
+ Object.entries(saved.missions||{}).forEach(([n,level])=>{missions[swap(n)]=level;});
+ const migrated={
+  completed:[...new Set((saved.completed||[]).map(swap))],
+  journals:[...new Set((saved.journals||[]).map(swap))],
+  missions,
+  [REORDER_MARKER]:true,
+ };
+ localStorage.setItem('aam-personal-sessions',JSON.stringify(migrated));
+ return migrated;
+}
+const saved=migrateReorder(migrateLegacy());
 const state={language:localStorage.getItem('aam-personal-language')||'en',mode:localStorage.getItem('aam-personal-mode')||'student',completed:new Set(saved.completed||[]),missions:saved.missions||{},journals:new Set(saved.journals||[])};
 const grid=document.querySelector('[data-personal-lesson-grid]');
 const resourceHref=path=>path.toLowerCase().endsWith('.md')?`document.html?src=${encodeURIComponent(path)}`:path;
 const journalUrls={en:'site/assets/downloads/applied-ai-mastery-personal-journal-en.docx',he:'site/assets/downloads/applied-ai-mastery-personal-journal-he.docx'};
 const missionXp={bronze:30,silver:50,gold:80};
-const save=()=>localStorage.setItem('aam-personal-sessions',JSON.stringify({completed:[...state.completed],missions:state.missions,journals:[...state.journals]}));
+const save=()=>localStorage.setItem('aam-personal-sessions',JSON.stringify({completed:[...state.completed],missions:state.missions,journals:[...state.journals],[REORDER_MARKER]:true}));
 function totalXp(){let xp=state.completed.size*20+state.journals.size*20;Object.values(state.missions).forEach(level=>xp+=missionXp[level]||0);return xp;}
 function legacyRoot(lesson){return `personal-course/materials/lesson-${String(lesson.n).padStart(2,'0')}-${lesson.slug}`;}
 function optionalLegacyLinks(lesson,he){

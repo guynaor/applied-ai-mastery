@@ -1,258 +1,216 @@
-# Full session plan — Session 6: From Prompt to Presentation
+# Full session plan — Session 6: Solve a Recurring Problem
 
 **Time:** 90 minutes
-**Learning outcome:** Learners generate an image and repair it, animate their own image and generate a second clip from words alone, write a narration script for the ear and record it, and assemble the same deck with one tool in two output formats — labelling every generated piece and never presenting a convincing clip as a record of something real.
-**Session artifact:** One production set: the generated image, its fixed version, the animated clip, the text-generated clip, the narration, and a deck built two ways — with a visible label on every generated piece.
+**Learning outcome:** Learners build a solution to the same problem twice — a tiny version in chat and a real one in Lovable or Manus — test each against a normal case and an edge case, and can explain when the tiny version is enough.
+**Session artifact:** Two versions (or one plus a description of the other) and a test log: the problem, the permitted actions, the normal case, the edge case, and a sentence on which will still be in use in a month.
 
-**This session runs 90 minutes, not 60.** The extra time is not overrun — it is questions, and that is where the learning happens.
+**This session runs 90 minutes.** The extra time is questions, and they are heaviest here — this is the session where people discover they can build software.
 
-This guide can be taught from directly. The whole chain runs on free accounts — Google and Claude — and learners do not have to publish anything at the end.
+## Send before the session — sign up for one platform
+
+**Send this to learners at least a day ahead.** If sign-up happens in the lesson, you have lost twenty minutes.
+
+There are two options, and the choice is about **what you are building**, not which is better:
+
+| Platform | Suits | Note |
+|---|---|---|
+| [Lovable](https://lovable.dev) | A **web** app — opens in a browser, has an address you can send | Generous free tier, no credit card |
+| [Manus](https://manus.im) | An **installable app with accounts** — a PWA added to the home screen, with a backend and sign-in | Check its current free allowance before the session |
+
+The message to send:
+
+> Before the next session, open a free account on one of two: lovable.dev if you want to build a web app, or manus.im if you want an app you can install on your phone with sign-in. Sign up with Google or an email address, no credit card. If payment details are required just to start, stop and pick the other one. Open one empty project to check it works. If you cannot, that is fine — you will be able to watch and do everything else.
+
+**Learners already met Manus in Session 2**, as a managed agent platform. It is worth naming that: same platform, different job. That is a lesson in itself — the line between "a tool that does something for me" and "a tool that builds something for me" is blurrier than it looks.
+
+**Try both platforms yourself in the week before.** Free tiers change without notice, and that is the one thing that can break this session.
 
 ## Session materials
 
 | Material | What it is for |
 |---|---|
-| [Projection slides](../../instructor/samples/session-06-slides.html) | Eleven slides, in session order. |
-| [Toolkit reference](../../instructor/samples/session-06-toolkit.html) | Free-tier notes by tool, the image-prompt anatomy, and the narration script pattern. Open it while prepping and keep it open during the session. |
-| [Sample asset set](../../instructor/samples/session-06-asset-set.html) | Two examples for the opening, and a fallback: item 4, a generated image passed off as a record, and item 6, a real photograph, edited and captioned with the wrong place and time. |
-| [The answers](../../instructor/samples/session-06-answers.html) | A separate page, so an AI tool reading the asset set does not also receive the answers. **Do not open before you've walked both examples with the class.** |
-| [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | Downloadable Word file with the production plan, the stage log, and the tool verdict table. |
-| [Session 6 brief](../../sessions/session-06-trustworthy-visual-story.md) | What learners see. |
+| [Projection slides](../../instructor/samples/session-06-slides.html) | Ten slides, in session order. |
+| [Test cards](../../instructor/samples/session-06-test-cards.html) | Ready-made edge cases. Remotely, paste the link into the chat. |
+| [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | The definition table, the revision log, and the test table. |
+| [Session 6 brief](../../sessions/session-06-build-personal-tool.md) | What learners see. |
 
-## The recommended way: your own subject, on your screen
+## The recommended way: your own real problem, on your screen
 
-What works best is to **pick one real subject of your own and run the whole six-stage chain live in front of the class, on your own screen.** Three reasons: learners' free accounts run out mid-chain; a real subject produces real questions; and they watch you fix a bad generation in front of them, which teaches more than any explanation would.
+As in earlier sessions — **take a real recurring problem of your own and build the solution live in front of the class.** Here there is an extra reason: these platforms burn through a free quota fairly quickly, and if everyone builds separately some will stall halfway. When the heavy building runs on your account, nobody gets blocked.
 
-Learners fill in the journal tables for **their own subject**. You run the chain; they think.
+Learners build the tiny version themselves — it is cheap — and fill in the journal for their own problem. You run the platform; they propose what to ask for.
 
-**Before every generation**, ask: "What do you expect back?" and "What's missing from this prompt?"
-**When the output returns**, name the first thing that's wrong with it out loud, and fix that one thing in front of them.
-**After each stage**, give two minutes for the journal. A session where only you generated something is a demonstration, not a lesson.
+### What to ask before every request
 
-Item 4 and item 6 stay as backup for the opening discussion only — for a class with no network, or a facilitator who wants a guaranteed script for those six minutes. They are never a substitute subject for the six-stage demo: if you have no subject of your own, pick anything simple on the spot and generate it from words.
+- "What do you think it will build?" before it builds.
+- "What is missing from my request?" They will find it.
+- "What am I not willing to let this tool store?"
+
+### What to highlight when it comes back
+
+- **Open it immediately and click something.** Do not settle for what the tool shows you on screen.
+- **Hunt for what it added that you did not ask for** — both platforms almost always add screens and features. That is convenient and dangerous.
+- **Fix one thing in front of them** and re-run.
 
 ## Start slow things in the background
 
-Video generation is slow, and stage 4's clip has to be ready by the time the class reaches the video block. **Send the stage-4 request the moment stage 3 begins** — while learners are animating their own image, start the text-only clip generating in the background on your machine — and keep teaching. Come back to it at minute 46.
+A build on one of these platforms takes minutes, not seconds. **Send the request, then talk** — do not stand in front of a progress bar. In this session: at minute 45, send the platform request and move on to discussing the tiny version's test results while it builds.
 
-## Before learners arrive
-
-### Prepare the room and tools
-
-1. Open the [toolkit reference](../../instructor/samples/session-06-toolkit.html) and correct anything that's moved since it was written — free-tier terms change faster than this guide does.
-2. Open the [sample asset set](../../instructor/samples/session-06-asset-set.html). The answers are on a [separate page](../../instructor/samples/session-06-answers.html) — do not open it early, and it is separate so that an AI tool reading the asset set does not also receive the answers.
-3. Open the [slides](../../instructor/samples/session-06-slides.html), and sign into Google and Claude in the facilitator account. Sign into ChatGPT too if you plan to run the stage-1 comparison.
-4. **Run the demo on a desktop, not a laptop.** Video generation is render-heavy, and a session built around it drags badly on underpowered hardware.
-
-### What learners need
-
-- Two free accounts, set up before the day: Google and Claude — one fewer than this session used to need. ChatGPT is optional, a third.
-- One real subject they want to carry through the chain — a place, a creature, an object, a small scene.
-- A device with a browser. That is enough for the whole session.
-
-### Two facilitator decisions before starting
-
-**Your own subject, or the sample items.** The chain runs either way, but a subject you're actually building live produces better questions than a prepared one. If you fall back to the sample items, open them only for the two-item opening — don't run the whole chain on them.
-
-**When to open the answers page.** Only after you've walked both opening examples with the class. Open it early and you've lost the discussion.
+The same rule applies to anything slow: a detailed spreadsheet, a presentation, or an application. Send, keep going, come back.
 
 ## Session map
 
-| Time | What the facilitator does | What learners produce or identify |
+| Time | What happens | What learners produce |
 |---:|---|---|
-| 0–10 | **Homework discussion** | What worked and what broke for other people |
-| 10–16 | Three rules, and two examples that earn them | The gap between a generated image passed off as a record, and a real, edited photo mis-captioned to the wrong place and time |
-| 16–27 | Generate | A first image, from a prompt that names all five things a prompt has to say |
-| 27–38 | Fix | The same image, one region repaired, labelled |
-| 38–46 | Move | Their own image, animated |
-| 46–56 | Video, then the safety callback | A second clip from text alone, and the honest answer about publishing either one |
-| 56–65 | Narrate | A script written for the ear, recorded |
-| 65–85 | Assemble, two routes | The same deck, built by Claude as PPTX and as self-contained HTML |
-| 85–90 | Exit check, reflection, and the homework | A production set ready to review, or a list of what's missing |
+| 0–10 | **Homework discussion** | What broke for other people |
+| 10–20 | Shrink it: one user, at most three actions | A definition you can build from |
+| 20–35 | Tiny version in chat, and downloading it to run locally | A tool that runs on their own machine |
+| 35–45 | Normal case, then an edge-case card | A test log with expected against actual |
+| 45–70 | A real application in Lovable or Manus (sent at minute 45) | The difference between a prototype and an application |
+| 70–80 | Test the application, and decide what is enough | What is stored where, and who can open it |
+| 80–90 | Control, exit check, and homework | A reasoned choice between the two |
 
 ## 0–10 minutes — Homework discussion
 
-**Start here in every session from the second onwards.** It works well, and not because it is a check — because a learner who hears what broke for someone else learns faster than from a lesson.
+Three questions, in this order: **Who managed it? Who did it not work for, and where did it get stuck? What surprised you?**
 
-Three questions, in this order:
+The second is the important one. If nobody answers, tell them about something that got stuck for you.
 
-1. **"Who managed to do something with what we talked about?"** Two or three tell it.
-2. **"Who did it not work for, and where did it get stuck?"** This is the important one. If nobody answers, tell them about something that got stuck for you.
-3. **"What surprised you?"** The best insights arrive here.
+In this session it is also worth asking: **"Who managed to open an account, on which platform, and who got stuck?"** That tells you immediately who to pair up.
 
-Note two things that came up, and return to them later in the session by the name of whoever raised them.
+## 10–20 minutes — Shrink it
 
-## 10–16 minutes — Three rules, and two examples that earn them
-
-Show [slide 1](../../instructor/samples/session-06-slides.html): the three rules.
+Show [slide 2](../../instructor/samples/session-06-slides.html). Each learner fills in the journal: who the user is, what the problem is, at most three actions, what is forbidden.
 
 ### What to say
 
-> "Six stages from here. At every one of them, ask these three questions again — that repetition is the safety lesson, not a slide you see once and forget."
+> "Every fourth action you add costs you a test you will not have time to run. And that is doubly true today, because we are building the solution twice."
 
-Show [slide 2](../../instructor/samples/session-06-slides.html): one subject, six stages, one artifact — the map of the chain they're about to run.
+## 20–35 minutes — The tiny version
 
-Open the [sample asset set](../../instructor/samples/session-06-asset-set.html) to **item 4**: a beautiful, generated garden image, captioned "this is how the garden looks now." That's a factual claim about a real place, supported by an image that isn't a record of it.
+Show the request on [slide 3](../../instructor/samples/session-06-slides.html) and run it in Claude Artifacts. **Here learners do build for themselves** — it is fast and cheap on quota.
 
-Then **item 6**: a real photograph — genuinely taken, not generated — but edited (the saturation raised, the background cropped), from a different garden, last July, captioned "this is what we grew."
+### Getting it out of the tool
 
-### What to say
+The artifact runs inside the preview pane, but to actually use it you need it as a file. Show this:
 
-> "Notice the gap. Item 4 invented every pixel. Item 6 invented none of them — it's a real photo, edited, from the wrong garden and the wrong month. Nothing in it is fake, and that's exactly what makes it harder to catch: a real photo can be edited, mis-placed, and mis-captioned, all at once, with no invented pixel to give it away."
+1. Download the artifact, or copy the code into a file called `tool.html`.
+2. Open it in a browser by double-clicking. It should run with no internet.
+3. **If something is missing or broken** — usually it is an external file that did not come down with it.
 
-Don't resolve which is worse; hold both against rule three and move on. Slide 8 brings the class back to this exact question in about half an hour, on output they made themselves.
+The prompt to fix it:
 
-## 16–27 minutes — Generate
+> The file runs locally but not everything works. Change it so everything is in one file — no link to an external library, no font from the internet, no remote image. If something external is needed, replace it with something simple and local.
 
-Show [slide 3](../../instructor/samples/session-06-slides.html) and [slide 4](../../instructor/samples/session-06-slides.html).
+### The moment that matters
 
-Learners write a prompt that names five things: subject, composition, light, framing, and what to exclude. Full detail, including the weak/strong prompt pair, is on the [toolkit page](../../instructor/samples/session-06-toolkit.html).
+Show [slide 4](../../instructor/samples/session-06-slides.html) and the three questions about the code: where the data is stored, what happens with unexpected input, and whether anything leaves for the internet. Search the code for `fetch`, `http`, and `localStorage`.
 
-Run it in Gemini — that alone completes this stage in full. If a learner also has ChatGPT, they run the identical prompt there too and compare the two results. The comparison is the stage's real teaching point, not either tool — a Gemini-only learner isn't missing anything assessed.
+## 35–45 minutes — Testing
 
-### If the output is weak
+Show [slide 5](../../instructor/samples/session-06-slides.html). The **normal case** first, and only when it passes, a [test card](../../instructor/samples/session-06-test-cards.html) each.
 
-- **It's generic.** Read the five-part list back against their prompt — usually one part was never said.
-- **It added something they didn't ask for.** Point at it. The model filled a gap they left open; that's the lesson, not a bug.
-- **They're stuck comparing Gemini and ChatGPT and can't decide which is "better."** They're not supposed to decide — they're supposed to notice what each one did with the same words.
-
-## 27–38 minutes — Fix
-
-Show [slide 5](../../instructor/samples/session-06-slides.html).
+**At exactly minute 45, send the platform request** and let it build while you carry on discussing the results.
 
 ### What to say
 
-> "Same tool as stage 1. Aim the edit at the patch that failed, not at the picture again from nothing."
+> "A card that broke the tool is a test that succeeded. We are looking for the limit, because without it you will not know when to stop trusting it."
 
-Same tool as stage 1. Learners edit the specific region that's wrong — they don't throw the prompt away and regenerate from nothing. Re-rolling destroys whatever already worked. Once it's fixed, they label it before moving on — that label rides with this image for the rest of the chain.
+## 45–70 minutes — The real application
 
-## 38–46 minutes — Move
+The request you sent at minute 45 is under way. While it runs, ask: "What will be different between this and what we already built?"
 
-Show [slide 6](../../instructor/samples/session-06-slides.html).
+Demonstrate whichever platform most of the class signed up for. If the group is split, demonstrate one and ask someone who chose the other to report at the end on what came out differently. That comparison is worth more than a double demonstration.
 
-Learners upload the image they built and fixed into Gemini, and add a short prompt describing only the motion. The subject stays theirs; the prompt only tells it how to move.
+### The request — the same one on either platform
 
-**This is where you send the stage-4 background generation** (see "Start slow things in the background," above): kick it off now, keep teaching stage 3, and come back to it at minute 46.
+> Build an application for splitting costs between three flatmates. One screen to add an expense — who paid, how much, what for — and one screen showing how much each person owes. The data should persist between visits. No user login, no real payments, and do not store bank details. Keep it as simple as possible.
 
-## 46–56 minutes — Video, then the safety callback
+**In Manus**, add at the end: "Build this as an installable PWA with user accounts, so each flatmate signs in and they all see the same shared data. It should work well on a phone screen." That changes the result substantially — phone-sized layout, a sign-in screen, and data on a server rather than in the browser.
 
-Show [slide 7](../../instructor/samples/session-06-slides.html).
+**Why a PWA and not a real phone app.** Putting a native app on an iPhone needs an Apple developer account, signing, and review — none of which belongs in a 90-minute session. A PWA sidesteps all of it: it opens in the browser, and on a phone you add it to the home screen where it behaves like an app. On iPhone that is Safari, then Share, then **Add to Home Screen**. On Android, Chrome offers **Install app**. Show this on your own phone if you can — it is the moment the thing stops feeling like a web page.
 
-Same tool, this time a text prompt with nothing else behind it — nothing of the learner's survives into this clip. Watch for where it breaks: text, hands, continuity, physics. Send the job, then keep talking — it isn't instant.
+### What is different here, and why it matters
 
-Then show [slide 8](../../instructor/samples/session-06-slides.html), which closes this block on the class's own output. Put a learner's stage-3 clip and stage-4 clip side by side. Both are generated — nothing in this chain was shot with a camera. The real difference is how much they directed: stage 3 animates an image they built and fixed; stage 4 came from words alone.
+| | The tiny version in chat | Lovable | Manus |
+|---|---|---|---|
+| What you get | One file on your machine | A web app with an address | An installable PWA with sign-in |
+| The data | Disappears on refresh | Persists | Persists on a server, per account |
+| Who can see it | Only you | Anyone with the link | Only people you invite, once signed in |
+| Getting it on a phone | Not really | Bookmark the link | Add to Home Screen, behaves like an app |
+| What you understand | Every line | Some | Less — there is now a backend |
+| Added unasked | Nothing | A lot | A lot, including a whole sign-in flow |
 
-Ask: "If you captioned either one 'this is this place,' right now — would that be true?"
+**That last row is the heart of it.** Both platforms almost always add screens and features. Show it: "I asked for two screens. How many are here?"
 
-### What to say
+### One change
 
-> "Neither is a record of that place — so no. A label doesn't make it true; it stops it from deceiving. That's rule three from slide 1. Say so out loud before anyone asks; that's rule one, applied to something you made ten minutes ago."
+Ask for one change — say, "add a button to reset the month". This is where the real difference shows: in chat you get a new file; on a platform it modifies an existing application and sometimes breaks something else.
 
-If someone pushes on which clip is "worse," don't resolve it — that's exactly the discussion this slide exists to run.
+### If the platform fails or the quota runs out
 
-## 56–65 minutes — Narrate
+It happens. Say so out loud, carry on with the tiny version, and ask learners to record in the journal what **would** have been different. The comparison is the learning, not the application.
 
-Show [slide 9](../../instructor/samples/session-06-slides.html).
+## 70–80 minutes — Test the application and decide
 
-Learners write a short script that narrates the piece they've built — their subject, the image, and the two clips — for the ear, not the eye: short sentences, one idea per breath, numbers spoken rather than written. Full pattern on the [toolkit page](../../instructor/samples/session-06-toolkit.html).
+Run the same test cards against the application. Empty field, zero, text where a number goes.
 
-They record it in Google Cloud's speech studio: [https://console.cloud.google.com/agent-platform/studio/media/speech](https://console.cloud.google.com/agent-platform/studio/media/speech). **Put that link in the chat — do not just say "Google's speech tool".** It lives in the Cloud console, not at aistudio.google.com, and the two are easy to confuse and not reachable from each other. Confirmed working in the first delivery.
+Then the question that closes the session: **"Which of the two will you actually use?"**
 
-### If the output is weak
+For most people the answer is the tiny version, and that is a correct answer. A real application is only worth more if you use it.
 
-- **A name comes out wrong.** A second take usually fixes it faster than fighting with the first one.
-- **The script sounds fine on the page and wrong out loud.** Read it aloud yourself before recording — a sentence that needs a comma to survive needs to be split instead.
+Show [slide 8](../../instructor/samples/session-06-slides.html): where it is stored, who opens it, how it is cleared, when to stop.
 
-## 65–85 minutes — Assemble, two routes
+**Manus raises a question the others do not.** Once there is sign-in and a backend, there are real accounts holding real data on somebody else's server. Ask the group: whose accounts are those? What happens to the data if you stop using the platform, or stop paying? Can you get it out? Nobody has to answer perfectly — the point is that a tool which persists other people's data has obligations a single HTML file never had.
 
-Show [slide 10](../../instructor/samples/session-06-slides.html).
+## 80–90 minutes — Exit check and homework
 
-### What to say
+[Slide 10](../../instructor/samples/session-06-slides.html):
 
-> "The comparison is the lesson, not the tool — it's the same tool both times. Notice what each format cost you, and what it gave back."
-
-Learners build the same short deck twice with Claude: once as a PPTX file, once as a single self-contained HTML file. Same slides, same script, same images — only the output format changes.
-
-Holding the tool constant and varying only the output format is a sharper comparison than varying the tool would have been — everything else about the task is controlled, so what's left standing is the real difference: what each format costs and gives back.
-
-### Expected intermediate output
-
-Two short decks that say the same thing and open differently: the PPTX opens in PowerPoint, Keynote, or Google Slides, and anyone can edit its slides there; the HTML opens in any browser with nothing installed, is trivial to share as a link or attachment, and is readable as plain text. Neither is "the" deck — the point is that they now have both, and can name what each format cost.
-
-### Checkpoint: before moving to the exit check
-
-Ask each learner, out loud, one sentence each: "Which format would you send someone else, and why?" A real answer names a trade-off (needs software to open versus opens anywhere, easy to restyle versus easy to share and read as text) — not just a preference.
-
-### If the output is weak
-
-- **The PPTX looks plain.** That's expected, not a failure — it's an editable starting point, not a finished polish job. Point at what it buys them: anyone can open and restyle it.
-- **The HTML deck drifted from the script.** Point them back to the narration script from stage 5 — the deck should say what the script says, not reinvent it.
-- **A learner only has time for one route.** Build the PPTX — it's the format an institution or colleague expects. If time is short, show them the HTML rather than building it.
-
-### If you finish early
-
-This block was sized for two tools; producing a second export is a follow-up prompt, not a rebuild, so it may now run short — that is a guess, untested at this new shape, so watch the clock rather than assume it. If minutes are left over, have a learner open their PPTX in Google Slides and their HTML in a second browser tab side by side, and ask what changed when they switched.
-
-## 85–90 minutes — Exit check, reflection, and the homework
-
-Show [slide 11](../../instructor/samples/session-06-slides.html):
-
-> My subject was **[what]**. It went through **[how many]** of the six stages. The stage I would cut if I only had an hour is **[which]**. The clip I would not publish about a real place is **[which]**, because **[why]**.
-
-Reflection question: "Which stage surprised you — because the tool did better, or worse, than you expected?"
+> My tool does **[one action]**. It breaks when **[the edge case]**. I will actually use **[which version]** because **[why]**.
 
 ### The homework
 
-"Take something you actually care about — a hobby, a place you know well, a project, anything you would want to show someone — and run it through the whole chain on your own. Generate the images, fix the one that comes back wrong, animate it, generate a second clip from words alone, write and record the narration, and build the deck both ways. Then send it to the class, by email or on WhatsApp. Generate every image — do not start from a photo you already have. And label everything that was generated, exactly the way you did today."
-
-**Set a date when you give it.** With no next class to anchor it, an open-ended task drifts and quietly becomes nothing.
-
-**Say that a partial run counts.** This guide's own reason for demonstrating live is that free accounts run out mid-chain, and that will happen to some of them alone at home too. Tell them to send what they have and name the stage they stopped at — the exit slide already accepts "how many of the six stages", so the homework should too.
-
-This is the first time they run the chain without you in the room, so the questions arrive as messages rather than raised hands. Expect the most common one to be where the speech tool lives — keep the link somewhere you can paste it quickly.
-
-Two things worth saying out loud: the labelling rule still applies when nobody is watching, and a piece nobody sees is not finished. Sending it is part of the task, not an optional extra.
+"Before next session, genuinely use one of the versions, at least twice. **I will ask at the start what did not work** — especially if you stopped using it, and why."
 
 ### Quick assessment rubric
 
 | Evidence | Not yet | Ready |
 |---|---|---|
-| Labelling | "It's just the output" | Every generated piece is visibly labelled, in the caption itself |
-| The safety callback | "I'd probably post the better one" | Neither clip is presented as a record without a label |
-| Consent | "Nobody's in it" taken as enough | A real person's likeness only with consent, a child's only with a parent's |
-| The two routes | Only one format exists | Both the PPTX and the HTML exist, and the learner can say what each format cost and gave back |
+| The definition | "A tool to help me get organised" | One user, one problem, at most three actions |
+| Testing | "I tried it, it works" | Expected against actual, both cases, both versions |
+| Understanding the difference | "The platform is better" | Can say what is stored where, and what was added unasked |
+| The decision | "I'll use both" | Picked one, and can explain why |
 
 ## Equivalent tool routes
 
-**Gemini alone** completes stages 1 through 5 in full. Nothing assessed depends on a second tool.
-**ChatGPT, at stages 1–2 only:** an optional second opinion for the comparison — never required, and never used past stage 2.
-**Claude, at stage 6, two output formats:** not a choice between them — both, so the comparison itself is the exercise.
-**Sora:** a facilitator demo only, if you want to show what a paid tool produces. Never a learner task.
-**Any other free video or image tool a learner already has:** check the [toolkit page](../../instructor/samples/session-06-toolkit.html)'s two traps before you let anyone route their final piece through it.
+**Claude Artifacts (default for the tiny version):** Fast, runs immediately, cheap on quota.
+**ChatGPT / Gemini:** Ask for one self-contained HTML file and download it.
+**Lovable:** For a web application. Free tier, no credit card.
+**Manus:** For an installable PWA with sign-in and a backend. Check the current free allowance first.
+**Without either:** Watch the demonstration and fill in the comparison table. The learning is fully preserved.
+**Paper:** Sketch the screens and run the test cards against them.
 
 ## Troubleshoot without losing the lesson
 
 | Situation | Facilitator response |
 |---|---|
-| Someone used Runway and ran out mid-session | 125 lifetime credits, not monthly. Move them to Gemini and continue |
-| Their export has a Kling watermark | Expected on that free tier. Note it, and use it as a labelling example |
-| ChatGPT hit its image cap | Drop to Gemini. The comparison is lost for them, not the stage |
-| A video generation has not returned | Move to the next stage and come back. Never wait on screen |
-| Someone wants to publish a generated clip as a record of a real place | That is slide 8. Do not resolve it — run the discussion |
-| A learner has no subject of their own | Have them describe anything simple in the room — a mug, a pet, an object — and generate it from words. Never hand them an existing image to animate; item 6 is a real photo and can't enter the chain |
-| Time runs out | Build the PPTX, not both — show the HTML rather than having them build it |
-| The PPTX is missing an image or clip on a slide | Claude dropped the asset reference during generation — re-generate that one slide with the asset re-attached, don't restart the whole deck |
-| The HTML file opens as raw text or code instead of a slide deck | The OS handed it to a text editor, not a browser. Drag the file into an open browser window, or right-click and choose "open with" the browser |
-| Someone cannot find the speech tool | They are almost certainly at aistudio.google.com. Paste the link: https://console.cloud.google.com/agent-platform/studio/media/speech |
-| The speech studio won't generate, refuses, or drops the voice | Read the script aloud yourself as a stand-in narration and move on; fix the audio after the session |
+| A learner could not open an account | Pair them with someone who did, or they watch. No learning gap. |
+| Half the class on Lovable, half on Manus | Demonstrate one, and ask the other half to report what came out differently. |
+| The platform's quota runs out midway | Which is why the demonstration runs on your account. Carry on with the comparison. |
+| The platform built something enormous | Excellent — that is exactly what we wanted to show. Count how many screens nobody asked for. |
+| The local file will not run | The prompt in the download section. |
+| Someone wants to enter real people's data | Invented names, invented amounts. Always. |
+| Questions overrun | That is why there are 90 minutes. If you must cut, shorten the platform stage, not the testing. |
+| Time runs out | Drop the change on the platform. Not the comparison, and not the decision. |
 
 ## Differentiation
 
-- **No accounts set up yet:** Pair with someone who has them. Watching a live fix is most of the lesson anyway.
-- **For learners who need structure:** Give them a narrow, concrete subject to describe — "a park bench in the rain" — and the toolkit page's prompt-anatomy list to build the prompt from.
-- **For learners ready to extend:** After stage 4 breaks, have them predict where a second attempt will break before they run it.
-- **Accessibility:** If someone in the room uses a screen reader or dictation regularly, ask them to lead stage 5 — "write for the ear, not the eye" is closest to skills they already use daily.
+- **Remote:** One shared screen for the platform, independent building for the tiny version.
+- **No device:** A paper prototype and the test cards.
+- **For learners who need structure:** The cost-splitting example from the journal, changing only the names.
+- **For learners ready to extend:** Install the PWA on an actual phone and try it where you would really use it — in the kitchen, at the shop. A tool that is awkward one-handed is a tool nobody uses.
 
 ## After the session
 
-Note which stage broke down for the most learners — an account not set up in advance, a tool cap hit mid-chain, or a video generation that never returned. If a learner's own subject produced an especially sharp example for the safety callback, ask their permission to keep it as next session's opening example.
+Note who chose the tiny version, who chose Lovable, and who chose Manus, and why. Next session, ask who is still using theirs — that is the real answer, and it is almost always a surprise. If either platform has changed its interface or free tier, update the sign-up message above before you send it again.

@@ -1,4 +1,4 @@
-# Session 6 — From Prompt to Presentation
+# Session 4 — From Prompt to Presentation
 
 **Time:** 90 minutes  
 **Outcome:** A short generated visual story — one image, two clips, a narration, and a deck built two ways — with every generated piece labelled and nothing mistaken for a photograph.
@@ -26,4 +26,4 @@ One production set: the generated image, the fixed version, the animated clip, t
 
 ## Optional resources
 
-Every table for this session — the production plan, the stage log, and the tool verdict — is in the [learning journal](../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx). The full [toolkit page](../instructor/samples/session-06-toolkit.html) has the free-tier notes, the prompt anatomy, and the narration script pattern for every stage. ChatGPT stays optional throughout — a second opinion, not a requirement — and Sora is something you will watch a facilitator demonstrate, not a tool you need to run yourself.
+Every table for this session — the production plan, the stage log, and the tool verdict — is in the [learning journal](../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx). The full [toolkit page](../instructor/samples/session-04-toolkit.html) has the free-tier notes, the prompt anatomy, and the narration script pattern for every stage. ChatGPT stays optional throughout — a second opinion, not a requirement — and Sora is something you will watch a facilitator demonstrate, not a tool you need to run yourself.

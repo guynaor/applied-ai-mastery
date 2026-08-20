@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Projection slides — Session 4: Solve a Recurring Problem</title>
+    <title>Projection slides — Session 4: From Prompt to Presentation</title>
     <style>
       :root{--primary:#4E356F;--soft:#F0EAFA;--text:#17242D;--line:#d6dae0;--muted:#55606E;--warn:#b3413f}
       *{box-sizing:border-box}
@@ -24,110 +24,133 @@
       .total td{font-weight:700;background:var(--soft)}
       .say{border:2px dashed var(--primary);border-radius:6px;padding:1.2rem 1.5rem;font-style:italic}
       ol,ul{padding-inline-start:1.4rem}
+      .pair{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:1rem}
+      .pair .prompt{flex:1 1 16rem}
       @media print{.slide{min-height:auto;padding:1.5rem;border:0}}
     </style>
   </head>
   <body>
 
     <section class="slide">
-      <p class="num">Slide 1 — Opening, minutes 10–20</p>
-      <h1>What do you redo on a scrap of paper every month, and always lose?</h1>
-      <div class="say big">Today we build a solution twice: a tiny version in chat, and a real application. The comparison between them is the lesson.</div>
-    </section>
-    <section class="slide">
-      <p class="num">Slide 2 — Shrink it</p>
-      <h1>One user, one problem, at most three actions</h1>
+      <p class="num">Slide 1 — The three rules, minutes 10–16</p>
+      <h1>Three rules, stated once, applied all session</h1>
       <div class="box big">
-        <p><strong>User and problem:</strong> I split costs with two flatmates every month.</p>
-        <p><strong>Three actions:</strong> add an expense &nbsp;•&nbsp; show balances &nbsp;•&nbsp; reset.</p>
-        <p><strong>Forbidden:</strong> storing bank details, or moving real money.</p>
+        <p><strong>1. Label it.</strong> Anything generated gets said out loud — in the caption, not buried in a settings screen.</p>
+        <p><strong>2. No real people without consent.</strong> Not even from a public place.</p>
+        <p><strong>3. Never a record.</strong> Generated work does not stand in for something that actually happened.</p>
       </div>
-      <div class="say">Every fourth action costs you a test you will not run — doubly so today, because we build twice.</div>
+      <div class="say">Six stages from here. At every one of them, ask these three questions again — that repetition is the safety lesson, not a slide you see once and forget.</div>
     </section>
     <section class="slide">
-      <p class="num">Slide 3 — The tiny version, minutes 20–35</p>
-      <h1>The cheap, fast one first</h1>
-      <div class="prompt">Build one self-contained web page for splitting costs between three flatmates. Three actions only: add an expense (who paid, how much, what for), show how much each person owes, and reset. Plain labels, a clear reset button, everything in one file. No login and nothing sent anywhere. If a field is empty or not a number, show a message instead of calculating.</div>
-    </section>
-    <section class="slide">
-      <p class="num">Slide 4 — Getting it out of the tool</p>
-      <h1>An artifact that only runs inside the tool is not yours yet</h1>
-      <ol class="big">
-        <li>Download the file, or copy the code into <code>tool.html</code>.</li>
-        <li>Open it in a browser by double-clicking. It should run with no internet.</li>
-        <li>If something breaks — usually an external file that did not come down with it.</li>
-      </ol>
-      <div class="warn">“Change it so everything is in one file — no external library, no font from the internet, no remote image.”</div>
-    </section>
-    <section class="slide">
-      <p class="num">Slide 5 — Testing, minutes 35–45</p>
-      <h1>The normal case first, and only then a card</h1>
+      <p class="num">Slide 2 — The chain</p>
+      <h1>One subject, six stages, one artifact</h1>
       <table>
-        <thead><tr><th>The test</th><th>Expected</th><th>Actually happened</th><th>The fix</th></tr></thead>
+        <thead><tr><th>#</th><th>Stage</th><th>Tool</th></tr></thead>
         <tbody>
-          <tr><td>Two people, one expense of 150</td><td>“Dana owes Yossi 75”</td><td>Showed 150 — did not divide</td><td>Fixed it and retested</td></tr>
+          <tr><td>1</td><td>Generate — an image from a prompt</td><td>Gemini (ChatGPT optional)</td></tr>
+          <tr><td>2</td><td>Fix — edit the weak region</td><td>same tool as stage 1</td></tr>
+          <tr><td>3</td><td>Move — animate your own image</td><td>Gemini</td></tr>
+          <tr><td>4</td><td>Video — generate from a text prompt alone</td><td>Gemini</td></tr>
+          <tr><td>5</td><td>Narrate — write the script, then voice it</td><td>Cloud speech studio</td></tr>
+          <tr class="total"><td>6</td><td>Assemble — build the deck, two ways</td><td>Claude — PPTX and HTML</td></tr>
         </tbody>
       </table>
-      <div class="say">A card that broke the tool is a test that succeeded.</div>
+      <div class="say">One subject travels the whole way. Nothing gets swapped out partway through — stage six presents the same thing stage one generated.</div>
     </section>
     <section class="slide">
-      <p class="num">Slide 6 — The real application, minutes 45–70</p>
-      <h1>Same problem, a real platform</h1>
-      <table>
-        <thead><tr><th>Platform</th><th>Suits</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Lovable</strong></td><td>A web app — opens in a browser, has an address you can send</td></tr>
-          <tr class="total"><td><strong>Manus</strong></td><td>An installable PWA — with sign-in and a backend</td></tr>
-        </tbody>
-      </table>
-      <div class="say">In Manus, add: “Build this as an installable PWA with user accounts, so everyone sees the same shared data.”</div>
-      <div class="warn">Why not a real iPhone app? That needs a developer account, signing, and review. A PWA sidesteps all of it: Safari → Share → Add to Home Screen.</div>
-    </section>
-    <section class="slide">
-      <p class="num">Slide 7 — The comparison is the lesson</p>
-      <h1>Three routes to the same problem</h1>
-      <table>
-        <thead><tr><th></th><th>Chat</th><th>Lovable</th><th>Manus</th></tr></thead>
-        <tbody>
-          <tr><td>What you get</td><td>One file</td><td>A web app</td><td>A PWA with sign-in</td></tr>
-          <tr><td>The data</td><td>Gone on refresh</td><td>Persists</td><td>On a server, per account</td></tr>
-          <tr><td>Who can see it</td><td>Only you</td><td>Anyone with the link</td><td>Only people you invite</td></tr>
-          <tr><td>Getting it on a phone</td><td>Not really</td><td>A bookmark</td><td>Add to Home Screen</td></tr>
-          <tr class="total"><td>Added unasked</td><td>Nothing</td><td>A lot</td><td>A lot, including sign-in</td></tr>
-        </tbody>
-      </table>
-      <div class="say">“I asked for two screens. How many are here?”</div>
-    </section>
-    <section class="slide">
-      <p class="num">Slide 8 — Control, minutes 70–80</p>
-      <h1>Four decisions before you send it to anyone</h1>
-      <table>
-        <thead><tr><th>The question</th><th>Tiny version</th><th>Platform</th></tr></thead>
-        <tbody>
-          <tr><td>Where is it stored?</td><td>A file on my machine</td><td>Somebody else's server</td></tr>
-          <tr><td>Who can open it?</td><td>Whoever has the file</td><td>Whoever has the link</td></tr>
-          <tr><td>How is it cleared?</td><td>Delete the file</td><td>Not always what looks like deletion</td></tr>
-          <tr><td>Whose accounts are they?</td><td>There are none</td><td>Yours — and everyone you invited</td></tr>
-          <tr class="total"><td>And if you stop paying?</td><td>The file stays with you</td><td>Good question. Check before inviting people</td></tr>
-        </tbody>
-      </table>
-    </section>
-    <section class="slide">
-      <p class="num">Slide 9 — What we are not building today</p>
-      <h1>The limit</h1>
+      <p class="num">Slide 3 — Prompt anatomy, minutes 16–27</p>
+      <h1>Five things a prompt has to say</h1>
       <ul class="big">
-        <li>No passwords and no account details</li>
-        <li>No other people's data without their knowing</li>
-        <li>No decisions with financial or medical weight</li>
+        <li><strong>Subject</strong> — what is actually in the frame</li>
+        <li><strong>Composition</strong> — the angle and distance it's seen from</li>
+        <li><strong>Light</strong> — the light source, direction, and time of day</li>
+        <li><strong>Framing</strong> — where the empty space sits, for a title later</li>
+        <li><strong>Exclusions</strong> — what must not appear</li>
       </ul>
-      <div class="say">And we met Manus back in Session 2, in a completely different role. Same platform — once an agent, once an app builder.</div>
+      <div class="pair">
+        <div class="prompt"><strong>Weak</strong><br>“A nice photo of a garden.”</div>
+        <div class="prompt"><strong>Strong</strong><br>“A community garden bed in full bloom, seen at eye level from the path. Golden late-afternoon light from the left casting long shadows. Leave the upper-left quarter empty for a title. No people, no signage, no litter.”</div>
+      </div>
+      <p>Same intent, five specifics added. Leave one out and the model guesses — and the guess is rarely the one you wanted.</p>
     </section>
     <section class="slide">
-      <p class="num">Slide 10 — Exit check, minutes 80–90</p>
+      <p class="num">Slide 4 — Same prompt, two tools, minutes 16–27</p>
+      <h1>Same prompt, two tools: Gemini and ChatGPT</h1>
+      <p>Gemini alone completes this stage in full. This table is for a room that also has ChatGPT — the comparison is what the second tool buys you, not a requirement.</p>
+      <table>
+        <thead><tr><th>What to compare</th><th>The question</th></tr></thead>
+        <tbody>
+          <tr><td>Exclusions</td><td>Which one actually left out what you told it to leave out?</td></tr>
+          <tr><td>Invention</td><td>Which one added a detail you never asked for?</td></tr>
+          <tr class="total"><td>Match</td><td>Which is closer to what you actually asked for?</td></tr>
+        </tbody>
+      </table>
+      <div class="say">If you have both, run the same prompt through each, side by side. Full detail: <a href="session-04-toolkit.html">toolkit reference</a>.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 5 — Fix the region, minutes 27–38</p>
+      <h1>Fix the region, do not re-roll</h1>
+      <div class="warn">Re-rolling the whole prompt destroys whatever already worked, along with whatever was wrong.</div>
+      <p class="big">One region is off — a hand, a sign, a shadow. Edit only that region. Everything else stays exactly as it was.</p>
+      <div class="say">Same tool as stage 1. Aim the edit at the patch that failed, not at the picture again from nothing.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 6 — Animate your own image, minutes 38–46</p>
+      <h1>The prompt steers the motion. It does not invent the subject.</h1>
+      <p class="big">Upload the image from stages 1 and 2. Add a short prompt describing what moves, and how.</p>
+      <div class="prompt">“Leaves sway gently in the light breeze. Camera holds still. Nothing else in frame changes.”</div>
+      <div class="say">This is still your image. The model is moving it, not replacing it.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 7 — Generate from text alone, minutes 46–56</p>
+      <h1>Text, hands, continuity, physics — where video generation still breaks</h1>
+      <ul class="big">
+        <li><strong>Text</strong> — signage and labels come out wrong more often than right</li>
+        <li><strong>Hands</strong> — count the fingers before you trust the frame</li>
+        <li><strong>Continuity</strong> — what's true in frame one may not hold by frame four</li>
+        <li><strong>Physics</strong> — weight, water, and shadows drift</li>
+      </ul>
+      <div class="say">Shoot short. A four-second clip that holds together beats a fifteen-second clip that falls apart halfway through. Send the job, then keep talking — it is not instant.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 8 — The safety callback, minutes 46–56</p>
+      <h1>Which of those two would you publish about a real place?</h1>
+      <div class="say big">Both clips are generated — nothing here was shot with an actual camera. The real difference is how much you directed: stage 3 animates an image you built and fixed; stage 4 came from a text prompt alone, with nothing of yours in it.</div>
+      <p class="big">If you captioned either one “this is this place,” right now — would that be true?</p>
+      <div class="box">Neither is a record of that place — so no. A label doesn't make it true; it stops it from deceiving. That's rule three from slide 1. Say so out loud, before anyone asks; that's rule one, applied to something you made ten minutes ago.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 9 — Write for the ear, minutes 56–65</p>
+      <h1>Write for the ear, not the eye</h1>
+      <p>Narrate the piece you've built — your subject, the image, and the two clips.</p>
+      <ul class="big">
+        <li><strong>Sentences</strong> — short. If it needs a comma to survive, split it.</li>
+        <li><strong>One idea</strong> — per breath. One clause per sentence, not three joined with “and.”</li>
+        <li><strong>Numbers</strong> — spoken, not written: “about twelve thousand people,” not “12,847 attendees.”</li>
+      </ul>
+      <div class="say">The script matters more than the voice. Fix it on the page before you generate the narration.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 10 — Assemble: PPTX versus HTML, minutes 65–85</p>
+      <h1>PPTX versus HTML — same tool, two formats</h1>
+      <p>Both come out of Claude — the same tool, twice.</p>
+      <table>
+        <thead><tr><th></th><th>PPTX</th><th>Self-contained HTML</th></tr></thead>
+        <tbody>
+          <tr><td>Opens as</td><td>Opens in PowerPoint, Keynote, or Google Slides</td><td>One file, opens in any browser, nothing installed</td></tr>
+          <tr><td>Anyone can edit it</td><td>Yes — drag slides around like any deck</td><td>Only by editing the markup directly</td></tr>
+          <tr><td>Read or diff it as text</td><td>No — it's a binary</td><td>Yes — it's plain text</td></tr>
+          <tr class="total"><td>Good at</td><td>What an institution or colleague expects</td><td>Sharing as a link or attachment, nothing to install</td></tr>
+        </tbody>
+      </table>
+      <div class="say">The comparison is the lesson, not the tool — it's the same tool both times. Full detail: <a href="session-04-toolkit.html">toolkit reference</a>.</div>
+    </section>
+    <section class="slide">
+      <p class="num">Slide 11 — Exit check, minutes 85–90</p>
       <h1>Complete out loud or in writing</h1>
-      <div class="box big">My tool does <strong>[one action]</strong>. It breaks when <strong>[the edge case]</strong>. I will actually use <strong>[which version]</strong> because <strong>[why]</strong>.</div>
+      <div class="box big">My subject was <strong>[what]</strong>. It went through <strong>[how many]</strong> of the six stages. The stage I would cut if I only had an hour is <strong>[which]</strong>. The clip I would not publish about a real place is <strong>[which]</strong>, because <strong>[why]</strong>.</div>
       <h2>And the reflection question</h2>
-      <p class="big">What does the application do better than the scrap of paper — and what did the paper do better than it?</p>
+      <p class="big">Which stage surprised you — because the tool did better, or worse, than you expected?</p>
     </section>
   </body>
 </html>

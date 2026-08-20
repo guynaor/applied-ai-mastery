@@ -14,11 +14,22 @@ const sessionSlugs=[
  'ask-summarize-decide',
  'research-buy-monitor',
  'plan-real-life-together',
- 'build-personal-tool',
- 'design-physical-project',
  'trustworthy-visual-story',
+ 'design-physical-project',
+ 'build-personal-tool',
  'workflow-portfolio-project',
 ];
+
+// Look a session's briefs up by slug rather than by number: the course order
+// has changed before and these assertions should survive the next change.
+const briefsForSlug=slug=>{
+ const number=String(sessionSlugs.indexOf(slug)+1).padStart(2,'0');
+ return {
+  English:readFileSync(`personal-course/sessions/session-${number}-${slug}.md`,'utf8'),
+  Hebrew:readFileSync(`personal-course/he/sessions/session-${number}-${slug}.md`,'utf8'),
+ };
+};
+const numberForSlug=slug=>sessionSlugs.indexOf(slug)+1;
 
 for(const path of publicPaths)assert.ok(existsSync(path),`Missing Personal course source: ${path}`);
 const portal=readFileSync(portalPath,'utf8');
@@ -57,23 +68,18 @@ for(const [index,slug] of sessionSlugs.entries()){
  }
 }
 
-const sessionFour={
- English:readFileSync('personal-course/sessions/session-04-build-personal-tool.md','utf8'),
- Hebrew:readFileSync('personal-course/he/sessions/session-04-build-personal-tool.md','utf8'),
-};
-for(const [locale,brief] of Object.entries(sessionFour)){
- assert.match(brief,/Claude Artifacts/i,`${locale} Session 4 must use Claude Artifacts for the small web tool`);
+const appSession=briefsForSlug('build-personal-tool');
+const appNumber=numberForSlug('build-personal-tool');
+for(const [locale,brief] of Object.entries(appSession)){
+ assert.match(brief,/Claude Artifacts/i,`${locale} Session ${appNumber} must use Claude Artifacts for the small web tool`);
  const normalAndEdge=locale==='English'
   ? /(?:normal (?:case|test)[\s\S]*edge (?:case|test)|edge (?:case|test)[\s\S]*normal (?:case|test))/i
   : /(?:מקרה רגיל[\s\S]*מקרה קצה|מקרה קצה[\s\S]*מקרה רגיל)/;
  assert.match(brief,normalAndEdge,
-  `${locale} Session 4 must test both a normal case and an edge case`);
+  `${locale} Session ${appNumber} must test both a normal case and an edge case`);
 }
 
-const sessionSeven={
- English:readFileSync('personal-course/sessions/session-07-workflow-portfolio-project.md','utf8'),
- Hebrew:readFileSync('personal-course/he/sessions/session-07-workflow-portfolio-project.md','utf8'),
-};
+const sessionSeven=briefsForSlug('workflow-portfolio-project');
 for(const [locale,brief] of Object.entries(sessionSeven)){
  assert.match(brief,/Claude Desktop/i,`${locale} Session 7 must include Claude Desktop`);
  assert.match(brief,locale==='English' ? /least privilege|minimum (?:necessary|required) access/i : /הרשאה מזערית|גישה מזערית|המינימום הנדרש/,
@@ -107,18 +113,18 @@ const expectedJournalSessionTitles={
   'Session 1: Decide What to Do Next',
   'Session 2: Buy With Confidence',
   'Session 3: Make a Shared Plan Work',
-  'Session 4: Solve a Recurring Problem',
+  'Session 4: From Prompt to Presentation',
   'Session 5: Make a Space Work Better',
-  'Session 6: From Prompt to Presentation',
+  'Session 6: Solve a Recurring Problem',
   'Session 7: Build a Personal System',
  ],
  Hebrew:[
   'מפגש 1: להחליט מה הצעד הבא',
   'מפגש 2: לקנות בביטחון',
   'מפגש 3: לבנות תוכנית משותפת שעובדת',
-  'מפגש 4: לפתור בעיה חוזרת',
+  'מפגש 4: מהנחיה למצגת',
   'מפגש 5: לשפר מרחב',
-  'מפגש 6: מהנחיה למצגת',
+  'מפגש 6: לפתור בעיה חוזרת',
   'מפגש 7: לבנות מערכת אישית',
  ],
 };

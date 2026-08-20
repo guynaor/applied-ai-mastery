@@ -1,4 +1,4 @@
-# Session 4 — Solve a Recurring Problem
+# Session 6 — Solve a Recurring Problem
 
 **Time:** 90 minutes  
 **Outcome:** Two tools for the same problem — a tiny one built in chat and a real one built on a platform — and testing that knows where each of them breaks.
