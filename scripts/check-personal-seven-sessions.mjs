@@ -156,6 +156,11 @@ for(const term of [/capstone/i,/subject/i,/deliverable/i,/end date/i,/boundary/i
 for(const term of [/Claude Desktop/i,/OpenClaw/i,/Claude for Chrome/i,/personal workflow/i]){
  assert.doesNotMatch(capstoneJournal,term,`English capstone journal must not retain session 7 framing: ${term}`);
 }
+// Predates the capstone: this tab was once an application package. The guard
+// is cheap and still guards a real historical regression, so it stays.
+for(const term of [/application package/i,/audience-specific application/i,/target role or audience/i,/CV revised/i,/application is logged/i]){
+ assert.doesNotMatch(capstoneJournal,term,`English capstone journal must not retain application-package framing: ${term}`);
+}
 
 const sessionTwo={
  English:readFileSync('personal-course/sessions/session-02-research-buy-monitor.md','utf8'),
