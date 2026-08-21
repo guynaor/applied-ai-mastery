@@ -79,24 +79,37 @@ for(const [locale,brief] of Object.entries(appSession)){
   `${locale} Session ${appNumber} must test both a normal case and an edge case`);
 }
 
-const sessionSeven=briefsForSlug('workflow-portfolio-project');
-for(const [locale,brief] of Object.entries(sessionSeven)){
- assert.match(brief,/Claude Desktop/i,`${locale} Session 7 must include Claude Desktop`);
- assert.match(brief,locale==='English' ? /least privilege|minimum (?:necessary|required) access/i : /הרשאה מזערית|גישה מזערית|המינימום הנדרש/,
-  `${locale} Session 7 must teach least-privilege access`);
- assert.match(brief,/Claude for Chrome/i,`${locale} Session 7 must mention Claude for Chrome`);
- assert.match(brief,locale==='English' ? /further exploration/i : /להעמקה|לחקירה נוספת/,
-  `${locale} Session 7 must position Claude for Chrome as further exploration`);
- assert.match(brief,/OpenClaw/i,`${locale} Session 7 must mention OpenClaw`);
- assert.match(brief,locale==='English' ? /agent run record|review operations/i : /רישום ההרצה|בודקים תפעול/,
-  `${locale} Session 7 must review bounded OpenClaw operations`);
- assert.doesNotMatch(brief,locale==='English' ? /paper[- ]only/i : /על הנייר בלבד/,
-  `${locale} Session 7 must not keep OpenClaw paper-only`);
+const capstone=briefsForSlug('workflow-portfolio-project');
+// Session 7 became a mentored home capstone on 2026-08-20. Claude Desktop,
+// Claude for Chrome and OpenClaw were that session's demonstration vehicles
+// and do not carry over — learners build their own app now. Least privilege
+// and the stop rule do carry, folded into the app deliverable.
+// These assert concepts, not sentences, so wording can improve freely.
+for(const [locale,brief] of Object.entries(capstone)){
+ const en=locale==='English';
+ assert.match(brief,en?/One Project, Every Skill/:/פרויקט אחד, כל המיומנויות/,
+  `${locale} capstone must carry its title`);
+ assert.match(brief,en?/least[- ]privilege/i:/הרשאה מזערית/,
+  `${locale} capstone must name least-privilege access`);
+ assert.match(brief,en?/what it may touch/i:/למה מותר לו לגעת/,
+  `${locale} capstone must require the app to state what it may touch`);
+ assert.match(brief,en?/needs your approval|always needs your/i:/דורש את האישור שלכם/,
+  `${locale} capstone must require the app to state what needs approval`);
+ assert.match(brief,en?/what makes it stop|stop rule|stop condition/i:/מה עוצר אותו|כלל עצירה/,
+  `${locale} capstone must require a stop rule on the app`);
+ assert.match(brief,en?/propose your subject|subject.{0,20}confirmed/i:/מציעים נושא|הנושא אושר/,
+  `${locale} capstone must gate work behind a confirmed subject`);
+ assert.match(brief,en?/visible to the group|post .{0,30}group/i:/גלויה לקבוצה|מתפרסם בצ׳אט/,
+  `${locale} capstone must say the work is shared with the group`);
+ assert.match(brief,en?/skip that deliverable/i:/ותרו על התוצר/,
+  `${locale} capstone must tell a learner who missed a session to skip that deliverable`);
+ assert.doesNotMatch(brief,/Claude Desktop|OpenClaw|Claude for Chrome/i,
+  `${locale} capstone must not retain session 7's demonstration tooling`);
 }
 
 assert.match(portal,/\bsession\w*\s*=\s*\[/i,
  'Personal portal must expose its integrated sessions as an array');
-assert.match(portal,/aam-personal-sessions/,'Personal progress must use the seven-session storage key');
+assert.match(portal,/aam-personal-sessions/,'Personal progress must use the session storage key');
 assert.match(portal,/\bsessions?\.length\b/i,
  'Personal progress must derive its total from the session collection');
 assert.match(portal,/data-personal-progress/,'Personal portal must expose a session progress control');
@@ -104,10 +117,10 @@ assert.match(portal,/data-personal-progress-label/,'Personal portal must expose 
 assert.match(portal,/90\s*(?:minutes|דקות|-minute)/i,'Personal portal must label sessions as 90 minutes');
 
 const journal=readFileSync('personal-course/student/en/ai-learning-journal.md','utf8');
-assert.match(journal,/throughout all 7 integrated sessions\. Each session has one tab/i,
- 'English journal home must describe one coherent tab for each integrated session');
-assert.doesNotMatch(journal,/throughout all 12 lessons|Each lesson has (?:its )?own tab/i,
- 'English journal home must not retain twelve-lesson wording');
+assert.match(journal,/six integrated sessions and the capstone/i,
+ 'English journal home must describe six sessions plus the capstone');
+assert.doesNotMatch(journal,/throughout all 12 lessons|Each lesson has (?:its )?own tab|all 7 integrated sessions/i,
+ 'English journal home must not retain twelve-lesson or seven-session wording');
 const expectedJournalSessionTitles={
  English:[
   'Session 1: Decide What to Do Next',
@@ -116,7 +129,7 @@ const expectedJournalSessionTitles={
   'Session 4: From Prompt to Presentation',
   'Session 5: Make a Space Work Better',
   'Session 6: Solve a Recurring Problem',
-  'Session 7: Build a Personal System',
+  'Capstone: One Project, Every Skill',
  ],
  Hebrew:[
   'מפגש 1: להחליט מה הצעד הבא',
@@ -125,7 +138,7 @@ const expectedJournalSessionTitles={
   'מפגש 4: מהנחיה למצגת',
   'מפגש 5: לשפר מרחב',
   'מפגש 6: לפתור בעיה חוזרת',
-  'מפגש 7: לבנות מערכת אישית',
+  'פרויקט סיום: פרויקט אחד, כל המיומנויות',
  ],
 };
 for(const [locale,source] of Object.entries({
@@ -133,16 +146,24 @@ for(const [locale,source] of Object.entries({
  Hebrew:readFileSync('personal-course/student/he/ai-learning-journal.md','utf8'),
 })){
  for(const title of expectedJournalSessionTitles[locale])assert.match(source,new RegExp(title.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')),
-  `${locale} journal must use the current integrated session title: ${title}`);
+  `${locale} journal must use the current tab title: ${title}`);
 }
 assert.doesNotMatch(journal,/^# Session [1-7]: (?:Ask, Summarize, and Decide|Research, Buy, and Monitor|Plan Real Life Together|Build a Personal Tool|Design a Physical Project|Trustworthy Visual Story|Workflow, Portfolio, and Project)/m,
  'English journal must not retain legacy bundled-session titles');
-const sessionSevenJournal=journal.match(/<!-- journal-tab: \{"id":"session-07"[^]*$/)?.[0] ?? '';
-for(const term of [/personal workflow/i,/portfolio/i,/capstone|final personal project/i,/Claude Desktop/i,/permission/i,/OpenClaw/i,/bounded run record|account, payment, messaging/i]){
- assert.match(sessionSevenJournal,term,`English Session 7 journal must include ${term}`);
+// The capstone replaced session 7's class on 2026-08-20. Its tab logs a
+// subject, five deliverables and the app's boundary — not a workflow and
+// portfolio, and not the Claude Desktop / OpenClaw demonstration tooling.
+const capstoneJournal=journal.match(/<!-- journal-tab: \{"id":"session-07"[^]*$/)?.[0] ?? '';
+for(const term of [/capstone/i,/deliverable log/i,/my end date/i,/mentor confirmed/i,/what it may touch/i,/needs my approval/i,/what makes it stop/i,/post(?:ed)? .{0,20}group|to the group/i]){
+ assert.match(capstoneJournal,term,`English capstone journal must include ${term}`);
 }
+for(const term of [/Claude Desktop/i,/OpenClaw/i,/Claude for Chrome/i,/personal workflow/i]){
+ assert.doesNotMatch(capstoneJournal,term,`English capstone journal must not retain session 7 framing: ${term}`);
+}
+// Predates the capstone: this tab was once an application package. The guard
+// is cheap and still guards a real historical regression, so it stays.
 for(const term of [/application package/i,/audience-specific application/i,/target role or audience/i,/CV revised/i,/application is logged/i]){
- assert.doesNotMatch(sessionSevenJournal,term,`English Session 7 journal must not retain application-package framing: ${term}`);
+ assert.doesNotMatch(capstoneJournal,term,`English capstone journal must not retain application-package framing: ${term}`);
 }
 
 const sessionTwo={

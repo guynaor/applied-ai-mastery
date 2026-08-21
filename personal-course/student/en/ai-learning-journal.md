@@ -1,7 +1,7 @@
 <!-- journal-tab: {"id":"journal-home","title":"My AI Learning Journal"} -->
 # My AI Learning Journal
 
-Use this workbook throughout all 7 integrated sessions. Each session has one tab: a sequence of work that leads to one useful, checked result.
+Use this workbook throughout the six integrated sessions and the capstone that follows them. Each has one tab: a sequence of work that leads to one useful, checked result.
 
 ## A simple weekly rhythm
 
@@ -649,91 +649,80 @@ Save the specification, Artifact link or local file, normal and edge test result
 
 What still needs your decision? What would you simplify before a real person uses it?
 
-<!-- journal-tab: {"id":"session-07","title":"Session 7: Build a Personal System"} -->
-# Session 7: Build a Personal System
+<!-- journal-tab: {"id":"session-07","title":"Capstone: One Project, Every Skill"} -->
+# Capstone: One Project, Every Skill
 
-Combine your strongest work into a personal workflow and a small final personal project that you can inspect, pause, and improve.
+Carry one subject of your own through five deliverables, each using a session you already did. Post each one to the group; read what comes back for other people too.
 
-## 1. Choose the launchpad
+## 1. The subject
 
-| Personal problem | Useful outcome | Inputs / sources | Steps | Human approval point | Review date |
+| What it is | Why this one | My end date | Deliverable I am skipping | Mentor confirmed on |
+| --- | --- | --- | --- | --- |
+| Example: a weekend trip to the north in October | We keep talking about it and never book it | 30 November | None | 12 October |
+|  |  |  |  |  |
+
+Do not start deliverable 1 until the confirmed date is filled in.
+
+## 2. Deliverable log
+
+| Deliverable | Session it draws on | What I posted | Date posted | What came back | What I changed |
 | --- | --- | --- | --- | --- | --- |
-| Example: bills arrive scattered across email and I lose track of them | One weekly list of what is due and when | Bills in my email; the household calendar | Collect, extract the amount and date, draft the list | I approve the list before anything is paid or filed | First Sunday of each month |
-| | | | | | |
-| | | | | | |
+| Example: research brief | 2 | Three routes compared, with costs and two sources each | 15 October | "Two of your three sources are the same operator" | Replaced one with a rail timetable I checked myself |
+| 1 Research brief | 2 |  |  |  |  |
+| 2 Plan with a spreadsheet | 3 |  |  |  |  |
+| 3 Presentation | 4 |  |  |  |  |
+| 4 Designed object | 5 |  |  |  |  |
+| 5 Small app | 6 |  |  |  |  |
 
-## 2. Map the workflow and evidence
+## 3. The app's boundary
 
-| Step | Tool or method | Output | Evidence register | Permission needed | Stop / fallback |
-| --- | --- | --- | --- | --- | --- |
-| Example: extract the amount and due date | Claude Desktop reading one local folder | A table of bills with amounts and dates | The saved file plus the dated table | Read-only access to that one folder | If a due date is unreadable, stop and flag it for me |
-| | | | | | |
-| | | | | | |
-| | | | | | |
+The app is not finished until this table is. What it may touch, what always needs you, and what makes it stop. For example, an app that reads one list in your own folder has no reason to be able to send a message or spend money — write that down rather than assuming it.
 
-## 3. Portfolio and next experiment
-
-Choose two artifacts from the course. An honest description is worth more than an impressive one: whoever reads you wants to know what you actually did, and what you learned when something did not work.
-
-| The artifact | What I did myself | What the tool did | What I learned when something failed |
-| --- | --- | --- | --- |
-| Example: the purchase brief from Session 2 | Set the criteria, opened the manufacturer page, and found the warranty was conditional on registration | Built the research plan and organised the evidence matrix | That the report sounds exactly as confident when it is wrong |
-| | | | |
-
-**My next experiment:** what will you change next time, and how will you know whether it worked?
-
-**Permissions:** Claude Desktop can work with real files and apps, so give it the minimum necessary access. Claude for Chrome is for further exploration. If you used OpenClaw in the optional Agent Lab, include only the bounded run record and keep all account, payment, messaging, and private-data actions outside its scope.
+| What it may touch | What always needs my approval | What makes it stop |
+| --- | --- | --- |
+| Example: the packing list file in my own folder | Adding anything to a shopping cart, or sending a message | Anything it cannot find, or a second run in the same hour |
+|  |  |  |
 
 ## Goal
 
-Start one personal system that you can look inside, pause, and improve, rather than a one-off AI answer.
+Finish one project you would actually use, built from skills you already have, with every generated piece labelled and the app's limits written down.
 
 ## Steps
 
-1. Choose one personal problem and map its inputs, steps, approval point, and review date (for example: bills, a weekly meal plan, job applications, medical appointments).
-2. Save two honest portfolio artifacts and complete the evidence register and permission map.
-3. If you used the optional Agent Lab, review the run record, permissions, alert quality, and stop rule before deciding what to keep.
+1. Propose your subject and wait for confirmation. Name your own end date.
+2. Work the deliverables in order, posting each to the group when it is ready.
+3. Read other people's posts and the answers they get — that is half the value.
+4. Write the app's boundary before you call the app done.
 
 ## Bronze
 
-Create a small personal workflow with one approval point.
+Subject confirmed, and every deliverable completed for the sessions you attended.
 
 ## Silver
 
-Complete the evidence register and permission map for a final personal project.
+The app's boundary written out, and you answered at least one other person's post.
 
 ## Gold
 
-Run a limited real-world trial, then document what you paused, changed, or kept under your control.
+Show the finished project to someone outside the group, and revise it from what they say.
 
 ## My task
 
 | Level | What I chose | By when |
 | --- | --- | --- |
-| Example: Gold | The weekly bills list | First Sunday of next month |
+| Example: Silver | A weekend trip to the north, with the packing-list app | 30 November |
 | | | |
 
-## Workflow and evidence, for the real system
-
-| Step | Tool or method | Output | Evidence register | Permission needed | Stop / fallback |
-| --- | --- | --- | --- | --- | --- |
-| | | | | | |
-| | | | | | |
-| | | | | | |
-| | | | | | |
+Which deliverable was the hardest to make arise from your subject?
 
 ## Evidence I saved
 
-| What I checked | Source and date | Where I saved it |
-| --- | --- | --- |
-| Example: that the workflow never paid anything by itself | My run record, 6 June | Saved run log with the approval step marked |
-| | | |
-| | | |
+Save the research brief, the spreadsheet, the presentation, the object's design file with the measurement you checked, the app, and the boundary table.
 
 ## Verification and evidence
 
-Save the portfolio links/files, final project, evidence register, permission map, and a record showing the workflow stayed within its approval boundary.
+Which claim in your research would matter most if it were wrong, and how did you check it?
 
 ## Reflection and human judgment
 
-What will you keep under your control? What makes this a personal system rather than a one-off AI answer?
+What stays under your control? What did the app's boundary stop it from doing, and would you widen it next time?
