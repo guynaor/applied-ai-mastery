@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sample permission map — Session 7</title>
+    <title>Sample app boundary — the capstone</title>
     <style>
       body{font-family:system-ui,sans-serif;line-height:1.6;max-width:56rem;margin:0 auto;padding:1.5rem;color:#17242D}
       h1{border-bottom:3px solid #4E356F;padding-bottom:.4rem}
@@ -30,81 +30,45 @@
   </head>
   <body>
     <main>
-      <h1>Sample permission map — Session 7</h1>
-      <p>The material for the permission demonstration. It works without installing anything: this session is about what you approve, not about installation.</p>
-      <p class="note">Do not connect a tool to a learner's account, and do not use real files. The folder below is entirely invented.</p>
+      <h1>Sample app boundary — the capstone</h1>
+      <p>A worked example of deliverable 5's boundary: what the app may touch, what always needs the learner, and what makes it stop. Use it as the shape, not as an answer — the boundary belongs to the app they actually built.</p>
+      <p class="note">The app below is invented, and deliberately small. A boundary is easier to argue about when the app is simple enough to hold in your head.</p>
 
-      <h2>The sample folder</h2>
+      <h2>The app</h2>
+      <p>A packing list for the weekend trip in the capstone brief. It reads one file, adds to it, and ticks things off. That is all it does.</p>
       <pre>
-garden-project/
-├── task-list.txt
-├── bed-measurements.txt
-├── photos/
-│   ├── before-14-04.jpg
-│   └── after-14-04.jpg
-└── archive/
-    └── old-notes.txt
-      </pre>
-      <p>Two text files, two photos, and an archive folder. Nothing personal is in it — and that is the point. The demonstration folder is chosen so that even a mistake costs nothing.</p>
+trip/
+├── packing-list.txt     <- the app reads and writes this
+├── budget.csv           <- the app has no reason to open this
+└── photos/              <- nor this
+</pre>
 
-      <h2>The permission request — read it before approving</h2>
-      <div class="dialog">
-        <header>Claude Desktop is requesting access</header>
-        <div class="content">
-          <p>The application is requesting:</p>
-          <ul>
-            <li>Read and write across <strong>your entire Documents folder</strong></li>
-            <li>Access to recently opened files</li>
-            <li>Running actions without separate approval for each</li>
-          </ul>
-        </div>
-        <div class="buttons">
-          <span class="btn">Choose a specific folder</span>
-          <span class="btn primary">Allow</span>
-        </div>
-      </div>
-      <p class="warn"><strong>The right button is the quiet one, not the prominent one.</strong> Interfaces are designed so the broad approval is the easiest path. That is not malice — it is a default that suits whoever built it, which is exactly why the decision has to be yours rather than the design's.</p>
-
-      <h2>What to approve and what not to</h2>
+      <h2>The boundary</h2>
+      <p>Three columns, and the third is the one people forget.</p>
       <table>
-        <tr><th>The request</th><th>Decision</th><th>Why</th></tr>
-        <tr><td>Read the garden-project folder</td><td class="yes">Yes</td><td>Exactly what the task needs, and no more</td></tr>
-        <tr><td>Read the whole Documents folder</td><td class="no">No</td><td>The task does not require it. Convenience is not a reason</td></tr>
-        <tr><td>Write or delete in the folder</td><td class="no">No</td><td>Today is read-only. Writing stays with us</td></tr>
-        <tr><td>Recently opened files</td><td class="no">No</td><td>That is a list of everything you have done, not of the project</td></tr>
-        <tr><td>Running without per-action approval</td><td class="no">No</td><td>The approval point is all that separates a proposal from an action</td></tr>
+        <tr><th>What it may touch</th><th>What always needs me</th><th>What makes it stop</th></tr>
+        <tr>
+          <td><code>packing-list.txt</code>, and nothing else in the folder</td>
+          <td>Adding an item that costs money, or anything that leaves the device — a message, an order, an upload</td>
+          <td>A file it cannot find, a list longer than it expects, or a second run within the hour</td>
+        </tr>
+      </table>
+      <p class="warn"><strong>Why the third column exists.</strong> The first two describe what the app should do. The third describes what happens when the world is not what the app assumed. An app with no stop condition does not fail — it keeps going, quietly, on wrong input.</p>
+
+      <h2>Least privilege, in one sentence</h2>
+      <p>The app can reach one file because it needs one file. It cannot reach <code>budget.csv</code> — not because that file is secret, but because the app has no reason to open it, and a reason is what access should require.</p>
+      <p>The test to apply to a learner's boundary: for each thing the app may touch, can they say what it needs it <em>for</em>? If not, that access does not belong in the list.</p>
+
+      <h2>What a weak boundary looks like</h2>
+      <table>
+        <tr><th>What they wrote</th><th>Why it is not a boundary</th></tr>
+        <tr><td>"It only touches my own files"</td><td>Which files? A folder is not a boundary — it is a location.</td></tr>
+        <tr><td>"I'll check what it does"</td><td>An intention, not a rule. What specifically waits for you?</td></tr>
+        <tr><td>"It stops if there's an error"</td><td>That is what crashing means. A stop condition is a case you chose to halt on while the app is still working.</td></tr>
       </table>
 
-      <h2>The demonstration request</h2>
-      <pre>In the selected sample folder only: list the file names, and draft one
-opening sentence for the project page. Do not change, delete, move, upload,
-or share anything, and do not go outside this folder. Ask for approval before
-any action, and state what you were unable to see.</pre>
-
-      <h2>After the run — what to check</h2>
-      <table>
-        <tr><th>The check</th><th>What to look for</th></tr>
-        <tr><td>The file names</td><td>Does the list match exactly what is in the folder?</td></tr>
-        <tr><td>What stayed out</td><td>Did it try to touch the archive, or anything outside the folder?</td></tr>
-        <tr><td>The draft</td><td>Does it rest on what it saw, or on a generic guess?</td></tr>
-        <tr><td>Disconnecting</td><td>Did you remove the access at the end of the demonstration?</td></tr>
-      </table>
-
-      <h2>Agent run record — to review</h2>
-      <p>If anyone did the OpenClaw lab in Session 2, this is what gets reviewed. This record can be used as the example.</p>
-      <table>
-        <tr><th>Field</th><th>What it says</th><th>Sound?</th></tr>
-        <tr><td>Allowed sources</td><td>Two public product pages</td><td></td></tr>
-        <tr><td>Last run</td><td>14 May, 14:00</td><td></td></tr>
-        <tr><td>Duplicate handling</td><td>No identical alert for 48 hours</td><td></td></tr>
-        <tr><td>Failure note</td><td>“Source did not load, attempt 1”</td><td></td></tr>
-        <tr><td>The alert</td><td>“Price dropped to 780”</td><td></td></tr>
-        <tr><td>Stop action</td><td>Pause after two failures</td><td></td></tr>
-      </table>
-      <details>
-        <summary>What is missing from this record</summary>
-        <p>It has no <strong>human approval point</strong> — who approves, and before which action. Without that field the record describes an agent that alerts, but does not demonstrate that it cannot do more than that.</p>
-      </details>
+      <h2>What to say when reviewing one</h2>
+      <p>The app is not finished without this table, and that is a "coming back", not a note in passing. The useful question is almost always the third column: <em>"What would this do if the file were empty — and is that what you want?"</em></p>
     </main>
   </body>
 </html>
