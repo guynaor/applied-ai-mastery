@@ -89,9 +89,13 @@ for(const [locale,brief] of Object.entries(capstone)){
  const en=locale==='English';
  assert.match(brief,en?/One Project, Every Skill/:/פרויקט אחד, כל המיומנויות/,
   `${locale} capstone must carry its title`);
- assert.match(brief,en?/least privilege|what it may touch|may not do/i:/הרשאה מזערית|למה מותר לו לגעת|מה אסור לו/,
-  `${locale} capstone must require a permission boundary on the app`);
- assert.match(brief,en?/stop|halt/i:/עוצר|עצירה/,
+ assert.match(brief,en?/least[- ]privilege/i:/הרשאה מזערית/,
+  `${locale} capstone must name least-privilege access`);
+ assert.match(brief,en?/what it may touch/i:/למה מותר לו לגעת/,
+  `${locale} capstone must require the app to state what it may touch`);
+ assert.match(brief,en?/needs your approval|always needs your/i:/דורש את האישור שלכם/,
+  `${locale} capstone must require the app to state what needs approval`);
+ assert.match(brief,en?/what makes it stop|stop rule|stop condition/i:/מה עוצר אותו|כלל עצירה/,
   `${locale} capstone must require a stop rule on the app`);
  assert.match(brief,en?/propose your subject|subject.{0,20}confirmed/i:/מציעים נושא|הנושא אושר/,
   `${locale} capstone must gate work behind a confirmed subject`);
@@ -150,7 +154,7 @@ assert.doesNotMatch(journal,/^# Session [1-7]: (?:Ask, Summarize, and Decide|Res
 // subject, five deliverables and the app's boundary — not a workflow and
 // portfolio, and not the Claude Desktop / OpenClaw demonstration tooling.
 const capstoneJournal=journal.match(/<!-- journal-tab: \{"id":"session-07"[^]*$/)?.[0] ?? '';
-for(const term of [/capstone/i,/subject/i,/deliverable/i,/end date/i,/boundary/i,/approval/i,/group/i]){
+for(const term of [/capstone/i,/deliverable log/i,/my end date/i,/mentor confirmed/i,/what it may touch/i,/needs my approval/i,/what makes it stop/i,/post(?:ed)? .{0,20}group|to the group/i]){
  assert.match(capstoneJournal,term,`English capstone journal must include ${term}`);
 }
 for(const term of [/Claude Desktop/i,/OpenClaw/i,/Claude for Chrome/i,/personal workflow/i]){

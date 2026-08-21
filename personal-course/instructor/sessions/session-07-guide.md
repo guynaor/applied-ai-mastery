@@ -23,7 +23,7 @@ Everything else in this guide is smaller than this. A learner who starts on a ba
 
 ### Three judgements, and what to say
 
-**"A weekend trip to the north."** Accept. Research is real comparison, the plan is an itinerary and budget, the presentation goes to whoever is coming, the object is something that goes in the bag, and the app is a packing list they will reuse. Reply naming the five so they can see the shape: *"This works — I can see all five: costs to compare, an itinerary, showing it to whoever's coming, something for the bag, and a packing list you'll use again. What's your end date?"*
+**"A weekend trip to the north."** Accept. Research is real comparison, the plan is an itinerary and budget, the presentation goes to whoever is coming, the object is something that goes in the bag, and the app is a packing list they will reuse. Reply naming the five so they can see the shape: *"This works — I can see all five: costs to compare, an itinerary, showing it to whoever's coming, something for the bag, and a packing list you'll use again. Noted your end date as 30 November."*
 
 **"Learn to play the guitar."** Send back. Say which deliverables do not arise, not just "no": *"The research is real and the practice log would be a genuine app. But the plan is a wish rather than a schedule with costs, nobody needs the presentation, and the object would be invented to satisfy the requirement. Narrow it — 'set up a corner where practising actually happens' gives you a real stand or cable tidy, and a presentation that argues for the space."* The brief carries this same example; pointing at it is fine.
 
@@ -31,7 +31,7 @@ Everything else in this guide is smaller than this. A learner who starts on a ba
 
 ### Two things to get at the gate
 
-- **Their own end date.** Nothing else anchors this — there is no next class. Ask for it in the same message you confirm the subject, and repeat it back.
+- **Their own end date.** They post it with the proposal; nothing else anchors this, since there is no next class. Repeat it back when you confirm, so it is on the record. If they left it out, that is the one thing to ask for.
 - **Which deliverable they are skipping**, if they missed the session it draws on.
 
 ## What an answer contains

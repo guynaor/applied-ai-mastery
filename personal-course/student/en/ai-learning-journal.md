@@ -708,7 +708,12 @@ Show the finished project to someone outside the group, and revise it from what 
 
 ## My task
 
-Which subject did you choose, and which deliverable was hardest to make arise from it naturally?
+| Level | What I chose | By when |
+| --- | --- | --- |
+| Example: Silver | A weekend trip to the north, with the packing-list app | 30 November |
+| | | |
+
+Which deliverable was the hardest to make arise from your subject?
 
 ## Evidence I saved
 

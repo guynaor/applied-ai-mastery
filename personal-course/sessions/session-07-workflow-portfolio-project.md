@@ -21,7 +21,7 @@ There is no deadline set for you. You set your own, at the subject gate, and tel
 
 ## Sequence
 
-**0. Propose your subject, and wait.** Post what it is, why this one, which deliverable you are skipping if any, and the date you intend to finish by. **Do not start deliverable one until your subject is confirmed.** This is the step that saves you weeks — see the test below.
+**0. Propose your subject, and wait.** Post what it is, why this one, which deliverable you are skipping if any, and the date you intend to finish by — the date is yours, nobody sets it for you. **Do not start deliverable one until your subject is confirmed.** This is the step that saves you weeks — see the test below.
 
 1. **Research brief** — *uses Session 2.* What you need to know before committing: options compared, sources you opened yourself, what you decided, and what you still do not know. An assumption you have not checked is not a finding; label it as an assumption.
 2. **Plan with a spreadsheet** — *uses Session 3.* Budget, schedule, and who does what. Include the thing that will go wrong and what happens then.
