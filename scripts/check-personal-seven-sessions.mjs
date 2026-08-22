@@ -88,7 +88,11 @@ const capstone=briefsForSlug('workflow-portfolio-project');
 for(const [locale,brief] of Object.entries(capstone)){
  const en=locale==='English';
  assert.match(brief,en?/One Project, Every Skill/:/פרויקט אחד, כל המיומנויות/,
-  `${locale} capstone must carry its title`);
+  `${locale} session 7 must carry its title`);
+ assert.match(brief,en?/\*\*Time:\*\*\s*60 minutes/:/\*\*משך:\*\*\s*60 דקות/,
+  `${locale} session 7 must state its 60-minute length`);
+ assert.match(brief,en?/session 6|built in session 6/i:/מפגש 6/,
+  `${locale} session 7 must review the app built in session 6`);
  assert.match(brief,en?/least[- ]privilege/i:/הרשאה מזערית/,
   `${locale} capstone must name least-privilege access`);
  assert.match(brief,en?/what it may touch/i:/למה מותר לו לגעת/,
@@ -129,7 +133,7 @@ const expectedJournalSessionTitles={
   'Session 4: From Prompt to Presentation',
   'Session 5: Make a Space Work Better',
   'Session 6: Solve a Recurring Problem',
-  'Capstone: One Project, Every Skill',
+  'Session 7: One Project, Every Skill',
  ],
  Hebrew:[
   'מפגש 1: להחליט מה הצעד הבא',
@@ -138,7 +142,7 @@ const expectedJournalSessionTitles={
   'מפגש 4: מהנחיה למצגת',
   'מפגש 5: לשפר מרחב',
   'מפגש 6: לפתור בעיה חוזרת',
-  'פרויקט סיום: פרויקט אחד, כל המיומנויות',
+  'מפגש 7: פרויקט אחד, כל המיומנויות',
  ],
 };
 for(const [locale,source] of Object.entries({

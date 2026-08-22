@@ -1,40 +1,69 @@
-# Mentor guide — One Project, Every Skill
+# Full session plan — Session 7: One Project, Every Skill
 
-**Format:** A home project with asynchronous mentoring in the group chat. There is no class to run.
-**Learning outcome:** Learners carry one subject of their own through five deliverables, each re-using a session, and finish with a working app whose boundary they wrote themselves.
-**Artifact:** One project: research brief, spreadsheet plan, presentation, designed object, small app, and the app's boundary.
+**Time:** 60 minutes
+**Learning outcome:** Learners examine the app they built against real use, then choose and get confirmation on a capstone subject before they leave.
+**Session artifact:** A confirmed capstone subject, with an end date the learner set, posted to the group.
 
-**This replaces the seventh session.** Nothing is scheduled and nothing is projected. Your work here is answering in the group thread, and the whole model rests on one thing: that people post.
+**This session is 60 minutes, not 90**, and it is the only one that ends by starting something rather than finishing it. Half of it is the session 6 homework, because an app is the hardest thing this course asks for and the one most likely to have quietly stopped being used.
 
-## Materials
+## Session materials
 
 | Material | What it is for |
 |---|---|
-| [The capstone brief](../../sessions/session-07-workflow-portfolio-project.md) | What learners see. Read it before the first subject gate — your answers should match its wording. |
-| [Sample permission map](../../instructor/samples/session-07-permission-map.html) | What an app boundary contains. The reference for deliverable 5. |
+| [Session 7 brief](../../sessions/session-07-workflow-portfolio-project.md) | What learners see: the session, and the capstone it launches. |
+| [Sample app boundary](../../instructor/samples/session-07-permission-map.html) | What deliverable 5's boundary contains. Show it in the second half. |
 | [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | The subject, the deliverable log, and the app's boundary table. |
-| Sessions 2–6 briefs and guides | Each deliverable's standard already exists. You are not inventing criteria. |
+| Sessions 2–6 briefs and guides | Each capstone deliverable's standard already exists. You are not inventing criteria. |
 
-## The subject gate — your main job
+## Session map
 
-Everything else in this guide is smaller than this. A learner who starts on a bad subject spends weeks and arrives at deliverable four with a designed object they had to invent a reason for. That is not recoverable by good feedback later; it is only preventable here.
+| Time | What happens | What learners produce |
+|---:|---|---|
+| 0–30 | **The app in real use** — session 6's homework | An honest account of what broke, and what they stopped using |
+| 30–55 | The capstone, and choosing a subject | A subject proposed, with an end date they set |
+| 55–60 | Confirm subjects and close the course | Every learner leaves with a confirmed subject or a clear reason theirs was sent back |
 
-**The test, asked of each proposed subject:** does each of the five deliverables arise from this naturally? Read their proposal and try to name, concretely, what the object would be and what the app would do. If you cannot — or if the honest answer is "a spreadsheet, but called an app" — the subject is wrong.
+## 0–30 minutes — The app in real use
 
-### Three judgements, and what to say
+Session 6's homework was to genuinely use one of the two tools, at least twice. This half of the session is that, and it deserves the time.
 
-**"A weekend trip to the north."** Accept. Research is real comparison, the plan is an itinerary and budget, the presentation goes to whoever is coming, the object is something that goes in the bag, and the app is a packing list they will reuse. Reply naming the five so they can see the shape: *"This works — I can see all five: costs to compare, an itinerary, showing it to whoever's coming, something for the bag, and a packing list you'll use again. Noted your end date as 30 November."*
+**Open with the question that gets the real answer:** not "did it work" but **"what did you stop using, and at which step did it stop being worth it?"** Nobody volunteers abandonment when the question is "how did it go".
 
-**"Learn to play the guitar."** Send back. Say which deliverables do not arise, not just "no": *"The research is real and the practice log would be a genuine app. But the plan is a wish rather than a schedule with costs, nobody needs the presentation, and the object would be invented to satisfy the requirement. Narrow it — 'set up a corner where practising actually happens' gives you a real stand or cable tidy, and a presentation that argues for the space."* The brief carries this same example; pointing at it is fine.
+### What you are listening for
 
-**"Redo my CV."** Send back, and be direct about why: there is no object, no plan with costs, and the app is imaginary. This one comes up because it feels useful. Useful is not the test.
+- **The tool worked and they still stopped.** The most common outcome, and the most useful. Usually the tool solved a problem that was not actually the friction.
+- **It broke on real input.** Their test cases were tidier than their life. This is session 6's lesson landing late, which is fine — it lands harder here.
+- **They never used it.** Ask what got in the way of opening it. "I forgot" usually means it lived somewhere they never look.
 
-### Two things to get at the gate
+### What to say
 
-- **Their own end date.** They post it with the proposal; nothing else anchors this, since there is no next class. Repeat it back when you confirm, so it is on the record. If they left it out, that is the one thing to ask for.
-- **Which deliverable they are skipping**, if they missed the session it draws on.
+> "The version that survives contact with your actual week is worth more than the one that demos well. If you stopped using it, that is a finding about the problem, not a failure of the build."
 
-## What an answer contains
+**Do not fix anyone's app in the room.** Thirty minutes disappears into one person's bug. Note it, offer to look after, move on.
+
+## 30–55 minutes — The capstone
+
+Show the brief's capstone section and walk the five deliverables, naming which session each one uses. The point to land: **this is not new work — it is every session, once, on one subject they choose.**
+
+### The subject gate — say it explicitly
+
+Nothing starts until you confirm a subject. A learner who begins on a bad subject spends weeks and arrives at deliverable four with a designed object they had to invent a reason for. That is not recoverable by good feedback later.
+
+**The test, out loud:** does each of the five deliverables arise from this subject naturally? If they would have to invent a reason to design an object, or their "app" is a spreadsheet with a different name, it is the wrong subject.
+
+Walk the counter-example from the brief — learning guitar — because it names *which two of five* fail and shows the narrowing. A rejection makes the test concrete faster than four successes do.
+
+### What they leave with
+
+Everyone proposes a subject before the session ends, and names their own end date. Nothing else anchors the capstone: there is no next class.
+
+## 55–60 minutes — Confirming, and closing
+
+Confirm what you can in the room. Anything you cannot, say so and confirm in the group within a day — a learner sitting on an unconfirmed subject stalls.
+
+This is the end of the taught course. Say that, and say what happens next: the group thread stays open, deliverables get posted there, and you answer in the open.
+
+## After the session — what an answer contains
 
 Every answer is read by everyone, so each one teaches more people than it addresses. That is the whole reason this runs in the open — and it is why "looks good" is a waste of the seat.
 
