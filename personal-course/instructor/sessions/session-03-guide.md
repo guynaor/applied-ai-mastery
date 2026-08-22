@@ -86,11 +86,15 @@ The same rule applies to anything taking more than half a minute: send, keep tal
 
 **Start here in every session from the second onwards.** It works well, and not because it is a check — because a learner who hears what broke for someone else learns faster than from a lesson.
 
-Ask three questions, in this order:
+**This one is specifically the agent.** Session 2's homework was to run it for the week and bring the run record, so start there rather than with the general question:
 
-1. **"Who managed to do something with what we talked about?"** Let two or three tell it.
-2. **"Who did it not work for, and where did it get stuck?"** This is the important one. If nobody answers, tell them about something that got stuck for you — that opens it.
-3. **"What surprised you?"** The best insights arrive here.
+1. **"What did your agent catch, and what did it miss?"** The misses are the useful half.
+2. **"Did anything fire twice about the same thing?"** Duplicate suppression is the part that always looks right on paper and fails in the world.
+3. **"Would you give it more access than you gave it last week — and why?"** Sit with the answer. A learner who says yes has usually found a real limit; a learner who says no has usually been burned by something.
+
+**If someone's agent never fired**, that is a finding and not a failure. Ask which it was: a trigger that was wrong, or a week in which genuinely nothing happened. Those are different problems and only one of them is fixable.
+
+Then the general questions, briefly: what worked for someone else, and what surprised them.
 
 Write two things on screen that came up. If something is relevant to today, return to it later by the name of whoever raised it.
 
