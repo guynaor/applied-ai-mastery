@@ -1,9 +1,21 @@
-# One Project, Every Skill
+# Session 7 — One Project, Every Skill
 
-**Format:** A project you do at home, mentored in the group — not a session.
-**Outcome:** One subject of your choosing, carried through five deliverables, each using a skill you already learned. Everything generated is labelled, and the app you build knows what it may not do.
+**Time:** 60 minutes
+**Outcome:** Your app from session 6 examined against real use, and a capstone project chosen and confirmed — one subject of yours carried through five deliverables.
 
-## Before you choose anything
+## Before this session
+
+Bring the tool you built in session 6, and be ready to say what happened when you actually used it. If you stopped using it, that is the more useful answer, and it is the one worth thirty minutes of the room's time.
+
+## What happens in the session
+
+**First 30 minutes — the app, in real use.** Everyone shows what they built and what happened when they tried to live with it. This session is shorter than the others and half of it is this, because an app is the hardest thing the course asks for and it is the one most likely to have broken quietly. What did you stop using, and at which step did it stop being worth it?
+
+**Last 30 minutes — the capstone.** The rest of the session is the project you will do after it, described below. You choose a subject before you leave, and you post it to the group.
+
+## The capstone — what you do after
+
+### Before you choose anything
 
 Two things about how this runs, because they change what subject you should pick.
 
@@ -19,7 +31,7 @@ Pick one thing you actually want to exist or to happen. Not an exercise — a tr
 
 There is no deadline set for you. You set your own, at the subject gate, and tell the group.
 
-## Sequence
+## Sequence — after the session
 
 **0. Propose your subject, and wait.** Post what it is, why this one, which deliverable you are skipping if any, and the date you intend to finish by — the date is yours, nobody sets it for you. **Do not start deliverable one until your subject is confirmed.** This is the step that saves you weeks — see the test below.
 

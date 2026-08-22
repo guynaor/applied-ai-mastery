@@ -649,12 +649,21 @@ Save the specification, Artifact link or local file, normal and edge test result
 
 What still needs your decision? What would you simplify before a real person uses it?
 
-<!-- journal-tab: {"id":"session-07","title":"Capstone: One Project, Every Skill"} -->
-# Capstone: One Project, Every Skill
+<!-- journal-tab: {"id":"session-07","title":"Session 7: One Project, Every Skill"} -->
+# Session 7: One Project, Every Skill
 
-Carry one subject of your own through five deliverables, each using a session you already did. Post each one to the group; read what comes back for other people too.
+The session reviews the app you built, then launches the capstone. In the capstone you carry one subject of your own through five deliverables, each using a session you already did — posting each to the group, and reading what comes back for other people too.
 
-## 1. The subject
+## 1. The app, in real use
+
+Session 6's homework, and the first half of this session. The honest answer is the useful one.
+
+| What I built | How often I actually used it | Where it stopped being worth it | What I would change |
+| --- | --- | --- | --- |
+| Example: a packing checklist in Claude Artifacts | Twice, then stopped | Re-typing the list each trip was slower than my notes app | Make it remember the last list |
+|  |  |  |  |
+
+## 2. The subject
 
 | What it is | Why this one | My end date | Deliverable I am skipping | Mentor confirmed on |
 | --- | --- | --- | --- | --- |
@@ -663,7 +672,7 @@ Carry one subject of your own through five deliverables, each using a session yo
 
 Do not start deliverable 1 until the confirmed date is filled in.
 
-## 2. Deliverable log
+## 3. Deliverable log
 
 | Deliverable | Session it draws on | What I posted | Date posted | What came back | What I changed |
 | --- | --- | --- | --- | --- | --- |
@@ -674,7 +683,7 @@ Do not start deliverable 1 until the confirmed date is filled in.
 | 4 Designed object | 5 |  |  |  |  |
 | 5 Small app | 6 |  |  |  |  |
 
-## 3. The app's boundary
+## 4. The app's boundary
 
 The app is not finished until this table is. What it may touch, what always needs you, and what makes it stop. For example, an app that reads one list in your own folder has no reason to be able to send a message or spend money — write that down rather than assuming it.
 

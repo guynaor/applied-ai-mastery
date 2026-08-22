@@ -2,11 +2,13 @@
 // Renders the personal course portal's session cards headlessly and asserts what
 // a learner actually sees.
 //
-// Why this exists: the capstone was shipped with a "90 minutes" badge, an
-// "Open session brief" link and a "Session complete" checkbox, weeks after it
-// stopped being a session. Every other check passed, because every other check
-// reads strings. None of them assembled a card. `personal.html` was separately
+// Why this exists: the capstone once shipped with a hardcoded "90 minutes"
+// badge it never had, and every check passed — because every check reads
+// strings and none of them assembled a card. `personal.html` was separately
 // out of sync with the JS for the same reason.
+//
+// Durations now come from each entry's `minutes` field, so the guard compares
+// what a card claims against what its entry declares.
 //
 // It runs the real `personal-course.js`, not a copy of its logic — a guard that
 // re-implements what it guards proves nothing.
@@ -67,42 +69,36 @@ const splitCards = html => html.split('<article class="mission">').slice(1);
 
 // --- What a learner must see ------------------------------------------------
 
-const MINUTES = { en: /90\s*minutes/i, he: /90\s*דקות/ };
-// Nouns that would tell a learner this is a taught class.
-const SESSION_NOUNS = {
-  en: [/\bSession complete\b/i, /\bOpen session brief\b/i, /Integrated session path/i, /session facilitator guide/i],
-  he: [/המפגש הושלם/, /פתיחת מדריך המפגש/, /מסלול המפגש המשולב/],
-};
+const MINUTES_WORD = { en: 'minutes', he: 'דקות' };
+const DEFAULT_MINUTES = 90;
 
 const sessions = new Function(`${source.match(/const sessions=\[[\s\S]*?\n\];/)[0]}\nreturn sessions;`)();
-const capstoneIndex = sessions.findIndex(s => s.capstone);
-assert.notEqual(capstoneIndex, -1,
-  'No session entry is flagged `capstone:true`. If the capstone was removed, delete this check; otherwise the flag is missing and the card will render as a session.');
 
+// Sessions run for different lengths — session 7 is 60 minutes where the rest
+// are 90 — so the badge must match the entry, not a constant. A hardcoded
+// duration is how the capstone once shipped claiming 90 minutes it never had.
 for (const language of ['en', 'he']) {
   const cards = splitCards(renderPortal(language));
   assert.equal(cards.length, sessions.length,
     `${language}: rendered ${cards.length} cards for ${sessions.length} sessions`);
 
   cards.forEach((card, i) => {
-    const isCapstone = i === capstoneIndex;
-    const n = sessions[i].n;
+    const session = sessions[i];
+    const minutes = session.minutes || DEFAULT_MINUTES;
+    const expected = new RegExp(`${minutes}\\s*${MINUTES_WORD[language]}`);
 
-    if (isCapstone) {
-      assert.doesNotMatch(card, MINUTES[language],
-        `${language}: the capstone card claims a duration. It is a home project, not a timetabled session.`);
-      for (const noun of SESSION_NOUNS[language]) {
-        assert.doesNotMatch(card, noun,
-          `${language}: the capstone card calls itself a session (${noun}). It stopped being one.`);
-      }
-    } else {
-      assert.match(card, MINUTES[language],
-        `${language}: session ${n} lost its duration badge`);
-    }
+    assert.match(card, expected,
+      `${language}: session ${session.n} should show ${minutes} ${MINUTES_WORD[language]}. If its length changed, set \`minutes\` on its entry rather than editing the template.`);
 
-    const brief = language === 'he' ? sessions[i].briefHe : sessions[i].briefEn;
+    // And it must not also claim some other duration.
+    const durations = [...card.matchAll(new RegExp(`(\\d+)\\s*${MINUTES_WORD[language]}`, 'g'))].map(m => Number(m[1]));
+    const wrong = durations.filter(d => d !== minutes);
+    assert.equal(wrong.length, 0,
+      `${language}: session ${session.n} shows ${minutes} but also ${wrong.join(', ')} ${MINUTES_WORD[language]}`);
+
+    const brief = language === 'he' ? session.briefHe : session.briefEn;
     assert.ok(card.includes(encodeURIComponent(brief)) || card.includes(brief),
-      `${language}: card ${n} does not link its own brief (${brief})`);
+      `${language}: card ${session.n} does not link its own brief (${brief})`);
   });
 }
 
