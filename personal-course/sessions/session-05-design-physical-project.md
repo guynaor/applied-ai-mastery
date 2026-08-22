@@ -13,21 +13,22 @@ Bring a tape measure, paper or cardboard, and one small thing that annoys you.
 
 Pick something small you want to exist: a drawer organiser, a cable tray, a shelf divider, a stand for a specific object, a bracket, a holder for the thing that never has a home. You will describe it to an AI, watch it become a real 3D model, change it, and test it against the physical world. This is not engineering approval: nothing that carries a person's weight, involves electrics, or is dangerous if it fails.
 
+## A worked example
+
+Before the sequence, here is what one measured drawer looks like — every number carrying where it came from:
+
+| Dimension | Value | Source | Note |
+|---|---|---|---|
+| Internal width | 36.0 cm | measured | Ruler, at the base of the drawer |
+| Clear height | 7.5 cm | measured | Up to the runner of the drawer above |
+| Panel thickness | 1.8 cm | spec | From the maker's furniture sheet |
+| The drawer opens fully | Yes | **assumed** | Never checked. Cheap runners stop at 80% |
+
+That last row is the one that matters. If the runners really do stop at 80%, the usable depth is 33.6 cm rather than 42, and the back of whatever you designed is out of reach. The [sample measurements](../instructor/samples/session-05-measurements.html) sheet has the full drawer, the objects that must fit, and the clearances — use it directly if you have nothing of your own to measure.
+
 ## Sequence
 
 1. **Measure, and mark where every number came from (15 minutes).** Measure the space and the objects. Beside each number write its origin: **measured** with a ruler, **from the maker's spec**, **assumed** by you, or **calculated**. The AI cannot do this part — it has not seen the room, and it will happily invent a dimension that looks reasonable.
-
-   A worked drawer looks like this:
-
-   | Dimension | Value | Source | Note |
-   |---|---|---|---|
-   | Internal width | 36.0 cm | measured | Ruler, at the base of the drawer |
-   | Clear height | 7.5 cm | measured | Up to the runner of the drawer above |
-   | Panel thickness | 1.8 cm | spec | From the maker's furniture sheet |
-   | The drawer opens fully | Yes | **assumed** | Never checked. Cheap runners stop at 80% |
-
-   That last row is the one that matters. If the runners really do stop at 80%, the usable depth is 33.6 cm rather than 42, and the back of whatever you designed is out of reach. The [sample measurements](../instructor/samples/session-05-measurements.html) sheet has the full drawer, the objects that must fit, and the clearances — use it directly if you have nothing of your own to measure.
-
 2. **Describe it and let the AI build it (25 minutes).** Give the tool your measurements and what the object has to do. On the free route it writes OpenSCAD code you paste and render. On the other routes it drives FreeCAD directly and you watch the shape appear. Either way, **read what it produced before you trust it** — ask it which numbers it invented.
 3. **Change one parameter, having predicted the result (15 minutes).** Pick one number — the number of compartments, a wall thickness, a height — and write down what *should* change before you change it. Then change it. If your prediction was wrong, you did not understand the model, and it is much cheaper to find that out now.
 4. **Check it against the real world (25 minutes).** Print the outline at real size, or cut cardboard to the model's dimensions, and put it where it will live. Record the tolerance you found, which assumption turned out wrong, and what you changed. A model that looks correct on screen is not a model that fits.
