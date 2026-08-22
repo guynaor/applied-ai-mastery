@@ -6,7 +6,7 @@ Anyone who wants to use AI confidently in everyday life—across life stages, ex
 
 ## Course goal
 
-Teach practical AI-assisted problem solving for personal decisions, planning, communication, creativity, career preparation, purchasing, financial research, digital organization, and small personal projects.
+Teach practical AI-assisted problem solving for personal decisions, planning, communication, creativity, purchasing, financial research, digital organization, and small personal projects — ending with a capstone that applies every skill in the course to one real problem the learner chooses.
 
 The course does not aim to make students dependent on AI. It teaches them to decide when AI is useful, provide the right context, compare options, verify important claims, protect private information, organize their digital lives, and retain responsibility for consequential decisions.
 
@@ -19,7 +19,7 @@ Sessions 1–6 run **90 minutes** each; session 7 runs **60**. Each combines rel
 3. **10–15 minutes — Verify:** compare, source-check, or stress-test the result.
 4. **5 minutes — Reflect:** save evidence, a reusable rule, and the next human action.
 
-Each session is independently useful while also building toward a personal capstone and portfolio. Claude, ChatGPT, and Gemini pathways are optional; free-access tools, offline workbooks, and facilitator observation always remain valid routes.
+Each session is independently useful while also building toward the capstone that follows session 7. Claude, ChatGPT, and Gemini pathways are optional; free-access tools, offline workbooks, and facilitator observation always remain valid routes.
 
 ## Digital life management as a course-wide skill
 
@@ -31,7 +31,7 @@ Digital life management is woven through the course rather than isolated in one 
 - manage calendars, reminders, and recurring tasks
 - decide what should be automated and what still needs human review
 - protect private, financial, identity, health, and account information
-- preserve useful project evidence for a later portfolio and CV.
+- keep the evidence behind a decision, so it can be checked later or reused.
 
 ## Seven-session syllabus
 
