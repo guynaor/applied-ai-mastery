@@ -102,6 +102,38 @@ for (const language of ['en', 'he']) {
   });
 }
 
+// --- The card's skills must match the syllabus's ----------------------------
+//
+// The portal has no build step, so the skills text is duplicated rather than
+// shared. Duplication is fine as long as it cannot drift, which is what this
+// asserts: every card's skills line must equal its syllabus entry, in both
+// languages. Bold markers are stripped — the syllabus emphasises a phrase, the
+// card does not.
+
+const stripBold = t => t.replace(/\*\*/g, '').replace(/\s+/g, ' ').trim().replace(/\.$/, '');
+
+const enSyllabus = readFileSync(resolve(ROOT, 'personal-course/README.md'), 'utf8');
+const heSyllabus = readFileSync(resolve(ROOT, 'personal-course/he/README.md'), 'utf8');
+
+const enSkills = [...enSyllabus.matchAll(/^\| [1-7] \|[^|]*\|([^|]*)\|/gm)].map(m => stripBold(m[1]));
+const heSkills = [...heSyllabus.matchAll(/\*\*מיומנויות:\*\*([^\n]*)/g)].map(m => stripBold(m[1]));
+
+assert.equal(enSkills.length, sessions.length,
+  `English syllabus lists skills for ${enSkills.length} sessions, portal has ${sessions.length}`);
+assert.equal(heSkills.length, sessions.length,
+  `Hebrew syllabus lists skills for ${heSkills.length} sessions, portal has ${sessions.length}`);
+
+sessions.forEach((session, i) => {
+  for (const [locale, fromSyllabus, fromCard] of [
+    ['English', enSkills[i], session.en[2]],
+    ['Hebrew', heSkills[i], session.he[2]],
+  ]) {
+    assert.ok(fromCard, `${locale}: session ${session.n} has no skills on its portal entry`);
+    assert.equal(stripBold(fromCard), fromSyllabus,
+      `${locale}: session ${session.n}'s skills differ between the portal and the syllabus.\n  portal:   ${stripBold(fromCard)}\n  syllabus: ${fromSyllabus}`);
+  }
+});
+
 // --- personal.html must not contradict the JS it hydrates from --------------
 //
 // The static markup is what shows before hydration and what a crawler indexes.
