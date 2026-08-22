@@ -170,6 +170,33 @@ for(const term of [/application package/i,/audience-specific application/i,/targ
  assert.doesNotMatch(capstoneJournal,term,`English capstone journal must not retain application-package framing: ${term}`);
 }
 
+// The syllabuses are linked from the portal as "Syllabus" and are what a
+// learner or instructor opens to see the course shape. Nothing checked them,
+// so they drifted for two renames and a reorder — still listing the original
+// titles with the app at 4 and the visual session at 6. They carry the
+// canonical titles now, in order, and must keep doing so.
+for(const [locale,path,titles] of [
+ ['English','personal-course/README.md',expectedJournalSessionTitles.English],
+ ['Hebrew','personal-course/he/README.md',expectedJournalSessionTitles.Hebrew],
+]){
+ const syllabus=readFileSync(path,'utf8');
+ const positions=titles.map(full=>{
+  // The syllabus lists bare titles; the journal list carries a "Session N: " prefix.
+  const bare=full.replace(/^(?:Session|מפגש|Capstone|פרויקט סיום)[^:]*:\s*/,'');
+  const at=syllabus.indexOf(bare);
+  assert.notEqual(at,-1,`${locale} syllabus (${path}) is missing the current session title: ${bare}`);
+  return at;
+ });
+ for(let i=1;i<positions.length;i+=1)assert.ok(positions[i]>positions[i-1],
+  `${locale} syllabus lists sessions out of order — "${titles[i]}" appears before "${titles[i-1]}"`);
+ // Scope this to the section that describes session length, or it passes on
+ // any stray "60 minutes" elsewhere in the prose.
+ const formatSection=syllabus.match(locale==='English'?/## Session format[^]*?(?=\n## )/:/## מבנה המסלול[^]*?(?=\n## )/)?.[0] ?? '';
+ assert.ok(formatSection,`${locale} syllabus has no session-format section to state durations in`);
+ assert.match(formatSection,/\b90\b/,`${locale} syllabus must state the 90-minute length of sessions 1-6`);
+ assert.match(formatSection,/\b60\b/,`${locale} syllabus must state session 7's shorter 60-minute length`);
+}
+
 const sessionTwo={
  English:readFileSync('personal-course/sessions/session-02-research-buy-monitor.md','utf8'),
  Hebrew:readFileSync('personal-course/he/sessions/session-02-research-buy-monitor.md','utf8'),

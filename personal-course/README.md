@@ -12,7 +12,7 @@ The course does not aim to make students dependent on AI. It teaches them to dec
 
 ## Session format
 
-Every integrated session is designed for **90 minutes**. It combines related activities into one substantial real-life outcome:
+Sessions 1–6 run **90 minutes** each; session 7 runs **60**. Each combines related activities into one substantial real-life outcome:
 
 1. **5–10 minutes — Frame:** a real problem, privacy boundary, and success conditions.
 2. **25–35 minutes — Integrated studio:** linked activities build one artifact.
@@ -37,65 +37,41 @@ Digital life management is woven through the course rather than isolated in one 
 
 | Session | Title | Integrated outcome |
 |---|---|---|
-| 1 | Ask, Summarize, and Decide | Turn personal information into a verified decision or next step. |
-| 2 | Research, Buy, and Monitor | Compare evidence, identify uncertainty, and define a safe alert; Gemini Deep Research is optional. |
-| 3 | Plan Real Life Together | Produce a feasible travel or event plan with shared ownership and contingencies. |
-| 4 | Build a Small Personal Tool | Specify, test, and maintain a tiny personal web tool without complex coding. |
-| 5 | Design and Organize a Physical Project | Turn measured needs into a tested parametric design concept. |
-| 6 | Create a Trustworthy Visual Story | Create an ethical, sourced, accessible visual story. |
-| 7 | Build a Personal Workflow and Portfolio | Consolidate evidence, a recurring bounded workflow, and a final project. |
+| 1 | Decide What to Do Next | Turn a messy, low-risk question into a verified decision and a next step you choose. |
+| 2 | Buy With Confidence | Research a meaningful purchase, check evidence and terms, define a safe alert. Includes the OpenClaw agent lab. |
+| 3 | Make a Shared Plan Work | Produce a realistic shared plan with responsibilities, buffers, and a fallback. |
+| 4 | From Prompt to Presentation | Carry one idea through the production chain: image, fix, animation, clip from text, narration, deck. |
+| 5 | Make a Space Work Better | Turn real dimensions and constraints into a tested parametric design. |
+| 6 | Solve a Recurring Problem | Build and test a small, self-contained tool for a recurring everyday friction. |
+| 7 | One Project, Every Skill *(60 min)* | Examine the app against real use, then choose and confirm a capstone subject. |
 
-## Why the career lesson comes last
+## Why session 7 is shorter, and what it is for
 
-The final lesson uses the work created throughout the course as evidence of skills. Students can select and present artifacts such as:
+The last session is 60 minutes and spends half of them on session 6's homework: the app each learner built, measured against whether they actually used it. An app is the hardest thing this course asks for and the one most likely to have quietly stopped being useful, so "what did you stop using, and at which step did it stop being worth it" is worth thirty minutes of the room's attention.
 
-- a decision matrix
-- a product comparison
-- a travel plan
-- an event plan and invitation
-- a research brief
-- a mini app
-- a CAD design
-- an image or video story
-- examples of safe automation and digital organization.
+The other thirty launch the capstone. It is the only session that ends by starting something rather than finishing it.
 
-The lesson should help students turn genuine work into:
+## The capstone
 
-- a truthful CV
-- a stronger LinkedIn profile
-- a small GitHub or portfolio collection
-- tailored application messages
-- interview examples using concrete projects and decisions.
+Presented in session 7 and done at home, mentored asynchronously in a shared group chat. One subject the learner chooses — a trip they intend to take, a patch of garden they mean to plant, an event they are hosting — carried through five deliverables. Each uses a session already taught, in order:
 
-## Suggested personal capstone
+| Deliverable | Session | What it must contain |
+|---|---|---|
+| Research brief | 2 | Sources the learner opened themselves, what they decided, what they still do not know |
+| Plan with a spreadsheet | 3 | Budget, schedule, who does what |
+| Presentation | 4 | The production chain, everything generated visibly labelled |
+| Designed object | 5 | Parametric, checked against at least one real measurement |
+| Small app | 6 | Plus its boundary: what it may touch, what needs approval, what stops it |
 
-The student chooses one real project, such as:
+**The subject must be confirmed before anything starts.** A subject where one of the five deliverables does not arise naturally is the wrong subject, and finding that out at deliverable four costs weeks. Learners set their own end date; nothing else anchors the work, since there is no session after it.
 
-- planning a trip with friends
-- organizing a graduation party
-- preparing for a job-application cycle
-- researching and purchasing an expensive product
-- designing a small room or furniture improvement
-- building a simple poll or coordination app
-- creating a personal digital organization workflow.
-
-The capstone should include:
-
-- a clear goal and constraints
-- a prompt or workflow plan
-- at least two compared options or outputs
-- evidence and assumptions
-- one created artifact
-- an organized set of files, tasks, reminders, or follow-up dates
-- a verification checklist
-- a short reflection on what AI helped with and what still required human judgment.
+Deliverables are posted to the group and answered in the open, so one answer serves everyone.
 
 ## Safety and judgment boundaries
 
 - Investment lessons teach research, not personalized financial advice, automated trading, or predictions.
 - Purchasing lessons must distinguish advertised price from total cost, returns, warranty, and seller reliability.
 - Travel information that can change must be verified near booking and departure.
-- CV, LinkedIn, and portfolio content must remain truthful and supported by the student's experience.
 - Images and videos involving real people require consent and should not misrepresent events.
 - Personal, financial, identity, health, location, and account information should not be pasted into AI tools without understanding privacy implications.
 - Automations must include clear stop, pause, review, and failure behavior.
