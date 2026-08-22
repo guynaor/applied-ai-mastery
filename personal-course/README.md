@@ -35,15 +35,15 @@ Digital life management is woven through the course rather than isolated in one 
 
 ## Seven-session syllabus
 
-| Session | Title | Integrated outcome |
-|---|---|---|
-| 1 | Decide What to Do Next | Turn a messy, low-risk question into a verified decision and a next step you choose. |
-| 2 | Buy With Confidence | Research a meaningful purchase, check evidence and terms, define a safe alert. Includes the OpenClaw agent lab. |
-| 3 | Make a Shared Plan Work | Produce a realistic shared plan with responsibilities, buffers, and a fallback. |
-| 4 | From Prompt to Presentation | Carry one idea through the production chain: image, fix, animation, clip from text, narration, deck. |
-| 5 | Make a Space Work Better | Turn real dimensions and constraints into a tested parametric design. |
-| 6 | Solve a Recurring Problem | Build and test a small, self-contained tool for a recurring everyday friction. |
-| 7 | One Project, Every Skill *(60 min)* | Examine the app against real use, then choose and confirm a capstone subject. |
+| Session | Title | Skills you learn | Integrated outcome |
+|---|---|---|---|
+| 1 | Decide What to Do Next | Understanding AI, better prompting, summarising without losing facts, verifying a source | Turn a messy, low-risk question into a verified decision and a next step you choose. |
+| 2 | Buy With Confidence | Deep research, evidence matrices, total-cost thinking, **specifying and building an agent** | Research a meaningful purchase, check evidence and terms, and leave with an agent watching on your behalf. |
+| 3 | Make a Shared Plan Work | Shared planning, scheduling against real constraints, dividing work, designing a fallback | Produce a realistic shared plan with responsibilities, buffers, and a fallback. |
+| 4 | From Prompt to Presentation | Image generation and repair, animating a still, video from text, narration, building a deck | Carry one idea through the production chain, with everything generated visibly labelled. |
+| 5 | Make a Space Work Better | Measuring and sourcing every dimension, parametric design, checking a model against reality | Turn real dimensions and constraints into a tested parametric design. |
+| 6 | Solve a Recurring Problem | Specifying a tool, building in chat and on a platform, testing normal and edge cases | Build and test a small, self-contained tool for a recurring everyday friction. |
+| 7 | One Project, Every Skill *(60 min)* | Judging your own tool against real use, scoping a project that fits your skills | Examine the app against real use, then choose and confirm a capstone subject. |
 
 ## Why session 7 is shorter, and what it is for
 
