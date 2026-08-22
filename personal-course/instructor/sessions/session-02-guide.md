@@ -1,6 +1,6 @@
 # Full session plan — Session 2: Buy With Confidence
 
-**Time:** 90 minutes, plus 15 if you run the OpenClaw extension
+**Time:** 90 minutes
 **Learning outcome:** Learners can separate a research report from evidence, work out total cost rather than headline price, and write an alert rule that can be reviewed and that never takes an action.
 **Session artifact:** A one-page purchase brief: the question and limits, an evidence matrix with two source checks, what remains uncertain, and one alert rule that can be paused.
 
@@ -56,7 +56,7 @@ Some requests take time — a detailed spreadsheet, a presentation, or anything 
 
 **Whether to run Deep Research live.** A Deep Research report takes between five and fifteen minutes to build. Do not stand in front of the class waiting for it. Send the request at minute 13 and keep teaching while it runs — the activity in minutes 16–25 is built for exactly that. If it has not returned in time, open the saved report and carry on.
 
-**Whether to run the OpenClaw demonstration.** The live demonstration costs 15 minutes and requires setup the night before. Without it the session is complete: the alert rule is written and tested on paper. Do not compress it into the hour — either extend to 75 minutes or leave it out.
+**How far to take the agent.** Building it is no longer optional — every learner leaves with one running, and brings its run record back next session. What *is* optional is which route they take. The no-install route is complete: a specification, run by hand against saved pages, with the run written down. The local and cloud routes are for learners who want them and can set them up without you debugging their machine.
 
 ## Session map
 
@@ -65,11 +65,10 @@ Some requests take time — a detailed spreadsheet, a presentation, or anything 
 | 0–10 | **Homework discussion** | What worked and what broke for other people |
 | 10–15 | Opening: the purchase you keep putting off | One real purchase to work on |
 | 15–25 | Define need, budget, must-haves, deal-breakers | A boundary you can research against |
-| 25–45 | Send the research request, build a source list by hand meanwhile | The difference between a research plan and an answer |
-| 45–65 | Evidence matrix and total cost | Source, date, supports or contradicts, what is uncertain |
-| 65–80 | Two source checks and writing the alert rule | A rule that can be reviewed and takes no action |
-| 80–90 | Exit check and reflection | A human decision and a re-check date |
-| +15 (optional) | OpenClaw demonstration with a kill switch | Permissions, saved state, and a stop rule |
+| 25–40 | Send the research request, build a source list by hand meanwhile | The difference between a research plan and an answer |
+| 40–60 | Evidence matrix and total cost | Source, date, supports or contradicts, what is uncertain |
+| 60–85 | Two source checks, the agent's specification, and starting it | A rule that can be reviewed and takes no action |
+| 85–90 | Exit check, and set the homework | A human decision, and an agent that will run all week |
 
 ## 0–10 minutes — Homework discussion
 
@@ -154,7 +153,7 @@ Circulate with these questions rather than answers:
 - “Would the decision change if this detail were wrong?”
 - “What else gets paid beyond this price?”
 
-## 65–80 minutes — Verification and the alert rule
+## 60–85 minutes — Verification, the agent's specification, and starting it
 
 Ask each learner to choose the two claims that would change the decision if they turned out to be wrong, and to open the original source for both. Only two, so they are worth choosing carefully.
 
@@ -173,6 +172,24 @@ Then write one alert rule together. Do not hand out a list of terms — build it
 ### What to say
 
 > “Notice that the last row is not a technical limitation — it is our decision. It is possible to build a system that buys. We are choosing not to, because the alert does not know what is going on in your life this week.”
+
+### Then build it — the last ten minutes
+
+A specification nobody runs is a worksheet. Everyone leaves with something actually watching, on the route they can manage:
+
+- **No-install, and most people take it.** The spec goes in the journal. They run it by hand once against two saved product pages — or the [snapshots page](../../instructor/samples/session-02-snapshots.html) — and write down whether it should have alerted, stayed quiet, or stopped, and why. Over the week they repeat that check three or four times. This is a complete route and produces the same run record as the others.
+- **Local.** OpenClaw with Ollama, public or mock data, a manual first run, a local log.
+- **Cloud.** Their own provider account, separate key, low cap, public data only.
+
+**Run the demonstration on your machine while they set up.** Show the connection without exposing the credential, run it against the three snapshots — above the threshold, below it, and a source that fails to load — and show the stop condition firing. That is the whole point of the third snapshot, and it is the one people forget to design for.
+
+**Do not debug a learner's machine.** If a setup fails, move them to the no-install route and offer to look afterwards. Ten minutes disappears into one laptop.
+
+### The homework
+
+> "Run your agent for the week. Check it, or let it check, at least three times. **Bring the run record next session** — what it caught, what it missed, what fired twice about the same thing, and whether you would give it more access than you gave it today. If it never fired at all, that is a finding, not a failure: it means your trigger was wrong or nothing happened, and those are different problems."
+
+This is the first homework in the course, and it is the one that matters most for what comes later — the boundary thinking here is what the capstone's app deliverable is built on.
 
 ## 80–90 minutes — Exit check and reflection
 
@@ -252,4 +269,4 @@ Everyone completes the no-install specification and run-review route. The local 
 
 ## After the session
 
-Note which claim in the room turned out to be wrong once the source was opened, and keep it as an example for next time. Keep the saved report and the four pages with the course materials, so another facilitator can rebuild the session without hunting for new sources. If time runs short, the block to drop is the OpenClaw demonstration — not the source checks.
+Note which claim in the room turned out to be wrong once the source was opened, and keep it as an example for next time. Keep the saved report and the four pages with the course materials, so another facilitator can rebuild the session without hunting for new sources. If time runs short, shorten the research block — the report arrives while you keep talking anyway. Do not drop the source checks, and do not drop building the agent: a specification nobody ran is the thing this session used to produce and no longer does.
