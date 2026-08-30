@@ -1,7 +1,7 @@
 # Full session plan — Session 1: Decide What to Do Next
 
 **Length:** 90 minutes
-**Learner outcome:** Learners can explain the main layers of an AI system, choose an appropriately bounded tool route, and make a low-risk decision from a clear request, a source, and their own judgment.
+**Learner outcome:** Learners can say in one sentence what a language model is doing, explain the main layers of an AI system, choose an appropriately bounded tool route, and make a low-risk decision from a clear request, a source, and their own judgment.
 **Session artifact:** A one-page verified decision record: request, source-grounded summary, comparison, two checked claims, uncertainty, next action, and review date.
 
 **This session runs 90 minutes, not 60.** The extra time is not overrun — it is questions, and that is where the learning happens.
@@ -14,7 +14,7 @@ These four links are everything you need open to run the session.
 
 | Material | What it is for |
 |---|---|
-| [Projection slides](../samples/session-01-slides.html) | Ten slides, in session order. Every “show on the board” moment in this guide is prepared there. |
+| [Projection slides](../samples/session-01-slides.html) | Twelve slides, in session order. Every “show on the board” moment in this guide is prepared there. |
 | [Sample options page](../samples/session-01-public-options-page.html) | A stable local source for the two options, with dates, costs, and booking conditions. |
 | [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | A downloadable Word file. Every table learners fill in today is in it. |
 | [Session 1 brief](../../sessions/session-01-ask-summarize-decide.md) | What learners see. |
@@ -59,11 +59,11 @@ Use the local page by default. It lets you demonstrate source checking without a
 | Time | Teacher move | Learners produce or notice |
 |---:|---|---|
 | 0–5 | Welcome and low-risk decision hook | A simple everyday decision |
-| 5–20 | AI Geography: map the layers and control boundary | A distinction between app, model, tool, artifact, skill, and agent |
-| 20–30 | Map the three course tools to task modes | A reason to choose one route, not all routes |
-| 30–42 | Reveal the source and model a bounded request | A prompt with goal, context, constraints, output, and check |
-| 42–58 | Run, read, and correct an AI summary | Facts, preferences, unknowns, and claims to verify |
-| 58–78 | Learners make and test their own decision record | A comparison and two source checks |
+| 5–25 | AI Geography: what the model is, what it has grown into, and where control sits | A working mental model of a language model, and a distinction between app, model, tool, artifact, skill, and agent |
+| 25–34 | Map the three course tools to task modes | A reason to choose one route, not all routes |
+| 34–45 | Reveal the source and model a bounded request | A prompt with goal, context, constraints, output, and check |
+| 45–60 | Run, read, and correct an AI summary | Facts, preferences, unknowns, and claims to verify |
+| 60–78 | Learners make and test their own decision record | A comparison and two source checks |
 | 78–90 | Exit check, reflection, and next-step commitment | A human decision and review date |
 
 ## 0–5 minutes — Welcome and session focus
@@ -78,9 +78,47 @@ Ask learners to name a **low-risk** choice: an event, a club, a hobby class, a h
 
 Ask: “Would choosing a medical treatment or sending a message on someone else’s behalf be today’s practice task?” Expected answer: no; those are higher-stakes or external actions and need a different process.
 
-## AI Geography — 5–17 minutes
+## AI Geography — 5–25 minutes
 
-Show [slide 2](../samples/session-01-slides.html) and the [AI Geography — 10-Minute Map](../../../materials/shared/AF-REF-001-ai-geography.md), but teach it rather than assigning it as silent reading. Draw six nested boxes or use the table below. Product names are examples, not a ranking.
+This block runs in four parts: what the machine underneath actually does (slide 2), what it has grown into (slide 3), the six layers and where control sits (slide 4), and three quick checks (slide 5). Teach all of it from the board rather than assigning it as silent reading. Names of products change faster than anything else here, so teach the shape and use the names only as examples.
+
+### 5–9 minutes — What a language model actually does
+
+Show [slide 2](../samples/session-01-slides.html). Most of the room has used one of these and nobody has told them what it is. Two minutes here saves you the whole session.
+
+> “It was trained on an enormous amount of writing, and what it learned to do is predict the next piece of text. One piece at a time, each one the most plausible continuation of everything before it. That is the trick. There is no lookup, no database, no small librarian inside checking a fact before the sentence goes out.”
+
+Then draw the three consequences out of the room rather than stating them:
+
+- **Ask:** “If it is always choosing the most plausible next words, what happens when the plausible answer and the true answer are not the same?” Expected: it produces the plausible one, in exactly the same confident voice as everything else.
+- **Ask:** “How does it know anything about my situation?” Expected: only from what is in this conversation. Whatever you leave out, it fills in for you — that is the same mechanism, not a bug.
+- **Say:** “And it cannot tell which of its own sentences are the shaky ones. It will not flag them, because nothing in how it works knows the difference.”
+
+#### Check for understanding
+
+Ask: “Can a sentence be perfectly written and still be wrong?” Expected: yes — and nothing in the machine would notice. That is the whole reason the rest of today is about checking.
+
+### 9–13 minutes — The same engine, many coats
+
+Show [slide 3](../samples/session-01-slides.html). Walk the rows; do not lecture each one. The point of the slide is the shape of the list, not the six entries.
+
+> “The same engine now comes in a lot of coats. You will hear all of these names, and they will keep changing. What is worth carrying out of here is not the names — it is that the list is ordered by one thing: how much each one can do without you in the room.”
+
+Worth landing as you go:
+
+- **Omni, or multimodal** — the same engine with more senses: it takes images, audio, and video, and can produce them. Practical consequence for this room: you can photograph a page and hand it over instead of typing it out. The checking rule does not change.
+- **Voice and TTS** — speech into text, and text back out as a natural-sounding voice. Say this one out loud: a warm, fluent voice makes people trust an answer more, and it has not made the answer any more checked. It is the same predicted text, read aloud.
+- **Coding agent** — it writes code and runs it on a real machine. This is the first row where it acts on something rather than only producing text for you to read.
+- **Cowork** — you hand over a whole task rather than a message, and it works in the background, often on several tasks at once. Your approval moves to the ends of the work instead of every step.
+- **Self-running agent** — it starts on a schedule or a trigger, with nobody watching at the moment it runs. Everything you would have approved has to be decided beforehand.
+
+#### Check for understanding
+
+Ask: “Which rows on that list could do something you would not be able to undo?” Take answers, then point at the last column: the further down the list, the earlier you have to say what it is allowed to touch. That is exactly what the next slide maps.
+
+### 13–22 minutes — The six layers and where control sits
+
+Show [slide 4](../samples/session-01-slides.html) and the [AI Geography — 10-Minute Map](../../../materials/shared/AF-REF-001-ai-geography.md), but teach it rather than assigning it as silent reading. Draw six nested boxes or use the table below. Product names are examples, not a ranking.
 
 | Layer | Plain-language teacher definition | Ask learners | Control point |
 |---|---|---|---|
@@ -91,11 +129,13 @@ Show [slide 2](../samples/session-01-slides.html) and the [AI Geography — 10-M
 | **Skill** | Reusable instructions and resources for a repeatable kind of work. A prompt is one request; a skill packages a method. | “What would make today’s five-part request reusable?” | Keep the reusable structure clear. |
 | **Agent** | A system that can plan, use permitted tools, inspect results, and continue toward a goal. | “What is different if it can send or change something?” | More ability to act requires more human approval. |
 
-### What to say
+#### What to say
 
 > “A chat answer is text. A tool can reach something else. An agent can take several steps with permitted tools. The closer a system gets to real data or real-world action, the more carefully we choose permissions and approval points.”
 
-Use three rapid checks with [slide 3](../samples/session-01-slides.html). Have learners show fingers or write a letter:
+### 22–25 minutes — Three quick checks
+
+Use three rapid checks with [slide 5](../samples/session-01-slides.html). Have learners show fingers or write a letter:
 
 1. “A saved presentation: artifact or skill?” — **Artifact.**
 2. “A reusable set of instructions and examples for planning a week: prompt or skill?” — **Skill.**
@@ -103,7 +143,7 @@ Use three rapid checks with [slide 3](../samples/session-01-slides.html). Have l
 
 Do not get stuck on brand names. If a learner asks whether a named product “is an agent,” say: “It depends on which features and permissions are active. We name the ability, then decide the control.”
 
-## 20–30 minutes — Map the course tools to the work
+## 25–34 minutes — Map the course tools to the work
 
 Present this as a route map, not a product contest. The learner needs only one route today.
 
@@ -120,7 +160,7 @@ Present this as a route map, not a product contest. The learner needs only one r
 
 Point out the transition: today uses a text-only chat with a supplied source. A later session can use web research; a later session can make a small web artifact; a still later session discusses desktop access. The permissions become broader only when the purpose justifies them.
 
-## 30–42 minutes — Demonstrate the source and a better request
+## 34–45 minutes — Demonstrate the source and a better request
 
 Open the local sample page. Read just enough of both options aloud. Ask learners to identify:
 
@@ -149,7 +189,7 @@ The tool should produce a table. It may correctly identify date, cost, duration,
 - If it picks an option, point back to “Do not choose for me.” Ask for a revised comparison.
 - If it merely shortens the page, ask: “Which facts affect a decision, and which claims still need checking?”
 
-## 42–58 minutes — Make verification visible
+## 45–60 minutes — Make verification visible
 
 Project the response beside the local page. Verify two claims that could change the decision—normally **cost** and **time/registration condition**.
 
@@ -161,7 +201,7 @@ Deliberately make one small correction if possible: perhaps the tool has treated
 
 Ask: “What remains human judgment?” Expected answers include value, interest, social preference, tolerance for uncertainty, and whether to act now or gather more information.
 
-## 58–78 minutes — Guided learner work
+## 60–78 minutes — Guided learner work
 
 Learners now work individually, in pairs, or on paper. Keep the same local source unless they independently choose a similarly safe public page.
 
@@ -227,12 +267,14 @@ Collect or photograph the decision record only through the agreed class process.
 Use these blocks as chapters. Keep the source page visible whenever a claim is made, and put the exact prompt on screen.
 
 1. **Hook (0:00–1:00):** “A useful AI answer is not the same as a decision.” Show the two options.
-2. **AI Geography (1:00–8:00):** Animate the six layers. Pause after each quick check and show the answer only after a five-second beat.
-3. **Choose a route (8:00–10:00):** Show Claude, ChatGPT, Gemini, and paper as equivalent paths for this task; say that one route is enough.
-4. **Prompt build (10:00–15:00):** Start with the vague question, then add goal, context, constraints, output, and check one at a time. Pause viewers to draft theirs.
-5. **Source and verification (15:00–22:00):** Run the prompt, label the table, open the source, and correct one item on screen.
-6. **Independent work (22:00–32:00):** Give a downloadable/printable decision-record grid and three pause prompts: label facts, verify two claims, write a human next action.
-7. **Close (32:00–35:00):** Revisit the safety rule and show a completed anonymised artifact with uncertainty and a review date.
+2. **What the machine does (1:00–3:00):** The next-piece-of-text mental model, and the three consequences: plausible is not true, it only knows this conversation, and it cannot flag its own shaky lines.
+3. **The landscape (3:00–5:00):** Chat, omni, voice and TTS, coding agents, Cowork, self-running agents — presented as one ordered list, by how much each can do without you.
+4. **AI Geography (5:00–12:00):** Animate the six layers. Pause after each quick check and show the answer only after a five-second beat.
+5. **Choose a route (12:00–14:00):** Show Claude, ChatGPT, Gemini, and paper as equivalent paths for this task; say that one route is enough.
+6. **Prompt build (14:00–19:00):** Start with the vague question, then add goal, context, constraints, output, and check one at a time. Pause viewers to draft theirs.
+7. **Source and verification (19:00–26:00):** Run the prompt, label the table, open the source, and correct one item on screen.
+8. **Independent work (26:00–36:00):** Give a downloadable/printable decision-record grid and three pause prompts: label facts, verify two claims, write a human next action.
+9. **Close (36:00–39:00):** Revisit the safety rule and show a completed anonymised artifact with uncertainty and a review date.
 
 Do not present generated text as a fact. Narrate the check: “This line came from the model; this line is confirmed by the source.”
 
