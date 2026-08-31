@@ -40,7 +40,7 @@ Some requests take time — a detailed spreadsheet, a presentation, or anything 
 ### Prepare the room and tools
 
 1. Open one ordinary chat application. The default demonstration uses **Claude**, but ChatGPT or Gemini is equally valid. Log in only to the facilitator account; learners can observe, use a free account they already have, or work on paper.
-2. Open the [local sample options page](../samples/session-01-public-options-page.html) in a second tab. It is a stable stand-in for a public event page. If you prefer a real public page, use a current library, museum, or community-class listing that shows date, cost, duration, and booking conditions.
+2. Open the [local sample options page](../samples/session-01-public-options-page.html) in a second tab. It is a stable stand-in for a public event page. If you prefer a real public page, the vetted one is [Kew Gardens tickets and prices](https://www.kew.org/kew-gardens/visit-kew-gardens/tickets) — see **Teacher decision before starting** below for how to run it.
 3. Keep the [Session 1 learner brief](../../sessions/session-01-ask-summarize-decide.md), the [learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx), and a blank decision-record template on screen or on paper. A four-column page—facts, preferences, unknowns, next action—is enough.
 4. Test the chat application, projector, and the local page. If any one fails, use the printed local-source text below and complete every activity on paper.
 
@@ -53,6 +53,26 @@ Some requests take time — a detailed spreadsheet, a presentation, or anything 
 ### Teacher decision before starting
 
 Use the local page by default. It lets you demonstrate source checking without advertising a product, exposing a real organisation to unexpected traffic, or having the lesson break when a live page changes. A live public page is an optional extension, not a requirement.
+
+#### If you want a real public page: Kew Gardens
+
+**The page:** [Kew Gardens — tickets and prices](https://www.kew.org/kew-gardens/visit-kew-gardens/tickets). Opening times are on the [parent page](https://www.kew.org/kew-gardens).
+
+**Why this one.** It is a large national institution, so it will not fall over and it is not a small business you are advertising. Its prices change roughly once a year rather than weekly. Most importantly, **the same adult ticket has four different prices** — an online price and a higher on-the-day price, each shown twice, with and without the voluntary donation.
+
+**The decision to run on it.** The page is one institution, so do not ask “which of these two?” The real decision it supports is *how and when to visit*: book online for a weekday, or turn up on a Saturday. That is a genuine choice with a real cost gap, and every fact you need is on one page.
+
+**What the page states (facts).** Adult, child, and concession bands. An advance online price and a higher price on the day. Each of those with and without the donation. Opening times, including later weekend closing and a last-entry time.
+
+**What it cannot tell you (unknowns).** How long you will actually stay, travel time and cost, whether the person coming with you qualifies for a concession, and whether the forecast makes an outdoor visit worth it at all.
+
+**The moment to teach.** Ask the tool for a summary and then, in one line, “what does an adult ticket cost?” It will give you a single number. Open the page beside it and count the prices out loud. This is the most useful failure in the session, because the answer was not invented — it was under-specified, and the gap is real money. Move it to **unknown** and ask what else on the page has a condition attached.
+
+**Before class.** Open the page yourself and write down today's adult prices. They drift, and you want to know the right answer before the tool hands you a confident one.
+
+**Traffic.** Run it on your screen only. Do not send a room full of learners to a live booking page.
+
+If you would rather compare two genuinely separate dated options, [V&A What's On](https://www.vam.ac.uk/whatson) lists distinct events with dates and prices on the listing itself, though you must click an event for its duration.
 
 ## Session map
 
