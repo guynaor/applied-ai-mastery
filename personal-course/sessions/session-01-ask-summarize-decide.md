@@ -10,7 +10,7 @@ Pick a small decision genuinely in front of you this week: which workshop to att
 ## Sequence
 
 1. **Turn a vague question into a clear request (10 minutes).** Write down the goal, the options, what limits you, the format you want back, and what is still unknown. Ask Claude, ChatGPT, or Gemini to turn that into one well-formed request — then edit it yourself, until it genuinely describes your question rather than a politer version of it.
-2. **Pull out what matters (10 minutes).** Take one public page or a text you wrote, and ask the tool to extract decisions, dates, actions, open questions, and claims that need checking. Not a summary — a tidy summary is exactly what hides the gaps.
+2. **Pull out what matters (10 minutes).** Take one public page or a text you wrote, and ask the tool to extract decisions, dates, actions, open questions, and claims that need checking. Not a summary — a tidy summary is exactly what hides the gaps. If you have no page of your own, use [Kew Gardens tickets and prices](https://www.kew.org/kew-gardens/visit-kew-gardens/tickets): the same adult ticket is listed at several prices, each with a condition attached.
 3. **Compare, and choose yourself (15 minutes).** Build a small comparison that separates four things: verified facts, your preferences, assumptions, and unknowns. Ask the tool to attack your reasoning and point at what you missed — then you choose.
 4. **Verify before you act (10 minutes).** Open the source and check the two claims that would change the decision if they turned out to be wrong. Correct the comparison if needed, and set a date to revisit whatever is still open.
 
