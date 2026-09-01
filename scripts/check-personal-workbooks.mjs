@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {existsSync,readFileSync} from 'node:fs';
 import JSZip from 'jszip';
+import {hebrewPhrase} from './lib/hebrew-matchers.mjs';
 
 const outputDirectory=process.env.PERSONAL_WORKBOOK_OUTPUT_DIR??'site/assets/downloads';
 // A4 width less the section's two 1440-twip margins, matching build-personal-workbooks.mjs.
@@ -23,7 +24,7 @@ for(const [locale,path] of Object.entries(workbooks)){
  assert.match(xml,/w:fill="C98A2E"/,`${locale} workbook must visually distinguish Bronze tasks`);
  assert.match(xml,/w:fill="94A3B8"/,`${locale} workbook must visually distinguish Silver tasks`);
  assert.match(xml,/w:fill="D4A72C"/,`${locale} workbook must visually distinguish Gold tasks`);
- assert.match(xml,locale==='English' ? /bounded agent-monitor test/ : /סוכן ניטור מוגבל/,
+ assert.match(xml,locale==='English' ? /bounded agent-monitor test/ : hebrewPhrase('סוכן ניטור מוגבל'),
   `${locale} workbook must include the Session 2 agent-monitor homework`);
  const exampleRows=(xml.match(/w:fill="F1F3F6"/g)||[]).length;
  assert.ok(exampleRows>=40,`${locale} workbook must fill its tables with worked examples, found ${exampleRows} example cells`);

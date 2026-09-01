@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import {existsSync,readFileSync} from 'node:fs';
+import {hebrewPhrase} from './lib/hebrew-matchers.mjs';
 import {parseJournalTabs} from './lib/journal-tabs.mjs';
 
 const paths={
@@ -44,13 +45,13 @@ for(let mission=1;mission<=7;mission+=1){
  assert.match(professionalHe,new RegExp(`משימה ${mission}`));
 }
 assert.match(professionalEn,/Capstone/);
-assert.match(professionalHe,/פרויקט מסכם/);
+assert.match(professionalHe,hebrewPhrase('פרויקט מסכם'));
 for(let mission=1;mission<=7;mission+=1){
  assert.match(teacherEn,new RegExp(`Mission ${mission}`));
  assert.match(teacherHe,new RegExp(`משימה ${mission}`));
 }
 assert.match(teacherEn,/Capstone/);
-assert.match(teacherHe,/פרויקט מסכם/);
+assert.match(teacherHe,hebrewPhrase('פרויקט מסכם'));
 
 const expected={
  personal:[

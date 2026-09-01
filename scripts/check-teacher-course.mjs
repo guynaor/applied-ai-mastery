@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {hebrewPhrase} from './lib/hebrew-matchers.mjs';
 import {existsSync,readdirSync,readFileSync} from 'node:fs';
 import path from 'node:path';
 
@@ -83,7 +84,7 @@ for(const legacyTerm of ['K–12','K-12','K–2','K-2','3–5','3-5','6–8','6-
 }
 
 assert.match(courseJs,/יחידת לימוד ליסודי, לחטיבה או לתיכון בבדיקת מורה/,'missing simplified Hebrew capstone title');
-assert.match(courseJs,/א׳–י״ב/,'missing broad Hebrew course grade range');
+assert.match(courseJs,hebrewPhrase('א׳–י״ב'),'missing broad Hebrew course grade range');
 for(const detailedRange of ['יסודי א׳–ו׳','חטיבה ז׳–ט׳','תיכון י׳–י״ב']){
   const lines=hebrewTeacherText.split('\n').filter(line=>/[\u0590-\u05ff]/.test(line));
   assert.ok(!lines.some(line=>line.includes(detailedRange)),`detailed Hebrew grade range remains: ${detailedRange}`);
