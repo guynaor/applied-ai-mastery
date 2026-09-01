@@ -22,7 +22,10 @@ assert.match(hebrewSession,/ללא התקנה/);
 assert.match(hebrewSession,/מעבדה מקומית/);
 assert.match(hebrewSession,/הרפתקה מתקדמת/);
 assert.match(hebrewGuide,/OpenClaw/);
-assert.match(hebrewGuide,/מתג עצירה/);
+// Hebrew construct state puts the definite article on the second noun, so the guide's
+// correct "מתג העצירה" never contains the bare "מתג עצירה". The English mirror above needs
+// no such allowance because "kill switch" is a substring of "the kill switch".
+assert.match(hebrewGuide,/מתג ה?עצירה/);
 assert.match(hebrewGuide,/openclaw\.ai\/showcase/);
 assert.match(hebrewGuide,/Manus/);
 assert.doesNotMatch(hebrewPortfolio,/על הנייר בלבד/);
