@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
+import {hebrewPhrase} from './lib/hebrew-matchers.mjs';
 
 const read=path=>readFileSync(new URL(`../${path}`,import.meta.url),'utf8');
 const englishSession=read('personal-course/sessions/session-02-research-buy-monitor.md');
@@ -18,16 +19,13 @@ assert.match(englishGuide,/openclaw\.ai\/showcase/);
 assert.match(englishGuide,/Manus/);
 assert.doesNotMatch(englishPortfolio,/paper-only/i);
 
-assert.match(hebrewSession,/ללא התקנה/);
-assert.match(hebrewSession,/מעבדה מקומית/);
-assert.match(hebrewSession,/הרפתקה מתקדמת/);
+assert.match(hebrewSession,hebrewPhrase('ללא התקנה'));
+assert.match(hebrewSession,hebrewPhrase('מעבדה מקומית'));
+assert.match(hebrewSession,hebrewPhrase('הרפתקה מתקדמת'));
 assert.match(hebrewGuide,/OpenClaw/);
-// Hebrew construct state puts the definite article on the second noun, so the guide's
-// correct "מתג העצירה" never contains the bare "מתג עצירה". The English mirror above needs
-// no such allowance because "kill switch" is a substring of "the kill switch".
-assert.match(hebrewGuide,/מתג ה?עצירה/);
+assert.match(hebrewGuide,hebrewPhrase('מתג עצירה'));
 assert.match(hebrewGuide,/openclaw\.ai\/showcase/);
 assert.match(hebrewGuide,/Manus/);
-assert.doesNotMatch(hebrewPortfolio,/על הנייר בלבד/);
+assert.doesNotMatch(hebrewPortfolio,hebrewPhrase('על הנייר בלבד'));
 
 console.log('Personal agent lab content contract passed');

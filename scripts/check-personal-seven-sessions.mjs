@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import {existsSync,readFileSync} from 'node:fs';
+import {hebrewPhrase,hebrewAny} from './lib/hebrew-matchers.mjs';
 
 const portalPath='site/assets/js/personal-course.js';
 const publicPaths=[
@@ -72,9 +73,10 @@ const appSession=briefsForSlug('build-personal-tool');
 const appNumber=numberForSlug('build-personal-tool');
 for(const [locale,brief] of Object.entries(appSession)){
  assert.match(brief,/Claude Artifacts/i,`${locale} Session ${appNumber} must use Claude Artifacts for the small web tool`);
+ const [normalCase,edgeCase]=[hebrewPhrase('מקרה רגיל').source,hebrewPhrase('מקרה קצה').source];
  const normalAndEdge=locale==='English'
   ? /(?:normal (?:case|test)[\s\S]*edge (?:case|test)|edge (?:case|test)[\s\S]*normal (?:case|test))/i
-  : /(?:מקרה רגיל[\s\S]*מקרה קצה|מקרה קצה[\s\S]*מקרה רגיל)/;
+  : new RegExp(`(?:${normalCase}[\\s\\S]*${edgeCase}|${edgeCase}[\\s\\S]*${normalCase})`);
  assert.match(brief,normalAndEdge,
   `${locale} Session ${appNumber} must test both a normal case and an edge case`);
 }
@@ -93,19 +95,19 @@ for(const [locale,brief] of Object.entries(capstone)){
   `${locale} session 7 must state its 60-minute length`);
  assert.match(brief,en?/session 6|built in session 6/i:/מפגש 6/,
   `${locale} session 7 must review the app built in session 6`);
- assert.match(brief,en?/least[- ]privilege/i:/הרשאה מזערית/,
+ assert.match(brief,en?/least[- ]privilege/i:hebrewPhrase('הרשאה מזערית'),
   `${locale} capstone must name least-privilege access`);
  assert.match(brief,en?/what it may touch/i:/למה מותר לו לגעת/,
   `${locale} capstone must require the app to state what it may touch`);
  assert.match(brief,en?/needs your approval|always needs your/i:/דורש את האישור שלכם/,
   `${locale} capstone must require the app to state what needs approval`);
- assert.match(brief,en?/what makes it stop|stop rule|stop condition/i:/מה עוצר אותו|כלל עצירה/,
+ assert.match(brief,en?/what makes it stop|stop rule|stop condition/i:hebrewAny('מה עוצר אותו','כלל עצירה'),
   `${locale} capstone must require a stop rule on the app`);
- assert.match(brief,en?/propose your subject|subject.{0,20}confirmed/i:/מציעים נושא|הנושא אושר/,
+ assert.match(brief,en?/propose your subject|subject.{0,20}confirmed/i:hebrewAny('מציעים נושא','הנושא אושר'),
   `${locale} capstone must gate work behind a confirmed subject`);
- assert.match(brief,en?/visible to the group|post .{0,30}group/i:/גלויה לקבוצה|מתפרסם בצ׳אט/,
+ assert.match(brief,en?/visible to the group|post .{0,30}group/i:hebrewAny('גלויה לקבוצה','מתפרסם בצ׳אט'),
   `${locale} capstone must say the work is shared with the group`);
- assert.match(brief,en?/skip that deliverable/i:/ותרו על התוצר/,
+ assert.match(brief,en?/skip that deliverable/i:hebrewPhrase('ותרו על התוצר'),
   `${locale} capstone must tell a learner who missed a session to skip that deliverable`);
  assert.doesNotMatch(brief,/Claude Desktop|OpenClaw|Claude for Chrome/i,
   `${locale} capstone must not retain session 7's demonstration tooling`);
@@ -203,7 +205,7 @@ const sessionTwo={
 };
 for(const [locale,terms] of Object.entries({
  English:[/Gemini Deep Research/i,/evidence matrix|evidence/i,/verif/i,/free[- ]access|free option|free tier|without payment/i],
- Hebrew:[/Gemini Deep Research/i,/מטריצת ראיות|ראיות/,/אימות/,/גישה חינמית|ללא תשלום|חינם/],
+ Hebrew:[/Gemini Deep Research/i,hebrewAny('מטריצת ראיות','ראיות'),/אימות/,hebrewAny('גישה חינמית','ללא תשלום','חינם')],
 })){
  for(const term of terms)assert.match(sessionTwo[locale],term,`${locale} Session 2 must include ${term}`);
 }
@@ -229,14 +231,14 @@ for(const term of [
  `English Session 1 guide must include its full teacher-ready AI orientation: ${term}`);
 for(const term of [
  /^## מפת עולם ה-AI/im,
- /מודל שפה גדול/,
- /יישום AI/,
- /כלים ומחברים/,
+ hebrewPhrase('מודל שפה גדול'),
+ hebrewPhrase('יישום AI'),
+ hebrewPhrase('כלים ומחברים'),
  /תוצר/,
  /מיומנות/,
  /סוכן/,
- /דף ציבורי/,
- /(?:דף (?:אפשרויות )?הדוגמה המקומי|חלופה מקומית)/,
+ hebrewPhrase('דף ציבורי'),
+ hebrewAny('דף הדוגמה המקומי','דף אפשרויות הדוגמה המקומי','חלופה מקומית'),
  /מה לומר/,
  /וידאו/,
  /תקלות/,
@@ -267,7 +269,7 @@ const sessionOneCopy=[
  sessionOneGuides.English,
  sessionOneGuides.Hebrew,
 ].join('\n');
-for(const term of [/\b(?:non-sensitive|sensitive|password|private message|confidential|health information)\b/i,/לא־רגיש|רגיש|סיסמ|הודעות פרטיות|חסוי|מידע רפואי/])assert.doesNotMatch(sessionOneCopy,term,
+for(const term of [/\b(?:non-sensitive|sensitive|password|private message|confidential|health information)\b/i,hebrewAny('רגיש','סיסמ','חסוי','הודעות פרטיות','מידע רפואי')])assert.doesNotMatch(sessionOneCopy,term,
  `Session 1 materials must leave privacy/secrets discussion to the facilitator: ${term}`);
 
 const audienceCopy=publicPaths.map(path=>readFileSync(path,'utf8')).join('\n');
