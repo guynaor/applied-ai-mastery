@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Monitoring snapshots — Session 2</title>
+    <title>Monitoring snapshots</title>
     <style>
       body{font-family:system-ui,sans-serif;line-height:1.6;max-width:54rem;margin:0 auto;padding:1.5rem;color:#17242D}
       h1{border-bottom:3px solid #4E356F;padding-bottom:.4rem}
@@ -29,12 +29,12 @@
   </head>
   <body>
     <main>
-      <h1>Monitoring snapshots — Session 2</h1>
+      <h1>Monitoring snapshots</h1>
       <p class="warn"><strong>Agent demonstration material only.</strong> This page is separate from the product sources so an AI tool can be given the sources without the snapshots.</p>
       <p>These three snapshots are used in the agent demonstration. They represent the same product page at three points in time.</p>
 
       <section>
-        <span class="tag">Snapshot A — above the threshold</span>
+        <span class="tag">Snapshot A</span>
         <h2>AquaSilent AS-640</h2>
         <table>
           <tr><th>Field</th><th>Value</th></tr>
@@ -46,7 +46,7 @@
       </section>
 
       <section>
-        <span class="tag">Snapshot B — below the threshold</span>
+        <span class="tag">Snapshot B</span>
         <h2>AquaSilent AS-640</h2>
         <table>
           <tr><th>Field</th><th>Value</th></tr>
@@ -58,10 +58,9 @@
       </section>
 
       <section class="fail">
-        <span class="tag">Snapshot C — the source does not load</span>
+        <span class="tag">Snapshot C</span>
         <h2>Error 503 — service unavailable</h2>
         <p>The page could not be read. There is no new value and no read timestamp.</p>
-        <p><strong>What the agent should do:</strong> not alert on price, not guess a value, and not treat the old value as current. On the first failure, retry. On the second, stop itself and send one “needs review” notice.</p>
       </section>
     </main>
   </body>

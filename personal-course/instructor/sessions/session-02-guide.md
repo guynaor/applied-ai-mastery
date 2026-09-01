@@ -16,7 +16,7 @@ These four links are everything you need open to run the session.
 |---|---|
 | [Projection slides](../../instructor/samples/session-02-slides.html) | Ten slides, in session order. Every “show on the board” moment in this guide is prepared there. |
 | [Sample product sources](../../instructor/samples/session-02-product-sources.html) | Two seller pages, a manufacturer page, and an independent review, with contradictions planted. The address can be handed straight to an AI tool, or the text copied from it. |
-| [Monitoring snapshots](../../instructor/samples/session-02-snapshots.html) | A separate page, for the agent demonstration only. |
+| [Monitoring snapshots](../../instructor/samples/session-02-snapshots.html) | A separate page, for the agent demonstration only. Your key: **A** reads 950, **B** reads 780, **C** fails with a 503. The page does not label them, because working out which one should fire against a trigger of 800 is the learners' job. |
 | [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | A downloadable Word file. Every table learners fill in today is in it. |
 | [Session 2 brief](../../sessions/session-02-research-buy-monitor.md) | What learners see. |
 
@@ -194,7 +194,7 @@ A specification nobody runs is a worksheet. Everyone leaves with something actua
 - **Local.** OpenClaw with Ollama, public or mock data, a manual first run, a local log.
 - **Cloud.** Their own provider account, separate key, low cap, public data only.
 
-**Run the demonstration on your machine while they set up.** Show the connection without exposing the credential, run it against the three snapshots — above the threshold, below it, and a source that fails to load — and show the stop condition firing. That is the whole point of the third snapshot, and it is the one people forget to design for.
+**Run the demonstration on your machine while they set up.** Show the connection without exposing the credential, run it against the three snapshots — A at 950, B at 780, and C which fails to load — and show the stop condition firing. That is the whole point of the third snapshot, and it is the one people forget to design for.
 
 **Do not debug a learner's machine.** If a setup fails, move them to the no-install route and offer to look afterwards. Ten minutes disappears into one laptop.
 
@@ -224,7 +224,7 @@ One written reflection question: “What had almost convinced you before you ope
 
 ### Setup the night before
 
-Use only a provider or API account you own. Do not display an API key on screen, do not add learners to the account, and do not ask them for access details. Install OpenClaw on the demonstration machine, complete onboarding against your chosen cloud model, and run its health check. Prepare a separate project and key with a low budget, a workspace with no sensitive material, and one notification channel you control. The three demonstration snapshots — above the threshold, below it, and a source that does not load — are on the [snapshots page](../../instructor/samples/session-02-snapshots.html), kept separate from the product sources so an AI tool can be given the sources alone.
+Use only a provider or API account you own. Do not display an API key on screen, do not add learners to the account, and do not ask them for access details. Install OpenClaw on the demonstration machine, complete onboarding against your chosen cloud model, and run its health check. Prepare a separate project and key with a low budget, a workspace with no sensitive material, and one notification channel you control. The three demonstration snapshots are on the [snapshots page](../../instructor/samples/session-02-snapshots.html), kept separate from the product sources so an AI tool can be given the sources alone. A reads 950, B reads 780, and C fails with a 503. They are labelled A, B and C and nothing more: the page states readings, not verdicts, so that the agent — and the room — has to compare them against the 800 trigger rather than read the answer off the page.
 
 Before you open the tool, show the three-step **kill switch** on [slide 9](../../instructor/samples/session-02-slides.html): disable the schedule, stop the gateway, revoke the separate key. Leave it visible for the whole demonstration.
 
@@ -238,9 +238,9 @@ Show the contract on [slide 8](../../instructor/samples/session-02-slides.html) 
 
 1. Show the model connection without exposing the credential. Explain that OpenClaw is the runtime, and that the cloud model is billed and authorised separately from it.
 2. Show the workspace, the allowed-source list, the schedule, the run history, and the notification channel. Ask learners to identify the trigger, the duplicate rule, the approval point, and the stop rule themselves.
-3. Run it once with the below-threshold snapshot. Inspect the source, the date, and the draft alert before it reaches the channel.
+3. Run it once with **Snapshot B**, which reads 780 against a trigger of 800. Inspect the source, the date, and the draft alert before it reaches the channel.
 4. Run it again with exactly the same snapshot. No second alert. This is the moment the rule you wrote at minute 45 proves itself.
-5. Switch to the snapshot where the source fails to load. Show the logged failure and the “needs review” notice. Do not fix it by widening permissions.
+5. Switch to **Snapshot C**, where the source returns a 503. Show the logged failure and the “needs review” notice. Do not fix it by widening permissions. What you are looking for, and what to say if it does not happen: it must not alert on price, must not guess a value, and must not treat the last reading as current. First failure, retry. Second failure, stop itself and send one “needs review” notice. If the agent instead reports the old 780 as though it were today's price, stop and show the room — that is the failure this snapshot exists to produce.
 6. Use the kill switch in front of the group, and say it plainly: an agent that stopped is the correct result when its evidence or its permissions are insufficient.
 
 ### What people are building
