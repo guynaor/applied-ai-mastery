@@ -42,7 +42,7 @@ Some requests take time — a detailed spreadsheet, a presentation, or anything 
 
 1. Open **Gemini** in the facilitator account. If Deep Research is available to you, good. If not, Claude or ChatGPT do the same job and the session does not break.
 2. Prepare a **saved Deep Research report** on the same purchase question in advance. This is the most important safety net in this session, for the reason given below.
-3. Open the [four sample product sources](../../instructor/samples/session-02-product-sources.html) — two seller offers, a manufacturer warranty page, and an independent review. This is a stable substitute for live pages: the numbers will not shift mid-explanation, and the contradictions the lesson depends on are already planted. If you prefer real pages, check in advance that at least one contradiction exists between them.
+3. Open the [four sample product sources](../../instructor/samples/session-02-product-sources.html) — two seller offers, a manufacturer warranty page, and an independent review. This is a stable substitute for live pages: the numbers will not shift mid-explanation, and the contradictions the lesson depends on are already planted. If you prefer real pages, the vetted one is [PriceSpy](https://pricespy.co.uk) — see **Two facilitator decisions before starting** below for how to run it.
 4. Open the [projection slides](../../instructor/samples/session-02-slides.html) in a separate tab. Every moment where this guide says “show on the board” is already prepared there, in the same order.
 5. Have the [Session 2 brief](../../sessions/session-02-research-buy-monitor.md) and the [learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) on screen or in print. Every table learners fill in today is in the journal.
 
@@ -52,9 +52,22 @@ Some requests take time — a detailed spreadsheet, a presentation, or anything 
 - A device with one AI tool, **or** paper and a partner to watch the demonstration.
 - One place to keep the evidence matrix: a document, a notes app, or paper.
 
-### Two facilitator decisions before starting
+### Three facilitator decisions before starting
 
 **Whether to run Deep Research live.** A Deep Research report takes between five and fifteen minutes to build. Do not stand in front of the class waiting for it. Send the request at minute 13 and keep teaching while it runs — the activity in minutes 16–25 is built for exactly that. If it has not returned in time, open the saved report and carry on.
+
+**Whether to use a real comparison page.** The local sample set is the default: the numbers hold still and the contradictions are already there. If you want a live page instead, use a **price comparison site**, not a single shop. A comparison page puts one product in front of many sellers, which is the whole lesson on one screen, and it can be handed to an AI tool as an address — most retailers cannot. Checked in August 2026: an AI tool given a PriceSpy address reads it fine, while Amazon, AliExpress and KSP all refuse an automated read and have to be copied as text instead.
+
+The vetted page is a dishwasher on [PriceSpy](https://pricespy.co.uk) — search a common model and open its product page. What you get:
+
+- **Many shops, one product.** Sixteen on the page checked, so “which is cheapest” stops being a lookup and starts being a comparison.
+- **A price history, which is the moment worth teaching.** The page shows the lowest and highest price it has seen. On the page checked, current offers started at £374 while the history recorded a low of £329 and a trend marked *Rising*. Ask the tool “what is the best price?”, get one number, then open the history beside it. The answer was not wrong. It was answering a smaller question than the one you asked.
+- **No warranty terms at all.** The comparison site does not carry them, so the total-cost block at minute 45 has to reach a second source. That pressure is real rather than staged.
+- **Specifications that read as facts and are not all comparable** — energy class, kWh per 100 cycles, noise class.
+
+**Before class.** Open the page and write down today's numbers, the history low, and how many shops are listed. They drift daily, and you want the right answer before the tool gives you a confident one.
+
+**Traffic.** Run it on your screen. Do not send a room full of learners to a live retail page.
 
 **How far to take the agent.** Building it is no longer optional — every learner leaves with one running, and brings its run record back next session. What *is* optional is which route they take. The no-install route is complete: a specification, run by hand against saved pages, with the run written down. The local and cloud routes are for learners who want them and can set them up without you debugging their machine.
 
