@@ -38,7 +38,9 @@ The message to send:
 
 As in earlier sessions — **take a real recurring problem of your own and build the solution live in front of the class.** Here there is an extra reason: these platforms burn through a free quota fairly quickly, and if everyone builds separately some will stall halfway. When the heavy building runs on your account, nobody gets blocked.
 
-Learners build the tiny version themselves — it is cheap — and fill in the journal for their own problem. You run the platform; they propose what to ask for.
+**This session is demonstrated, not worked through.** You build both versions on your own screen — the tiny one and the platform one — and they propose what to ask for at every step. With twenty or more people on a call, even the cheap build costs you the room: some stall on quota, some on a typo, and you cannot see which.
+
+Building their own tiny version is the homework, and the journal tables go with it. What they do here is decide: what to shrink it to, what to test it with, and what the platform added that nobody asked for.
 
 ### What to ask before every request
 

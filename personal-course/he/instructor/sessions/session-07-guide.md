@@ -10,6 +10,7 @@
 
 | החומר | למה הוא משמש |
 |---|---|
+| [שקפים להקרנה](../../../instructor/samples/session-07-slides-he.html) | שבעה שקפים, לפי סדר המפגש. תרשים פרויקט הסיום בשקף 3 הוא זה שמנחית את „זו לא עבודה חדשה”. |
 | [דף המשימה למפגש 7](../../sessions/session-07-workflow-portfolio-project.md) | מה שהלומדים רואים: המפגש, ופרויקט הסיום שהוא משיק. |
 | [גבול לכלי לדוגמה](../../../instructor/samples/session-07-permission-map-he.html) | מה כולל הגבול של תוצר 5. הציגו אותו בחצי השני. |
 | [יומן הלמידה](../../../../site/assets/downloads/applied-ai-mastery-personal-journal-he.docx) | הנושא, יומן התוצרים, וטבלת הגבול של הכלי. |

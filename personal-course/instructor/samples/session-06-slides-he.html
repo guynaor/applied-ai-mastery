@@ -5,129 +5,405 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>שקפים להקרנה — מפגש 6: לפתור בעיה חוזרת</title>
     <style>
-      :root{--primary:#4E356F;--soft:#F0EAFA;--text:#17242D;--line:#d6dae0;--muted:#55606E;--warn:#b3413f}
+      /* Session 2 is about the distance between a confident number and what you actually
+         pay. The deck borrows retail signage — enormous figures, tiny small print — and
+         audits it. Colour is not decoration here: amber is always somebody's claim, teal
+         is always something checked at source, slate is always still unknown. Slide 2
+         teaches that legend and every later slide relies on it.
+         System fonts only: the session has to run with no network. */
+      :root{
+        --ink:#111820;
+        --paper:#FBF9F5;
+        --brand:#4E356F;
+        --claim:#E0821A;
+        --evidence:#0F7B6C;
+        --unknown:#7A8794;
+        --stop:#C4342F;
+        --rule:#DAD3C8;
+        --display:system-ui,-apple-system,"Segoe UI",sans-serif;
+      }
       *{box-sizing:border-box}
-      body{font-family:system-ui,sans-serif;line-height:1.5;margin:0;color:var(--text);background:#fff}
-      .slide{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:4vh 6vw;border-bottom:1px solid var(--line);page-break-after:always}
-      .num{color:var(--muted);font-size:1rem;letter-spacing:.08em;margin-bottom:1rem}
-      h1{font-size:clamp(1.8rem,4.5vw,3rem);color:var(--primary);margin:0 0 1.5rem}
-      h2{font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--primary);margin:1.5rem 0 .6rem}
-      p,li{font-size:clamp(1.05rem,1.9vw,1.4rem)}
-      .big{font-size:clamp(1.3rem,2.8vw,2rem);line-height:1.45}
-      .box{background:var(--soft);border-inline-start:6px solid var(--primary);padding:1.2rem 1.5rem;border-radius:6px}
-      .prompt{background:#17242D;color:#F4F6F8;padding:1.2rem 1.5rem;border-radius:6px;font-size:clamp(1rem,1.9vw,1.35rem);line-height:1.6}
-      .warn{background:#fdf0f0;border-inline-start:6px solid var(--warn);padding:1rem 1.4rem;border-radius:6px;margin:.6rem 0;font-size:clamp(1.1rem,2.2vw,1.5rem)}
-      table{border-collapse:collapse;width:100%;font-size:clamp(.95rem,1.7vw,1.25rem)}
-      th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:start}
-      th{background:var(--primary);color:#fff}
-      tbody tr:nth-child(even){background:#FAFAFC}
-      .total td{font-weight:700;background:var(--soft)}
-      .say{border:2px dashed var(--primary);border-radius:6px;padding:1.2rem 1.5rem;font-style:italic}
-      ol,ul{padding-inline-start:1.4rem}
-      @media print{.slide{min-height:auto;padding:1.5rem;border:0}}
+      html{-webkit-text-size-adjust:100%}
+      body{
+        font-family:var(--display);
+        margin:0;background:var(--paper);color:var(--ink);
+        font-variant-numeric:tabular-nums;
+        line-height:1.25;
+      }
+
+      .slide{
+        min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+        padding:7vh 6vw 9vh;position:relative;
+        border-bottom:1px solid var(--rule);page-break-after:always;
+      }
+      .slide.dark{background:var(--ink);color:var(--paper)}
+      .slide.dark .eyebrow{color:#8E9AA6}
+      .slide.dark .rule{background:#2A343F}
+
+      /* Structural marker. Slides are a timed sequence, so the number and the minute
+         range carry real information for the facilitator, not decoration. */
+      .eyebrow{
+        position:absolute;top:3.4vh;inset-inline-start:6vw;inset-inline-end:6vw;
+        display:flex;justify-content:space-between;gap:1rem;
+        font-size:clamp(.8rem,1.25vw,1.05rem);
+        text-transform:uppercase;letter-spacing:.2em;font-weight:700;
+        color:var(--unknown);
+      }
+      .rule{position:absolute;top:6.6vh;inset-inline:6vw;height:1px;background:var(--rule)}
+
+      h1{
+        font-size:clamp(1.9rem,5.2vw,4.1rem);
+        font-weight:800;letter-spacing:-.028em;line-height:1.04;
+        margin:0 0 .6em;max-width:20ch;
+      }
+      h1.wide{max-width:28ch}
+      h2{
+        font-size:clamp(.9rem,1.5vw,1.2rem);
+        text-transform:uppercase;letter-spacing:.18em;font-weight:700;
+        color:var(--unknown);margin:2.2rem 0 .7rem;
+      }
+      p{margin:0 0 .7em}
+      .lede{font-size:clamp(1.25rem,2.5vw,2.05rem);max-width:42ch;line-height:1.4}
+      .lede strong{font-weight:700}
+
+      /* The small print. The session's whole argument is that this is where the
+         conditions live, so it gets a real typographic voice rather than being hidden. */
+      .fineprint{
+        font-size:clamp(1.05rem,1.95vw,1.55rem);letter-spacing:.02em;
+        color:var(--unknown);max-width:60ch;line-height:1.5;
+      }
+      .fineprint .mark{color:var(--claim);font-weight:800}
+
+      .mark{font-weight:800}
+      sup.mark{font-size:.55em;vertical-align:super;margin-inline-start:.08em}
+
+      /* Enormous figures are the point of this deck. */
+      .figure{
+        font-size:clamp(3rem,11vw,9rem);font-weight:800;letter-spacing:-.045em;
+        line-height:.9;display:block;
+      }
+      .figure-sm{font-size:clamp(2rem,6vw,4.6rem);font-weight:800;letter-spacing:-.04em;line-height:.95}
+      .caption{
+        font-size:clamp(.88rem,1.45vw,1.15rem);text-transform:uppercase;
+        letter-spacing:.18em;font-weight:700;color:var(--unknown);margin-top:.5rem;
+      }
+
+      .claim{color:var(--claim)}
+      .evidence{color:var(--evidence)}
+      .unknown{color:var(--unknown)}
+      .stop{color:var(--stop)}
+
+      .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,4vw,4rem);align-items:start}
+      .panel{border-top:5px solid var(--rule);padding-top:1.1rem}
+      .panel.is-claim{border-top-color:var(--claim)}
+      .panel.is-evidence{border-top-color:var(--evidence)}
+      .panel .caption{margin:0 0 .8rem}
+
+      .legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1.6rem;margin-top:1rem}
+      .swatch{border-top:9px solid;padding-top:.9rem}
+      .swatch h3{font-size:clamp(1.35rem,2.8vw,2.2rem);margin:0 0 .3rem;font-weight:800;letter-spacing:-.02em}
+      .swatch p{font-size:clamp(1rem,1.8vw,1.4rem);color:var(--unknown);margin:0;line-height:1.4}
+
+      .boxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1rem}
+      .cell{border:2px solid var(--ink);padding:1rem 1.1rem;border-radius:3px}
+      .cell .caption{margin:0 0 .45rem;color:var(--brand)}
+      .cell p{font-size:clamp(1.05rem,1.95vw,1.5rem);margin:0;line-height:1.35}
+      .cell.ghost{border-style:dashed;border-color:var(--unknown);background:transparent}
+      .cell.ghost .caption{color:var(--unknown)}
+      .cell.ghost p{color:var(--unknown)}
+
+      .prompt{
+        background:var(--ink);color:var(--paper);border-radius:4px;
+        padding:clamp(1rem,2.4vw,1.8rem);
+        font-size:clamp(1.1rem,2.05vw,1.6rem);line-height:1.5;max-width:56ch;
+      }
+      .prompt .claim,.prompt .evidence{font-weight:800}
+
+      ol.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:1.1rem}
+      ol.steps li{counter-increment:s;display:flex;gap:1rem;align-items:baseline;
+        font-size:clamp(1.3rem,2.8vw,2.4rem);font-weight:700;letter-spacing:-.015em}
+      ol.steps li::before{
+        content:counter(s);font-size:clamp(.9rem,1.4vw,1.15rem);font-weight:800;
+        color:var(--stop);border:2px solid var(--stop);border-radius:50%;
+        width:2.1em;height:2.1em;display:grid;place-items:center;flex:none;letter-spacing:0;
+      }
+
+      .qa{display:grid;grid-template-columns:auto 1fr;gap:.55rem 1.6rem;align-items:baseline;
+        font-size:clamp(1.1rem,2.05vw,1.6rem);max-width:62ch}
+      .qa dt{font-weight:800;color:var(--brand);white-space:nowrap}
+      .qa dd{margin:0;color:var(--ink)}
+      .qa .last{color:var(--stop)}
+
+      .fill{
+        font-size:clamp(1.25rem,2.8vw,2.25rem);line-height:1.5;max-width:28ch;font-weight:600;
+      }
+      .fill b{
+        display:inline-block;border-bottom:3px solid var(--claim);
+        min-width:5.5em;color:var(--claim);font-weight:800;
+      }
+
+
+      /* Long blocks stay behind a title the facilitator clicks. On a shared screen a wall
+         of text is unreadable anyway, and the click matches how the session is taught:
+         put the question to the room, then open the answer. */
+      details.reveal{border-top:3px solid var(--rule);margin-top:1.8rem;max-width:62ch}
+      details.reveal>summary{
+        cursor:pointer;list-style:none;padding:1rem 0;
+        font-size:clamp(1.1rem,2.1vw,1.7rem);font-weight:800;letter-spacing:-.015em;
+        color:var(--brand);display:flex;align-items:center;gap:.7rem;
+      }
+      details.reveal>summary::-webkit-details-marker{display:none}
+      details.reveal>summary::before{
+        content:"+";flex:none;display:grid;place-items:center;
+        width:1.4em;height:1.4em;border:3px solid currentColor;border-radius:50%;
+        font-size:.8em;line-height:1;font-weight:800;
+      }
+      details.reveal[open]>summary::before{content:"–"}
+      details.reveal>summary:focus-visible{outline:3px solid var(--claim);outline-offset:4px}
+      .slide.dark details.reveal{border-top-color:#2A343F}
+      .slide.dark details.reveal>summary{color:var(--claim)}
+
+      /* Slide navigation. Kept faint until pointed at, so it never competes with the slide
+         on a shared screen, and hidden entirely when printing. */
+      .deck-nav{
+        position:fixed;inset-block-end:1.3rem;inset-inline-end:1.3rem;z-index:20;
+        /* Pinned to LTR so the button order is the DOM order in both languages. Each deck
+           then emits the buttons in the order its reading direction runs, so "next" always
+           sits on the side the reader is heading toward and its arrow points that way. */
+        display:flex;direction:ltr;align-items:center;gap:.35rem;
+        background:rgba(17,24,32,.88);color:var(--paper);
+        border-radius:999px;padding:.4rem .5rem;
+        opacity:.3;transition:opacity .18s ease;
+      }
+      .deck-nav:hover,.deck-nav:focus-within{opacity:1}
+      .deck-nav button{
+        font:inherit;font-weight:800;font-size:1.25rem;line-height:1;
+        width:2.3rem;height:2.3rem;border-radius:50%;border:0;cursor:pointer;
+        background:transparent;color:inherit;display:grid;place-items:center;padding:0;
+      }
+      .deck-nav button:hover:not([disabled]){background:rgba(255,255,255,.16)}
+      .deck-nav button:focus-visible{outline:3px solid var(--claim);outline-offset:2px}
+      .deck-nav button[disabled]{opacity:.28;cursor:default}
+      .deck-count{
+        font-size:.95rem;font-weight:700;letter-spacing:.05em;
+        font-variant-numeric:tabular-nums;padding:0 .45rem;min-width:5ch;text-align:center;
+        /* "2 / 13" is bidi-neutral, so under dir="rtl" it reorders to "13 / 2". */
+        direction:ltr;unicode-bidi:isolate;
+      }
+      @media print{.deck-nav{display:none}}
+      svg{display:block;width:100%;height:auto;overflow:visible}
+      .svg-wrap{margin:.6rem 0 .4rem}
+      text{font-family:var(--display);font-variant-numeric:tabular-nums}
+
+      @media (max-width:750px){
+        .split{grid-template-columns:1fr}
+        .slide{min-height:auto;padding:3.4rem 1.4rem 2.6rem}
+      }
+      @media print{
+        .slide{min-height:auto;padding:1.4rem;border:0}
+        body{background:#fff}
+        .slide.dark{background:#fff;color:var(--ink)}
+        .slide.dark .eyebrow{color:var(--unknown)}
+      }
+      @media (prefers-reduced-motion:no-preference){
+        .slide{scroll-margin-top:0}
+      }
     </style>
   </head>
   <body>
 
-    <section class="slide">
-      <p class="num">שקף 1 — פתיחה, דקות 10–20</p>
-      <h1>מה אתם עושים כל חודש מחדש על פתק, ותמיד מאבדים?</h1>
-      <div class="say big">היום נבנה לזה פתרון פעמיים: גרסה זעירה בצ׳אט, ואפליקציה אמיתית. ההשוואה ביניהן היא השיעור.</div>
+    <section class="slide dark">
+      <p class="eyebrow"><span>01 &middot; פתיחה</span><span>דקות 10–20</span></p>
+      <div class="rule"></div>
+      <h1 class="wide">מה אתם עושים מחדש על פתק כל חודש, ותמיד מאבדים?</h1>
+      <p class="lede">היום בונים פתרון פעמיים: אחד קטן בצ׳אט, ואפליקציה אמיתית. ההשוואה היא השיעור.</p>
     </section>
+
     <section class="slide">
-      <p class="num">שקף 2 — מצמצמים</p>
+      <p class="eyebrow"><span>02 &middot; לכווץ</span><span>דקות 10–20</span></p>
+      <div class="rule"></div>
       <h1>משתמש אחד, בעיה אחת, עד שלוש פעולות</h1>
-      <div class="box big">
-        <p><strong>המשתמש והבעיה:</strong> אני מחלק הוצאות עם שני שותפים לדירה בכל חודש.</p>
-        <p><strong>שלוש פעולות:</strong> להוסיף הוצאה &nbsp;•&nbsp; להציג יתרות &nbsp;•&nbsp; לאפס.</p>
-        <p><strong>מה אסור:</strong> לשמור פרטי חשבון בנק, או להעביר כסף אמיתי.</p>
-      </div>
-      <div class="say">כל פעולה רביעית עולה לכם בבדיקה שלא תספיקו להריץ — והיום פי שניים, כי בונים פעמיים.</div>
+      <dl class="qa">
+        <dt>מי</dt><dd>אדם אחד, בשם, לא „משתמשים”</dd>
+        <dt>מה</dt><dd>הדבר האחד שהוא עושה מחדש כל חודש</dd>
+        <dt>פעולות</dt><dd>שלוש לכל היותר</dd>
+        <dt class="stop">אסור</dt><dd class="stop">מה שהוא לעולם לא יעשה</dd>
+      </dl>
+      <p class="fineprint" style="margin-top:1.8rem">כל פעולה רביעית עולה לכם בבדיקה שלא תריצו — כפליים היום, כי בונים פעמיים.</p>
     </section>
-    <section class="slide">
-      <p class="num">שקף 3 — הגרסה הזעירה, דקות 20–35</p>
-      <h1>קודם הזול והמהיר</h1>
-      <div class="prompt">בנה/י עמוד רשת עצמאי אחד לחלוקת הוצאות בין שלושה שותפים. שלוש פעולות בלבד: להוסיף הוצאה (מי שילם, כמה, על מה), להציג כמה כל אחד חייב, ולאפס. תוויות בעברית, כפתור איפוס ברור, והכול בקובץ אחד. בלי התחברות ובלי שליחת נתונים לשום מקום. אם שדה ריק או לא מספרי — הצג/י הודעה במקום לחשב.</div>
+
+    <section class="slide dark">
+      <p class="eyebrow"><span>03 &middot; הגרסה הקטנה</span><span>דקות 20–35</span></p>
+      <div class="rule"></div>
+      <h1>קודם הזולה והמהירה</h1>
+      <details class="reveal">
+        <summary>הבקשה המלאה</summary>
+        <div class="prompt">בנה דף אינטרנט עצמאי אחד לחלוקת הוצאות בין שלושה שותפים לדירה. שלוש פעולות בלבד: להוסיף הוצאה, לראות מי חייב למי, לאפס את החודש. <span class="evidence">בלי התחברות, בלי שרת, הכול בקובץ אחד.</span></div>
+      </details>
     </section>
+
     <section class="slide">
-      <p class="num">שקף 4 — להוציא את זה מהכלי</p>
-      <h1>תוצר שרץ רק אצל הכלי אינו תוצר</h1>
-      <ol class="big">
-        <li>הורידו את הקובץ, או העתיקו את הקוד לקובץ בשם <code>tool.html</code>.</li>
-        <li>פתחו בדפדפן בלחיצה כפולה. הוא אמור לרוץ בלי אינטרנט.</li>
-        <li>אם משהו לא עובד — כנראה קובץ חיצוני שלא ירד יחד איתו.</li>
+      <p class="eyebrow"><span>04 &middot; להוציא אותו החוצה</span><span>דקות 20–35</span></p>
+      <div class="rule"></div>
+      <h1>תוצר שרץ רק בתוך הכלי עדיין לא שלכם</h1>
+      <ol class="steps">
+        <li>הורידו אותו, או העתיקו את הקוד לקובץ.</li>
+        <li>פתחו אותו בלחיצה כפולה. הוא אמור לרוץ בלי אינטרנט.</li>
+        <li>אם משהו נשבר, בדרך כלל זה קובץ שלא ירד יחד איתו.</li>
       </ol>
-      <div class="warn">„שנה/י כך שהכול יהיה בקובץ אחד — בלי ספרייה חיצונית, בלי גופן מהאינטרנט ובלי תמונה מרוחקת.”</div>
     </section>
+
     <section class="slide">
-      <p class="num">שקף 5 — בדיקה, דקות 35–45</p>
-      <h1>קודם המקרה הרגיל, ורק אז קלף</h1>
-      <table>
-        <thead><tr><th>הבדיקה</th><th>מה ציפיתי</th><th>מה קרה בפועל</th><th>התיקון</th></tr></thead>
-        <tbody>
-          <tr><td>שניים, הוצאה של 150 ש"ח</td><td>„דנה חייבת ליוסי 75”</td><td>הציג 150 — לא חילק</td><td>תיקנתי ובדקתי שוב</td></tr>
-        </tbody>
-      </table>
-      <div class="say">קלף ששבר את הכלי הוא בדיקה שהצליחה.</div>
+      <p class="eyebrow"><span>05 &middot; בדיקות</span><span>דקות 35–45</span></p>
+      <div class="rule"></div>
+      <h1>קודם המקרה הרגיל. רק אחר כך קלף.</h1>
+      <div class="split">
+        <div class="panel is-evidence"><p class="caption">מצופה</p><p class="lede evidence">„דנה חייבת ליוסי 75”</p></div>
+        <div class="panel is-claim"><p class="caption">בפועל</p><p class="lede claim">הציג 150 — לא חילק בכלל</p></div>
+      </div>
+      <p class="fineprint" style="margin-top:2rem">קלף ששבר את הכלי הוא בדיקה שהצליחה.</p>
     </section>
+
     <section class="slide">
-      <p class="num">שקף 6 — האפליקציה האמיתית, דקות 45–70</p>
-      <h1>אותה בעיה, פלטפורמה אמיתית</h1>
-      <table>
-        <thead><tr><th>הפלטפורמה</th><th>מתאימה ל</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Lovable</strong></td><td>אפליקציית ווב — נפתחת בדפדפן, יש לה כתובת שאפשר לשלוח</td></tr>
-          <tr class="total"><td><strong>Manus</strong></td><td>PWA שמתקינים למסך הבית — עם התחברות ושרת</td></tr>
-        </tbody>
-      </table>
-      <div class="say">ב-Manus מוסיפים: „בנה/י כ-PWA שאפשר להתקין, עם חשבונות משתמש, כך שכולם רואים את אותם נתונים.”</div>
-      <div class="warn">למה לא אפליקציה אמיתית לאייפון? כי זה דורש חשבון מפתח, חתימה ואישור. PWA עוקפת את הכול: Safari → שיתוף → „הוסף למסך הבית”.</div>
+      <p class="eyebrow"><span>06 &middot; שלושה מסלולים</span><span>דקות 45–70</span></p>
+      <div class="rule"></div>
+      <h1>אותה בעיה, שלושה מקומות שבהם היא יכולה לגור</h1>
+        <div class="svg-wrap">
+        <svg style="max-width:94%;margin-inline:auto" viewBox="0 0 1000 224" role="img" aria-label="שלושה מסלולים: קובץ אחד על המחשב שלכם שרק אתם רואים, אפליקציית ווב על השרת שלהם שכל מי שיש לו קישור רואה, ו-PWA עם חשבונות שרק מוזמנים רואים.">
+          <rect x="690" y="34" width="260" height="92" rx="6" fill="none" stroke="#0F7B6C" stroke-width="4"/>
+          <text x="820" y="90" text-anchor="middle" font-size="30" font-weight="800" fill="#0F7B6C">קובץ אחד</text>
+          <text x="820" y="164" text-anchor="middle" font-size="25" font-weight="700" fill="#55606E">על המחשב שלכם</text>
+          <text x="820" y="204" text-anchor="middle" font-size="24" font-weight="800" fill="#7A8794">רק אתם</text>
+          <rect x="370" y="34" width="260" height="92" rx="6" fill="none" stroke="#E0821A" stroke-width="4"/>
+          <text x="500" y="90" text-anchor="middle" font-size="30" font-weight="800" fill="#E0821A">אפליקציית ווב</text>
+          <text x="500" y="164" text-anchor="middle" font-size="25" font-weight="700" fill="#55606E">על השרת שלהם</text>
+          <text x="500" y="204" text-anchor="middle" font-size="24" font-weight="800" fill="#7A8794">כל מי שיש לו הקישור</text>
+          <rect x="50" y="34" width="260" height="92" rx="6" fill="none" stroke="#E0821A" stroke-width="4"/>
+          <text x="180" y="90" text-anchor="middle" font-size="30" font-weight="800" fill="#E0821A">PWA</text>
+          <text x="180" y="164" text-anchor="middle" font-size="25" font-weight="700" fill="#55606E">השרת שלהם, לפי חשבון</text>
+          <text x="180" y="204" text-anchor="middle" font-size="24" font-weight="800" fill="#7A8794">מי שהזמנתם</text>
+        </svg>
+        </div>
     </section>
+
+    <section class="slide dark">
+      <p class="eyebrow"><span>07 &middot; מה נוסף בלי שביקשתם</span><span>דקות 45–70</span></p>
+      <div class="rule"></div>
+      <h1 class="claim">„ביקשתי שני מסכים. כמה יש כאן?”</h1>
+      <p class="lede">הפלטפורמות מוסיפות הרבה שלא ביקשתם — כולל התחברות, שהופכת את זה בשקט למערכת חשבונות.</p>
+      <p class="fineprint" style="margin-top:1.8rem">זו לא תקלה. אבל עכשיו זה שלכם להסביר לכל מי שתזמינו.</p>
+    </section>
+
     <section class="slide">
-      <p class="num">שקף 7 — ההשוואה שהיא השיעור</p>
-      <h1>שלוש דרכים לאותה בעיה</h1>
-      <table>
-        <thead><tr><th></th><th>צ׳אט</th><th>Lovable</th><th>Manus</th></tr></thead>
-        <tbody>
-          <tr><td>מה יוצא</td><td>קובץ אחד</td><td>אפליקציית ווב</td><td>PWA עם התחברות</td></tr>
-          <tr><td>הנתונים</td><td>נעלמים ברענון</td><td>נשמרים</td><td>על שרת, לכל חשבון</td></tr>
-          <tr><td>מי רואה</td><td>רק אתם</td><td>כל מי שיש לו קישור</td><td>רק מי שהזמנתם</td></tr>
-          <tr><td>איך זה מגיע לטלפון</td><td>לא באמת</td><td>סימנייה</td><td>„הוסף למסך הבית”</td></tr>
-          <tr class="total"><td>מה נוסף בלי שביקשתם</td><td>כלום</td><td>הרבה</td><td>הרבה, כולל התחברות</td></tr>
-        </tbody>
-      </table>
-      <div class="say">„ביקשתי שני מסכים. כמה יש כאן?”</div>
+      <p class="eyebrow"><span>08 &middot; שליטה</span><span>דקות 70–80</span></p>
+      <div class="rule"></div>
+      <h1>ארבע החלטות לפני ששולחים את זה למישהו</h1>
+      <dl class="qa">
+        <dt>נשמר איפה</dt><dd>קובץ על המחשב שלי, או שרת של מישהו אחר</dd>
+        <dt>מי יכול לפתוח</dt><dd>מי שיש לו הקובץ, או מי שיש לו הקישור</dd>
+        <dt>איך מוחקים</dt><dd>מוחקים את הקובץ — או משהו שרק נראה כמו מחיקה</dd>
+        <dt class="stop">ואם תפסיקו לשלם</dt><dd class="stop">הקובץ נשאר אצלכם. השאר זו שאלה טובה</dd>
+      </dl>
     </section>
+
+    <section class="slide dark">
+      <p class="eyebrow"><span>09 &middot; הגבול</span><span>דקות 70–80</span></p>
+      <div class="rule"></div>
+      <h1 class="stop">מה אנחנו לא בונים</h1>
+      <ol class="steps">
+        <li>בלי סיסמאות ובלי פרטי חשבון.</li>
+        <li>בלי מידע של אנשים אחרים בלי ידיעתם.</li>
+        <li>בלי החלטות בעלות משקל כספי או רפואי.</li>
+      </ol>
+    </section>
+
     <section class="slide">
-      <p class="num">שקף 8 — שליטה, דקות 70–80</p>
-      <h1>ארבע החלטות לפני ששולחים למישהו</h1>
-      <table>
-        <thead><tr><th>השאלה</th><th>בגרסה הזעירה</th><th>בפלטפורמה</th></tr></thead>
-        <tbody>
-          <tr><td>איפה נשמר?</td><td>קובץ אצלי</td><td>שרת של מישהו אחר</td></tr>
-          <tr><td>מי יכול לפתוח?</td><td>מי שיש לו הקובץ</td><td>מי שיש לו הקישור</td></tr>
-          <tr><td>איך מוחקים?</td><td>מוחקים את הקובץ</td><td>לא תמיד מה שנראה כמו מחיקה</td></tr>
-          <tr><td>של מי החשבונות?</td><td>אין חשבונות</td><td>שלכם — ושל מי שהזמנתם</td></tr>
-          <tr class="total"><td>ואם תפסיקו לשלם?</td><td>הקובץ נשאר אצלכם</td><td>שאלה טובה. בדקו לפני שמזמינים אנשים</td></tr>
-        </tbody>
-      </table>
+      <p class="eyebrow"><span>10 &middot; בדיקת יציאה</span><span>דקות 80–90</span></p>
+      <div class="rule"></div>
+      <h1>השלימו את המשפט</h1>
+      <p class="fill">הכלי שלי עושה <b></b>. הוא נשבר כש<b></b>. לא הייתי נותן לו <b></b>.</p>
+      <h2>והשאלה ששווה לשבת איתה</h2>
+      <p class="lede">איזו משתי הגרסאות באמת תפתחו בחודש הבא?</p>
     </section>
-    <section class="slide">
-      <p class="num">שקף 9 — מה לא בונים היום</p>
-      <h1>הגבול</h1>
-      <ul class="big">
-        <li>בלי סיסמאות ובלי פרטי חשבון</li>
-        <li>בלי נתונים של אנשים אחרים בלי שהם יודעים</li>
-        <li>בלי החלטות עם משמעות כספית או רפואית</li>
-      </ul>
-      <div class="say">ואת Manus כבר פגשנו במפגש 2, בתפקיד אחר לגמרי. אותה פלטפורמה — פעם סוכן, פעם בונה אפליקציות.</div>
-    </section>
-    <section class="slide">
-      <p class="num">שקף 10 — בדיקת יציאה, דקות 80–90</p>
-      <h1>להשלים בקול או בכתב</h1>
-      <div class="box big">הכלי שלי עושה <strong>[פעולה אחת]</strong>. הוא נכשל כש<strong>[מקרה הקצה]</strong>. אשתמש בפועל ב<strong>[איזו גרסה]</strong> כי <strong>[למה]</strong>.</div>
-      <h2>ושאלת ההתבוננות</h2>
-      <p class="big">מה האפליקציה עושה טוב יותר מהפתק — ומה הפתק עשה טוב יותר ממנה?</p>
-    </section>
+
+    <nav class="deck-nav" aria-label="ניווט בין שקפים">
+      <button type="button" data-next aria-label="השקף הבא">&lsaquo;</button>
+      <span class="deck-count" data-count aria-live="polite"></span>
+      <button type="button" data-prev aria-label="השקף הקודם">&rsaquo;</button>
+    </nav>
+
+    <script>
+      (function(){
+        var slides=[].slice.call(document.querySelectorAll('.slide'));
+        var nav=document.querySelector('.deck-nav');
+        if(slides.length<2||!nav)return;
+        var prev=nav.querySelector('[data-prev]'),
+            next=nav.querySelector('[data-next]'),
+            count=nav.querySelector('[data-count]'),
+            rtl=document.documentElement.dir==='rtl';
+
+        function currentIndex(){
+          var best=0,bestDist=Infinity;
+          slides.forEach(function(s,i){
+            var d=Math.abs(s.getBoundingClientRect().top);
+            if(d<bestDist){bestDist=d;best=i;}
+          });
+          return best;
+        }
+        function update(i){
+          if(i==null)i=currentIndex();
+          count.textContent=(i+1)+' / '+slides.length;
+          prev.disabled=i===0;
+          next.disabled=i===slides.length-1;
+        }
+        function go(i){
+          i=Math.max(0,Math.min(slides.length-1,i));
+          // Instant, deliberately. A presentation cuts between slides rather than gliding,
+          // gliding compresses badly over video, and smooth scrolling is silently skipped
+          // by the browser whenever the tab is not in the foreground.
+          slides[i].scrollIntoView({behavior:'auto',block:'start'});
+          update(i);
+        }
+        prev.addEventListener('click',function(e){go(currentIndex()-1);if(e.detail)this.blur();});
+        next.addEventListener('click',function(e){go(currentIndex()+1);if(e.detail)this.blur();});
+
+        // Horizontal arrows follow reading direction, so in Hebrew Left moves forward.
+        // Down, Up, Page keys and Space mean the same thing in both.
+        var FORWARD=['PageDown','ArrowDown',' ','Spacebar',rtl?'ArrowLeft':'ArrowRight'],
+            BACK=['PageUp','ArrowUp',rtl?'ArrowRight':'ArrowLeft'];
+        addEventListener('keydown',function(e){
+          if(e.metaKey||e.ctrlKey||e.altKey)return;
+          var t=e.target;
+          // A reveal or a button must keep its own Space and Enter.
+          if(t&&t.closest&&t.closest('summary,a,button,input,textarea,select,[contenteditable]')
+             &&(e.key===' '||e.key==='Spacebar'||e.key==='Enter'))return;
+          if(FORWARD.indexOf(e.key)>-1){e.preventDefault();go(currentIndex()+1);}
+          else if(BACK.indexOf(e.key)>-1){e.preventDefault();go(currentIndex()-1);}
+          else if(e.key==='Home'){e.preventDefault();go(0);}
+          else if(e.key==='End'){e.preventDefault();go(slides.length-1);}
+        });
+
+        var ticking=false;
+        addEventListener('scroll',function(){
+          if(ticking)return;
+          ticking=true;
+          requestAnimationFrame(function(){update();ticking=false;});
+        },{passive:true});
+        update(0);
+      })();
+
+      // A closed <details> prints as nothing, which would quietly drop the contract and
+      // the conditions from a handout. Open everything to print, then put it back.
+      addEventListener('beforeprint',function(){
+        document.querySelectorAll('details').forEach(function(d){
+          d.dataset.wasOpen=d.open?'1':'0';d.open=true;
+        });
+      });
+      addEventListener('afterprint',function(){
+        document.querySelectorAll('details').forEach(function(d){
+          if(d.dataset.wasOpen==='0')d.open=false;
+        });
+      });
+    </script>
   </body>
 </html>
