@@ -3,116 +3,383 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>שקפים להקרנה — מפגש 7: לבנות מערכת אישית</title>
+    <title>שקפים להקרנה — מפגש 7: פרויקט אחד, כל המיומנויות</title>
     <style>
-      :root{--primary:#4E356F;--soft:#F0EAFA;--text:#17242D;--line:#d6dae0;--muted:#55606E;--warn:#b3413f}
+      /* Session 2 is about the distance between a confident number and what you actually
+         pay. The deck borrows retail signage — enormous figures, tiny small print — and
+         audits it. Colour is not decoration here: amber is always somebody's claim, teal
+         is always something checked at source, slate is always still unknown. Slide 2
+         teaches that legend and every later slide relies on it.
+         System fonts only: the session has to run with no network. */
+      :root{
+        --ink:#111820;
+        --paper:#FBF9F5;
+        --brand:#4E356F;
+        --claim:#E0821A;
+        --evidence:#0F7B6C;
+        --unknown:#7A8794;
+        --stop:#C4342F;
+        --rule:#DAD3C8;
+        --display:system-ui,-apple-system,"Segoe UI",sans-serif;
+      }
       *{box-sizing:border-box}
-      body{font-family:system-ui,sans-serif;line-height:1.5;margin:0;color:var(--text);background:#fff}
-      .slide{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:4vh 6vw;border-bottom:1px solid var(--line);page-break-after:always}
-      .num{color:var(--muted);font-size:1rem;letter-spacing:.08em;margin-bottom:1rem}
-      h1{font-size:clamp(1.8rem,4.5vw,3rem);color:var(--primary);margin:0 0 1.5rem}
-      h2{font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--primary);margin:1.5rem 0 .6rem}
-      p,li{font-size:clamp(1.05rem,1.9vw,1.4rem)}
-      .big{font-size:clamp(1.3rem,2.8vw,2rem);line-height:1.45}
-      .box{background:var(--soft);border-inline-start:6px solid var(--primary);padding:1.2rem 1.5rem;border-radius:6px}
-      .prompt{background:#17242D;color:#F4F6F8;padding:1.2rem 1.5rem;border-radius:6px;font-size:clamp(1rem,1.9vw,1.35rem);line-height:1.6}
-      .warn{background:#fdf0f0;border-inline-start:6px solid var(--warn);padding:1rem 1.4rem;border-radius:6px;margin:.6rem 0;font-size:clamp(1.1rem,2.2vw,1.5rem)}
-      table{border-collapse:collapse;width:100%;font-size:clamp(.95rem,1.7vw,1.25rem)}
-      th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:start}
-      th{background:var(--primary);color:#fff}
-      tbody tr:nth-child(even){background:#FAFAFC}
-      .total td{font-weight:700;background:var(--soft)}
-      .say{border:2px dashed var(--primary);border-radius:6px;padding:1.2rem 1.5rem;font-style:italic}
-      ol,ul{padding-inline-start:1.4rem}
-      @media print{.slide{min-height:auto;padding:1.5rem;border:0}}
+      html{-webkit-text-size-adjust:100%}
+      body{
+        font-family:var(--display);
+        margin:0;background:var(--paper);color:var(--ink);
+        font-variant-numeric:tabular-nums;
+        line-height:1.25;
+      }
+
+      .slide{
+        min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+        padding:7vh 6vw 9vh;position:relative;
+        border-bottom:1px solid var(--rule);page-break-after:always;
+      }
+      .slide.dark{background:var(--ink);color:var(--paper)}
+      .slide.dark .eyebrow{color:#8E9AA6}
+      .slide.dark .rule{background:#2A343F}
+
+      /* Structural marker. Slides are a timed sequence, so the number and the minute
+         range carry real information for the facilitator, not decoration. */
+      .eyebrow{
+        position:absolute;top:3.4vh;inset-inline-start:6vw;inset-inline-end:6vw;
+        display:flex;justify-content:space-between;gap:1rem;
+        font-size:clamp(.8rem,1.25vw,1.05rem);
+        text-transform:uppercase;letter-spacing:.2em;font-weight:700;
+        color:var(--unknown);
+      }
+      .rule{position:absolute;top:6.6vh;inset-inline:6vw;height:1px;background:var(--rule)}
+
+      h1{
+        font-size:clamp(1.9rem,5.2vw,4.1rem);
+        font-weight:800;letter-spacing:-.028em;line-height:1.04;
+        margin:0 0 .6em;max-width:20ch;
+      }
+      h1.wide{max-width:28ch}
+      h2{
+        font-size:clamp(.9rem,1.5vw,1.2rem);
+        text-transform:uppercase;letter-spacing:.18em;font-weight:700;
+        color:var(--unknown);margin:2.2rem 0 .7rem;
+      }
+      p{margin:0 0 .7em}
+      .lede{font-size:clamp(1.25rem,2.5vw,2.05rem);max-width:42ch;line-height:1.4}
+      .lede strong{font-weight:700}
+
+      /* The small print. The session's whole argument is that this is where the
+         conditions live, so it gets a real typographic voice rather than being hidden. */
+      .fineprint{
+        font-size:clamp(1.05rem,1.95vw,1.55rem);letter-spacing:.02em;
+        color:var(--unknown);max-width:60ch;line-height:1.5;
+      }
+      .fineprint .mark{color:var(--claim);font-weight:800}
+
+      .mark{font-weight:800}
+      sup.mark{font-size:.55em;vertical-align:super;margin-inline-start:.08em}
+
+      /* Enormous figures are the point of this deck. */
+      .figure{
+        font-size:clamp(3rem,11vw,9rem);font-weight:800;letter-spacing:-.045em;
+        line-height:.9;display:block;
+      }
+      .figure-sm{font-size:clamp(2rem,6vw,4.6rem);font-weight:800;letter-spacing:-.04em;line-height:.95}
+      .caption{
+        font-size:clamp(.88rem,1.45vw,1.15rem);text-transform:uppercase;
+        letter-spacing:.18em;font-weight:700;color:var(--unknown);margin-top:.5rem;
+      }
+
+      .claim{color:var(--claim)}
+      .evidence{color:var(--evidence)}
+      .unknown{color:var(--unknown)}
+      .stop{color:var(--stop)}
+
+      .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,4vw,4rem);align-items:start}
+      .panel{border-top:5px solid var(--rule);padding-top:1.1rem}
+      .panel.is-claim{border-top-color:var(--claim)}
+      .panel.is-evidence{border-top-color:var(--evidence)}
+      .panel .caption{margin:0 0 .8rem}
+
+      .legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1.6rem;margin-top:1rem}
+      .swatch{border-top:9px solid;padding-top:.9rem}
+      .swatch h3{font-size:clamp(1.35rem,2.8vw,2.2rem);margin:0 0 .3rem;font-weight:800;letter-spacing:-.02em}
+      .swatch p{font-size:clamp(1rem,1.8vw,1.4rem);color:var(--unknown);margin:0;line-height:1.4}
+
+      .boxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1rem}
+      .cell{border:2px solid var(--ink);padding:1rem 1.1rem;border-radius:3px}
+      .cell .caption{margin:0 0 .45rem;color:var(--brand)}
+      .cell p{font-size:clamp(1.05rem,1.95vw,1.5rem);margin:0;line-height:1.35}
+      .cell.ghost{border-style:dashed;border-color:var(--unknown);background:transparent}
+      .cell.ghost .caption{color:var(--unknown)}
+      .cell.ghost p{color:var(--unknown)}
+
+      .prompt{
+        background:var(--ink);color:var(--paper);border-radius:4px;
+        padding:clamp(1rem,2.4vw,1.8rem);
+        font-size:clamp(1.1rem,2.05vw,1.6rem);line-height:1.5;max-width:56ch;
+      }
+      .prompt .claim,.prompt .evidence{font-weight:800}
+
+      ol.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:1.1rem}
+      ol.steps li{counter-increment:s;display:flex;gap:1rem;align-items:baseline;
+        font-size:clamp(1.3rem,2.8vw,2.4rem);font-weight:700;letter-spacing:-.015em}
+      ol.steps li::before{
+        content:counter(s);font-size:clamp(.9rem,1.4vw,1.15rem);font-weight:800;
+        color:var(--stop);border:2px solid var(--stop);border-radius:50%;
+        width:2.1em;height:2.1em;display:grid;place-items:center;flex:none;letter-spacing:0;
+      }
+
+      .qa{display:grid;grid-template-columns:auto 1fr;gap:.55rem 1.6rem;align-items:baseline;
+        font-size:clamp(1.1rem,2.05vw,1.6rem);max-width:62ch}
+      .qa dt{font-weight:800;color:var(--brand);white-space:nowrap}
+      .qa dd{margin:0;color:var(--ink)}
+      .qa .last{color:var(--stop)}
+
+      .fill{
+        font-size:clamp(1.25rem,2.8vw,2.25rem);line-height:1.5;max-width:28ch;font-weight:600;
+      }
+      .fill b{
+        display:inline-block;border-bottom:3px solid var(--claim);
+        min-width:5.5em;color:var(--claim);font-weight:800;
+      }
+
+
+      /* Long blocks stay behind a title the facilitator clicks. On a shared screen a wall
+         of text is unreadable anyway, and the click matches how the session is taught:
+         put the question to the room, then open the answer. */
+      details.reveal{border-top:3px solid var(--rule);margin-top:1.8rem;max-width:62ch}
+      details.reveal>summary{
+        cursor:pointer;list-style:none;padding:1rem 0;
+        font-size:clamp(1.1rem,2.1vw,1.7rem);font-weight:800;letter-spacing:-.015em;
+        color:var(--brand);display:flex;align-items:center;gap:.7rem;
+      }
+      details.reveal>summary::-webkit-details-marker{display:none}
+      details.reveal>summary::before{
+        content:"+";flex:none;display:grid;place-items:center;
+        width:1.4em;height:1.4em;border:3px solid currentColor;border-radius:50%;
+        font-size:.8em;line-height:1;font-weight:800;
+      }
+      details.reveal[open]>summary::before{content:"–"}
+      details.reveal>summary:focus-visible{outline:3px solid var(--claim);outline-offset:4px}
+      .slide.dark details.reveal{border-top-color:#2A343F}
+      .slide.dark details.reveal>summary{color:var(--claim)}
+
+      /* Slide navigation. Kept faint until pointed at, so it never competes with the slide
+         on a shared screen, and hidden entirely when printing. */
+      .deck-nav{
+        position:fixed;inset-block-end:1.3rem;inset-inline-end:1.3rem;z-index:20;
+        /* Pinned to LTR so the button order is the DOM order in both languages. Each deck
+           then emits the buttons in the order its reading direction runs, so "next" always
+           sits on the side the reader is heading toward and its arrow points that way. */
+        display:flex;direction:ltr;align-items:center;gap:.35rem;
+        background:rgba(17,24,32,.88);color:var(--paper);
+        border-radius:999px;padding:.4rem .5rem;
+        opacity:.3;transition:opacity .18s ease;
+      }
+      .deck-nav:hover,.deck-nav:focus-within{opacity:1}
+      .deck-nav button{
+        font:inherit;font-weight:800;font-size:1.25rem;line-height:1;
+        width:2.3rem;height:2.3rem;border-radius:50%;border:0;cursor:pointer;
+        background:transparent;color:inherit;display:grid;place-items:center;padding:0;
+      }
+      .deck-nav button:hover:not([disabled]){background:rgba(255,255,255,.16)}
+      .deck-nav button:focus-visible{outline:3px solid var(--claim);outline-offset:2px}
+      .deck-nav button[disabled]{opacity:.28;cursor:default}
+      .deck-count{
+        font-size:.95rem;font-weight:700;letter-spacing:.05em;
+        font-variant-numeric:tabular-nums;padding:0 .45rem;min-width:5ch;text-align:center;
+        /* "2 / 13" is bidi-neutral, so under dir="rtl" it reorders to "13 / 2". */
+        direction:ltr;unicode-bidi:isolate;
+      }
+      @media print{.deck-nav{display:none}}
+      svg{display:block;width:100%;height:auto;overflow:visible}
+      .svg-wrap{margin:.6rem 0 .4rem}
+      text{font-family:var(--display);font-variant-numeric:tabular-nums}
+
+      @media (max-width:750px){
+        .split{grid-template-columns:1fr}
+        .slide{min-height:auto;padding:3.4rem 1.4rem 2.6rem}
+      }
+      @media print{
+        .slide{min-height:auto;padding:1.4rem;border:0}
+        body{background:#fff}
+        .slide.dark{background:#fff;color:var(--ink)}
+        .slide.dark .eyebrow{color:var(--unknown)}
+      }
+      @media (prefers-reduced-motion:no-preference){
+        .slide{scroll-margin-top:0}
+      }
     </style>
   </head>
   <body>
 
-    <section class="slide">
-      <p class="num">שקף 1 — פתיחה, דקות 0–5</p>
-      <h1>מה מכל מה שעשינו בקורס אתם באמת תמשיכו לעשות?</h1>
-      <div class="say big">היום נבנה דף פתיחה אחד. המדד היחיד שלו: האם תחזרו אליו בעוד חודש.</div>
+    <section class="slide dark">
+      <p class="eyebrow"><span>01 &middot; האפליקציה בשימוש אמיתי</span><span>דקות 0–30</span></p>
+      <div class="rule"></div>
+      <h1 class="wide">באמת השתמשתם בה — או שהיא פשוט נשכחה?</h1>
+      <p class="lede">הגרסה ששורדת מגע עם השבוע האמיתי שלכם שווה יותר מזו שנראית טוב בהדגמה.</p>
+      <p class="fineprint" style="margin-top:1.6rem">אם הפסקתם להשתמש בה, זו מסקנה על הבעיה, לא כישלון של הבנייה.</p>
     </section>
+
     <section class="slide">
-      <p class="num">שקף 2 — ראיות, דקות 5–15</p>
-      <h1>שלושה עד חמישה דברים שבאמת עשיתם</h1>
-      <table>
-        <thead><tr><th>מה קרה</th><th>איפה זה מתועד</th><th>מה עשיתי בעצמי</th><th>מה עוד לא ידוע לי</th></tr></thead>
-        <tbody>
-          <tr><td>סיכום מחקר הקנייה, מפגש 2</td><td>ביומן, טבלת הראיות</td><td>הגדרתי קריטריונים ופתחתי את דף היצרן</td><td>אם הייתי מוצא/ת את אותה סתירה בלי הטבלה</td></tr>
-        </tbody>
-      </table>
-      <div class="say">אל תמציאו תוצאות — וגם אל תשפרו אותן קצת. „לא עבד” הוא ראיה טובה בדיוק כמו „עבד”.</div>
+      <p class="eyebrow"><span>02 &middot; מה לשאול</span><span>דקות 0–30</span></p>
+      <div class="rule"></div>
+      <h1>שלוש שאלות, ואף אחת מהן היא לא „זה עובד?”</h1>
+      <dl class="qa">
+        <dt>השתמשתי בה כש</dt><dd>באיזה יום, לעשות מה — או אף פעם</dd>
+        <dt>היא נשברה על</dt><dd>הדבר הראשון שהחיים עשו לה</dd>
+        <dt class="stop">הפסקתי כי</dt><dd class="stop">התשובה הכי שימושית בחדר</dd>
+      </dl>
+      <p class="fineprint" style="margin-top:1.8rem">אל תתקנו כאן אפליקציה של אף אחד. שלושים דקות נעלמות לתוך באג אחד — רשמו, הציעו להסתכל אחר כך, והמשיכו.</p>
     </section>
+
     <section class="slide">
-      <p class="num">שקף 3 — דף פתיחה, דקות 15–27</p>
-      <h1>ארבע שורות שהופכות מטרה למשהו שחוזרים אליו</h1>
-      <div class="box big">
-        <p><strong>הצעד הבא:</strong> פעולה אחת, לא „להתקדם”.</p>
-        <p><strong>כל כמה זמן אני בודק/ת:</strong> תאריך, לא „מדי פעם”.</p>
-        <p><strong>איפה הדברים:</strong> קבצים, תזכורות, רשימות.</p>
-        <p><strong>מתי זה נגמר:</strong> איך נראה „סיימתי”.</p>
-      </div>
-      <div class="say">מטרה בלי השורה האחרונה נמשכת לנצח, ואז נזנחת.</div>
+      <p class="eyebrow"><span>03 &middot; פרויקט הסיום</span><span>דקות 30–55</span></p>
+      <div class="rule"></div>
+      <h1>לא עבודה חדשה. כל מפגש, פעם אחת, על נושא אחד.</h1>
+        <div class="svg-wrap">
+        <svg style="max-width:96%;margin-inline:auto" viewBox="0 0 1000 244" role="img" aria-label="נושא אחד שנבחר בראש, ומתחתיו חמישה תוצרים: מחקר ממפגש 2, תוכנית ממפגש 3, מצגת ממפגש 4, חפץ ממפגש 5, ואפליקציה ממפגש 6.">
+          <rect x="60" y="16" width="880" height="60" rx="6" fill="#4E356F"/>
+          <text x="500" y="56" text-anchor="middle" font-size="30" font-weight="800" fill="#FBF9F5">נושא אחד שאתם בוחרים</text>
+          <line x1="860" y1="76" x2="860" y2="120" stroke="#B9BFC7" stroke-width="3"/>
+          <rect x="780" y="120" width="160" height="106" rx="6" fill="none" stroke="#0F7B6C" stroke-width="3"/>
+          <text x="860" y="164" text-anchor="middle" font-size="24" font-weight="800" fill="#0F7B6C">מחקר</text>
+          <text x="860" y="200" text-anchor="middle" font-size="21" font-weight="700" fill="#7A8794">מפגש 2</text>
+          <line x1="684" y1="76" x2="684" y2="120" stroke="#B9BFC7" stroke-width="3"/>
+          <rect x="604" y="120" width="160" height="106" rx="6" fill="none" stroke="#0F7B6C" stroke-width="3"/>
+          <text x="684" y="164" text-anchor="middle" font-size="24" font-weight="800" fill="#0F7B6C">תוכנית</text>
+          <text x="684" y="200" text-anchor="middle" font-size="21" font-weight="700" fill="#7A8794">מפגש 3</text>
+          <line x1="508" y1="76" x2="508" y2="120" stroke="#B9BFC7" stroke-width="3"/>
+          <rect x="428" y="120" width="160" height="106" rx="6" fill="none" stroke="#0F7B6C" stroke-width="3"/>
+          <text x="508" y="164" text-anchor="middle" font-size="24" font-weight="800" fill="#0F7B6C">מצגת</text>
+          <text x="508" y="200" text-anchor="middle" font-size="21" font-weight="700" fill="#7A8794">מפגש 4</text>
+          <line x1="332" y1="76" x2="332" y2="120" stroke="#B9BFC7" stroke-width="3"/>
+          <rect x="252" y="120" width="160" height="106" rx="6" fill="none" stroke="#0F7B6C" stroke-width="3"/>
+          <text x="332" y="164" text-anchor="middle" font-size="24" font-weight="800" fill="#0F7B6C">חפץ</text>
+          <text x="332" y="200" text-anchor="middle" font-size="21" font-weight="700" fill="#7A8794">מפגש 5</text>
+          <line x1="156" y1="76" x2="156" y2="120" stroke="#B9BFC7" stroke-width="3"/>
+          <rect x="76" y="120" width="160" height="106" rx="6" fill="none" stroke="#0F7B6C" stroke-width="3"/>
+          <text x="156" y="164" text-anchor="middle" font-size="24" font-weight="800" fill="#0F7B6C">אפליקציה</text>
+          <text x="156" y="200" text-anchor="middle" font-size="21" font-weight="700" fill="#7A8794">מפגש 6</text>
+        </svg>
+        </div>
     </section>
+
+    <section class="slide dark">
+      <p class="eyebrow"><span>04 &middot; שער הנושא</span><span>דקות 30–55</span></p>
+      <div class="rule"></div>
+      <h1>שום דבר לא מתחיל עד שהנושא מאושר</h1>
+      <p class="lede">המבחן, בקול: האם כל אחד מהחמישה נובע מהנושא הזה <em>באופן טבעי</em>?</p>
+      <p class="fineprint" style="margin-top:1.8rem">אם תצטרכו להמציא סיבה לתכנן חפץ, או שה„אפליקציה” היא גיליון בשם אחר — זה הנושא הלא נכון.</p>
+    </section>
+
     <section class="slide">
-      <p class="num">שקף 4 — הרשאות, דקות 27–42</p>
-      <h1>קוראים את בקשת ההרשאות לפני שמאשרים</h1>
-      <div class="warn">„קריאה וכתיבה בכל תיקיית המסמכים” &nbsp;•&nbsp; „קבצים שנפתחו לאחרונה” &nbsp;•&nbsp; „הרצה בלי אישור לכל פעולה”</div>
-      <p class="big">שלוש בקשות. אף אחת מהן אינה נחוצה כדי לקרוא שמות קבצים בתיקייה אחת.</p>
+      <p class="eyebrow"><span>05 &middot; זה שנכשל</span><span>דקות 30–55</span></p>
+      <div class="rule"></div>
+      <h1>„ללמוד גיטרה”</h1>
+      <details class="reveal">
+        <summary>אילו שניים מתוך החמישה נכשלים, ולמה</summary>
+        <dl class="qa">
+          <dt class="stop">חפץ</dt><dd class="stop">אין מה לתכנן — תמציאו סיבה למחזיק מפרטים</dd>
+          <dt class="stop">אפליקציה</dt><dd class="stop">יומן תרגול הוא גיליון בשם אחר</dd>
+          <dt class="evidence">מצומצם</dt><dd class="evidence">„להקים פינת תרגול בדירה משותפת” — עכשיו כל החמישה אמיתיים</dd>
+        </dl>
+      </details>
     </section>
+
     <section class="slide">
-      <p class="num">שקף 5 — הרגע החשוב</p>
-      <h1>הכפתור הנכון הוא לא זה שבולט</h1>
-      <div class="box big">„בחירת תיקייה מסוימת” הוא כפתור שקט. „אישור” הוא כפתור צבעוני.</div>
-      <div class="say">זה לא זדון. זו ברירת מחדל שנוחה למי שבנה את הממשק — ולכן ההחלטה צריכה להיות שלכם ולא של העיצוב.</div>
+      <p class="eyebrow"><span>06 &middot; עם מה יוצאים</span><span>דקות 55–60</span></p>
+      <div class="rule"></div>
+      <h1>נושא, ותאריך שאתם קובעים</h1>
+      <p class="lede">שום דבר אחר לא מעגן את פרויקט הסיום. אין שיעור הבא.</p>
+      <p class="fineprint" style="margin-top:1.8rem">מה שלא אושר בחדר יאושר בקבוצה תוך יום — לשבת על נושא לא מאושר זו הדרך להיתקע.</p>
     </section>
-    <section class="slide">
-      <p class="num">שקף 6 — הרשאה מזערית</p>
-      <h1>מה מאשרים, ומה לא</h1>
-      <table>
-        <thead><tr><th>הבקשה</th><th>ההחלטה</th><th>למה</th></tr></thead>
-        <tbody>
-          <tr><td>קריאה בתיקיית הפרויקט</td><td>כן</td><td>בדיוק מה שהמשימה צריכה</td></tr>
-          <tr><td>כל תיקיית המסמכים</td><td>לא</td><td>נוחות אינה סיבה</td></tr>
-          <tr><td>כתיבה ומחיקה</td><td>לא</td><td>היום רק קוראים</td></tr>
-          <tr class="total"><td>הרצה בלי אישור</td><td>לא</td><td>נקודת האישור מפרידה בין הצעה לפעולה</td></tr>
-        </tbody>
-      </table>
+
+    <section class="slide dark">
+      <p class="eyebrow"><span>07 &middot; סגירה</span><span>דקות 55–60</span></p>
+      <div class="rule"></div>
+      <h1>זה סוף הקורס המונחה</h1>
+      <p class="fill">אמשיך לעבוד על <b></b>. הצעד הבא שלי הוא <b></b>, עד <b></b>.</p>
+      <p class="lede" style="margin-top:2rem">הקבוצה נשארת פתוחה. התוצרים מתפרסמים שם והתשובות ניתנות בגלוי — כך שכל תשובה מלמדת יותר אנשים ממי שהיא נכתבה אליו.</p>
     </section>
-    <section class="slide">
-      <p class="num">שקף 7 — אחרי ההרצה</p>
-      <h1>מאשרים, ואז בודקים — לא להפך</h1>
-      <ul class="big">
-        <li>האם רשימת הקבצים תואמת בדיוק את התיקייה?</li>
-        <li>האם הוא ניסה לצאת ממנה?</li>
-        <li>האם ההצעה נשענת על מה שראה, או על ניחוש?</li>
-        <li>האם ניתקתם את הגישה בסוף?</li>
-      </ul>
-    </section>
-    <section class="slide">
-      <p class="num">שקף 8 — קו העצירה, דקות 42–52</p>
-      <h1>שלוש שורות שכל מערכת אישית צריכה</h1>
-      <div class="box big">
-        <p><strong>מה אסור:</strong> אילו נתונים לא נכנסים לכאן לעולם.</p>
-        <p><strong>מה תמיד באישור:</strong> שליחה, תשלום, שינוי חשבון.</p>
-        <p><strong>מתי נעצרים:</strong> התנאי שאחריו המערכת מפסיקה מעצמה.</p>
-      </div>
-    </section>
-    <section class="slide">
-      <p class="num">שקף 9 — רישום ההרצה</p>
-      <h1>הרצה שעבדה היא ראיה לבדיקה, לא רשות להרחיב</h1>
-      <p class="big">מקורות מורשים &nbsp;•&nbsp; הרצה אחרונה &nbsp;•&nbsp; כפילויות &nbsp;•&nbsp; הערת כשל &nbsp;•&nbsp; התראה &nbsp;•&nbsp; פעולת עצירה</p>
-      <div class="warn">ומה שהכי נשכח: <strong>נקודת האישור האנושי</strong> — מי מאשר, ולפני איזו פעולה.</div>
-      <div class="say">Claude for Chrome הוא להעמקה בלבד: מתחילים בקריאה בלבד, ולעולם לא מאשרים שינוי חשבון, תשלום או הודעה.</div>
-    </section>
-    <section class="slide">
-      <p class="num">שקף 10 — סיום הקורס, דקות 52–60</p>
-      <h1>להשלים בקול או בכתב</h1>
-      <div class="box big">אמשיך לעבוד על <strong>[מה]</strong>. הצעד הבא הוא <strong>[מה]</strong>, עד <strong>[מתי]</strong>. הגישה היחידה שנתתי היא <strong>[מה]</strong>, ותמיד יידרש אישור שלי לפני <strong>[מה]</strong>.</div>
-      <h2>ושאלת ההתבוננות</h2>
-      <p class="big">מה שינה הקורס הזה בדרך שבה אתם מחליטים — לא בדרך שבה אתם מקלידים?</p>
-    </section>
+
+    <nav class="deck-nav" aria-label="ניווט בין שקפים">
+      <button type="button" data-next aria-label="השקף הבא">&lsaquo;</button>
+      <span class="deck-count" data-count aria-live="polite"></span>
+      <button type="button" data-prev aria-label="השקף הקודם">&rsaquo;</button>
+    </nav>
+
+    <script>
+      (function(){
+        var slides=[].slice.call(document.querySelectorAll('.slide'));
+        var nav=document.querySelector('.deck-nav');
+        if(slides.length<2||!nav)return;
+        var prev=nav.querySelector('[data-prev]'),
+            next=nav.querySelector('[data-next]'),
+            count=nav.querySelector('[data-count]'),
+            rtl=document.documentElement.dir==='rtl';
+
+        function currentIndex(){
+          var best=0,bestDist=Infinity;
+          slides.forEach(function(s,i){
+            var d=Math.abs(s.getBoundingClientRect().top);
+            if(d<bestDist){bestDist=d;best=i;}
+          });
+          return best;
+        }
+        function update(i){
+          if(i==null)i=currentIndex();
+          count.textContent=(i+1)+' / '+slides.length;
+          prev.disabled=i===0;
+          next.disabled=i===slides.length-1;
+        }
+        function go(i){
+          i=Math.max(0,Math.min(slides.length-1,i));
+          // Instant, deliberately. A presentation cuts between slides rather than gliding,
+          // gliding compresses badly over video, and smooth scrolling is silently skipped
+          // by the browser whenever the tab is not in the foreground.
+          slides[i].scrollIntoView({behavior:'auto',block:'start'});
+          update(i);
+        }
+        prev.addEventListener('click',function(e){go(currentIndex()-1);if(e.detail)this.blur();});
+        next.addEventListener('click',function(e){go(currentIndex()+1);if(e.detail)this.blur();});
+
+        // Horizontal arrows follow reading direction, so in Hebrew Left moves forward.
+        // Down, Up, Page keys and Space mean the same thing in both.
+        var FORWARD=['PageDown','ArrowDown',' ','Spacebar',rtl?'ArrowLeft':'ArrowRight'],
+            BACK=['PageUp','ArrowUp',rtl?'ArrowRight':'ArrowLeft'];
+        addEventListener('keydown',function(e){
+          if(e.metaKey||e.ctrlKey||e.altKey)return;
+          var t=e.target;
+          // A reveal or a button must keep its own Space and Enter.
+          if(t&&t.closest&&t.closest('summary,a,button,input,textarea,select,[contenteditable]')
+             &&(e.key===' '||e.key==='Spacebar'||e.key==='Enter'))return;
+          if(FORWARD.indexOf(e.key)>-1){e.preventDefault();go(currentIndex()+1);}
+          else if(BACK.indexOf(e.key)>-1){e.preventDefault();go(currentIndex()-1);}
+          else if(e.key==='Home'){e.preventDefault();go(0);}
+          else if(e.key==='End'){e.preventDefault();go(slides.length-1);}
+        });
+
+        var ticking=false;
+        addEventListener('scroll',function(){
+          if(ticking)return;
+          ticking=true;
+          requestAnimationFrame(function(){update();ticking=false;});
+        },{passive:true});
+        update(0);
+      })();
+
+      // A closed <details> prints as nothing, which would quietly drop the contract and
+      // the conditions from a handout. Open everything to print, then put it back.
+      addEventListener('beforeprint',function(){
+        document.querySelectorAll('details').forEach(function(d){
+          d.dataset.wasOpen=d.open?'1':'0';d.open=true;
+        });
+      });
+      addEventListener('afterprint',function(){
+        document.querySelectorAll('details').forEach(function(d){
+          if(d.dataset.wasOpen==='0')d.open=false;
+        });
+      });
+    </script>
   </body>
 </html>

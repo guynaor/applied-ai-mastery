@@ -3,116 +3,383 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Projection slides — Session 7: Build a Personal System</title>
+    <title>Projection slides — Session 7: One Project, Every Skill</title>
     <style>
-      :root{--primary:#4E356F;--soft:#F0EAFA;--text:#17242D;--line:#d6dae0;--muted:#55606E;--warn:#b3413f}
+      /* Session 2 is about the distance between a confident number and what you actually
+         pay. The deck borrows retail signage — enormous figures, tiny small print — and
+         audits it. Colour is not decoration here: amber is always somebody's claim, teal
+         is always something checked at source, slate is always still unknown. Slide 2
+         teaches that legend and every later slide relies on it.
+         System fonts only: the session has to run with no network. */
+      :root{
+        --ink:#111820;
+        --paper:#FBF9F5;
+        --brand:#4E356F;
+        --claim:#E0821A;
+        --evidence:#0F7B6C;
+        --unknown:#7A8794;
+        --stop:#C4342F;
+        --rule:#DAD3C8;
+        --display:system-ui,-apple-system,"Segoe UI",sans-serif;
+      }
       *{box-sizing:border-box}
-      body{font-family:system-ui,sans-serif;line-height:1.5;margin:0;color:var(--text);background:#fff}
-      .slide{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:4vh 6vw;border-bottom:1px solid var(--line);page-break-after:always}
-      .num{color:var(--muted);font-size:1rem;letter-spacing:.08em;margin-bottom:1rem}
-      h1{font-size:clamp(1.8rem,4.5vw,3rem);color:var(--primary);margin:0 0 1.5rem}
-      h2{font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--primary);margin:1.5rem 0 .6rem}
-      p,li{font-size:clamp(1.05rem,1.9vw,1.4rem)}
-      .big{font-size:clamp(1.3rem,2.8vw,2rem);line-height:1.45}
-      .box{background:var(--soft);border-inline-start:6px solid var(--primary);padding:1.2rem 1.5rem;border-radius:6px}
-      .prompt{background:#17242D;color:#F4F6F8;padding:1.2rem 1.5rem;border-radius:6px;font-size:clamp(1rem,1.9vw,1.35rem);line-height:1.6}
-      .warn{background:#fdf0f0;border-inline-start:6px solid var(--warn);padding:1rem 1.4rem;border-radius:6px;margin:.6rem 0;font-size:clamp(1.1rem,2.2vw,1.5rem)}
-      table{border-collapse:collapse;width:100%;font-size:clamp(.95rem,1.7vw,1.25rem)}
-      th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:start}
-      th{background:var(--primary);color:#fff}
-      tbody tr:nth-child(even){background:#FAFAFC}
-      .total td{font-weight:700;background:var(--soft)}
-      .say{border:2px dashed var(--primary);border-radius:6px;padding:1.2rem 1.5rem;font-style:italic}
-      ol,ul{padding-inline-start:1.4rem}
-      @media print{.slide{min-height:auto;padding:1.5rem;border:0}}
+      html{-webkit-text-size-adjust:100%}
+      body{
+        font-family:var(--display);
+        margin:0;background:var(--paper);color:var(--ink);
+        font-variant-numeric:tabular-nums;
+        line-height:1.25;
+      }
+
+      .slide{
+        min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+        padding:7vh 6vw 9vh;position:relative;
+        border-bottom:1px solid var(--rule);page-break-after:always;
+      }
+      .slide.dark{background:var(--ink);color:var(--paper)}
+      .slide.dark .eyebrow{color:#8E9AA6}
+      .slide.dark .rule{background:#2A343F}
+
+      /* Structural marker. Slides are a timed sequence, so the number and the minute
+         range carry real information for the facilitator, not decoration. */
+      .eyebrow{
+        position:absolute;top:3.4vh;inset-inline-start:6vw;inset-inline-end:6vw;
+        display:flex;justify-content:space-between;gap:1rem;
+        font-size:clamp(.8rem,1.25vw,1.05rem);
+        text-transform:uppercase;letter-spacing:.2em;font-weight:700;
+        color:var(--unknown);
+      }
+      .rule{position:absolute;top:6.6vh;inset-inline:6vw;height:1px;background:var(--rule)}
+
+      h1{
+        font-size:clamp(1.9rem,5.2vw,4.1rem);
+        font-weight:800;letter-spacing:-.028em;line-height:1.04;
+        margin:0 0 .6em;max-width:20ch;
+      }
+      h1.wide{max-width:28ch}
+      h2{
+        font-size:clamp(.9rem,1.5vw,1.2rem);
+        text-transform:uppercase;letter-spacing:.18em;font-weight:700;
+        color:var(--unknown);margin:2.2rem 0 .7rem;
+      }
+      p{margin:0 0 .7em}
+      .lede{font-size:clamp(1.25rem,2.5vw,2.05rem);max-width:42ch;line-height:1.4}
+      .lede strong{font-weight:700}
+
+      /* The small print. The session's whole argument is that this is where the
+         conditions live, so it gets a real typographic voice rather than being hidden. */
+      .fineprint{
+        font-size:clamp(1.05rem,1.95vw,1.55rem);letter-spacing:.02em;
+        color:var(--unknown);max-width:60ch;line-height:1.5;
+      }
+      .fineprint .mark{color:var(--claim);font-weight:800}
+
+      .mark{font-weight:800}
+      sup.mark{font-size:.55em;vertical-align:super;margin-inline-start:.08em}
+
+      /* Enormous figures are the point of this deck. */
+      .figure{
+        font-size:clamp(3rem,11vw,9rem);font-weight:800;letter-spacing:-.045em;
+        line-height:.9;display:block;
+      }
+      .figure-sm{font-size:clamp(2rem,6vw,4.6rem);font-weight:800;letter-spacing:-.04em;line-height:.95}
+      .caption{
+        font-size:clamp(.88rem,1.45vw,1.15rem);text-transform:uppercase;
+        letter-spacing:.18em;font-weight:700;color:var(--unknown);margin-top:.5rem;
+      }
+
+      .claim{color:var(--claim)}
+      .evidence{color:var(--evidence)}
+      .unknown{color:var(--unknown)}
+      .stop{color:var(--stop)}
+
+      .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,4vw,4rem);align-items:start}
+      .panel{border-top:5px solid var(--rule);padding-top:1.1rem}
+      .panel.is-claim{border-top-color:var(--claim)}
+      .panel.is-evidence{border-top-color:var(--evidence)}
+      .panel .caption{margin:0 0 .8rem}
+
+      .legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1.6rem;margin-top:1rem}
+      .swatch{border-top:9px solid;padding-top:.9rem}
+      .swatch h3{font-size:clamp(1.35rem,2.8vw,2.2rem);margin:0 0 .3rem;font-weight:800;letter-spacing:-.02em}
+      .swatch p{font-size:clamp(1rem,1.8vw,1.4rem);color:var(--unknown);margin:0;line-height:1.4}
+
+      .boxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1rem}
+      .cell{border:2px solid var(--ink);padding:1rem 1.1rem;border-radius:3px}
+      .cell .caption{margin:0 0 .45rem;color:var(--brand)}
+      .cell p{font-size:clamp(1.05rem,1.95vw,1.5rem);margin:0;line-height:1.35}
+      .cell.ghost{border-style:dashed;border-color:var(--unknown);background:transparent}
+      .cell.ghost .caption{color:var(--unknown)}
+      .cell.ghost p{color:var(--unknown)}
+
+      .prompt{
+        background:var(--ink);color:var(--paper);border-radius:4px;
+        padding:clamp(1rem,2.4vw,1.8rem);
+        font-size:clamp(1.1rem,2.05vw,1.6rem);line-height:1.5;max-width:56ch;
+      }
+      .prompt .claim,.prompt .evidence{font-weight:800}
+
+      ol.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:1.1rem}
+      ol.steps li{counter-increment:s;display:flex;gap:1rem;align-items:baseline;
+        font-size:clamp(1.3rem,2.8vw,2.4rem);font-weight:700;letter-spacing:-.015em}
+      ol.steps li::before{
+        content:counter(s);font-size:clamp(.9rem,1.4vw,1.15rem);font-weight:800;
+        color:var(--stop);border:2px solid var(--stop);border-radius:50%;
+        width:2.1em;height:2.1em;display:grid;place-items:center;flex:none;letter-spacing:0;
+      }
+
+      .qa{display:grid;grid-template-columns:auto 1fr;gap:.55rem 1.6rem;align-items:baseline;
+        font-size:clamp(1.1rem,2.05vw,1.6rem);max-width:62ch}
+      .qa dt{font-weight:800;color:var(--brand);white-space:nowrap}
+      .qa dd{margin:0;color:var(--ink)}
+      .qa .last{color:var(--stop)}
+
+      .fill{
+        font-size:clamp(1.25rem,2.8vw,2.25rem);line-height:1.5;max-width:28ch;font-weight:600;
+      }
+      .fill b{
+        display:inline-block;border-bottom:3px solid var(--claim);
+        min-width:5.5em;color:var(--claim);font-weight:800;
+      }
+
+
+      /* Long blocks stay behind a title the facilitator clicks. On a shared screen a wall
+         of text is unreadable anyway, and the click matches how the session is taught:
+         put the question to the room, then open the answer. */
+      details.reveal{border-top:3px solid var(--rule);margin-top:1.8rem;max-width:62ch}
+      details.reveal>summary{
+        cursor:pointer;list-style:none;padding:1rem 0;
+        font-size:clamp(1.1rem,2.1vw,1.7rem);font-weight:800;letter-spacing:-.015em;
+        color:var(--brand);display:flex;align-items:center;gap:.7rem;
+      }
+      details.reveal>summary::-webkit-details-marker{display:none}
+      details.reveal>summary::before{
+        content:"+";flex:none;display:grid;place-items:center;
+        width:1.4em;height:1.4em;border:3px solid currentColor;border-radius:50%;
+        font-size:.8em;line-height:1;font-weight:800;
+      }
+      details.reveal[open]>summary::before{content:"–"}
+      details.reveal>summary:focus-visible{outline:3px solid var(--claim);outline-offset:4px}
+      .slide.dark details.reveal{border-top-color:#2A343F}
+      .slide.dark details.reveal>summary{color:var(--claim)}
+
+      /* Slide navigation. Kept faint until pointed at, so it never competes with the slide
+         on a shared screen, and hidden entirely when printing. */
+      .deck-nav{
+        position:fixed;inset-block-end:1.3rem;inset-inline-end:1.3rem;z-index:20;
+        /* Pinned to LTR so the button order is the DOM order in both languages. Each deck
+           then emits the buttons in the order its reading direction runs, so "next" always
+           sits on the side the reader is heading toward and its arrow points that way. */
+        display:flex;direction:ltr;align-items:center;gap:.35rem;
+        background:rgba(17,24,32,.88);color:var(--paper);
+        border-radius:999px;padding:.4rem .5rem;
+        opacity:.3;transition:opacity .18s ease;
+      }
+      .deck-nav:hover,.deck-nav:focus-within{opacity:1}
+      .deck-nav button{
+        font:inherit;font-weight:800;font-size:1.25rem;line-height:1;
+        width:2.3rem;height:2.3rem;border-radius:50%;border:0;cursor:pointer;
+        background:transparent;color:inherit;display:grid;place-items:center;padding:0;
+      }
+      .deck-nav button:hover:not([disabled]){background:rgba(255,255,255,.16)}
+      .deck-nav button:focus-visible{outline:3px solid var(--claim);outline-offset:2px}
+      .deck-nav button[disabled]{opacity:.28;cursor:default}
+      .deck-count{
+        font-size:.95rem;font-weight:700;letter-spacing:.05em;
+        font-variant-numeric:tabular-nums;padding:0 .45rem;min-width:5ch;text-align:center;
+        /* "2 / 13" is bidi-neutral, so under dir="rtl" it reorders to "13 / 2". */
+        direction:ltr;unicode-bidi:isolate;
+      }
+      @media print{.deck-nav{display:none}}
+      svg{display:block;width:100%;height:auto;overflow:visible}
+      .svg-wrap{margin:.6rem 0 .4rem}
+      text{font-family:var(--display);font-variant-numeric:tabular-nums}
+
+      @media (max-width:750px){
+        .split{grid-template-columns:1fr}
+        .slide{min-height:auto;padding:3.4rem 1.4rem 2.6rem}
+      }
+      @media print{
+        .slide{min-height:auto;padding:1.4rem;border:0}
+        body{background:#fff}
+        .slide.dark{background:#fff;color:var(--ink)}
+        .slide.dark .eyebrow{color:var(--unknown)}
+      }
+      @media (prefers-reduced-motion:no-preference){
+        .slide{scroll-margin-top:0}
+      }
     </style>
   </head>
   <body>
 
-    <section class="slide">
-      <p class="num">Slide 1 — Opening, minutes 0–5</p>
-      <h1>Of everything we did in this course, what will you actually keep doing?</h1>
-      <div class="say big">Today we build one starting page. Its only measure: whether you come back to it in a month.</div>
+    <section class="slide dark">
+      <p class="eyebrow"><span>01 &middot; The app in real use</span><span>Minutes 0–30</span></p>
+      <div class="rule"></div>
+      <h1 class="wide">Did you actually use it — or did it quietly stop?</h1>
+      <p class="lede">The version that survives contact with your real week is worth more than the one that demos well.</p>
+      <p class="fineprint" style="margin-top:1.6rem">If you stopped using it, that is a finding about the problem, not a failure of the build.</p>
     </section>
+
     <section class="slide">
-      <p class="num">Slide 2 — Evidence, minutes 5–15</p>
-      <h1>Three to five things you actually did</h1>
-      <table>
-        <thead><tr><th>What happened</th><th>Where it is recorded</th><th>What I did myself</th><th>What I still do not know</th></tr></thead>
-        <tbody>
-          <tr><td>The purchase brief, Session 2</td><td>In the journal, evidence matrix</td><td>Set the criteria and opened the manufacturer page</td><td>Whether I'd have found that contradiction without the table</td></tr>
-        </tbody>
-      </table>
-      <div class="say">Do not invent results — and do not quietly improve them either. “It did not work” is evidence exactly as good as “it worked”.</div>
+      <p class="eyebrow"><span>02 &middot; What to ask</span><span>Minutes 0–30</span></p>
+      <div class="rule"></div>
+      <h1>Three questions, and none of them are “does it work”</h1>
+      <dl class="qa">
+        <dt>Used it when</dt><dd>which day, doing what — or never</dd>
+        <dt>Broke on</dt><dd>the first thing real life did to it</dd>
+        <dt class="stop">Stopped because</dt><dd class="stop">the most useful answer in the room</dd>
+      </dl>
+      <p class="fineprint" style="margin-top:1.8rem">Do not fix anyone’s app here. Thirty minutes disappears into one person’s bug — note it, offer to look after, move on.</p>
     </section>
+
     <section class="slide">
-      <p class="num">Slide 3 — Starting page, minutes 15–27</p>
-      <h1>Four lines that turn a goal into something you return to</h1>
-      <div class="box big">
-        <p><strong>The next step:</strong> one action, not “make progress”.</p>
-        <p><strong>How often I check in:</strong> a date, not “now and then”.</p>
-        <p><strong>Where things live:</strong> files, reminders, lists.</p>
-        <p><strong>When it is finished:</strong> what “done” looks like.</p>
-      </div>
-      <div class="say">A goal without that last line runs forever, and then gets abandoned.</div>
+      <p class="eyebrow"><span>03 &middot; The capstone</span><span>Minutes 30–55</span></p>
+      <div class="rule"></div>
+      <h1>Not new work. Every session, once, on one subject.</h1>
+        <div class="svg-wrap">
+        <svg style="max-width:96%;margin-inline:auto" viewBox="0 0 1000 244" role="img" aria-label="One chosen subject at the top, producing five deliverables beneath it: research from session 2, a plan from session 3, a presentation from session 4, a designed object from session 5, and an app from session 6.">
+          <rect x="60" y="16" width="880" height="60" rx="6" fill="#4E356F"/>
+          <text x="500" y="56" text-anchor="middle" font-size="30" font-weight="800" fill="#FBF9F5">one subject you choose</text>
+          <line x1="140" y1="76" x2="140" y2="120" stroke="#B9BFC7" stroke-width="3"/>
+          <rect x="60" y="120" width="160" height="106" rx="6" fill="none" stroke="#0F7B6C" stroke-width="3"/>
+          <text x="140" y="164" text-anchor="middle" font-size="24" font-weight="800" fill="#0F7B6C">research</text>
+          <text x="140" y="200" text-anchor="middle" font-size="21" font-weight="700" fill="#7A8794">session 2</text>
+          <line x1="316" y1="76" x2="316" y2="120" stroke="#B9BFC7" stroke-width="3"/>
+          <rect x="236" y="120" width="160" height="106" rx="6" fill="none" stroke="#0F7B6C" stroke-width="3"/>
+          <text x="316" y="164" text-anchor="middle" font-size="24" font-weight="800" fill="#0F7B6C">plan</text>
+          <text x="316" y="200" text-anchor="middle" font-size="21" font-weight="700" fill="#7A8794">session 3</text>
+          <line x1="492" y1="76" x2="492" y2="120" stroke="#B9BFC7" stroke-width="3"/>
+          <rect x="412" y="120" width="160" height="106" rx="6" fill="none" stroke="#0F7B6C" stroke-width="3"/>
+          <text x="492" y="164" text-anchor="middle" font-size="24" font-weight="800" fill="#0F7B6C">presentation</text>
+          <text x="492" y="200" text-anchor="middle" font-size="21" font-weight="700" fill="#7A8794">session 4</text>
+          <line x1="668" y1="76" x2="668" y2="120" stroke="#B9BFC7" stroke-width="3"/>
+          <rect x="588" y="120" width="160" height="106" rx="6" fill="none" stroke="#0F7B6C" stroke-width="3"/>
+          <text x="668" y="164" text-anchor="middle" font-size="24" font-weight="800" fill="#0F7B6C">object</text>
+          <text x="668" y="200" text-anchor="middle" font-size="21" font-weight="700" fill="#7A8794">session 5</text>
+          <line x1="844" y1="76" x2="844" y2="120" stroke="#B9BFC7" stroke-width="3"/>
+          <rect x="764" y="120" width="160" height="106" rx="6" fill="none" stroke="#0F7B6C" stroke-width="3"/>
+          <text x="844" y="164" text-anchor="middle" font-size="24" font-weight="800" fill="#0F7B6C">app</text>
+          <text x="844" y="200" text-anchor="middle" font-size="21" font-weight="700" fill="#7A8794">session 6</text>
+        </svg>
+        </div>
     </section>
+
+    <section class="slide dark">
+      <p class="eyebrow"><span>04 &middot; The subject gate</span><span>Minutes 30–55</span></p>
+      <div class="rule"></div>
+      <h1>Nothing starts until the subject is confirmed</h1>
+      <p class="lede">The test, out loud: does each of the five arise from this subject <em>naturally</em>?</p>
+      <p class="fineprint" style="margin-top:1.8rem">If you would have to invent a reason to design an object, or the “app” is a spreadsheet with a different name, it is the wrong subject.</p>
+    </section>
+
     <section class="slide">
-      <p class="num">Slide 4 — Permissions, minutes 27–42</p>
-      <h1>Read the permission request before approving it</h1>
-      <div class="warn">“Read and write across your entire Documents folder” &nbsp;•&nbsp; “recently opened files” &nbsp;•&nbsp; “run actions without per-action approval”</div>
-      <p class="big">Three requests. None of them is needed to list file names in one folder.</p>
+      <p class="eyebrow"><span>05 &middot; The one that fails</span><span>Minutes 30–55</span></p>
+      <div class="rule"></div>
+      <h1>“Learning guitar”</h1>
+      <details class="reveal">
+        <summary>Which two of the five fail, and why</summary>
+        <dl class="qa">
+          <dt class="stop">Object</dt><dd class="stop">nothing to design — you would invent a reason for a plectrum holder</dd>
+          <dt class="stop">App</dt><dd class="stop">a practice log is a spreadsheet wearing a different name</dd>
+          <dt class="evidence">Narrowed</dt><dd class="evidence">“setting up a practice corner in a shared flat” — now all five are real</dd>
+        </dl>
+      </details>
     </section>
+
     <section class="slide">
-      <p class="num">Slide 5 — The moment that matters</p>
-      <h1>The right button is not the prominent one</h1>
-      <div class="box big">“Choose a specific folder” is the quiet button. “Allow” is the coloured one.</div>
-      <div class="say">That is not malice. It is a default that suits whoever built the interface — which is exactly why the decision has to be yours rather than the design's.</div>
+      <p class="eyebrow"><span>06 &middot; What you leave with</span><span>Minutes 55–60</span></p>
+      <div class="rule"></div>
+      <h1>A subject, and a date you set yourself</h1>
+      <p class="lede">Nothing else anchors the capstone. There is no next class.</p>
+      <p class="fineprint" style="margin-top:1.8rem">Anything not confirmed in the room gets confirmed in the group within a day — sitting on an unconfirmed subject is how people stall.</p>
     </section>
-    <section class="slide">
-      <p class="num">Slide 6 — Least privilege</p>
-      <h1>What to approve, and what not to</h1>
-      <table>
-        <thead><tr><th>The request</th><th>Decision</th><th>Why</th></tr></thead>
-        <tbody>
-          <tr><td>Read the project folder</td><td>Yes</td><td>Exactly what the task needs</td></tr>
-          <tr><td>The whole Documents folder</td><td>No</td><td>Convenience is not a reason</td></tr>
-          <tr><td>Write and delete</td><td>No</td><td>Today is read-only</td></tr>
-          <tr class="total"><td>Run without approval</td><td>No</td><td>The approval point separates a proposal from an action</td></tr>
-        </tbody>
-      </table>
+
+    <section class="slide dark">
+      <p class="eyebrow"><span>07 &middot; Closing</span><span>Minutes 55–60</span></p>
+      <div class="rule"></div>
+      <h1>This is the end of the taught course</h1>
+      <p class="fill">I will keep working on <b></b>. My next step is <b></b>, by <b></b>.</p>
+      <p class="lede" style="margin-top:2rem">The thread stays open. Deliverables get posted there, and answers happen in the open — so every answer teaches more people than it addresses.</p>
     </section>
-    <section class="slide">
-      <p class="num">Slide 7 — After the run</p>
-      <h1>Approve, then verify — not the other way round</h1>
-      <ul class="big">
-        <li>Does the file list match the folder exactly?</li>
-        <li>Did it try to step outside it?</li>
-        <li>Does the draft rest on what it saw, or on a guess?</li>
-        <li>Did you disconnect the access at the end?</li>
-      </ul>
-    </section>
-    <section class="slide">
-      <p class="num">Slide 8 — The stop line, minutes 42–52</p>
-      <h1>Three lines every personal system needs</h1>
-      <div class="box big">
-        <p><strong>What is off limits:</strong> which data never enters this.</p>
-        <p><strong>What always needs approval:</strong> sending, paying, changing an account.</p>
-        <p><strong>When it stops:</strong> the condition after which the system halts itself.</p>
-      </div>
-    </section>
-    <section class="slide">
-      <p class="num">Slide 9 — The run record</p>
-      <h1>A run that worked is evidence to review, not permission to widen</h1>
-      <p class="big">Allowed sources &nbsp;•&nbsp; last run &nbsp;•&nbsp; duplicates &nbsp;•&nbsp; failure note &nbsp;•&nbsp; alert &nbsp;•&nbsp; stop action</p>
-      <div class="warn">And the most forgotten one: the <strong>human approval point</strong> — who approves, and before which action.</div>
-      <div class="say">Claude for Chrome is for further exploration only: start read-only, and never approve an account change, a payment, or a message.</div>
-    </section>
-    <section class="slide">
-      <p class="num">Slide 10 — Closing the course, minutes 52–60</p>
-      <h1>Complete out loud or in writing</h1>
-      <div class="box big">I will keep working on <strong>[what]</strong>. The next step is <strong>[what]</strong>, by <strong>[when]</strong>. The only access I granted is <strong>[what]</strong>, and my approval will always be required before <strong>[what]</strong>.</div>
-      <h2>And the reflection question</h2>
-      <p class="big">What did this course change about how you decide — not about how you type?</p>
-    </section>
+
+    <nav class="deck-nav" aria-label="Slide navigation">
+      <button type="button" data-prev aria-label="Previous slide">&lsaquo;</button>
+      <span class="deck-count" data-count aria-live="polite"></span>
+      <button type="button" data-next aria-label="Next slide">&rsaquo;</button>
+    </nav>
+
+    <script>
+      (function(){
+        var slides=[].slice.call(document.querySelectorAll('.slide'));
+        var nav=document.querySelector('.deck-nav');
+        if(slides.length<2||!nav)return;
+        var prev=nav.querySelector('[data-prev]'),
+            next=nav.querySelector('[data-next]'),
+            count=nav.querySelector('[data-count]'),
+            rtl=document.documentElement.dir==='rtl';
+
+        function currentIndex(){
+          var best=0,bestDist=Infinity;
+          slides.forEach(function(s,i){
+            var d=Math.abs(s.getBoundingClientRect().top);
+            if(d<bestDist){bestDist=d;best=i;}
+          });
+          return best;
+        }
+        function update(i){
+          if(i==null)i=currentIndex();
+          count.textContent=(i+1)+' / '+slides.length;
+          prev.disabled=i===0;
+          next.disabled=i===slides.length-1;
+        }
+        function go(i){
+          i=Math.max(0,Math.min(slides.length-1,i));
+          // Instant, deliberately. A presentation cuts between slides rather than gliding,
+          // gliding compresses badly over video, and smooth scrolling is silently skipped
+          // by the browser whenever the tab is not in the foreground.
+          slides[i].scrollIntoView({behavior:'auto',block:'start'});
+          update(i);
+        }
+        prev.addEventListener('click',function(e){go(currentIndex()-1);if(e.detail)this.blur();});
+        next.addEventListener('click',function(e){go(currentIndex()+1);if(e.detail)this.blur();});
+
+        // Horizontal arrows follow reading direction, so in Hebrew Left moves forward.
+        // Down, Up, Page keys and Space mean the same thing in both.
+        var FORWARD=['PageDown','ArrowDown',' ','Spacebar',rtl?'ArrowLeft':'ArrowRight'],
+            BACK=['PageUp','ArrowUp',rtl?'ArrowRight':'ArrowLeft'];
+        addEventListener('keydown',function(e){
+          if(e.metaKey||e.ctrlKey||e.altKey)return;
+          var t=e.target;
+          // A reveal or a button must keep its own Space and Enter.
+          if(t&&t.closest&&t.closest('summary,a,button,input,textarea,select,[contenteditable]')
+             &&(e.key===' '||e.key==='Spacebar'||e.key==='Enter'))return;
+          if(FORWARD.indexOf(e.key)>-1){e.preventDefault();go(currentIndex()+1);}
+          else if(BACK.indexOf(e.key)>-1){e.preventDefault();go(currentIndex()-1);}
+          else if(e.key==='Home'){e.preventDefault();go(0);}
+          else if(e.key==='End'){e.preventDefault();go(slides.length-1);}
+        });
+
+        var ticking=false;
+        addEventListener('scroll',function(){
+          if(ticking)return;
+          ticking=true;
+          requestAnimationFrame(function(){update();ticking=false;});
+        },{passive:true});
+        update(0);
+      })();
+
+      // A closed <details> prints as nothing, which would quietly drop the contract and
+      // the conditions from a handout. Open everything to print, then put it back.
+      addEventListener('beforeprint',function(){
+        document.querySelectorAll('details').forEach(function(d){
+          d.dataset.wasOpen=d.open?'1':'0';d.open=true;
+        });
+      });
+      addEventListener('afterprint',function(){
+        document.querySelectorAll('details').forEach(function(d){
+          if(d.dataset.wasOpen==='0')d.open=false;
+        });
+      });
+    </script>
   </body>
 </html>

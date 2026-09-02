@@ -10,6 +10,7 @@
 
 | Material | What it is for |
 |---|---|
+| [Projection slides](../../instructor/samples/session-07-slides.html) | Seven slides, in session order. The capstone diagram on slide 3 is the one that lands “this is not new work”. |
 | [Session 7 brief](../../sessions/session-07-workflow-portfolio-project.md) | What learners see: the session, and the capstone it launches. |
 | [Sample app boundary](../../instructor/samples/session-07-permission-map.html) | What deliverable 5's boundary contains. Show it in the second half. |
 | [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | The subject, the deliverable log, and the app's boundary table. |
