@@ -1,6 +1,6 @@
 # Session 5 setup — CAD tools and AI
 
-**Do this in the week before Session 5, not on the day.** Installing takes longer than you expect, and it is far less stressful alone at your desk than with a class waiting.
+**None of this is needed for the session itself** — session 5 is demonstrated on the facilitator's screen. Work through it before you start the week's own build, alone at your desk. Installing takes longer than you expect, and there is no longer any reason to do it under time pressure.
 
 **You do not need all of this.** Pick one route and stop there. Route 1 needs a single free download and nothing else, and you can complete the whole session on it.
 
