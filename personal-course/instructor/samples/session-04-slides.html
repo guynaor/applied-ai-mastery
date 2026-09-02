@@ -5,152 +5,453 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Projection slides — Session 4: From Prompt to Presentation</title>
     <style>
-      :root{--primary:#4E356F;--soft:#F0EAFA;--text:#17242D;--line:#d6dae0;--muted:#55606E;--warn:#b3413f}
+      /* Session 2 is about the distance between a confident number and what you actually
+         pay. The deck borrows retail signage — enormous figures, tiny small print — and
+         audits it. Colour is not decoration here: amber is always somebody's claim, teal
+         is always something checked at source, slate is always still unknown. Slide 2
+         teaches that legend and every later slide relies on it.
+         System fonts only: the session has to run with no network. */
+      :root{
+        --ink:#111820;
+        --paper:#FBF9F5;
+        --brand:#4E356F;
+        --claim:#E0821A;
+        --evidence:#0F7B6C;
+        --unknown:#7A8794;
+        --stop:#C4342F;
+        --rule:#DAD3C8;
+        --display:system-ui,-apple-system,"Segoe UI",sans-serif;
+      }
       *{box-sizing:border-box}
-      body{font-family:system-ui,sans-serif;line-height:1.5;margin:0;color:var(--text);background:#fff}
-      .slide{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:4vh 6vw;border-bottom:1px solid var(--line);page-break-after:always}
-      .num{color:var(--muted);font-size:1rem;letter-spacing:.08em;margin-bottom:1rem}
-      h1{font-size:clamp(1.8rem,4.5vw,3rem);color:var(--primary);margin:0 0 1.5rem}
-      h2{font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--primary);margin:1.5rem 0 .6rem}
-      p,li{font-size:clamp(1.05rem,1.9vw,1.4rem)}
-      .big{font-size:clamp(1.3rem,2.8vw,2rem);line-height:1.45}
-      .box{background:var(--soft);border-inline-start:6px solid var(--primary);padding:1.2rem 1.5rem;border-radius:6px}
-      .prompt{background:#17242D;color:#F4F6F8;padding:1.2rem 1.5rem;border-radius:6px;font-size:clamp(1rem,1.9vw,1.35rem);line-height:1.6}
-      .warn{background:#fdf0f0;border-inline-start:6px solid var(--warn);padding:1rem 1.4rem;border-radius:6px;margin:.6rem 0;font-size:clamp(1.1rem,2.2vw,1.5rem)}
-      table{border-collapse:collapse;width:100%;font-size:clamp(.95rem,1.7vw,1.25rem)}
-      th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:start}
-      th{background:var(--primary);color:#fff}
-      tbody tr:nth-child(even){background:#FAFAFC}
-      .total td{font-weight:700;background:var(--soft)}
-      .say{border:2px dashed var(--primary);border-radius:6px;padding:1.2rem 1.5rem;font-style:italic}
-      ol,ul{padding-inline-start:1.4rem}
-      .pair{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:1rem}
-      .pair .prompt{flex:1 1 16rem}
-      @media print{.slide{min-height:auto;padding:1.5rem;border:0}}
+      html{-webkit-text-size-adjust:100%}
+      body{
+        font-family:var(--display);
+        margin:0;background:var(--paper);color:var(--ink);
+        font-variant-numeric:tabular-nums;
+        line-height:1.25;
+      }
+
+      .slide{
+        min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+        padding:7vh 6vw 9vh;position:relative;
+        border-bottom:1px solid var(--rule);page-break-after:always;
+      }
+      .slide.dark{background:var(--ink);color:var(--paper)}
+      .slide.dark .eyebrow{color:#8E9AA6}
+      .slide.dark .rule{background:#2A343F}
+
+      /* Structural marker. Slides are a timed sequence, so the number and the minute
+         range carry real information for the facilitator, not decoration. */
+      .eyebrow{
+        position:absolute;top:3.4vh;inset-inline-start:6vw;inset-inline-end:6vw;
+        display:flex;justify-content:space-between;gap:1rem;
+        font-size:clamp(.8rem,1.25vw,1.05rem);
+        text-transform:uppercase;letter-spacing:.2em;font-weight:700;
+        color:var(--unknown);
+      }
+      .rule{position:absolute;top:6.6vh;inset-inline:6vw;height:1px;background:var(--rule)}
+
+      h1{
+        font-size:clamp(1.9rem,5.2vw,4.1rem);
+        font-weight:800;letter-spacing:-.028em;line-height:1.04;
+        margin:0 0 .6em;max-width:20ch;
+      }
+      h1.wide{max-width:28ch}
+      h2{
+        font-size:clamp(.9rem,1.5vw,1.2rem);
+        text-transform:uppercase;letter-spacing:.18em;font-weight:700;
+        color:var(--unknown);margin:2.2rem 0 .7rem;
+      }
+      p{margin:0 0 .7em}
+      .lede{font-size:clamp(1.25rem,2.5vw,2.05rem);max-width:42ch;line-height:1.4}
+      .lede strong{font-weight:700}
+
+      /* The small print. The session's whole argument is that this is where the
+         conditions live, so it gets a real typographic voice rather than being hidden. */
+      .fineprint{
+        font-size:clamp(1.05rem,1.95vw,1.55rem);letter-spacing:.02em;
+        color:var(--unknown);max-width:60ch;line-height:1.5;
+      }
+      .fineprint .mark{color:var(--claim);font-weight:800}
+
+      .mark{font-weight:800}
+      sup.mark{font-size:.55em;vertical-align:super;margin-inline-start:.08em}
+
+      /* Enormous figures are the point of this deck. */
+      .figure{
+        font-size:clamp(3rem,11vw,9rem);font-weight:800;letter-spacing:-.045em;
+        line-height:.9;display:block;
+      }
+      .figure-sm{font-size:clamp(2rem,6vw,4.6rem);font-weight:800;letter-spacing:-.04em;line-height:.95}
+      .caption{
+        font-size:clamp(.88rem,1.45vw,1.15rem);text-transform:uppercase;
+        letter-spacing:.18em;font-weight:700;color:var(--unknown);margin-top:.5rem;
+      }
+
+      .claim{color:var(--claim)}
+      .evidence{color:var(--evidence)}
+      .unknown{color:var(--unknown)}
+      .stop{color:var(--stop)}
+
+      .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,4vw,4rem);align-items:start}
+      .panel{border-top:5px solid var(--rule);padding-top:1.1rem}
+      .panel.is-claim{border-top-color:var(--claim)}
+      .panel.is-evidence{border-top-color:var(--evidence)}
+      .panel .caption{margin:0 0 .8rem}
+
+      .legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1.6rem;margin-top:1rem}
+      .swatch{border-top:9px solid;padding-top:.9rem}
+      .swatch h3{font-size:clamp(1.35rem,2.8vw,2.2rem);margin:0 0 .3rem;font-weight:800;letter-spacing:-.02em}
+      .swatch p{font-size:clamp(1rem,1.8vw,1.4rem);color:var(--unknown);margin:0;line-height:1.4}
+
+      .boxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1rem}
+      .cell{border:2px solid var(--ink);padding:1rem 1.1rem;border-radius:3px}
+      .cell .caption{margin:0 0 .45rem;color:var(--brand)}
+      .cell p{font-size:clamp(1.05rem,1.95vw,1.5rem);margin:0;line-height:1.35}
+      .cell.ghost{border-style:dashed;border-color:var(--unknown);background:transparent}
+      .cell.ghost .caption{color:var(--unknown)}
+      .cell.ghost p{color:var(--unknown)}
+
+      .prompt{
+        background:var(--ink);color:var(--paper);border-radius:4px;
+        padding:clamp(1rem,2.4vw,1.8rem);
+        font-size:clamp(1.1rem,2.05vw,1.6rem);line-height:1.5;max-width:56ch;
+      }
+      .prompt .claim,.prompt .evidence{font-weight:800}
+
+      ol.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:1.1rem}
+      ol.steps li{counter-increment:s;display:flex;gap:1rem;align-items:baseline;
+        font-size:clamp(1.3rem,2.8vw,2.4rem);font-weight:700;letter-spacing:-.015em}
+      ol.steps li::before{
+        content:counter(s);font-size:clamp(.9rem,1.4vw,1.15rem);font-weight:800;
+        color:var(--stop);border:2px solid var(--stop);border-radius:50%;
+        width:2.1em;height:2.1em;display:grid;place-items:center;flex:none;letter-spacing:0;
+      }
+
+      .qa{display:grid;grid-template-columns:auto 1fr;gap:.55rem 1.6rem;align-items:baseline;
+        font-size:clamp(1.1rem,2.05vw,1.6rem);max-width:62ch}
+      .qa dt{font-weight:800;color:var(--brand);white-space:nowrap}
+      .qa dd{margin:0;color:var(--ink)}
+      .qa .last{color:var(--stop)}
+
+      .fill{
+        font-size:clamp(1.25rem,2.8vw,2.25rem);line-height:1.5;max-width:28ch;font-weight:600;
+      }
+      .fill b{
+        display:inline-block;border-bottom:3px solid var(--claim);
+        min-width:5.5em;color:var(--claim);font-weight:800;
+      }
+
+
+      /* Long blocks stay behind a title the facilitator clicks. On a shared screen a wall
+         of text is unreadable anyway, and the click matches how the session is taught:
+         put the question to the room, then open the answer. */
+      details.reveal{border-top:3px solid var(--rule);margin-top:1.8rem;max-width:62ch}
+      details.reveal>summary{
+        cursor:pointer;list-style:none;padding:1rem 0;
+        font-size:clamp(1.1rem,2.1vw,1.7rem);font-weight:800;letter-spacing:-.015em;
+        color:var(--brand);display:flex;align-items:center;gap:.7rem;
+      }
+      details.reveal>summary::-webkit-details-marker{display:none}
+      details.reveal>summary::before{
+        content:"+";flex:none;display:grid;place-items:center;
+        width:1.4em;height:1.4em;border:3px solid currentColor;border-radius:50%;
+        font-size:.8em;line-height:1;font-weight:800;
+      }
+      details.reveal[open]>summary::before{content:"–"}
+      details.reveal>summary:focus-visible{outline:3px solid var(--claim);outline-offset:4px}
+      .slide.dark details.reveal{border-top-color:#2A343F}
+      .slide.dark details.reveal>summary{color:var(--claim)}
+
+      /* Slide navigation. Kept faint until pointed at, so it never competes with the slide
+         on a shared screen, and hidden entirely when printing. */
+      .deck-nav{
+        position:fixed;inset-block-end:1.3rem;inset-inline-end:1.3rem;z-index:20;
+        /* Pinned to LTR so the button order is the DOM order in both languages. Each deck
+           then emits the buttons in the order its reading direction runs, so "next" always
+           sits on the side the reader is heading toward and its arrow points that way. */
+        display:flex;direction:ltr;align-items:center;gap:.35rem;
+        background:rgba(17,24,32,.88);color:var(--paper);
+        border-radius:999px;padding:.4rem .5rem;
+        opacity:.3;transition:opacity .18s ease;
+      }
+      .deck-nav:hover,.deck-nav:focus-within{opacity:1}
+      .deck-nav button{
+        font:inherit;font-weight:800;font-size:1.25rem;line-height:1;
+        width:2.3rem;height:2.3rem;border-radius:50%;border:0;cursor:pointer;
+        background:transparent;color:inherit;display:grid;place-items:center;padding:0;
+      }
+      .deck-nav button:hover:not([disabled]){background:rgba(255,255,255,.16)}
+      .deck-nav button:focus-visible{outline:3px solid var(--claim);outline-offset:2px}
+      .deck-nav button[disabled]{opacity:.28;cursor:default}
+      .deck-count{
+        font-size:.95rem;font-weight:700;letter-spacing:.05em;
+        font-variant-numeric:tabular-nums;padding:0 .45rem;min-width:5ch;text-align:center;
+        /* "2 / 13" is bidi-neutral, so under dir="rtl" it reorders to "13 / 2". */
+        direction:ltr;unicode-bidi:isolate;
+      }
+      @media print{.deck-nav{display:none}}
+      svg{display:block;width:100%;height:auto;overflow:visible}
+      .svg-wrap{margin:.6rem 0 .4rem}
+      text{font-family:var(--display);font-variant-numeric:tabular-nums}
+
+      @media (max-width:750px){
+        .split{grid-template-columns:1fr}
+        .slide{min-height:auto;padding:3.4rem 1.4rem 2.6rem}
+      }
+      @media print{
+        .slide{min-height:auto;padding:1.4rem;border:0}
+        body{background:#fff}
+        .slide.dark{background:#fff;color:var(--ink)}
+        .slide.dark .eyebrow{color:var(--unknown)}
+      }
+      @media (prefers-reduced-motion:no-preference){
+        .slide{scroll-margin-top:0}
+      }
     </style>
   </head>
   <body>
 
-    <section class="slide">
-      <p class="num">Slide 1 — The three rules, minutes 10–16</p>
+    <section class="slide dark">
+      <p class="eyebrow"><span>01 &middot; The three rules</span><span>Minutes 10–16</span></p>
+      <div class="rule"></div>
       <h1>Three rules, stated once, applied all session</h1>
-      <div class="box big">
-        <p><strong>1. Label it.</strong> Anything generated gets said out loud — in the caption, not buried in a settings screen.</p>
-        <p><strong>2. No real people without consent.</strong> Not even from a public place.</p>
-        <p><strong>3. Never a record.</strong> Generated work does not stand in for something that actually happened.</p>
-      </div>
-      <div class="say">Six stages from here. At every one of them, ask these three questions again — that repetition is the safety lesson, not a slide you see once and forget.</div>
+      <ol class="steps">
+        <li>Label it. Anything generated is said out loud, in the caption.</li>
+        <li>No real people without consent. Not even from a public place.</li>
+        <li>Never a record. Generated work does not stand in for something that happened.</li>
+      </ol>
+      <p class="lede" style="margin-top:2rem">Six stages from here. Ask all three again at every one — the repetition <em>is</em> the safety lesson.</p>
     </section>
+
     <section class="slide">
-      <p class="num">Slide 2 — The chain</p>
+      <p class="eyebrow"><span>02 &middot; The chain</span><span>Minutes 10–16</span></p>
+      <div class="rule"></div>
       <h1>One subject, six stages, one artifact</h1>
-      <table>
-        <thead><tr><th>#</th><th>Stage</th><th>Tool</th></tr></thead>
-        <tbody>
-          <tr><td>1</td><td>Generate — an image from a prompt</td><td>Gemini (ChatGPT optional)</td></tr>
-          <tr><td>2</td><td>Fix — edit the weak region</td><td>same tool as stage 1</td></tr>
-          <tr><td>3</td><td>Move — animate your own image</td><td>Gemini</td></tr>
-          <tr><td>4</td><td>Video — generate from a text prompt alone</td><td>Gemini</td></tr>
-          <tr><td>5</td><td>Narrate — write the script, then voice it</td><td>Cloud speech studio</td></tr>
-          <tr class="total"><td>6</td><td>Assemble — build the deck, two ways</td><td>Claude — PPTX and HTML</td></tr>
-        </tbody>
-      </table>
-      <div class="say">One subject travels the whole way. Nothing gets swapped out partway through — stage six presents the same thing stage one generated.</div>
+        <div class="svg-wrap">
+        <svg style="max-width:96%;margin-inline:auto" viewBox="0 0 1000 188" role="img" aria-label="Six stages in a chain: generate, fix, move, video, narrate, assemble, ending in one artifact.">
+          <line x1="124" y1="62" x2="214" y2="62" stroke="#B9BFC7" stroke-width="3"/>
+          <line x1="290" y1="62" x2="380" y2="62" stroke="#B9BFC7" stroke-width="3"/>
+          <line x1="456" y1="62" x2="546" y2="62" stroke="#B9BFC7" stroke-width="3"/>
+          <line x1="622" y1="62" x2="712" y2="62" stroke="#B9BFC7" stroke-width="3"/>
+          <line x1="788" y1="62" x2="878" y2="62" stroke="#B9BFC7" stroke-width="3"/>
+          <circle cx="86" cy="62" r="34" fill="#4E356F"/>
+          <text x="86" y="74" text-anchor="middle" font-size="32" font-weight="800" fill="#FBF9F5">1</text>
+          <text x="86" y="136" text-anchor="middle" font-size="26" font-weight="800" fill="#4E356F">generate</text>
+          <text x="86" y="168" text-anchor="middle" font-size="21" font-weight="700" fill="#7A8794">Gemini</text>
+          <circle cx="252" cy="62" r="34" fill="#4E356F"/>
+          <text x="252" y="74" text-anchor="middle" font-size="32" font-weight="800" fill="#FBF9F5">2</text>
+          <text x="252" y="136" text-anchor="middle" font-size="26" font-weight="800" fill="#4E356F">fix</text>
+          <text x="252" y="168" text-anchor="middle" font-size="21" font-weight="700" fill="#7A8794">same tool</text>
+          <circle cx="418" cy="62" r="34" fill="#4E356F"/>
+          <text x="418" y="74" text-anchor="middle" font-size="32" font-weight="800" fill="#FBF9F5">3</text>
+          <text x="418" y="136" text-anchor="middle" font-size="26" font-weight="800" fill="#4E356F">move</text>
+          <text x="418" y="168" text-anchor="middle" font-size="21" font-weight="700" fill="#7A8794">Gemini</text>
+          <circle cx="584" cy="62" r="34" fill="#4E356F"/>
+          <text x="584" y="74" text-anchor="middle" font-size="32" font-weight="800" fill="#FBF9F5">4</text>
+          <text x="584" y="136" text-anchor="middle" font-size="26" font-weight="800" fill="#4E356F">video</text>
+          <text x="584" y="168" text-anchor="middle" font-size="21" font-weight="700" fill="#7A8794">Gemini</text>
+          <circle cx="750" cy="62" r="34" fill="#4E356F"/>
+          <text x="750" y="74" text-anchor="middle" font-size="32" font-weight="800" fill="#FBF9F5">5</text>
+          <text x="750" y="136" text-anchor="middle" font-size="26" font-weight="800" fill="#4E356F">narrate</text>
+          <text x="750" y="168" text-anchor="middle" font-size="21" font-weight="700" fill="#7A8794">speech studio</text>
+          <circle cx="916" cy="62" r="34" fill="#0F7B6C"/>
+          <text x="916" y="74" text-anchor="middle" font-size="32" font-weight="800" fill="#FBF9F5">6</text>
+          <text x="916" y="136" text-anchor="middle" font-size="26" font-weight="800" fill="#0F7B6C">assemble</text>
+          <text x="916" y="168" text-anchor="middle" font-size="21" font-weight="700" fill="#7A8794">Claude</text>
+        </svg>
+        </div>
+      <p class="fineprint" style="margin-top:1.2rem">One subject travels the whole way. Nothing is swapped partway — stage six presents whatever stages one to five actually produced.</p>
     </section>
+
     <section class="slide">
-      <p class="num">Slide 3 — Prompt anatomy, minutes 16–27</p>
+      <p class="eyebrow"><span>03 &middot; Prompt anatomy</span><span>Minutes 16–27</span></p>
+      <div class="rule"></div>
       <h1>Five things a prompt has to say</h1>
-      <ul class="big">
-        <li><strong>Subject</strong> — what is actually in the frame</li>
-        <li><strong>Composition</strong> — the angle and distance it's seen from</li>
-        <li><strong>Light</strong> — the light source, direction, and time of day</li>
-        <li><strong>Framing</strong> — where the empty space sits, for a title later</li>
-        <li><strong>Exclusions</strong> — what must not appear</li>
-      </ul>
-      <div class="pair">
-        <div class="prompt"><strong>Weak</strong><br>“A nice photo of a garden.”</div>
-        <div class="prompt"><strong>Strong</strong><br>“A community garden bed in full bloom, seen at eye level from the path. Golden late-afternoon light from the left casting long shadows. Leave the upper-left quarter empty for a title. No people, no signage, no litter.”</div>
-      </div>
-      <p>Same intent, five specifics added. Leave one out and the model guesses — and the guess is rarely the one you wanted.</p>
+      <dl class="qa">
+        <dt>Subject</dt><dd>what is actually in the frame</dd>
+        <dt>Composition</dt><dd>the angle and distance it is seen from</dd>
+        <dt>Light</dt><dd>the source, the direction, the time of day</dd>
+        <dt>Framing</dt><dd>where the empty space sits, for a title later</dd>
+        <dt>Exclusions</dt><dd>what must not appear</dd>
+      </dl>
     </section>
-    <section class="slide">
-      <p class="num">Slide 4 — Same prompt, two tools, minutes 16–27</p>
-      <h1>Same prompt, two tools: Gemini and ChatGPT</h1>
-      <p>Gemini alone completes this stage in full. This table is for a room that also has ChatGPT — the comparison is what the second tool buys you, not a requirement.</p>
-      <table>
-        <thead><tr><th>What to compare</th><th>The question</th></tr></thead>
-        <tbody>
-          <tr><td>Exclusions</td><td>Which one actually left out what you told it to leave out?</td></tr>
-          <tr><td>Invention</td><td>Which one added a detail you never asked for?</td></tr>
-          <tr class="total"><td>Match</td><td>Which is closer to what you actually asked for?</td></tr>
-        </tbody>
-      </table>
-      <div class="say">If you have both, run the same prompt through each, side by side. Full detail: <a href="session-04-toolkit.html">toolkit reference</a>.</div>
+
+    <section class="slide dark">
+      <p class="eyebrow"><span>04 &middot; Weak against strong</span><span>Minutes 16–27</span></p>
+      <div class="rule"></div>
+      <h1>The same picture, asked for twice</h1>
+      <p class="figure-sm claim">“A nice photo of a garden.”</p>
+      <details class="reveal">
+        <summary>And the same thing, said properly</summary>
+        <div class="prompt">A community garden bed in full bloom, seen at eye level from the path, late afternoon light from the left, <span class="evidence">empty sky in the upper third for a title</span>, <span class="evidence">no people, no text, no logos</span>.</div>
+      </details>
     </section>
+
     <section class="slide">
-      <p class="num">Slide 5 — Fix the region, minutes 27–38</p>
-      <h1>Fix the region, do not re-roll</h1>
-      <div class="warn">Re-rolling the whole prompt destroys whatever already worked, along with whatever was wrong.</div>
-      <p class="big">One region is off — a hand, a sign, a shadow. Edit only that region. Everything else stays exactly as it was.</p>
-      <div class="say">Same tool as stage 1. Aim the edit at the patch that failed, not at the picture again from nothing.</div>
+      <p class="eyebrow"><span>05 &middot; Two tools</span><span>Minutes 16–27</span></p>
+      <div class="rule"></div>
+      <h1>Same prompt, two tools</h1>
+      <dl class="qa">
+        <dt>Exclusions</dt><dd>which one actually left out what you told it to?</dd>
+        <dt>Invention</dt><dd>which one added something you never asked for?</dd>
+        <dt>Match</dt><dd>which is closer to what you actually asked for?</dd>
+      </dl>
+      <p class="fineprint" style="margin-top:2rem">Not a contest between products. A way of seeing what your own prompt left open.</p>
     </section>
+
     <section class="slide">
-      <p class="num">Slide 6 — Animate your own image, minutes 38–46</p>
-      <h1>The prompt steers the motion. It does not invent the subject.</h1>
-      <p class="big">Upload the image from stages 1 and 2. Add a short prompt describing what moves, and how.</p>
-      <div class="prompt">“Leaves sway gently in the light breeze. Camera holds still. Nothing else in frame changes.”</div>
-      <div class="say">This is still your image. The model is moving it, not replacing it.</div>
+      <p class="eyebrow"><span>06 &middot; Fix, do not re-roll</span><span>Minutes 27–38</span></p>
+      <div class="rule"></div>
+      <h1>Aim at the patch that failed</h1>
+      <p class="lede">Re-rolling gives you a different picture. Fixing gives you <strong>your</strong> picture, repaired.</p>
+      <p class="fineprint" style="margin-top:1.8rem">Same tool as stage one. Point the edit at the region that broke, not at the whole frame again from nothing.</p>
     </section>
-    <section class="slide">
-      <p class="num">Slide 7 — Generate from text alone, minutes 46–56</p>
-      <h1>Text, hands, continuity, physics — where video generation still breaks</h1>
-      <ul class="big">
-        <li><strong>Text</strong> — signage and labels come out wrong more often than right</li>
-        <li><strong>Hands</strong> — count the fingers before you trust the frame</li>
-        <li><strong>Continuity</strong> — what's true in frame one may not hold by frame four</li>
-        <li><strong>Physics</strong> — weight, water, and shadows drift</li>
-      </ul>
-      <div class="say">Shoot short. A four-second clip that holds together beats a fifteen-second clip that falls apart halfway through. Send the job, then keep talking — it is not instant.</div>
+
+    <section class="slide dark">
+      <p class="eyebrow"><span>07 &middot; Move it</span><span>Minutes 38–46</span></p>
+      <div class="rule"></div>
+      <h1>The prompt steers motion. It does not invent the subject.</h1>
+      <div class="prompt">Leaves sway gently in a light breeze. Camera holds still. Nothing else in frame changes.</div>
+      <p class="fineprint" style="margin-top:1.4rem">This is still <span class="evidence mark" style="color:var(--evidence)">your</span> image. The model is moving it, not replacing it.</p>
     </section>
+
     <section class="slide">
-      <p class="num">Slide 8 — The safety callback, minutes 46–56</p>
-      <h1>Which of those two would you publish about a real place?</h1>
-      <div class="say big">Both clips are generated — nothing here was shot with an actual camera. The real difference is how much you directed: stage 3 animates an image you built and fixed; stage 4 came from a text prompt alone, with nothing of yours in it.</div>
-      <p class="big">If you captioned either one “this is this place,” right now — would that be true?</p>
-      <div class="box">Neither is a record of that place — so no. A label doesn't make it true; it stops it from deceiving. That's rule three from slide 1. Say so out loud, before anyone asks; that's rule one, applied to something you made ten minutes ago.</div>
+      <p class="eyebrow"><span>08 &middot; Where video breaks</span><span>Minutes 46–56</span></p>
+      <div class="rule"></div>
+      <h1>Four places it still falls apart</h1>
+      <dl class="qa">
+        <dt class="stop">Text</dt><dd>signage and labels come out wrong more often than right</dd>
+        <dt class="stop">Hands</dt><dd>count the fingers before you trust the frame</dd>
+        <dt class="stop">Continuity</dt><dd>what is true in frame one may not hold by frame four</dd>
+        <dt class="stop">Physics</dt><dd>weight, water and shadows drift</dd>
+      </dl>
+      <p class="fineprint" style="margin-top:1.8rem">Shoot short. Four seconds that hold together beats fifteen that fall apart halfway.</p>
     </section>
+
+    <section class="slide dark">
+      <p class="eyebrow"><span>09 &middot; The callback</span><span>Minutes 46–56</span></p>
+      <div class="rule"></div>
+      <h1>Would you publish either one about a real place?</h1>
+      <p class="lede">Both clips are generated. Nothing here was shot with a camera.</p>
+      <details class="reveal">
+        <summary>The answer, once they have argued about it</summary>
+        <p class="lede" style="color:var(--paper)">Neither is a record of that place, so no. A label does not make it true — it stops it deceiving. Rule three is the one people forget first.</p>
+      </details>
+    </section>
+
     <section class="slide">
-      <p class="num">Slide 9 — Write for the ear, minutes 56–65</p>
+      <p class="eyebrow"><span>10 &middot; Write for the ear</span><span>Minutes 56–65</span></p>
+      <div class="rule"></div>
       <h1>Write for the ear, not the eye</h1>
-      <p>Narrate the piece you've built — your subject, the image, and the two clips.</p>
-      <ul class="big">
-        <li><strong>Sentences</strong> — short. If it needs a comma to survive, split it.</li>
-        <li><strong>One idea</strong> — per breath. One clause per sentence, not three joined with “and.”</li>
-        <li><strong>Numbers</strong> — spoken, not written: “about twelve thousand people,” not “12,847 attendees.”</li>
-      </ul>
-      <div class="say">The script matters more than the voice. Fix it on the page before you generate the narration.</div>
+      <dl class="qa">
+        <dt>Sentences</dt><dd>short — if it needs a comma to survive, split it</dd>
+        <dt>One idea</dt><dd>per breath. Not three joined with “and”</dd>
+        <dt>Numbers</dt><dd>spoken: “about twelve thousand”, not “12,847”</dd>
+      </dl>
+      <p class="fineprint" style="margin-top:1.8rem">The script matters more than the voice. Fix it on the page before you generate anything.</p>
     </section>
+
     <section class="slide">
-      <p class="num">Slide 10 — Assemble: PPTX versus HTML, minutes 65–85</p>
-      <h1>PPTX versus HTML — same tool, two formats</h1>
-      <p>Both come out of Claude — the same tool, twice.</p>
-      <table>
-        <thead><tr><th></th><th>PPTX</th><th>Self-contained HTML</th></tr></thead>
-        <tbody>
-          <tr><td>Opens as</td><td>Opens in PowerPoint, Keynote, or Google Slides</td><td>One file, opens in any browser, nothing installed</td></tr>
-          <tr><td>Anyone can edit it</td><td>Yes — drag slides around like any deck</td><td>Only by editing the markup directly</td></tr>
-          <tr><td>Read or diff it as text</td><td>No — it's a binary</td><td>Yes — it's plain text</td></tr>
-          <tr class="total"><td>Good at</td><td>What an institution or colleague expects</td><td>Sharing as a link or attachment, nothing to install</td></tr>
-        </tbody>
-      </table>
-      <div class="say">The comparison is the lesson, not the tool — it's the same tool both times. Full detail: <a href="session-04-toolkit.html">toolkit reference</a>.</div>
+      <p class="eyebrow"><span>11 &middot; Two formats</span><span>Minutes 65–85</span></p>
+      <div class="rule"></div>
+      <h1>Same tool, two formats</h1>
+      <div class="split">
+        <div class="panel" style="border-top-color:var(--brand)"><p class="caption">PPTX</p>
+          <p class="lede">Opens in PowerPoint or Slides. Anyone can drag a slide around. A binary you cannot read as text.</p></div>
+        <div class="panel is-evidence"><p class="caption">HTML</p>
+          <p class="lede">One file, any browser, nothing installed. Plain text you can read and diff. Editing means editing markup.</p></div>
+      </div>
+      <p class="fineprint" style="margin-top:2rem">The comparison is the lesson, not the tool — it is the same tool both times.</p>
     </section>
+
     <section class="slide">
-      <p class="num">Slide 11 — Exit check, minutes 85–90</p>
-      <h1>Complete out loud or in writing</h1>
-      <div class="box big">My subject was <strong>[what]</strong>. It went through <strong>[how many]</strong> of the six stages. The stage I would cut if I only had an hour is <strong>[which]</strong>. The clip I would not publish about a real place is <strong>[which]</strong>, because <strong>[why]</strong>.</div>
-      <h2>And the reflection question</h2>
-      <p class="big">Which stage surprised you — because the tool did better, or worse, than you expected?</p>
+      <p class="eyebrow"><span>12 &middot; Exit check</span><span>Minutes 85–90</span></p>
+      <div class="rule"></div>
+      <h1>Finish the sentence</h1>
+      <p class="fill">My subject was <b></b>. It got through <b></b> of the six stages. The stage that surprised me was <b></b>.</p>
+      <h2>And the question worth sitting with</h2>
+      <p class="lede">Which of the three rules would be easiest to break by accident?</p>
     </section>
+
+    <nav class="deck-nav" aria-label="Slide navigation">
+      <button type="button" data-prev aria-label="Previous slide">&lsaquo;</button>
+      <span class="deck-count" data-count aria-live="polite"></span>
+      <button type="button" data-next aria-label="Next slide">&rsaquo;</button>
+    </nav>
+
+    <script>
+      (function(){
+        var slides=[].slice.call(document.querySelectorAll('.slide'));
+        var nav=document.querySelector('.deck-nav');
+        if(slides.length<2||!nav)return;
+        var prev=nav.querySelector('[data-prev]'),
+            next=nav.querySelector('[data-next]'),
+            count=nav.querySelector('[data-count]'),
+            rtl=document.documentElement.dir==='rtl';
+
+        function currentIndex(){
+          var best=0,bestDist=Infinity;
+          slides.forEach(function(s,i){
+            var d=Math.abs(s.getBoundingClientRect().top);
+            if(d<bestDist){bestDist=d;best=i;}
+          });
+          return best;
+        }
+        function update(i){
+          if(i==null)i=currentIndex();
+          count.textContent=(i+1)+' / '+slides.length;
+          prev.disabled=i===0;
+          next.disabled=i===slides.length-1;
+        }
+        function go(i){
+          i=Math.max(0,Math.min(slides.length-1,i));
+          // Instant, deliberately. A presentation cuts between slides rather than gliding,
+          // gliding compresses badly over video, and smooth scrolling is silently skipped
+          // by the browser whenever the tab is not in the foreground.
+          slides[i].scrollIntoView({behavior:'auto',block:'start'});
+          update(i);
+        }
+        prev.addEventListener('click',function(e){go(currentIndex()-1);if(e.detail)this.blur();});
+        next.addEventListener('click',function(e){go(currentIndex()+1);if(e.detail)this.blur();});
+
+        // Horizontal arrows follow reading direction, so in Hebrew Left moves forward.
+        // Down, Up, Page keys and Space mean the same thing in both.
+        var FORWARD=['PageDown','ArrowDown',' ','Spacebar',rtl?'ArrowLeft':'ArrowRight'],
+            BACK=['PageUp','ArrowUp',rtl?'ArrowRight':'ArrowLeft'];
+        addEventListener('keydown',function(e){
+          if(e.metaKey||e.ctrlKey||e.altKey)return;
+          var t=e.target;
+          // A reveal or a button must keep its own Space and Enter.
+          if(t&&t.closest&&t.closest('summary,a,button,input,textarea,select,[contenteditable]')
+             &&(e.key===' '||e.key==='Spacebar'||e.key==='Enter'))return;
+          if(FORWARD.indexOf(e.key)>-1){e.preventDefault();go(currentIndex()+1);}
+          else if(BACK.indexOf(e.key)>-1){e.preventDefault();go(currentIndex()-1);}
+          else if(e.key==='Home'){e.preventDefault();go(0);}
+          else if(e.key==='End'){e.preventDefault();go(slides.length-1);}
+        });
+
+        var ticking=false;
+        addEventListener('scroll',function(){
+          if(ticking)return;
+          ticking=true;
+          requestAnimationFrame(function(){update();ticking=false;});
+        },{passive:true});
+        update(0);
+      })();
+
+      // A closed <details> prints as nothing, which would quietly drop the contract and
+      // the conditions from a handout. Open everything to print, then put it back.
+      addEventListener('beforeprint',function(){
+        document.querySelectorAll('details').forEach(function(d){
+          d.dataset.wasOpen=d.open?'1':'0';d.open=true;
+        });
+      });
+      addEventListener('afterprint',function(){
+        document.querySelectorAll('details').forEach(function(d){
+          if(d.dataset.wasOpen==='0')d.open=false;
+        });
+      });
+    </script>
   </body>
 </html>

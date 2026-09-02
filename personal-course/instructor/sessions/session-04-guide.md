@@ -23,11 +23,13 @@ This guide can be taught from directly. The whole chain runs on free accounts �
 
 What works best is to **pick one real subject of your own and run the whole six-stage chain live in front of the class, on your own screen.** Three reasons: learners' free accounts run out mid-chain; a real subject produces real questions; and they watch you fix a bad generation in front of them, which teaches more than any explanation would.
 
-Learners fill in the journal tables for **their own subject**. You run the chain; they think.
+**This session is demonstrated, not worked through.** With twenty or more people on a video call, individual generation does not run — the quotas alone would stop half the room, and people fall behind silently. You run the whole chain on your own screen, and the journal tables are the homework, filled in for their own subject during the week.
+
+That does not mean they sit quietly. The three rules come back at every stage, and they answer them.
 
 **Before every generation**, ask: "What do you expect back?" and "What's missing from this prompt?"
 **When the output returns**, name the first thing that's wrong with it out loud, and fix that one thing in front of them.
-**After each stage**, give two minutes for the journal. A session where only you generated something is a demonstration, not a lesson.
+**After each stage**, put the three rules back to the room before you move on. Their answers are what makes the demonstration a lesson.
 
 Item 4 and item 6 stay as backup for the opening discussion only — for a class with no network, or a facilitator who wants a guaranteed script for those six minutes. They are never a substitute subject for the six-stage demo: if you have no subject of your own, pick anything simple on the spot and generate it from words.
 
@@ -181,7 +183,7 @@ Two short decks that say the same thing and open differently: the PPTX opens in 
 
 ### Checkpoint: before moving to the exit check
 
-Ask each learner, out loud, one sentence each: "Which format would you send someone else, and why?" A real answer names a trade-off (needs software to open versus opens anywhere, easy to restyle versus easy to share and read as text) — not just a preference.
+Put it to the room: "Which format would you send someone else, and why?" Take two or three out loud and ask the rest for one word in the chat — PPTX or HTML — so you can see the split. A real answer names a trade-off (needs software to open versus opens anywhere, easy to restyle versus easy to share and read as text) — not just a preference.
 
 ### If the output is weak
 
