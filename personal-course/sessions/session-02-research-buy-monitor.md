@@ -36,7 +36,7 @@ If you have a suitable machine and want hands-on work, install OpenClaw alongsid
 
 ### Advanced Adventure — optional student-owned cloud setup
 
-If you already have an account with a model provider, you may connect OpenClaw to your own cloud model or API. Open a separate project and key for the course, set a low spending cap, keep the key out of your learning journal and any shared file, and test one agent against public data before you schedule it. The only permitted output is an alert or a draft. The agent does not buy, does not contact a seller, does not enter a financial account, does not trade, and does not make an investment recommendation. Note that a paid chat subscription and API credits are not necessarily the same thing — check the provider's current account terms before you connect.
+If you already have an account with a model provider, you may connect OpenClaw to your own cloud model or API. **[Step-by-step setup for Mac and Windows is here](session-02-openclaw-setup.md)**, including what it costs and how to stop it. Open a separate project and key for the course, set a low spending cap, keep the key out of your learning journal and any shared file, and test one agent against public data before you schedule it. The only permitted output is an alert or a draft. The agent does not buy, does not contact a seller, does not enter a financial account, does not trade, and does not make an investment recommendation. Note that a paid chat subscription and API credits are not necessarily the same thing — check the provider's current account terms before you connect.
 
 ## Optional resources
 
