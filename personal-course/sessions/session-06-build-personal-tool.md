@@ -8,7 +8,7 @@
 
 ## Before the session — open an account on one platform
 
-**Do this before the session, not during it.** Pick **one** of the two, based on what you want to build:
+**You do not need this for the session — it is for the week's build.** Pick **one** of the two, based on what you want to build:
 
 | Platform | Suits | Note |
 |---|---|---|
