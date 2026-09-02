@@ -5,147 +5,409 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>שקפים להקרנה — מפגש 5: לשפר מרחב</title>
     <style>
-      :root{--primary:#4E356F;--soft:#F0EAFA;--text:#17242D;--line:#d6dae0;--muted:#55606E;--warn:#b3413f}
+      /* Session 2 is about the distance between a confident number and what you actually
+         pay. The deck borrows retail signage — enormous figures, tiny small print — and
+         audits it. Colour is not decoration here: amber is always somebody's claim, teal
+         is always something checked at source, slate is always still unknown. Slide 2
+         teaches that legend and every later slide relies on it.
+         System fonts only: the session has to run with no network. */
+      :root{
+        --ink:#111820;
+        --paper:#FBF9F5;
+        --brand:#4E356F;
+        --claim:#E0821A;
+        --evidence:#0F7B6C;
+        --unknown:#7A8794;
+        --stop:#C4342F;
+        --rule:#DAD3C8;
+        --display:system-ui,-apple-system,"Segoe UI",sans-serif;
+      }
       *{box-sizing:border-box}
-      body{font-family:system-ui,sans-serif;line-height:1.5;margin:0;color:var(--text);background:#fff}
-      .slide{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:4vh 6vw;border-bottom:1px solid var(--line);page-break-after:always}
-      .num{color:var(--muted);font-size:1rem;letter-spacing:.08em;margin-bottom:1rem}
-      h1{font-size:clamp(1.8rem,4.5vw,3rem);color:var(--primary);margin:0 0 1.5rem}
-      h2{font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--primary);margin:1.5rem 0 .6rem}
-      p,li{font-size:clamp(1.05rem,1.9vw,1.4rem)}
-      .big{font-size:clamp(1.3rem,2.8vw,2rem);line-height:1.45}
-      .box{background:var(--soft);border-inline-start:6px solid var(--primary);padding:1.2rem 1.5rem;border-radius:6px}
-      .prompt{background:#17242D;color:#F4F6F8;padding:1.2rem 1.5rem;border-radius:6px;font-size:clamp(1rem,1.9vw,1.35rem);line-height:1.6}
-      .warn{background:#fdf0f0;border-inline-start:6px solid var(--warn);padding:1rem 1.4rem;border-radius:6px;margin:.6rem 0;font-size:clamp(1.1rem,2.2vw,1.5rem)}
-      table{border-collapse:collapse;width:100%;font-size:clamp(.95rem,1.7vw,1.25rem)}
-      th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:start}
-      th{background:var(--primary);color:#fff}
-      tbody tr:nth-child(even){background:#FAFAFC}
-      .total td{font-weight:700;background:var(--soft)}
-      .say{border:2px dashed var(--primary);border-radius:6px;padding:1.2rem 1.5rem;font-style:italic}
-      .src{font-size:.8em;border-radius:999px;padding:.1rem .55rem;display:inline-block;margin-inline-end:.4rem}
-      .measured{background:#e3f1e6;color:#1f5b32}
-      .spec{background:#e6ecf7;color:#26406e}
-      .assumed{background:#fdecd8;color:#8a4b06}
-      .calc{background:#efe6f7;color:#4E356F}
-      .unit{font-size:clamp(.9rem,1.5vw,1.1rem);color:var(--muted);margin:.6rem 0 0}
-      .prompt .data{display:block;font-size:.88em;background:#22323d;border-radius:4px;padding:.7rem .9rem;margin:.6rem 0}
-      ol,ul{padding-inline-start:1.4rem}
-      @media print{.slide{min-height:auto;padding:1.5rem;border:0}}
+      html{-webkit-text-size-adjust:100%}
+      body{
+        font-family:var(--display);
+        margin:0;background:var(--paper);color:var(--ink);
+        font-variant-numeric:tabular-nums;
+        line-height:1.25;
+      }
+
+      .slide{
+        min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+        padding:7vh 6vw 9vh;position:relative;
+        border-bottom:1px solid var(--rule);page-break-after:always;
+      }
+      .slide.dark{background:var(--ink);color:var(--paper)}
+      .slide.dark .eyebrow{color:#8E9AA6}
+      .slide.dark .rule{background:#2A343F}
+
+      /* Structural marker. Slides are a timed sequence, so the number and the minute
+         range carry real information for the facilitator, not decoration. */
+      .eyebrow{
+        position:absolute;top:3.4vh;inset-inline-start:6vw;inset-inline-end:6vw;
+        display:flex;justify-content:space-between;gap:1rem;
+        font-size:clamp(.8rem,1.25vw,1.05rem);
+        text-transform:uppercase;letter-spacing:.2em;font-weight:700;
+        color:var(--unknown);
+      }
+      .rule{position:absolute;top:6.6vh;inset-inline:6vw;height:1px;background:var(--rule)}
+
+      h1{
+        font-size:clamp(1.9rem,5.2vw,4.1rem);
+        font-weight:800;letter-spacing:-.028em;line-height:1.04;
+        margin:0 0 .6em;max-width:20ch;
+      }
+      h1.wide{max-width:28ch}
+      h2{
+        font-size:clamp(.9rem,1.5vw,1.2rem);
+        text-transform:uppercase;letter-spacing:.18em;font-weight:700;
+        color:var(--unknown);margin:2.2rem 0 .7rem;
+      }
+      p{margin:0 0 .7em}
+      .lede{font-size:clamp(1.25rem,2.5vw,2.05rem);max-width:42ch;line-height:1.4}
+      .lede strong{font-weight:700}
+
+      /* The small print. The session's whole argument is that this is where the
+         conditions live, so it gets a real typographic voice rather than being hidden. */
+      .fineprint{
+        font-size:clamp(1.05rem,1.95vw,1.55rem);letter-spacing:.02em;
+        color:var(--unknown);max-width:60ch;line-height:1.5;
+      }
+      .fineprint .mark{color:var(--claim);font-weight:800}
+
+      .mark{font-weight:800}
+      sup.mark{font-size:.55em;vertical-align:super;margin-inline-start:.08em}
+
+      /* Enormous figures are the point of this deck. */
+      .figure{
+        font-size:clamp(3rem,11vw,9rem);font-weight:800;letter-spacing:-.045em;
+        line-height:.9;display:block;
+      }
+      .figure-sm{font-size:clamp(2rem,6vw,4.6rem);font-weight:800;letter-spacing:-.04em;line-height:.95}
+      .caption{
+        font-size:clamp(.88rem,1.45vw,1.15rem);text-transform:uppercase;
+        letter-spacing:.18em;font-weight:700;color:var(--unknown);margin-top:.5rem;
+      }
+
+      .claim{color:var(--claim)}
+      .evidence{color:var(--evidence)}
+      .unknown{color:var(--unknown)}
+      .stop{color:var(--stop)}
+
+      .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,4vw,4rem);align-items:start}
+      .panel{border-top:5px solid var(--rule);padding-top:1.1rem}
+      .panel.is-claim{border-top-color:var(--claim)}
+      .panel.is-evidence{border-top-color:var(--evidence)}
+      .panel .caption{margin:0 0 .8rem}
+
+      .legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1.6rem;margin-top:1rem}
+      .swatch{border-top:9px solid;padding-top:.9rem}
+      .swatch h3{font-size:clamp(1.35rem,2.8vw,2.2rem);margin:0 0 .3rem;font-weight:800;letter-spacing:-.02em}
+      .swatch p{font-size:clamp(1rem,1.8vw,1.4rem);color:var(--unknown);margin:0;line-height:1.4}
+
+      .boxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1rem}
+      .cell{border:2px solid var(--ink);padding:1rem 1.1rem;border-radius:3px}
+      .cell .caption{margin:0 0 .45rem;color:var(--brand)}
+      .cell p{font-size:clamp(1.05rem,1.95vw,1.5rem);margin:0;line-height:1.35}
+      .cell.ghost{border-style:dashed;border-color:var(--unknown);background:transparent}
+      .cell.ghost .caption{color:var(--unknown)}
+      .cell.ghost p{color:var(--unknown)}
+
+      .prompt{
+        background:var(--ink);color:var(--paper);border-radius:4px;
+        padding:clamp(1rem,2.4vw,1.8rem);
+        font-size:clamp(1.1rem,2.05vw,1.6rem);line-height:1.5;max-width:56ch;
+      }
+      .prompt .claim,.prompt .evidence{font-weight:800}
+
+      ol.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:1.1rem}
+      ol.steps li{counter-increment:s;display:flex;gap:1rem;align-items:baseline;
+        font-size:clamp(1.3rem,2.8vw,2.4rem);font-weight:700;letter-spacing:-.015em}
+      ol.steps li::before{
+        content:counter(s);font-size:clamp(.9rem,1.4vw,1.15rem);font-weight:800;
+        color:var(--stop);border:2px solid var(--stop);border-radius:50%;
+        width:2.1em;height:2.1em;display:grid;place-items:center;flex:none;letter-spacing:0;
+      }
+
+      .qa{display:grid;grid-template-columns:auto 1fr;gap:.55rem 1.6rem;align-items:baseline;
+        font-size:clamp(1.1rem,2.05vw,1.6rem);max-width:62ch}
+      .qa dt{font-weight:800;color:var(--brand);white-space:nowrap}
+      .qa dd{margin:0;color:var(--ink)}
+      .qa .last{color:var(--stop)}
+
+      .fill{
+        font-size:clamp(1.25rem,2.8vw,2.25rem);line-height:1.5;max-width:28ch;font-weight:600;
+      }
+      .fill b{
+        display:inline-block;border-bottom:3px solid var(--claim);
+        min-width:5.5em;color:var(--claim);font-weight:800;
+      }
+
+
+      /* Long blocks stay behind a title the facilitator clicks. On a shared screen a wall
+         of text is unreadable anyway, and the click matches how the session is taught:
+         put the question to the room, then open the answer. */
+      details.reveal{border-top:3px solid var(--rule);margin-top:1.8rem;max-width:62ch}
+      details.reveal>summary{
+        cursor:pointer;list-style:none;padding:1rem 0;
+        font-size:clamp(1.1rem,2.1vw,1.7rem);font-weight:800;letter-spacing:-.015em;
+        color:var(--brand);display:flex;align-items:center;gap:.7rem;
+      }
+      details.reveal>summary::-webkit-details-marker{display:none}
+      details.reveal>summary::before{
+        content:"+";flex:none;display:grid;place-items:center;
+        width:1.4em;height:1.4em;border:3px solid currentColor;border-radius:50%;
+        font-size:.8em;line-height:1;font-weight:800;
+      }
+      details.reveal[open]>summary::before{content:"–"}
+      details.reveal>summary:focus-visible{outline:3px solid var(--claim);outline-offset:4px}
+      .slide.dark details.reveal{border-top-color:#2A343F}
+      .slide.dark details.reveal>summary{color:var(--claim)}
+
+      /* Slide navigation. Kept faint until pointed at, so it never competes with the slide
+         on a shared screen, and hidden entirely when printing. */
+      .deck-nav{
+        position:fixed;inset-block-end:1.3rem;inset-inline-end:1.3rem;z-index:20;
+        /* Pinned to LTR so the button order is the DOM order in both languages. Each deck
+           then emits the buttons in the order its reading direction runs, so "next" always
+           sits on the side the reader is heading toward and its arrow points that way. */
+        display:flex;direction:ltr;align-items:center;gap:.35rem;
+        background:rgba(17,24,32,.88);color:var(--paper);
+        border-radius:999px;padding:.4rem .5rem;
+        opacity:.3;transition:opacity .18s ease;
+      }
+      .deck-nav:hover,.deck-nav:focus-within{opacity:1}
+      .deck-nav button{
+        font:inherit;font-weight:800;font-size:1.25rem;line-height:1;
+        width:2.3rem;height:2.3rem;border-radius:50%;border:0;cursor:pointer;
+        background:transparent;color:inherit;display:grid;place-items:center;padding:0;
+      }
+      .deck-nav button:hover:not([disabled]){background:rgba(255,255,255,.16)}
+      .deck-nav button:focus-visible{outline:3px solid var(--claim);outline-offset:2px}
+      .deck-nav button[disabled]{opacity:.28;cursor:default}
+      .deck-count{
+        font-size:.95rem;font-weight:700;letter-spacing:.05em;
+        font-variant-numeric:tabular-nums;padding:0 .45rem;min-width:5ch;text-align:center;
+        /* "2 / 13" is bidi-neutral, so under dir="rtl" it reorders to "13 / 2". */
+        direction:ltr;unicode-bidi:isolate;
+      }
+      @media print{.deck-nav{display:none}}
+      svg{display:block;width:100%;height:auto;overflow:visible}
+      .svg-wrap{margin:.6rem 0 .4rem}
+      text{font-family:var(--display);font-variant-numeric:tabular-nums}
+
+      @media (max-width:750px){
+        .split{grid-template-columns:1fr}
+        .slide{min-height:auto;padding:3.4rem 1.4rem 2.6rem}
+      }
+      @media print{
+        .slide{min-height:auto;padding:1.4rem;border:0}
+        body{background:#fff}
+        .slide.dark{background:#fff;color:var(--ink)}
+        .slide.dark .eyebrow{color:var(--unknown)}
+      }
+      @media (prefers-reduced-motion:no-preference){
+        .slide{scroll-margin-top:0}
+      }
     </style>
   </head>
   <body>
 
-    <section class="slide">
-      <p class="num">שקף 1 — בדיקת מוכנות, דקות 10–15</p>
-      <h1>מי באיזה מסלול?</h1>
-      <table>
-        <thead><tr><th>המסלול</th><th>הכלים</th></tr></thead>
-        <tbody>
-          <tr><td><strong>1 — חינמי</strong></td><td>OpenSCAD + כל צ׳אט AI</td></tr>
-          <tr><td><strong>2 — ויזואלי</strong></td><td>FreeCAD + MCP + Claude Desktop</td></tr>
-          <tr class="total"><td><strong>3 — מתקדם</strong></td><td>Claude Code או Antigravity</td></tr>
-        </tbody>
-      </table>
-      <div class="say">הכלים שונים, המחשבה זהה. מי שעל מסלול 1 עושה בדיוק את אותו תרגיל ובודק בדיוק את אותו קרטון.</div>
+    <section class="slide dark">
+      <p class="eyebrow"><span>01 &middot; מסלולים</span><span>דקות 10–15</span></p>
+      <div class="rule"></div>
+      <h1>שלושה מסלולים, חשיבה אחת</h1>
+      <dl class="qa">
+        <dt>חינמי</dt><dd>OpenSCAD וכל צ׳אט AI</dd>
+        <dt>ויזואלי</dt><dd>FreeCAD, ה-MCP, ו-Claude Desktop</dd>
+        <dt>מתקדם</dt><dd>Claude Code או Antigravity</dd>
+      </dl>
+      <p class="lede" style="margin-top:2rem">הכלים שונים. החשיבה זהה, וגם הקרטון שבסוף.</p>
     </section>
+
     <section class="slide">
-      <p class="num">שקף 2 — מודדים, דקות 15–30</p>
+      <p class="eyebrow"><span>02 &middot; מאיפה הגיע כל מספר</span><span>דקות 15–30</span></p>
+      <div class="rule"></div>
       <h1>לכל מספר יש מקור</h1>
-      <table>
-        <thead><tr><th>המידה</th><th>הערך</th><th>מאיפה היא הגיעה</th></tr></thead>
-        <tbody>
-          <tr><td>רוחב פנימי</td><td>36.0 ס"מ</td><td><span class="src measured">נמדד</span> סרגל, בתחתית המגירה</td></tr>
-          <tr><td>עומק פנימי</td><td>42.0 ס"מ</td><td><span class="src measured">נמדד</span> מהחזית ועד הדופן האחורית</td></tr>
-          <tr><td>גובה פנוי</td><td>7.5 ס"מ</td><td><span class="src measured">נמדד</span> עד המסילה שמעל</td></tr>
-          <tr><td>עובי דופן</td><td>1.8 ס"מ</td><td><span class="src spec">מפרט</span> דף הרהיט של היצרן</td></tr>
-          <tr><td>המגירה נפתחת עד הסוף</td><td>כן</td><td><span class="src assumed">הנחה</span> לא נבדק מעולם</td></tr>
-          <tr class="total"><td>רוחב תא אחד</td><td>68.7 מ"מ</td><td><span class="src calc">חושב</span> מהרוחב, ב-5 תאים</td></tr>
-        </tbody>
-      </table>
-      <p class="unit">הטבלאות בסנטימטרים, כי ככה קוראים סרט מדידה. הקוד במילימטרים: <strong>36.0 ס"מ = 360 מ"מ</strong>.</p>
-      <div class="say">את החלק הזה ה-AI לא יכול לעשות. הוא לא ראה את החדר.</div>
-    </section>
-    <section class="slide">
-      <p class="num">שקף 3 — ההנחה שנשכחת</p>
-      <h1>„המגירה נפתחת עד הסוף”</h1>
-      <div class="warn">אף אחד לא מדד את זה. מסילות זולות נעצרות ב-80 אחוז.</div>
-      <p class="big">אם זה נכון, העומק השימושי הוא <strong>33.6 ס"מ</strong> ולא 42 — והחלק האחורי של המארגן לא נגיש.</p>
-    </section>
-    <section class="slide">
-      <p class="num">שקף 4 — מה קורה כשמדברים עם CAD</p>
-      <h1>שלוש דרכים לאותו מודל</h1>
-      <table>
-        <thead><tr><th></th><th>מסלול 1</th><th>מסלולים 2–3</th></tr></thead>
-        <tbody>
-          <tr><td>מה ה-AI מייצר</td><td>קוד OpenSCAD</td><td>פקודות ל-FreeCAD</td></tr>
-          <tr><td>מה אתם עושים</td><td>מדביקים, F5</td><td>מסתכלים</td></tr>
-          <tr><td>מה אתם רואים</td><td>את כל הקוד</td><td>את הצורה</td></tr>
-          <tr class="total"><td>מה נבדק בסוף</td><td colspan="2">אותו קרטון בדיוק</td></tr>
-        </tbody>
-      </table>
-    </section>
-    <section class="slide">
-      <p class="num">שקף 5 — הבקשה, דקות 30–55</p>
-      <h1>נותנים לו מספרים אמיתיים</h1>
-      <div class="prompt">אלה מידות שמדדתי, עם תווית מקור לכל אחת. כולן במילימטרים.
-        <span class="data">המגירה, מידות פנים: רוחב <span dir="ltr">360</span> (נמדד), עומק <span dir="ltr">420</span> (נמדד), גובה פנוי <span dir="ltr">75</span> (נמדד).<br>
-        צריך להיכנס: 2 מטעני נייד <span dir="ltr">105 × 65 × 22</span> (נמדד); 5 כבלים מגולגלים בקוטר <span dir="ltr">80</span> בערך (הנחה); 6 מתאמים ומחברים עד <span dir="ltr">50 × 30</span> (נמדד); נרתיק אוזניות אחד <span dir="ltr">95</span> רוחב, <span dir="ltr">40</span> גובה (מפרט); מחברת אחת <span dir="ltr">210 × 148 × 8</span> (מפרט).<br>
-        מרווחים: לפחות <span dir="ltr">15</span> סביב כל תא כדי שאצבע תיכנס; <span dir="ltr">5</span> מתחת למסילה שמעל.</span>
-        אני רוצה מארגן מגירה עם תאים לכבלים. בנה/י מודל פרמטרי שכל מידה בו נגזרת מהמספרים שנתתי, עם פרמטרים בראש הקובץ שאפשר לשנות. אל תמציא/י מידות — ואם חסר לך משהו, שאל/י אותי במקום להשלים. אל תטען/י שהתכנון חזק או בטוח.</div>
-      <p class="unit">הדף המלא, עם החפצים ועם ההנחה השתולה, נמצא ב<strong>מידות לדוגמה</strong>.</p>
-    </section>
-    <section class="slide">
-      <p class="num">שקף 6 — השאלה שאחרי</p>
-      <h1>„אילו מידות השתמשת בהן שלא נתתי לך?”</h1>
-      <p class="big">הוא ייתן רשימה: עובי דופן, מרווחים, גובה, רדיוסים.</p>
-      <div class="say">אף אחת מהן לא בהכרח שגויה. הן פשוט לא נמדדו — וזו בדיוק אותה הנחה שנראית כמו מדידה, עכשיו בתוך גיאומטריה.</div>
-    </section>
-    <section class="slide">
-      <p class="num">שקף 7 — פרמטר אחד, דקות 55–70</p>
-      <h1>קודם חוזים, ואז משנים</h1>
-      <div class="box big">
-        <p><code>compartments = 5;</code> &nbsp;→&nbsp; <code>7</code></p>
-        <p>מה אמור לקרות לרוחב של כל תא?</p>
+      <div class="legend">
+        <div class="swatch" style="border-color:var(--evidence)"><h3 class="evidence">נמדד</h3><p>שמתם עליו סרגל. אמרו איפה בדיוק.</p></div>
+        <div class="swatch" style="border-color:var(--brand)"><h3 style="color:var(--brand)">מפרט</h3><p>מדף היצרן. נכון למוצר, אולי לא לשלכם.</p></div>
+        <div class="swatch" style="border-color:var(--claim)"><h3 class="claim">הנחה</h3><p>אף אחד לא בדק. אלה אלה שעולים לכם.</p></div>
+        <div class="swatch" style="border-color:var(--unknown)"><h3 class="unknown">חושב</h3><p>נגזר. טוב בדיוק כמו מה שנכנס אליו.</p></div>
       </div>
-      <table>
-        <thead><tr><th>מספר תאים</th><th>רוחב כל תא</th></tr></thead>
-        <tbody>
-          <tr><td>5</td><td>68.7 מ"מ</td></tr>
-          <tr class="total"><td>7</td><td>48.4 מ"מ</td></tr>
-        </tbody>
-      </table>
-      <div class="say">אם התחזית שלכם לא התאימה — לא הבנתם את המודל. עדיף לגלות עכשיו ולא אחרי הדפסה של שלוש שעות.</div>
+      <p class="fineprint" style="margin-top:2rem">זה החלק שה-AI לא יכול לעשות במקומכם. הוא לא ראה את החדר.</p>
     </section>
+
     <section class="slide">
-      <p class="num">שקף 8 — בדיקה פיזית, דקות 70–85</p>
-      <h1>הקרטון הוא היחיד שנוגע במציאות</h1>
-      <p class="big">גוזרים לפי מידות המודל, מניחים במקום, ומשתמשים כרגיל.</p>
-      <table>
-        <thead><tr><th>מה בודקים</th><th>למה דווקא את זה</th></tr></thead>
-        <tbody>
-          <tr><td>שהוא נכנס לרוחב</td><td>המידה הכי קלה לטעות בה</td></tr>
-          <tr><td>שאפשר להוציא חפץ ביד אחת</td><td>ככה באמת משתמשים</td></tr>
-          <tr class="total"><td>שהמגירה נסגרת</td><td>הכשל היקר: מגלים אחרי ההדפסה</td></tr>
-        </tbody>
-      </table>
+      <p class="eyebrow"><span>03 &middot; המגירה</span><span>דקות 15–30</span></p>
+      <div class="rule"></div>
+      <h1>אותה מגירה, עם המקורות עליה</h1>
+        <div class="svg-wrap">
+        <svg style="max-width:86%;margin-inline:auto" viewBox="0 0 1000 400" role="img" aria-label="מגירה בחזית מחולקת לחמישה תאים, כשהרוחב והגובה מסומנים כנמדדים, תא אחד כמחושב, עובי הפאנל כמפרט, והנחה שלא נבדקה שהמגירה נפתחת במלואה.">
+          <line x1="120" y1="64" x2="880" y2="64" stroke="#0F7B6C" stroke-width="3"/>
+          <text x="500" y="48" text-anchor="middle" font-size="27" font-weight="800" fill="#0F7B6C">36.0 × 7.5 ס״מ · נמדד</text>
+          <rect x="120" y="96" width="760" height="158" fill="none" stroke="#111820" stroke-width="4"/>
+          <line x1="272" y1="96" x2="272" y2="254" stroke="#B9BFC7" stroke-width="3"/>
+          <line x1="424" y1="96" x2="424" y2="254" stroke="#B9BFC7" stroke-width="3"/>
+          <line x1="576" y1="96" x2="576" y2="254" stroke="#B9BFC7" stroke-width="3"/>
+          <line x1="728" y1="96" x2="728" y2="254" stroke="#B9BFC7" stroke-width="3"/>
+          <line x1="728" y1="284" x2="880" y2="284" stroke="#7A8794" stroke-width="3"/>
+          <text x="804" y="316" text-anchor="middle" font-size="25" font-weight="800" fill="#7A8794">68.7 מ״מ · חושב</text>
+          <text x="300" y="316" text-anchor="middle" font-size="25" font-weight="800" fill="#4E356F">1.8 ס״מ דופן · מפרט</text>
+          <rect x="120" y="344" width="760" height="44" rx="4" fill="none" stroke="#E0821A" stroke-width="3" stroke-dasharray="8 6"/>
+          <text x="500" y="373" text-anchor="middle" font-size="25" font-weight="800" fill="#E0821A">„המגירה נפתחת במלואה” · אף אחד לא בדק</text>
+        </svg>
+        </div>
     </section>
+
+    <section class="slide dark">
+      <p class="eyebrow"><span>04 &middot; ההנחה הנשכחת</span><span>דקות 15–30</span></p>
+      <div class="rule"></div>
+      <h1 class="claim">„המגירה נפתחת במלואה”</h1>
+      <p class="lede">אם המסילות נעצרות ב-80 אחוז, העומק השימושי הוא <strong>33.6 ס״מ</strong>, לא 42.</p>
+      <p class="fineprint" style="margin-top:1.8rem">הנחה אחת שלא נבדקה, וכל תא שמאחוריה שגוי. בגלל זה התווית חשובה יותר מהמספר.</p>
+    </section>
+
+    <section class="slide dark">
+      <p class="eyebrow"><span>05 &middot; הבקשה</span><span>דקות 30–55</span></p>
+      <div class="rule"></div>
+      <h1>תנו לו מספרים אמיתיים, עם התוויות</h1>
+      <details class="reveal">
+        <summary>הבקשה המלאה</summary>
+        <div class="prompt">אלה מדידות שלקחתי, <span class="evidence">לכל אחת תווית מקור</span>. הכול במילימטרים. בנה מארגן פרמטרי שנכנס בתוכן. <span class="evidence">אחר כך פרט כל מידה שהשתמשת בה ושלא נתתי לך.</span></div>
+      </details>
+    </section>
+
     <section class="slide">
-      <p class="num">שקף 9 — הגבול, דקות 85–90</p>
-      <h1>מה לא מתכננים היום</h1>
-      <ul class="big">
-        <li>שום דבר שנושא משקל של אדם</li>
-        <li>שום דבר שקשור לחשמל</li>
-        <li>שום דבר שכשל בו מסוכן</li>
-      </ul>
-      <div class="warn">והכלי לא יודע את זה. הוא יבנה בשמחה תושבת למדף כבד ויגיד שהיא נראית טוב.</div>
+      <p class="eyebrow"><span>06 &middot; מה הוא השלים</span><span>דקות 30–55</span></p>
+      <div class="rule"></div>
+      <h1>„באילו מידות השתמשת שלא נתתי לך?”</h1>
+      <p class="lede">עובי דופן. מרווח. רדיוס פינה. גובה בסיס.</p>
+      <p class="fineprint" style="margin-top:1.8rem">אף אחת מהן לא בהכרח שגויה. הן פשוט אף פעם לא נמדדו — אותה הנחה שנראית כמו עובדה, בכובע אחר.</p>
     </section>
+
     <section class="slide">
-      <p class="num">שקף 10 — יציאה, דקות 85–90</p>
-      <h1>להשלים בקול או בכתב</h1>
-      <div class="box big">התכנון שלי מבוסס על <strong>[מספר]</strong> מידות שנמדדו ו<strong>[מספר]</strong> הנחות — כולל <strong>[מספר]</strong> שה-AI המציא. הבדיקה הפיזית גילתה ש<strong>[מה]</strong>, ולכן שיניתי <strong>[מה]</strong>.</div>
-      <h2>ושאלת ההתבוננות</h2>
-      <p class="big">איזו מידה הייתם בטוחים בה — עד שמדדתם?</p>
+      <p class="eyebrow"><span>07 &middot; לחזות, ואז לשנות</span><span>דקות 55–70</span></p>
+      <div class="rule"></div>
+      <h1>אמרו את המספר לפני שאתם משנים</h1>
+      <dl class="qa">
+        <dt>5 תאים</dt><dd>68.7 מ״מ כל אחד</dd>
+        <dt>7 תאים</dt><dd class="claim">חזו את זה, בקול, קודם</dd>
+      </dl>
+      <details class="reveal">
+        <summary>ואז בודקים</summary>
+        <p class="lede"><span class="evidence">48.4 מ״מ.</span> אם החיזוי שלכם החטיא, לא הבנתם את המודל — ועדיף לגלות את זה עכשיו ולא אחרי הדפסה של שלוש שעות.</p>
+      </details>
     </section>
+
+    <section class="slide">
+      <p class="eyebrow"><span>08 &middot; הקרטון</span><span>דקות 70–85</span></p>
+      <div class="rule"></div>
+      <h1>רק הקרטון נוגע במציאות</h1>
+      <dl class="qa">
+        <dt>הוא נכנס ברוחב</dt><dd>המידה שהכי קל לטעות בה</dd>
+        <dt>אפשר להוציא משהו ביד אחת</dt><dd>ככה באמת משתמשים בזה</dd>
+        <dt class="stop">המגירה עדיין נסגרת</dt><dd class="stop">הכישלון היקר, שבדרך כלל מתגלה אחרי ההדפסה</dd>
+      </dl>
+    </section>
+
+    <section class="slide dark">
+      <p class="eyebrow"><span>09 &middot; הגבול</span><span>דקות 70–85</span></p>
+      <div class="rule"></div>
+      <h1 class="stop">מה אנחנו לא מתכננים</h1>
+      <ol class="steps">
+        <li>שום דבר שנושא משקל של אדם.</li>
+        <li>שום דבר שקשור לחשמל.</li>
+        <li>שום דבר שמסוכן אם הוא נכשל.</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <p class="eyebrow"><span>10 &middot; בדיקת יציאה</span><span>דקות 85–90</span></p>
+      <div class="rule"></div>
+      <h1>השלימו את המשפט</h1>
+      <p class="fill">התכנון שלי נשען על <b></b> מידות שנמדדו ועל <b></b> הנחות. הראשונה שאבדוק היא <b></b>.</p>
+      <h2>והשאלה ששווה לשבת איתה</h2>
+      <p class="lede">באיזו הנחה הייתם הכי בטוחים?</p>
+    </section>
+
+    <nav class="deck-nav" aria-label="ניווט בין שקפים">
+      <button type="button" data-next aria-label="השקף הבא">&lsaquo;</button>
+      <span class="deck-count" data-count aria-live="polite"></span>
+      <button type="button" data-prev aria-label="השקף הקודם">&rsaquo;</button>
+    </nav>
+
+    <script>
+      (function(){
+        var slides=[].slice.call(document.querySelectorAll('.slide'));
+        var nav=document.querySelector('.deck-nav');
+        if(slides.length<2||!nav)return;
+        var prev=nav.querySelector('[data-prev]'),
+            next=nav.querySelector('[data-next]'),
+            count=nav.querySelector('[data-count]'),
+            rtl=document.documentElement.dir==='rtl';
+
+        function currentIndex(){
+          var best=0,bestDist=Infinity;
+          slides.forEach(function(s,i){
+            var d=Math.abs(s.getBoundingClientRect().top);
+            if(d<bestDist){bestDist=d;best=i;}
+          });
+          return best;
+        }
+        function update(i){
+          if(i==null)i=currentIndex();
+          count.textContent=(i+1)+' / '+slides.length;
+          prev.disabled=i===0;
+          next.disabled=i===slides.length-1;
+        }
+        function go(i){
+          i=Math.max(0,Math.min(slides.length-1,i));
+          // Instant, deliberately. A presentation cuts between slides rather than gliding,
+          // gliding compresses badly over video, and smooth scrolling is silently skipped
+          // by the browser whenever the tab is not in the foreground.
+          slides[i].scrollIntoView({behavior:'auto',block:'start'});
+          update(i);
+        }
+        prev.addEventListener('click',function(e){go(currentIndex()-1);if(e.detail)this.blur();});
+        next.addEventListener('click',function(e){go(currentIndex()+1);if(e.detail)this.blur();});
+
+        // Horizontal arrows follow reading direction, so in Hebrew Left moves forward.
+        // Down, Up, Page keys and Space mean the same thing in both.
+        var FORWARD=['PageDown','ArrowDown',' ','Spacebar',rtl?'ArrowLeft':'ArrowRight'],
+            BACK=['PageUp','ArrowUp',rtl?'ArrowRight':'ArrowLeft'];
+        addEventListener('keydown',function(e){
+          if(e.metaKey||e.ctrlKey||e.altKey)return;
+          var t=e.target;
+          // A reveal or a button must keep its own Space and Enter.
+          if(t&&t.closest&&t.closest('summary,a,button,input,textarea,select,[contenteditable]')
+             &&(e.key===' '||e.key==='Spacebar'||e.key==='Enter'))return;
+          if(FORWARD.indexOf(e.key)>-1){e.preventDefault();go(currentIndex()+1);}
+          else if(BACK.indexOf(e.key)>-1){e.preventDefault();go(currentIndex()-1);}
+          else if(e.key==='Home'){e.preventDefault();go(0);}
+          else if(e.key==='End'){e.preventDefault();go(slides.length-1);}
+        });
+
+        var ticking=false;
+        addEventListener('scroll',function(){
+          if(ticking)return;
+          ticking=true;
+          requestAnimationFrame(function(){update();ticking=false;});
+        },{passive:true});
+        update(0);
+      })();
+
+      // A closed <details> prints as nothing, which would quietly drop the contract and
+      // the conditions from a handout. Open everything to print, then put it back.
+      addEventListener('beforeprint',function(){
+        document.querySelectorAll('details').forEach(function(d){
+          d.dataset.wasOpen=d.open?'1':'0';d.open=true;
+        });
+      });
+      addEventListener('afterprint',function(){
+        document.querySelectorAll('details').forEach(function(d){
+          if(d.dataset.wasOpen==='0')d.open=false;
+        });
+      });
+    </script>
   </body>
 </html>
