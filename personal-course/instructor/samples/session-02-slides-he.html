@@ -45,8 +45,8 @@
       .eyebrow{
         position:absolute;top:3.4vh;inset-inline-start:6vw;inset-inline-end:6vw;
         display:flex;justify-content:space-between;gap:1rem;
-        font-size:clamp(.62rem,1.05vw,.82rem);
-        text-transform:uppercase;letter-spacing:.22em;font-weight:700;
+        font-size:clamp(.8rem,1.25vw,1.05rem);
+        text-transform:uppercase;letter-spacing:.2em;font-weight:700;
         color:var(--unknown);
       }
       .rule{position:absolute;top:6.6vh;inset-inline:6vw;height:1px;background:var(--rule)}
@@ -58,19 +58,19 @@
       }
       h1.wide{max-width:28ch}
       h2{
-        font-size:clamp(.68rem,1.15vw,.9rem);
-        text-transform:uppercase;letter-spacing:.2em;font-weight:700;
+        font-size:clamp(.9rem,1.5vw,1.2rem);
+        text-transform:uppercase;letter-spacing:.18em;font-weight:700;
         color:var(--unknown);margin:2.2rem 0 .7rem;
       }
       p{margin:0 0 .7em}
-      .lede{font-size:clamp(1.05rem,2.05vw,1.65rem);max-width:44ch;line-height:1.4}
+      .lede{font-size:clamp(1.25rem,2.5vw,2.05rem);max-width:42ch;line-height:1.4}
       .lede strong{font-weight:700}
 
       /* The small print. The session's whole argument is that this is where the
          conditions live, so it gets a real typographic voice rather than being hidden. */
       .fineprint{
-        font-size:clamp(.72rem,1.3vw,1rem);letter-spacing:.04em;
-        color:var(--unknown);max-width:70ch;line-height:1.5;
+        font-size:clamp(1.05rem,1.95vw,1.55rem);letter-spacing:.02em;
+        color:var(--unknown);max-width:60ch;line-height:1.5;
       }
       .fineprint .mark{color:var(--claim);font-weight:800}
 
@@ -84,8 +84,8 @@
       }
       .figure-sm{font-size:clamp(2rem,6vw,4.6rem);font-weight:800;letter-spacing:-.04em;line-height:.95}
       .caption{
-        font-size:clamp(.66rem,1.1vw,.86rem);text-transform:uppercase;
-        letter-spacing:.2em;font-weight:700;color:var(--unknown);margin-top:.5rem;
+        font-size:clamp(.88rem,1.45vw,1.15rem);text-transform:uppercase;
+        letter-spacing:.18em;font-weight:700;color:var(--unknown);margin-top:.5rem;
       }
 
       .claim{color:var(--claim)}
@@ -101,13 +101,13 @@
 
       .legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1.6rem;margin-top:1rem}
       .swatch{border-top:9px solid;padding-top:.9rem}
-      .swatch h3{font-size:clamp(1.1rem,2.3vw,1.8rem);margin:0 0 .3rem;font-weight:800;letter-spacing:-.02em}
-      .swatch p{font-size:clamp(.8rem,1.4vw,1.05rem);color:var(--unknown);margin:0;line-height:1.4}
+      .swatch h3{font-size:clamp(1.35rem,2.8vw,2.2rem);margin:0 0 .3rem;font-weight:800;letter-spacing:-.02em}
+      .swatch p{font-size:clamp(1rem,1.8vw,1.4rem);color:var(--unknown);margin:0;line-height:1.4}
 
       .boxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1rem}
       .cell{border:2px solid var(--ink);padding:1rem 1.1rem;border-radius:3px}
       .cell .caption{margin:0 0 .45rem;color:var(--brand)}
-      .cell p{font-size:clamp(.86rem,1.6vw,1.2rem);margin:0;line-height:1.35}
+      .cell p{font-size:clamp(1.05rem,1.95vw,1.5rem);margin:0;line-height:1.35}
       .cell.ghost{border-style:dashed;border-color:var(--unknown);background:transparent}
       .cell.ghost .caption{color:var(--unknown)}
       .cell.ghost p{color:var(--unknown)}
@@ -115,33 +115,53 @@
       .prompt{
         background:var(--ink);color:var(--paper);border-radius:4px;
         padding:clamp(1rem,2.4vw,1.8rem);
-        font-size:clamp(.85rem,1.65vw,1.3rem);line-height:1.5;max-width:64ch;
+        font-size:clamp(1.1rem,2.05vw,1.6rem);line-height:1.5;max-width:56ch;
       }
       .prompt .claim,.prompt .evidence{font-weight:800}
 
       ol.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:1.1rem}
       ol.steps li{counter-increment:s;display:flex;gap:1rem;align-items:baseline;
-        font-size:clamp(1.05rem,2.4vw,2rem);font-weight:700;letter-spacing:-.015em}
+        font-size:clamp(1.3rem,2.8vw,2.4rem);font-weight:700;letter-spacing:-.015em}
       ol.steps li::before{
-        content:counter(s);font-size:clamp(.7rem,1.2vw,.95rem);font-weight:800;
+        content:counter(s);font-size:clamp(.9rem,1.4vw,1.15rem);font-weight:800;
         color:var(--stop);border:2px solid var(--stop);border-radius:50%;
         width:2.1em;height:2.1em;display:grid;place-items:center;flex:none;letter-spacing:0;
       }
 
       .qa{display:grid;grid-template-columns:auto 1fr;gap:.55rem 1.6rem;align-items:baseline;
-        font-size:clamp(.82rem,1.55vw,1.22rem);max-width:74ch}
+        font-size:clamp(1.1rem,2.05vw,1.6rem);max-width:62ch}
       .qa dt{font-weight:800;color:var(--brand);white-space:nowrap}
       .qa dd{margin:0;color:var(--ink)}
       .qa .last{color:var(--stop)}
 
       .fill{
-        font-size:clamp(1.05rem,2.4vw,1.9rem);line-height:1.5;max-width:30ch;font-weight:600;
+        font-size:clamp(1.25rem,2.8vw,2.25rem);line-height:1.5;max-width:28ch;font-weight:600;
       }
       .fill b{
         display:inline-block;border-bottom:3px solid var(--claim);
         min-width:5.5em;color:var(--claim);font-weight:800;
       }
 
+
+      /* Long blocks stay behind a title the facilitator clicks. On a shared screen a wall
+         of text is unreadable anyway, and the click matches how the session is taught:
+         put the question to the room, then open the answer. */
+      details.reveal{border-top:3px solid var(--rule);margin-top:1.8rem;max-width:62ch}
+      details.reveal>summary{
+        cursor:pointer;list-style:none;padding:1rem 0;
+        font-size:clamp(1.1rem,2.1vw,1.7rem);font-weight:800;letter-spacing:-.015em;
+        color:var(--brand);display:flex;align-items:center;gap:.7rem;
+      }
+      details.reveal>summary::-webkit-details-marker{display:none}
+      details.reveal>summary::before{
+        content:"+";flex:none;display:grid;place-items:center;
+        width:1.4em;height:1.4em;border:3px solid currentColor;border-radius:50%;
+        font-size:.8em;line-height:1;font-weight:800;
+      }
+      details.reveal[open]>summary::before{content:"–"}
+      details.reveal>summary:focus-visible{outline:3px solid var(--claim);outline-offset:4px}
+      .slide.dark details.reveal{border-top-color:#2A343F}
+      .slide.dark details.reveal>summary{color:var(--claim)}
       svg{display:block;width:100%;height:auto;overflow:visible}
       .svg-wrap{margin:.6rem 0 .4rem}
       text{font-family:var(--display);font-variant-numeric:tabular-nums}
@@ -208,7 +228,10 @@
       <p class="eyebrow"><span>04 · הבקשה</span><span>דקה 25</span></p>
       <div class="rule"></div>
       <h1>בקשו תוכנית, לא תשובה</h1>
+      <details class="reveal">
+        <summary>הבקשה המלאה</summary>
       <div class="prompt"><span class="claim">תכנן מחקר</span> לקניית אוזניות מבטלות רעש עד 800. <span class="claim">אל תמליץ על דגם.</span> פרט אילו סוגי מקורות קובעים עלות כוללת, אחריות, מדיניות החזרה ועמידות לאורך זמן, ולאיזו שאלה כל סוג מקור מתאים. הוסף נקודת מבט מנוגדת אחת ו<span class="evidence">רשימה של מה שעדיין לא ידוע</span>.</div>
+      </details>
       <p class="fineprint" style="margin-top:1.6rem">שתי מילים עושות את כל העבודה: <span class="claim mark">תכנן</span>, לא „המלץ” — ו<span class="mark" style="color:var(--evidence)">מה שעדיין לא ידוע</span>.</p>
     </section>
 
@@ -217,12 +240,14 @@
       <div class="rule"></div>
       <h1>אל תסתכלו על המסך</h1>
       <p class="lede">אילו מקורות <strong>אתם</strong> הייתם פותחים? ענו לפני שהדוח חוזר.</p>
-      <h2>ואז משווים</h2>
+      <details class="reveal">
+        <summary>ואז משווים</summary>
       <dl class="qa">
         <dt>הוא מצא</dt><dd>את מה שלא חשבנו עליו</dd>
         <dt>אנחנו רשמנו</dt><dd>את מה שהוא פספס</dd>
         <dt>הוא ציטט</dt><dd>כמה מהם מישהו באמת פתח?</dd>
       </dl>
+      </details>
       <p class="fineprint" style="margin-top:2.2rem">דוח מחקר הוא רשימת כתובות. הוא חוסך לכם את שאלת ההתחלה. הוא לא חוסך לכם את הקריאה.</p>
     </section>
 
@@ -240,14 +265,14 @@
           <line x1="337" y1="34" x2="337" y2="150" stroke="#111820" stroke-width="3" stroke-dasharray="7 5"/>
           <!-- Anchors are all "middle": under dir="rtl" the start/end anchors swap meaning
                and push the figures off the edge of the frame. -->
-          <text x="337"  y="24"  text-anchor="middle" font-size="21" font-weight="800" fill="#111820">תקציב 3,000</text>
-          <text x="796"  y="105" text-anchor="middle" direction="ltr" font-size="34" font-weight="800" fill="#FBF9F5">2,690</text>
-          <text x="118"  y="105" text-anchor="middle" direction="ltr" font-size="38" font-weight="800" fill="#111820">3,470</text>
-          <text x="1080" y="176" text-anchor="middle" font-size="19" font-weight="700" fill="#7A8794">מדבקה</text>
-          <text x="402"  y="176" text-anchor="middle" direction="ltr" font-size="19" font-weight="700" fill="#7A8794">+150</text>
-          <text x="346"  y="200" text-anchor="middle" direction="ltr" font-size="19" font-weight="700" fill="#7A8794">+250</text>
-          <text x="300"  y="176" text-anchor="middle" direction="ltr" font-size="19" font-weight="700" fill="#7A8794">+80</text>
-          <text x="247"  y="200" text-anchor="middle" direction="ltr" font-size="19" font-weight="700" fill="#7A8794">+300</text>
+          <text x="337"  y="24"  text-anchor="middle" font-size="28" font-weight="800" fill="#111820">תקציב 3,000</text>
+          <text x="796"  y="105" text-anchor="middle" direction="ltr" font-size="42" font-weight="800" fill="#FBF9F5">2,690</text>
+          <text x="118"  y="105" text-anchor="middle" direction="ltr" font-size="46" font-weight="800" fill="#111820">3,470</text>
+          <text x="1080" y="176" text-anchor="middle" font-size="26" font-weight="700" fill="#7A8794">מדבקה</text>
+          <text x="402"  y="176" text-anchor="middle" direction="ltr" font-size="26" font-weight="700" fill="#7A8794">+150</text>
+          <text x="346"  y="200" text-anchor="middle" direction="ltr" font-size="26" font-weight="700" fill="#7A8794">+250</text>
+          <text x="300"  y="176" text-anchor="middle" direction="ltr" font-size="26" font-weight="700" fill="#7A8794">+80</text>
+          <text x="247"  y="200" text-anchor="middle" direction="ltr" font-size="26" font-weight="700" fill="#7A8794">+300</text>
         </svg>
       </div>
       <p class="lede" style="margin-top:1.4rem">המחיר שבכותרת היה מתחת לתקציב. העלות הכוללת לא.</p>
@@ -269,7 +294,10 @@
           <p class="caption">שנים, בכתב</p>
         </div>
       </div>
-      <p class="fineprint" style="margin-top:2.4rem"><span class="mark">*</span> שנה שלישית רק אם נרשמים תוך 30 יום, ורק אם טכנאי מאושר מתקין. אף אחד מהתנאים לא מופיע בדף שמוכר.</p>
+      <details class="reveal">
+        <summary>מה מסתתר מאחורי הכוכבית</summary>
+        <p class="fineprint">שנה שלישית רק אם נרשמים תוך 30 יום, ורק אם טכנאי מאושר מתקין. אף אחד מהתנאים לא מופיע בדף שמוכר.</p>
+      </details>
     </section>
 
     <section class="slide">
@@ -280,13 +308,13 @@
         <svg viewBox="0 0 1000 190" role="img" aria-label="על סולם דציבלים: היצרן מצהיר על 42, הדרישה שלנו היא 44, וביקורת עצמאית מדדה 46 במטבח אמיתי.">
           <line x1="40" y1="112" x2="960" y2="112" stroke="#DAD3C8" stroke-width="3"/>
           <line x1="500" y1="52" x2="500" y2="150" stroke="#4E356F" stroke-width="3" stroke-dasharray="7 5"/>
-          <text x="500" y="176" text-anchor="middle" font-size="21" font-weight="800" fill="#4E356F">44 dB · מה שביקשנו</text>
+          <text x="500" y="176" text-anchor="middle" font-size="28" font-weight="800" fill="#4E356F">44 dB · מה שביקשנו</text>
           <circle cx="270" cy="112" r="15" fill="#E0821A"/>
-          <text x="270" y="86" text-anchor="middle" font-size="40" font-weight="800" fill="#E0821A">42</text>
-          <text x="270" y="42" text-anchor="middle" font-size="19" font-weight="700" fill="#7A8794">מוצהר, מעבדה</text>
+          <text x="270" y="86" text-anchor="middle" font-size="48" font-weight="800" fill="#E0821A">42</text>
+          <text x="270" y="42" text-anchor="middle" font-size="26" font-weight="700" fill="#7A8794">מוצהר, מעבדה</text>
           <circle cx="730" cy="112" r="15" fill="#0F7B6C"/>
-          <text x="730" y="86" text-anchor="middle" font-size="40" font-weight="800" fill="#0F7B6C">46</text>
-          <text x="730" y="42" text-anchor="middle" font-size="19" font-weight="700" fill="#7A8794">נמדד, מטבח אמיתי</text>
+          <text x="730" y="86" text-anchor="middle" font-size="48" font-weight="800" fill="#0F7B6C">46</text>
+          <text x="730" y="42" text-anchor="middle" font-size="26" font-weight="700" fill="#7A8794">נמדד, מטבח אמיתי</text>
         </svg>
       </div>
       <p class="lede" style="margin-top:1rem">שני המספרים נכונים. רק אחד מהם נמדד במטבח.</p>
@@ -319,18 +347,18 @@
           <path d="M462 122 l14 -7 v14 z" fill="#8E9AA6"/>
           <path d="M376 90 V44 H854 V78" fill="none" stroke="#8E9AA6" stroke-width="3"/>
           <path d="M854 90 l-7 -14 h14 z" fill="#8E9AA6"/>
-          <text x="615" y="30" text-anchor="middle" font-size="21" font-weight="700" fill="#8E9AA6">זוכר את הערך האחרון</text>
+          <text x="615" y="30" text-anchor="middle" font-size="28" font-weight="700" fill="#8E9AA6">זוכר את הערך האחרון</text>
           <rect x="768" y="90" width="172" height="64" rx="4" fill="none" stroke="#FBF9F5" stroke-width="3"/>
-          <text x="854" y="130" text-anchor="middle" font-size="26" font-weight="800" fill="#FBF9F5">קורא</text>
+          <text x="854" y="130" text-anchor="middle" font-size="32" font-weight="800" fill="#FBF9F5">קורא</text>
           <rect x="530" y="90" width="170" height="64" rx="4" fill="none" stroke="#FBF9F5" stroke-width="3"/>
-          <text x="615" y="130" text-anchor="middle" font-size="26" font-weight="800" fill="#FBF9F5">בודק</text>
+          <text x="615" y="130" text-anchor="middle" font-size="32" font-weight="800" fill="#FBF9F5">בודק</text>
           <rect x="290" y="90" width="172" height="64" rx="4" fill="none" stroke="#E0821A" stroke-width="3"/>
-          <text x="376" y="130" text-anchor="middle" font-size="26" font-weight="800" fill="#E0821A">מודיע לכם</text>
+          <text x="376" y="130" text-anchor="middle" font-size="32" font-weight="800" fill="#E0821A">מודיע לכם</text>
           <path d="M615 154 V218" fill="none" stroke="#C4342F" stroke-width="3" stroke-dasharray="7 5"/>
           <path d="M615 234 l-7 -14 h14 z" fill="#C4342F"/>
           <rect x="530" y="234" width="170" height="64" rx="4" fill="none" stroke="#C4342F" stroke-width="3"/>
-          <text x="615" y="274" text-anchor="middle" font-size="24" font-weight="800" fill="#C4342F">עוצר את עצמו</text>
-          <text x="500" y="200" text-anchor="end" font-size="21" font-weight="700" fill="#C4342F">אם מקור לא נטען פעמיים</text>
+          <text x="615" y="274" text-anchor="middle" font-size="30" font-weight="800" fill="#C4342F">עוצר את עצמו</text>
+          <text x="500" y="200" text-anchor="end" font-size="28" font-weight="700" fill="#C4342F">אם מקור לא נטען פעמיים</text>
         </svg>
       </div>
       <p class="fineprint" style="margin-top:1rem">הוא אף פעם לא קונה. אף פעם לא מתחבר. הוא מודיע, ואתם מחליטים.</p>
@@ -340,7 +368,10 @@
       <p class="eyebrow"><span>11 · המפרט</span><span>דקות 60–80</span></p>
       <div class="rule"></div>
       <h1>כתוב לפני שהוא רץ</h1>
-      <p class="fineprint" style="font-size:clamp(.82rem,1.5vw,1.15rem);color:var(--ink);max-width:66ch">כל שש שעות, קרא רק את שני הדפים הציבוריים האלה. התרע רק אם העלות הכוללת ירדה ל-<span class="claim mark">800</span> או פחות, אם הזמינות השתנתה, או אם תנאי אחריות או החזרה השתנו. שמור את הערך האחרון ואת תאריך המקור. אל תשלח התראה זהה שוב במשך 48 שעות. אם מקור לא נטען פעמיים, שלח הודעת <span class="stop mark">נדרשת בדיקה</span> אחת והשהה את עצמך. אל תקנה, אל תתחבר, אל תשלח הודעות, אל תיגע במידע פרטי, ואל תסיק המלצה.</p>
+      <details class="reveal">
+        <summary>המפרט המלא</summary>
+        <p class="fineprint" style="color:var(--ink)">כל שש שעות, קרא רק את שני הדפים הציבוריים האלה. התרע רק אם העלות הכוללת ירדה ל-<span class="claim mark">800</span> או פחות, אם הזמינות השתנתה, או אם תנאי אחריות או החזרה השתנו. שמור את הערך האחרון ואת תאריך המקור. אל תשלח התראה זהה שוב במשך 48 שעות. אם מקור לא נטען פעמיים, שלח הודעת <span class="stop mark">נדרשת בדיקה</span> אחת והשהה את עצמך. אל תקנה, אל תתחבר, אל תשלח הודעות, אל תיגע במידע פרטי, ואל תסיק המלצה.</p>
+      </details>
       <p class="caption" style="margin-top:1.8rem">זה כל המפרט. הוא נכנס לשקף אחד בכוונה.</p>
     </section>
 
@@ -365,5 +396,19 @@
       <p class="lede">מה כמעט שכנע אתכם, לפני שפתחתם את המקור?</p>
     </section>
 
+    <script>
+      // סעיף details סגור לא מודפס כלל, וכך היו נעלמים מהדף המודפס המפרט והתנאים.
+      // פותחים הכול לפני ההדפסה ומחזירים אחריה.
+      addEventListener('beforeprint',function(){
+        document.querySelectorAll('details').forEach(function(d){
+          d.dataset.wasOpen=d.open?'1':'0';d.open=true;
+        });
+      });
+      addEventListener('afterprint',function(){
+        document.querySelectorAll('details').forEach(function(d){
+          if(d.dataset.wasOpen==='0')d.open=false;
+        });
+      });
+    </script>
   </body>
 </html>
