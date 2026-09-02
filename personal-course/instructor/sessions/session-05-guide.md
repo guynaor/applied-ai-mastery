@@ -40,7 +40,9 @@
 
 **Before every request** ask: "Which dimension will it need that I have not given it?"
 **When the model comes back**, hunt for the number it invented — there is always one — and ask "where is that from?"
-**After each stage**, two minutes for them to fill in the journal for their own object.
+**After each stage**, put the source question back to the room: measured, spec, assumed, or calculated? Their answers are what makes this a lesson rather than a demonstration.
+
+**This session is demonstrated, not worked through.** Nobody measures, models or cuts cardboard on the call. You do all of it on your own screen; the journal tables are the homework, filled in for an object of their own during the week. That also removes the install problem entirely — a route that failed to install blocks nobody, because nobody needed it today.
 
 ## Start slow things in the background
 
