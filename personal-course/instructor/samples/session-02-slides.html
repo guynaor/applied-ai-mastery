@@ -45,8 +45,8 @@
       .eyebrow{
         position:absolute;top:3.4vh;inset-inline-start:6vw;inset-inline-end:6vw;
         display:flex;justify-content:space-between;gap:1rem;
-        font-size:clamp(.62rem,1.05vw,.82rem);
-        text-transform:uppercase;letter-spacing:.22em;font-weight:700;
+        font-size:clamp(.8rem,1.25vw,1.05rem);
+        text-transform:uppercase;letter-spacing:.2em;font-weight:700;
         color:var(--unknown);
       }
       .rule{position:absolute;top:6.6vh;inset-inline:6vw;height:1px;background:var(--rule)}
@@ -58,19 +58,19 @@
       }
       h1.wide{max-width:28ch}
       h2{
-        font-size:clamp(.68rem,1.15vw,.9rem);
-        text-transform:uppercase;letter-spacing:.2em;font-weight:700;
+        font-size:clamp(.9rem,1.5vw,1.2rem);
+        text-transform:uppercase;letter-spacing:.18em;font-weight:700;
         color:var(--unknown);margin:2.2rem 0 .7rem;
       }
       p{margin:0 0 .7em}
-      .lede{font-size:clamp(1.05rem,2.05vw,1.65rem);max-width:44ch;line-height:1.4}
+      .lede{font-size:clamp(1.25rem,2.5vw,2.05rem);max-width:42ch;line-height:1.4}
       .lede strong{font-weight:700}
 
       /* The small print. The session's whole argument is that this is where the
          conditions live, so it gets a real typographic voice rather than being hidden. */
       .fineprint{
-        font-size:clamp(.72rem,1.3vw,1rem);letter-spacing:.04em;
-        color:var(--unknown);max-width:70ch;line-height:1.5;
+        font-size:clamp(1.05rem,1.95vw,1.55rem);letter-spacing:.02em;
+        color:var(--unknown);max-width:60ch;line-height:1.5;
       }
       .fineprint .mark{color:var(--claim);font-weight:800}
 
@@ -84,8 +84,8 @@
       }
       .figure-sm{font-size:clamp(2rem,6vw,4.6rem);font-weight:800;letter-spacing:-.04em;line-height:.95}
       .caption{
-        font-size:clamp(.66rem,1.1vw,.86rem);text-transform:uppercase;
-        letter-spacing:.2em;font-weight:700;color:var(--unknown);margin-top:.5rem;
+        font-size:clamp(.88rem,1.45vw,1.15rem);text-transform:uppercase;
+        letter-spacing:.18em;font-weight:700;color:var(--unknown);margin-top:.5rem;
       }
 
       .claim{color:var(--claim)}
@@ -101,13 +101,13 @@
 
       .legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1.6rem;margin-top:1rem}
       .swatch{border-top:9px solid;padding-top:.9rem}
-      .swatch h3{font-size:clamp(1.1rem,2.3vw,1.8rem);margin:0 0 .3rem;font-weight:800;letter-spacing:-.02em}
-      .swatch p{font-size:clamp(.8rem,1.4vw,1.05rem);color:var(--unknown);margin:0;line-height:1.4}
+      .swatch h3{font-size:clamp(1.35rem,2.8vw,2.2rem);margin:0 0 .3rem;font-weight:800;letter-spacing:-.02em}
+      .swatch p{font-size:clamp(1rem,1.8vw,1.4rem);color:var(--unknown);margin:0;line-height:1.4}
 
       .boxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1rem}
       .cell{border:2px solid var(--ink);padding:1rem 1.1rem;border-radius:3px}
       .cell .caption{margin:0 0 .45rem;color:var(--brand)}
-      .cell p{font-size:clamp(.86rem,1.6vw,1.2rem);margin:0;line-height:1.35}
+      .cell p{font-size:clamp(1.05rem,1.95vw,1.5rem);margin:0;line-height:1.35}
       .cell.ghost{border-style:dashed;border-color:var(--unknown);background:transparent}
       .cell.ghost .caption{color:var(--unknown)}
       .cell.ghost p{color:var(--unknown)}
@@ -115,33 +115,53 @@
       .prompt{
         background:var(--ink);color:var(--paper);border-radius:4px;
         padding:clamp(1rem,2.4vw,1.8rem);
-        font-size:clamp(.85rem,1.65vw,1.3rem);line-height:1.5;max-width:64ch;
+        font-size:clamp(1.1rem,2.05vw,1.6rem);line-height:1.5;max-width:56ch;
       }
       .prompt .claim,.prompt .evidence{font-weight:800}
 
       ol.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:1.1rem}
       ol.steps li{counter-increment:s;display:flex;gap:1rem;align-items:baseline;
-        font-size:clamp(1.05rem,2.4vw,2rem);font-weight:700;letter-spacing:-.015em}
+        font-size:clamp(1.3rem,2.8vw,2.4rem);font-weight:700;letter-spacing:-.015em}
       ol.steps li::before{
-        content:counter(s);font-size:clamp(.7rem,1.2vw,.95rem);font-weight:800;
+        content:counter(s);font-size:clamp(.9rem,1.4vw,1.15rem);font-weight:800;
         color:var(--stop);border:2px solid var(--stop);border-radius:50%;
         width:2.1em;height:2.1em;display:grid;place-items:center;flex:none;letter-spacing:0;
       }
 
       .qa{display:grid;grid-template-columns:auto 1fr;gap:.55rem 1.6rem;align-items:baseline;
-        font-size:clamp(.82rem,1.55vw,1.22rem);max-width:74ch}
+        font-size:clamp(1.1rem,2.05vw,1.6rem);max-width:62ch}
       .qa dt{font-weight:800;color:var(--brand);white-space:nowrap}
       .qa dd{margin:0;color:var(--ink)}
       .qa .last{color:var(--stop)}
 
       .fill{
-        font-size:clamp(1.05rem,2.4vw,1.9rem);line-height:1.5;max-width:30ch;font-weight:600;
+        font-size:clamp(1.25rem,2.8vw,2.25rem);line-height:1.5;max-width:28ch;font-weight:600;
       }
       .fill b{
         display:inline-block;border-bottom:3px solid var(--claim);
         min-width:5.5em;color:var(--claim);font-weight:800;
       }
 
+
+      /* Long blocks stay behind a title the facilitator clicks. On a shared screen a wall
+         of text is unreadable anyway, and the click matches how the session is taught:
+         put the question to the room, then open the answer. */
+      details.reveal{border-top:3px solid var(--rule);margin-top:1.8rem;max-width:62ch}
+      details.reveal>summary{
+        cursor:pointer;list-style:none;padding:1rem 0;
+        font-size:clamp(1.1rem,2.1vw,1.7rem);font-weight:800;letter-spacing:-.015em;
+        color:var(--brand);display:flex;align-items:center;gap:.7rem;
+      }
+      details.reveal>summary::-webkit-details-marker{display:none}
+      details.reveal>summary::before{
+        content:"+";flex:none;display:grid;place-items:center;
+        width:1.4em;height:1.4em;border:3px solid currentColor;border-radius:50%;
+        font-size:.8em;line-height:1;font-weight:800;
+      }
+      details.reveal[open]>summary::before{content:"–"}
+      details.reveal>summary:focus-visible{outline:3px solid var(--claim);outline-offset:4px}
+      .slide.dark details.reveal{border-top-color:#2A343F}
+      .slide.dark details.reveal>summary{color:var(--claim)}
       svg{display:block;width:100%;height:auto;overflow:visible}
       .svg-wrap{margin:.6rem 0 .4rem}
       text{font-family:var(--display);font-variant-numeric:tabular-nums}
@@ -208,7 +228,10 @@
       <p class="eyebrow"><span>04 · The request</span><span>Minute 25</span></p>
       <div class="rule"></div>
       <h1>Ask for a plan, not an answer</h1>
+      <details class="reveal">
+        <summary>The full request</summary>
       <div class="prompt"><span class="claim">Plan research</span> for buying noise-cancelling headphones under 800. <span class="claim">Do not recommend a model.</span> Set out which kinds of sources establish total cost, warranty, return policy and durability, and which question each source suits. Add one opposing viewpoint and <span class="evidence">a list of what is still unknown</span>.</div>
+      </details>
       <p class="fineprint" style="margin-top:1.6rem">Two phrases do all the work: <span class="claim mark">plan</span>, not “recommend” — and <span class="evidence mark" style="color:var(--evidence)">what is still unknown</span>.</p>
     </section>
 
@@ -217,12 +240,14 @@
       <div class="rule"></div>
       <h1>Do not look at the screen</h1>
       <p class="lede">Which sources would <strong>you</strong> have opened? Answer before the report comes back.</p>
-      <h2>Then compare</h2>
+      <details class="reveal">
+        <summary>Then compare</summary>
       <dl class="qa">
         <dt>It found</dt><dd>what we never thought of</dd>
         <dt>We listed</dt><dd>what it missed</dd>
         <dt>It cited</dt><dd>how many did anyone actually open?</dd>
       </dl>
+      </details>
       <p class="fineprint" style="margin-top:2.2rem">A research report is a list of addresses. It saves you the question of where to start. It does not save you the reading.</p>
     </section>
 
@@ -238,14 +263,14 @@
           <rect x="858" y="60" width="23"  height="64" fill="#A38A76"/>
           <rect x="881" y="60" width="83"  height="64" fill="#8E8A88"/>
           <line x1="833" y1="34" x2="833" y2="150" stroke="#111820" stroke-width="3" stroke-dasharray="7 5"/>
-          <text x="833" y="24" text-anchor="middle" font-size="21" font-weight="800" fill="#111820">budget 3,000</text>
-          <text x="10"  y="105" font-size="34" font-weight="800" fill="#FBF9F5">2,690</text>
-          <text x="982" y="105" font-size="38" font-weight="800" fill="#111820">3,470</text>
-          <text x="0"   y="176" font-size="19" font-weight="700" fill="#7A8794">sticker</text>
-          <text x="757" y="176" font-size="19" font-weight="700" fill="#7A8794">+150</text>
-          <text x="799" y="200" font-size="19" font-weight="700" fill="#7A8794">+250</text>
-          <text x="862" y="176" font-size="19" font-weight="700" fill="#7A8794">+80</text>
-          <text x="891" y="200" font-size="19" font-weight="700" fill="#7A8794">+300</text>
+          <text x="833" y="24" text-anchor="middle" font-size="28" font-weight="800" fill="#111820">budget 3,000</text>
+          <text x="10"  y="105" font-size="42" font-weight="800" fill="#FBF9F5">2,690</text>
+          <text x="982" y="105" font-size="46" font-weight="800" fill="#111820">3,470</text>
+          <text x="0"   y="176" font-size="26" font-weight="700" fill="#7A8794">sticker</text>
+          <text x="757" y="176" font-size="26" font-weight="700" fill="#7A8794">+150</text>
+          <text x="799" y="200" font-size="26" font-weight="700" fill="#7A8794">+250</text>
+          <text x="862" y="176" font-size="26" font-weight="700" fill="#7A8794">+80</text>
+          <text x="891" y="200" font-size="26" font-weight="700" fill="#7A8794">+300</text>
         </svg>
       </div>
       <p class="lede" style="margin-top:1.4rem">The headline price was under budget. The total cost is not.</p>
@@ -267,7 +292,10 @@
           <p class="caption">years, in writing</p>
         </div>
       </div>
-      <p class="fineprint" style="margin-top:2.4rem"><span class="mark">*</span> A third year only if you register within 30 days, and only if an approved technician installs it. Neither condition appears on the page selling it.</p>
+      <details class="reveal">
+        <summary>What the asterisk hides</summary>
+        <p class="fineprint">A third year only if you register within 30 days, and only if an approved technician installs it. Neither condition appears on the page selling it.</p>
+      </details>
     </section>
 
     <section class="slide">
@@ -278,13 +306,13 @@
         <svg viewBox="0 0 1000 190" role="img" aria-label="On a decibel scale: the manufacturer claims 42, the requirement is 44, and an independent review measured 46 in a real kitchen.">
           <line x1="40" y1="112" x2="960" y2="112" stroke="#DAD3C8" stroke-width="3"/>
           <line x1="500" y1="52" x2="500" y2="150" stroke="#4E356F" stroke-width="3" stroke-dasharray="7 5"/>
-          <text x="500" y="176" text-anchor="middle" font-size="21" font-weight="800" fill="#4E356F">44 dB · what we asked for</text>
+          <text x="500" y="176" text-anchor="middle" font-size="28" font-weight="800" fill="#4E356F">44 dB · what we asked for</text>
           <circle cx="270" cy="112" r="15" fill="#E0821A"/>
-          <text x="270" y="86" text-anchor="middle" font-size="40" font-weight="800" fill="#E0821A">42</text>
-          <text x="270" y="42" text-anchor="middle" font-size="19" font-weight="700" fill="#7A8794">claimed, lab</text>
+          <text x="270" y="86" text-anchor="middle" font-size="48" font-weight="800" fill="#E0821A">42</text>
+          <text x="270" y="42" text-anchor="middle" font-size="26" font-weight="700" fill="#7A8794">claimed, lab</text>
           <circle cx="730" cy="112" r="15" fill="#0F7B6C"/>
-          <text x="730" y="86" text-anchor="middle" font-size="40" font-weight="800" fill="#0F7B6C">46</text>
-          <text x="730" y="42" text-anchor="middle" font-size="19" font-weight="700" fill="#7A8794">measured, real kitchen</text>
+          <text x="730" y="86" text-anchor="middle" font-size="48" font-weight="800" fill="#0F7B6C">46</text>
+          <text x="730" y="42" text-anchor="middle" font-size="26" font-weight="700" fill="#7A8794">measured, real kitchen</text>
         </svg>
       </div>
       <p class="lede" style="margin-top:1rem">Both numbers are true. Only one was measured in a kitchen.</p>
@@ -319,20 +347,20 @@
           <!-- remember, routed above so it never crosses the stop branch -->
           <path d="M624 90 V44 H146 V78" fill="none" stroke="#8E9AA6" stroke-width="3"/>
           <path d="M146 90 l-7 -14 h14 z" fill="#8E9AA6"/>
-          <text x="385" y="30" text-anchor="middle" font-size="21" font-weight="700" fill="#8E9AA6">remember the last value</text>
+          <text x="385" y="30" text-anchor="middle" font-size="28" font-weight="700" fill="#8E9AA6">remember the last value</text>
           <!-- the boxes -->
           <rect x="60"  y="90" width="172" height="64" rx="4" fill="none" stroke="#FBF9F5" stroke-width="3"/>
-          <text x="146" y="130" text-anchor="middle" font-size="26" font-weight="800" fill="#FBF9F5">read</text>
+          <text x="146" y="130" text-anchor="middle" font-size="32" font-weight="800" fill="#FBF9F5">read</text>
           <rect x="300" y="90" width="170" height="64" rx="4" fill="none" stroke="#FBF9F5" stroke-width="3"/>
-          <text x="385" y="130" text-anchor="middle" font-size="26" font-weight="800" fill="#FBF9F5">check</text>
+          <text x="385" y="130" text-anchor="middle" font-size="32" font-weight="800" fill="#FBF9F5">check</text>
           <rect x="538" y="90" width="172" height="64" rx="4" fill="none" stroke="#E0821A" stroke-width="3"/>
-          <text x="624" y="130" text-anchor="middle" font-size="26" font-weight="800" fill="#E0821A">tell you</text>
+          <text x="624" y="130" text-anchor="middle" font-size="32" font-weight="800" fill="#E0821A">tell you</text>
           <!-- the stop branch, hanging below its own box -->
           <path d="M385 154 V218" fill="none" stroke="#C4342F" stroke-width="3" stroke-dasharray="7 5"/>
           <path d="M385 234 l-7 -14 h14 z" fill="#C4342F"/>
           <rect x="300" y="234" width="170" height="64" rx="4" fill="none" stroke="#C4342F" stroke-width="3"/>
-          <text x="385" y="274" text-anchor="middle" font-size="24" font-weight="800" fill="#C4342F">stop itself</text>
-          <text x="500" y="200" font-size="21" font-weight="700" fill="#C4342F">if a source fails to load twice</text>
+          <text x="385" y="274" text-anchor="middle" font-size="30" font-weight="800" fill="#C4342F">stop itself</text>
+          <text x="500" y="200" font-size="28" font-weight="700" fill="#C4342F">if a source fails to load twice</text>
         </svg>
       </div>
       <p class="fineprint" style="margin-top:1rem">It never buys. It never logs in. It tells you, and you decide.</p>
@@ -342,7 +370,10 @@
       <p class="eyebrow"><span>11 · The contract</span><span>Minutes 60–80</span></p>
       <div class="rule"></div>
       <h1>Written down before it runs</h1>
-      <p class="fineprint" style="font-size:clamp(.82rem,1.5vw,1.15rem);color:var(--ink);max-width:66ch">Every six hours, read only these two public pages. Alert only if the total cost drops to <span class="claim mark">800</span> or below, if availability changes, or if a warranty or return term changes. Save the last value and the source date. Do not repeat an identical alert for 48 hours. If a source fails to load twice, send one <span class="stop mark">needs review</span> notice and pause. Do not buy, do not log in, do not send messages, do not touch private data, do not infer a recommendation.</p>
+      <details class="reveal">
+        <summary>The full contract</summary>
+        <p class="fineprint" style="color:var(--ink)">Every six hours, read only these two public pages. Alert only if the total cost drops to <span class="claim mark">800</span> or below, if availability changes, or if a warranty or return term changes. Save the last value and the source date. Do not repeat an identical alert for 48 hours. If a source fails to load twice, send one <span class="stop mark">needs review</span> notice and pause. Do not buy, do not log in, do not send messages, do not touch private data, do not infer a recommendation.</p>
+      </details>
       <p class="caption" style="margin-top:1.8rem">This is the whole specification. It fits on one slide on purpose.</p>
     </section>
 
@@ -367,5 +398,19 @@
       <p class="lede">What had almost convinced you, before you opened the source?</p>
     </section>
 
+    <script>
+      // A closed <details> prints as nothing, which would quietly drop the contract and
+      // the conditions from a handout. Open everything to print, then put it back.
+      addEventListener('beforeprint',function(){
+        document.querySelectorAll('details').forEach(function(d){
+          d.dataset.wasOpen=d.open?'1':'0';d.open=true;
+        });
+      });
+      addEventListener('afterprint',function(){
+        document.querySelectorAll('details').forEach(function(d){
+          if(d.dataset.wasOpen==='0')d.open=false;
+        });
+      });
+    </script>
   </body>
 </html>
