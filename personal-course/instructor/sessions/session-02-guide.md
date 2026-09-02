@@ -14,7 +14,7 @@ These four links are everything you need open to run the session.
 
 | Material | What it is for |
 |---|---|
-| [Projection slides](../../instructor/samples/session-02-slides.html) | Ten slides, in session order. Every “show on the board” moment in this guide is prepared there. |
+| [Projection slides](../../instructor/samples/session-02-slides.html) | Thirteen slides, in session order. Every “show on the board” moment in this guide is prepared there. |
 | [Sample product sources](../../instructor/samples/session-02-product-sources.html) | Two seller pages, a manufacturer page, and an independent review, with contradictions planted. The address can be handed straight to an AI tool, or the text copied from it. |
 | [Monitoring snapshots](../../instructor/samples/session-02-snapshots.html) | A separate page, for the agent demonstration only. Your key: **A** reads 950, **B** reads 780, **C** fails with a 503. The page does not label them, because working out which one should fire against a trigger of 800 is the learners' job. |
 | [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | A downloadable Word file. Every table learners fill in today is in it. |
@@ -24,11 +24,13 @@ These four links are everything you need open to run the session.
 
 What works best is to **take a real case of your own and work it live in front of the class on your own screen.** Three reasons: learners' free accounts run out midway; a real case produces real questions; and they watch you correct the tool, which is worth more than any explanation.
 
-Learners fill in the journal tables for **their own case**. You run it; they think.
+**This session is demonstrated, not worked through.** With twenty or more people on a video call, individual hands-on work does not run — people fall behind silently, and you cannot see it. So you do every step on your own screen, and the doing happens in the homework, which is built for exactly that. What you are protecting is not their typing time. It is their attention.
+
+That does not mean they sit quietly. Every block below has a question the room answers, and those questions are the lesson.
 
 **Before every prompt** ask: "What do you think it will come back with?" and "What is missing from my request?"
 **When the answer returns**, read the first number aloud and ask "where is that from?", hunt for the assumption, and correct one thing in front of them.
-**After each stage**, give two minutes for them to fill in the journal. A session where only you typed is a demonstration, not a lesson.
+**When you reach a judgement call**, stop and ask the room before you decide. Let two or three people answer, including a wrong one, before you move.
 
 The prepared sample materials stay as backup — for a class with no network, when you have no example of your own, or for a facilitator who wants a guaranteed script.
 
@@ -78,10 +80,10 @@ The vetted page is a dishwasher on [PriceSpy](https://pricespy.co.uk) — search
 | 0–10 | **Homework discussion** | What worked and what broke for other people |
 | 10–15 | Opening: the purchase you keep putting off | One real purchase to work on |
 | 15–25 | Define need, budget, must-haves, deal-breakers | A boundary you can research against |
-| 25–40 | Send the research request, build a source list by hand meanwhile | The difference between a research plan and an answer |
-| 40–60 | Evidence matrix and total cost | Source, date, supports or contradicts, what is uncertain |
-| 60–85 | Two source checks, the agent's specification, and starting it | A rule that can be reviewed and takes no action |
-| 85–90 | Exit check, and set the homework | A human decision, and an agent that will run all week |
+| 25–40 | Send the research request. While it runs, take the room's source list | The difference between a research plan and an answer |
+| 40–60 | Work the evidence matrix and total cost on screen | Where a claim and a source stop agreeing |
+| 60–80 | Verify two claims, then write the alert rule with the room | A rule that can be reviewed and takes no action |
+| 80–90 | Exit check, and set the homework | A decision they will make, and an agent they will build |
 
 ## 0–10 minutes — Homework discussion
 
@@ -95,9 +97,11 @@ Three questions, in this order:
 
 Note two things that came up, and return to them later in the session by the name of whoever raised them.
 
-## 10–15 minutes — Opening
+## 10–15 minutes — Opening, and the three labels
 
-Ask: “Which purchase have you been putting off for weeks because there is too much information about it?” Collect three examples out loud. Choose one to work on together, and ask each learner to choose their own.
+Ask: “Which purchase have you been putting off for weeks because there is too much information about it?” Collect three examples out loud. Take one — ideally yours, so you can move fast — and say that everyone will run their own in the homework.
+
+Then show [slide 2](../../instructor/samples/session-02-slides.html) and give them the three words the rest of the session is colour-coded by: a **claim** is something someone is telling you, usually someone selling. **Evidence** is something you opened and read yourself. **Unknown** is what nobody has answered yet. Say that every number they are about to see is one of the three, and that the interesting moment is when something they assumed was evidence turns out to be a claim.
 
 ### What to say
 
@@ -105,7 +109,7 @@ Ask: “Which purchase have you been putting off for weeks because there is too 
 
 ## 15–25 minutes — Define what you need and what you don't
 
-Ask every learner to fill four boxes: the need, the budget and deadline, the must-haves, and what rules a product out immediately. Show [slide 2](../../instructor/samples/session-02-slides.html), which has the example filled in:
+Fill four boxes on screen for your own purchase: the need, the budget and deadline, the must-haves, and what rules a product out immediately. Ask the room for the deal-breaker before you write it — it is the box people have an opinion about. [Slide 3](../../instructor/samples/session-02-slides.html) has the example filled in:
 
 > A quiet dishwasher that fits the 60 cm gap. Up to 3,000, installed before the holidays. Must have: 60 cm wide, 44 dB or less, three-year warranty. Rules it out: a brand with no local service, a model that needs the pipes moved.
 
@@ -115,9 +119,9 @@ Then add the box that is easiest to skip: **what this research will not decide.*
 
 “A flat”, “a car”, and “studying” will not close in forty minutes. Ask them to narrow to one decision inside the topic: not “which car”, but “this model, this year, from this seller — yes or no”.
 
-## 25–45 minutes — A research plan, not an answer
+## 25–40 minutes — A research plan, not an answer
 
-At minute 13, send the request in front of the class. Show it in full on [slide 3](../../instructor/samples/session-02-slides.html) before sending, or type it out on screen:
+At minute 13, send the request in front of the class. Show it in full on [slide 4](../../instructor/samples/session-02-slides.html) before sending, or type it out on screen:
 
 > “Plan research for buying noise-cancelling headphones under 800. Do not recommend a model. Set out which kinds of sources establish total cost, warranty, return policy, and durability over time, and which question each kind of source is suited to. Add one opposing viewpoint and a list of what is still unknown.”
 
@@ -145,32 +149,32 @@ A list of source types — manufacturer, seller, independent tester, user forum 
 - **It returns a generic list.** Ask it to attach to each source type the question that source answers, and what it cannot answer.
 - **It cites a source that does not exist.** Excellent. Open it in front of the class, show that it does not resolve, and move the claim to the “uncertain” column.
 
-## 45–65 minutes — The evidence matrix and total cost
+## 40–60 minutes — The evidence matrix and total cost
 
-This is the long block, and the heart of the session. Learners fill five columns: the claim, the source and date, supports or contradicts, what is uncertain, and checked yes or no.
+This is the long block, and the heart of the session. Build the five columns on screen — the claim, the source and date, supports or contradicts, what is uncertain, and checked yes or no — filling them in front of the room rather than asking anyone to fill their own. The same table is waiting in their journal for the homework.
 
-Demonstrate one complete row from the [sample sources](../../instructor/samples/session-02-product-sources.html), including the source date. Then open the seller page and the manufacturer page side by side and find one difference between them. Two contradictions are planted in the samples: the seller promises three years of warranty while the manufacturer gives two and makes the third conditional on registering within 30 days and on installation by an approved technician, and the independent review measured 46 dB against the 42 dB the manufacturer publishes — above the 44 dB requirement learners set for themselves at minute 8. [Slide 6](../../instructor/samples/session-02-slides.html) puts both side by side, after the class has found them.
+Demonstrate one complete row from the [sample sources](../../instructor/samples/session-02-product-sources.html), including the source date. Then open the seller page and the manufacturer page side by side and find one difference between them. Two contradictions are planted in the samples: the seller promises three years of warranty while the manufacturer gives two and makes the third conditional on registering within 30 days and on installation by an approved technician, and the independent review measured 46 dB against the 42 dB the manufacturer publishes — above the 44 dB requirement learners set for themselves at minute 8. [Slide 7](../../instructor/samples/session-02-slides.html) puts the two warranty numbers side by side and [slide 8](../../instructor/samples/session-02-slides.html) puts the decibel readings on one scale — both after the room has found them, not before.
 
 ### The moment that matters: total cost
 
-Fill the table in together with the class on [slide 5](../../instructor/samples/session-02-slides.html). Look for delivery, installation, import duty and handling fees, consumables, extended warranty, and what it costs to send the thing back if it does not suit. In the sample sources the headline price is 2,690 and the total cost reaches 3,470 — over a budget of 3,000, even though the headline price was under it. The same table waits for learners in the journal, to fill in for their own purchase.
+Build the total on [slide 6](../../instructor/samples/session-02-slides.html), which stacks it as a bar against the budget line rather than as a list. Ask the room for the next cost before you reveal each segment. Look for delivery, installation, import duty and handling fees, consumables, extended warranty, and what it costs to send the thing back if it does not suit. In the sample sources the headline price is 2,690 and the total cost reaches 3,470 — over a budget of 3,000, even though the headline price was under it. The same table waits for learners in the journal, to fill in for their own purchase.
 
 ### What to say
 
 > “The headline price is a marketing number. The total cost is what will have left your account by the end of the first year. They are almost never the same number.”
 
-Circulate with these questions rather than answers:
+Put these to the room, one at a time, and wait for an answer before you type anything. On a call, silence after a question is not failure — it is people reading.
 
 - “Who wrote this, and when?”
 - “Is this a claim by the manufacturer, or by someone who tested it?”
 - “Would the decision change if this detail were wrong?”
 - “What else gets paid beyond this price?”
 
-## 60–85 minutes — Verification, the agent's specification, and starting it
+## 60–80 minutes — Verification, and the rule you write together
 
-Ask each learner to choose the two claims that would change the decision if they turned out to be wrong, and to open the original source for both. Only two, so they are worth choosing carefully.
+Ask the room which two claims would change the decision if they turned out to be wrong. Take the two they name — not the two you had planned — and open the original source for both on screen. Only two, so they are worth arguing about. If the room picks badly, open their choice anyway and let the dead end be the lesson.
 
-Then write one alert rule together. Do not hand out a list of terms — build it as questions. [Slide 7](../../instructor/samples/session-02-slides.html) has this table ready to project:
+Then write one alert rule with the room. Do not hand out a list of terms — build it as questions, taking each answer from someone before you write it. [Slide 9](../../instructor/samples/session-02-slides.html) has the questions ready to project, and [slide 10](../../instructor/samples/session-02-slides.html) draws the loop those answers describe.
 
 | The question | Example |
 |---|---|
@@ -186,27 +190,27 @@ Then write one alert rule together. Do not hand out a list of terms — build it
 
 > “Notice that the last row is not a technical limitation — it is our decision. It is possible to build a system that buys. We are choosing not to, because the alert does not know what is going on in your life this week.”
 
-### Then build it — the last ten minutes
+### The build is homework, and it is the real work
 
-A specification nobody runs is a worksheet. Everyone leaves with something actually watching, on the route they can manage:
+A specification nobody runs is a worksheet — so everyone builds one this week, on the route they can manage. Show the three routes, say plainly which one most people should take, and do not start anyone's installation on the call:
 
 - **No-install, and most people take it.** The spec goes in the journal. They run it by hand once against two saved product pages — or the [snapshots page](../../instructor/samples/session-02-snapshots.html) — and write down whether it should have alerted, stayed quiet, or stopped, and why. Over the week they repeat that check three or four times. This is a complete route and produces the same run record as the others.
 - **Local.** OpenClaw with Ollama, public or mock data, a manual first run, a local log.
 - **Cloud.** Their own provider account, separate key, low cap, public data only.
 
-**Run the demonstration on your machine while they set up.** Show the connection without exposing the credential, run it against the three snapshots — A at 950, B at 780, and C which fails to load — and show the stop condition firing. That is the whole point of the third snapshot, and it is the one people forget to design for.
+**Demonstrate a running agent before you let them go.** They need to have seen one work before they build one alone. Show the connection without exposing the credential, run it against the three snapshots — A at 950, B at 780, and C which fails to load — and show the stop condition firing. That is the whole point of the third snapshot, and it is the one people forget to design for.
 
-**Do not debug a learner's machine.** If a setup fails, move them to the no-install route and offer to look afterwards. Ten minutes disappears into one laptop.
+**Do not debug a learner's machine on the call.** With twenty people watching, ten minutes disappears into one laptop and everyone else leaves. Point them at the no-install route, and offer a separate time.
 
 ### The homework
 
-> "Run your agent for the week. Check it, or let it check, at least three times. **Bring the run record next session** — what it caught, what it missed, what fired twice about the same thing, and whether you would give it more access than you gave it today. If it never fired at all, that is a finding, not a failure: it means your trigger was wrong or nothing happened, and those are different problems."
+> "Build your agent this week, then run it. Check it, or let it check, at least three times. **Bring the run record next session** — what it caught, what it missed, what fired twice about the same thing, and whether you would give it more access than you gave it today. If it never fired at all, that is a finding, not a failure: it means your trigger was wrong or nothing happened, and those are different problems."
 
 This is the first homework in the course, and it is the one that matters most for what comes later — the boundary thinking here is what the capstone's app deliverable is built on.
 
-## 80–90 minutes — Exit check and reflection
+## 80–90 minutes — Exit check and the homework
 
-Show [slide 10](../../instructor/samples/session-02-slides.html) and ask each learner to complete, out loud or in writing:
+Show [slide 13](../../instructor/samples/session-02-slides.html) and ask each learner to complete, out loud or in writing:
 
 > “I am **[buying / waiting on / rejecting]** **[the product]**, because I checked for myself that **[two claims]**. I am still unsure about **[one uncertainty]**, so I will look again on **[date]**.”
 
@@ -226,11 +230,11 @@ One written reflection question: “What had almost convinced you before you ope
 
 Use only a provider or API account you own. Do not display an API key on screen, do not add learners to the account, and do not ask them for access details. Install OpenClaw on the demonstration machine, complete onboarding against your chosen cloud model, and run its health check. Prepare a separate project and key with a low budget, a workspace with no sensitive material, and one notification channel you control. The three demonstration snapshots are on the [snapshots page](../../instructor/samples/session-02-snapshots.html), kept separate from the product sources so an AI tool can be given the sources alone. A reads 950, B reads 780, and C fails with a 503. They are labelled A, B and C and nothing more: the page states readings, not verdicts, so that the agent — and the room — has to compare them against the 800 trigger rather than read the answer off the page.
 
-Before you open the tool, show the three-step **kill switch** on [slide 9](../../instructor/samples/session-02-slides.html): disable the schedule, stop the gateway, revoke the separate key. Leave it visible for the whole demonstration.
+Before you open the tool, show the three-step **kill switch** on [slide 12](../../instructor/samples/session-02-slides.html): disable the schedule, stop the gateway, revoke the separate key. Leave it visible for the whole demonstration.
 
 ### Demo agent contract
 
-Show the contract on [slide 8](../../instructor/samples/session-02-slides.html) before you open the tool:
+Show the contract on [slide 11](../../instructor/samples/session-02-slides.html) before you open the tool:
 
 > Every six hours, read only these two public product pages or snapshots. Alert only if the total cost has dropped to 800 or below, if availability has changed, or if a warranty or return term has changed. Save the last value you saw and the source date. Do not send an identical alert again for 48 hours. If a source fails to load twice, send one “needs review” notice and pause yourself. Do not buy, do not log in, do not send messages, do not touch private data, and do not infer a recommendation.
 
