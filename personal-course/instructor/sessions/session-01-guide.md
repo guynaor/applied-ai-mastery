@@ -14,7 +14,7 @@ These four links are everything you need open to run the session.
 
 | Material | What it is for |
 |---|---|
-| [Projection slides](../samples/session-01-slides.html) | Twelve slides, in session order. Every “show on the board” moment in this guide is prepared there. |
+| [Projection slides](../samples/session-01-slides.html) | Twelve slides, in session order. Every “show on screen” moment in this guide is prepared there. |
 | [Sample options page](../samples/session-01-public-options-page.html) | A stable local source for the two options, with dates, costs, and booking conditions. |
 | [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | A downloadable Word file. Every table learners fill in today is in it. |
 | [Session 1 brief](../../sessions/session-01-ask-summarize-decide.md) | What learners see. |
@@ -23,11 +23,13 @@ These four links are everything you need open to run the session.
 
 What works best is to **take a real case of your own and work it live in front of the class on your own screen.** Three reasons: learners' free accounts run out midway; a real case produces real questions; and they watch you correct the tool, which is worth more than any explanation.
 
-Learners fill in the journal tables for **their own case**. You run it; they think.
+**This session is demonstrated, not worked through.** With twenty or more people on a video call, individual hands-on work does not run — people fall behind silently, and you cannot see it. So you do every step on your own screen, and the doing happens in the homework. What you are protecting is not their typing time. It is their attention.
+
+That does not mean they sit quietly. Every block below has a question the room answers, and those questions are the lesson.
 
 **Before every prompt** ask: "What do you think it will come back with?" and "What is missing from my request?"
 **When the answer returns**, read the first number aloud and ask "where is that from?", hunt for the assumption, and correct one thing in front of them.
-**After each stage**, give two minutes for them to fill in the journal. A session where only you typed is a demonstration, not a lesson.
+**When you reach a judgement call**, stop and ask the room before you decide. Let two or three people answer, including a wrong one, before you move.
 
 The prepared sample materials stay as backup — for a class with no network, when you have no example of your own, or for a facilitator who wants a guaranteed script.
 
@@ -83,10 +85,16 @@ If you would rather compare two genuinely separate dated options, [V&A What's On
 | 25–34 | Map the three course tools to task modes | A reason to choose one route, not all routes |
 | 34–45 | Reveal the source and model a bounded request | A prompt with goal, context, constraints, output, and check |
 | 45–60 | Run, read, and correct an AI summary | Facts, preferences, unknowns, and claims to verify |
-| 60–78 | Learners make and test their own decision record | A comparison and two source checks |
+| 60–78 | Show where it goes wrong, and what stays human | Three failures they can name, and the line they own |
 | 78–90 | Exit check, reflection, and next-step commitment | A human decision and review date |
 
-## 0–5 minutes — Welcome and session focus
+## 0–5 minutes — Welcome, and what you actually do with this
+
+**Open by showing them, not telling them.** Before any of the course content, spend three or four minutes on your own screen going through several things you genuinely use AI for — real ones, from your own week, not demos built for the room. This landed better than anything else on the first delivery and it is the reason people stay for the next ninety minutes.
+
+Pick things that are varied rather than impressive: something that saved you an afternoon, something small and slightly silly, something that failed and what you did about it. Say roughly what each one cost you in time. Do not explain how any of it works — that is the rest of the course.
+
+Then close the tour and say plainly that today is the least glamorous part of it, and the part everything else rests on.
 
 ### What to say
 
@@ -221,21 +229,24 @@ Deliberately make one small correction if possible: perhaps the tool has treated
 
 Ask: “What remains human judgment?” Expected answers include value, interest, social preference, tolerance for uncertainty, and whether to act now or gather more information.
 
-## 60–78 minutes — Guided learner work
+## 60–78 minutes — Where it goes wrong, and what stays yours
 
-Learners now work individually, in pairs, or on paper. Keep the same local source unless they independently choose a similarly safe public page.
+Do not hand the room a worksheet here. Show the failures on your own screen, and make them predict each one before you reveal it. This is the block that decides whether the homework gets done properly, so spend it on judgement rather than typing.
 
-1. **Frame the question (3 minutes).** Learners write a goal, two options, constraints, preferred output, and one thing the tool must mark as unknown.
-2. **Draft and improve a request (3 minutes).** They use the five-part pattern: goal, context, constraints, output, check. Require one meaningful constraint and one verification instruction.
-3. **Extract and compare (3 minutes).** They run the request or fill the table by hand. They label facts, preferences, assumptions, and unknowns.
-4. **Verify (3 minutes).** They check two consequential claims in the original page and correct the record where needed.
+Run [slide 10](../samples/session-01-slides.html) as three live corrections. For each, ask the room what they would say to the tool, take an answer, then say yours:
 
-Circulate with these prompts instead of supplying answers:
+1. **It invented a detail.** Ask where it came from. Move it to unknown in front of them.
+2. **It chose for you.** Point back at “do not choose for me” and run it again, so they see the same request produce a different shape of answer.
+3. **It only shortened the page.** Ask it which facts affect a decision and what still needs checking.
+
+Then [slide 11](../samples/session-01-slides.html), and put these to the room one at a time. Wait for an answer before you move — on a call, silence after a question is not failure, it is people reading.
 
 - “Would the result change if that detail changed?”
 - “Is that a source fact, a preference, or an assumption?”
 - “What would you open to check this?”
-- “What has the AI done, and what are you deciding?”
+- “What has the AI done here, and what are you deciding?”
+
+**The homework is where they do it.** They run the same four steps on a decision of their own — frame the question, build the five-part request, label facts against preferences against assumptions against unknowns, and check two consequential claims. The journal has every table waiting. Say plainly that the tables are the homework, not something to fill in now.
 
 ### Differentiation
 
@@ -246,7 +257,7 @@ Circulate with these prompts instead of supplying answers:
 
 ## 78–90 minutes — Exit check and evidence
 
-Ask each learner to complete this sentence: “I will take **[next action]** because the verified facts are **[two facts]**, but I still need to check **[unknown]** by **[review date]**.”
+Show [slide 12](../samples/session-01-slides.html). Take three or four out loud and ask everyone else to put theirs in the chat — going round twenty-five people costs more than the exercise is worth, and the chat leaves you a record to skim. The sentence: “I will take **[next action]** because the verified facts are **[two facts]**, but I still need to check **[unknown]** by **[review date]**.”
 
 Collect or photograph the decision record only through the agreed class process. Completion evidence is:
 
@@ -269,7 +280,7 @@ Collect or photograph the decision record only through the agreed class process.
 **Claude (default):** Use the prompt above in ordinary chat. Do not enable connectors or share a browser/account.
 **ChatGPT:** Paste the same prompt and local source text. The method and expected table are unchanged.
 **Gemini:** Paste the same prompt and local source text. Do not use Deep Research for this small, contained source-reading task; that pathway appears in Session 2.
-**No tool:** Read the source, fill the table on paper, and compare with a partner.
+**No tool:** Read the source and fill the table by hand for the homework. The route produces the same evidence as the others.
 **Observation:** Pause the live demo after each table row and have learners identify its label before you continue.
 
 ## Troubleshoot without losing the lesson
