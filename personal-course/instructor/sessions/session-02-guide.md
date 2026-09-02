@@ -16,6 +16,7 @@ These four links are everything you need open to run the session.
 |---|---|
 | [Projection slides](../../instructor/samples/session-02-slides.html) | Thirteen slides, in session order. Every “show on the board” moment in this guide is prepared there. |
 | [Sample product sources](../../instructor/samples/session-02-product-sources.html) | Two seller pages, a manufacturer page, and an independent review, with contradictions planted. The address can be handed straight to an AI tool, or the text copied from it. |
+| [OpenClaw setup on a paid API](../../sessions/session-02-openclaw-setup.md) | For learners taking the advanced route in the week's build. Mac and Windows, what it costs, and the three-step stop. Nobody needs it for the session. |
 | [Monitoring snapshots](../../instructor/samples/session-02-snapshots.html) | A separate page, for the agent demonstration only. Your key: **A** reads 3,470, **B** reads 2,950, **C** fails with a 503. The page does not label them, because working out which one should fire against a trigger of 3,000 is the learners' job. |
 | [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | A downloadable Word file. Every table they fill in for this week's homework is in it. |
 | [Session 2 brief](../../sessions/session-02-research-buy-monitor.md) | What learners see. |
