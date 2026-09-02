@@ -167,7 +167,10 @@
          on a shared screen, and hidden entirely when printing. */
       .deck-nav{
         position:fixed;inset-block-end:1.3rem;inset-inline-end:1.3rem;z-index:20;
-        display:flex;align-items:center;gap:.35rem;
+        /* Pinned to LTR so the button order is the DOM order in both languages. Each deck
+           then emits the buttons in the order its reading direction runs, so "next" always
+           sits on the side the reader is heading toward and its arrow points that way. */
+        display:flex;direction:ltr;align-items:center;gap:.35rem;
         background:rgba(17,24,32,.88);color:var(--paper);
         border-radius:999px;padding:.4rem .5rem;
         opacity:.3;transition:opacity .18s ease;
@@ -365,28 +368,24 @@
       <h1>What it does, over and over</h1>
       <div class="svg-wrap">
         <svg viewBox="0 0 1000 320" role="img" aria-label="The agent reads a source, checks it against the rule, and tells you. It remembers the last value each time round. If a source fails to load twice it stops itself.">
-          <!-- the loop -->
-          <path d="M232 122 H286" fill="none" stroke="#8E9AA6" stroke-width="3"/>
-          <path d="M300 122 l-14 -7 v14 z" fill="#8E9AA6"/>
-          <path d="M470 122 H524" fill="none" stroke="#8E9AA6" stroke-width="3"/>
-          <path d="M538 122 l-14 -7 v14 z" fill="#8E9AA6"/>
-          <!-- remember, routed above so it never crosses the stop branch -->
-          <path d="M624 90 V44 H146 V78" fill="none" stroke="#8E9AA6" stroke-width="3"/>
-          <path d="M146 90 l-7 -14 h14 z" fill="#8E9AA6"/>
-          <text x="385" y="30" text-anchor="middle" font-size="28" font-weight="700" fill="#8E9AA6">remember the last value</text>
-          <!-- the boxes -->
-          <rect x="60"  y="90" width="172" height="64" rx="4" fill="none" stroke="#FBF9F5" stroke-width="3"/>
-          <text x="146" y="130" text-anchor="middle" font-size="32" font-weight="800" fill="#FBF9F5">read</text>
-          <rect x="300" y="90" width="170" height="64" rx="4" fill="none" stroke="#FBF9F5" stroke-width="3"/>
-          <text x="385" y="130" text-anchor="middle" font-size="32" font-weight="800" fill="#FBF9F5">check</text>
-          <rect x="538" y="90" width="172" height="64" rx="4" fill="none" stroke="#E0821A" stroke-width="3"/>
-          <text x="624" y="130" text-anchor="middle" font-size="32" font-weight="800" fill="#E0821A">tell you</text>
-          <!-- the stop branch, hanging below its own box -->
-          <path d="M385 154 V218" fill="none" stroke="#C4342F" stroke-width="3" stroke-dasharray="7 5"/>
-          <path d="M385 234 l-7 -14 h14 z" fill="#C4342F"/>
-          <rect x="300" y="234" width="170" height="64" rx="4" fill="none" stroke="#C4342F" stroke-width="3"/>
-          <text x="385" y="274" text-anchor="middle" font-size="30" font-weight="800" fill="#C4342F">stop itself</text>
-          <text x="500" y="200" font-size="28" font-weight="700" fill="#C4342F">if a source fails to load twice</text>
+          <path d="M240 122 H381" fill="none" stroke="#8E9AA6" stroke-width="3"/>
+          <path d="M395 122 l-14 -7 v14 z" fill="#8E9AA6"/>
+          <path d="M605 122 H746" fill="none" stroke="#8E9AA6" stroke-width="3"/>
+          <path d="M760 122 l-14 -7 v14 z" fill="#8E9AA6"/>
+          <path d="M865 90 V44 H135 V78" fill="none" stroke="#8E9AA6" stroke-width="3"/>
+          <path d="M135 90 l-7 -14 h14 z" fill="#8E9AA6"/>
+          <text x="500" y="30" text-anchor="middle" font-size="28" font-weight="700" fill="#8E9AA6">remember the last value</text>
+          <rect x="30" y="90" width="210" height="64" rx="4" fill="none" stroke="#FBF9F5" stroke-width="3"/>
+          <text x="135" y="132" text-anchor="middle" font-size="32" font-weight="800" fill="#FBF9F5">read</text>
+          <rect x="395" y="90" width="210" height="64" rx="4" fill="none" stroke="#FBF9F5" stroke-width="3"/>
+          <text x="500" y="132" text-anchor="middle" font-size="32" font-weight="800" fill="#FBF9F5">check</text>
+          <rect x="760" y="90" width="210" height="64" rx="4" fill="none" stroke="#E0821A" stroke-width="3"/>
+          <text x="865" y="132" text-anchor="middle" font-size="32" font-weight="800" fill="#E0821A">tell you</text>
+          <path d="M500 154 V218" fill="none" stroke="#C4342F" stroke-width="3" stroke-dasharray="7 5"/>
+          <path d="M500 234 l-7 -14 h14 z" fill="#C4342F"/>
+          <rect x="395" y="234" width="210" height="64" rx="4" fill="none" stroke="#C4342F" stroke-width="3"/>
+          <text x="500" y="276" text-anchor="middle" font-size="30" font-weight="800" fill="#C4342F">stop itself</text>
+          <text x="770" y="212" text-anchor="middle" font-size="28" font-weight="700" fill="#C4342F">if a source fails to load twice</text>
         </svg>
       </div>
       <p class="fineprint" style="margin-top:1rem">It never buys. It never logs in. It tells you, and you decide.</p>
