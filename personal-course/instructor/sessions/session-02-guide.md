@@ -17,7 +17,7 @@ These four links are everything you need open to run the session.
 | [Projection slides](../../instructor/samples/session-02-slides.html) | Thirteen slides, in session order. Every “show on the board” moment in this guide is prepared there. |
 | [Sample product sources](../../instructor/samples/session-02-product-sources.html) | Two seller pages, a manufacturer page, and an independent review, with contradictions planted. The address can be handed straight to an AI tool, or the text copied from it. |
 | [Monitoring snapshots](../../instructor/samples/session-02-snapshots.html) | A separate page, for the agent demonstration only. Your key: **A** reads 950, **B** reads 780, **C** fails with a 503. The page does not label them, because working out which one should fire against a trigger of 800 is the learners' job. |
-| [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | A downloadable Word file. Every table learners fill in today is in it. |
+| [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | A downloadable Word file. Every table they fill in for this week's homework is in it. |
 | [Session 2 brief](../../sessions/session-02-research-buy-monitor.md) | What learners see. |
 
 ## The recommended way: a real case, on your screen
@@ -56,7 +56,7 @@ Some requests take time — a detailed spreadsheet, a presentation, or anything 
 
 ### Three facilitator decisions before starting
 
-**Whether to run Deep Research live.** A Deep Research report takes between five and fifteen minutes to build. Do not stand in front of the class waiting for it. Send the request at minute 13 and keep teaching while it runs — the activity in minutes 16–25 is built for exactly that. If it has not returned in time, open the saved report and carry on.
+**Whether to run Deep Research live.** A Deep Research report takes between five and fifteen minutes to build. Do not stand in front of the class waiting for it. Send the request at minute 13 and keep teaching while it runs — the boundary block at minutes 15–25 is built for exactly that. If it has not returned in time, open the saved report and carry on.
 
 **Whether to use a real comparison page.** The local sample set is the default: the numbers hold still and the contradictions are already there. If you want a live page instead, use a **price comparison site**, not a single shop. A comparison page puts one product in front of many sellers, which is the whole lesson on one screen, and it can be handed to an AI tool as an address — most retailers cannot. Checked in August 2026: an AI tool given a PriceSpy address reads it fine, while Amazon, AliExpress and KSP all refuse an automated read and have to be copied as text instead.
 
@@ -121,13 +121,13 @@ Then add the box that is easiest to skip: **what this research will not decide.*
 
 ## 25–40 minutes — A research plan, not an answer
 
-At minute 13, send the request in front of the class. Show it in full on [slide 4](../../instructor/samples/session-02-slides.html) before sending, or type it out on screen:
+You sent this request at minute 13, part-way through the boundary block, so that it had time to run. Show it in full on [slide 4](../../instructor/samples/session-02-slides.html) before sending, or type it out on screen:
 
 > “Plan research for buying noise-cancelling headphones under 800. Do not recommend a model. Set out which kinds of sources establish total cost, warranty, return policy, and durability over time, and which question each kind of source is suited to. Add one opposing viewpoint and a list of what is still unknown.”
 
 Point out that two phrases in the request do the work: **“plan”** rather than “recommend”, and **“what is still unknown”**.
 
-Now, while the report runs, do not look at the screen. Ask learners to write down, in two minutes on paper, the list of sources they themselves would open. Collect four or five answers and write them on the board.
+Now, while the report runs, do not look at the screen. Ask the room to put in the chat the sources they would open themselves, and give it a genuine minute. Read four or five out and build the list on screen as you go. The chat is the only channel where twenty-five people can all answer at once, and it gets you the ones who would never unmute.
 
 When the report returns — or when you open the saved report — compare the two lists and ask:
 
@@ -210,11 +210,11 @@ This is the first homework in the course, and it is the one that matters most fo
 
 ## 80–90 minutes — Exit check and the homework
 
-Show [slide 13](../../instructor/samples/session-02-slides.html) and ask each learner to complete, out loud or in writing:
+Show [slide 13](../../instructor/samples/session-02-slides.html). Take three or four out loud, and ask everyone else to put theirs in the chat — going round twenty-five people costs more than the exercise is worth, and the chat gives you a record you can skim afterwards:
 
 > “I am **[buying / waiting on / rejecting]** **[the product]**, because I checked for myself that **[two claims]**. I am still unsure about **[one uncertainty]**, so I will look again on **[date]**.”
 
-One written reflection question: “What had almost convinced you before you opened the source?”
+Then leave one question hanging as they go: “What had almost convinced you before you opened the source?” It does not need an answer in the room.
 
 ### Quick assessment rubric
 
@@ -261,10 +261,12 @@ Everyone completes the no-install specification and run-review route. The local 
 
 ## Equivalent tool routes
 
+These are the routes for the homework, and for whichever tool you demonstrate on. Nobody needs a tool open during the session itself.
+
 **Gemini (default):** Deep Research if it is available, otherwise ordinary Gemini with the same request. The report is longer, the method is identical.
 **Claude:** Ask for the same source plan and the same matrix template. There is no automatic web research — learners open the sources themselves, which is entirely fine for this session.
 **ChatGPT:** The same request and the same matrix.
-**No tool:** Open or print the [sample sources](../../instructor/samples/session-02-product-sources.html) and fill the matrix on paper. The learning goal remains fully intact.
+**No tool:** Open or print the [sample sources](../../instructor/samples/session-02-product-sources.html) and fill the matrix by hand. The learning goal remains fully intact, and this route produces the same homework evidence as the others.
 
 ## Troubleshoot without losing the lesson
 
@@ -273,14 +275,16 @@ Everyone completes the no-install specification and run-review route. The local 
 | Deep Research does not return in time | Open the saved report. Do not wait in front of the class. |
 | Deep Research is not available on the account | Run the same request in ordinary Gemini, Claude, or ChatGPT. The gap is in length, not in method. |
 | The report sounds authoritative and nobody checks | Pick one claim and open its source in front of everyone. If it does not resolve, that is the lesson. |
-| Learners are comparing prices only | Return to the three columns on the board and work out total cost together. |
+| Learners are comparing prices only | Go back to the three columns on screen and add up the total cost in front of them. |
 | Someone asks what they should buy | “I am not going to decide for you. Let's see which row in your matrix is still empty.” |
 | Someone wants the agent to buy for them | Take it seriously: what happens if the price dropped because the model was discontinued? That is why there is an approval point. |
 
 ## Differentiation
 
-- **No device or account:** A printout of the [sample sources](../../instructor/samples/session-02-product-sources.html) and an evidence matrix on paper. The whole session can be completed this way.
-- **For learners who need structure:** Give them the dishwasher example from the journal and ask them to change only the product and the budget.
+Everyone watches the same demonstration, so this is about the homework.
+
+- **No device or account:** A printout of the [sample sources](../../instructor/samples/session-02-product-sources.html) and an evidence matrix filled in by hand. The whole homework can be completed this way.
+- **For learners who need structure:** Point them at the dishwasher example in the journal and ask them to change only the product and the budget.
 - **For learners ready to extend:** Ask them to find a real contradiction between seller and manufacturer and record both, with dates.
 - **Language support:** The request may be written in the learner's strongest language. Require the matrix labels — source, date, supports or contradicts, uncertain — in the course language.
 
