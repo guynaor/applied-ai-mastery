@@ -3,6 +3,9 @@
 **Time:** 90 minutes  
 **Outcome:** One small, real, personal decision that rests on a source you opened yourself and on your own judgment.
 
+**How the session runs.** Your facilitator works through all of this live on screen while you watch, answer questions and argue with the results. You do not need a tool open, or an account, during the session itself. The sequence below is yours to run in the week afterwards, and the learning journal has every table waiting for it.
+
+
 ## Scenario
 
 Pick a small decision genuinely in front of you this week: which workshop to attend, what to do with a free evening, which repair to tackle first. It has time, cost, and preferences in it — and alongside them, a few facts you have not checked yet. The more everyday the example, the better the method sticks.

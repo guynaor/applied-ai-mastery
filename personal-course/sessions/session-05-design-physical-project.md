@@ -3,11 +3,14 @@
 **Time:** 90 minutes  
 **Outcome:** A parametric 3D model of something you actually want, driven by AI, checked against a real measurement and a physical test before anything is printed.
 
+**How the session runs.** Your facilitator works through all of this live on screen while you watch, answer questions and argue with the results. You do not need a tool open, or an account, during the session itself. The sequence below is yours to run in the week afterwards, and the learning journal has every table waiting for it.
+
+
 ## Before this session
 
-Work through the [setup guide](session-05-setup.md) **in the week before**, not on the day. You only need one route, and the free one — OpenSCAD alone — completes the whole session.
+Nothing needs installing for the session itself. Work through the [setup guide](session-05-setup.md) **before you start the week's work**. You only need one route, and the free one — OpenSCAD alone — completes the whole session.
 
-Bring a tape measure, paper or cardboard, and one small thing that annoys you.
+For the week's work you will need a tape measure, paper or cardboard, and one small thing that annoys you. Nothing to bring to the session.
 
 ## Scenario
 
