@@ -24,7 +24,9 @@ What works best is to **take a real event you are organising and work it live in
 - **A real case produces real questions.** "Wait, how did it know how much people drink?" only gets asked about an event that is actually going to happen.
 - **They watch you correct it.** When the tool returns something wrong and you argue with it on screen, that is worth more than any explanation.
 
-Learners still fill in the journal tables for **their own case**. You run it; they think.
+**This session is demonstrated, not worked through.** With twenty or more people on a video call, individual hands-on work does not run — people fall behind silently, and you cannot see it. You do every step on your own screen, and the journal tables are the homework, filled in for their own event during the week.
+
+That does not mean they sit quietly. The three questions on slide 2 are put to the room after every output, and those answers are the lesson. When you reach a judgement call, stop and ask before you decide — let two or three people answer, including a wrong one.
 
 ### What to bring
 
@@ -184,7 +186,9 @@ The tool will write "someone should send invitations". That is the line to fix: 
 
 ## 80–90 minutes — What breaks, and closing
 
-**Now** send the [disruption cards](../../instructor/samples/session-03-cards.html). Each learner picks one and runs their own plan against it.
+**Now** open the [disruption cards](../../instructor/samples/session-03-cards.html) on screen. Read two out and run *your* plan against them live, thinking aloud: what breaks, what we do instead, who calls it. Ask the room for the fallback before you give yours.
+
+Then send the card set to the chat. Running their own plan against a card is the homework, and it is the part that makes the fallback real.
 
 [Slide 9](../../instructor/samples/session-03-slides.html): a fallback needs what happens instead, who triggers it, and by when.
 
