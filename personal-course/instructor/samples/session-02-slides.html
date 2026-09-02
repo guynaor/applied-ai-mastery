@@ -5,140 +5,366 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Projection slides — Session 2: Buy With Confidence</title>
     <style>
-      :root{--primary:#4E356F;--soft:#F0EAFA;--text:#17242D;--line:#d6dae0;--muted:#55606E}
+      /* Session 2 is about the distance between a confident number and what you actually
+         pay. The deck borrows retail signage — enormous figures, tiny small print — and
+         audits it. Colour is not decoration here: amber is always somebody's claim, teal
+         is always something checked at source, slate is always still unknown. Slide 2
+         teaches that legend and every later slide relies on it.
+         System fonts only: the session has to run with no network. */
+      :root{
+        --ink:#111820;
+        --paper:#FBF9F5;
+        --brand:#4E356F;
+        --claim:#E0821A;
+        --evidence:#0F7B6C;
+        --unknown:#7A8794;
+        --stop:#C4342F;
+        --rule:#DAD3C8;
+        --display:system-ui,-apple-system,"Segoe UI",sans-serif;
+      }
       *{box-sizing:border-box}
-      body{font-family:system-ui,sans-serif;line-height:1.5;margin:0;color:var(--text);background:#fff}
-      .slide{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:4vh 6vw;border-bottom:1px solid var(--line);page-break-after:always}
-      .num{color:var(--muted);font-size:1rem;letter-spacing:.08em;margin-bottom:1rem}
-      h1{font-size:clamp(1.8rem,4.5vw,3rem);color:var(--primary);margin:0 0 1.5rem}
-      h2{font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--primary);margin:1.5rem 0 .6rem}
-      p,li{font-size:clamp(1.05rem,1.9vw,1.4rem)}
-      .big{font-size:clamp(1.3rem,2.8vw,2rem);line-height:1.45}
-      .box{background:var(--soft);border-inline-start:6px solid var(--primary);padding:1.2rem 1.5rem;border-radius:6px}
-      .prompt{background:#17242D;color:#F4F6F8;padding:1.2rem 1.5rem;border-radius:6px;font-size:clamp(1rem,1.9vw,1.35rem);line-height:1.6}
-      table{border-collapse:collapse;width:100%;font-size:clamp(.95rem,1.7vw,1.25rem)}
-      th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:start}
-      th{background:var(--primary);color:#fff}
-      tbody tr:nth-child(even){background:#FAFAFC}
-      .total td{font-weight:700;background:var(--soft)}
-      .say{border:2px dashed var(--primary);border-radius:6px;padding:1.2rem 1.5rem;font-style:italic}
-      ol,ul{padding-inline-start:1.4rem}
-      @media print{.slide{min-height:auto;padding:1.5rem;border:0}}
+      html{-webkit-text-size-adjust:100%}
+      body{
+        font-family:var(--display);
+        margin:0;background:var(--paper);color:var(--ink);
+        font-variant-numeric:tabular-nums;
+        line-height:1.25;
+      }
+
+      .slide{
+        min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+        padding:7vh 6vw 9vh;position:relative;
+        border-bottom:1px solid var(--rule);page-break-after:always;
+      }
+      .slide.dark{background:var(--ink);color:var(--paper)}
+      .slide.dark .eyebrow{color:#8E9AA6}
+      .slide.dark .rule{background:#2A343F}
+
+      /* Structural marker. Slides are a timed sequence, so the number and the minute
+         range carry real information for the facilitator, not decoration. */
+      .eyebrow{
+        position:absolute;top:3.4vh;inset-inline-start:6vw;inset-inline-end:6vw;
+        display:flex;justify-content:space-between;gap:1rem;
+        font-size:clamp(.62rem,1.05vw,.82rem);
+        text-transform:uppercase;letter-spacing:.22em;font-weight:700;
+        color:var(--unknown);
+      }
+      .rule{position:absolute;top:6.6vh;inset-inline:6vw;height:1px;background:var(--rule)}
+
+      h1{
+        font-size:clamp(1.9rem,5.2vw,4.1rem);
+        font-weight:800;letter-spacing:-.028em;line-height:1.04;
+        margin:0 0 .6em;max-width:20ch;
+      }
+      h1.wide{max-width:28ch}
+      h2{
+        font-size:clamp(.68rem,1.15vw,.9rem);
+        text-transform:uppercase;letter-spacing:.2em;font-weight:700;
+        color:var(--unknown);margin:2.2rem 0 .7rem;
+      }
+      p{margin:0 0 .7em}
+      .lede{font-size:clamp(1.05rem,2.05vw,1.65rem);max-width:44ch;line-height:1.4}
+      .lede strong{font-weight:700}
+
+      /* The small print. The session's whole argument is that this is where the
+         conditions live, so it gets a real typographic voice rather than being hidden. */
+      .fineprint{
+        font-size:clamp(.72rem,1.3vw,1rem);letter-spacing:.04em;
+        color:var(--unknown);max-width:70ch;line-height:1.5;
+      }
+      .fineprint .mark{color:var(--claim);font-weight:800}
+
+      .mark{font-weight:800}
+      sup.mark{font-size:.55em;vertical-align:super;margin-inline-start:.08em}
+
+      /* Enormous figures are the point of this deck. */
+      .figure{
+        font-size:clamp(3rem,11vw,9rem);font-weight:800;letter-spacing:-.045em;
+        line-height:.9;display:block;
+      }
+      .figure-sm{font-size:clamp(2rem,6vw,4.6rem);font-weight:800;letter-spacing:-.04em;line-height:.95}
+      .caption{
+        font-size:clamp(.66rem,1.1vw,.86rem);text-transform:uppercase;
+        letter-spacing:.2em;font-weight:700;color:var(--unknown);margin-top:.5rem;
+      }
+
+      .claim{color:var(--claim)}
+      .evidence{color:var(--evidence)}
+      .unknown{color:var(--unknown)}
+      .stop{color:var(--stop)}
+
+      .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,4vw,4rem);align-items:start}
+      .panel{border-top:5px solid var(--rule);padding-top:1.1rem}
+      .panel.is-claim{border-top-color:var(--claim)}
+      .panel.is-evidence{border-top-color:var(--evidence)}
+      .panel .caption{margin:0 0 .8rem}
+
+      .legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1.6rem;margin-top:1rem}
+      .swatch{border-top:9px solid;padding-top:.9rem}
+      .swatch h3{font-size:clamp(1.1rem,2.3vw,1.8rem);margin:0 0 .3rem;font-weight:800;letter-spacing:-.02em}
+      .swatch p{font-size:clamp(.8rem,1.4vw,1.05rem);color:var(--unknown);margin:0;line-height:1.4}
+
+      .boxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1rem}
+      .cell{border:2px solid var(--ink);padding:1rem 1.1rem;border-radius:3px}
+      .cell .caption{margin:0 0 .45rem;color:var(--brand)}
+      .cell p{font-size:clamp(.86rem,1.6vw,1.2rem);margin:0;line-height:1.35}
+      .cell.ghost{border-style:dashed;border-color:var(--unknown);background:transparent}
+      .cell.ghost .caption{color:var(--unknown)}
+      .cell.ghost p{color:var(--unknown)}
+
+      .prompt{
+        background:var(--ink);color:var(--paper);border-radius:4px;
+        padding:clamp(1rem,2.4vw,1.8rem);
+        font-size:clamp(.85rem,1.65vw,1.3rem);line-height:1.5;max-width:64ch;
+      }
+      .prompt .claim,.prompt .evidence{font-weight:800}
+
+      ol.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:1.1rem}
+      ol.steps li{counter-increment:s;display:flex;gap:1rem;align-items:baseline;
+        font-size:clamp(1.05rem,2.4vw,2rem);font-weight:700;letter-spacing:-.015em}
+      ol.steps li::before{
+        content:counter(s);font-size:clamp(.7rem,1.2vw,.95rem);font-weight:800;
+        color:var(--stop);border:2px solid var(--stop);border-radius:50%;
+        width:2.1em;height:2.1em;display:grid;place-items:center;flex:none;letter-spacing:0;
+      }
+
+      .qa{display:grid;grid-template-columns:auto 1fr;gap:.55rem 1.6rem;align-items:baseline;
+        font-size:clamp(.82rem,1.55vw,1.22rem);max-width:74ch}
+      .qa dt{font-weight:800;color:var(--brand);white-space:nowrap}
+      .qa dd{margin:0;color:var(--ink)}
+      .qa .last{color:var(--stop)}
+
+      .fill{
+        font-size:clamp(1.05rem,2.4vw,1.9rem);line-height:1.5;max-width:30ch;font-weight:600;
+      }
+      .fill b{
+        display:inline-block;border-bottom:3px solid var(--claim);
+        min-width:5.5em;color:var(--claim);font-weight:800;
+      }
+
+      svg{display:block;width:100%;height:auto;overflow:visible}
+      .svg-wrap{margin:.6rem 0 .4rem}
+      text{font-family:var(--display);font-variant-numeric:tabular-nums}
+
+      @media (max-width:750px){
+        .split{grid-template-columns:1fr}
+        .slide{min-height:auto;padding:3.4rem 1.4rem 2.6rem}
+      }
+      @media print{
+        .slide{min-height:auto;padding:1.4rem;border:0}
+        body{background:#fff}
+        .slide.dark{background:#fff;color:var(--ink)}
+        .slide.dark .eyebrow{color:var(--unknown)}
+      }
+      @media (prefers-reduced-motion:no-preference){
+        .slide{scroll-margin-top:0}
+      }
     </style>
   </head>
   <body>
 
-    <section class="slide">
-      <p class="num">Slide 1 — Opening, minutes 0–5</p>
-      <h1>Which purchase have you been putting off for weeks because there is too much information about it?</h1>
-      <div class="say big">Today we are not looking for the best product. We are building a brief you would agree to trust with your own money — and that is a different thing entirely.</div>
+    <section class="slide dark">
+      <p class="eyebrow"><span>01 · Opening</span><span>Minutes 10–15</span></p>
+      <div class="rule"></div>
+      <h1 class="wide">Which purchase have you been putting off, because there is <em>too much</em> information about it?</h1>
+      <p class="lede">Today is not about finding the best product. It is about building a brief you would trust with your own money.</p>
     </section>
 
     <section class="slide">
-      <p class="num">Slide 2 — The boundary, minutes 5–13</p>
-      <h1>Four boxes, and one that is easy to skip</h1>
-      <div class="box big">
-        <p><strong>The need:</strong> a quiet dishwasher that fits the 60 cm gap.</p>
-        <p><strong>Budget and deadline:</strong> up to 3,000, installed before the holidays.</p>
-        <p><strong>Must have:</strong> 60 cm wide, 44 dB or less, three-year warranty.</p>
-        <p><strong>Rules it out:</strong> a brand with no local service, a model that needs the pipes moved.</p>
+      <p class="eyebrow"><span>02 · The three labels</span><span>Minutes 10–15</span></p>
+      <div class="rule"></div>
+      <h1>Three colours, all session</h1>
+      <div class="legend">
+        <div class="swatch" style="border-color:var(--claim)">
+          <h3 class="claim">Claim</h3>
+          <p>Someone is telling you this. Usually someone selling.</p>
+        </div>
+        <div class="swatch" style="border-color:var(--evidence)">
+          <h3 class="evidence">Evidence</h3>
+          <p>You opened the source yourself and read it.</p>
+        </div>
+        <div class="swatch" style="border-color:var(--unknown)">
+          <h3 class="unknown">Unknown</h3>
+          <p>Nobody has answered this yet. Say so out loud.</p>
+        </div>
       </div>
-      <h2>And the box that gets forgotten</h2>
-      <p class="big"><strong>What this research will not decide:</strong> whether a new dishwasher is needed at all, or whether repairing the old one is better.</p>
+      <p class="fineprint" style="margin-top:2.4rem">Everything on the next slides is coloured by which of these it is. Watch what turns out to be amber.</p>
     </section>
 
     <section class="slide">
-      <p class="num">Slide 3 — The request, minute 13</p>
+      <p class="eyebrow"><span>03 · The boundary</span><span>Minutes 15–25</span></p>
+      <div class="rule"></div>
+      <h1>Four boxes, and the one everyone skips</h1>
+      <div class="boxes">
+        <div class="cell"><p class="caption">The need</p><p>A quiet dishwasher that fits the 60 cm gap.</p></div>
+        <div class="cell"><p class="caption">Budget and deadline</p><p>Up to 3,000, installed before the holidays.</p></div>
+        <div class="cell"><p class="caption">Must have</p><p>60 cm wide, 44 dB or less, three-year warranty.</p></div>
+        <div class="cell"><p class="caption">Rules it out</p><p>No local service. Needs the pipes moved.</p></div>
+        <div class="cell ghost"><p class="caption">What this will not decide</p><p>Whether a new machine is needed at all, or whether repairing the old one is better.</p></div>
+      </div>
+    </section>
+
+    <section class="slide dark">
+      <p class="eyebrow"><span>04 · The request</span><span>Minute 25</span></p>
+      <div class="rule"></div>
       <h1>Ask for a plan, not an answer</h1>
-      <div class="prompt">Plan research for buying noise-cancelling headphones under 800. Do not recommend a model. Set out which kinds of sources establish total cost, warranty, return policy, and durability over time, and which question each kind of source is suited to. Add one opposing viewpoint and a list of what is still unknown.</div>
-      <h2>Two phrases do all the work</h2>
-      <p class="big"><strong>“plan”</strong> rather than “recommend” &nbsp;•&nbsp; <strong>“what is still unknown”</strong></p>
+      <div class="prompt"><span class="claim">Plan research</span> for buying noise-cancelling headphones under 800. <span class="claim">Do not recommend a model.</span> Set out which kinds of sources establish total cost, warranty, return policy and durability, and which question each source suits. Add one opposing viewpoint and <span class="evidence">a list of what is still unknown</span>.</div>
+      <p class="fineprint" style="margin-top:1.6rem">Two phrases do all the work: <span class="claim mark">plan</span>, not “recommend” — and <span class="evidence mark" style="color:var(--evidence)">what is still unknown</span>.</p>
     </section>
 
     <section class="slide">
-      <p class="num">Slide 4 — While the report runs</p>
+      <p class="eyebrow"><span>05 · While it runs</span><span>Minutes 25–40</span></p>
+      <div class="rule"></div>
       <h1>Do not look at the screen</h1>
-      <p class="big">Two minutes, on paper: which sources would <strong>you</strong> have opened?</p>
+      <p class="lede">Which sources would <strong>you</strong> have opened? Answer before the report comes back.</p>
       <h2>Then compare</h2>
-      <ul class="big">
-        <li>What did the report find that we did not think of?</li>
-        <li>What did we list that the report missed?</li>
-        <li>How many of its sources were actually opened, and how many were only cited?</li>
-      </ul>
-      <div class="say">That report is a list of addresses, not evidence. It saves us the question of where to start. It does not save us the reading.</div>
+      <dl class="qa">
+        <dt>It found</dt><dd>what we never thought of</dd>
+        <dt>We listed</dt><dd>what it missed</dd>
+        <dt>It cited</dt><dd>how many did anyone actually open?</dd>
+      </dl>
+      <p class="fineprint" style="margin-top:2.2rem">A research report is a list of addresses. It saves you the question of where to start. It does not save you the reading.</p>
     </section>
 
     <section class="slide">
-      <p class="num">Slide 5 — Total cost, minutes 25–40</p>
+      <p class="eyebrow"><span>06 · Total cost</span><span>Minutes 40–60</span></p>
+      <div class="rule"></div>
       <h1>The headline price is a marketing number</h1>
-      <table>
-        <thead><tr><th>Cost component</th><th>AS-640 dishwasher</th></tr></thead>
-        <tbody>
-          <tr><td>Headline price</td><td>2,690</td></tr>
-          <tr><td>Delivery</td><td>150</td></tr>
-          <tr><td>Installation by an approved technician</td><td>250</td></tr>
-          <tr><td>Longer inlet hose</td><td>80</td></tr>
-          <tr><td>Extended warranty, two more years</td><td>300</td></tr>
-          <tr class="total"><td>Total cost</td><td>3,470</td></tr>
-        </tbody>
-      </table>
-      <p class="big">The budget was 3,000. The headline price was under it. The total cost is not.</p>
+      <div class="svg-wrap">
+        <svg viewBox="0 0 1170 215" role="img" aria-label="The 2,690 headline price plus delivery 150, installation 250, hose 80 and extended warranty 300 reaches 3,470, crossing a budget line set at 3,000.">
+          <rect x="0"   y="60" width="747" height="64" fill="#E0821A"/>
+          <rect x="747" y="60" width="42"  height="64" fill="#C98A4B"/>
+          <rect x="789" y="60" width="69"  height="64" fill="#B58A63"/>
+          <rect x="858" y="60" width="23"  height="64" fill="#A38A76"/>
+          <rect x="881" y="60" width="83"  height="64" fill="#8E8A88"/>
+          <line x1="833" y1="34" x2="833" y2="150" stroke="#111820" stroke-width="3" stroke-dasharray="7 5"/>
+          <text x="833" y="24" text-anchor="middle" font-size="21" font-weight="800" fill="#111820">budget 3,000</text>
+          <text x="10"  y="105" font-size="34" font-weight="800" fill="#FBF9F5">2,690</text>
+          <text x="982" y="105" font-size="38" font-weight="800" fill="#111820">3,470</text>
+          <text x="0"   y="176" font-size="19" font-weight="700" fill="#7A8794">sticker</text>
+          <text x="757" y="176" font-size="19" font-weight="700" fill="#7A8794">+150</text>
+          <text x="799" y="200" font-size="19" font-weight="700" fill="#7A8794">+250</text>
+          <text x="862" y="176" font-size="19" font-weight="700" fill="#7A8794">+80</text>
+          <text x="891" y="200" font-size="19" font-weight="700" fill="#7A8794">+300</text>
+        </svg>
+      </div>
+      <p class="lede" style="margin-top:1.4rem">The headline price was under budget. The total cost is not.</p>
     </section>
 
     <section class="slide">
-      <p class="num">Slide 6 — The planted contradiction</p>
+      <p class="eyebrow"><span>07 · The contradiction</span><span>Minutes 40–60</span></p>
+      <div class="rule"></div>
       <h1>The same warranty, two numbers</h1>
-      <table>
-        <thead><tr><th>Source</th><th>What it says</th></tr></thead>
-        <tbody>
-          <tr><td>The seller's page</td><td>Warranty: 3 years</td></tr>
-          <tr><td>The manufacturer's page</td><td>Two years. A third only if registered within 30 days, and only if installed by an approved technician.</td></tr>
-        </tbody>
-      </table>
-      <h2>And also</h2>
-      <p class="big">Manufacturer: 42 dB &nbsp;•&nbsp; Independent review: 46 dB in a real kitchen &nbsp;•&nbsp; Our requirement was 44 dB</p>
+      <div class="split">
+        <div class="panel is-claim">
+          <p class="caption">The seller's page</p>
+          <span class="figure claim">3<sup class="mark">*</sup></span>
+          <p class="caption">years, it says</p>
+        </div>
+        <div class="panel is-evidence">
+          <p class="caption">The manufacturer's page</p>
+          <span class="figure evidence">2</span>
+          <p class="caption">years, in writing</p>
+        </div>
+      </div>
+      <p class="fineprint" style="margin-top:2.4rem"><span class="mark">*</span> A third year only if you register within 30 days, and only if an approved technician installs it. Neither condition appears on the page selling it.</p>
     </section>
 
     <section class="slide">
-      <p class="num">Slide 7 — The alert rule, minutes 40–50</p>
+      <p class="eyebrow"><span>08 · The measurement</span><span>Minutes 40–60</span></p>
+      <div class="rule"></div>
+      <h1>Quiet, measured where?</h1>
+      <div class="svg-wrap">
+        <svg viewBox="0 0 1000 190" role="img" aria-label="On a decibel scale: the manufacturer claims 42, the requirement is 44, and an independent review measured 46 in a real kitchen.">
+          <line x1="40" y1="112" x2="960" y2="112" stroke="#DAD3C8" stroke-width="3"/>
+          <line x1="500" y1="52" x2="500" y2="150" stroke="#4E356F" stroke-width="3" stroke-dasharray="7 5"/>
+          <text x="500" y="176" text-anchor="middle" font-size="21" font-weight="800" fill="#4E356F">44 dB · what we asked for</text>
+          <circle cx="270" cy="112" r="15" fill="#E0821A"/>
+          <text x="270" y="86" text-anchor="middle" font-size="40" font-weight="800" fill="#E0821A">42</text>
+          <text x="270" y="42" text-anchor="middle" font-size="19" font-weight="700" fill="#7A8794">claimed, lab</text>
+          <circle cx="730" cy="112" r="15" fill="#0F7B6C"/>
+          <text x="730" y="86" text-anchor="middle" font-size="40" font-weight="800" fill="#0F7B6C">46</text>
+          <text x="730" y="42" text-anchor="middle" font-size="19" font-weight="700" fill="#7A8794">measured, real kitchen</text>
+        </svg>
+      </div>
+      <p class="lede" style="margin-top:1rem">Both numbers are true. Only one was measured in a kitchen.</p>
+    </section>
+
+    <section class="slide">
+      <p class="eyebrow"><span>09 · The alert rule</span><span>Minutes 60–80</span></p>
+      <div class="rule"></div>
       <h1>Build the rule as questions</h1>
-      <table>
-        <thead><tr><th>The question</th><th>Example</th></tr></thead>
-        <tbody>
-          <tr><td>What does it watch?</td><td>The total cost of this model</td></tr>
-          <tr><td>Where may it read from?</td><td>These two product pages only</td></tr>
-          <tr><td>What triggers it?</td><td>A drop to 800 or below, or a change in the return terms</td></tr>
-          <tr><td>How often?</td><td>Once every six hours</td></tr>
-          <tr><td>What does it remember?</td><td>The last price it saw, so it does not alert twice about the same thing</td></tr>
-          <tr><td>When does it stop by itself?</td><td>If a source fails to load twice in a row</td></tr>
-          <tr class="total"><td>What stays with you?</td><td>The purchase. Always.</td></tr>
-        </tbody>
-      </table>
+      <dl class="qa">
+        <dt>Watches</dt><dd>the total cost of this model</dd>
+        <dt>May read</dt><dd>these two pages, nothing else</dd>
+        <dt>Fires on</dt><dd>a drop to 800, or changed return terms</dd>
+        <dt>How often</dt><dd>every six hours</dd>
+        <dt>Remembers</dt><dd>the last price, so it never alerts twice</dd>
+        <dt>Stops if</dt><dd>a source fails to load twice</dd>
+        <dt class="last">You keep</dt><dd class="last">the purchase. Always.</dd>
+      </dl>
+    </section>
+
+    <section class="slide dark">
+      <p class="eyebrow"><span>10 · The loop</span><span>Minutes 60–80</span></p>
+      <div class="rule"></div>
+      <h1>What it does, over and over</h1>
+      <div class="svg-wrap">
+        <svg viewBox="0 0 1000 320" role="img" aria-label="The agent reads a source, checks it against the rule, and tells you. It remembers the last value each time round. If a source fails to load twice it stops itself.">
+          <!-- the loop -->
+          <path d="M232 122 H286" fill="none" stroke="#8E9AA6" stroke-width="3"/>
+          <path d="M300 122 l-14 -7 v14 z" fill="#8E9AA6"/>
+          <path d="M470 122 H524" fill="none" stroke="#8E9AA6" stroke-width="3"/>
+          <path d="M538 122 l-14 -7 v14 z" fill="#8E9AA6"/>
+          <!-- remember, routed above so it never crosses the stop branch -->
+          <path d="M624 90 V44 H146 V78" fill="none" stroke="#8E9AA6" stroke-width="3"/>
+          <path d="M146 90 l-7 -14 h14 z" fill="#8E9AA6"/>
+          <text x="385" y="30" text-anchor="middle" font-size="21" font-weight="700" fill="#8E9AA6">remember the last value</text>
+          <!-- the boxes -->
+          <rect x="60"  y="90" width="172" height="64" rx="4" fill="none" stroke="#FBF9F5" stroke-width="3"/>
+          <text x="146" y="130" text-anchor="middle" font-size="26" font-weight="800" fill="#FBF9F5">read</text>
+          <rect x="300" y="90" width="170" height="64" rx="4" fill="none" stroke="#FBF9F5" stroke-width="3"/>
+          <text x="385" y="130" text-anchor="middle" font-size="26" font-weight="800" fill="#FBF9F5">check</text>
+          <rect x="538" y="90" width="172" height="64" rx="4" fill="none" stroke="#E0821A" stroke-width="3"/>
+          <text x="624" y="130" text-anchor="middle" font-size="26" font-weight="800" fill="#E0821A">tell you</text>
+          <!-- the stop branch, hanging below its own box -->
+          <path d="M385 154 V218" fill="none" stroke="#C4342F" stroke-width="3" stroke-dasharray="7 5"/>
+          <path d="M385 234 l-7 -14 h14 z" fill="#C4342F"/>
+          <rect x="300" y="234" width="170" height="64" rx="4" fill="none" stroke="#C4342F" stroke-width="3"/>
+          <text x="385" y="274" text-anchor="middle" font-size="24" font-weight="800" fill="#C4342F">stop itself</text>
+          <text x="500" y="200" font-size="21" font-weight="700" fill="#C4342F">if a source fails to load twice</text>
+        </svg>
+      </div>
+      <p class="fineprint" style="margin-top:1rem">It never buys. It never logs in. It tells you, and you decide.</p>
     </section>
 
     <section class="slide">
-      <p class="num">Slide 8 — OpenClaw extension</p>
-      <h1>The agent contract</h1>
-      <div class="box big">Every six hours, read only these two public product pages or snapshots. Alert only if the total cost has dropped to 800 or below, if availability has changed, or if a warranty or return term has changed. Save the last value you saw and the source date. Do not send an identical alert again for 48 hours. If a source fails to load twice, send one “needs review” notice and pause yourself. Do not buy, do not log in, do not send messages, do not touch private data, and do not infer a recommendation.</div>
+      <p class="eyebrow"><span>11 · The contract</span><span>Minutes 60–80</span></p>
+      <div class="rule"></div>
+      <h1>Written down before it runs</h1>
+      <p class="fineprint" style="font-size:clamp(.82rem,1.5vw,1.15rem);color:var(--ink);max-width:66ch">Every six hours, read only these two public pages. Alert only if the total cost drops to <span class="claim mark">800</span> or below, if availability changes, or if a warranty or return term changes. Save the last value and the source date. Do not repeat an identical alert for 48 hours. If a source fails to load twice, send one <span class="stop mark">needs review</span> notice and pause. Do not buy, do not log in, do not send messages, do not touch private data, do not infer a recommendation.</p>
+      <p class="caption" style="margin-top:1.8rem">This is the whole specification. It fits on one slide on purpose.</p>
     </section>
 
-    <section class="slide">
-      <p class="num">Slide 9 — Keep visible for the whole demonstration</p>
-      <h1>Kill switch</h1>
-      <ol class="big">
+    <section class="slide dark">
+      <p class="eyebrow"><span>12 · Keep this visible</span><span>All demonstration</span></p>
+      <div class="rule"></div>
+      <h1 class="stop">Kill switch</h1>
+      <ol class="steps">
         <li>Disable the schedule.</li>
         <li>Stop the gateway.</li>
         <li>Revoke the separate key.</li>
       </ol>
-      <div class="say">An agent that stopped is the correct result when its evidence or its permissions are insufficient.</div>
+      <p class="lede" style="margin-top:2.4rem">An agent that stopped is the <strong>correct</strong> result when its evidence or its permissions are not enough.</p>
     </section>
 
     <section class="slide">
-      <p class="num">Slide 10 — Exit check, minutes 50–60</p>
-      <h1>Complete out loud or in writing</h1>
-      <div class="box big">I am <strong>[buying / waiting on / rejecting]</strong> <strong>[the product]</strong>, because I checked for myself that <strong>[two claims]</strong>. I am still unsure about <strong>[one uncertainty]</strong>, so I will look again on <strong>[date]</strong>.</div>
-      <h2>And the reflection question</h2>
-      <p class="big">What had almost convinced you before you opened the source?</p>
+      <p class="eyebrow"><span>13 · Exit check</span><span>Minutes 80–90</span></p>
+      <div class="rule"></div>
+      <h1>Finish the sentence</h1>
+      <p class="fill">I am <b></b> the <b></b>, because I checked <b></b> myself. I am still unsure about <b></b>, so I look again on <b></b>.</p>
+      <h2>And the question worth sitting with</h2>
+      <p class="lede">What had almost convinced you, before you opened the source?</p>
     </section>
 
   </body>
