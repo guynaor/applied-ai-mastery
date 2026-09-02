@@ -3,9 +3,12 @@
 **Time:** 90 minutes  
 **Outcome:** A short generated visual story — one image, two clips, a narration, and a deck built two ways — with every generated piece labelled and nothing mistaken for a photograph.
 
+**How the session runs.** Your facilitator works through all of this live on screen while you watch, answer questions and argue with the results. You do not need a tool open, or an account, during the session itself. The sequence below is yours to run in the week afterwards, and the learning journal has every table waiting for it.
+
+
 ## Before this session
 
-Create two accounts before the day, not during it: Google (stages 1 through 5) and Claude (stage 6) — both free, and together they complete the whole chain. If you already use ChatGPT, bring it too: stage 1 uses it for an optional comparison, but a Google account alone is a complete route on its own.
+You do not need these for the session itself — they are for the week's work. Create two accounts before you start it: Google (stages 1 through 5) and Claude (stage 6) — both free, and together they complete the whole chain. If you already use ChatGPT, bring it too: stage 1 uses it for an optional comparison, but a Google account alone is a complete route on its own.
 
 ## Scenario
 

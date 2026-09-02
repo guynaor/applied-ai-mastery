@@ -3,6 +3,9 @@
 **Time:** 90 minutes  
 **Outcome:** A purchase brief you would trust with your own money, and a working agent that watches on your behalf, never buys anything, and that you will run for a week and bring back.
 
+**How the session runs.** Your facilitator works through all of this live on screen while you watch, answer questions and argue with the results. You do not need a tool open, or an account, during the session itself. The sequence below is yours to run in the week afterwards, and the learning journal has every table waiting for it.
+
+
 ## Scenario
 
 Pick one purchase you are genuinely weighing right now — a dishwasher, headphones, a phone, a flight, or a course. There is plenty of information about it, and most of it was written to sell. Today you reach a decision that rests on sources you opened yourself, not on a persuasive AI answer. Do not enter payment details or account information, and do not ask for personalised financial advice.

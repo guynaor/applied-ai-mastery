@@ -9,7 +9,7 @@ Bring the tool you built in session 6, and be ready to say what happened when yo
 
 ## What happens in the session
 
-**First 30 minutes — the app, in real use.** Everyone shows what they built and what happened when they tried to live with it. This session is shorter than the others and half of it is this, because an app is the hardest thing the course asks for and it is the one most likely to have broken quietly. What did you stop using, and at which step did it stop being worth it?
+**First 30 minutes — the app, in real use.** A few people show what they built and what happened when they tried to live with it. Everyone else answers the same three things in the chat: when you actually used it, what it broke on, and why you stopped if you did. This session is shorter than the others and half of it is this, because an app is the hardest thing the course asks for and it is the one most likely to have broken quietly. What did you stop using, and at which step did it stop being worth it?
 
 **Last 30 minutes — the capstone.** The rest of the session is the project you will do after it, described below. You choose a subject before you leave, and you post it to the group.
 

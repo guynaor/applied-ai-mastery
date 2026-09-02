@@ -3,6 +3,9 @@
 **Time:** 90 minutes  
 **Outcome:** Two tools for the same problem — a tiny one built in chat and a real one built on a platform — and testing that knows where each of them breaks.
 
+**How the session runs.** Your facilitator works through all of this live on screen while you watch, answer questions and argue with the results. You do not need a tool open, or an account, during the session itself. The sequence below is yours to run in the week afterwards, and the learning journal has every table waiting for it.
+
+
 ## Before the session — open an account on one platform
 
 **Do this before the session, not during it.** Pick **one** of the two, based on what you want to build:

@@ -28,7 +28,9 @@
 
 Session 6's homework was to genuinely use one of the two tools, at least twice. This half of the session is that, and it deserves the time.
 
-**Open with the question that gets the real answer:** not "did it work" but **"what did you stop using, and at which step did it stop being worth it?"** Nobody volunteers abandonment when the question is "how did it go".
+**Open with the question that gets the real answer:** not "did it work" but **"what did you stop using, and at which step did it stop being worth it?"
+
+**How to run it with twenty-five people.** You cannot go round the room — that is thirty minutes of roll call. Ask everyone for three lines in the chat at once (used it when, broke on what, stopped because), give it two minutes, then read the chat aloud and pull three or four people to speak, choosing the ones whose answers disagree with each other. The chat also leaves you a record of who has an app that quietly died, which is exactly who to watch during the capstone.** Nobody volunteers abandonment when the question is "how did it go".
 
 ### What you are listening for
 
