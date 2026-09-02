@@ -5,124 +5,410 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>שקפים להקרנה — מפגש 3: לבנות תוכנית משותפת שעובדת</title>
     <style>
-      :root{--primary:#4E356F;--soft:#F0EAFA;--text:#17242D;--line:#d6dae0;--muted:#55606E;--warn:#b3413f}
+      /* Session 2 is about the distance between a confident number and what you actually
+         pay. The deck borrows retail signage — enormous figures, tiny small print — and
+         audits it. Colour is not decoration here: amber is always somebody's claim, teal
+         is always something checked at source, slate is always still unknown. Slide 2
+         teaches that legend and every later slide relies on it.
+         System fonts only: the session has to run with no network. */
+      :root{
+        --ink:#111820;
+        --paper:#FBF9F5;
+        --brand:#4E356F;
+        --claim:#E0821A;
+        --evidence:#0F7B6C;
+        --unknown:#7A8794;
+        --stop:#C4342F;
+        --rule:#DAD3C8;
+        --display:system-ui,-apple-system,"Segoe UI",sans-serif;
+      }
       *{box-sizing:border-box}
-      body{font-family:system-ui,sans-serif;line-height:1.5;margin:0;color:var(--text);background:#fff}
-      .slide{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:4vh 6vw;border-bottom:1px solid var(--line);page-break-after:always}
-      .num{color:var(--muted);font-size:1rem;letter-spacing:.08em;margin-bottom:1rem}
-      h1{font-size:clamp(1.8rem,4.5vw,3rem);color:var(--primary);margin:0 0 1.5rem}
-      h2{font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--primary);margin:1.5rem 0 .6rem}
-      p,li{font-size:clamp(1.05rem,1.9vw,1.4rem)}
-      .big{font-size:clamp(1.3rem,2.8vw,2rem);line-height:1.45}
-      .box{background:var(--soft);border-inline-start:6px solid var(--primary);padding:1.2rem 1.5rem;border-radius:6px}
-      .prompt{background:#17242D;color:#F4F6F8;padding:1.2rem 1.5rem;border-radius:6px;font-size:clamp(1rem,1.9vw,1.35rem);line-height:1.6}
-      table{border-collapse:collapse;width:100%;font-size:clamp(.95rem,1.7vw,1.25rem)}
-      th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:start}
-      th{background:var(--primary);color:#fff}
-      tbody tr:nth-child(even){background:#FAFAFC}
-      .total td{font-weight:700;background:var(--soft)}
-      .say{border:2px dashed var(--primary);border-radius:6px;padding:1.2rem 1.5rem;font-style:italic}
-      .clash{background:#fdf0f0;border-inline-start:6px solid var(--warn);padding:1rem 1.4rem;border-radius:6px;margin:.6rem 0}
-      ol,ul{padding-inline-start:1.4rem}
-      @media print{.slide{min-height:auto;padding:1.5rem;border:0}}
+      html{-webkit-text-size-adjust:100%}
+      body{
+        font-family:var(--display);
+        margin:0;background:var(--paper);color:var(--ink);
+        font-variant-numeric:tabular-nums;
+        line-height:1.25;
+      }
+
+      .slide{
+        min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+        padding:7vh 6vw 9vh;position:relative;
+        border-bottom:1px solid var(--rule);page-break-after:always;
+      }
+      .slide.dark{background:var(--ink);color:var(--paper)}
+      .slide.dark .eyebrow{color:#8E9AA6}
+      .slide.dark .rule{background:#2A343F}
+
+      /* Structural marker. Slides are a timed sequence, so the number and the minute
+         range carry real information for the facilitator, not decoration. */
+      .eyebrow{
+        position:absolute;top:3.4vh;inset-inline-start:6vw;inset-inline-end:6vw;
+        display:flex;justify-content:space-between;gap:1rem;
+        font-size:clamp(.8rem,1.25vw,1.05rem);
+        text-transform:uppercase;letter-spacing:.2em;font-weight:700;
+        color:var(--unknown);
+      }
+      .rule{position:absolute;top:6.6vh;inset-inline:6vw;height:1px;background:var(--rule)}
+
+      h1{
+        font-size:clamp(1.9rem,5.2vw,4.1rem);
+        font-weight:800;letter-spacing:-.028em;line-height:1.04;
+        margin:0 0 .6em;max-width:20ch;
+      }
+      h1.wide{max-width:28ch}
+      h2{
+        font-size:clamp(.9rem,1.5vw,1.2rem);
+        text-transform:uppercase;letter-spacing:.18em;font-weight:700;
+        color:var(--unknown);margin:2.2rem 0 .7rem;
+      }
+      p{margin:0 0 .7em}
+      .lede{font-size:clamp(1.25rem,2.5vw,2.05rem);max-width:42ch;line-height:1.4}
+      .lede strong{font-weight:700}
+
+      /* The small print. The session's whole argument is that this is where the
+         conditions live, so it gets a real typographic voice rather than being hidden. */
+      .fineprint{
+        font-size:clamp(1.05rem,1.95vw,1.55rem);letter-spacing:.02em;
+        color:var(--unknown);max-width:60ch;line-height:1.5;
+      }
+      .fineprint .mark{color:var(--claim);font-weight:800}
+
+      .mark{font-weight:800}
+      sup.mark{font-size:.55em;vertical-align:super;margin-inline-start:.08em}
+
+      /* Enormous figures are the point of this deck. */
+      .figure{
+        font-size:clamp(3rem,11vw,9rem);font-weight:800;letter-spacing:-.045em;
+        line-height:.9;display:block;
+      }
+      .figure-sm{font-size:clamp(2rem,6vw,4.6rem);font-weight:800;letter-spacing:-.04em;line-height:.95}
+      .caption{
+        font-size:clamp(.88rem,1.45vw,1.15rem);text-transform:uppercase;
+        letter-spacing:.18em;font-weight:700;color:var(--unknown);margin-top:.5rem;
+      }
+
+      .claim{color:var(--claim)}
+      .evidence{color:var(--evidence)}
+      .unknown{color:var(--unknown)}
+      .stop{color:var(--stop)}
+
+      .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,4vw,4rem);align-items:start}
+      .panel{border-top:5px solid var(--rule);padding-top:1.1rem}
+      .panel.is-claim{border-top-color:var(--claim)}
+      .panel.is-evidence{border-top-color:var(--evidence)}
+      .panel .caption{margin:0 0 .8rem}
+
+      .legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1.6rem;margin-top:1rem}
+      .swatch{border-top:9px solid;padding-top:.9rem}
+      .swatch h3{font-size:clamp(1.35rem,2.8vw,2.2rem);margin:0 0 .3rem;font-weight:800;letter-spacing:-.02em}
+      .swatch p{font-size:clamp(1rem,1.8vw,1.4rem);color:var(--unknown);margin:0;line-height:1.4}
+
+      .boxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1rem}
+      .cell{border:2px solid var(--ink);padding:1rem 1.1rem;border-radius:3px}
+      .cell .caption{margin:0 0 .45rem;color:var(--brand)}
+      .cell p{font-size:clamp(1.05rem,1.95vw,1.5rem);margin:0;line-height:1.35}
+      .cell.ghost{border-style:dashed;border-color:var(--unknown);background:transparent}
+      .cell.ghost .caption{color:var(--unknown)}
+      .cell.ghost p{color:var(--unknown)}
+
+      .prompt{
+        background:var(--ink);color:var(--paper);border-radius:4px;
+        padding:clamp(1rem,2.4vw,1.8rem);
+        font-size:clamp(1.1rem,2.05vw,1.6rem);line-height:1.5;max-width:56ch;
+      }
+      .prompt .claim,.prompt .evidence{font-weight:800}
+
+      ol.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:1.1rem}
+      ol.steps li{counter-increment:s;display:flex;gap:1rem;align-items:baseline;
+        font-size:clamp(1.3rem,2.8vw,2.4rem);font-weight:700;letter-spacing:-.015em}
+      ol.steps li::before{
+        content:counter(s);font-size:clamp(.9rem,1.4vw,1.15rem);font-weight:800;
+        color:var(--stop);border:2px solid var(--stop);border-radius:50%;
+        width:2.1em;height:2.1em;display:grid;place-items:center;flex:none;letter-spacing:0;
+      }
+
+      .qa{display:grid;grid-template-columns:auto 1fr;gap:.55rem 1.6rem;align-items:baseline;
+        font-size:clamp(1.1rem,2.05vw,1.6rem);max-width:62ch}
+      .qa dt{font-weight:800;color:var(--brand);white-space:nowrap}
+      .qa dd{margin:0;color:var(--ink)}
+      .qa .last{color:var(--stop)}
+
+      .fill{
+        font-size:clamp(1.25rem,2.8vw,2.25rem);line-height:1.5;max-width:28ch;font-weight:600;
+      }
+      .fill b{
+        display:inline-block;border-bottom:3px solid var(--claim);
+        min-width:5.5em;color:var(--claim);font-weight:800;
+      }
+
+
+      /* Long blocks stay behind a title the facilitator clicks. On a shared screen a wall
+         of text is unreadable anyway, and the click matches how the session is taught:
+         put the question to the room, then open the answer. */
+      details.reveal{border-top:3px solid var(--rule);margin-top:1.8rem;max-width:62ch}
+      details.reveal>summary{
+        cursor:pointer;list-style:none;padding:1rem 0;
+        font-size:clamp(1.1rem,2.1vw,1.7rem);font-weight:800;letter-spacing:-.015em;
+        color:var(--brand);display:flex;align-items:center;gap:.7rem;
+      }
+      details.reveal>summary::-webkit-details-marker{display:none}
+      details.reveal>summary::before{
+        content:"+";flex:none;display:grid;place-items:center;
+        width:1.4em;height:1.4em;border:3px solid currentColor;border-radius:50%;
+        font-size:.8em;line-height:1;font-weight:800;
+      }
+      details.reveal[open]>summary::before{content:"–"}
+      details.reveal>summary:focus-visible{outline:3px solid var(--claim);outline-offset:4px}
+      .slide.dark details.reveal{border-top-color:#2A343F}
+      .slide.dark details.reveal>summary{color:var(--claim)}
+
+      /* Slide navigation. Kept faint until pointed at, so it never competes with the slide
+         on a shared screen, and hidden entirely when printing. */
+      .deck-nav{
+        position:fixed;inset-block-end:1.3rem;inset-inline-end:1.3rem;z-index:20;
+        /* Pinned to LTR so the button order is the DOM order in both languages. Each deck
+           then emits the buttons in the order its reading direction runs, so "next" always
+           sits on the side the reader is heading toward and its arrow points that way. */
+        display:flex;direction:ltr;align-items:center;gap:.35rem;
+        background:rgba(17,24,32,.88);color:var(--paper);
+        border-radius:999px;padding:.4rem .5rem;
+        opacity:.3;transition:opacity .18s ease;
+      }
+      .deck-nav:hover,.deck-nav:focus-within{opacity:1}
+      .deck-nav button{
+        font:inherit;font-weight:800;font-size:1.25rem;line-height:1;
+        width:2.3rem;height:2.3rem;border-radius:50%;border:0;cursor:pointer;
+        background:transparent;color:inherit;display:grid;place-items:center;padding:0;
+      }
+      .deck-nav button:hover:not([disabled]){background:rgba(255,255,255,.16)}
+      .deck-nav button:focus-visible{outline:3px solid var(--claim);outline-offset:2px}
+      .deck-nav button[disabled]{opacity:.28;cursor:default}
+      .deck-count{
+        font-size:.95rem;font-weight:700;letter-spacing:.05em;
+        font-variant-numeric:tabular-nums;padding:0 .45rem;min-width:5ch;text-align:center;
+        /* "2 / 13" is bidi-neutral, so under dir="rtl" it reorders to "13 / 2". */
+        direction:ltr;unicode-bidi:isolate;
+      }
+      @media print{.deck-nav{display:none}}
+      svg{display:block;width:100%;height:auto;overflow:visible}
+      .svg-wrap{margin:.6rem 0 .4rem}
+      text{font-family:var(--display);font-variant-numeric:tabular-nums}
+
+      @media (max-width:750px){
+        .split{grid-template-columns:1fr}
+        .slide{min-height:auto;padding:3.4rem 1.4rem 2.6rem}
+      }
+      @media print{
+        .slide{min-height:auto;padding:1.4rem;border:0}
+        body{background:#fff}
+        .slide.dark{background:#fff;color:var(--ink)}
+        .slide.dark .eyebrow{color:var(--unknown)}
+      }
+      @media (prefers-reduced-motion:no-preference){
+        .slide{scroll-margin-top:0}
+      }
     </style>
   </head>
   <body>
 
-    <section class="slide">
-      <p class="num">שקף 1 — פתיחה, דקות 0–5</p>
-      <h1>מה אתם מארגנים עכשיו, שדורש עוד אנשים כדי שיקרה?</h1>
-      <div class="say big">היום לא נלמד שיטת תכנון. נעשה את העבודה עצמה עם AI — אוכל, שתייה, תצוגת תמונות, לוח זמנים וחלוקה — ואחרי כל משימה נשאל את אותה שאלה.</div>
+    <section class="slide dark">
+      <p class="eyebrow"><span>01 &middot; פתיחה</span><span>דקות 10–15</span></p>
+      <div class="rule"></div>
+      <h1 class="wide">מה אתם מארגנים עכשיו שדורש אנשים אחרים כדי לקרות?</h1>
+      <p class="lede">היום לא לומדים שיטת תכנון. היום עושים את העבודה עצמה — כמויות, תצוגה, לוח זמנים, ומי באמת אחראי על מה.</p>
     </section>
+
     <section class="slide">
-      <p class="num">שקף 2 — השאלה שחוזרת חמש פעמים</p>
-      <h1>אחרי כל פלט של הכלי</h1>
-      <ol class="big">
-        <li>מה הוא <strong>הניח</strong> שלא אמרתי לו?</li>
-        <li>מה הוא <strong>המציא</strong> ונשמע כמו עובדה?</li>
-        <li><strong>מי אחראי</strong> על זה בפועל?</li>
-      </ol>
-      <div class="say">שלוש השאלות האלה הן כל השיעור. כל השאר זה תרגול שלהן על משימות אמיתיות.</div>
-    </section>
-    <section class="slide">
-      <p class="num">שקף 3 — אוכל ושתייה, דקות 5–15</p>
-      <h1>מבקשים כמויות</h1>
-      <div class="prompt">אנחנו 40 איש לאירוע ערב של ארבע שעות, מתוכם 3 צמחונים ו-4 ילדים. תקציב האוכל 3,800 ש"ח. תן/י לי כמויות ורשימת קנייה. בסוף, הפרד/י בבירור: מה שאמרתי לך, לעומת מה שהנחת בעצמך — כמות מנות לאדם, כמה שותים, וכל דבר אחר שהשלמת.</div>
-      <div class="say">המשפט האחרון הוא כל ההבדל. בלעדיו תקבלו מספרים בלי לדעת מאיפה הם.</div>
-    </section>
-    <section class="slide">
-      <p class="num">שקף 4 — מה הוא הניח</p>
-      <h1>הכלי יקבע את אלה בביטחון מלא</h1>
-      <table>
-        <thead><tr><th>ההנחה</th><th>למה היא משנה</th></tr></thead>
-        <tbody>
-          <tr><td>מנה וחצי לאדם</td><td>הפער בין 40 ל-60 מנות הוא מאות שקלים</td></tr>
-          <tr><td>שתי כוסות לאדם לשעה</td><td>מכפיל את הזמנת השתייה</td></tr>
-          <tr><td>ילדים אוכלים כמו מבוגרים</td><td>או חצי. הוא לא שאל</td></tr>
-          <tr class="total"><td>האורחים נשארים עד הסוף</td><td>קובע כמה אוכל נזרק</td></tr>
-        </tbody>
-      </table>
-    </section>
-    <section class="slide">
-      <p class="num">שקף 5 — תצוגת תמונות, דקות 15–28</p>
-      <h1>בונים משהו שירוץ באירוע עצמו</h1>
-      <div class="prompt">בנה/י דף רשת עצמאי אחד שמציג תמונות בלולאה: כל תמונה 8 שניות, כיתוב מתחתיה, כפתור עצירה והמשך, ואפשרות לשנות את הקצב. הכול בקובץ אחד, בלי התחברות ובלי לשלוח שום דבר לשום מקום. השתמש/י בינתיים בתמונות דמה שאפשר להחליף אחר כך.</div>
-    </section>
-    <section class="slide">
-      <p class="num">שקף 6 — שתי בדיקות ושאלה אחת</p>
-      <h1>לפני שסומכים על התצוגה</h1>
-      <table>
-        <thead><tr><th>הבדיקה</th><th>מה קורה</th></tr></thead>
-        <tbody>
-          <tr><td>רק שתי תמונות</td><td>הלולאה עדיין עובדת, או מהבהבת?</td></tr>
-          <tr><td>כיתוב ארוך מאוד</td><td>העיצוב מתקלקל? מסתיר את התמונה?</td></tr>
-        </tbody>
-      </table>
-      <div class="warn">והשאלה שמגיעה מעצמה: <strong>של מי התמונות, ומי הסכים שיופיע בהן?</strong></div>
-    </section>
-    <section class="slide">
-      <p class="num">שקף 7 — לוח זמנים, דקות 28–38</p>
-      <h1>אילו מהעובדות האלה משתנות?</h1>
-      <table>
-        <thead><tr><th>בלוח הזמנים</th><th>מקור ותאריך, או הנחה</th></tr></thead>
-        <tbody>
-          <tr><td>האולם פתוח עד…</td><td>דף האולם, 3 בספטמבר</td></tr>
-          <tr><td>הקייטרינג מגיע ומפנה</td><td>ההצעה, 21 באוגוסט</td></tr>
-          <tr><td>האוטובוס האחרון</td><td>לוח הזמנים, 1 בספטמבר</td></tr>
-          <tr class="total"><td>„האורחים יגיעו בזמן”</td><td>הנחה. תמיד.</td></tr>
-        </tbody>
-      </table>
-      <div class="say">שלוש התנגשויות מחכות בין המקורות. תנו לכלי לסדר, ואז חפשו אותן בעצמכם.</div>
-    </section>
-    <section class="slide">
-      <p class="num">שקף 8 — חלוקת עבודה, דקות 38–50</p>
-      <h1>„מישהו צריך” היא לא משימה</h1>
-      <table>
-        <thead><tr><th>מה הכלי כותב</th><th>מה אתם מתקנים</th></tr></thead>
-        <tbody>
-          <tr><td>„צריך לשלוח הזמנות”</td><td>„דודה שולחת, עד 1 באוקטובר”</td></tr>
-          <tr><td>„לוודא כמויות מול הקייטרינג”</td><td>„בן הזוג, עד 28 באוקטובר”</td></tr>
-          <tr class="total"><td>„לארגן מוזיקה”</td><td>„אחי, ורשימת גיבוי אצלי בטלפון”</td></tr>
-        </tbody>
-      </table>
-      <div class="say">ומה שהכלי לא יכול לדעת: מי באמת פנוי, ומי כבר לקח על עצמו יותר מדי.</div>
-    </section>
-    <section class="slide">
-      <p class="num">שקף 9 — מה משתבש, דקות 50–60</p>
-      <h1>קלף אחד, ותוכנית חלופית עם שלושה דברים</h1>
-      <div class="box big">
-        <p><strong>מה עושים במקום</strong> — פעולה אחת ברורה.</p>
-        <p><strong>מי מפעיל</strong> — שם, לא „מישהו”.</p>
-        <p><strong>עד מתי חייבים להחליט</strong> — הרגע שאחריו אין ברירה.</p>
+      <p class="eyebrow"><span>02 &middot; שלוש השאלות</span><span>דקות 10–15</span></p>
+      <div class="rule"></div>
+      <h1>שאלו את אלה אחרי כל פלט</h1>
+      <div class="legend">
+        <div class="swatch" style="border-color:var(--claim)"><h3 class="claim">מה הוא הניח?</h3><p>הכריע בלי לשאול אתכם. בדרך כלל מספר.</p></div>
+        <div class="swatch" style="border-color:var(--stop)"><h3 class="stop">מה הוא המציא?</h3><p>נאמר כמו עובדה. נשמע בדיוק כמו האמיתיות.</p></div>
+        <div class="swatch" style="border-color:var(--brand)"><h3 style="color:var(--brand)">מי אחראי?</h3><p>אדם בשם, אחרת זה לא קורה.</p></div>
       </div>
-      <div class="say">„נראה מה יקרה” היא דחייה של ההחלטה לרגע שבו היא כבר תעלה יותר.</div>
+      <p class="fineprint" style="margin-top:2.2rem">שלוש אלה הן כל המפגש. כל השאר הוא תרגול שלהן על עבודות אמיתיות.</p>
     </section>
+
+    <section class="slide dark">
+      <p class="eyebrow"><span>03 &middot; כמויות</span><span>דקות 15–30</span></p>
+      <div class="rule"></div>
+      <h1>בקשו את החישוב, לא את המספר</h1>
+      <details class="reveal">
+        <summary>הבקשה המלאה</summary>
+        <div class="prompt">אנחנו 40 איש באירוע ערב בן ארבע שעות, כולל 3 צמחונים ו-4 ילדים. תקציב האוכל קבוע. תן כמויות לאוכל ולשתייה — <span class="evidence">ופרט כל הנחה שהנחת בדרך, ברשימה נפרדת.</span></div>
+      </details>
+      <p class="fineprint" style="margin-top:1.4rem">המשפט האחרון הוא כל ההבדל. בלעדיו מקבלים מספרים בלי מושג מאיפה הם הגיעו.</p>
+    </section>
+
     <section class="slide">
-      <p class="num">שקף 10 — בדיקת יציאה</p>
-      <h1>להשלים בקול או בכתב</h1>
-      <div class="box big">הכלי חסך לי <strong>[מה]</strong>. ההנחה שלו שהכי הפתיעה אותי הייתה <strong>[מה]</strong>. המשימה שעכשיו יש לה שם היא <strong>[מה]</strong>, והיא של <strong>[מי]</strong> עד <strong>[מתי]</strong>.</div>
-      <h2>ושאלת ההתבוננות</h2>
-      <p class="big">מה הכלי עשה טוב יותר מכם — ומה אתם עשיתם טוב יותר ממנו?</p>
+      <p class="eyebrow"><span>04 &middot; מה הוא הניח</span><span>דקות 15–30</span></p>
+      <div class="rule"></div>
+      <h1>הוא יכריע בכל אלה, בביטחון מלא</h1>
+      <dl class="qa">
+        <dt class="claim">מנה וחצי לאדם</dt><dd>הפער בין 40 ל-60 מנות הוא כסף אמיתי</dd>
+        <dt class="claim">שתי כוסות בשעה</dt><dd>מכפיל את הזמנת השתייה</dd>
+        <dt class="claim">ילדים אוכלים כמו מבוגרים</dt><dd>או חצי. הוא לא שאל</dd>
+        <dt class="claim">כולם נשארים עד הסוף</dt><dd>קובע כמה אוכל נזרק</dd>
+      </dl>
     </section>
+
+    <section class="slide dark">
+      <p class="eyebrow"><span>05 &middot; התצוגה</span><span>דקות 30–50</span></p>
+      <div class="rule"></div>
+      <h1>משהו שחייב לרוץ בערב עצמו</h1>
+      <details class="reveal">
+        <summary>הבקשה המלאה</summary>
+        <div class="prompt">בנה דף אינטרנט עצמאי אחד שמציג תמונות בלולאה: כל תמונה 8 שניות, כיתוב מתחת, בלי כפתורים על המסך, והוא חייב לרוץ בלי נגיעה במשך ארבע שעות. <span class="evidence">אמור לי מה הוא עושה כשתמונה לא נטענת.</span></div>
+      </details>
+    </section>
+
+    <section class="slide">
+      <p class="eyebrow"><span>06 &middot; שתי בדיקות</span><span>דקות 30–50</span></p>
+      <div class="rule"></div>
+      <h1>לפני שסומכים עליו בערב עצמו</h1>
+      <dl class="qa">
+        <dt>רק שתי תמונות</dt><dd>הלולאה עדיין עובדת, או מהבהבת?</dd>
+        <dt>כיתוב ארוך מאוד</dt><dd>הפריסה נשברת, או מכסה את התמונה?</dd>
+      </dl>
+      <p class="fineprint" style="margin-top:2rem">בדקו את הקצוות לפני הערב, לא בתוכו. שתיהן לוקחות פחות מדקה.</p>
+    </section>
+
+    <section class="slide">
+      <p class="eyebrow"><span>07 &middot; לוח זמנים</span><span>דקות 50–65</span></p>
+      <div class="rule"></div>
+      <h1>מה מתוך אלה באמת יכול להשתנות?</h1>
+        <div class="svg-wrap" style="max-width:84%;margin-inline:auto">
+        <svg viewBox="0 0 1000 394" role="img" aria-label="ציר זמן מ-17:00 עד 23:30: האולם פתוח עד 23:00, הקייטרינג יוצא ב-22:30, האוטובוס האחרון ב-22:45, והנחה בלי מקור שהאורחים יגיעו בזמן.">
+          <rect x="102" y="40" width="868" height="26" rx="4" fill="#0F7B6C" opacity=".8"/>
+          <text x="536" y="26" text-anchor="middle" font-size="25" font-weight="700" fill="#55606E">האולם פתוח עד 23:00</text>
+          <text x="536" y="90" text-anchor="middle" font-size="22" font-weight="700" fill="#7A8794">דף המקום, 3.9</text>
+          <rect x="175" y="138" width="795" height="26" rx="4" fill="#0F7B6C" opacity=".8"/>
+          <text x="572" y="124" text-anchor="middle" font-size="25" font-weight="700" fill="#55606E">הקייטרינג נכנס 17:00, יוצא 22:30</text>
+          <text x="572" y="188" text-anchor="middle" font-size="22" font-weight="700" fill="#7A8794">הצעת המחיר, 21.8</text>
+          <circle cx="138" cy="249" r="13" fill="#0F7B6C"/>
+          <text x="138" y="222" text-anchor="middle" font-size="25" font-weight="700" fill="#55606E">האוטובוס האחרון 22:45</text>
+          <text x="138" y="286" text-anchor="middle" font-size="22" font-weight="700" fill="#7A8794">לוח זמנים, 1.9</text>
+          <rect x="30" y="334" width="940" height="26" rx="4" fill="none" stroke="#E0821A" stroke-width="3" stroke-dasharray="8 6"/>
+          <text x="500" y="353" text-anchor="middle" font-size="25" font-weight="800" fill="#E0821A">ו„האורחים יגיעו בזמן” — אף אחד לא כתב את זה בשום מקום</text>
+        </svg>
+        </div>
+      <p class="fineprint" style="margin-top:1rem">לשלושה יש מקור ותאריך. לאחד אין אף אחד מהם.</p>
+    </section>
+
+    <section class="slide">
+      <p class="eyebrow"><span>08 &middot; אחריות</span><span>דקות 65–80</span></p>
+      <div class="rule"></div>
+      <h1>„שמישהו יטפל” היא לא משימה</h1>
+      <div class="split">
+        <div class="panel is-claim"><p class="caption">מה שהכלי כותב</p>
+          <p class="lede claim">„צריך לשלוח הזמנות”<br>„לאשר מספרים”<br>„לסדר מוזיקה”</p></div>
+        <div class="panel" style="border-top-color:var(--brand)"><p class="caption">מה שבאמת קורה</p>
+          <p class="lede" style="color:var(--brand)">דודה, עד 1 באוקטובר<br>בן/בת הזוג, עד 28 באוקטובר<br>אחי, ועוד פלייליסט גיבוי</p></div>
+      </div>
+      <p class="fineprint" style="margin-top:2rem">ומה שהוא לא יכול לדעת: מי באמת פנוי, ומי כבר לקח על עצמו יותר מדי.</p>
+    </section>
+
+    <section class="slide dark">
+      <p class="eyebrow"><span>09 &middot; מה נשבר</span><span>דקות 80–90</span></p>
+      <div class="rule"></div>
+      <h1>כרטיס אחד, שלושה דברים עליו</h1>
+      <ol class="steps">
+        <li>מה הכי סביר שיישבר.</li>
+        <li>מה עושים במקום, מוחלט עכשיו.</li>
+        <li>מי מקבל את ההחלטה הזאת בערב.</li>
+      </ol>
+      <p class="lede" style="margin-top:2.2rem">„נראה מה יקרה” דוחה את ההחלטה לרגע שבו היא עולה הכי הרבה.</p>
+    </section>
+
+    <section class="slide">
+      <p class="eyebrow"><span>10 &middot; בדיקת יציאה</span><span>דקות 80–90</span></p>
+      <div class="rule"></div>
+      <h1>השלימו את המשפט</h1>
+      <p class="fill">הוא חסך לי <b></b>. ההנחה שלו שהכי הפתיעה אותי הייתה <b></b>. מה שלא אמסור לו הוא <b></b>.</p>
+      <h2>והשאלה ששווה לשבת איתה</h2>
+      <p class="lede">איזה פרט מומצא הייתם מאמינים לו, אילו הייתם ממהרים?</p>
+    </section>
+
+    <nav class="deck-nav" aria-label="ניווט בין שקפים">
+      <button type="button" data-next aria-label="השקף הבא">&lsaquo;</button>
+      <span class="deck-count" data-count aria-live="polite"></span>
+      <button type="button" data-prev aria-label="השקף הקודם">&rsaquo;</button>
+    </nav>
+
+    <script>
+      (function(){
+        var slides=[].slice.call(document.querySelectorAll('.slide'));
+        var nav=document.querySelector('.deck-nav');
+        if(slides.length<2||!nav)return;
+        var prev=nav.querySelector('[data-prev]'),
+            next=nav.querySelector('[data-next]'),
+            count=nav.querySelector('[data-count]'),
+            rtl=document.documentElement.dir==='rtl';
+
+        function currentIndex(){
+          var best=0,bestDist=Infinity;
+          slides.forEach(function(s,i){
+            var d=Math.abs(s.getBoundingClientRect().top);
+            if(d<bestDist){bestDist=d;best=i;}
+          });
+          return best;
+        }
+        function update(i){
+          if(i==null)i=currentIndex();
+          count.textContent=(i+1)+' / '+slides.length;
+          prev.disabled=i===0;
+          next.disabled=i===slides.length-1;
+        }
+        function go(i){
+          i=Math.max(0,Math.min(slides.length-1,i));
+          // Instant, deliberately. A presentation cuts between slides rather than gliding,
+          // gliding compresses badly over video, and smooth scrolling is silently skipped
+          // by the browser whenever the tab is not in the foreground.
+          slides[i].scrollIntoView({behavior:'auto',block:'start'});
+          update(i);
+        }
+        prev.addEventListener('click',function(e){go(currentIndex()-1);if(e.detail)this.blur();});
+        next.addEventListener('click',function(e){go(currentIndex()+1);if(e.detail)this.blur();});
+
+        // Horizontal arrows follow reading direction, so in Hebrew Left moves forward.
+        // Down, Up, Page keys and Space mean the same thing in both.
+        var FORWARD=['PageDown','ArrowDown',' ','Spacebar',rtl?'ArrowLeft':'ArrowRight'],
+            BACK=['PageUp','ArrowUp',rtl?'ArrowRight':'ArrowLeft'];
+        addEventListener('keydown',function(e){
+          if(e.metaKey||e.ctrlKey||e.altKey)return;
+          var t=e.target;
+          // A reveal or a button must keep its own Space and Enter.
+          if(t&&t.closest&&t.closest('summary,a,button,input,textarea,select,[contenteditable]')
+             &&(e.key===' '||e.key==='Spacebar'||e.key==='Enter'))return;
+          if(FORWARD.indexOf(e.key)>-1){e.preventDefault();go(currentIndex()+1);}
+          else if(BACK.indexOf(e.key)>-1){e.preventDefault();go(currentIndex()-1);}
+          else if(e.key==='Home'){e.preventDefault();go(0);}
+          else if(e.key==='End'){e.preventDefault();go(slides.length-1);}
+        });
+
+        var ticking=false;
+        addEventListener('scroll',function(){
+          if(ticking)return;
+          ticking=true;
+          requestAnimationFrame(function(){update();ticking=false;});
+        },{passive:true});
+        update(0);
+      })();
+
+      // A closed <details> prints as nothing, which would quietly drop the contract and
+      // the conditions from a handout. Open everything to print, then put it back.
+      addEventListener('beforeprint',function(){
+        document.querySelectorAll('details').forEach(function(d){
+          d.dataset.wasOpen=d.open?'1':'0';d.open=true;
+        });
+      });
+      addEventListener('afterprint',function(){
+        document.querySelectorAll('details').forEach(function(d){
+          if(d.dataset.wasOpen==='0')d.open=false;
+        });
+      });
+    </script>
   </body>
 </html>
