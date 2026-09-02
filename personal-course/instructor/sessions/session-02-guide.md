@@ -16,7 +16,7 @@ These four links are everything you need open to run the session.
 |---|---|
 | [Projection slides](../../instructor/samples/session-02-slides.html) | Thirteen slides, in session order. Every “show on the board” moment in this guide is prepared there. |
 | [Sample product sources](../../instructor/samples/session-02-product-sources.html) | Two seller pages, a manufacturer page, and an independent review, with contradictions planted. The address can be handed straight to an AI tool, or the text copied from it. |
-| [Monitoring snapshots](../../instructor/samples/session-02-snapshots.html) | A separate page, for the agent demonstration only. Your key: **A** reads 950, **B** reads 780, **C** fails with a 503. The page does not label them, because working out which one should fire against a trigger of 800 is the learners' job. |
+| [Monitoring snapshots](../../instructor/samples/session-02-snapshots.html) | A separate page, for the agent demonstration only. Your key: **A** reads 3,470, **B** reads 2,950, **C** fails with a 503. The page does not label them, because working out which one should fire against a trigger of 3,000 is the learners' job. |
 | [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | A downloadable Word file. Every table they fill in for this week's homework is in it. |
 | [Session 2 brief](../../sessions/session-02-research-buy-monitor.md) | What learners see. |
 
@@ -123,7 +123,7 @@ Then add the box that is easiest to skip: **what this research will not decide.*
 
 You sent this request at minute 13, part-way through the boundary block, so that it had time to run. Show it in full on [slide 4](../../instructor/samples/session-02-slides.html) before sending, or type it out on screen:
 
-> “Plan research for buying noise-cancelling headphones under 800. Do not recommend a model. Set out which kinds of sources establish total cost, warranty, return policy, and durability over time, and which question each kind of source is suited to. Add one opposing viewpoint and a list of what is still unknown.”
+> “Plan research for buying a quiet 60 cm dishwasher under 3,000. Do not recommend a model. Set out which kinds of sources establish total cost, warranty, return policy, and durability over time, and which question each kind of source is suited to. Add one opposing viewpoint and a list of what is still unknown.”
 
 Point out that two phrases in the request do the work: **“plan”** rather than “recommend”, and **“what is still unknown”**.
 
@@ -180,7 +180,7 @@ Then write one alert rule with the room. Do not hand out a list of terms — bui
 |---|---|
 | What does it watch? | The total cost of this model |
 | Where may it read from? | These two product pages only |
-| What triggers it? | A drop to 800 or below, or a change in the return terms |
+| What triggers it? | The total cost dropping to 3,000 or below, or a change in the return terms |
 | How often? | Once every six hours |
 | What does it remember? | The last price it saw, so it does not alert twice about the same thing |
 | When does it stop by itself? | If a source fails to load twice in a row |
@@ -198,7 +198,7 @@ A specification nobody runs is a worksheet — so everyone builds one this week,
 - **Local.** OpenClaw with Ollama, public or mock data, a manual first run, a local log.
 - **Cloud.** Their own provider account, separate key, low cap, public data only.
 
-**Demonstrate a running agent before you let them go.** They need to have seen one work before they build one alone. Show the connection without exposing the credential, run it against the three snapshots — A at 950, B at 780, and C which fails to load — and show the stop condition firing. That is the whole point of the third snapshot, and it is the one people forget to design for.
+**Demonstrate a running agent before you let them go.** They need to have seen one work before they build one alone. Show the connection without exposing the credential, run it against the three snapshots — A at 3,470, B at 2,950, and C which fails to load — and show the stop condition firing. That is the whole point of the third snapshot, and it is the one people forget to design for.
 
 **Do not debug a learner's machine on the call.** With twenty people watching, ten minutes disappears into one laptop and everyone else leaves. Point them at the no-install route, and offer a separate time.
 
@@ -228,7 +228,7 @@ Then leave one question hanging as they go: “What had almost convinced you bef
 
 ### Setup the night before
 
-Use only a provider or API account you own. Do not display an API key on screen, do not add learners to the account, and do not ask them for access details. Install OpenClaw on the demonstration machine, complete onboarding against your chosen cloud model, and run its health check. Prepare a separate project and key with a low budget, a workspace with no sensitive material, and one notification channel you control. The three demonstration snapshots are on the [snapshots page](../../instructor/samples/session-02-snapshots.html), kept separate from the product sources so an AI tool can be given the sources alone. A reads 950, B reads 780, and C fails with a 503. They are labelled A, B and C and nothing more: the page states readings, not verdicts, so that the agent — and the room — has to compare them against the 800 trigger rather than read the answer off the page.
+Use only a provider or API account you own. Do not display an API key on screen, do not add learners to the account, and do not ask them for access details. Install OpenClaw on the demonstration machine, complete onboarding against your chosen cloud model, and run its health check. Prepare a separate project and key with a low budget, a workspace with no sensitive material, and one notification channel you control. The three demonstration snapshots are on the [snapshots page](../../instructor/samples/session-02-snapshots.html), kept separate from the product sources so an AI tool can be given the sources alone. A reads 3,470 — the exact total the room worked out at minute 40 — B reads 2,950, and C fails with a 503. They are labelled A, B and C and nothing more: the page states readings, not verdicts, so that the agent — and the room — has to compare them against the 3,000 trigger rather than read the answer off the page.
 
 Before you open the tool, show the three-step **kill switch** on [slide 12](../../instructor/samples/session-02-slides.html): disable the schedule, stop the gateway, revoke the separate key. Leave it visible for the whole demonstration.
 
@@ -236,13 +236,13 @@ Before you open the tool, show the three-step **kill switch** on [slide 12](../.
 
 Show the contract on [slide 11](../../instructor/samples/session-02-slides.html) before you open the tool:
 
-> Every six hours, read only these two public product pages or snapshots. Alert only if the total cost has dropped to 800 or below, if availability has changed, or if a warranty or return term has changed. Save the last value you saw and the source date. Do not send an identical alert again for 48 hours. If a source fails to load twice, send one “needs review” notice and pause yourself. Do not buy, do not log in, do not send messages, do not touch private data, and do not infer a recommendation.
+> Every six hours, read only these two public product pages or snapshots. Alert only if the total cost has dropped to 3,000 or below, if availability has changed, or if a warranty or return term has changed. Save the last value you saw and the source date. Do not send an identical alert again for 48 hours. If a source fails to load twice, send one “needs review” notice and pause yourself. Do not buy, do not log in, do not send messages, do not touch private data, and do not infer a recommendation.
 
 ### Live teaching script
 
 1. Show the model connection without exposing the credential. Explain that OpenClaw is the runtime, and that the cloud model is billed and authorised separately from it.
 2. Show the workspace, the allowed-source list, the schedule, the run history, and the notification channel. Ask learners to identify the trigger, the duplicate rule, the approval point, and the stop rule themselves.
-3. Run it once with **Snapshot B**, which reads 780 against a trigger of 800. Inspect the source, the date, and the draft alert before it reaches the channel.
+3. Run it once with **Snapshot B**, which reads 2,950 against a trigger of 3,000. Inspect the source, the date, and the draft alert before it reaches the channel.
 4. Run it again with exactly the same snapshot. No second alert. This is the moment the rule you wrote at minute 45 proves itself.
 5. Switch to **Snapshot C**, where the source returns a 503. Show the logged failure and the “needs review” notice. Do not fix it by widening permissions. What you are looking for, and what to say if it does not happen: it must not alert on price, must not guess a value, and must not treat the last reading as current. First failure, retry. Second failure, stop itself and send one “needs review” notice. If the agent instead reports the old 780 as though it were today's price, stop and show the room — that is the failure this snapshot exists to produce.
 6. Use the kill switch in front of the group, and say it plainly: an agent that stopped is the correct result when its evidence or its permissions are insufficient.
