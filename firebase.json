@@ -6,6 +6,22 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "redirects": [
+      { "source": "/s2/source-1", "destination": "/personal-course/instructor/samples/session-02-source-01-seller.html", "type": 301 },
+      { "source": "/s2/source-2", "destination": "/personal-course/instructor/samples/session-02-source-02-seller.html", "type": 301 },
+      { "source": "/s2/source-3", "destination": "/personal-course/instructor/samples/session-02-source-03-manufacturer.html", "type": 301 },
+      { "source": "/s2/source-4", "destination": "/personal-course/instructor/samples/session-02-source-04-review.html", "type": 301 },
+      { "source": "/s2/snapshot-a", "destination": "/personal-course/instructor/samples/session-02-snapshot-a.html", "type": 301 },
+      { "source": "/s2/snapshot-b", "destination": "/personal-course/instructor/samples/session-02-snapshot-b.html", "type": 301 },
+      { "source": "/s2/snapshot-c", "destination": "/personal-course/instructor/samples/session-02-snapshot-c.html", "type": 301 },
+      { "source": "/s2-he/source-1", "destination": "/personal-course/instructor/samples/session-02-source-01-seller-he.html", "type": 301 },
+      { "source": "/s2-he/source-2", "destination": "/personal-course/instructor/samples/session-02-source-02-seller-he.html", "type": 301 },
+      { "source": "/s2-he/source-3", "destination": "/personal-course/instructor/samples/session-02-source-03-manufacturer-he.html", "type": 301 },
+      { "source": "/s2-he/source-4", "destination": "/personal-course/instructor/samples/session-02-source-04-review-he.html", "type": 301 },
+      { "source": "/s2-he/snapshot-a", "destination": "/personal-course/instructor/samples/session-02-snapshot-a-he.html", "type": 301 },
+      { "source": "/s2-he/snapshot-b", "destination": "/personal-course/instructor/samples/session-02-snapshot-b-he.html", "type": 301 },
+      { "source": "/s2-he/snapshot-c", "destination": "/personal-course/instructor/samples/session-02-snapshot-c-he.html", "type": 301 }
+    ],
     "headers": [
       {
         "source": "**",

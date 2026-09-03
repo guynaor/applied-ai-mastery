@@ -73,6 +73,11 @@
         color:var(--unknown);max-width:60ch;line-height:1.5;
       }
       .fineprint .mark{color:var(--claim);font-weight:800}
+      /* An address is read aloud off the projector, so it has to survive RTL
+         intact. isolate: a path opens with a bidi-neutral "/", which under
+         dir="rtl" hops to the far end. nowrap: "-" is a break opportunity,
+         and "/s2-he/snapshot-a" split over two lines reads as two addresses. */
+      .url{direction:ltr;unicode-bidi:isolate;white-space:nowrap}
 
       .mark{font-weight:800}
       sup.mark{font-size:.55em;vertical-align:super;margin-inline-start:.08em}
@@ -400,6 +405,7 @@
       <details class="reveal">
         <summary>המפרט המלא</summary>
         <p class="fineprint" style="color:var(--ink)">כל שש שעות, קרא רק את שני הדפים הציבוריים האלה. התרע רק אם העלות הכוללת ירדה ל-<span class="claim mark">3,000</span> או פחות, אם הזמינות השתנתה, או אם תנאי אחריות או החזרה השתנו. שמור את הערך האחרון ואת תאריך המקור. אל תשלח התראה זהה שוב במשך 48 שעות. אם מקור לא נטען פעמיים, שלח הודעת <span class="stop mark">נדרשת בדיקה</span> אחת והשהה את עצמך. אל תקנה, אל תתחבר, אל תשלח הודעות, אל תיגע במידע פרטי, ואל תסיק המלצה.</p>
+        <p class="fineprint" style="color:var(--ink)">כל הכתובות תחת <span class="url">applied-ai-mastery.web.app</span> — שני הדפים: <span class="url">/s2-he/source-1</span> (מטבח פלוס), <span class="url">/s2-he/source-2</span> (חשמל ישיר). קריאות חיות להדגמה: <span class="url">/s2-he/snapshot-a</span>, <span class="url">/s2-he/snapshot-b</span>, <span class="url">/s2-he/snapshot-c</span>.</p>
       </details>
       <p class="caption" style="margin-top:1.8rem">זה כל המפרט. הוא נכנס לשקף אחד בכוונה.</p>
     </section>

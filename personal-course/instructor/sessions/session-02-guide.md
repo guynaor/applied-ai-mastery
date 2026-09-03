@@ -18,6 +18,22 @@ These four links are everything you need open to run the session.
 | [Sample product sources](../../instructor/samples/session-02-product-sources.html) | Two seller pages, a manufacturer page, and an independent review, with contradictions planted. The address can be handed straight to an AI tool, or the text copied from it. |
 | [OpenClaw setup on a paid API](../../sessions/session-02-openclaw-setup.md) | For learners taking the advanced route in the week's build. Mac and Windows, what it costs, and the three-step stop. Nobody needs it for the session. |
 | [Monitoring snapshots](../../instructor/samples/session-02-snapshots.html) | A separate page, for the agent demonstration only. Your key: **A** reads 3,470, **B** reads 2,950, **C** fails with a 503. The page does not label them, because working out which one should fire against a trigger of 3,000 is the learners' job. |
+
+### Hosted addresses to hand to the tool (live after deploy)
+
+Each source is its own page, so Deep Research and the agent can be given addresses rather than pasted text. The agent contract's "two public pages" are sources 1 and 2.
+
+| # | Page | Hand-out address |
+|---|---|---|
+| 1 | KitchenPlus seller offer (AS-640) | `https://applied-ai-mastery.web.app/s2/source-1` |
+| 2 | DirectElectric seller offer (NW-2) | `https://applied-ai-mastery.web.app/s2/source-2` |
+| 3 | AquaSilent warranty terms | `https://applied-ai-mastery.web.app/s2/source-3` |
+| 4 | Home Lab independent review | `https://applied-ai-mastery.web.app/s2/source-4` |
+| A | Snapshot A (reads 3,470) | `https://applied-ai-mastery.web.app/s2/snapshot-a` |
+| B | Snapshot B (reads 2,950) | `https://applied-ai-mastery.web.app/s2/snapshot-b` |
+| C | Snapshot C (503 failure) | `https://applied-ai-mastery.web.app/s2/snapshot-c` |
+
+Each snapshot is also a separate page, so the agent scans one reading at a time. To change a reading live mid-demo without redeploying, add a query override to a snapshot address — e.g. `…/s2/snapshot-b?total=3050` flips B above the 3,000 trigger, and `…/s2/snapshot-c?total=2950` brings failed source C back to life. `avail=` and `returns=` overrides work the same way.
 | [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | A downloadable Word file. Every table they fill in for this week's homework is in it. |
 | [Session 2 brief](../../sessions/session-02-research-buy-monitor.md) | What learners see. |
 

@@ -73,6 +73,10 @@
         color:var(--unknown);max-width:60ch;line-height:1.5;
       }
       .fineprint .mark{color:var(--claim);font-weight:800}
+      /* Kept identical to the Hebrew deck so the two stay in step. nowrap
+         matters here too: "-" is a break opportunity, and an address split
+         across two lines is misread when someone reads it off a projector. */
+      .url{direction:ltr;unicode-bidi:isolate;white-space:nowrap}
 
       .mark{font-weight:800}
       sup.mark{font-size:.55em;vertical-align:super;margin-inline-start:.08em}
@@ -398,6 +402,7 @@
       <details class="reveal">
         <summary>The full contract</summary>
         <p class="fineprint" style="color:var(--ink)">Every six hours, read only these two public pages. Alert only if the total cost drops to <span class="claim mark">3,000</span> or below, if availability changes, or if a warranty or return term changes. Save the last value and the source date. Do not repeat an identical alert for 48 hours. If a source fails to load twice, send one <span class="stop mark">needs review</span> notice and pause. Do not buy, do not log in, do not send messages, do not touch private data, do not infer a recommendation.</p>
+        <p class="fineprint" style="color:var(--ink)">All addresses sit under <span class="url">applied-ai-mastery.web.app</span> — the two pages: <span class="url">/s2/source-1</span> (KitchenPlus), <span class="url">/s2/source-2</span> (DirectElectric). Live readings for the demo: <span class="url">/s2/snapshot-a</span>, <span class="url">/s2/snapshot-b</span>, <span class="url">/s2/snapshot-c</span>.</p>
       </details>
       <p class="caption" style="margin-top:1.8rem">This is the whole specification. It fits on one slide on purpose.</p>
     </section>
