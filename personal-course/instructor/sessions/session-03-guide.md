@@ -99,7 +99,7 @@ The same rule applies to anything that takes more than half a minute: send it, k
 
 1. Open the [slides](../../instructor/samples/session-03-slides.html) for screen sharing, and **Claude with file creation turned on** — that is what produces real Excel and Word files.
 2. **Test the layout tonight, not tomorrow.** Ask the tool for a small table in a Word file and an Excel file, open both, and see how they come out on your machine. See "Three traps" below — you want to know the behaviour in advance, not discover it in front of twenty people.
-3. Prepare **a folder on your desktop** with an `images` subfolder holding three or four pictures named `1.jpg`, `2.jpg`, `3.jpg`, and a `music` subfolder with one or two audio files. Without it the HTML block cannot be demonstrated. **Note down the music filenames** — you will need to read them out to the tool at minute 62.
+3. Prepare **a folder on your desktop** with an `images` subfolder holding three or four pictures named `1.jpg`, `2.jpg`, `3.jpg`, and a `music` subfolder with one or two tracks **named `1.mp3`, `2.mp3`** — the same numbering as the images. Without it the HTML block cannot be demonstrated.
 4. Prepare **one shared document** everyone writes in — the event name and its numbers get written there live.
 5. Have the [disruption cards](../../instructor/samples/session-03-cards.html) link ready to paste into chat. Do not send it early.
 6. Open the [planning sources](../../instructor/samples/session-03-sources.html) in a tab — your backup if the room's pick is thin.
@@ -247,13 +247,13 @@ Show [slide 10](../../instructor/samples/session-03-slides.html) after you have 
 Fix both in one request, in front of the class:
 
 > The file runs locally on my machine. Fix two things.
-> One: load images from a local folder named `images` next to the file, named `1.jpg`, `2.jpg` and so on, skipping any that are missing. Load music from a local folder named `music`, using exactly these filenames: **[read out your own filenames here]**. Do not use any internet address.
+> One: load images from a local folder named `images` next to the file, named `1.jpg`, `2.jpg` and so on, and music from a local folder named `music` following exactly the same pattern: `1.mp3`, `2.mp3` and so on. Do not use any internet address.
 > Two: browsers block autoplay, so add an opening screen with a single "Start" button that starts both the music and the loop and goes full screen.
 > If an image or a track is missing, skip it and carry on without stopping.
 
-**Why it needs the music filenames.** The images get away without them because `1.jpg`, `2.jpg` is a pattern it can guess and walk until it runs out. Song titles cannot be guessed, and **a page opened from disk cannot read a directory listing** — it has no way to discover what is in the folder. Leave the names out and it will invent something like `background.mp3`, the file will not be found, and there is no error message — just silence.
+**Why numbers rather than song titles.** A page opened from disk **cannot read a directory listing** — it has no way to discover what is in the folder. `1.mp3`, `2.mp3` is a pattern it can guess and walk until it runs out, exactly like the images. Leave song titles in place and it will invent something like `background.mp3`, the file will not be found, and there is no error message — just silence. **Rename the music files to numbers before the session.**
 
-That is a lesson in itself, and worth saying out loud: "It cannot *see* my folder. It only sees what I told it."
+Worth saying out loud while it works: "Notice why I numbered the files. It cannot *see* my folder — it only sees what I told it. The numbering is how I let it find them without reading out every name."
 
 ### What to say
 
