@@ -461,12 +461,34 @@ Save the stage log with prompts and fixes, the tool verdict, the finished deck w
 
 Where might a viewer mistake a generated clip for something real? What would you change before showing this to a wider audience?
 
-<!-- journal-tab: {"id":"session-05","title":"Session 5: Make a Space Work Better"} -->
-# Session 5: Make a Space Work Better
+<!-- journal-tab: {"id":"session-05","title":"Session 5: Virtual to Physical"} -->
+# Session 5: Virtual to Physical
 
-Measure something real, let an AI build a 3D model from it, change one parameter — and check it in cardboard before printing.
+AI shows you something that does not exist yet — a hat on your face, a sofa in the room, a cabinet, a table, a printed object. After each one, ask a single question: **what does it cost if it is wrong here?**
 
-## 1. Capture the parameters
+## 1. The visualisation — and what it changed without saying
+
+For the hat, the glasses and the room. Two questions: is that still my face, and is that still the product I gave it.
+
+| What I asked to see | What I got | What it changed without saying | What that would have cost me |
+| --- | --- | --- | --- |
+| Example: "Put this hat on me" with the shop's product photo | A convincing picture of me in a hat | The hat is brown, not black, and the brim is narrower. It also smoothed my face | £18 and a return — but only if I had bought from the picture |
+| | | | |
+| | | | |
+
+## 2. "Does it fit?" — the question a picture does not answer
+
+An image composites by appearance, not by dimension. Ask this separately, in text, and insist on a number.
+
+| What I wanted to fit | Its dimension | The space's dimension | What is left / does not fit |
+| --- | --- | --- | --- |
+| Example: Three-seat sofa | 2.4 m wide | Wall 3.2 m, with an 80 cm door at the end | 0 cm left after the door — does not fit, and the picture showed it looking perfect |
+| | | | |
+| | | | |
+
+## 3. Every dimension has a source
+
+The cabinet and the table. Measured and invented look identical in the file, and differ by a whole sheet of plywood.
 
 | Parameter / measurement | Value | Measured / spec / assumed / calculated | Source / note |
 | --- | --- | --- | --- |
@@ -474,35 +496,24 @@ Measure something real, let an AI build a 3D model from it, change one parameter
 | Example: Chair needs clearance behind the desk | 90 cm | Assumed | Taken from a furniture guide, not yet checked with our actual chair |
 | | | | |
 | | | | |
-| | | | |
 
-## 2. The AI builds it — and what it invented
+## 4. Change one parameter — predict first
 
-Give the tool your measurements and what the object has to do. Once the model exists, ask it explicitly: **"Which dimensions did you use that I did not give you?"** The list that comes back is the heart of this stage.
+"Make it sturdier" is a feeling. "Leg section 8 by 8" is a dimension. Write what **should** happen, then change it.
 
-| Route I worked on | What I asked it to build | What I got | Dimensions it invented that I never gave it |
+| Parameter I changed | From / to | What I predicted | What happened, and what else changed |
 | --- | --- | --- | --- |
-| Example: Route 1, OpenSCAD + chat | An organiser for a 360 by 420 mm drawer, with compartments for cables | Code that runs and produces a tray with 5 compartments | Wall thickness 2.4 mm, 1 mm clearance each side, compartment height 60 mm — none of them measured |
+| Example: Table length | 160 to 200 cm | Room for two more people | True — but the span between the legs grew to 170 cm and the top started to sag in the middle |
 | | | | |
 | | | | |
 
-## 3. Change one parameter — predict first
+## 5. File to object — the cheap check before the expensive one
 
-Pick one number, write down what **should** happen, and only then change it. If the prediction did not match, you did not understand the model — which is exactly what you want to find out now.
+Cardboard before timber, and a measurement before a print. This is the check that saves a four-hour print from the bin.
 
-| Parameter I changed | From / to | What I predicted | What actually happened |
+| What I checked | How I checked it | What I found | What I changed in the model |
 | --- | --- | --- | --- |
-| Example: number of compartments | 5 to 7 | Each compartment narrower, roughly 48 mm instead of 69 | Exactly that — 48.4 mm. But the dividers stayed the same thickness, so I lost more space than I expected |
-| | | | |
-| | | | |
-
-## 4. Physical check — before printing
-
-Cut cardboard to the model's dimensions, put it in place, and try to use it normally. This is the cheapest test you will run, and the one that saves a three-hour print from the bin.
-
-| What I tested | How I tested it | What I found | What I changed in the model |
-| --- | --- | --- | --- |
-| Example: that the organiser fits and the drawer still closes | Cut 358 by 418 mm cardboard and put it in the drawer | It fits, but the drawer only opens 80% and I could not reach the back compartment | Shortened the depth to 330 mm and added a finger notch |
+| Example: That the clip fits the rod | Printed only the part with the hole, 20 minutes instead of 4 hours | A hole of "exactly 10 mm" would not go onto a 10 mm rod at all | Opened it to 10.4 mm, and it fitted |
 | | | | |
 | | | | |
 
