@@ -1,46 +1,34 @@
-# Session 5 — Make a Space Work Better
+# Session 5 — Virtual to Physical: AI Outside the Computer
 
 **Time:** 90 minutes  
-**Outcome:** A parametric 3D model of something you actually want, driven by AI, checked against a real measurement and a physical test before anything is printed.
+**Outcome:** Five ways AI shows something that does not exist yet — from a hat on your face to an object you can hold — and after each one, the answer to a single question: what does it cost if it is wrong here.
 
-**How the session runs.** Your facilitator works through all of this live on screen while you watch, answer questions and argue with the results. You do not need a tool open, or an account, during the session itself. The sequence below is yours to run in the week afterwards, and the learning journal has every table waiting for it.
-
-
-## Before this session
-
-Nothing needs installing for the session itself. Work through the [setup guide](session-05-setup.md) **before you start the week's work**. You only need one route, and the free one — OpenSCAD alone — completes the whole session.
-
-For the week's work you will need a tape measure, paper or cardboard, and one small thing that annoys you. Nothing to bring to the session.
+**How the session works.** The facilitator does all of this live on screen while you watch, ask questions and argue with the results. **There is nothing to install and no account needed.** The sequence below is yours to run in the week that follows.
 
 ## Scenario
 
-Pick something small you want to exist: a drawer organiser, a cable tray, a shelf divider, a stand for a specific object, a bracket, a holder for the thing that never has a home. You will describe it to an AI, watch it become a real 3D model, change it, and test it against the physical world. This is not engineering approval: nothing that carries a person's weight, involves electrics, or is dangerous if it fails.
+The whole session is one thing: **AI showing you something that does not exist yet.** The hat is not on your head. The sofa is not in the room. The cabinet is not built. The table is not cut. The object is not printed.
 
-## A worked example
-
-Before the sequence, here is what one measured drawer looks like — every number carrying where it came from:
-
-| Dimension | Value | Source | Note |
-|---|---|---|---|
-| Internal width | 36.0 cm | measured | Ruler, at the base of the drawer |
-| Clear height | 7.5 cm | measured | Up to the runner of the drawer above |
-| Panel thickness | 1.8 cm | spec | From the maker's furniture sheet |
-| The drawer opens fully | Yes | **assumed** | Never checked. Cheap runners stop at 80% |
-
-That last row is the one that matters. If the runners really do stop at 80%, the usable depth is 33.6 cm rather than 42, and the back of whatever you designed is out of reach. The [sample measurements](../instructor/samples/session-05-measurements.html) sheet has the full drawer, the objects that must fit, and the clearances — use it directly if you have nothing of your own to measure.
+In each case the tool produces a picture of a future, and you decide how far to trust it. **And that decision turns on one thing: what it costs if it is wrong.** On a hat you check nothing. On a cabinet you check every number. Today we go through the five, cheapest to most expensive.
 
 ## Sequence
 
-1. **Measure, and mark where every number came from (15 minutes).** Measure the space and the objects. Beside each number write its origin: **measured** with a ruler, **from the maker's spec**, **assumed** by you, or **calculated**. The AI cannot do this part — it has not seen the room, and it will happily invent a dimension that looks reasonable.
-2. **Describe it and let the AI build it (25 minutes).** Give the tool your measurements and what the object has to do. On the free route it writes OpenSCAD code you paste and render. On the other routes it drives FreeCAD directly and you watch the shape appear. Either way, **read what it produced before you trust it** — ask it which numbers it invented.
-3. **Change one parameter, having predicted the result (15 minutes).** Pick one number — the number of compartments, a wall thickness, a height — and write down what *should* change before you change it. Then change it. If your prediction was wrong, you did not understand the model, and it is much cheaper to find that out now.
-4. **Check it against the real world (25 minutes).** Print the outline at real size, or cut cardboard to the model's dimensions, and put it where it will live. Record the tolerance you found, which assumption turned out wrong, and what you changed. A model that looks correct on screen is not a model that fits.
-5. **Decide what happens next (10 minutes).** Is it worth printing or building? What would you check first if you did? What did the AI get wrong that you only caught because you measured?
+1. **Your face — hats and glasses (14 minutes).** Two requests that look alike and are not: "show me in different hats", where the tool **invents** the hat, versus uploading a real product photo and saying "put **this** hat on me", where you supply the source. Each has its own failure — in one it changes **your face** without mentioning it, in the other it takes the *idea* of the hat rather than the hat. **What does being wrong cost? Nothing.** Delete and try again. Your own photo only — not other people's, and not children's.
+2. **The room — does it even fit (14 minutes).** Upload a photo of the room and photos of furniture, and ask to see how it would look. It comes back very convincing, and that is where the lesson is: **the tool composites by appearance, not by dimension.** It will shrink a sofa that does not fit until it looks right. So ask separately, in text and with no picture: "the wall is 3.2 metres, the sofa is 2.4 — what is left?" **"Show me" and "does it fit" are two different requests, and only one returns a number.**
+3. **The pantry cabinet — presented, not built (12 minutes).** The facilitator shows an existing design in two parts: the build (panels, joins, cut list) and the arrangement (what goes where inside). This is where the measuring lesson lands: **every number has a source — measured, spec, assumed, or derived.** Measured and invented look identical in the file and differ by a whole sheet of plywood. **What does being wrong cost? A weekend, and a cut that does not undo.**
+4. **The dinner table — designed together (20 minutes).** Start with four questions before touching the tool: how many people, how much room, what height, what it stands on. Then a parametric model, and two iterations. The first is **"make it sturdier", which is a deliberately bad request** — "sturdier" is not a number, so neither is the answer. The second makes it bigger, preceded by a question: **what else will change that I did not ask for?**
+5. **It becomes a real object (10 minutes).** The facilitator shows real 3D prints, including **one that failed** — and that is the instructive part. A hole of "exactly 10 mm" will not take a 10 mm rod. A 0.4 mm wall will not build. The same object, rotated, either snaps or holds. **The model was perfect on screen. Physics did not read the file.**
 
 ## Integrated artifact
 
-One design sheet: the dimension table with a source for every number, the model file or the code, the parameter you changed and what you predicted, the physical-check result, and one sentence on what this design is not suitable for. A convincing render is not proof that something fits.
+What you take from here is one question, asked before trusting anything: **what does it cost if it is wrong here?** If the answer is "nothing" — enjoy it, do not check. If the answer is measured in money, time, or timber already cut, then there is at least one number that needs a source first. Today's five demonstrations are five points on that scale, and everything you do afterwards sits somewhere on it.
+
+## Homework
+
+Pick **one thing** you want to exist — an object, a corner of your home, a piece of furniture — and run whichever demonstration suits it. The next session opens by asking what did not work.
 
 ## Optional resources
 
-The [starter model](../instructor/samples/session-05-organiser.scad) is a parametric drawer organiser you can open and change immediately — change `compartments` from 5 to 7 and watch every compartment drop from 68.7 mm to 48.4 mm. It is built from the drawer in the [sample measurements](../instructor/samples/session-05-measurements.html) sheet, so the two can be read side by side. Note the units: measurement tables are in centimetres, because that is how a tape measure reads, and the code is in millimetres — 36.0 cm is 360 mm. Every table for this session is in the [learning journal](../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx). A ruler, paper, and cardboard remain a completely valid free-access route at no cost: the design thinking is the same whether the model is on screen or on paper.
+The [setup guide](session-05-setup.md) is for anyone who wants to get as far as a real model at home. **It is not needed for the session** — pick one track and stop there, and the free track (OpenSCAD alone) covers everything you saw.
+
+The [example measurements](../instructor/samples/session-05-measurements.html) are a measured drawer with one planted assumption, for anyone with nothing to measure, and the [OpenSCAD starter file](../instructor/samples/session-05-organiser.scad) runs immediately. The tables live in the [learning journal](../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx). Watching the demonstration only is a full and valid track on free access at no cost.

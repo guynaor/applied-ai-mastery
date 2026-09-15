@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Projection slides — Session 5: Make a Space Work Better</title>
+    <title>Projection slides — Session 5: Virtual to Physical — AI Outside the Computer</title>
     <style>
       /* Session 2 is about the distance between a confident number and what you actually
          pay. The deck borrows retail signage — enormous figures, tiny small print — and
@@ -213,121 +213,153 @@
   <body>
 
     <section class="slide dark">
-      <p class="eyebrow"><span>01 &middot; Routes</span><span>Minutes 10–15</span></p>
+      <p class="eyebrow"><span>01 &middot; Opening</span><span>Minutes 10–16</span></p>
       <div class="rule"></div>
-      <h1>Three routes, one piece of thinking</h1>
+      <h1 class="wide">Today the AI leaves the screen</h1>
+      <p class="lede">Five things that do not exist yet — a hat on my head, a sofa in the room, a cabinet, a table, and an object in my hand.</p>
+    </section>
+
+    <section class="slide">
+      <p class="eyebrow"><span>02 &middot; The cost ladder</span><span>Minutes 10–16</span></p>
+      <div class="rule"></div>
+      <h1>&ldquo;What does it cost if it is wrong here?&rdquo;</h1>
       <dl class="qa">
-        <dt>Free</dt><dd>OpenSCAD and any AI chat</dd>
-        <dt>Visual</dt><dd>FreeCAD, the MCP, Claude Desktop</dd>
-        <dt>Advanced</dt><dd>Claude Code or Antigravity</dd>
+        <dt>Hat and glasses</dt><dd class="evidence">Nothing. Delete and try again</dd>
+        <dt>The living room</dt><dd>A return, delivery, a week</dd>
+        <dt class="claim">The pantry cabinet</dt><dd class="claim">Plywood and a weekend</dd>
+        <dt class="claim">The dinner table</dt><dd class="claim">A table nobody can sit at</dd>
+        <dt class="stop">A 3D print</dt><dd class="stop">Filament, four hours, found out at hour three</dd>
       </dl>
-      <p class="lede" style="margin-top:2rem">The tools differ. The thinking is identical, and so is the cardboard at the end.</p>
+      <p class="fineprint" style="margin-top:2rem">Not everything deserves the same care. Knowing when it does — that is the session.</p>
     </section>
 
-    <section class="slide">
-      <p class="eyebrow"><span>02 &middot; Where numbers come from</span><span>Minutes 15–30</span></p>
+    <section class="slide dark">
+      <p class="eyebrow"><span>03 &middot; Your face</span><span>Minutes 16–30</span></p>
       <div class="rule"></div>
-      <h1>Every number has a source</h1>
-      <div class="legend">
-        <div class="swatch" style="border-color:var(--evidence)"><h3 class="evidence">Measured</h3><p>You put a ruler on it. Say where you put it.</p></div>
-        <div class="swatch" style="border-color:var(--brand)"><h3 style="color:var(--brand)">Spec</h3><p>From the maker’s sheet. True of the product, maybe not of yours.</p></div>
-        <div class="swatch" style="border-color:var(--claim)"><h3 class="claim">Assumed</h3><p>Nobody checked. These are the ones that cost you.</p></div>
-        <div class="swatch" style="border-color:var(--unknown)"><h3 class="unknown">Calculated</h3><p>Derived. Only ever as good as what went in.</p></div>
+      <h1>Two requests, and not the same request</h1>
+      <div class="split">
+        <div class="panel is-claim"><p class="caption">Way one — it invents</p>
+          <p class="lede">&ldquo;Show me in different hats and glasses&rdquo;</p></div>
+        <div class="panel" style="border-top-color:var(--evidence)"><p class="caption">Way two — I supply it</p>
+          <p class="lede">&ldquo;Put <b>this</b> hat on me&rdquo;<br>+ the product photo</p></div>
       </div>
-      <p class="fineprint" style="margin-top:2rem">This is the part the AI cannot do for you. It has not seen the room.</p>
+      <p class="fineprint" style="margin-top:2rem">A different capability, and an entirely different failure.</p>
     </section>
 
     <section class="slide">
-      <p class="eyebrow"><span>03 &middot; The drawer</span><span>Minutes 15–30</span></p>
+      <p class="eyebrow"><span>04 &middot; Two failures</span><span>Minutes 16–30</span></p>
       <div class="rule"></div>
-      <h1>The same drawer, with its sources on it</h1>
-        <div class="svg-wrap">
-        <svg style="max-width:86%;margin-inline:auto" viewBox="0 0 1000 400" role="img" aria-label="A drawer in front elevation divided into five compartments, with its width and height labelled as measured, one compartment as calculated, the panel thickness as spec, and an unchecked assumption that the drawer opens fully.">
-          <line x1="120" y1="64" x2="880" y2="64" stroke="#0F7B6C" stroke-width="3"/>
-          <text x="500" y="48" text-anchor="middle" font-size="27" font-weight="800" fill="#0F7B6C">36.0 × 7.5 cm · measured</text>
-          <rect x="120" y="96" width="760" height="158" fill="none" stroke="#111820" stroke-width="4"/>
-          <line x1="272" y1="96" x2="272" y2="254" stroke="#B9BFC7" stroke-width="3"/>
-          <line x1="424" y1="96" x2="424" y2="254" stroke="#B9BFC7" stroke-width="3"/>
-          <line x1="576" y1="96" x2="576" y2="254" stroke="#B9BFC7" stroke-width="3"/>
-          <line x1="728" y1="96" x2="728" y2="254" stroke="#B9BFC7" stroke-width="3"/>
-          <line x1="120" y1="284" x2="272" y2="284" stroke="#7A8794" stroke-width="3"/>
-          <text x="196" y="316" text-anchor="middle" font-size="25" font-weight="800" fill="#7A8794">68.7 mm · calculated</text>
-          <text x="700" y="316" text-anchor="middle" font-size="25" font-weight="800" fill="#4E356F">1.8 cm panel · spec</text>
-          <rect x="120" y="344" width="760" height="44" rx="4" fill="none" stroke="#E0821A" stroke-width="3" stroke-dasharray="8 6"/>
-          <text x="500" y="373" text-anchor="middle" font-size="25" font-weight="800" fill="#E0821A">“the drawer opens fully” · nobody checked</text>
-        </svg>
-        </div>
+      <h1>Which one changed — me, or the product?</h1>
+      <dl class="qa">
+        <dt class="claim">The face</dt><dd>Smoothed it, straightened it, took five years off. Not everyone sees it</dd>
+        <dt class="claim">The product</dt><dd>Took the idea of the hat, not the hat</dd>
+      </dl>
+      <p class="fineprint" style="margin-top:2.4rem">And what does it cost here? <span class="mark evidence">Nothing.</span> Ten seconds and try again.</p>
     </section>
 
     <section class="slide dark">
-      <p class="eyebrow"><span>04 &middot; The forgotten one</span><span>Minutes 15–30</span></p>
+      <p class="eyebrow"><span>05 &middot; The room</span><span>Minutes 30–44</span></p>
       <div class="rule"></div>
-      <h1 class="claim">“The drawer opens fully”</h1>
-      <p class="lede">If the runners stop at 80 per cent, the usable depth is <strong>33.6 cm</strong>, not 42.</p>
-      <p class="fineprint" style="margin-top:1.8rem">One unchecked assumption, and every compartment behind it is wrong. This is why the label matters more than the number.</p>
-    </section>
-
-    <section class="slide dark">
-      <p class="eyebrow"><span>05 &middot; The request</span><span>Minutes 30–55</span></p>
-      <div class="rule"></div>
-      <h1>Give it real numbers, with their labels</h1>
+      <h1>&ldquo;How would my room look with these?&rdquo;</h1>
       <details class="reveal">
         <summary>The full request</summary>
-        <div class="prompt">These are measurements I took, <span class="evidence">each with a source label</span>. All in millimetres. Build a parametric organiser that fits inside them. <span class="evidence">Then list every dimension you used that I did not give you.</span></div>
+        <div class="prompt">This is a photo of my living room. These are a sofa, a rug and a lamp from shop listings. Show me how the room would look with all three, <span class="evidence">from the same camera angle.</span></div>
       </details>
     </section>
 
     <section class="slide">
-      <p class="eyebrow"><span>06 &middot; What it filled in</span><span>Minutes 30–55</span></p>
+      <p class="eyebrow"><span>06 &middot; Does it fit?</span><span>Minutes 30–44</span></p>
       <div class="rule"></div>
-      <h1>“Which dimensions did you use that I never gave you?”</h1>
-      <p class="lede">Wall thickness. Clearance. Corner radius. Base height.</p>
-      <p class="fineprint" style="margin-top:1.8rem">None of them is necessarily wrong. They were simply never measured — the same assumption-that-looks-like-a-fact, wearing a different hat.</p>
-    </section>
-
-    <section class="slide">
-      <p class="eyebrow"><span>07 &middot; Predict, then change</span><span>Minutes 55–70</span></p>
-      <div class="rule"></div>
-      <h1>Say the number before you change it</h1>
-      <dl class="qa">
-        <dt>5 compartments</dt><dd>68.7 mm each</dd>
-        <dt>7 compartments</dt><dd class="claim">predict it, out loud, first</dd>
-      </dl>
-      <details class="reveal">
-        <summary>Then check</summary>
-        <p class="lede"><span class="evidence">48.4 mm.</span> If your prediction missed, you did not understand the model — better to find that now than after a three-hour print.</p>
-      </details>
-    </section>
-
-    <section class="slide">
-      <p class="eyebrow"><span>08 &middot; The cardboard</span><span>Minutes 70–85</span></p>
-      <div class="rule"></div>
-      <h1>Only the cardboard touches reality</h1>
-      <dl class="qa">
-        <dt>It fits the width</dt><dd>the easiest dimension to get wrong</dd>
-        <dt>Something comes out one-handed</dt><dd>that is how it is actually used</dd>
-        <dt class="stop">The drawer still closes</dt><dd class="stop">the expensive failure, normally found after printing</dd>
-      </dl>
+      <h1>The picture persuades. The number is the truth</h1>
+      <div class="split">
+        <div class="panel is-claim"><p class="caption">&ldquo;Show me&rdquo;</p>
+          <p class="lede claim">Composites by appearance.<br>Will shrink a sofa that does not fit until it looks right</p></div>
+        <div class="panel" style="border-top-color:var(--evidence)"><p class="caption">&ldquo;Does it fit?&rdquo;</p>
+          <p class="lede" style="color:var(--evidence)">Wall 3.2 m, door 80 cm,<br>sofa 2.4 m — what is left?</p></div>
+      </div>
+      <p class="fineprint" style="margin-top:2rem">Two different requests. Only one of them returns a number.</p>
     </section>
 
     <section class="slide dark">
-      <p class="eyebrow"><span>09 &middot; The limit</span><span>Minutes 70–85</span></p>
+      <p class="eyebrow"><span>07 &middot; The pantry cabinet</span><span>Minutes 44–56</span></p>
       <div class="rule"></div>
-      <h1 class="stop">What we are not designing</h1>
+      <h1>Two halves, and only one looks obvious</h1>
+      <div class="boxes">
+        <div class="cell ghost"><p class="caption">The build</p><p>Panels, joins, a cut list</p></div>
+        <div class="cell ghost"><p class="caption">The arrangement</p><p>What goes where inside</p></div>
+      </div>
+      <p class="fineprint" style="margin-top:2.2rem">A cabinet built right and arranged badly is a bad cabinet.</p>
+    </section>
+
+    <section class="slide">
+      <p class="eyebrow"><span>08 &middot; Where the number came from</span><span>Minutes 44–56</span></p>
+      <div class="rule"></div>
+      <h1>Every dimension has a source — one of four</h1>
+      <div class="boxes">
+        <div class="cell"><p class="caption">Measured</p><p>I went and used a tape</p></div>
+        <div class="cell"><p class="caption">Spec</p><p>Written on the product page</p></div>
+        <div class="cell ghost"><p class="caption">Assumed</p><p>I assumed, and never checked</p></div>
+        <div class="cell"><p class="caption">Derived</p><p>Calculated from two others</p></div>
+      </div>
+      <p class="fineprint" style="margin-top:2.2rem">Measured and invented look identical in the file, and differ by a sheet of plywood.</p>
+    </section>
+
+    <section class="slide dark">
+      <p class="eyebrow"><span>09 &middot; The table</span><span>Minutes 56–76</span></p>
+      <div class="rule"></div>
+      <h1>Four questions before I touched the tool</h1>
       <ol class="steps">
-        <li>Nothing that carries a person’s weight.</li>
-        <li>Nothing involving electrics.</li>
-        <li>Nothing that is dangerous if it fails.</li>
+        <li>How many people?</li>
+        <li>How much room is there?</li>
+        <li>What height, and why?</li>
+        <li>What is it standing on?</li>
       </ol>
     </section>
 
     <section class="slide">
-      <p class="eyebrow"><span>10 &middot; Exit check</span><span>Minutes 85–90</span></p>
+      <p class="eyebrow"><span>10 &middot; &ldquo;Sturdier&rdquo;</span><span>Minutes 56–76</span></p>
+      <div class="rule"></div>
+      <h1>&ldquo;Sturdier&rdquo; is not a dimension</h1>
+      <div class="split">
+        <div class="panel is-claim"><p class="caption">A feeling</p>
+          <p class="lede claim">&ldquo;Make it sturdier&rdquo;</p></div>
+        <div class="panel" style="border-top-color:var(--evidence)"><p class="caption">A dimension</p>
+          <p class="lede" style="color:var(--evidence)">&ldquo;Leg section 8×8 cm,<br>and a stretcher between the legs&rdquo;</p></div>
+      </div>
+      <p class="fineprint" style="margin-top:2rem">Feelings get answers that look good. Dimensions get answers you can check.</p>
+    </section>
+
+    <section class="slide">
+      <p class="eyebrow"><span>11 &middot; What breaks</span><span>Minutes 56–76</span></p>
+      <div class="rule"></div>
+      <h1>Add 40 cm — and what else changed?</h1>
+      <dl class="qa">
+        <dt>The span between legs</dt><dd>Grew without my asking</dd>
+        <dt class="stop">The top, in the middle</dt><dd class="stop">Starts to sag</dd>
+      </dl>
+      <p class="lede" style="margin-top:2.4rem">One change, and two other things quietly became wrong.</p>
+      <p class="fineprint" style="margin-top:1.2rem">Say the number out loud <b>before</b> you change it.</p>
+    </section>
+
+    <section class="slide dark">
+      <p class="eyebrow"><span>12 &middot; File to object</span><span>Minutes 76–86</span></p>
+      <div class="rule"></div>
+      <h1>Physics did not read the file</h1>
+      <dl class="qa">
+        <dt class="stop">Tolerance</dt><dd>A hole of &ldquo;exactly 10 mm&rdquo; will not take a 10 mm rod</dd>
+        <dt class="stop">Geometry</dt><dd>A 0.4 mm wall, an overhang, a part floating in mid-air</dd>
+        <dt class="stop">Orientation</dt><dd>The same object, rotated — snaps or holds</dd>
+      </dl>
+      <p class="fineprint" style="margin-top:2rem">The model was perfect on screen. This is where &ldquo;virtual&rdquo; ends.</p>
+    </section>
+
+    <section class="slide">
+      <p class="eyebrow"><span>13 &middot; Exit check</span><span>Minutes 86–90</span></p>
       <div class="rule"></div>
       <h1>Finish the sentence</h1>
-      <p class="fill">My design rests on <b></b> measured dimensions and <b></b> assumed ones. The one I will check first is <b></b>.</p>
+      <p class="fill">What surprised me most was <b></b>. What I would not have checked and now will is <b></b>, because being wrong there costs me <b></b>.</p>
       <h2>And the question worth sitting with</h2>
-      <p class="lede">Which assumption were you most confident about?</p>
+      <p class="lede">What did you once buy from a picture, and realise on delivery you never measured?</p>
     </section>
 
     <nav class="deck-nav" aria-label="Slide navigation">
