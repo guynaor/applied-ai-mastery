@@ -172,14 +172,26 @@ for(const term of [/application package/i,/audience-specific application/i,/targ
  assert.doesNotMatch(capstoneJournal,term,`English capstone journal must not retain application-package framing: ${term}`);
 }
 
+// Session 5's displayed title became "Virtual to Physical" on 2026-09-15, but
+// the journal tab deliberately keeps its original name so the generated DOCX
+// workbooks do not have to be rebuilt. The syllabus and the journal shared one
+// list until then; they are separate now so each can be asserted honestly.
+// If the workbooks are ever regenerated, collapse this back into one list.
+const expectedSyllabusTitles={
+ English:expectedJournalSessionTitles.English.map(title=>
+  title==='Session 5: Make a Space Work Better'?'Session 5: Virtual to Physical':title),
+ Hebrew:expectedJournalSessionTitles.Hebrew.map(title=>
+  title==='מפגש 5: לשפר מרחב'?'מפגש 5: מהוירטואלי לפיזי':title),
+};
+
 // The syllabuses are linked from the portal as "Syllabus" and are what a
 // learner or instructor opens to see the course shape. Nothing checked them,
 // so they drifted for two renames and a reorder — still listing the original
 // titles with the app at 4 and the visual session at 6. They carry the
 // canonical titles now, in order, and must keep doing so.
 for(const [locale,path,titles] of [
- ['English','personal-course/README.md',expectedJournalSessionTitles.English],
- ['Hebrew','personal-course/he/README.md',expectedJournalSessionTitles.Hebrew],
+ ['English','personal-course/README.md',expectedSyllabusTitles.English],
+ ['Hebrew','personal-course/he/README.md',expectedSyllabusTitles.Hebrew],
 ]){
  const syllabus=readFileSync(path,'utf8');
  const positions=titles.map(full=>{

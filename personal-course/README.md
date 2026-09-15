@@ -41,7 +41,7 @@ Digital life management is woven through the course rather than isolated in one 
 | 2 | Buy With Confidence | Deep research, evidence matrices, total-cost thinking, **specifying and building an agent** | Research a meaningful purchase, check evidence and terms, and leave with an agent watching on your behalf. |
 | 3 | Make a Shared Plan Work | Shared planning, scheduling against real constraints, dividing work, designing a fallback | Produce a realistic shared plan with responsibilities, buffers, and a fallback. |
 | 4 | From Prompt to Presentation | Image generation and repair, animating a still, video from text, narration, building a deck | Carry one idea through the production chain, with everything generated visibly labelled. |
-| 5 | Make a Space Work Better | Measuring and sourcing every dimension, parametric design, checking a model against reality | Turn real dimensions and constraints into a tested parametric design. |
+| 5 | Virtual to Physical | Image try-on and room preview, sourcing every dimension, parametric design, and what a 3D print demands | See what something looks like before it exists — from a hat on your face to an object you can hold. |
 | 6 | Solve a Recurring Problem | Specifying a tool, building in chat and on a platform, testing normal and edge cases | Build and test a small, self-contained tool for a recurring everyday friction. |
 | 7 | One Project, Every Skill *(60 min)* | Judging your own tool against real use, scoping a project that fits your skills | Examine the app against real use, then choose and confirm a capstone subject. |
 

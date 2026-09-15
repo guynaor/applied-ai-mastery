@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>שקפים להקרנה — מפגש 5: לשפר מרחב</title>
+    <title>שקפים להקרנה — מפגש 5: מהוירטואלי לפיזי — AI מחוץ למחשב</title>
     <style>
       /* Session 2 is about the distance between a confident number and what you actually
          pay. The deck borrows retail signage — enormous figures, tiny small print — and
@@ -213,121 +213,153 @@
   <body>
 
     <section class="slide dark">
-      <p class="eyebrow"><span>01 &middot; מסלולים</span><span>דקות 10–15</span></p>
+      <p class="eyebrow"><span>01 &middot; פתיחה</span><span>דקות 10–16</span></p>
       <div class="rule"></div>
-      <h1>שלושה מסלולים, חשיבה אחת</h1>
+      <h1 class="wide">היום ה-AI יוצא מהמסך</h1>
+      <p class="lede">חמישה דברים שעדיין לא קיימים — כובע על הראש שלי, ספה בסלון, ארון, שולחן, וחפץ ביד.</p>
+    </section>
+
+    <section class="slide">
+      <p class="eyebrow"><span>02 &middot; סולם המחיר</span><span>דקות 10–16</span></p>
+      <div class="rule"></div>
+      <h1>„מה יקרה אם הוא טועה כאן?”</h1>
       <dl class="qa">
-        <dt>חינמי</dt><dd>OpenSCAD וכל צ׳אט AI</dd>
-        <dt>ויזואלי</dt><dd>FreeCAD, ה-MCP, ו-Claude Desktop</dd>
-        <dt>מתקדם</dt><dd>Claude Code או Antigravity</dd>
+        <dt>כובע ומשקפיים</dt><dd class="evidence">כלום. מוחקים ומנסים שוב</dd>
+        <dt>הסלון</dt><dd>החזרה, משלוח, שבוע</dd>
+        <dt class="claim">ארון המזווה</dt><dd class="claim">לבידים וסוף שבוע</dd>
+        <dt class="claim">שולחן האוכל</dt><dd class="claim">שולחן שלא יושבים לידו</dd>
+        <dt class="stop">הדפסה</dt><dd class="stop">פילמנט, ארבע שעות, ומגלים בשלישית</dd>
       </dl>
-      <p class="lede" style="margin-top:2rem">הכלים שונים. החשיבה זהה, וגם הקרטון שבסוף.</p>
+      <p class="fineprint" style="margin-top:2rem">לא הכול דורש אותה זהירות. לדעת מתי כן — זה המפגש.</p>
     </section>
 
-    <section class="slide">
-      <p class="eyebrow"><span>02 &middot; מאיפה הגיע כל מספר</span><span>דקות 15–30</span></p>
+    <section class="slide dark">
+      <p class="eyebrow"><span>03 &middot; הפנים שלכם</span><span>דקות 16–30</span></p>
       <div class="rule"></div>
-      <h1>לכל מספר יש מקור</h1>
-      <div class="legend">
-        <div class="swatch" style="border-color:var(--evidence)"><h3 class="evidence">נמדד</h3><p>שמתם עליו סרגל. אמרו איפה בדיוק.</p></div>
-        <div class="swatch" style="border-color:var(--brand)"><h3 style="color:var(--brand)">מפרט</h3><p>מדף היצרן. נכון למוצר, אולי לא לשלכם.</p></div>
-        <div class="swatch" style="border-color:var(--claim)"><h3 class="claim">הנחה</h3><p>אף אחד לא בדק. אלה אלה שעולים לכם.</p></div>
-        <div class="swatch" style="border-color:var(--unknown)"><h3 class="unknown">חושב</h3><p>נגזר. טוב בדיוק כמו מה שנכנס אליו.</p></div>
+      <h1>שתי בקשות, ולא אותה בקשה</h1>
+      <div class="split">
+        <div class="panel is-claim"><p class="caption">דרך א׳ — הוא ממציא</p>
+          <p class="lede">„הראה אותי עם כובעים ומשקפיים שונים”</p></div>
+        <div class="panel" style="border-top-color:var(--evidence)"><p class="caption">דרך ב׳ — אני נותן לו</p>
+          <p class="lede">„הלבש עליי את הכובע <b>הזה</b>”<br>+ תמונת המוצר</p></div>
       </div>
-      <p class="fineprint" style="margin-top:2rem">זה החלק שה-AI לא יכול לעשות במקומכם. הוא לא ראה את החדר.</p>
+      <p class="fineprint" style="margin-top:2rem">יכולת אחרת, וכשל אחר לגמרי.</p>
     </section>
 
     <section class="slide">
-      <p class="eyebrow"><span>03 &middot; המגירה</span><span>דקות 15–30</span></p>
+      <p class="eyebrow"><span>04 &middot; שני הכשלים</span><span>דקות 16–30</span></p>
       <div class="rule"></div>
-      <h1>אותה מגירה, עם המקורות עליה</h1>
-        <div class="svg-wrap">
-        <svg style="max-width:86%;margin-inline:auto" viewBox="0 0 1000 400" role="img" aria-label="מגירה בחזית מחולקת לחמישה תאים, כשהרוחב והגובה מסומנים כנמדדים, תא אחד כמחושב, עובי הפאנל כמפרט, והנחה שלא נבדקה שהמגירה נפתחת במלואה.">
-          <line x1="120" y1="64" x2="880" y2="64" stroke="#0F7B6C" stroke-width="3"/>
-          <text x="500" y="48" text-anchor="middle" font-size="27" font-weight="800" fill="#0F7B6C">36.0 × 7.5 ס״מ · נמדד</text>
-          <rect x="120" y="96" width="760" height="158" fill="none" stroke="#111820" stroke-width="4"/>
-          <line x1="272" y1="96" x2="272" y2="254" stroke="#B9BFC7" stroke-width="3"/>
-          <line x1="424" y1="96" x2="424" y2="254" stroke="#B9BFC7" stroke-width="3"/>
-          <line x1="576" y1="96" x2="576" y2="254" stroke="#B9BFC7" stroke-width="3"/>
-          <line x1="728" y1="96" x2="728" y2="254" stroke="#B9BFC7" stroke-width="3"/>
-          <line x1="728" y1="284" x2="880" y2="284" stroke="#7A8794" stroke-width="3"/>
-          <text x="804" y="316" text-anchor="middle" font-size="25" font-weight="800" fill="#7A8794">68.7 מ״מ · חושב</text>
-          <text x="300" y="316" text-anchor="middle" font-size="25" font-weight="800" fill="#4E356F">1.8 ס״מ דופן · מפרט</text>
-          <rect x="120" y="344" width="760" height="44" rx="4" fill="none" stroke="#E0821A" stroke-width="3" stroke-dasharray="8 6"/>
-          <text x="500" y="373" text-anchor="middle" font-size="25" font-weight="800" fill="#E0821A">„המגירה נפתחת במלואה” · אף אחד לא בדק</text>
-        </svg>
-        </div>
+      <h1>מי מהשניים השתנה — אני, או המוצר?</h1>
+      <dl class="qa">
+        <dt class="claim">הפנים</dt><dd>החליק, יישר, הוריד חמש שנים. לא כולם רואים את זה</dd>
+        <dt class="claim">המוצר</dt><dd>לקח את הרעיון של הכובע, לא את הכובע</dd>
+      </dl>
+      <p class="fineprint" style="margin-top:2.4rem">ומה זה עולה כאן? <span class="mark evidence">כלום.</span> עשר שניות ומנסים שוב.</p>
     </section>
 
     <section class="slide dark">
-      <p class="eyebrow"><span>04 &middot; ההנחה הנשכחת</span><span>דקות 15–30</span></p>
+      <p class="eyebrow"><span>05 &middot; החדר</span><span>דקות 30–44</span></p>
       <div class="rule"></div>
-      <h1 class="claim">„המגירה נפתחת במלואה”</h1>
-      <p class="lede">אם המסילות נעצרות ב-80 אחוז, העומק השימושי הוא <strong>33.6 ס״מ</strong>, לא 42.</p>
-      <p class="fineprint" style="margin-top:1.8rem">הנחה אחת שלא נבדקה, וכל תא שמאחוריה שגוי. בגלל זה התווית חשובה יותר מהמספר.</p>
-    </section>
-
-    <section class="slide dark">
-      <p class="eyebrow"><span>05 &middot; הבקשה</span><span>דקות 30–55</span></p>
-      <div class="rule"></div>
-      <h1>תנו לו מספרים אמיתיים, עם התוויות</h1>
+      <h1>„איך החדר ייראה עם אלה?”</h1>
       <details class="reveal">
         <summary>הבקשה המלאה</summary>
-        <div class="prompt">אלה מדידות שלקחתי, <span class="evidence">לכל אחת תווית מקור</span>. הכול במילימטרים. בנה מארגן פרמטרי שנכנס בתוכן. <span class="evidence">אחר כך פרט כל מידה שהשתמשת בה ושלא נתתי לך.</span></div>
+        <div class="prompt">זו תמונה של הסלון שלי. אלה ספה, שטיח ומנורה מאתרי חנויות. הראה לי איך החדר ייראה עם שלושתם, <span class="evidence">מאותה זווית צילום.</span></div>
       </details>
     </section>
 
     <section class="slide">
-      <p class="eyebrow"><span>06 &middot; מה הוא השלים</span><span>דקות 30–55</span></p>
+      <p class="eyebrow"><span>06 &middot; הספה נכנסת?</span><span>דקות 30–44</span></p>
       <div class="rule"></div>
-      <h1>„באילו מידות השתמשת שלא נתתי לך?”</h1>
-      <p class="lede">עובי דופן. מרווח. רדיוס פינה. גובה בסיס.</p>
-      <p class="fineprint" style="margin-top:1.8rem">אף אחת מהן לא בהכרח שגויה. הן פשוט אף פעם לא נמדדו — אותה הנחה שנראית כמו עובדה, בכובע אחר.</p>
-    </section>
-
-    <section class="slide">
-      <p class="eyebrow"><span>07 &middot; לחזות, ואז לשנות</span><span>דקות 55–70</span></p>
-      <div class="rule"></div>
-      <h1>אמרו את המספר לפני שאתם משנים</h1>
-      <dl class="qa">
-        <dt>5 תאים</dt><dd>68.7 מ״מ כל אחד</dd>
-        <dt>7 תאים</dt><dd class="claim">חזו את זה, בקול, קודם</dd>
-      </dl>
-      <details class="reveal">
-        <summary>ואז בודקים</summary>
-        <p class="lede"><span class="evidence">48.4 מ״מ.</span> אם החיזוי שלכם החטיא, לא הבנתם את המודל — ועדיף לגלות את זה עכשיו ולא אחרי הדפסה של שלוש שעות.</p>
-      </details>
-    </section>
-
-    <section class="slide">
-      <p class="eyebrow"><span>08 &middot; הקרטון</span><span>דקות 70–85</span></p>
-      <div class="rule"></div>
-      <h1>רק הקרטון נוגע במציאות</h1>
-      <dl class="qa">
-        <dt>הוא נכנס ברוחב</dt><dd>המידה שהכי קל לטעות בה</dd>
-        <dt>אפשר להוציא משהו ביד אחת</dt><dd>ככה באמת משתמשים בזה</dd>
-        <dt class="stop">המגירה עדיין נסגרת</dt><dd class="stop">הכישלון היקר, שבדרך כלל מתגלה אחרי ההדפסה</dd>
-      </dl>
+      <h1>התמונה משכנעת. המספר הוא האמת</h1>
+      <div class="split">
+        <div class="panel is-claim"><p class="caption">„תראה לי”</p>
+          <p class="lede claim">מרכיב לפי מראה.<br>יקטין ספה שלא נכנסת עד שתיראה טוב</p></div>
+        <div class="panel" style="border-top-color:var(--evidence)"><p class="caption">„זה נכנס?”</p>
+          <p class="lede" style="color:var(--evidence)">קיר 3.2 מ׳, דלת 80 ס״מ,<br>ספה 2.4 מ׳ — מה נשאר?</p></div>
+      </div>
+      <p class="fineprint" style="margin-top:2rem">שתי בקשות שונות. רק אחת מהן מחזירה מספר.</p>
     </section>
 
     <section class="slide dark">
-      <p class="eyebrow"><span>09 &middot; הגבול</span><span>דקות 70–85</span></p>
+      <p class="eyebrow"><span>07 &middot; ארון המזווה</span><span>דקות 44–56</span></p>
       <div class="rule"></div>
-      <h1 class="stop">מה אנחנו לא מתכננים</h1>
+      <h1>שני חצאים, ורק אחד מהם נראה מובן מאליו</h1>
+      <div class="boxes">
+        <div class="cell ghost"><p class="caption">הבנייה</p><p>פאנלים, חיבורים, רשימת חיתוך</p></div>
+        <div class="cell ghost"><p class="caption">הסידור</p><p>מה נכנס לאן בפנים</p></div>
+      </div>
+      <p class="fineprint" style="margin-top:2.2rem">ארון שנבנה נכון ומסודר רע הוא ארון גרוע.</p>
+    </section>
+
+    <section class="slide">
+      <p class="eyebrow"><span>08 &middot; מאיפה המספר</span><span>דקות 44–56</span></p>
+      <div class="rule"></div>
+      <h1>לכל מידה יש מקור — אחד מארבעה</h1>
+      <div class="boxes">
+        <div class="cell"><p class="caption">נמדד</p><p>הלכתי עם סרט מדידה</p></div>
+        <div class="cell"><p class="caption">מפרט</p><p>כתוב בדף המוצר</p></div>
+        <div class="cell ghost"><p class="caption">הנחה</p><p>הנחתי, ולא בדקתי</p></div>
+        <div class="cell"><p class="caption">חושב</p><p>נגזר משניים אחרים</p></div>
+      </div>
+      <p class="fineprint" style="margin-top:2.2rem">נמדד ומומצא נראים אותו דבר בקובץ, ועולים אלף שקל הבדל בלבידים.</p>
+    </section>
+
+    <section class="slide dark">
+      <p class="eyebrow"><span>09 &middot; השולחן</span><span>דקות 56–76</span></p>
+      <div class="rule"></div>
+      <h1>ארבע שאלות לפני שנגעתי בכלי</h1>
       <ol class="steps">
-        <li>שום דבר שנושא משקל של אדם.</li>
-        <li>שום דבר שקשור לחשמל.</li>
-        <li>שום דבר שמסוכן אם הוא נכשל.</li>
+        <li>לכמה אנשים?</li>
+        <li>איזה מקום יש?</li>
+        <li>איזה גובה, ולמה?</li>
+        <li>על מה הוא עומד?</li>
       </ol>
     </section>
 
     <section class="slide">
-      <p class="eyebrow"><span>10 &middot; בדיקת יציאה</span><span>דקות 85–90</span></p>
+      <p class="eyebrow"><span>10 &middot; „חזק יותר”</span><span>דקות 56–76</span></p>
+      <div class="rule"></div>
+      <h1>„חזק יותר” היא לא מידה</h1>
+      <div class="split">
+        <div class="panel is-claim"><p class="caption">תחושה</p>
+          <p class="lede claim">„תעשה אותו חזק יותר”</p></div>
+        <div class="panel" style="border-top-color:var(--evidence)"><p class="caption">מידה</p>
+          <p class="lede" style="color:var(--evidence)">„חתך רגל 8×8,<br>וחיזוק אופקי בין הרגליים”</p></div>
+      </div>
+      <p class="fineprint" style="margin-top:2rem">תחושות מקבלות תשובות שנראות טוב. מידות מקבלות תשובות שאפשר לבדוק.</p>
+    </section>
+
+    <section class="slide">
+      <p class="eyebrow"><span>11 &middot; מה נשבר</span><span>דקות 56–76</span></p>
+      <div class="rule"></div>
+      <h1>מאריכים ב-40 ס״מ — ומה עוד השתנה?</h1>
+      <dl class="qa">
+        <dt>המרחק בין הרגליים</dt><dd>גדל בלי שביקשתי</dd>
+        <dt class="stop">הפלטה באמצע</dt><dd class="stop">מתחילה לשקוע</dd>
+      </dl>
+      <p class="lede" style="margin-top:2.4rem">שינוי אחד, ושניים אחרים הפכו לשגויים בשקט.</p>
+      <p class="fineprint" style="margin-top:1.2rem">אמרו את המספר בקול <b>לפני</b> שאתם משנים אותו.</p>
+    </section>
+
+    <section class="slide dark">
+      <p class="eyebrow"><span>12 &middot; מהקובץ לחפץ</span><span>דקות 76–86</span></p>
+      <div class="rule"></div>
+      <h1>הפיזיקה לא קראה את הקובץ</h1>
+      <dl class="qa">
+        <dt class="stop">סובלנות</dt><dd>חור של „בדיוק 10 מ״מ” לא מקבל מוט של 10 מ״מ</dd>
+        <dt class="stop">גאומטריה</dt><dd>דופן 0.4 מ״מ, שיפוע, חלק שתלוי באוויר</dd>
+        <dt class="stop">כיוון</dt><dd>אותו חפץ, מסובב — נשבר או מחזיק</dd>
+      </dl>
+      <p class="fineprint" style="margin-top:2rem">המודל היה מושלם על המסך. זה הרגע שבו „וירטואלי” נגמר.</p>
+    </section>
+
+    <section class="slide">
+      <p class="eyebrow"><span>13 &middot; בדיקת יציאה</span><span>דקות 86–90</span></p>
       <div class="rule"></div>
       <h1>השלימו את המשפט</h1>
-      <p class="fill">התכנון שלי נשען על <b></b> מידות שנמדדו ועל <b></b> הנחות. הראשונה שאבדוק היא <b></b>.</p>
+      <p class="fill">הכי הפתיע אותי <b></b>. מה שלא הייתי בודק ועכשיו כן — <b></b>, כי טעות שם עולה לי <b></b>.</p>
       <h2>והשאלה ששווה לשבת איתה</h2>
-      <p class="lede">באיזו הנחה הייתם הכי בטוחים?</p>
+      <p class="lede">מה קניתם פעם לפי תמונה, וכשהגיע הבנתם שלא מדדתם?</p>
     </section>
 
     <nav class="deck-nav" aria-label="ניווט בין שקפים">

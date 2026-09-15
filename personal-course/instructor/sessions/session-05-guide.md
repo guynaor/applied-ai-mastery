@@ -1,186 +1,317 @@
-# Full session plan — Session 5: Make a Space Work Better
+# Full session plan — Session 5: Virtual to Physical — AI Outside the Computer
 
 **Time:** 90 minutes
-**Learning outcome:** Learners label where every dimension came from, describe an object to an AI and get a parametric 3D model, change one parameter having predicted the result, and check the outcome against the physical world.
-**Session artifact:** A design sheet with a dimension table and sources, the model file or code, a parameter changed with a prediction, and a physical-check result.
+**Learning outcome:** Learners see five ways AI shows something that does not exist yet — from a hat on your face to an object you can hold — and after each one ask the same question: what does it cost if it is wrong here.
+**Session artifact:** Five demonstrations on screen, ending with a real physical object in hand. Learners leave with an answer to "how much checking does this kind of promise deserve".
 
-**This session runs 90 minutes.** The extra time is questions, and they are heaviest here — this is the session where people discover you can talk to CAD software.
+**This session runs 90 minutes.** The first two blocks are easy and enjoyable on purpose — they buy attention cheaply. The last three are where real money goes on the table.
 
-## Send a week ahead — the setup guide
+## The central idea — say it in the opening
 
-**This is the only session in the course with real installation.** Send the [setup guide](../../sessions/session-05-setup.md) a week before, not two days.
+The whole session is one thing: **AI showing you something that does not exist yet.**
 
-> Session 5 needs some installation. Work through the setup guide and pick **one route only**. The free route — OpenSCAD alone — is enough for the whole session, with no account and no payment. If you want to watch a model change as you talk to it, take route 2. Do not try to install everything. Every step in the guide ends with a check — if it fails, drop one route, and that is completely fine.
+The hat is not on your head. The sofa is not in the room. The cabinet is not built. The table is not cut. The object is not printed. In every one of these the tool produces a picture of a future, and you have to decide how far to trust it.
 
-**Test all three routes yourself in the week before.** This is the most fragile session in the course, and almost every failure is installation rather than design.
+**And that decision turns on one thing: what it costs if it is wrong.**
+
+| The demo | What being wrong costs | How much checking it deserves |
+|---|---|---|
+| Hat and glasses | Nothing. Delete and try again | None. Enjoy it |
+| The living room | A return, delivery, a week | One dimension, before buying |
+| The pantry cabinet | Plywood and a weekend | A source for every dimension |
+| The dinner table | A table nobody can sit at | A number, not "sturdier" |
+| A 3D print | Filament and four hours, discovered at hour three | Printable geometry, and tolerance |
+
+**That question comes back after every block:** "What does it cost if it is wrong here?" It is the session's entire checking method, and it is deliberately not uniform — not everything deserves the same caution, and that is precisely what people do not know.
 
 ## Session materials
 
 | Material | What it is for |
 |---|---|
-| [Projection slides](../../instructor/samples/session-05-slides.html) | Ten slides, in session order. |
-| [Setup guide](../../sessions/session-05-setup.md) | Send a week ahead. Three routes, with a check at every step. |
-| [OpenSCAD starter](../../instructor/samples/session-05-organiser.scad) | A parametric drawer organiser that runs immediately. The basis for the demonstration. |
-| [Sample measurements](../../instructor/samples/session-05-measurements.html) | A measured drawer with one planted assumption, for anyone with nothing to measure. |
-| [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | The dimension table, the proposal table, and the fit-check table. |
+| [Projection slides](../../instructor/samples/session-05-slides.html) | Thirteen slides, in session order. |
+| [Setup guide](../../sessions/session-05-setup.md) | **For homework, not the session.** For anyone who wants to run the design parts themselves. |
+| [Example measurements](../../instructor/samples/session-05-measurements.html) | Homework material, for anyone with nothing to measure. |
+| [OpenSCAD starter file](../../instructor/samples/session-05-organiser.scad) | Homework material. A parametric drawer organiser that runs immediately. |
+| [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | The dimensions table, the proposal table and the fit-check table. |
 
-## The three routes — and what they share
+## What changed in this session
 
-| Route | Tools | What the learner does |
-|---|---|---|
-| **1 — Free** | OpenSCAD + any AI chat | Asks for code, pastes it, presses F5, sees a model |
-| **2 — Visual** | FreeCAD + the MCP + Claude Desktop | Talks, and watches the model being built |
-| **3 — Advanced** | Claude Code or Antigravity | Drives both from an editor or a terminal |
+The session used to open on measuring and three installation tracks, and reached parametric design through a drawer organiser. Two problems: it was the heaviest opening in the course, and the tracks spent expensive minutes on installs nobody needs in a demonstrated session.
 
-**What they share — and this is what gets assessed:** measurement with a source for every number, a prediction before changing a parameter, and a physical check in cardboard. Anyone on route 1 is missing none of the learning. Say that out loud at the start, or whoever failed to install will feel excluded.
+From now it opens with **two image demonstrations** that take two seconds to understand and produce genuine delight, and climbs from there to where a mistake costs money. **The measuring lesson has not gone** — it moved to the pantry cabinet block, where it finally hurts.
 
-## The recommended way: your own real object, on your screen
+**Installation moved to homework.** Nobody installs anything for the session. Anyone who wants to build for themselves during the week gets the [setup guide](../../sessions/session-05-setup.md) and picks one track.
 
-**Take something you genuinely want to exist and design it live in front of the class.** The demonstration runs on your machine, and here there is an extra reason: the advanced routes need installation that will not have worked for everyone, and when the demonstration is yours, nobody is blocked.
+## The way it runs: everything on your screen
 
-**Before every request** ask: "Which dimension will it need that I have not given it?"
-**When the model comes back**, hunt for the number it invented — there is always one — and ask "where is that from?"
-**After each stage**, put the source question back to the room: measured, spec, assumed, or calculated? Their answers are what makes this a lesson rather than a demonstration.
+**This session is demonstrated, not worked through.** You do every step on your own screen while learners watch, guess and argue.
 
-**This session is demonstrated, not worked through.** Nobody measures, models or cuts cardboard on the call. You do all of it on your own screen; the journal tables are the homework, filled in for an object of their own during the week. That also removes the install problem entirely — a route that failed to install blocks nobody, because nobody needed it today.
+Two blocks here are **showing something that already exists** rather than building live — the pantry cabinet and the prints. Say so out loud: "We are not building this now, it took me real time. I am showing you the end of a process — then we will do one together, smaller." It is honest, it saves twenty minutes, and it lowers the expectation that everything happens in one click.
 
-## Start slow things in the background
+### What to ask before every request
 
-Rendering a complex model takes time, and so does asking an AI to write a long piece of code. **Send it and keep talking.** At minute 40, when you ask for a variation or a second model, do not stand watching the screen — move on to discussing the physical check while it runs.
+- "What do you think it will come back with?" One or two guesses before it answers.
+- "What does it need to know that I have not told it?" Here it is almost always a dimension.
+
+### What to ask after every request
+
+- **"What does it cost if it is wrong here?"** The session's question.
+- "What in this picture did it invent?" There is always something.
+
+## Before learners arrive
+
+1. Open the [slides](../../instructor/samples/session-05-slides.html) for screen sharing.
+2. **A photo of yourself**, face clear, decent light, ready to upload. Plus **a photo of one hat and a photo of one pair of glasses** from a shop listing. Those are the two halves of block 1.
+3. **A photo of a room in your home**, shot from the corner so floor and walls are visible, and **two or three furniture photos** from shop listings — with their dimensions available.
+4. **The pantry cabinet files open in a tab**: both the design and the interior arrangement. You are presenting them, not building.
+5. **FreeCAD or OpenSCAD open and working**, with Antigravity or Claude Code connected — this is the only place a technical fault stops you.
+6. **Your prints on the desk**, within reach. A few that came out well, and at least one that failed.
+7. **Run the table block once by yourself beforehand.** Not to prepare a result, but to know how long each request takes on your machine.
+
+### What learners need
+
+- A device, and nothing else. No installs and no accounts.
+- One object or space of their own in mind, for the homework.
 
 ## Session map
 
-| Time | What happens | What learners produce |
+| Time | What happens | What being wrong costs |
 |---:|---|---|
-| 0–10 | **Homework discussion** | What broke for other people |
-| 10–15 | Readiness check: who is on which route | Everyone knows where they are, nobody is stuck |
-| 15–30 | Measure, and label every number's source | The difference between measured, spec, assumed, calculated |
-| 30–55 | Describe it to the AI, and it builds | A parametric model, and a list of what it invented |
-| 55–70 | Change one parameter, after predicting | Whether the model behaves as expected |
-| 70–85 | Physical check in cardboard | One assumption proved wrong |
-| 85–90 | Exit check, decision, and homework | What next, and what to check first |
+| 0–10 | **Homework discussion** | — |
+| 10–16 | Opening: seeing things before they exist | — |
+| 16–30 | **Your face** — hats and glasses, two ways | Nothing |
+| 30–44 | **The room** — your photo and furniture photos | A return and a week |
+| 44–56 | **The pantry cabinet** — build and arrangement, presented | Plywood and a weekend |
+| 56–76 | **The dinner table** — designed together, sturdier and bigger | A table that does not work |
+| 76–86 | **It becomes an object** — your prints | Filament and four hours |
+| 86–90 | Closing | — |
 
-## 0–10 minutes — Homework discussion
+## 0–10 minutes — homework discussion
 
-Three questions: **Who managed it? Who did it not work for, and where did it stick? What surprised you?**
+**Start here in every session from the second onward.** A learner who hears where somebody else got stuck learns faster than from a lesson.
 
-## 10–15 minutes — Readiness check
+Ask the three: what worked, what did not, and what surprised you. Write two things that come up on screen, and come back to them today by the name of whoever raised them.
 
-**Do not skip this, and do not let it expand.** Five minutes, no more.
+> "Before we start — what happened for you since? Especially what did not work. I learn more from that than you do."
 
-Ask in the chat or by show of hands: "Who is on route 1? Route 2? Route 3? Who has nothing working?"
+## 10–16 minutes — opening
 
-- Nothing working → route 1, now. One download, and they will keep up.
-- Stuck on route 2 → drop to route 1 for today, and you help them afterwards.
+Show [slide 1](../../instructor/samples/session-05-slides.html): today the AI leaves the screen.
 
-### What to say
+Then [slide 2](../../instructor/samples/session-05-slides.html) — the cost ladder. Today's five demonstrations, ordered by what a mistake costs in each. **Do not skip this slide** — it is the frame everything else hangs on, and it is what stops the session looking like a gallery of tricks.
 
-> "The tools differ, the thinking is identical. Anyone on OpenSCAD alone does exactly the same exercise and checks exactly the same cardboard at the end. We are not learning software today — we are learning how to give an AI real numbers and how to check what it gave back."
+> "Everyone knows AI 'can be wrong'. That is not useful. The useful question is what it costs when it is wrong — because on a hat you check nothing, and on a cabinet you check every number. We are going through these five from cheapest to most expensive."
 
-### The failure everyone hits
+## 16–30 minutes — your face
 
-If someone on route 2 says "it will not connect" or shows `Connection refused` — almost always **FreeCAD is not open, or its internal server was never started.** The MCP server alone is not enough. That resolves most cases in ten seconds.
+The easy block, and it is meant to be fun. Let it be fun.
 
-## 15–30 minutes — Measuring
+### Two ways, and not the same way
 
-[Slide 2](../../instructor/samples/session-05-slides.html) is a real measured drawer — 36 × 42 × 7.5 cm — with every row carrying its label: **measured**, **spec**, **assumed**, **calculated**. Read the rows aloud rather than defining the four labels first; the labels land better attached to numbers than ahead of them.
+Show [slide 3](../../instructor/samples/session-05-slides.html). The difference between the two requests is the heart of the block.
 
-Measure a real object in front of the class and record it with its label. Anyone with nothing to measure works from the drawer on the slide, or from the fuller [sample measurements](../../instructor/samples/session-05-measurements.html) sheet, which adds the objects that must fit and the clearances.
+**Way one — it invents the hat.** Upload your photo and ask:
 
-The slide also states the unit convention once: tables in centimetres, code in millimetres, 36.0 cm = 360 mm. Say it there and you will not have to untangle it at minute 40.
+> Here is a photo of me. Show me in four different hats and four different pairs of glasses, each combination as a separate image. Keep my face exactly as it is.
 
-### The moment that matters
+**Way two — you give it the hat.** Upload your photo, the hat photo and the glasses photo, and ask:
 
-Show [slide 3](../../instructor/samples/session-05-slides.html) — the planted assumption: "the drawer opens fully", which nobody measured. If the runners stop at 80 per cent, usable depth is 33.6 cm rather than 42.
+> Three images: me, a hat, and glasses. Put this hat and these glasses on me — **exactly these, not something like them.** Keep the products' colour, shape and proportions, and keep my face.
 
-### What to say
+### What to show when the results come back
 
-> "This is the part the AI cannot do. It has not seen the room. It will invent a dimension that looks reasonable, with total confidence, and it will look exactly like a measurement."
+Show [slide 4](../../instructor/samples/session-05-slides.html) and put two questions to the room:
 
-**Two minutes in the journal.**
+1. **"Is that still my face?"** This is the common failure in way one — it smooths the face, straightens it, takes five years off. Ask the room whether they can see it, because not everyone can.
+2. **"Is that the hat I gave it?"** This is way two's failure — it takes the *idea* of the hat rather than the hat. Shift the colour slightly, the shape slightly, and it is a different product.
 
-## 30–55 minutes — Describe it, and the AI builds
+> "Notice those are two completely different failures. In one it changed me, in the other it changed the product. Anyone buying from that picture needs to know which of the two happened."
 
-The long block. Show the request on [slide 5](../../instructor/samples/session-05-slides.html) and run it on your route. **The measurements are on the slide, in millimetres and ready to paste** — you do not have to improvise a dimension block mid-demo. If you are designing your own object, swap your numbers in and keep the four instructions at the end of the prompt exactly as they are: they are what stops the tool inventing and overclaiming.
+### What it costs if it is wrong
 
-### Expected intermediate output
+**Nothing.** Say so explicitly, because that is the other half of the lesson:
 
-**Route 1:** OpenSCAD code that runs and produces a shape. **Routes 2–3:** a solid appearing in FreeCAD.
+> "Here I check nothing. I delete it and try again, and it cost me ten seconds. Not everything requires caution — which is exactly why it matters to know when it does."
 
-### The moment that matters: what it invented
+### Two words on privacy
 
-Once the model exists, ask the tool explicitly:
+Your face, not other people's, and certainly not children's. Say it out loud — it takes six seconds and people will take it with them.
 
-> Which dimensions did you use that I did not give you? List each one, and what you assumed about it.
+## 30–44 minutes — the room
 
-It will produce a list: wall thickness, clearances, heights, fillet radii. **None of them is necessarily wrong — they simply were not measured.** This is exactly the "assumption that looks like a measurement" lesson, now inside geometry.
+This is where it gets interesting, because here **the picture persuades and the number is the truth, and they disagree.**
 
-### If the output is weak
+### The request
 
-- **The code does not run.** Good, and it happens. Paste the error straight back into the tool — that is the thing being learned.
-- **It built something handsome that ignores your measurements.** Point at it. A model not derived from the measurements is decoration.
-- **It declared the design strong or safe.** Remind them it cannot know that, and remove the claim.
+Show [slide 5](../../instructor/samples/session-05-slides.html). Upload the room photo and the furniture photos:
 
-**Two minutes in the journal.**
+> This is a photo of my living room. These are a sofa, a rug and a lamp from shop listings. Show me how the room would look with all three, from the same camera angle.
 
-## 55–70 minutes — One parameter, with a prediction
+It will come back nicely. Give the room a second to enjoy it, then break it.
 
-Show [slide 6](../../instructor/samples/session-05-slides.html). Before changing anything, everyone writes what **should** happen.
+### The moment that matters — a picture does not measure
 
-In the starter file: `compartments` from 5 to 7. Each compartment should drop from 68.7 mm to 48.4 mm. Change it, press F5, and check whether that is what happened.
+Show [slide 6](../../instructor/samples/session-05-slides.html) and ask: **"Does that sofa fit?"**
 
-**If someone asks about `usable_height = 60`, they have found the planted one.** The clear height was measured at 75 mm and the sheet says leave 5 mm under the runner, which gives 70 — so 60 is an assumption nobody wrote down, sitting in a block labelled "the drawer you measured". It is commented as such in the file. Treat the question as the best thing that can happen in this block: they audited a number instead of accepting it.
+The tool composited by **appearance**, not by **dimension**. It will shrink a sofa that does not fit until it looks right in the picture, and the result is completely convincing and wrong.
 
-### What to say
+Now ask it separately, in text:
 
-> "If your prediction did not match, you did not understand the model. Better to find that out now, on screen, than after a three-hour print."
+> This wall is 3.2 metres, with an 80 cm door at one end. The sofa I gave you is 2.4 metres. Tell me in numbers what is left, and do not show me a picture.
 
-## 70–85 minutes — The physical check
+**That separation is what you are teaching:** "show me" and "does it fit" are two different requests, and only one of them returns a number.
 
-**The part not to skip.** Show [slide 7](../../instructor/samples/session-05-slides.html).
+> "The picture is a visualisation. The number is an answer. Ask only for the first and you get a beautiful piece of furniture that will not come through the door."
 
-Cut cardboard to the model's dimensions, put it in place, and try to use it normally. The three checks: it fits the width, something comes out one-handed, and the drawer still closes.
+### What it costs if it is wrong
 
-### What to say
+A return, delivery fees, and a week with no sofa. **One dimension before buying cancels all of it.**
 
-> "The model looks perfect on screen because it is perfect — in a world with no dust, no warped panel, and no runner that stops at 80 per cent. The cardboard is the only thing here that touches reality."
+## 44–56 minutes — the pantry cabinet
 
-## 85–90 minutes — Exit
+**This block is presented, not built.** Say so immediately.
 
-[Slide 10](../../instructor/samples/session-05-slides.html):
+> "I already designed this cabinet, and it took longer than the time we have. I am showing you the end — and then we will do one together, smaller."
 
-> My design rests on **[number]** measured dimensions and **[number]** assumptions — including **[number]** the AI invented. The physical check revealed that **[what]**, so I changed **[what]**.
+### What to show, and in what order
 
-### The homework
+Show [slide 7](../../instructor/samples/session-05-slides.html) and then your own files, in two parts:
 
-"Change one more parameter in your model and predict the result first. **I will ask at the start what did not work** — especially if the installation broke."
+1. **The build** — panels, joins, the cut list. This is what goes to the saw.
+2. **The arrangement** — what goes where inside. This decides whether the cabinet is useful or merely exists.
 
-### Quick assessment rubric
+The second part is the surprise for most people. A cabinet built right and arranged badly is a bad cabinet.
+
+### This is where the measuring lesson lands
+
+Show [slide 8](../../instructor/samples/session-05-slides.html) — the four sources of a number:
+
+**Measured** (I went with a tape) · **Spec** (written on the product page) · **Assumed** (I assumed it) · **Derived** (calculated from two others)
+
+Walk three real dimensions from your design and say which kind each one is. **At least one should be an assumption** — if you have none, you did not look hard enough.
+
+> "The question is not 'is the number right'. The question is 'where did it come from'. A measured number and an invented number look identical in the file, and differ by a sheet of plywood."
+
+**Tell them what it got wrong the first time.** This is the most valuable part of the block. A panel thickness it assumed, a clearance it did not leave, a door that opens into a wall.
+
+### What it costs if it is wrong
+
+Plywood, a weekend, and a board already cut. **A cut does not undo.**
+
+## 56–76 minutes — the dinner table
+
+**The long block, and the only one built live.** It is also where learners watch design happen in conversation.
+
+### The numbers first, from the room
+
+Do not start with the tool. Ask the room four questions and write them on screen:
+
+1. **How many people?**
+2. **How much room is there?** Length and width.
+3. **What height?** Have the answer ready: 75 cm is standard, and ask why.
+4. **What is it standing on?** Four legs at the corners, or a central pedestal.
+
+> "Notice I have not touched the tool yet. Those four questions are the difference between a table that suits the room and a generic table."
+
+### The first request
+
+Show [slide 9](../../instructor/samples/session-05-slides.html) and ask for a parametric model with the real numbers, in FreeCAD or OpenSCAD through Antigravity or Claude Code.
+
+**It matters that it is parametric** — the dimensions live as variables at the top of the file, not scattered through the code as numbers. That is what makes the next two iterations possible.
+
+### Iteration 1 — "make it sturdier"
+
+Show [slide 10](../../instructor/samples/session-05-slides.html). This is the most important request in the session, because it is **deliberately bad.**
+
+Give it exactly like that and see what comes back. It will thicken legs, or add bracing, or simply say it did. **"Sturdier" is not a number, so the answer is not one either.**
+
+Now ask the room: **"What did I actually ask for?"** Let two or three answer. The answers that come up will be: that it should not wobble, that it should not sag in the middle, that it should hold somebody sitting on it.
+
+Then rewrite it in front of the class:
+
+> The table wobbles sideways. Add a horizontal stretcher between the legs and increase the leg section to 8 by 8 cm. Tell me which parameters you changed and what the previous values were.
+
+> "That is the whole difference. The first request was a feeling, the second was a dimension. Feelings get answers that look good; dimensions get answers you can check."
+
+### Iteration 2 — "make it bigger", and what breaks
+
+Show [slide 11](../../instructor/samples/session-05-slides.html). **Before you send it, ask the room to predict:** "If we extend the table by 40 cm — what breaks?"
+
+The answer you are after: **the span between the legs grows, and the top starts to sag in the middle.** Making something bigger is not one number growing, it is a chain.
+
+> "Notice what happened. I changed one parameter, and two others became wrong without anybody telling me. That is why it is worth having the model be parametric — when everything is connected, you can ask 'and what did that do to the rest'."
+
+**Say the number out loud before you change it.** That is the habit people take home from this session.
+
+### What it costs if it is wrong
+
+A table that wobbles while you eat at it, or does not fit the room. And timber already cut.
+
+## 76–86 minutes — it becomes a real object
+
+**The ending, and it is physical.** Hold your prints up to the camera.
+
+Show [slide 12](../../instructor/samples/session-05-slides.html), then show the objects themselves. This is the moment the session's title becomes something you can hold.
+
+### What to say about each object
+
+- **What it is, and why you printed it** rather than buying it.
+- **How long it took.** People have no idea. Four hours for a small object surprises them.
+- **What AI did here and what it did not.** It designed the shape. It did not measure the shelf, choose the material, or know that your printer warps corners.
+
+### The failed print — do not skip it
+
+**This is the most instructive part of the block.** Show one that came out badly and explain why:
+
+- **Tolerance** — a hole of "exactly 10 mm" will not take a 10 mm rod. It needs 10.4. This is failure number one, and it is completely invisible in the file.
+- **Unprintable geometry** — a 0.4 mm wall, an overhang needing supports, a part floating in mid-air.
+- **Print orientation** — the very same object, rotated, either snaps or holds.
+
+> "The model was perfect on screen. Physics did not read the file. That is the moment 'virtual' ends and 'physical' begins, and that is the whole session in one object."
+
+### What it costs if it is wrong
+
+Filament and four hours — **and you find out at hour three.**
+
+## 86–90 minutes — closing
+
+[Slide 13](../../instructor/samples/session-05-slides.html) for the exit check:
+
+> What surprised me most was **[what]**. What I would not have checked and now will is **[what]**, because being wrong there costs me **[how much]**.
+
+### The homework — say it out loud
+
+"Pick **one thing** you want to exist — an object, a corner of your home, a piece of furniture. Run whichever of today's demonstrations suits it. Anyone who wants to get as far as a model, the [setup guide](../../sessions/session-05-setup.md) is waiting, and one track is enough. **I will open by asking what did not work.**"
+
+### Quick rubric
 
 | Evidence | Not yet | Ready |
 |---|---|---|
-| Dimensions | A list of numbers | Every number carries a source label |
-| What the AI invented | Never asked | Asked explicitly, and has the list |
-| Parameter | "I changed something" | A prediction written first, then checked |
-| Physical check | "It'll fit" | Cardboard cut, placed, and the result recorded |
+| Picture versus number | "That looks about right" | Asked "does it fit?" separately and got a number |
+| A dimension's source | "It is 60 cm" | "60, measured" or "60, assumed" |
+| A change request | "Make it sturdier" | "Leg section 8 by 8, and a stretcher" |
+| Prediction | Changed it and saw what happened | Said what would happen, then changed it |
+| File to object | "The model is ready" | Tolerance, print orientation, wall thickness |
 
-## Troubleshoot without losing the lesson
+## Handling problems without losing the session
 
 | Situation | Facilitator response |
 |---|---|
-| `Connection refused` on route 2 | FreeCAD is not open, or its internal server was not started. Almost always this. |
-| Someone's installation did not work | Route 1, now. One download, and it is enough. |
-| The AI's code will not run | Paste the error back into it. That is part of the lesson. |
-| A handsome model that ignores the measurements | "Where did that number come from?" Return to the measurements. |
-| Someone wants to design something load-bearing | Stop and explain the limit. Offer an organiser. |
-| Time runs out | Drop the parameter change. Not the physical check. |
+| The tool refuses to edit a photo of a face | Use only your own photo, and phrase it "edit this photo". If it still refuses, move to way two and say what happened. |
+| The image comes back with a completely different face | That is the finding, not a fault. Show it and carry on. |
+| The room composite looks distorted | Also a finding. Go straight on to the "does it fit?" question. |
+| FreeCAD or OpenSCAD is unresponsive | Fall back to OpenSCAD alone with code from the chat. Almost nothing breaks there. |
+| The model takes too long to build | Ask for a simpler version: a top, four legs, a stretcher. The iterations matter more than the model. |
+| Time runs out | Drop iteration 2 of the table. **Not the prints** — the physical ending is the entire title. |
+| Everything runs faster than expected | Take a second failed print and explain that one too. It is always interesting. |
 
-## Differentiation
+## Adapting for different learners
 
-- **Remote:** An advantage here — learners are at home, beside the object they are measuring.
-- **No installation at all:** Paper and a ruler. The same table, the same physical check, the same rubric.
-- **For learners ready to extend:** Ask the tool to add a parameter that did not exist, and see what breaks.
+- **Remote:** the session is designed for it. For the prints, hold them close to the camera and turn them slowly.
+- **No device:** no gap. Everything is projected.
+- **For anyone who wants to run it themselves:** the setup guide, one track, during the week rather than now.
+- **For anyone ready to go further:** take the table from the session and get a real cut list out of it, including waste.
 
 ## After the session
 
-Note how many learners finished on each route, and which installation broke most often — that is what you fix in the setup guide before next time. If anyone printed what they designed, ask them to bring it next session: an object built after a cardboard test is the best evidence the method works.
+Write down three things: which demonstration drew the strongest reaction, which question came up more than once, **and how long the table block actually took.** It is the only live block here, and its timing is the thing most likely to move next time.
