@@ -1,0 +1,3 @@
+# The session 5 setup wrapper must keep CRLF line endings: cmd.exe mis-parses a
+# .bat file whose lines end in LF alone.
+*.bat text eol=crlf

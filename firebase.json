@@ -24,7 +24,10 @@
       { "source": "/s3/sources", "destination": "/personal-course/instructor/samples/session-03-sources.html", "type": 301 },
       { "source": "/s3/cards", "destination": "/personal-course/instructor/samples/session-03-cards.html", "type": 301 },
       { "source": "/s3-he/sources", "destination": "/personal-course/instructor/samples/session-03-sources-he.html", "type": 301 },
-      { "source": "/s3-he/cards", "destination": "/personal-course/instructor/samples/session-03-cards-he.html", "type": 301 }
+      { "source": "/s3-he/cards", "destination": "/personal-course/instructor/samples/session-03-cards-he.html", "type": 301 },
+      { "source": "/s5/windows", "destination": "/personal-course/instructor/samples/session-05-freecad-windows.bat", "type": 301 },
+      { "source": "/s5/windows-script", "destination": "/personal-course/instructor/samples/session-05-freecad-windows.ps1", "type": 301 },
+      { "source": "/s5/windows-check", "destination": "/personal-course/instructor/samples/session-05-freecad-windows-check.bat", "type": 301 }
     ],
     "headers": [
       {
@@ -32,6 +35,19 @@
         "headers": [
           { "key": "X-Content-Type-Options", "value": "nosniff" },
           { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        ]
+      },
+      {
+        "source": "**/*.ps1",
+        "headers": [
+          { "key": "Content-Type", "value": "text/plain; charset=utf-8" }
+        ]
+      },
+      {
+        "source": "**/*.bat",
+        "headers": [
+          { "key": "Content-Type", "value": "application/octet-stream" },
+          { "key": "Content-Disposition", "value": "attachment" }
         ]
       }
     ]
