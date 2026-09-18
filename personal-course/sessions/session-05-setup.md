@@ -43,16 +43,44 @@ That is the whole idea of the session: **change one number, see what moves.**
 
 ## Route 2 — FreeCAD, the MCP, and Claude Desktop
 
-This route lets you talk to FreeCAD in plain language and watch the model change. It has three parts, and they must be done in order.
+This route lets you talk to FreeCAD in plain language and watch the model change. It has three parts: FreeCAD itself, the MCP that connects it to an AI, and Claude Desktop.
 
-### 2a. Install FreeCAD
+**On Windows, a setup file does all three for you.** On Mac, do them by hand in the order below.
 
-- **Mac:** download from [freecad.org/downloads](https://www.freecad.org/downloads.php). Open the `.dmg` and drag FreeCAD to Applications. On first launch, right-click and choose **Open** if macOS objects.
-- **Windows:** download the installer from the same page and run it.
+### Windows — the setup file
+
+You do not need git, a terminal you understand, or any developer tools. Pick one of these two:
+
+**Either** download [the setup file](https://applied-ai-mastery.web.app/s5/windows) and double-click it. Windows will say it came from the internet and ask whether you are sure — choose **Run**, or **More info > Run anyway**.
+
+**Or**, if a terminal does not bother you, press Start, type `PowerShell`, press Enter, and paste this single line:
+
+```powershell
+irm https://applied-ai-mastery.web.app/s5/windows-script | iex
+```
+
+Both do exactly the same thing: install FreeCAD, install Claude Desktop, install the piece that runs the MCP, put the FreeCAD addon where it belongs, set FreeCAD to switch that addon on by itself, and write the Claude Desktop settings file. It prints a line per step, so you can watch where it is. Windows will ask your permission part-way through, while it installs the two programs — say yes.
+
+It is safe to run twice, it leaves alone anything you already have, and it backs up your Claude Desktop settings before it touches them. If you want to read it before you run it, [the script is right here](https://applied-ai-mastery.web.app/s5/windows-script) and opens as plain text.
+
+**What is left is opening the two programs.** The script ends by telling you exactly what applies to your machine:
+
+1. **Open FreeCAD.** Its server starts by itself — there is nothing to click. If FreeCAD was already open while the script ran, close it and open it again.
+2. **Open Claude Desktop.** If it was already running, quit it first: right-click the Claude icon in the tray next to the clock and choose **Quit**. Closing its window is not enough — it keeps running in the tray, and it reads its settings only when it starts.
+
+**Check:** ask Claude Desktop *"List the open FreeCAD documents."* It should answer with a document name, not an error.
+
+**If it does not:** download and double-click [the check file](https://applied-ai-mastery.web.app/s5/windows-check). It changes nothing and tells you which piece is missing.
+
+### Mac — by hand
+
+#### 2a. Install FreeCAD
+
+Download from [freecad.org/downloads](https://www.freecad.org/downloads.php). Open the `.dmg` and drag FreeCAD to Applications. On first launch, right-click and choose **Open** if macOS objects.
 
 **Check:** FreeCAD opens and shows a start page with a list of workbenches in a dropdown at the top. Create a new empty document (`File > New`). You should get an empty 3D view with a navigation cube in the corner.
 
-### 2b. Install the FreeCAD MCP
+#### 2b. Install the FreeCAD MCP
 
 The MCP is what lets an AI assistant see and change your FreeCAD document. It has **two halves**, and this is where people get stuck:
 
@@ -65,13 +93,13 @@ In outline: install the addon into FreeCAD's `Mod` folder (the project explains 
 
 **Check:** open FreeCAD and look for the addon's workbench in the workbench dropdown. Start its server — usually a button or menu item saying something like "Start RPC Server". The FreeCAD report view should confirm the server has started and name a port.
 
-> **The failure everyone hits:** your AI says it cannot connect, or you see `Connection refused`. Almost always this means **FreeCAD is not open**, or the addon's server was never started inside it. The MCP server alone is not enough — FreeCAD has to be running with its server switched on. Check that before debugging anything else.
-
-### 2c. Connect Claude Desktop
+#### 2c. Connect Claude Desktop
 
 Install Claude Desktop from [claude.ai/download](https://claude.ai/download), sign in, then add the FreeCAD MCP server to its configuration. Claude Desktop has a settings screen for MCP servers; the FreeCAD MCP project shows the exact entry to paste.
 
 **Check:** with FreeCAD open and its server running, ask Claude Desktop: *"List the open FreeCAD documents."* It should answer with the name of the document you created, not an error.
+
+> **The failure everyone hits, on either system:** your AI says it cannot connect, or you see `Connection refused`. Almost always this means **FreeCAD is not open**, or the addon's server was never started inside it. The MCP server alone is not enough — FreeCAD has to be running with its server switched on. Check that before debugging anything else.
 
 ---
 
@@ -100,7 +128,7 @@ Run this the evening before. It is faster than discovering a problem in the firs
 | Route | The check | What you should see |
 |---|---|---|
 | 1 | Open the starter `.scad` and press F5 | An organiser with five compartments |
-| 2 | FreeCAD open, server started, ask Claude Desktop to list documents | Your document's name |
+| 2 | FreeCAD open, server started, ask Claude Desktop to list documents — on Windows, the check file answers this for you | Your document's name |
 | 3 | Ask Claude Code or Antigravity the same question | Your document's name |
 
 **If a check fails, drop one route.** Route 1 completes the whole session, and nobody who takes it is missing out on the learning — the design thinking is identical, and the physical check at the end is the same for everyone.

@@ -30,6 +30,7 @@
 |---|---|
 | [שקפים להקרנה](../../../instructor/samples/session-05-slides-he.html) | שלושה־עשר שקפים, לפי סדר המפגש. |
 | [מדריך ההתקנה](../../sessions/session-05-setup.md) | **לשיעורי הבית, לא למפגש.** למי שרוצה להריץ בעצמו את החלקים של התכנון. |
+| [קובץ ההתקנה לחלונות](../../../instructor/samples/session-05-freecad-windows.ps1) | חומר לשיעורי בית, למסלול 2 בחלונות. מתקין את FreeCAD, את Claude Desktop ואת ה-MCP בפעולה אחת, בלי git ובלי ידע בטרמינל. הלומדים מקבלים אותו בכתובת `applied-ai-mastery.web.app/s5/windows`, וקובץ הבדיקה הוא `/s5/windows-check`. |
 | [מידות לדוגמה](../../../instructor/samples/session-05-measurements-he.html) | חומר לשיעורי בית, למי שאין לו מה למדוד. |
 | [קובץ התחלה ב-OpenSCAD](../../../instructor/samples/session-05-organiser.scad) | חומר לשיעורי בית. מארגן מגירה פרמטרי שרץ מיד. |
 | [יומן הלמידה](../../../../site/assets/downloads/applied-ai-mastery-personal-journal-he.docx) | טבלת המידות, טבלת ההצעה וטבלת בדיקת ההתאמה. |

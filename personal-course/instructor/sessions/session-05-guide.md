@@ -30,6 +30,7 @@ The hat is not on your head. The sofa is not in the room. The cabinet is not bui
 |---|---|
 | [Projection slides](../../instructor/samples/session-05-slides.html) | Thirteen slides, in session order. |
 | [Setup guide](../../sessions/session-05-setup.md) | **For homework, not the session.** For anyone who wants to run the design parts themselves. |
+| [Windows setup file](../../instructor/samples/session-05-freecad-windows.ps1) | Homework material, for Route 2 on Windows. Installs FreeCAD, Claude Desktop and the MCP in one go, with no git and no terminal knowledge. Learners get it as `applied-ai-mastery.web.app/s5/windows`; the check file is `/s5/windows-check`. |
 | [Example measurements](../../instructor/samples/session-05-measurements.html) | Homework material, for anyone with nothing to measure. |
 | [OpenSCAD starter file](../../instructor/samples/session-05-organiser.scad) | Homework material. A parametric drawer organiser that runs immediately. |
 | [Learning journal](../../../site/assets/downloads/applied-ai-mastery-personal-journal-en.docx) | The dimensions table, the proposal table and the fit-check table. |
