@@ -59,14 +59,14 @@ You do not need git, a terminal you understand, or any developer tools. Pick one
 irm https://applied-ai-mastery.web.app/s5/windows-script | iex
 ```
 
-Both do exactly the same thing: install FreeCAD, install Claude Desktop, install the piece that runs the MCP, put the FreeCAD addon where it belongs, and write the Claude Desktop settings file. It prints a line per step, so you can watch where it is. Windows will ask your permission part-way through, while it installs the two programs — say yes.
+Both do exactly the same thing: install FreeCAD, install Claude Desktop, install the piece that runs the MCP, put the FreeCAD addon where it belongs, set FreeCAD to switch that addon on by itself, and write the Claude Desktop settings file. It prints a line per step, so you can watch where it is. Windows will ask your permission part-way through, while it installs the two programs — say yes.
 
 It is safe to run twice, it leaves alone anything you already have, and it backs up your Claude Desktop settings before it touches them. If you want to read it before you run it, [the script is right here](https://applied-ai-mastery.web.app/s5/windows-script) and opens as plain text.
 
-**One part is left, and no script can do it** — it is a button someone has to click:
+**What is left is opening the two programs.** The script ends by telling you exactly what applies to your machine:
 
-1. Open FreeCAD. Choose **MCP Addon** from the workbench list at the top, then click **Start RPC Server**. Leave FreeCAD open.
-2. Quit Claude Desktop completely and open it again.
+1. **Open FreeCAD.** Its server starts by itself — there is nothing to click. If FreeCAD was already open while the script ran, close it and open it again.
+2. **Open Claude Desktop.** If it was already running, quit it first: right-click the Claude icon in the tray next to the clock and choose **Quit**. Closing its window is not enough — it keeps running in the tray, and it reads its settings only when it starts.
 
 **Check:** ask Claude Desktop *"List the open FreeCAD documents."* It should answer with a document name, not an error.
 

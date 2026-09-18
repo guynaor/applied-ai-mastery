@@ -16,9 +16,10 @@
     timestamp, and claude_desktop_config.json is backed up and then MERGED, so
     any other MCP servers the learner already has keep working.
 
-    What this script cannot do, because no script can: start the RPC server
-    inside FreeCAD. That is a button a human clicks. The script ends by saying
-    so, and -Verify diagnoses it afterwards.
+    The addon's RPC server is off by default and normally started by a button
+    inside FreeCAD. This script switches on the addon's own auto-start setting
+    instead, so opening FreeCAD is enough. The server still listens on
+    127.0.0.1 only -- the addon's separate remote-access setting is untouched.
 
 .PARAMETER Verify
     Check an existing setup instead of installing. Reports on all four pieces
@@ -58,6 +59,7 @@ $RpcPort         = 9875
 $ClaudeConfigDir = Join-Path $env:APPDATA 'Claude'
 $ClaudeConfig    = Join-Path $ClaudeConfigDir 'claude_desktop_config.json'
 $FreeCadAppData  = Join-Path $env:APPDATA 'FreeCAD'
+$AddonSettings   = 'freecad_mcp_settings.json'
 $Stamp           = Get-Date -Format 'yyyyMMdd-HHmmss'
 
 # Output is deliberately ASCII only. Windows PowerShell still opens on codepage
@@ -90,6 +92,31 @@ function Stop-WithMessage([string]$Step, [string]$Problem, [string]$WhatToDo) {
 
 function Test-CommandExists([string]$Name) {
     return [bool](Get-Command $Name -ErrorAction SilentlyContinue)
+}
+
+# Windows PowerShell 5.1 turns each stderr line of a native program into an
+# error record once stderr is redirected, and under ErrorActionPreference Stop
+# the first one is fatal. uv and winget both write ordinary progress to stderr,
+# so "Downloading cryptography" killed a working install. Native programs are
+# judged by their exit code instead -- read $LASTEXITCODE after calling this.
+# Output goes to Out-Host so it shows on screen rather than becoming this
+# function's return value.
+function Invoke-Native([scriptblock]$Command) {
+    $previous = $ErrorActionPreference
+    $ErrorActionPreference = 'Continue'
+    try {
+        & $Command | Out-Host
+    } finally {
+        $ErrorActionPreference = $previous
+    }
+}
+
+# No BOM. Claude Desktop reads plain UTF-8, and the FreeCAD addon reads its
+# settings with Python's json.load, which rejects a BOM and then silently falls
+# back to its defaults -- so a BOM would look like the setting was ignored.
+function Write-JsonFile([string]$Path, $Object) {
+    $json = $Object | ConvertTo-Json -Depth 20
+    [System.IO.File]::WriteAllText($Path, $json, (New-Object System.Text.UTF8Encoding $false))
 }
 
 # winget puts new executables on PATH, but only for shells started afterwards.
@@ -144,8 +171,10 @@ function Install-WithWinget([string]$Id, [string]$Label) {
     }
 
     Write-Work "Installing $Label. Windows may ask your permission -- say yes."
-    & winget install --id $Id --exact --source winget `
-        --accept-package-agreements --accept-source-agreements --disable-interactivity
+    Invoke-Native {
+        winget install --id $Id --exact --source winget `
+            --accept-package-agreements --accept-source-agreements --disable-interactivity
+    }
     $code = $LASTEXITCODE
 
     # 0 is success. -1978335189 is winget's "already installed, nothing to do",
@@ -211,7 +240,7 @@ function Get-AddonTargetPath {
 # --- steps -------------------------------------------------------------------
 
 function Invoke-Preflight {
-    Write-Head 'Step 1 of 6 -- checking this machine'
+    Write-Head 'Step 1 of 7 -- checking this machine'
 
     if ([Environment]::OSVersion.Version.Major -lt 10) {
         Stop-WithMessage `
@@ -226,7 +255,7 @@ function Invoke-Preflight {
 }
 
 function Install-FreeCad {
-    Write-Head 'Step 2 of 6 -- FreeCAD'
+    Write-Head 'Step 2 of 7 -- FreeCAD'
 
     $exe = Find-FreeCadExe
     if ($exe) { Write-Ok "FreeCAD is already installed: $exe"; return }
@@ -236,7 +265,7 @@ function Install-FreeCad {
 }
 
 function Install-ClaudeDesktop {
-    Write-Head 'Step 3 of 6 -- Claude Desktop'
+    Write-Head 'Step 3 of 7 -- Claude Desktop'
 
     $installedPath = if ($env:LOCALAPPDATA) { Join-Path $env:LOCALAPPDATA 'AnthropicClaude' } else { $null }
     $installed = ($installedPath -and (Test-Path $installedPath)) -or [bool](Get-InstalledApp 'Claude*')
@@ -247,15 +276,17 @@ function Install-ClaudeDesktop {
 }
 
 function Install-Uv {
-    Write-Head 'Step 4 of 6 -- uv (runs the MCP server)'
+    Write-Head 'Step 4 of 7 -- uv (runs the MCP server)'
 
     Update-PathFromRegistry
     if (Test-CommandExists 'uvx') { Write-Ok 'uv is already installed.'; return }
 
     if (Test-CommandExists 'winget') {
         Write-Work 'Installing uv.'
-        & winget install --id 'astral-sh.uv' --exact --source winget `
-            --accept-package-agreements --accept-source-agreements --disable-interactivity
+        Invoke-Native {
+            winget install --id 'astral-sh.uv' --exact --source winget `
+                --accept-package-agreements --accept-source-agreements --disable-interactivity
+        }
         Update-PathFromRegistry
     }
 
@@ -283,7 +314,7 @@ function Install-Uv {
 }
 
 function Install-Addon {
-    Write-Head 'Step 5 of 6 -- the FreeCAD addon'
+    Write-Head 'Step 5 of 7 -- the FreeCAD addon'
 
     $modDir = Resolve-FreeCadModDir
     $target = Join-Path $modDir $AddonFolderName
@@ -335,8 +366,35 @@ function Install-Addon {
     }
 }
 
+function Enable-RpcAutoStart {
+    Write-Head 'Step 6 of 7 -- starting the FreeCAD server by itself'
+
+    # The addon keeps this file in FreeCAD's user folder, the parent of Mod.
+    $path = Join-Path (Split-Path (Resolve-FreeCadModDir) -Parent) $AddonSettings
+    $settings = [pscustomobject]@{}
+
+    if (Test-Path $path) {
+        $raw = Get-Content $path -Raw
+        Copy-Item $path "$path.backup-$Stamp"
+        if ($raw -and $raw.Trim()) {
+            try {
+                $settings = $raw | ConvertFrom-Json
+            } catch {
+                # Unlike Claude's settings, nothing is lost by replacing this:
+                # the addon already ignores a file it cannot read.
+                Write-Note "The addon's settings file could not be read, so it is being replaced. The old one is at $path.backup-$Stamp"
+                $settings = [pscustomobject]@{}
+            }
+        }
+    }
+
+    $settings | Add-Member -MemberType NoteProperty -Name 'auto_start_rpc' -Value $true -Force
+    Write-JsonFile $path $settings
+    Write-Ok 'FreeCAD will start its server by itself whenever it opens.'
+}
+
 function Update-ClaudeConfig {
-    Write-Head 'Step 6 of 6 -- telling Claude Desktop about FreeCAD'
+    Write-Head 'Step 7 of 7 -- telling Claude Desktop about FreeCAD'
 
     $config = [pscustomobject]@{}
 
@@ -367,13 +425,11 @@ function Update-ClaudeConfig {
     $entry = [pscustomobject]@{ command = 'uvx'; args = @('freecad-mcp') }
     $config.mcpServers | Add-Member -MemberType NoteProperty -Name 'freecad' -Value $entry -Force
 
-    $json = $config | ConvertTo-Json -Depth 20
-    # No BOM: Claude Desktop reads this file as plain UTF-8.
-    [System.IO.File]::WriteAllText($ClaudeConfig, $json, (New-Object System.Text.UTF8Encoding $false))
+    Write-JsonFile $ClaudeConfig $config
     Write-Ok "Settings written: $ClaudeConfig"
 
     Write-Work 'Fetching the MCP server itself. This can take a minute.'
-    & uvx freecad-mcp --help *> $null
+    Invoke-Native { uvx freecad-mcp --help *> $null }
     if ($LASTEXITCODE -ne 0) {
         Write-Bad 'The MCP server did not start when tested.'
         Write-Note 'Everything else is installed. Run this script again with -Verify after restarting Claude Desktop.'
@@ -383,12 +439,26 @@ function Update-ClaudeConfig {
 }
 
 function Show-NextSteps {
-    Write-Head 'Done. Three things left, and only a person can do them'
-    Write-Host '  1. Open FreeCAD. Choose "MCP Addon" from the workbench list at the top,'
-    Write-Host '     then click "Start RPC Server". Leave FreeCAD open.'
-    Write-Host '  2. Quit Claude Desktop completely and open it again.'
-    Write-Host '  3. Ask Claude Desktop: "List the open FreeCAD documents."'
+    $freeCadOpen = [bool](Get-Process -Name 'FreeCAD' -ErrorAction SilentlyContinue)
+    $claudeOpen  = [bool](Get-Process -Name 'claude' -ErrorAction SilentlyContinue)
+
+    Write-Head 'Done. What is left is opening the programs'
+    if ($freeCadOpen) {
+        Write-Host '  - FreeCAD is open, and it has not loaded the new setup yet.'
+        Write-Host '    Close it and open it again. Its server then starts by itself.'
+    } else {
+        Write-Host '  - Open FreeCAD. Its server starts by itself -- there is nothing to click.'
+    }
+    if ($claudeOpen) {
+        Write-Host '  - Claude Desktop is running, and it reads its settings only when it starts.'
+        Write-Host '    Quit it from the Claude icon in the tray next to the clock: right-click, Quit.'
+        Write-Host '    Closing its window is not enough -- it keeps running in the tray.'
+        Write-Host '    Then open it again.'
+    } else {
+        Write-Host '  - Open Claude Desktop.'
+    }
     Write-Host ''
+    Write-Host '  Then ask Claude Desktop: "List the open FreeCAD documents."'
     Write-Host '  It should answer with a document name, not an error.'
     Write-Host ''
     Write-Host '  If it does not, run this script again with -Verify and it will tell you which'
@@ -407,6 +477,14 @@ function Invoke-Verify {
     $addon = Get-AddonTargetPath
     if (Test-Path $addon) { Write-Ok "Addon installed: $addon" }
     else { Write-Bad "Addon is missing. Expected it at: $addon"; $problems++ }
+
+    $settingsPath = Join-Path (Split-Path (Resolve-FreeCadModDir) -Parent) $AddonSettings
+    $autoStart = $false
+    if (Test-Path $settingsPath) {
+        try { $autoStart = ((Get-Content $settingsPath -Raw | ConvertFrom-Json).auto_start_rpc -eq $true) } catch { $autoStart = $false }
+    }
+    if ($autoStart) { Write-Ok 'FreeCAD is set to start its server by itself.' }
+    else { Write-Bad "FreeCAD is not set to start its server by itself: $settingsPath"; $problems++ }
 
     Update-PathFromRegistry
     if (Test-CommandExists 'uvx') { Write-Ok 'uv installed.' }
@@ -433,10 +511,11 @@ function Invoke-Verify {
         $running = [bool](Get-Process -Name 'FreeCAD' -ErrorAction SilentlyContinue)
         if ($running) {
             Write-Bad "FreeCAD is open, but its server is not running."
-            Write-Note 'In FreeCAD: choose the "MCP Addon" workbench, then click "Start RPC Server".'
+            Write-Note 'Close FreeCAD and open it again. If it was opened before setup ran, it has not loaded the addon yet.'
+            Write-Note 'Still nothing? In FreeCAD choose the "MCP Addon" workbench and click "Start RPC Server".'
         } else {
             Write-Bad 'FreeCAD is not open.'
-            Write-Note 'Open FreeCAD, choose the "MCP Addon" workbench, then click "Start RPC Server".'
+            Write-Note 'Open FreeCAD. Its server starts by itself.'
         }
         $problems++
     }
@@ -466,5 +545,6 @@ Install-FreeCad
 Install-ClaudeDesktop
 Install-Uv
 Install-Addon
+Enable-RpcAutoStart
 Update-ClaudeConfig
 Show-NextSteps
